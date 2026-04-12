@@ -1,0 +1,14 @@
+{
+  "atom": "dm_can_brute_force",
+  "estimates": [
+    {
+      "mode": "empirical",
+      "scalar_factor": 0.992308,
+      "confidence": 0.9,
+      "n_trials": 500,
+      "epsilon": 1e-08,
+      "input_regime": "multi-arg perturbation, shapes={'data': '(256,)'}",
+      "notes": "perturbation harness, 500/500 trials, perturbed params: ['data']"
+    }
+  ]
+}

@@ -1,0 +1,138 @@
+"""Shared JuliaCall/JuliaPkg runtime configuration for physics provider repos.
+
+This mirrors the runtime setup already used in sciona-matcher and ageo-atoms so
+Julia-backed provider packages avoid writing lockfiles into shared Python envs.
+"""
+
+from __future__ import annotations
+
+import os
+import shutil
+import subprocess
+import sys
+from dataclasses import dataclass
+from pathlib import Path
+
+DEFAULT_JULIA_PROJECT = Path("/tmp/sciona_atoms_physics_juliacall_project")
+DEFAULT_JULIA_DEPOT = Path("/tmp/sciona_atoms_physics_julia_depot")
+PYTHONCALL_UUID = "6099a3de-4c0c-538f-b890-85f7d6d5f1b6"
+
+
+@dataclass(frozen=True)
+class JuliaRuntimeConfig:
+    project: Path
+    depot: Path
+    julia_exe: str
+
+
+def discover_julia_executable() -> str:
+    explicit = os.environ.get("PYTHON_JULIACALL_EXE")
+    if explicit:
+        return explicit
+
+    launcher = shutil.which("julia") or ""
+    direct_bins = sorted(
+        Path.home().joinpath(".julia", "juliaup").glob("julia-*/bin/julia"),
+        reverse=True,
+    )
+    if direct_bins:
+        return str(direct_bins[0])
+    return launcher
+
+
+def _project_has_pythoncall(project: Path) -> bool:
+    project_toml = project / "Project.toml"
+    if not project_toml.exists():
+        return False
+    text = project_toml.read_text(encoding="utf-8")
+    return "PythonCall" in text or PYTHONCALL_UUID in text
+
+
+def configure_juliacall_env(
+    *,
+    project: str | Path | None = None,
+    depot: str | Path | None = None,
+) -> JuliaRuntimeConfig:
+    project_path = Path(
+        project
+        or os.environ.get("PYTHON_JULIACALL_PROJECT")
+        or os.environ.get("PYTHON_JULIAPKG_PROJECT")
+        or DEFAULT_JULIA_PROJECT
+    )
+    depot_path = Path(
+        depot
+        or os.environ.get("JULIA_DEPOT_PATH")
+        or DEFAULT_JULIA_DEPOT
+    )
+    project_path.mkdir(parents=True, exist_ok=True)
+    depot_path.mkdir(parents=True, exist_ok=True)
+
+    julia_exe = discover_julia_executable()
+    os.environ.setdefault("PYTHON_JULIAPKG_PROJECT", str(project_path))
+    os.environ.setdefault("JULIA_DEPOT_PATH", str(depot_path))
+    if _project_has_pythoncall(project_path):
+        if julia_exe:
+            os.environ.setdefault("PYTHON_JULIACALL_EXE", julia_exe)
+        os.environ.setdefault("PYTHON_JULIACALL_PROJECT", str(project_path))
+
+    return JuliaRuntimeConfig(
+        project=project_path,
+        depot=depot_path,
+        julia_exe=julia_exe,
+    )
+
+
+def prewarm_juliacall_project(
+    *,
+    project: str | Path | None = None,
+    depot: str | Path | None = None,
+) -> JuliaRuntimeConfig:
+    cfg = configure_juliacall_env(project=project, depot=depot)
+    if not cfg.julia_exe:
+        raise RuntimeError("Julia executable not found on PATH")
+
+    bootstrap = (
+        "import Pkg\n"
+        f'Pkg.activate(raw"{cfg.project}")\n'
+        "Pkg.instantiate()\n"
+        "try\n"
+        "    import PythonCall\n"
+        "catch\n"
+        '    Pkg.add("PythonCall")\n'
+        "    Pkg.instantiate()\n"
+        "    import PythonCall\n"
+        "end\n"
+        "println(Base.active_project())\n"
+    )
+
+    def _run_bootstrap(script: str) -> None:
+        env = dict(os.environ)
+        env["JULIA_DEPOT_PATH"] = str(cfg.depot)
+        env["PYTHON_JULIAPKG_PROJECT"] = str(cfg.project)
+        subprocess.run(
+            [cfg.julia_exe, "--startup-file=no", "-e", script],
+            check=True,
+            env=env,
+            stdout=sys.stdout,
+            stderr=sys.stderr,
+        )
+
+    try:
+        _run_bootstrap(bootstrap)
+    except subprocess.CalledProcessError:
+        shutil.rmtree(cfg.project, ignore_errors=True)
+        shutil.rmtree(cfg.depot, ignore_errors=True)
+        cfg.project.mkdir(parents=True, exist_ok=True)
+        cfg.depot.mkdir(parents=True, exist_ok=True)
+        clean_bootstrap = (
+            "import Pkg\n"
+            f'Pkg.activate(raw"{cfg.project}")\n'
+            'Pkg.add("PythonCall")\n'
+            "Pkg.instantiate()\n"
+            "import PythonCall\n"
+            "println(Base.active_project())\n"
+        )
+        _run_bootstrap(clean_bootstrap)
+
+    os.environ["PYTHON_JULIACALL_PROJECT"] = str(cfg.project)
+    return cfg

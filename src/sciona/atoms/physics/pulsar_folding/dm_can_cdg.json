@@ -1,0 +1,96 @@
+{
+  "nodes": [
+    {
+      "node_id": "dm_can_root",
+      "parent_id": null,
+      "name": "ageoa.pulsar_folding.dm_can",
+      "description": "Consolidated module for ageoa.pulsar_folding.dm_can.",
+      "concept_type": "custom",
+      "inputs": [],
+      "outputs": [],
+      "status": "decomposed",
+      "children": [
+        "dm_candidate_filter"
+      ],
+      "depth": 0,
+      "type_signature": "module",
+      "matched_primitive": null,
+      "is_optional": false,
+      "is_opaque": false,
+      "is_external": false,
+      "parallelizable": false,
+      "conceptual_summary": "Grouped atoms sharing an upstream family or module.",
+      "critic_notes": "Auto-generated module CDG for consolidation.",
+      "decomposition_rationale": "Replaces singleton atom subpackages with a flat module layout."
+    },
+    {
+      "node_id": "dm_candidate_filter",
+      "parent_id": "dm_can_root",
+      "name": "dm_candidate_filter",
+      "description": "Filters Dispersion Measure (DM) candidates for pulsar detection. Compares observed data against a base DM model using sensitivity and channel parameters to keep only viable candidates.",
+      "concept_type": "custom",
+      "inputs": [
+        {
+          "name": "data",
+          "type_desc": "np.ndarray",
+          "constraints": "required argument"
+        },
+        {
+          "name": "data_base",
+          "type_desc": "np.ndarray",
+          "constraints": "required argument"
+        },
+        {
+          "name": "sens",
+          "type_desc": "float",
+          "constraints": "required argument"
+        },
+        {
+          "name": "DM_base",
+          "type_desc": "float",
+          "constraints": "required argument"
+        },
+        {
+          "name": "candidates",
+          "type_desc": "np.ndarray",
+          "constraints": "required argument"
+        },
+        {
+          "name": "fchan",
+          "type_desc": "float",
+          "constraints": "required argument"
+        },
+        {
+          "name": "width",
+          "type_desc": "float",
+          "constraints": "required argument"
+        },
+        {
+          "name": "tsamp",
+          "type_desc": "float",
+          "constraints": "required argument"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "result",
+          "type_desc": "np.ndarray",
+          "constraints": "function return value"
+        }
+      ],
+      "status": "atomic",
+      "children": [],
+      "depth": 1,
+      "type_signature": "(data: np.ndarray, data_base: np.ndarray, sens: float, DM_base: float, candidates: np.ndarray, fchan: float, width: float, tsamp: float) -> np.ndarray",
+      "matched_primitive": null,
+      "is_optional": false,
+      "is_opaque": false,
+      "is_external": false,
+      "parallelizable": false,
+      "conceptual_summary": "Direct callable atom in the consolidated module.",
+      "critic_notes": "Signature derived from the Python wrapper definition.",
+      "decomposition_rationale": "Leaf atom."
+    }
+  ],
+  "edges": []
+}

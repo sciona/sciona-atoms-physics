@@ -1,0 +1,200 @@
+[
+  {
+    "pdg_node": {
+      "predicate_id": "calculate_tile_channel_height",
+      "statement": "(shared_mem_size: int, block_dim_x: int, total_channels: int) -> int",
+      "informal_desc": "Calculates the number of frequency channels to process in a single tile, based on the simulated shared memory size and the width of the time block.",
+      "prover": "python",
+      "context": {}
+    },
+    "verified_match": {
+      "candidate": {
+        "declaration": {
+          "name": "calculate_tile_channel_height",
+          "type_signature": "(shared_mem_size: int, block_dim_x: int, total_channels: int) -> int",
+          "docstring": "Calculates the number of frequency channels to process in a single tile, based on the simulated shared memory size and the width of the time block.",
+          "conceptual_summary": "",
+          "source_lib": "ingester",
+          "prover": "python",
+          "raw_code": ""
+        },
+        "score": 1.0,
+        "retrieval_method": "ingester"
+      },
+      "verified": true,
+      "compiler_output": "",
+      "proof_term": "",
+      "error_message": "",
+      "verification_level": "type_checked"
+    },
+    "all_candidates": [
+      {
+        "declaration": {
+          "name": "calculate_tile_channel_height",
+          "type_signature": "(shared_mem_size: int, block_dim_x: int, total_channels: int) -> int",
+          "docstring": "Calculates the number of frequency channels to process in a single tile, based on the simulated shared memory size and the width of the time block.",
+          "conceptual_summary": "",
+          "source_lib": "ingester",
+          "prover": "python",
+          "raw_code": ""
+        },
+        "score": 1.0,
+        "retrieval_method": "ingester"
+      }
+    ],
+    "all_verifications": [
+      {
+        "candidate": {
+          "declaration": {
+            "name": "calculate_tile_channel_height",
+            "type_signature": "(shared_mem_size: int, block_dim_x: int, total_channels: int) -> int",
+            "docstring": "Calculates the number of frequency channels to process in a single tile, based on the simulated shared memory size and the width of the time block.",
+            "conceptual_summary": "",
+            "source_lib": "ingester",
+            "prover": "python",
+            "raw_code": ""
+          },
+          "score": 1.0,
+          "retrieval_method": "ingester"
+        },
+        "verified": true,
+        "compiler_output": "",
+        "proof_term": "",
+        "error_message": "",
+        "verification_level": "type_checked"
+      }
+    ]
+  },
+  {
+    "pdg_node": {
+      "predicate_id": "load_shifted_data_tile",
+      "statement": "(input_data: numpy.ndarray, delay_row: numpy.ndarray, time_downsample: int, total_downsampled_time: int, total_channels: int, tile_start_channel: int, tile_channel_height: int, tile_start_time: int, tile_time_width: int) -> numpy.ndarray",
+      "informal_desc": "For a specific dispersion measure, time block, and channel chunk, this atom loads a tile of data from the input, applying the appropriate time delays for each frequency channel.",
+      "prover": "python",
+      "context": {}
+    },
+    "verified_match": {
+      "candidate": {
+        "declaration": {
+          "name": "load_shifted_data_tile",
+          "type_signature": "(input_data: numpy.ndarray, delay_row: numpy.ndarray, time_downsample: int, total_downsampled_time: int, total_channels: int, tile_start_channel: int, tile_channel_height: int, tile_start_time: int, tile_time_width: int) -> numpy.ndarray",
+          "docstring": "For a specific dispersion measure, time block, and channel chunk, this atom loads a tile of data from the input, applying the appropriate time delays for each frequency channel.",
+          "conceptual_summary": "",
+          "source_lib": "ingester",
+          "prover": "python",
+          "raw_code": ""
+        },
+        "score": 1.0,
+        "retrieval_method": "ingester"
+      },
+      "verified": true,
+      "compiler_output": "",
+      "proof_term": "",
+      "error_message": "",
+      "verification_level": "type_checked"
+    },
+    "all_candidates": [
+      {
+        "declaration": {
+          "name": "load_shifted_data_tile",
+          "type_signature": "(input_data: numpy.ndarray, delay_row: numpy.ndarray, time_downsample: int, total_downsampled_time: int, total_channels: int, tile_start_channel: int, tile_channel_height: int, tile_start_time: int, tile_time_width: int) -> numpy.ndarray",
+          "docstring": "For a specific dispersion measure, time block, and channel chunk, this atom loads a tile of data from the input, applying the appropriate time delays for each frequency channel.",
+          "conceptual_summary": "",
+          "source_lib": "ingester",
+          "prover": "python",
+          "raw_code": ""
+        },
+        "score": 1.0,
+        "retrieval_method": "ingester"
+      }
+    ],
+    "all_verifications": [
+      {
+        "candidate": {
+          "declaration": {
+            "name": "load_shifted_data_tile",
+            "type_signature": "(input_data: numpy.ndarray, delay_row: numpy.ndarray, time_downsample: int, total_downsampled_time: int, total_channels: int, tile_start_channel: int, tile_channel_height: int, tile_start_time: int, tile_time_width: int) -> numpy.ndarray",
+            "docstring": "For a specific dispersion measure, time block, and channel chunk, this atom loads a tile of data from the input, applying the appropriate time delays for each frequency channel.",
+            "conceptual_summary": "",
+            "source_lib": "ingester",
+            "prover": "python",
+            "raw_code": ""
+          },
+          "score": 1.0,
+          "retrieval_method": "ingester"
+        },
+        "verified": true,
+        "compiler_output": "",
+        "proof_term": "",
+        "error_message": "",
+        "verification_level": "type_checked"
+      }
+    ]
+  },
+  {
+    "pdg_node": {
+      "predicate_id": "sum_tile_over_channels",
+      "statement": "(shifted_data_tile: numpy.ndarray) -> numpy.ndarray",
+      "informal_desc": "Reduces a tile of time-shifted data by summing across the frequency channel axis, producing a partial sum for each time step within the block.",
+      "prover": "python",
+      "context": {}
+    },
+    "verified_match": {
+      "candidate": {
+        "declaration": {
+          "name": "sum_tile_over_channels",
+          "type_signature": "(shifted_data_tile: numpy.ndarray) -> numpy.ndarray",
+          "docstring": "Reduces a tile of time-shifted data by summing across the frequency channel axis, producing a partial sum for each time step within the block.",
+          "conceptual_summary": "",
+          "source_lib": "ingester",
+          "prover": "python",
+          "raw_code": ""
+        },
+        "score": 1.0,
+        "retrieval_method": "ingester"
+      },
+      "verified": true,
+      "compiler_output": "",
+      "proof_term": "",
+      "error_message": "",
+      "verification_level": "type_checked"
+    },
+    "all_candidates": [
+      {
+        "declaration": {
+          "name": "sum_tile_over_channels",
+          "type_signature": "(shifted_data_tile: numpy.ndarray) -> numpy.ndarray",
+          "docstring": "Reduces a tile of time-shifted data by summing across the frequency channel axis, producing a partial sum for each time step within the block.",
+          "conceptual_summary": "",
+          "source_lib": "ingester",
+          "prover": "python",
+          "raw_code": ""
+        },
+        "score": 1.0,
+        "retrieval_method": "ingester"
+      }
+    ],
+    "all_verifications": [
+      {
+        "candidate": {
+          "declaration": {
+            "name": "sum_tile_over_channels",
+            "type_signature": "(shifted_data_tile: numpy.ndarray) -> numpy.ndarray",
+            "docstring": "Reduces a tile of time-shifted data by summing across the frequency channel axis, producing a partial sum for each time step within the block.",
+            "conceptual_summary": "",
+            "source_lib": "ingester",
+            "prover": "python",
+            "raw_code": ""
+          },
+          "score": 1.0,
+          "retrieval_method": "ingester"
+        },
+        "verified": true,
+        "compiler_output": "",
+        "proof_term": "",
+        "error_message": "",
+        "verification_level": "type_checked"
+      }
+    ]
+  }
+]

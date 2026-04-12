@@ -1,0 +1,55 @@
+{
+  "schema_version": "1.1",
+  "atoms": {
+    "ageoa.skyfield.calculate_vector_angle@ageoa/skyfield/atoms.py:37": {
+      "references": [
+        {
+          "ref_id": "skyfield2019ascl",
+          "match_metadata": {
+            "similarity_score": null,
+            "match_type": "manual",
+            "matched_nodes": [],
+            "confidence": "high",
+            "notes": "Preferred Skyfield citation."
+          }
+        },
+        {
+          "ref_id": "repo_skyfield",
+          "match_metadata": {
+            "similarity_score": null,
+            "match_type": "manual",
+            "matched_nodes": [],
+            "confidence": "high",
+            "notes": "Upstream implementation is mapped to the vendored skyfield repository."
+          }
+        }
+      ],
+      "auto_attribution_runs": []
+    },
+    "ageoa.skyfield.compute_spherical_coordinate_rates@ageoa/skyfield/atoms.py:21": {
+      "references": [
+        {
+          "ref_id": "skyfield2019ascl",
+          "match_metadata": {
+            "similarity_score": null,
+            "match_type": "manual",
+            "matched_nodes": [],
+            "confidence": "high",
+            "notes": "Preferred Skyfield citation."
+          }
+        },
+        {
+          "ref_id": "repo_skyfield",
+          "match_metadata": {
+            "similarity_score": null,
+            "match_type": "manual",
+            "matched_nodes": [],
+            "confidence": "high",
+            "notes": "Upstream implementation is mapped to the vendored skyfield repository."
+          }
+        }
+      ],
+      "auto_attribution_runs": []
+    }
+  }
+}

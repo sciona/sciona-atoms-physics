@@ -1,0 +1,95 @@
+{
+  "nodes": [
+    {
+      "node_id": "tai2utc_root",
+      "parent_id": null,
+      "name": "Tai2Utc",
+      "description": "Canonical CDG for the TAI/UTC leap-second conversion family.",
+      "concept_type": "custom",
+      "inputs": [],
+      "outputs": [],
+      "status": "decomposed",
+      "children": [
+        "utc_to_tai_leap_second_kernel",
+        "tai_to_utc_inversion"
+      ],
+      "depth": 0,
+      "type_signature": "",
+      "matched_primitive": null,
+      "primitive_binding_confidence": 0.0,
+      "primitive_binding_source": "",
+      "is_optional": false,
+      "is_opaque": false,
+      "is_external": false,
+      "parallelizable": false,
+      "conceptual_summary": "",
+      "critic_notes": "",
+      "decomposition_rationale": ""
+    },
+    {
+      "node_id": "utc_to_tai_leap_second_kernel",
+      "parent_id": "tai2utc_root",
+      "name": "UtcToTaiLeapSecondKernel",
+      "description": "Convert a split UTC Julian date into TAI using the applicable leap-second offset.",
+      "concept_type": "arithmetic",
+      "inputs": [
+        {"name": "utc1", "type_desc": "float", "constraints": "finite", "required": true, "default_value_repr": ""},
+        {"name": "utc2", "type_desc": "float", "constraints": "finite", "required": true, "default_value_repr": ""}
+      ],
+      "outputs": [
+        {"name": "tai1", "type_desc": "float", "constraints": "split Julian date part", "required": true, "default_value_repr": ""},
+        {"name": "tai2", "type_desc": "float", "constraints": "split Julian date part", "required": true, "default_value_repr": ""}
+      ],
+      "status": "atomic",
+      "children": [],
+      "depth": 1,
+      "type_signature": "(utc1: float, utc2: float) -> tuple[float, float]",
+      "matched_primitive": null,
+      "primitive_binding_confidence": 0.0,
+      "primitive_binding_source": "",
+      "is_optional": false,
+      "is_opaque": false,
+      "is_external": false,
+      "parallelizable": false,
+      "conceptual_summary": "",
+      "critic_notes": "",
+      "decomposition_rationale": ""
+    },
+    {
+      "node_id": "tai_to_utc_inversion",
+      "parent_id": "tai2utc_root",
+      "name": "TaiToUtcInversion",
+      "description": "Invert the TAI conversion by iteratively refining a UTC split-date estimate.",
+      "concept_type": "arithmetic",
+      "inputs": [
+        {"name": "tai1", "type_desc": "float", "constraints": "finite", "required": true, "default_value_repr": ""},
+        {"name": "tai2", "type_desc": "float", "constraints": "finite", "required": true, "default_value_repr": ""},
+        {"name": "tai_estimate", "type_desc": "float", "constraints": "finite", "required": true, "default_value_repr": ""}
+      ],
+      "outputs": [
+        {"name": "utc1", "type_desc": "float", "constraints": "split Julian date part", "required": true, "default_value_repr": ""},
+        {"name": "utc2", "type_desc": "float", "constraints": "split Julian date part", "required": true, "default_value_repr": ""},
+        {"name": "candidate_utc", "type_desc": "float", "constraints": "combined estimate", "required": true, "default_value_repr": ""}
+      ],
+      "status": "atomic",
+      "children": [],
+      "depth": 1,
+      "type_signature": "(tai1: float, tai2: float, tai_estimate: float) -> tuple[float, float, float]",
+      "matched_primitive": null,
+      "primitive_binding_confidence": 0.0,
+      "primitive_binding_source": "",
+      "is_optional": false,
+      "is_opaque": false,
+      "is_external": false,
+      "parallelizable": false,
+      "conceptual_summary": "",
+      "critic_notes": "",
+      "decomposition_rationale": ""
+    }
+  ],
+  "edges": [],
+  "metadata": {
+    "source": "ingester",
+    "class_name": "tai2utc"
+  }
+}

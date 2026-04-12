@@ -1,0 +1,148 @@
+{
+  "nodes": [
+    {
+      "node_id": "apply_offsets_root",
+      "parent_id": null,
+      "name": "apply_offsets",
+      "description": "Ingested pipeline from apply_offsets",
+      "concept_type": "custom",
+      "inputs": [],
+      "outputs": [],
+      "status": "decomposed",
+      "children": [
+        "show",
+        "_zero_offset",
+        "apply_offsets"
+      ],
+      "depth": 0,
+      "type_signature": "",
+      "matched_primitive": null,
+      "is_optional": false,
+      "is_opaque": false,
+      "is_external": false,
+      "parallelizable": false,
+      "conceptual_summary": "",
+      "critic_notes": "",
+      "decomposition_rationale": ""
+    },
+    {
+      "node_id": "show",
+      "parent_id": "apply_offsets_root",
+      "name": "Show",
+      "description": "Format and display a value to an output stream",
+      "concept_type": "custom",
+      "inputs": [
+        {
+          "name": "io",
+          "type_desc": "Any",
+          "constraints": "x is not None"
+        },
+        {
+          "name": "s",
+          "type_desc": "Any",
+          "constraints": "x is not None"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "result",
+          "type_desc": "Any",
+          "constraints": "x is not None"
+        }
+      ],
+      "status": "atomic",
+      "children": [],
+      "depth": 1,
+      "type_signature": "(io: Any, s: Any) -> Any",
+      "matched_primitive": null,
+      "is_optional": false,
+      "is_opaque": false,
+      "is_external": false,
+      "parallelizable": false,
+      "conceptual_summary": "",
+      "critic_notes": "",
+      "decomposition_rationale": ""
+    },
+    {
+      "node_id": "_zero_offset",
+      "parent_id": "apply_offsets_root",
+      "name": " Zero Offset",
+      "description": "Return a zero time offset for a given number of seconds",
+      "concept_type": "custom",
+      "inputs": [
+        {
+          "name": "seconds",
+          "type_desc": "Any",
+          "constraints": "x is not None"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "result",
+          "type_desc": "Any",
+          "constraints": "x is not None"
+        }
+      ],
+      "status": "atomic",
+      "children": [],
+      "depth": 1,
+      "type_signature": "(seconds: Any) -> Any",
+      "matched_primitive": null,
+      "is_optional": false,
+      "is_opaque": false,
+      "is_external": false,
+      "parallelizable": false,
+      "conceptual_summary": "",
+      "critic_notes": "",
+      "decomposition_rationale": ""
+    },
+    {
+      "node_id": "apply_offsets",
+      "parent_id": "apply_offsets_root",
+      "name": "Apply Offsets",
+      "description": "Apply a sequence of time-scale offsets to a seconds value",
+      "concept_type": "custom",
+      "inputs": [
+        {
+          "name": "sec",
+          "type_desc": "Any",
+          "constraints": "x is not None"
+        },
+        {
+          "name": "ts1",
+          "type_desc": "Any",
+          "constraints": "x is not None"
+        },
+        {
+          "name": "ts2",
+          "type_desc": "Any",
+          "constraints": "x is not None"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "result",
+          "type_desc": "Any",
+          "constraints": "x is not None"
+        }
+      ],
+      "status": "atomic",
+      "children": [],
+      "depth": 1,
+      "type_signature": "(sec: Any, ts1: Any, ts2: Any) -> Any",
+      "matched_primitive": null,
+      "is_optional": false,
+      "is_opaque": false,
+      "is_external": false,
+      "parallelizable": false,
+      "conceptual_summary": "",
+      "critic_notes": "",
+      "decomposition_rationale": ""
+    }
+  ],
+  "edges": [],
+  "metadata": {
+    "source": "ingester",
+    "class_name": "apply_offsets"
+  }
+}

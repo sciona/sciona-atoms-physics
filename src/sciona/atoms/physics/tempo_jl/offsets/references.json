@@ -1,0 +1,80 @@
+{
+  "schema_version": "1.1",
+  "atoms": {
+    "ageoa.tempo_jl.offsets.offset_tt2tdb@ageoa/tempo_jl/offsets/atoms.py:17": {
+      "references": [
+        {
+          "ref_id": "urban2013almanac",
+          "match_metadata": {
+            "similarity_score": null,
+            "match_type": "manual",
+            "matched_nodes": [],
+            "confidence": "medium",
+            "notes": "Broad astronomical time-scale attribution."
+          }
+        },
+        {
+          "ref_id": "repo_tempo_jl",
+          "match_metadata": {
+            "similarity_score": null,
+            "match_type": "manual",
+            "matched_nodes": [],
+            "confidence": "high",
+            "notes": "Primary Tempo.jl software attribution."
+          }
+        }
+      ],
+      "auto_attribution_runs": []
+    },
+    "ageoa.tempo_jl.offsets.offset_tt2tdbh@ageoa/tempo_jl/offsets/atoms.py:38": {
+      "references": [
+        {
+          "ref_id": "urban2013almanac",
+          "match_metadata": {
+            "similarity_score": null,
+            "match_type": "manual",
+            "matched_nodes": [],
+            "confidence": "medium",
+            "notes": "Broad astronomical time-scale attribution."
+          }
+        },
+        {
+          "ref_id": "repo_tempo_jl",
+          "match_metadata": {
+            "similarity_score": null,
+            "match_type": "manual",
+            "matched_nodes": [],
+            "confidence": "high",
+            "notes": "Primary Tempo.jl software attribution."
+          }
+        }
+      ],
+      "auto_attribution_runs": []
+    },
+    "ageoa.tempo_jl.offsets.tt2tdb_offset@ageoa/tempo_jl/offsets/atoms.py:64": {
+      "references": [
+        {
+          "ref_id": "urban2013almanac",
+          "match_metadata": {
+            "similarity_score": null,
+            "match_type": "manual",
+            "matched_nodes": [],
+            "confidence": "medium",
+            "notes": "Broad astronomical time-scale attribution."
+          }
+        },
+        {
+          "ref_id": "repo_tempo_jl",
+          "match_metadata": {
+            "similarity_score": null,
+            "match_type": "manual",
+            "matched_nodes": [],
+            "confidence": "high",
+            "notes": "Primary Tempo.jl software attribution."
+          }
+        }
+      ],
+      "auto_attribution_runs": []
+    }
+  }
+}

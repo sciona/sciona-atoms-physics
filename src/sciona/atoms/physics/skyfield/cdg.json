@@ -1,0 +1,127 @@
+{
+  "nodes": [
+    {
+      "node_id": "SkyfieldVectorIngest_root",
+      "parent_id": null,
+      "name": "SkyfieldVectorIngest",
+      "description": "Ingested pipeline from SkyfieldVectorIngest",
+      "concept_type": "custom",
+      "inputs": [],
+      "outputs": [],
+      "status": "decomposed",
+      "children": [
+        "compute_spherical_coordinate_rates",
+        "calculate_vector_angle"
+      ],
+      "depth": 0,
+      "type_signature": "",
+      "matched_primitive": null,
+      "primitive_binding_confidence": 0.0,
+      "primitive_binding_source": "",
+      "is_optional": false,
+      "is_opaque": false,
+      "is_external": false,
+      "parallelizable": false,
+      "conceptual_summary": "",
+      "critic_notes": "",
+      "decomposition_rationale": ""
+    },
+    {
+      "node_id": "compute_spherical_coordinate_rates",
+      "parent_id": "SkyfieldVectorIngest_root",
+      "name": "compute_spherical_coordinate_rates",
+      "description": "Computes the rate of change of spherical coordinates (e.g., range, right ascension, declination) from Cartesian position and velocity vectors.",
+      "concept_type": "analysis",
+      "inputs": [
+        {
+          "name": "r",
+          "type_desc": "array-like",
+          "constraints": "Cartesian position vector(s).",
+          "required": true,
+          "default_value_repr": ""
+        },
+        {
+          "name": "v",
+          "type_desc": "array-like",
+          "constraints": "Cartesian velocity vector(s).",
+          "required": true,
+          "default_value_repr": ""
+        }
+      ],
+      "outputs": [
+        {
+          "name": "spherical_rates",
+          "type_desc": "tuple",
+          "constraints": "A tuple containing the rates of change for range, right ascension, and declination.",
+          "required": true,
+          "default_value_repr": ""
+        }
+      ],
+      "status": "atomic",
+      "children": [],
+      "depth": 1,
+      "type_signature": "(r: array-like, v: array-like) -> tuple",
+      "matched_primitive": null,
+      "primitive_binding_confidence": 0.0,
+      "primitive_binding_source": "",
+      "is_optional": false,
+      "is_opaque": false,
+      "is_external": false,
+      "parallelizable": false,
+      "conceptual_summary": "map_cartesian_rates_to_spherical_rates. Projects a rate of change (velocity) vector from a 3D Cartesian coordinate system to a spherical coordinate system. Given a point's position and its instantaneous velocity in (x, y, z), this function calculates the corresponding instantaneous rates of change for the point's radial distance, azimuthal angle, and polar angle.. Applications: In robotics, to calculate the necessary joint velocities of a spherical manipulator to track a target with a known Cartesian velocity., In geophysics, to determine the rate of change in latitude, longitude, and altitude of a weather balloon or drifting sensor from its velocity vector relative to the Earth's center., In computer graphics, to update the orientation and distance of an orbital camera that is programmatically following a moving object., In biomechanics, to analyze the angular velocity of a limb joint (e.g., shoulder or hip) based on the 3D velocity of the hand or foot.",
+      "critic_notes": "",
+      "decomposition_rationale": ""
+    },
+    {
+      "node_id": "calculate_vector_angle",
+      "parent_id": "SkyfieldVectorIngest_root",
+      "name": "calculate_vector_angle",
+      "description": "Computes the angle between two vectors.",
+      "concept_type": "geometry",
+      "inputs": [
+        {
+          "name": "u",
+          "type_desc": "array-like",
+          "constraints": "First vector.",
+          "required": true,
+          "default_value_repr": ""
+        },
+        {
+          "name": "v",
+          "type_desc": "array-like",
+          "constraints": "Second vector.",
+          "required": true,
+          "default_value_repr": ""
+        }
+      ],
+      "outputs": [
+        {
+          "name": "angle",
+          "type_desc": "float",
+          "constraints": "The angle in radians.",
+          "required": true,
+          "default_value_repr": ""
+        }
+      ],
+      "status": "atomic",
+      "children": [],
+      "depth": 1,
+      "type_signature": "(u: array-like, v: array-like) -> float",
+      "matched_primitive": null,
+      "primitive_binding_confidence": 0.0,
+      "primitive_binding_source": "",
+      "is_optional": false,
+      "is_opaque": false,
+      "is_external": false,
+      "parallelizable": false,
+      "conceptual_summary": "angular_separation. Quantifies the rotational difference between two ordered, n-dimensional numerical sequences. The operation projects two vectors onto a shared 2D plane and measures the angle between them, effectively reducing their relational information to a single scalar representing their relative orientation.. Applications: In natural language processing, measuring the semantic similarity between two documents represented as high-dimensional word embeddings, where a smaller angle implies a closer conceptual relationship., In bioinformatics, calculating the dihedral angles between planes formed by bonded atoms in a protein backbone to determine its secondary structure., In computer vision and robotics, determining the orientation difference between a camera's view vector and a target object's normal vector to guide navigation or manipulation., In financial analysis, assessing the correlation drift between two time-series of asset returns by treating them as vectors in a high-dimensional space.",
+      "critic_notes": "",
+      "decomposition_rationale": ""
+    }
+  ],
+  "edges": [],
+  "metadata": {
+    "source": "ingester",
+    "class_name": "SkyfieldVectorIngest"
+  }
+}

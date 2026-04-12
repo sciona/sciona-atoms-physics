@@ -1,0 +1,728 @@
+[
+  {
+    "pdg_node": {
+      "predicate_id": "order_utc_parts_by_magnitude",
+      "statement": "(utc1: float, utc2: float) -> tuple[float, float, bool]",
+      "informal_desc": "Determines which of the two UTC Julian date parts has greater absolute magnitude and promotes both to a common numeric type, placing the larger-magnitude part first (u1) and the smaller part second (u2) to maximize floating-point precision in subsequent arithmetic.",
+      "prover": "python",
+      "context": {}
+    },
+    "verified_match": {
+      "candidate": {
+        "declaration": {
+          "name": "order_utc_parts_by_magnitude",
+          "type_signature": "(utc1: float, utc2: float) -> tuple[float, float, bool]",
+          "docstring": "Determines which of the two UTC Julian date parts has greater absolute magnitude and promotes both to a common numeric type, placing the larger-magnitude part first (u1) and the smaller part second (u2) to maximize floating-point precision in subsequent arithmetic.",
+          "conceptual_summary": "",
+          "source_lib": "ingester",
+          "prover": "python",
+          "raw_code": ""
+        },
+        "score": 1.0,
+        "retrieval_method": "ingester"
+      },
+      "verified": true,
+      "compiler_output": "",
+      "proof_term": "",
+      "error_message": "",
+      "verification_level": "type_checked"
+    },
+    "all_candidates": [
+      {
+        "declaration": {
+          "name": "order_utc_parts_by_magnitude",
+          "type_signature": "(utc1: float, utc2: float) -> tuple[float, float, bool]",
+          "docstring": "Determines which of the two UTC Julian date parts has greater absolute magnitude and promotes both to a common numeric type, placing the larger-magnitude part first (u1) and the smaller part second (u2) to maximize floating-point precision in subsequent arithmetic.",
+          "conceptual_summary": "",
+          "source_lib": "ingester",
+          "prover": "python",
+          "raw_code": ""
+        },
+        "score": 1.0,
+        "retrieval_method": "ingester"
+      }
+    ],
+    "all_verifications": [
+      {
+        "candidate": {
+          "declaration": {
+            "name": "order_utc_parts_by_magnitude",
+            "type_signature": "(utc1: float, utc2: float) -> tuple[float, float, bool]",
+            "docstring": "Determines which of the two UTC Julian date parts has greater absolute magnitude and promotes both to a common numeric type, placing the larger-magnitude part first (u1) and the smaller part second (u2) to maximize floating-point precision in subsequent arithmetic.",
+            "conceptual_summary": "",
+            "source_lib": "ingester",
+            "prover": "python",
+            "raw_code": ""
+          },
+          "score": 1.0,
+          "retrieval_method": "ingester"
+        },
+        "verified": true,
+        "compiler_output": "",
+        "proof_term": "",
+        "error_message": "",
+        "verification_level": "type_checked"
+      }
+    ]
+  },
+  {
+    "pdg_node": {
+      "predicate_id": "extract_fractional_day_and_julian_offset",
+      "statement": "(u1: float, u2: float) -> tuple[float, float]",
+      "informal_desc": "Calls jd2cal on the ordered two-part Julian date to decompose it into calendar fields and extract the sub-day fractional part fd. Also computes z2, the integer-day portion of u2 by subtracting fd, for later reassembly.",
+      "prover": "python",
+      "context": {}
+    },
+    "verified_match": {
+      "candidate": {
+        "declaration": {
+          "name": "extract_fractional_day_and_julian_offset",
+          "type_signature": "(u1: float, u2: float) -> tuple[float, float]",
+          "docstring": "Calls jd2cal on the ordered two-part Julian date to decompose it into calendar fields and extract the sub-day fractional part fd. Also computes z2, the integer-day portion of u2 by subtracting fd, for later reassembly.",
+          "conceptual_summary": "",
+          "source_lib": "ingester",
+          "prover": "python",
+          "raw_code": ""
+        },
+        "score": 1.0,
+        "retrieval_method": "ingester"
+      },
+      "verified": true,
+      "compiler_output": "",
+      "proof_term": "",
+      "error_message": "",
+      "verification_level": "type_checked"
+    },
+    "all_candidates": [
+      {
+        "declaration": {
+          "name": "extract_fractional_day_and_julian_offset",
+          "type_signature": "(u1: float, u2: float) -> tuple[float, float]",
+          "docstring": "Calls jd2cal on the ordered two-part Julian date to decompose it into calendar fields and extract the sub-day fractional part fd. Also computes z2, the integer-day portion of u2 by subtracting fd, for later reassembly.",
+          "conceptual_summary": "",
+          "source_lib": "ingester",
+          "prover": "python",
+          "raw_code": ""
+        },
+        "score": 1.0,
+        "retrieval_method": "ingester"
+      }
+    ],
+    "all_verifications": [
+      {
+        "candidate": {
+          "declaration": {
+            "name": "extract_fractional_day_and_julian_offset",
+            "type_signature": "(u1: float, u2: float) -> tuple[float, float]",
+            "docstring": "Calls jd2cal on the ordered two-part Julian date to decompose it into calendar fields and extract the sub-day fractional part fd. Also computes z2, the integer-day portion of u2 by subtracting fd, for later reassembly.",
+            "conceptual_summary": "",
+            "source_lib": "ingester",
+            "prover": "python",
+            "raw_code": ""
+          },
+          "score": 1.0,
+          "retrieval_method": "ingester"
+        },
+        "verified": true,
+        "compiler_output": "",
+        "proof_term": "",
+        "error_message": "",
+        "verification_level": "type_checked"
+      }
+    ]
+  },
+  {
+    "pdg_node": {
+      "predicate_id": "lookup_leap_second_offset_today",
+      "statement": "(u1: float, u2: float, DJ2000: float) -> float",
+      "informal_desc": "Queries the leap-seconds table with the Julian date offset from J2000 to obtain the TAI-UTC difference \u0394t0 applicable at 0h of the current UTC day.",
+      "prover": "python",
+      "context": {}
+    },
+    "verified_match": {
+      "candidate": {
+        "declaration": {
+          "name": "lookup_leap_second_offset_today",
+          "type_signature": "(u1: float, u2: float, DJ2000: float) -> float",
+          "docstring": "Queries the leap-seconds table with the Julian date offset from J2000 to obtain the TAI-UTC difference \u0394t0 applicable at 0h of the current UTC day.",
+          "conceptual_summary": "",
+          "source_lib": "ingester",
+          "prover": "python",
+          "raw_code": ""
+        },
+        "score": 1.0,
+        "retrieval_method": "ingester"
+      },
+      "verified": true,
+      "compiler_output": "",
+      "proof_term": "",
+      "error_message": "",
+      "verification_level": "type_checked"
+    },
+    "all_candidates": [
+      {
+        "declaration": {
+          "name": "lookup_leap_second_offset_today",
+          "type_signature": "(u1: float, u2: float, DJ2000: float) -> float",
+          "docstring": "Queries the leap-seconds table with the Julian date offset from J2000 to obtain the TAI-UTC difference \u0394t0 applicable at 0h of the current UTC day.",
+          "conceptual_summary": "",
+          "source_lib": "ingester",
+          "prover": "python",
+          "raw_code": ""
+        },
+        "score": 1.0,
+        "retrieval_method": "ingester"
+      }
+    ],
+    "all_verifications": [
+      {
+        "candidate": {
+          "declaration": {
+            "name": "lookup_leap_second_offset_today",
+            "type_signature": "(u1: float, u2: float, DJ2000: float) -> float",
+            "docstring": "Queries the leap-seconds table with the Julian date offset from J2000 to obtain the TAI-UTC difference \u0394t0 applicable at 0h of the current UTC day.",
+            "conceptual_summary": "",
+            "source_lib": "ingester",
+            "prover": "python",
+            "raw_code": ""
+          },
+          "score": 1.0,
+          "retrieval_method": "ingester"
+        },
+        "verified": true,
+        "compiler_output": "",
+        "proof_term": "",
+        "error_message": "",
+        "verification_level": "type_checked"
+      }
+    ]
+  },
+  {
+    "pdg_node": {
+      "predicate_id": "lookup_leap_second_offset_tomorrow",
+      "statement": "(u1: float, u2: float, DJ2000: float) -> float",
+      "informal_desc": "Queries the leap-seconds table for the TAI-UTC offset at 0h of the next UTC day (tomorrow) to detect whether a leap-second event occurs between today and tomorrow.",
+      "prover": "python",
+      "context": {}
+    },
+    "verified_match": {
+      "candidate": {
+        "declaration": {
+          "name": "lookup_leap_second_offset_tomorrow",
+          "type_signature": "(u1: float, u2: float, DJ2000: float) -> float",
+          "docstring": "Queries the leap-seconds table for the TAI-UTC offset at 0h of the next UTC day (tomorrow) to detect whether a leap-second event occurs between today and tomorrow.",
+          "conceptual_summary": "",
+          "source_lib": "ingester",
+          "prover": "python",
+          "raw_code": ""
+        },
+        "score": 1.0,
+        "retrieval_method": "ingester"
+      },
+      "verified": true,
+      "compiler_output": "",
+      "proof_term": "",
+      "error_message": "",
+      "verification_level": "type_checked"
+    },
+    "all_candidates": [
+      {
+        "declaration": {
+          "name": "lookup_leap_second_offset_tomorrow",
+          "type_signature": "(u1: float, u2: float, DJ2000: float) -> float",
+          "docstring": "Queries the leap-seconds table for the TAI-UTC offset at 0h of the next UTC day (tomorrow) to detect whether a leap-second event occurs between today and tomorrow.",
+          "conceptual_summary": "",
+          "source_lib": "ingester",
+          "prover": "python",
+          "raw_code": ""
+        },
+        "score": 1.0,
+        "retrieval_method": "ingester"
+      }
+    ],
+    "all_verifications": [
+      {
+        "candidate": {
+          "declaration": {
+            "name": "lookup_leap_second_offset_tomorrow",
+            "type_signature": "(u1: float, u2: float, DJ2000: float) -> float",
+            "docstring": "Queries the leap-seconds table for the TAI-UTC offset at 0h of the next UTC day (tomorrow) to detect whether a leap-second event occurs between today and tomorrow.",
+            "conceptual_summary": "",
+            "source_lib": "ingester",
+            "prover": "python",
+            "raw_code": ""
+          },
+          "score": 1.0,
+          "retrieval_method": "ingester"
+        },
+        "verified": true,
+        "compiler_output": "",
+        "proof_term": "",
+        "error_message": "",
+        "verification_level": "type_checked"
+      }
+    ]
+  },
+  {
+    "pdg_node": {
+      "predicate_id": "spread_leap_second_into_fractional_day",
+      "statement": "(fd: float, delta_t0: float, delta_t24: float) -> float",
+      "informal_desc": "Detects a leap-second jump by comparing today's and tomorrow's TAI-UTC offsets and distributes any difference uniformly across the preceding day by adjusting the fractional day fd. This smears the leap second into the 86400 seconds of the current day.",
+      "prover": "python",
+      "context": {}
+    },
+    "verified_match": {
+      "candidate": {
+        "declaration": {
+          "name": "spread_leap_second_into_fractional_day",
+          "type_signature": "(fd: float, delta_t0: float, delta_t24: float) -> float",
+          "docstring": "Detects a leap-second jump by comparing today's and tomorrow's TAI-UTC offsets and distributes any difference uniformly across the preceding day by adjusting the fractional day fd. This smears the leap second into the 86400 seconds of the current day.",
+          "conceptual_summary": "",
+          "source_lib": "ingester",
+          "prover": "python",
+          "raw_code": ""
+        },
+        "score": 1.0,
+        "retrieval_method": "ingester"
+      },
+      "verified": true,
+      "compiler_output": "",
+      "proof_term": "",
+      "error_message": "",
+      "verification_level": "type_checked"
+    },
+    "all_candidates": [
+      {
+        "declaration": {
+          "name": "spread_leap_second_into_fractional_day",
+          "type_signature": "(fd: float, delta_t0: float, delta_t24: float) -> float",
+          "docstring": "Detects a leap-second jump by comparing today's and tomorrow's TAI-UTC offsets and distributes any difference uniformly across the preceding day by adjusting the fractional day fd. This smears the leap second into the 86400 seconds of the current day.",
+          "conceptual_summary": "",
+          "source_lib": "ingester",
+          "prover": "python",
+          "raw_code": ""
+        },
+        "score": 1.0,
+        "retrieval_method": "ingester"
+      }
+    ],
+    "all_verifications": [
+      {
+        "candidate": {
+          "declaration": {
+            "name": "spread_leap_second_into_fractional_day",
+            "type_signature": "(fd: float, delta_t0: float, delta_t24: float) -> float",
+            "docstring": "Detects a leap-second jump by comparing today's and tomorrow's TAI-UTC offsets and distributes any difference uniformly across the preceding day by adjusting the fractional day fd. This smears the leap second into the 86400 seconds of the current day.",
+            "conceptual_summary": "",
+            "source_lib": "ingester",
+            "prover": "python",
+            "raw_code": ""
+          },
+          "score": 1.0,
+          "retrieval_method": "ingester"
+        },
+        "verified": true,
+        "compiler_output": "",
+        "proof_term": "",
+        "error_message": "",
+        "verification_level": "type_checked"
+      }
+    ]
+  },
+  {
+    "pdg_node": {
+      "predicate_id": "assemble_tai_second_part",
+      "statement": "(z2: float, fd_adjusted: float, delta_t0: float) -> float",
+      "informal_desc": "Combines the integer-day component z2, the leap-adjusted fractional day fd_adjusted, and today's leap-second offset delta_t0 (converted to day units) to form the second part of the two-part TAI Julian date a2.",
+      "prover": "python",
+      "context": {}
+    },
+    "verified_match": {
+      "candidate": {
+        "declaration": {
+          "name": "assemble_tai_second_part",
+          "type_signature": "(z2: float, fd_adjusted: float, delta_t0: float) -> float",
+          "docstring": "Combines the integer-day component z2, the leap-adjusted fractional day fd_adjusted, and today's leap-second offset delta_t0 (converted to day units) to form the second part of the two-part TAI Julian date a2.",
+          "conceptual_summary": "",
+          "source_lib": "ingester",
+          "prover": "python",
+          "raw_code": ""
+        },
+        "score": 1.0,
+        "retrieval_method": "ingester"
+      },
+      "verified": true,
+      "compiler_output": "",
+      "proof_term": "",
+      "error_message": "",
+      "verification_level": "type_checked"
+    },
+    "all_candidates": [
+      {
+        "declaration": {
+          "name": "assemble_tai_second_part",
+          "type_signature": "(z2: float, fd_adjusted: float, delta_t0: float) -> float",
+          "docstring": "Combines the integer-day component z2, the leap-adjusted fractional day fd_adjusted, and today's leap-second offset delta_t0 (converted to day units) to form the second part of the two-part TAI Julian date a2.",
+          "conceptual_summary": "",
+          "source_lib": "ingester",
+          "prover": "python",
+          "raw_code": ""
+        },
+        "score": 1.0,
+        "retrieval_method": "ingester"
+      }
+    ],
+    "all_verifications": [
+      {
+        "candidate": {
+          "declaration": {
+            "name": "assemble_tai_second_part",
+            "type_signature": "(z2: float, fd_adjusted: float, delta_t0: float) -> float",
+            "docstring": "Combines the integer-day component z2, the leap-adjusted fractional day fd_adjusted, and today's leap-second offset delta_t0 (converted to day units) to form the second part of the two-part TAI Julian date a2.",
+            "conceptual_summary": "",
+            "source_lib": "ingester",
+            "prover": "python",
+            "raw_code": ""
+          },
+          "score": 1.0,
+          "retrieval_method": "ingester"
+        },
+        "verified": true,
+        "compiler_output": "",
+        "proof_term": "",
+        "error_message": "",
+        "verification_level": "type_checked"
+      }
+    ]
+  },
+  {
+    "pdg_node": {
+      "predicate_id": "restore_original_split_order_for_tai",
+      "statement": "(u1: float, a2: float, big1: bool) -> tuple[float, float]",
+      "informal_desc": "Promotes u1 and a2 to a common type and restores the original caller-specified split order: if the first input utc1 was the larger part (big1=true), tai1=u1 and tai2=a2; otherwise tai1=a2 and tai2=u1.",
+      "prover": "python",
+      "context": {}
+    },
+    "verified_match": {
+      "candidate": {
+        "declaration": {
+          "name": "restore_original_split_order_for_tai",
+          "type_signature": "(u1: float, a2: float, big1: bool) -> tuple[float, float]",
+          "docstring": "Promotes u1 and a2 to a common type and restores the original caller-specified split order: if the first input utc1 was the larger part (big1=true), tai1=u1 and tai2=a2; otherwise tai1=a2 and tai2=u1.",
+          "conceptual_summary": "",
+          "source_lib": "ingester",
+          "prover": "python",
+          "raw_code": ""
+        },
+        "score": 1.0,
+        "retrieval_method": "ingester"
+      },
+      "verified": true,
+      "compiler_output": "",
+      "proof_term": "",
+      "error_message": "",
+      "verification_level": "type_checked"
+    },
+    "all_candidates": [
+      {
+        "declaration": {
+          "name": "restore_original_split_order_for_tai",
+          "type_signature": "(u1: float, a2: float, big1: bool) -> tuple[float, float]",
+          "docstring": "Promotes u1 and a2 to a common type and restores the original caller-specified split order: if the first input utc1 was the larger part (big1=true), tai1=u1 and tai2=a2; otherwise tai1=a2 and tai2=u1.",
+          "conceptual_summary": "",
+          "source_lib": "ingester",
+          "prover": "python",
+          "raw_code": ""
+        },
+        "score": 1.0,
+        "retrieval_method": "ingester"
+      }
+    ],
+    "all_verifications": [
+      {
+        "candidate": {
+          "declaration": {
+            "name": "restore_original_split_order_for_tai",
+            "type_signature": "(u1: float, a2: float, big1: bool) -> tuple[float, float]",
+            "docstring": "Promotes u1 and a2 to a common type and restores the original caller-specified split order: if the first input utc1 was the larger part (big1=true), tai1=u1 and tai2=a2; otherwise tai1=a2 and tai2=u1.",
+            "conceptual_summary": "",
+            "source_lib": "ingester",
+            "prover": "python",
+            "raw_code": ""
+          },
+          "score": 1.0,
+          "retrieval_method": "ingester"
+        },
+        "verified": true,
+        "compiler_output": "",
+        "proof_term": "",
+        "error_message": "",
+        "verification_level": "type_checked"
+      }
+    ]
+  },
+  {
+    "pdg_node": {
+      "predicate_id": "order_tai_parts_by_magnitude",
+      "statement": "(tai1: float, tai2: float) -> tuple[float, float, bool]",
+      "informal_desc": "Determines which of the two TAI Julian date parts has greater absolute magnitude and reorders them so the larger part comes first, recording the original ordering for later restoration.",
+      "prover": "python",
+      "context": {}
+    },
+    "verified_match": {
+      "candidate": {
+        "declaration": {
+          "name": "order_tai_parts_by_magnitude",
+          "type_signature": "(tai1: float, tai2: float) -> tuple[float, float, bool]",
+          "docstring": "Determines which of the two TAI Julian date parts has greater absolute magnitude and reorders them so the larger part comes first, recording the original ordering for later restoration.",
+          "conceptual_summary": "",
+          "source_lib": "ingester",
+          "prover": "python",
+          "raw_code": ""
+        },
+        "score": 1.0,
+        "retrieval_method": "ingester"
+      },
+      "verified": true,
+      "compiler_output": "",
+      "proof_term": "",
+      "error_message": "",
+      "verification_level": "type_checked"
+    },
+    "all_candidates": [
+      {
+        "declaration": {
+          "name": "order_tai_parts_by_magnitude",
+          "type_signature": "(tai1: float, tai2: float) -> tuple[float, float, bool]",
+          "docstring": "Determines which of the two TAI Julian date parts has greater absolute magnitude and reorders them so the larger part comes first, recording the original ordering for later restoration.",
+          "conceptual_summary": "",
+          "source_lib": "ingester",
+          "prover": "python",
+          "raw_code": ""
+        },
+        "score": 1.0,
+        "retrieval_method": "ingester"
+      }
+    ],
+    "all_verifications": [
+      {
+        "candidate": {
+          "declaration": {
+            "name": "order_tai_parts_by_magnitude",
+            "type_signature": "(tai1: float, tai2: float) -> tuple[float, float, bool]",
+            "docstring": "Determines which of the two TAI Julian date parts has greater absolute magnitude and reorders them so the larger part comes first, recording the original ordering for later restoration.",
+            "conceptual_summary": "",
+            "source_lib": "ingester",
+            "prover": "python",
+            "raw_code": ""
+          },
+          "score": 1.0,
+          "retrieval_method": "ingester"
+        },
+        "verified": true,
+        "compiler_output": "",
+        "proof_term": "",
+        "error_message": "",
+        "verification_level": "type_checked"
+      }
+    ]
+  },
+  {
+    "pdg_node": {
+      "predicate_id": "seed_utc_estimate",
+      "statement": "(a1: float, a2: float) -> tuple[float, float]",
+      "informal_desc": "Initialises the UTC trial value as a direct copy of the reordered TAI parts, providing a zeroth-order estimate before iterative refinement begins.",
+      "prover": "python",
+      "context": {}
+    },
+    "verified_match": {
+      "candidate": {
+        "declaration": {
+          "name": "seed_utc_estimate",
+          "type_signature": "(a1: float, a2: float) -> tuple[float, float]",
+          "docstring": "Initialises the UTC trial value as a direct copy of the reordered TAI parts, providing a zeroth-order estimate before iterative refinement begins.",
+          "conceptual_summary": "",
+          "source_lib": "ingester",
+          "prover": "python",
+          "raw_code": ""
+        },
+        "score": 1.0,
+        "retrieval_method": "ingester"
+      },
+      "verified": true,
+      "compiler_output": "",
+      "proof_term": "",
+      "error_message": "",
+      "verification_level": "type_checked"
+    },
+    "all_candidates": [
+      {
+        "declaration": {
+          "name": "seed_utc_estimate",
+          "type_signature": "(a1: float, a2: float) -> tuple[float, float]",
+          "docstring": "Initialises the UTC trial value as a direct copy of the reordered TAI parts, providing a zeroth-order estimate before iterative refinement begins.",
+          "conceptual_summary": "",
+          "source_lib": "ingester",
+          "prover": "python",
+          "raw_code": ""
+        },
+        "score": 1.0,
+        "retrieval_method": "ingester"
+      }
+    ],
+    "all_verifications": [
+      {
+        "candidate": {
+          "declaration": {
+            "name": "seed_utc_estimate",
+            "type_signature": "(a1: float, a2: float) -> tuple[float, float]",
+            "docstring": "Initialises the UTC trial value as a direct copy of the reordered TAI parts, providing a zeroth-order estimate before iterative refinement begins.",
+            "conceptual_summary": "",
+            "source_lib": "ingester",
+            "prover": "python",
+            "raw_code": ""
+          },
+          "score": 1.0,
+          "retrieval_method": "ingester"
+        },
+        "verified": true,
+        "compiler_output": "",
+        "proof_term": "",
+        "error_message": "",
+        "verification_level": "type_checked"
+      }
+    ]
+  },
+  {
+    "pdg_node": {
+      "predicate_id": "evaluate_and_refine_utc_estimate",
+      "statement": "(u1: float, u2: float, a1: float, a2: float) -> tuple[float, float]",
+      "informal_desc": "Iteratively refines the UTC estimate by calling utc_to_tai_leap_second_kernel on the current candidate, computing the TAI residual (a1-g1, a2-g2), and applying the correction to u2. Runs for two iterations to converge through any leap-second boundary.",
+      "prover": "python",
+      "context": {}
+    },
+    "verified_match": {
+      "candidate": {
+        "declaration": {
+          "name": "evaluate_and_refine_utc_estimate",
+          "type_signature": "(u1: float, u2: float, a1: float, a2: float) -> tuple[float, float]",
+          "docstring": "Iteratively refines the UTC estimate by calling utc_to_tai_leap_second_kernel on the current candidate, computing the TAI residual (a1-g1, a2-g2), and applying the correction to u2. Runs for two iterations to converge through any leap-second boundary.",
+          "conceptual_summary": "",
+          "source_lib": "ingester",
+          "prover": "python",
+          "raw_code": ""
+        },
+        "score": 1.0,
+        "retrieval_method": "ingester"
+      },
+      "verified": true,
+      "compiler_output": "",
+      "proof_term": "",
+      "error_message": "",
+      "verification_level": "type_checked"
+    },
+    "all_candidates": [
+      {
+        "declaration": {
+          "name": "evaluate_and_refine_utc_estimate",
+          "type_signature": "(u1: float, u2: float, a1: float, a2: float) -> tuple[float, float]",
+          "docstring": "Iteratively refines the UTC estimate by calling utc_to_tai_leap_second_kernel on the current candidate, computing the TAI residual (a1-g1, a2-g2), and applying the correction to u2. Runs for two iterations to converge through any leap-second boundary.",
+          "conceptual_summary": "",
+          "source_lib": "ingester",
+          "prover": "python",
+          "raw_code": ""
+        },
+        "score": 1.0,
+        "retrieval_method": "ingester"
+      }
+    ],
+    "all_verifications": [
+      {
+        "candidate": {
+          "declaration": {
+            "name": "evaluate_and_refine_utc_estimate",
+            "type_signature": "(u1: float, u2: float, a1: float, a2: float) -> tuple[float, float]",
+            "docstring": "Iteratively refines the UTC estimate by calling utc_to_tai_leap_second_kernel on the current candidate, computing the TAI residual (a1-g1, a2-g2), and applying the correction to u2. Runs for two iterations to converge through any leap-second boundary.",
+            "conceptual_summary": "",
+            "source_lib": "ingester",
+            "prover": "python",
+            "raw_code": ""
+          },
+          "score": 1.0,
+          "retrieval_method": "ingester"
+        },
+        "verified": true,
+        "compiler_output": "",
+        "proof_term": "",
+        "error_message": "",
+        "verification_level": "type_checked"
+      }
+    ]
+  },
+  {
+    "pdg_node": {
+      "predicate_id": "restore_utc_output_order",
+      "statement": "(u1: float, u2: float, big1: bool) -> tuple[float, float]",
+      "informal_desc": "Restores the UTC result to match the original input ordering of tai1/tai2, swapping u1 and u2 if the smaller TAI part was originally first, and type-promotes the pair for consistent return types.",
+      "prover": "python",
+      "context": {}
+    },
+    "verified_match": {
+      "candidate": {
+        "declaration": {
+          "name": "restore_utc_output_order",
+          "type_signature": "(u1: float, u2: float, big1: bool) -> tuple[float, float]",
+          "docstring": "Restores the UTC result to match the original input ordering of tai1/tai2, swapping u1 and u2 if the smaller TAI part was originally first, and type-promotes the pair for consistent return types.",
+          "conceptual_summary": "",
+          "source_lib": "ingester",
+          "prover": "python",
+          "raw_code": ""
+        },
+        "score": 1.0,
+        "retrieval_method": "ingester"
+      },
+      "verified": true,
+      "compiler_output": "",
+      "proof_term": "",
+      "error_message": "",
+      "verification_level": "type_checked"
+    },
+    "all_candidates": [
+      {
+        "declaration": {
+          "name": "restore_utc_output_order",
+          "type_signature": "(u1: float, u2: float, big1: bool) -> tuple[float, float]",
+          "docstring": "Restores the UTC result to match the original input ordering of tai1/tai2, swapping u1 and u2 if the smaller TAI part was originally first, and type-promotes the pair for consistent return types.",
+          "conceptual_summary": "",
+          "source_lib": "ingester",
+          "prover": "python",
+          "raw_code": ""
+        },
+        "score": 1.0,
+        "retrieval_method": "ingester"
+      }
+    ],
+    "all_verifications": [
+      {
+        "candidate": {
+          "declaration": {
+            "name": "restore_utc_output_order",
+            "type_signature": "(u1: float, u2: float, big1: bool) -> tuple[float, float]",
+            "docstring": "Restores the UTC result to match the original input ordering of tai1/tai2, swapping u1 and u2 if the smaller TAI part was originally first, and type-promotes the pair for consistent return types.",
+            "conceptual_summary": "",
+            "source_lib": "ingester",
+            "prover": "python",
+            "raw_code": ""
+          },
+          "score": 1.0,
+          "retrieval_method": "ingester"
+        },
+        "verified": true,
+        "compiler_output": "",
+        "proof_term": "",
+        "error_message": "",
+        "verification_level": "type_checked"
+      }
+    ]
+  }
+]

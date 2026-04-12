@@ -1,0 +1,134 @@
+[
+  {
+    "pdg_node": {
+      "predicate_id": "compute_spherical_coordinate_rates",
+      "statement": "(r: numpy.ndarray, v: numpy.ndarray) -> tuple[numpy.ndarray, numpy.ndarray, numpy.ndarray]",
+      "informal_desc": "Computes the rate of change of spherical coordinates (e.g., range, right ascension, declination) from Cartesian position and velocity vectors.",
+      "prover": "python",
+      "context": {}
+    },
+    "verified_match": {
+      "candidate": {
+        "declaration": {
+          "name": "compute_spherical_coordinate_rates",
+          "type_signature": "(r: numpy.ndarray, v: numpy.ndarray) -> tuple[numpy.ndarray, numpy.ndarray, numpy.ndarray]",
+          "docstring": "Computes the rate of change of spherical coordinates (e.g., range, right ascension, declination) from Cartesian position and velocity vectors.",
+          "conceptual_summary": "map_cartesian_rates_to_spherical_rates. Projects a rate of change (velocity) vector from a 3D Cartesian coordinate system to a spherical coordinate system. Given a point's position and its instantaneous velocity in (x, y, z), this function calculates the corresponding instantaneous rates of change for the point's radial distance, azimuthal angle, and polar angle.. Applications: In robotics, to calculate the necessary joint velocities of a spherical manipulator to track a target with a known Cartesian velocity., In geophysics, to determine the rate of change in latitude, longitude, and altitude of a weather balloon or drifting sensor from its velocity vector relative to the Earth's center., In computer graphics, to update the orientation and distance of an orbital camera that is programmatically following a moving object., In biomechanics, to analyze the angular velocity of a limb joint (e.g., shoulder or hip) based on the 3D velocity of the hand or foot.",
+          "source_lib": "ingester",
+          "prover": "python",
+          "raw_code": ""
+        },
+        "score": 1.0,
+        "retrieval_method": "ingester"
+      },
+      "verified": true,
+      "compiler_output": "",
+      "proof_term": "",
+      "error_message": "",
+      "verification_level": "type_checked"
+    },
+    "all_candidates": [
+      {
+        "declaration": {
+          "name": "compute_spherical_coordinate_rates",
+          "type_signature": "(r: numpy.ndarray, v: numpy.ndarray) -> tuple[numpy.ndarray, numpy.ndarray, numpy.ndarray]",
+          "docstring": "Computes the rate of change of spherical coordinates (e.g., range, right ascension, declination) from Cartesian position and velocity vectors.",
+          "conceptual_summary": "map_cartesian_rates_to_spherical_rates. Projects a rate of change (velocity) vector from a 3D Cartesian coordinate system to a spherical coordinate system. Given a point's position and its instantaneous velocity in (x, y, z), this function calculates the corresponding instantaneous rates of change for the point's radial distance, azimuthal angle, and polar angle.. Applications: In robotics, to calculate the necessary joint velocities of a spherical manipulator to track a target with a known Cartesian velocity., In geophysics, to determine the rate of change in latitude, longitude, and altitude of a weather balloon or drifting sensor from its velocity vector relative to the Earth's center., In computer graphics, to update the orientation and distance of an orbital camera that is programmatically following a moving object., In biomechanics, to analyze the angular velocity of a limb joint (e.g., shoulder or hip) based on the 3D velocity of the hand or foot.",
+          "source_lib": "ingester",
+          "prover": "python",
+          "raw_code": ""
+        },
+        "score": 1.0,
+        "retrieval_method": "ingester"
+      }
+    ],
+    "all_verifications": [
+      {
+        "candidate": {
+          "declaration": {
+            "name": "compute_spherical_coordinate_rates",
+            "type_signature": "(r: numpy.ndarray, v: numpy.ndarray) -> tuple[numpy.ndarray, numpy.ndarray, numpy.ndarray]",
+            "docstring": "Computes the rate of change of spherical coordinates (e.g., range, right ascension, declination) from Cartesian position and velocity vectors.",
+            "conceptual_summary": "map_cartesian_rates_to_spherical_rates. Projects a rate of change (velocity) vector from a 3D Cartesian coordinate system to a spherical coordinate system. Given a point's position and its instantaneous velocity in (x, y, z), this function calculates the corresponding instantaneous rates of change for the point's radial distance, azimuthal angle, and polar angle.. Applications: In robotics, to calculate the necessary joint velocities of a spherical manipulator to track a target with a known Cartesian velocity., In geophysics, to determine the rate of change in latitude, longitude, and altitude of a weather balloon or drifting sensor from its velocity vector relative to the Earth's center., In computer graphics, to update the orientation and distance of an orbital camera that is programmatically following a moving object., In biomechanics, to analyze the angular velocity of a limb joint (e.g., shoulder or hip) based on the 3D velocity of the hand or foot.",
+            "source_lib": "ingester",
+            "prover": "python",
+            "raw_code": ""
+          },
+          "score": 1.0,
+          "retrieval_method": "ingester"
+        },
+        "verified": true,
+        "compiler_output": "",
+        "proof_term": "",
+        "error_message": "",
+        "verification_level": "type_checked"
+      }
+    ]
+  },
+  {
+    "pdg_node": {
+      "predicate_id": "calculate_vector_angle",
+      "statement": "(u: numpy.ndarray, v: numpy.ndarray) -> float",
+      "informal_desc": "Computes the angle between two vectors.",
+      "prover": "python",
+      "context": {}
+    },
+    "verified_match": {
+      "candidate": {
+        "declaration": {
+          "name": "calculate_vector_angle",
+          "type_signature": "(u: numpy.ndarray, v: numpy.ndarray) -> float",
+          "docstring": "Computes the angle between two vectors.",
+          "conceptual_summary": "angular_separation. Quantifies the rotational difference between two ordered, n-dimensional numerical sequences. The operation projects two vectors onto a shared 2D plane and measures the angle between them, effectively reducing their relational information to a single scalar representing their relative orientation.. Applications: In natural language processing, measuring the semantic similarity between two documents represented as high-dimensional word embeddings, where a smaller angle implies a closer conceptual relationship., In bioinformatics, calculating the dihedral angles between planes formed by bonded atoms in a protein backbone to determine its secondary structure., In computer vision and robotics, determining the orientation difference between a camera's view vector and a target object's normal vector to guide navigation or manipulation., In financial analysis, assessing the correlation drift between two time-series of asset returns by treating them as vectors in a high-dimensional space.",
+          "source_lib": "ingester",
+          "prover": "python",
+          "raw_code": ""
+        },
+        "score": 1.0,
+        "retrieval_method": "ingester"
+      },
+      "verified": true,
+      "compiler_output": "",
+      "proof_term": "",
+      "error_message": "",
+      "verification_level": "type_checked"
+    },
+    "all_candidates": [
+      {
+        "declaration": {
+          "name": "calculate_vector_angle",
+          "type_signature": "(u: numpy.ndarray, v: numpy.ndarray) -> float",
+          "docstring": "Computes the angle between two vectors.",
+          "conceptual_summary": "angular_separation. Quantifies the rotational difference between two ordered, n-dimensional numerical sequences. The operation projects two vectors onto a shared 2D plane and measures the angle between them, effectively reducing their relational information to a single scalar representing their relative orientation.. Applications: In natural language processing, measuring the semantic similarity between two documents represented as high-dimensional word embeddings, where a smaller angle implies a closer conceptual relationship., In bioinformatics, calculating the dihedral angles between planes formed by bonded atoms in a protein backbone to determine its secondary structure., In computer vision and robotics, determining the orientation difference between a camera's view vector and a target object's normal vector to guide navigation or manipulation., In financial analysis, assessing the correlation drift between two time-series of asset returns by treating them as vectors in a high-dimensional space.",
+          "source_lib": "ingester",
+          "prover": "python",
+          "raw_code": ""
+        },
+        "score": 1.0,
+        "retrieval_method": "ingester"
+      }
+    ],
+    "all_verifications": [
+      {
+        "candidate": {
+          "declaration": {
+            "name": "calculate_vector_angle",
+            "type_signature": "(u: numpy.ndarray, v: numpy.ndarray) -> float",
+            "docstring": "Computes the angle between two vectors.",
+            "conceptual_summary": "angular_separation. Quantifies the rotational difference between two ordered, n-dimensional numerical sequences. The operation projects two vectors onto a shared 2D plane and measures the angle between them, effectively reducing their relational information to a single scalar representing their relative orientation.. Applications: In natural language processing, measuring the semantic similarity between two documents represented as high-dimensional word embeddings, where a smaller angle implies a closer conceptual relationship., In bioinformatics, calculating the dihedral angles between planes formed by bonded atoms in a protein backbone to determine its secondary structure., In computer vision and robotics, determining the orientation difference between a camera's view vector and a target object's normal vector to guide navigation or manipulation., In financial analysis, assessing the correlation drift between two time-series of asset returns by treating them as vectors in a high-dimensional space.",
+            "source_lib": "ingester",
+            "prover": "python",
+            "raw_code": ""
+          },
+          "score": 1.0,
+          "retrieval_method": "ingester"
+        },
+        "verified": true,
+        "compiler_output": "",
+        "proof_term": "",
+        "error_message": "",
+        "verification_level": "type_checked"
+      }
+    ]
+  }
+]

@@ -1,0 +1,14 @@
+{
+  "atom": "dedispersionkernel",
+  "estimates": [
+    {
+      "mode": "empirical",
+      "scalar_factor": 0.696465,
+      "confidence": 0.9,
+      "n_trials": 500,
+      "epsilon": 1e-08,
+      "input_regime": "multi-arg perturbation, shapes={'input_data': '(256,)', 'delay_table': '(256,)'}",
+      "notes": "perturbation harness, 500/500 trials, perturbed params: ['input_data', 'delay_table']"
+    }
+  ]
+}

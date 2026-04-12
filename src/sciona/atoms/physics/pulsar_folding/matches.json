@@ -1,0 +1,68 @@
+[
+  {
+    "pdg_node": {
+      "predicate_id": "dm_candidate_filter",
+      "statement": "(data: array-like \u2014 observed time-frequency or dedispersed data, data_base: array-like \u2014 baseline reference data for comparison, sens: float \u2014 sensitivity threshold for candidate detection, DM_base: float \u2014 base dispersion measure value, candidates: array-like or list \u2014 input DM candidate values or indices to evaluate, fchan: float or array-like \u2014 channel centre frequency or frequency array (MHz), width: float \u2014 pulse or channel width (MHz or samples), tsamp: float \u2014 sampling time (seconds)) -> array-like or list \u2014 filtered/validated DM candidates passing the sensitivity threshold",
+      "informal_desc": "Evaluates and filters dispersion measure (DM) candidates by comparing observed data against a base DM model, using sensitivity, channel frequency, bandwidth, and time sampling parameters to identify viable DM candidates.",
+      "prover": "python",
+      "context": {}
+    },
+    "verified_match": {
+      "candidate": {
+        "declaration": {
+          "name": "dm_candidate_filter",
+          "type_signature": "(data: array-like \u2014 observed time-frequency or dedispersed data, data_base: array-like \u2014 baseline reference data for comparison, sens: float \u2014 sensitivity threshold for candidate detection, DM_base: float \u2014 base dispersion measure value, candidates: array-like or list \u2014 input DM candidate values or indices to evaluate, fchan: float or array-like \u2014 channel centre frequency or frequency array (MHz), width: float \u2014 pulse or channel width (MHz or samples), tsamp: float \u2014 sampling time (seconds)) -> array-like or list \u2014 filtered/validated DM candidates passing the sensitivity threshold",
+          "docstring": "Evaluates and filters dispersion measure (DM) candidates by comparing observed data against a base DM model, using sensitivity, channel frequency, bandwidth, and time sampling parameters to identify viable DM candidates.",
+          "conceptual_summary": "threshold_gated_reference_deviation_filter. Given an observed multi-dimensional signal array and a reference baseline array, this operation evaluates each element of an input candidate set by computing whether the observed signal's deviation from the baseline \u2014 modulated by a set of spectral-temporal resolution parameters (channel bandwidth, center frequency, and sampling interval) \u2014 exceeds a scalar sensitivity threshold. Candidates whose derived signal response falls below the threshold are rejected, yielding a pruned subset. The transform is a parametric, discriminative sieve: it maps a candidate index space through a physics-derived scoring function and returns only those candidates satisfying the inequality constraint.. Applications: Gravitational wave astronomy: filtering trial coalescence-time or chirp-mass candidates by comparing observed strain time-series against a waveform template baseline, gated by detector frequency band and sampling rate sensitivity \u2014 retaining only candidates whose SNR exceeds a detection threshold, Medical neuroimaging (EEG/MEG source localisation): evaluating a set of candidate dipole source locations by comparing modelled field maps against observed sensor arrays, using electrode bandwidth and temporal resolution to gate candidates below a signal-to-noise sensitivity bound, Radar / sonar signal processing: pruning a set of candidate target range-velocity hypotheses by comparing measured range-Doppler returns against a clutter baseline, with sensitivity scaled by pulse bandwidth and sampling interval \u2014 discarding sub-threshold false-alarm candidates, Seismology: screening candidate epicentre locations or fault-rupture depths by evaluating residual misfit between observed waveform envelopes and a reference Earth-model prediction, with threshold gating modulated by seismometer frequency response and sampling period",
+          "source_lib": "ingester",
+          "prover": "python",
+          "raw_code": ""
+        },
+        "score": 1.0,
+        "retrieval_method": "ingester"
+      },
+      "verified": true,
+      "compiler_output": "",
+      "proof_term": "",
+      "error_message": "",
+      "verification_level": "type_checked"
+    },
+    "all_candidates": [
+      {
+        "declaration": {
+          "name": "dm_candidate_filter",
+          "type_signature": "(data: array-like \u2014 observed time-frequency or dedispersed data, data_base: array-like \u2014 baseline reference data for comparison, sens: float \u2014 sensitivity threshold for candidate detection, DM_base: float \u2014 base dispersion measure value, candidates: array-like or list \u2014 input DM candidate values or indices to evaluate, fchan: float or array-like \u2014 channel centre frequency or frequency array (MHz), width: float \u2014 pulse or channel width (MHz or samples), tsamp: float \u2014 sampling time (seconds)) -> array-like or list \u2014 filtered/validated DM candidates passing the sensitivity threshold",
+          "docstring": "Evaluates and filters dispersion measure (DM) candidates by comparing observed data against a base DM model, using sensitivity, channel frequency, bandwidth, and time sampling parameters to identify viable DM candidates.",
+          "conceptual_summary": "threshold_gated_reference_deviation_filter. Given an observed multi-dimensional signal array and a reference baseline array, this operation evaluates each element of an input candidate set by computing whether the observed signal's deviation from the baseline \u2014 modulated by a set of spectral-temporal resolution parameters (channel bandwidth, center frequency, and sampling interval) \u2014 exceeds a scalar sensitivity threshold. Candidates whose derived signal response falls below the threshold are rejected, yielding a pruned subset. The transform is a parametric, discriminative sieve: it maps a candidate index space through a physics-derived scoring function and returns only those candidates satisfying the inequality constraint.. Applications: Gravitational wave astronomy: filtering trial coalescence-time or chirp-mass candidates by comparing observed strain time-series against a waveform template baseline, gated by detector frequency band and sampling rate sensitivity \u2014 retaining only candidates whose SNR exceeds a detection threshold, Medical neuroimaging (EEG/MEG source localisation): evaluating a set of candidate dipole source locations by comparing modelled field maps against observed sensor arrays, using electrode bandwidth and temporal resolution to gate candidates below a signal-to-noise sensitivity bound, Radar / sonar signal processing: pruning a set of candidate target range-velocity hypotheses by comparing measured range-Doppler returns against a clutter baseline, with sensitivity scaled by pulse bandwidth and sampling interval \u2014 discarding sub-threshold false-alarm candidates, Seismology: screening candidate epicentre locations or fault-rupture depths by evaluating residual misfit between observed waveform envelopes and a reference Earth-model prediction, with threshold gating modulated by seismometer frequency response and sampling period",
+          "source_lib": "ingester",
+          "prover": "python",
+          "raw_code": ""
+        },
+        "score": 1.0,
+        "retrieval_method": "ingester"
+      }
+    ],
+    "all_verifications": [
+      {
+        "candidate": {
+          "declaration": {
+            "name": "dm_candidate_filter",
+            "type_signature": "(data: array-like \u2014 observed time-frequency or dedispersed data, data_base: array-like \u2014 baseline reference data for comparison, sens: float \u2014 sensitivity threshold for candidate detection, DM_base: float \u2014 base dispersion measure value, candidates: array-like or list \u2014 input DM candidate values or indices to evaluate, fchan: float or array-like \u2014 channel centre frequency or frequency array (MHz), width: float \u2014 pulse or channel width (MHz or samples), tsamp: float \u2014 sampling time (seconds)) -> array-like or list \u2014 filtered/validated DM candidates passing the sensitivity threshold",
+            "docstring": "Evaluates and filters dispersion measure (DM) candidates by comparing observed data against a base DM model, using sensitivity, channel frequency, bandwidth, and time sampling parameters to identify viable DM candidates.",
+            "conceptual_summary": "threshold_gated_reference_deviation_filter. Given an observed multi-dimensional signal array and a reference baseline array, this operation evaluates each element of an input candidate set by computing whether the observed signal's deviation from the baseline \u2014 modulated by a set of spectral-temporal resolution parameters (channel bandwidth, center frequency, and sampling interval) \u2014 exceeds a scalar sensitivity threshold. Candidates whose derived signal response falls below the threshold are rejected, yielding a pruned subset. The transform is a parametric, discriminative sieve: it maps a candidate index space through a physics-derived scoring function and returns only those candidates satisfying the inequality constraint.. Applications: Gravitational wave astronomy: filtering trial coalescence-time or chirp-mass candidates by comparing observed strain time-series against a waveform template baseline, gated by detector frequency band and sampling rate sensitivity \u2014 retaining only candidates whose SNR exceeds a detection threshold, Medical neuroimaging (EEG/MEG source localisation): evaluating a set of candidate dipole source locations by comparing modelled field maps against observed sensor arrays, using electrode bandwidth and temporal resolution to gate candidates below a signal-to-noise sensitivity bound, Radar / sonar signal processing: pruning a set of candidate target range-velocity hypotheses by comparing measured range-Doppler returns against a clutter baseline, with sensitivity scaled by pulse bandwidth and sampling interval \u2014 discarding sub-threshold false-alarm candidates, Seismology: screening candidate epicentre locations or fault-rupture depths by evaluating residual misfit between observed waveform envelopes and a reference Earth-model prediction, with threshold gating modulated by seismometer frequency response and sampling period",
+            "source_lib": "ingester",
+            "prover": "python",
+            "raw_code": ""
+          },
+          "score": 1.0,
+          "retrieval_method": "ingester"
+        },
+        "verified": true,
+        "compiler_output": "",
+        "proof_term": "",
+        "error_message": "",
+        "verification_level": "type_checked"
+      }
+    ]
+  }
+]

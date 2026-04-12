@@ -1,0 +1,255 @@
+{
+  "schema_version": "1.1",
+  "atoms": {
+    "ageoa.tempo_jl.find_month.date@ageoa/tempo_jl/find_month/atoms.py:19": {
+      "references": [
+        {
+          "ref_id": "urban2013almanac",
+          "match_metadata": {
+            "similarity_score": null,
+            "match_type": "manual",
+            "matched_nodes": [],
+            "confidence": "medium",
+            "notes": "Broad astronomical time-scale attribution."
+          }
+        },
+        {
+          "ref_id": "repo_tempo_jl",
+          "match_metadata": {
+            "similarity_score": null,
+            "match_type": "manual",
+            "matched_nodes": [],
+            "confidence": "high",
+            "notes": "Primary Tempo.jl software attribution."
+          }
+        }
+      ],
+      "auto_attribution_runs": []
+    },
+    "ageoa.tempo_jl.find_month.date@ageoa/tempo_jl/find_month/atoms.py:56": {
+      "references": [
+        {
+          "ref_id": "urban2013almanac",
+          "match_metadata": {
+            "similarity_score": null,
+            "match_type": "manual",
+            "matched_nodes": [],
+            "confidence": "medium",
+            "notes": "Broad astronomical time-scale attribution."
+          }
+        },
+        {
+          "ref_id": "repo_tempo_jl",
+          "match_metadata": {
+            "similarity_score": null,
+            "match_type": "manual",
+            "matched_nodes": [],
+            "confidence": "high",
+            "notes": "Primary Tempo.jl software attribution."
+          }
+        }
+      ],
+      "auto_attribution_runs": []
+    },
+    "ageoa.tempo_jl.find_month.datetime@ageoa/tempo_jl/find_month/atoms.py:169": {
+      "references": [
+        {
+          "ref_id": "urban2013almanac",
+          "match_metadata": {
+            "similarity_score": null,
+            "match_type": "manual",
+            "matched_nodes": [],
+            "confidence": "medium",
+            "notes": "Broad astronomical time-scale attribution."
+          }
+        },
+        {
+          "ref_id": "repo_tempo_jl",
+          "match_metadata": {
+            "similarity_score": null,
+            "match_type": "manual",
+            "matched_nodes": [],
+            "confidence": "high",
+            "notes": "Primary Tempo.jl software attribution."
+          }
+        }
+      ],
+      "auto_attribution_runs": []
+    },
+    "ageoa.tempo_jl.find_month.datetime@ageoa/tempo_jl/find_month/atoms.py:188": {
+      "references": [
+        {
+          "ref_id": "urban2013almanac",
+          "match_metadata": {
+            "similarity_score": null,
+            "match_type": "manual",
+            "matched_nodes": [],
+            "confidence": "medium",
+            "notes": "Broad astronomical time-scale attribution."
+          }
+        },
+        {
+          "ref_id": "repo_tempo_jl",
+          "match_metadata": {
+            "similarity_score": null,
+            "match_type": "manual",
+            "matched_nodes": [],
+            "confidence": "high",
+            "notes": "Primary Tempo.jl software attribution."
+          }
+        }
+      ],
+      "auto_attribution_runs": []
+    },
+    "ageoa.tempo_jl.find_month.datetime@ageoa/tempo_jl/find_month/atoms.py:210": {
+      "references": [
+        {
+          "ref_id": "urban2013almanac",
+          "match_metadata": {
+            "similarity_score": null,
+            "match_type": "manual",
+            "matched_nodes": [],
+            "confidence": "medium",
+            "notes": "Broad astronomical time-scale attribution."
+          }
+        },
+        {
+          "ref_id": "repo_tempo_jl",
+          "match_metadata": {
+            "similarity_score": null,
+            "match_type": "manual",
+            "matched_nodes": [],
+            "confidence": "high",
+            "notes": "Primary Tempo.jl software attribution."
+          }
+        }
+      ],
+      "auto_attribution_runs": []
+    },
+    "ageoa.tempo_jl.find_month.show@ageoa/tempo_jl/find_month/atoms.py:154": {
+      "references": [
+        {
+          "ref_id": "urban2013almanac",
+          "match_metadata": {
+            "similarity_score": null,
+            "match_type": "manual",
+            "matched_nodes": [],
+            "confidence": "medium",
+            "notes": "Broad astronomical time-scale attribution."
+          }
+        },
+        {
+          "ref_id": "repo_tempo_jl",
+          "match_metadata": {
+            "similarity_score": null,
+            "match_type": "manual",
+            "matched_nodes": [],
+            "confidence": "high",
+            "notes": "Primary Tempo.jl software attribution."
+          }
+        }
+      ],
+      "auto_attribution_runs": []
+    },
+    "ageoa.tempo_jl.find_month.show@ageoa/tempo_jl/find_month/atoms.py:79": {
+      "references": [
+        {
+          "ref_id": "urban2013almanac",
+          "match_metadata": {
+            "similarity_score": null,
+            "match_type": "manual",
+            "matched_nodes": [],
+            "confidence": "medium",
+            "notes": "Broad astronomical time-scale attribution."
+          }
+        },
+        {
+          "ref_id": "repo_tempo_jl",
+          "match_metadata": {
+            "similarity_score": null,
+            "match_type": "manual",
+            "matched_nodes": [],
+            "confidence": "high",
+            "notes": "Primary Tempo.jl software attribution."
+          }
+        }
+      ],
+      "auto_attribution_runs": []
+    },
+    "ageoa.tempo_jl.find_month.time@ageoa/tempo_jl/find_month/atoms.py:113": {
+      "references": [
+        {
+          "ref_id": "urban2013almanac",
+          "match_metadata": {
+            "similarity_score": null,
+            "match_type": "manual",
+            "matched_nodes": [],
+            "confidence": "medium",
+            "notes": "Broad astronomical time-scale attribution."
+          }
+        },
+        {
+          "ref_id": "repo_tempo_jl",
+          "match_metadata": {
+            "similarity_score": null,
+            "match_type": "manual",
+            "matched_nodes": [],
+            "confidence": "high",
+            "notes": "Primary Tempo.jl software attribution."
+          }
+        }
+      ],
+      "auto_attribution_runs": []
+    },
+    "ageoa.tempo_jl.find_month.time@ageoa/tempo_jl/find_month/atoms.py:133": {
+      "references": [
+        {
+          "ref_id": "urban2013almanac",
+          "match_metadata": {
+            "similarity_score": null,
+            "match_type": "manual",
+            "matched_nodes": [],
+            "confidence": "medium",
+            "notes": "Broad astronomical time-scale attribution."
+          }
+        },
+        {
+          "ref_id": "repo_tempo_jl",
+          "match_metadata": {
+            "similarity_score": null,
+            "match_type": "manual",
+            "matched_nodes": [],
+            "confidence": "high",
+            "notes": "Primary Tempo.jl software attribution."
+          }
+        }
+      ],
+      "auto_attribution_runs": []
+    },
+    "ageoa.tempo_jl.find_month.time@ageoa/tempo_jl/find_month/atoms.py:96": {
+      "references": [
+        {
+          "ref_id": "urban2013almanac",
+          "match_metadata": {
+            "similarity_score": null,
+            "match_type": "manual",
+            "matched_nodes": [],
+            "confidence": "medium",
+            "notes": "Broad astronomical time-scale attribution."
+          }
+        },
+        {
+          "ref_id": "repo_tempo_jl",
+          "match_metadata": {
+            "similarity_score": null,
+            "match_type": "manual",
+            "matched_nodes": [],
+            "confidence": "high",
+            "notes": "Primary Tempo.jl software attribution."
+          }
+        }
+      ],
+      "auto_attribution_runs": []
+    }
+  }
+}

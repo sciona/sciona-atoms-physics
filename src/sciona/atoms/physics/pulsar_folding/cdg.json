@@ -1,0 +1,113 @@
+{
+  "nodes": [
+    {
+      "node_id": "PulsarFolding_root",
+      "parent_id": null,
+      "name": "PulsarFolding",
+      "description": "Ingested pipeline from PulsarFolding",
+      "concept_type": "custom",
+      "inputs": [],
+      "outputs": [],
+      "status": "decomposed",
+      "children": [
+        "dm_can_brute_force",
+        "spline_bandpass_correction"
+      ],
+      "depth": 0,
+      "type_signature": "",
+      "matched_primitive": null,
+      "primitive_binding_confidence": 0.0,
+      "primitive_binding_source": "",
+      "is_optional": false,
+      "is_opaque": false,
+      "is_external": false,
+      "parallelizable": false,
+      "conceptual_summary": "",
+      "critic_notes": "",
+      "decomposition_rationale": ""
+    },
+    {
+      "node_id": "dm_can_brute_force",
+      "parent_id": "PulsarFolding_root",
+      "name": "dm_can_brute_force",
+      "description": "Performs a brute-force shift search to maximize the signal-to-noise ratio of a folded profile.",
+      "concept_type": "custom",
+      "inputs": [
+        {
+          "name": "data",
+          "type_desc": "object",
+          "constraints": "valid input",
+          "required": true,
+          "default_value_repr": ""
+        }
+      ],
+      "outputs": [
+        {
+          "name": "result",
+          "type_desc": "object",
+          "constraints": "valid output",
+          "required": true,
+          "default_value_repr": ""
+        }
+      ],
+      "status": "atomic",
+      "children": [],
+      "depth": 1,
+      "type_signature": "(...) -> object",
+      "matched_primitive": null,
+      "primitive_binding_confidence": 0.0,
+      "primitive_binding_source": "",
+      "is_optional": false,
+      "is_opaque": false,
+      "is_external": false,
+      "parallelizable": false,
+      "conceptual_summary": "",
+      "critic_notes": "",
+      "decomposition_rationale": ""
+    },
+    {
+      "node_id": "spline_bandpass_correction",
+      "parent_id": "PulsarFolding_root",
+      "name": "spline_bandpass_correction",
+      "description": "Subtracts instrument-induced artifacts across frequency channels using interpolative splines.",
+      "concept_type": "custom",
+      "inputs": [
+        {
+          "name": "data",
+          "type_desc": "object",
+          "constraints": "valid input",
+          "required": true,
+          "default_value_repr": ""
+        }
+      ],
+      "outputs": [
+        {
+          "name": "result",
+          "type_desc": "object",
+          "constraints": "valid output",
+          "required": true,
+          "default_value_repr": ""
+        }
+      ],
+      "status": "atomic",
+      "children": [],
+      "depth": 1,
+      "type_signature": "(...) -> object",
+      "matched_primitive": null,
+      "primitive_binding_confidence": 0.0,
+      "primitive_binding_source": "",
+      "is_optional": false,
+      "is_opaque": false,
+      "is_external": false,
+      "parallelizable": false,
+      "conceptual_summary": "",
+      "critic_notes": "",
+      "decomposition_rationale": ""
+    }
+  ],
+  "edges": [],
+  "metadata": {
+    "source": "ingester",
+    "class_name": "PulsarFolding"
+  }
+}

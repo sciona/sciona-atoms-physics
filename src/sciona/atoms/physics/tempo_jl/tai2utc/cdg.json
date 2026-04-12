@@ -1,0 +1,631 @@
+{
+  "nodes": [
+    {
+      "node_id": "tai2utc_root",
+      "parent_id": null,
+      "name": "tai2utc",
+      "description": "Ingested pipeline from tai2utc",
+      "concept_type": "custom",
+      "inputs": [],
+      "outputs": [],
+      "status": "decomposed",
+      "children": [
+        "isleapyear",
+        "find_dayinyear",
+        "find_year",
+        "find_month",
+        "find_day",
+        "lastj2000dayofyear",
+        "hms2fd",
+        "fd2hms",
+        "fd2hmsf",
+        "cal2jd",
+        "calhms2jd",
+        "jd2cal",
+        "jd2calhms",
+        "utc2tai",
+        "tai2utc"
+      ],
+      "depth": 0,
+      "type_signature": "",
+      "matched_primitive": null,
+      "is_optional": false,
+      "is_opaque": false,
+      "is_external": false,
+      "parallelizable": false,
+      "conceptual_summary": "",
+      "critic_notes": "",
+      "decomposition_rationale": ""
+    },
+    {
+      "node_id": "isleapyear",
+      "parent_id": "tai2utc_root",
+      "name": "Isleapyear",
+      "description": "Determine whether a given year is a leap year",
+      "concept_type": "custom",
+      "inputs": [
+        {
+          "name": "year",
+          "type_desc": "Any",
+          "constraints": "x is not None"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "result",
+          "type_desc": "Any",
+          "constraints": "x is not None"
+        }
+      ],
+      "status": "atomic",
+      "children": [],
+      "depth": 1,
+      "type_signature": "(year: Any) -> Any",
+      "matched_primitive": null,
+      "is_optional": false,
+      "is_opaque": false,
+      "is_external": false,
+      "parallelizable": false,
+      "conceptual_summary": "",
+      "critic_notes": "",
+      "decomposition_rationale": ""
+    },
+    {
+      "node_id": "find_dayinyear",
+      "parent_id": "tai2utc_root",
+      "name": "Find Dayinyear",
+      "description": "Find the day number within a year given month, day, and leap-year flag",
+      "concept_type": "custom",
+      "inputs": [
+        {
+          "name": "month",
+          "type_desc": "Any",
+          "constraints": "x is not None"
+        },
+        {
+          "name": "day",
+          "type_desc": "Any",
+          "constraints": "x is not None"
+        },
+        {
+          "name": "isleap",
+          "type_desc": "Any",
+          "constraints": "x is not None"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "result",
+          "type_desc": "Any",
+          "constraints": "x is not None"
+        }
+      ],
+      "status": "atomic",
+      "children": [],
+      "depth": 1,
+      "type_signature": "(month: Any, day: Any, isleap: Any) -> Any",
+      "matched_primitive": null,
+      "is_optional": false,
+      "is_opaque": false,
+      "is_external": false,
+      "parallelizable": false,
+      "conceptual_summary": "",
+      "critic_notes": "",
+      "decomposition_rationale": ""
+    },
+    {
+      "node_id": "find_year",
+      "parent_id": "tai2utc_root",
+      "name": "Find Year",
+      "description": "Find the calendar year corresponding to a day offset",
+      "concept_type": "custom",
+      "inputs": [
+        {
+          "name": "d",
+          "type_desc": "Any",
+          "constraints": "x is not None"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "result",
+          "type_desc": "Any",
+          "constraints": "x is not None"
+        }
+      ],
+      "status": "atomic",
+      "children": [],
+      "depth": 1,
+      "type_signature": "(d: Any) -> Any",
+      "matched_primitive": null,
+      "is_optional": false,
+      "is_opaque": false,
+      "is_external": false,
+      "parallelizable": false,
+      "conceptual_summary": "",
+      "critic_notes": "",
+      "decomposition_rationale": ""
+    },
+    {
+      "node_id": "find_month",
+      "parent_id": "tai2utc_root",
+      "name": "Find Month",
+      "description": "Find the calendar month from a day-in-year value and leap-year flag",
+      "concept_type": "custom",
+      "inputs": [
+        {
+          "name": "dayinyear",
+          "type_desc": "Any",
+          "constraints": "x is not None"
+        },
+        {
+          "name": "isleap",
+          "type_desc": "Any",
+          "constraints": "x is not None"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "result",
+          "type_desc": "Any",
+          "constraints": "x is not None"
+        }
+      ],
+      "status": "atomic",
+      "children": [],
+      "depth": 1,
+      "type_signature": "(dayinyear: Any, isleap: Any) -> Any",
+      "matched_primitive": null,
+      "is_optional": false,
+      "is_opaque": false,
+      "is_external": false,
+      "parallelizable": false,
+      "conceptual_summary": "",
+      "critic_notes": "",
+      "decomposition_rationale": ""
+    },
+    {
+      "node_id": "find_day",
+      "parent_id": "tai2utc_root",
+      "name": "Find Day",
+      "description": "Find the calendar day from a day-in-year value, month, and leap-year flag",
+      "concept_type": "custom",
+      "inputs": [
+        {
+          "name": "dayinyear",
+          "type_desc": "Any",
+          "constraints": "x is not None"
+        },
+        {
+          "name": "month",
+          "type_desc": "Any",
+          "constraints": "x is not None"
+        },
+        {
+          "name": "isleap",
+          "type_desc": "Any",
+          "constraints": "x is not None"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "result",
+          "type_desc": "Any",
+          "constraints": "x is not None"
+        }
+      ],
+      "status": "atomic",
+      "children": [],
+      "depth": 1,
+      "type_signature": "(dayinyear: Any, month: Any, isleap: Any) -> Any",
+      "matched_primitive": null,
+      "is_optional": false,
+      "is_opaque": false,
+      "is_external": false,
+      "parallelizable": false,
+      "conceptual_summary": "",
+      "critic_notes": "",
+      "decomposition_rationale": ""
+    },
+    {
+      "node_id": "lastj2000dayofyear",
+      "parent_id": "tai2utc_root",
+      "name": "Lastj2000Dayofyear",
+      "description": "Return the last J2000 day number of a given year",
+      "concept_type": "custom",
+      "inputs": [
+        {
+          "name": "year",
+          "type_desc": "Any",
+          "constraints": "x is not None"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "result",
+          "type_desc": "Any",
+          "constraints": "x is not None"
+        }
+      ],
+      "status": "atomic",
+      "children": [],
+      "depth": 1,
+      "type_signature": "(year: Any) -> Any",
+      "matched_primitive": null,
+      "is_optional": false,
+      "is_opaque": false,
+      "is_external": false,
+      "parallelizable": false,
+      "conceptual_summary": "",
+      "critic_notes": "",
+      "decomposition_rationale": ""
+    },
+    {
+      "node_id": "hms2fd",
+      "parent_id": "tai2utc_root",
+      "name": "Hms2Fd",
+      "description": "Convert hours, minutes, and seconds to a fractional day",
+      "concept_type": "custom",
+      "inputs": [
+        {
+          "name": "h",
+          "type_desc": "Any",
+          "constraints": "x is not None"
+        },
+        {
+          "name": "m",
+          "type_desc": "Any",
+          "constraints": "x is not None"
+        },
+        {
+          "name": "s",
+          "type_desc": "Any",
+          "constraints": "x is not None"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "result",
+          "type_desc": "Any",
+          "constraints": "x is not None"
+        }
+      ],
+      "status": "atomic",
+      "children": [],
+      "depth": 1,
+      "type_signature": "(h: Any, m: Any, s: Any) -> Any",
+      "matched_primitive": null,
+      "is_optional": false,
+      "is_opaque": false,
+      "is_external": false,
+      "parallelizable": false,
+      "conceptual_summary": "",
+      "critic_notes": "",
+      "decomposition_rationale": ""
+    },
+    {
+      "node_id": "fd2hms",
+      "parent_id": "tai2utc_root",
+      "name": "Fd2Hms",
+      "description": "Convert a fractional day to hours, minutes, and seconds",
+      "concept_type": "custom",
+      "inputs": [
+        {
+          "name": "fd",
+          "type_desc": "Any",
+          "constraints": "x is not None"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "result",
+          "type_desc": "Any",
+          "constraints": "x is not None"
+        }
+      ],
+      "status": "atomic",
+      "children": [],
+      "depth": 1,
+      "type_signature": "(fd: Any) -> Any",
+      "matched_primitive": null,
+      "is_optional": false,
+      "is_opaque": false,
+      "is_external": false,
+      "parallelizable": false,
+      "conceptual_summary": "",
+      "critic_notes": "",
+      "decomposition_rationale": ""
+    },
+    {
+      "node_id": "fd2hmsf",
+      "parent_id": "tai2utc_root",
+      "name": "Fd2Hmsf",
+      "description": "Convert a fractional day to hours, minutes, seconds, and sub-second fraction",
+      "concept_type": "custom",
+      "inputs": [
+        {
+          "name": "fd",
+          "type_desc": "Any",
+          "constraints": "x is not None"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "result",
+          "type_desc": "Any",
+          "constraints": "x is not None"
+        }
+      ],
+      "status": "atomic",
+      "children": [],
+      "depth": 1,
+      "type_signature": "(fd: Any) -> Any",
+      "matched_primitive": null,
+      "is_optional": false,
+      "is_opaque": false,
+      "is_external": false,
+      "parallelizable": false,
+      "conceptual_summary": "",
+      "critic_notes": "",
+      "decomposition_rationale": ""
+    },
+    {
+      "node_id": "cal2jd",
+      "parent_id": "tai2utc_root",
+      "name": "Cal2Jd",
+      "description": "Convert a calendar date (year, month, day) to a Julian date",
+      "concept_type": "custom",
+      "inputs": [
+        {
+          "name": "Y",
+          "type_desc": "Any",
+          "constraints": "x is not None"
+        },
+        {
+          "name": "M",
+          "type_desc": "Any",
+          "constraints": "x is not None"
+        },
+        {
+          "name": "D",
+          "type_desc": "Any",
+          "constraints": "x is not None"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "result",
+          "type_desc": "Any",
+          "constraints": "x is not None"
+        }
+      ],
+      "status": "atomic",
+      "children": [],
+      "depth": 1,
+      "type_signature": "(Y: Any, M: Any, D: Any) -> Any",
+      "matched_primitive": null,
+      "is_optional": false,
+      "is_opaque": false,
+      "is_external": false,
+      "parallelizable": false,
+      "conceptual_summary": "",
+      "critic_notes": "",
+      "decomposition_rationale": ""
+    },
+    {
+      "node_id": "calhms2jd",
+      "parent_id": "tai2utc_root",
+      "name": "Calhms2Jd",
+      "description": "Convert a calendar date and time (year, month, day, h, m, s) to a Julian date",
+      "concept_type": "custom",
+      "inputs": [
+        {
+          "name": "Y",
+          "type_desc": "Any",
+          "constraints": "x is not None"
+        },
+        {
+          "name": "M",
+          "type_desc": "Any",
+          "constraints": "x is not None"
+        },
+        {
+          "name": "D",
+          "type_desc": "Any",
+          "constraints": "x is not None"
+        },
+        {
+          "name": "h",
+          "type_desc": "Any",
+          "constraints": "x is not None"
+        },
+        {
+          "name": "m",
+          "type_desc": "Any",
+          "constraints": "x is not None"
+        },
+        {
+          "name": "sec",
+          "type_desc": "Any",
+          "constraints": "x is not None"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "result",
+          "type_desc": "Any",
+          "constraints": "x is not None"
+        }
+      ],
+      "status": "atomic",
+      "children": [],
+      "depth": 1,
+      "type_signature": "(Y: Any, M: Any, D: Any, h: Any, m: Any, sec: Any) -> Any",
+      "matched_primitive": null,
+      "is_optional": false,
+      "is_opaque": false,
+      "is_external": false,
+      "parallelizable": false,
+      "conceptual_summary": "",
+      "critic_notes": "",
+      "decomposition_rationale": ""
+    },
+    {
+      "node_id": "jd2cal",
+      "parent_id": "tai2utc_root",
+      "name": "Jd2Cal",
+      "description": "Convert a Julian date to a calendar date",
+      "concept_type": "custom",
+      "inputs": [
+        {
+          "name": "dj1",
+          "type_desc": "Any",
+          "constraints": "x is not None"
+        },
+        {
+          "name": "dj2",
+          "type_desc": "Any",
+          "constraints": "x is not None"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "result",
+          "type_desc": "Any",
+          "constraints": "x is not None"
+        }
+      ],
+      "status": "atomic",
+      "children": [],
+      "depth": 1,
+      "type_signature": "(dj1: Any, dj2: Any) -> Any",
+      "matched_primitive": null,
+      "is_optional": false,
+      "is_opaque": false,
+      "is_external": false,
+      "parallelizable": false,
+      "conceptual_summary": "",
+      "critic_notes": "",
+      "decomposition_rationale": ""
+    },
+    {
+      "node_id": "jd2calhms",
+      "parent_id": "tai2utc_root",
+      "name": "Jd2Calhms",
+      "description": "Convert a Julian date to a calendar date and time (year, month, day, h, m, s)",
+      "concept_type": "custom",
+      "inputs": [
+        {
+          "name": "dj1",
+          "type_desc": "Any",
+          "constraints": "x is not None"
+        },
+        {
+          "name": "dj2",
+          "type_desc": "Any",
+          "constraints": "x is not None"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "result",
+          "type_desc": "Any",
+          "constraints": "x is not None"
+        }
+      ],
+      "status": "atomic",
+      "children": [],
+      "depth": 1,
+      "type_signature": "(dj1: Any, dj2: Any) -> Any",
+      "matched_primitive": null,
+      "is_optional": false,
+      "is_opaque": false,
+      "is_external": false,
+      "parallelizable": false,
+      "conceptual_summary": "",
+      "critic_notes": "",
+      "decomposition_rationale": ""
+    },
+    {
+      "node_id": "utc2tai",
+      "parent_id": "tai2utc_root",
+      "name": "Utc2Tai",
+      "description": "Convert UTC Julian date to International Atomic Time (TAI)",
+      "concept_type": "custom",
+      "inputs": [
+        {
+          "name": "utc1",
+          "type_desc": "Any",
+          "constraints": "x is not None"
+        },
+        {
+          "name": "utc2",
+          "type_desc": "Any",
+          "constraints": "x is not None"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "result",
+          "type_desc": "Any",
+          "constraints": "x is not None"
+        }
+      ],
+      "status": "atomic",
+      "children": [],
+      "depth": 1,
+      "type_signature": "(utc1: Any, utc2: Any) -> Any",
+      "matched_primitive": null,
+      "is_optional": false,
+      "is_opaque": false,
+      "is_external": false,
+      "parallelizable": false,
+      "conceptual_summary": "",
+      "critic_notes": "",
+      "decomposition_rationale": ""
+    },
+    {
+      "node_id": "tai2utc",
+      "parent_id": "tai2utc_root",
+      "name": "Tai2Utc",
+      "description": "Convert International Atomic Time (TAI) Julian date to UTC",
+      "concept_type": "custom",
+      "inputs": [
+        {
+          "name": "tai1",
+          "type_desc": "Any",
+          "constraints": "x is not None"
+        },
+        {
+          "name": "tai2",
+          "type_desc": "Any",
+          "constraints": "x is not None"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "result",
+          "type_desc": "Any",
+          "constraints": "x is not None"
+        }
+      ],
+      "status": "atomic",
+      "children": [],
+      "depth": 1,
+      "type_signature": "(tai1: Any, tai2: Any) -> Any",
+      "matched_primitive": null,
+      "is_optional": false,
+      "is_opaque": false,
+      "is_external": false,
+      "parallelizable": false,
+      "conceptual_summary": "",
+      "critic_notes": "",
+      "decomposition_rationale": ""
+    }
+  ],
+  "edges": [],
+  "metadata": {
+    "source": "ingester",
+    "class_name": "tai2utc"
+  }
+}

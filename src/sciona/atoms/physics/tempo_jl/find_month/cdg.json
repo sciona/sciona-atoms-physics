@@ -1,0 +1,426 @@
+{
+  "nodes": [
+    {
+      "node_id": "find_month_root",
+      "parent_id": null,
+      "name": "find_month",
+      "description": "Ingested pipeline from find_month",
+      "concept_type": "custom",
+      "inputs": [],
+      "outputs": [],
+      "status": "decomposed",
+      "children": [
+        "date",
+        "date",
+        "show",
+        "time",
+        "time",
+        "time",
+        "show",
+        "datetime",
+        "datetime",
+        "datetime"
+      ],
+      "depth": 0,
+      "type_signature": "",
+      "matched_primitive": null,
+      "is_optional": false,
+      "is_opaque": false,
+      "is_external": false,
+      "parallelizable": false,
+      "conceptual_summary": "",
+      "critic_notes": "",
+      "decomposition_rationale": ""
+    },
+    {
+      "node_id": "date",
+      "parent_id": "find_month_root",
+      "name": "Date",
+      "description": "Construct a date from a given offset",
+      "concept_type": "custom",
+      "inputs": [
+        {
+          "name": "offset",
+          "type_desc": "Any",
+          "constraints": "x is not None"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "result",
+          "type_desc": "Any",
+          "constraints": "x is not None"
+        }
+      ],
+      "status": "atomic",
+      "children": [],
+      "depth": 1,
+      "type_signature": "(offset: Any) -> Any",
+      "matched_primitive": null,
+      "is_optional": false,
+      "is_opaque": false,
+      "is_external": false,
+      "parallelizable": false,
+      "conceptual_summary": "",
+      "critic_notes": "",
+      "decomposition_rationale": ""
+    },
+    {
+      "node_id": "date",
+      "parent_id": "find_month_root",
+      "name": "Date",
+      "description": "Construct a date from year and day within year",
+      "concept_type": "custom",
+      "inputs": [
+        {
+          "name": "year",
+          "type_desc": "Any",
+          "constraints": "x is not None"
+        },
+        {
+          "name": "dayinyear",
+          "type_desc": "Any",
+          "constraints": "x is not None"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "result",
+          "type_desc": "Any",
+          "constraints": "x is not None"
+        }
+      ],
+      "status": "atomic",
+      "children": [],
+      "depth": 1,
+      "type_signature": "(year: Any, dayinyear: Any) -> Any",
+      "matched_primitive": null,
+      "is_optional": false,
+      "is_opaque": false,
+      "is_external": false,
+      "parallelizable": false,
+      "conceptual_summary": "",
+      "critic_notes": "",
+      "decomposition_rationale": ""
+    },
+    {
+      "node_id": "show",
+      "parent_id": "find_month_root",
+      "name": "Show",
+      "description": "Format and display a value to an output stream",
+      "concept_type": "custom",
+      "inputs": [
+        {
+          "name": "io",
+          "type_desc": "Any",
+          "constraints": "x is not None"
+        },
+        {
+          "name": "d",
+          "type_desc": "Any",
+          "constraints": "x is not None"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "result",
+          "type_desc": "Any",
+          "constraints": "x is not None"
+        }
+      ],
+      "status": "atomic",
+      "children": [],
+      "depth": 1,
+      "type_signature": "(io: Any, d: Any) -> Any",
+      "matched_primitive": null,
+      "is_optional": false,
+      "is_opaque": false,
+      "is_external": false,
+      "parallelizable": false,
+      "conceptual_summary": "",
+      "critic_notes": "",
+      "decomposition_rationale": ""
+    },
+    {
+      "node_id": "time",
+      "parent_id": "find_month_root",
+      "name": "Time",
+      "description": "Construct a time from hours, minute, and second",
+      "concept_type": "custom",
+      "inputs": [
+        {
+          "name": "hour",
+          "type_desc": "Any",
+          "constraints": "x is not None"
+        },
+        {
+          "name": "minute",
+          "type_desc": "Any",
+          "constraints": "x is not None"
+        },
+        {
+          "name": "second",
+          "type_desc": "Any",
+          "constraints": "x is not None"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "result",
+          "type_desc": "Any",
+          "constraints": "x is not None"
+        }
+      ],
+      "status": "atomic",
+      "children": [],
+      "depth": 1,
+      "type_signature": "(hour: Any, minute: Any, second: Any) -> Any",
+      "matched_primitive": null,
+      "is_optional": false,
+      "is_opaque": false,
+      "is_external": false,
+      "parallelizable": false,
+      "conceptual_summary": "",
+      "critic_notes": "",
+      "decomposition_rationale": ""
+    },
+    {
+      "node_id": "time",
+      "parent_id": "find_month_root",
+      "name": "Time",
+      "description": "Construct a time from second within day and fractional part",
+      "concept_type": "custom",
+      "inputs": [
+        {
+          "name": "secondinday",
+          "type_desc": "Any",
+          "constraints": "x is not None"
+        },
+        {
+          "name": "fraction",
+          "type_desc": "Any",
+          "constraints": "x is not None"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "result",
+          "type_desc": "Any",
+          "constraints": "x is not None"
+        }
+      ],
+      "status": "atomic",
+      "children": [],
+      "depth": 1,
+      "type_signature": "(secondinday: Any, fraction: Any) -> Any",
+      "matched_primitive": null,
+      "is_optional": false,
+      "is_opaque": false,
+      "is_external": false,
+      "parallelizable": false,
+      "conceptual_summary": "",
+      "critic_notes": "",
+      "decomposition_rationale": ""
+    },
+    {
+      "node_id": "time",
+      "parent_id": "find_month_root",
+      "name": "Time",
+      "description": "Construct a time from a given second within day",
+      "concept_type": "custom",
+      "inputs": [
+        {
+          "name": "secondinday",
+          "type_desc": "Any",
+          "constraints": "x is not None"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "result",
+          "type_desc": "Any",
+          "constraints": "x is not None"
+        }
+      ],
+      "status": "atomic",
+      "children": [],
+      "depth": 1,
+      "type_signature": "(secondinday: Any) -> Any",
+      "matched_primitive": null,
+      "is_optional": false,
+      "is_opaque": false,
+      "is_external": false,
+      "parallelizable": false,
+      "conceptual_summary": "",
+      "critic_notes": "",
+      "decomposition_rationale": ""
+    },
+    {
+      "node_id": "show",
+      "parent_id": "find_month_root",
+      "name": "Show",
+      "description": "Format and display a value to an output stream",
+      "concept_type": "custom",
+      "inputs": [
+        {
+          "name": "io",
+          "type_desc": "Any",
+          "constraints": "x is not None"
+        },
+        {
+          "name": "t",
+          "type_desc": "Any",
+          "constraints": "x is not None"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "result",
+          "type_desc": "Any",
+          "constraints": "x is not None"
+        }
+      ],
+      "status": "atomic",
+      "children": [],
+      "depth": 1,
+      "type_signature": "(io: Any, t: Any) -> Any",
+      "matched_primitive": null,
+      "is_optional": false,
+      "is_opaque": false,
+      "is_external": false,
+      "parallelizable": false,
+      "conceptual_summary": "",
+      "critic_notes": "",
+      "decomposition_rationale": ""
+    },
+    {
+      "node_id": "datetime",
+      "parent_id": "find_month_root",
+      "name": "Datetime",
+      "description": "Construct a datetime from year, month, day, hours, minutes, and seconds",
+      "concept_type": "custom",
+      "inputs": [
+        {
+          "name": "year",
+          "type_desc": "Any",
+          "constraints": "x is not None"
+        },
+        {
+          "name": "month",
+          "type_desc": "Any",
+          "constraints": "x is not None"
+        },
+        {
+          "name": "day",
+          "type_desc": "Any",
+          "constraints": "x is not None"
+        },
+        {
+          "name": "hour",
+          "type_desc": "Any",
+          "constraints": "x is not None"
+        },
+        {
+          "name": "min",
+          "type_desc": "Any",
+          "constraints": "x is not None"
+        },
+        {
+          "name": "sec",
+          "type_desc": "Any",
+          "constraints": "x is not None"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "result",
+          "type_desc": "Any",
+          "constraints": "x is not None"
+        }
+      ],
+      "status": "atomic",
+      "children": [],
+      "depth": 1,
+      "type_signature": "(year: Any, month: Any, day: Any, hour: Any, min: Any, sec: Any) -> Any",
+      "matched_primitive": null,
+      "is_optional": false,
+      "is_opaque": false,
+      "is_external": false,
+      "parallelizable": false,
+      "conceptual_summary": "",
+      "critic_notes": "",
+      "decomposition_rationale": ""
+    },
+    {
+      "node_id": "datetime",
+      "parent_id": "find_month_root",
+      "name": "Datetime",
+      "description": "Construct a datetime from a string representation",
+      "concept_type": "custom",
+      "inputs": [
+        {
+          "name": "s",
+          "type_desc": "Any",
+          "constraints": "x is not None"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "result",
+          "type_desc": "Any",
+          "constraints": "x is not None"
+        }
+      ],
+      "status": "atomic",
+      "children": [],
+      "depth": 1,
+      "type_signature": "(s: Any) -> Any",
+      "matched_primitive": null,
+      "is_optional": false,
+      "is_opaque": false,
+      "is_external": false,
+      "parallelizable": false,
+      "conceptual_summary": "",
+      "critic_notes": "",
+      "decomposition_rationale": ""
+    },
+    {
+      "node_id": "datetime",
+      "parent_id": "find_month_root",
+      "name": "Datetime",
+      "description": "Construct a datetime from a given seconds",
+      "concept_type": "custom",
+      "inputs": [
+        {
+          "name": "seconds",
+          "type_desc": "Any",
+          "constraints": "x is not None"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "result",
+          "type_desc": "Any",
+          "constraints": "x is not None"
+        }
+      ],
+      "status": "atomic",
+      "children": [],
+      "depth": 1,
+      "type_signature": "(seconds: Any) -> Any",
+      "matched_primitive": null,
+      "is_optional": false,
+      "is_opaque": false,
+      "is_external": false,
+      "parallelizable": false,
+      "conceptual_summary": "",
+      "critic_notes": "",
+      "decomposition_rationale": ""
+    }
+  ],
+  "edges": [],
+  "metadata": {
+    "source": "ingester",
+    "class_name": "find_month"
+  }
+}

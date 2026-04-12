@@ -1,0 +1,68 @@
+{
+  "nodes": [
+    {
+      "node_id": "astroflow_root",
+      "parent_id": null,
+      "name": "Astroflow",
+      "description": "Canonical CDG for the dedispersion kernel wrapper.",
+      "concept_type": "custom",
+      "inputs": [],
+      "outputs": [],
+      "status": "decomposed",
+      "children": [
+        "dedispersionkernel"
+      ],
+      "depth": 0,
+      "type_signature": "",
+      "matched_primitive": null,
+      "primitive_binding_confidence": 0.0,
+      "primitive_binding_source": "",
+      "is_optional": false,
+      "is_opaque": false,
+      "is_external": false,
+      "parallelizable": false,
+      "conceptual_summary": "",
+      "critic_notes": "",
+      "decomposition_rationale": ""
+    },
+    {
+      "node_id": "dedispersionkernel",
+      "parent_id": "astroflow_root",
+      "name": "DedispersionKernel",
+      "description": "Apply a dedispersion delay table across channels and dispersion steps.",
+      "concept_type": "signal_transform",
+      "inputs": [
+        {"name": "input_data", "type_desc": "ndarray", "constraints": "input samples", "required": true, "default_value_repr": ""},
+        {"name": "delay_table", "type_desc": "ndarray", "constraints": "delay lookup table", "required": true, "default_value_repr": ""},
+        {"name": "dm_steps", "type_desc": "int", "constraints": ">= 1", "required": true, "default_value_repr": ""},
+        {"name": "time_downsample", "type_desc": "int", "constraints": ">= 1", "required": true, "default_value_repr": ""},
+        {"name": "down_ndata", "type_desc": "int", "constraints": ">= 1", "required": true, "default_value_repr": ""},
+        {"name": "nchans", "type_desc": "int", "constraints": ">= 1", "required": true, "default_value_repr": ""},
+        {"name": "shared_mem_size", "type_desc": "int", "constraints": ">= 0", "required": true, "default_value_repr": ""},
+        {"name": "block_dim_x", "type_desc": "int", "constraints": ">= 1", "required": true, "default_value_repr": ""}
+      ],
+      "outputs": [
+        {"name": "dedispersed_data", "type_desc": "ndarray", "constraints": "shape = (dm_steps, down_ndata)", "required": true, "default_value_repr": ""}
+      ],
+      "status": "atomic",
+      "children": [],
+      "depth": 1,
+      "type_signature": "(input_data: ndarray, delay_table: ndarray, dm_steps: int, time_downsample: int, down_ndata: int, nchans: int, shared_mem_size: int, block_dim_x: int) -> ndarray",
+      "matched_primitive": null,
+      "primitive_binding_confidence": 0.0,
+      "primitive_binding_source": "",
+      "is_optional": false,
+      "is_opaque": false,
+      "is_external": false,
+      "parallelizable": false,
+      "conceptual_summary": "",
+      "critic_notes": "",
+      "decomposition_rationale": ""
+    }
+  ],
+  "edges": [],
+  "metadata": {
+    "source": "ingester",
+    "class_name": "AstroflowDedispIngest"
+  }
+}
