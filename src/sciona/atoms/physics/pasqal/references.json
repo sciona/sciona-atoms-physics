@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.1",
+  "atoms": {
+    "sciona.atoms.physics.pasqal.docking.graph_transformer@sciona/atoms/physics/pasqal/docking.py:66": {
+      "references": [
+        {
+          "ref_id": "moleculardocking2025",
+          "match_metadata": {
+            "similarity_score": null,
+            "match_type": "manual",
+            "matched_nodes": [],
+            "confidence": "high",
+            "notes": "Pasqal docking atoms derive from the Molecular-Docking workflow."
+          }
+        }
+      ],
+      "auto_attribution_runs": []
+    },
+    "sciona.atoms.physics.pasqal.docking.quantum_mwis_solver@sciona/atoms/physics/pasqal/docking.py:116": {
+      "references": [
+        {
+          "ref_id": "moleculardocking2025",
+          "match_metadata": {
+            "similarity_score": null,
+            "match_type": "manual",
+            "matched_nodes": [],
+            "confidence": "high",
+            "notes": "Pasqal docking atoms derive from the Molecular-Docking workflow."
+          }
+        }
+      ],
+      "auto_attribution_runs": []
+    },
+    "sciona.atoms.physics.pasqal.docking.sub_graph_embedder@sciona/atoms/physics/pasqal/docking.py:35": {
+      "references": [
+        {
+          "ref_id": "moleculardocking2025",
+          "match_metadata": {
+            "similarity_score": null,
+            "match_type": "manual",
+            "matched_nodes": [],
+            "confidence": "high",
+            "notes": "Pasqal docking atoms derive from the Molecular-Docking workflow."
+          }
+        }
+      ],
+      "auto_attribution_runs": []
+    }
+  }
+}

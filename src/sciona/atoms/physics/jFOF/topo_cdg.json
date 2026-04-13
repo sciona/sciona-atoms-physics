@@ -1,0 +1,91 @@
+{
+  "nodes": [
+    {
+      "node_id": "topo_root",
+      "parent_id": null,
+      "name": "sciona.atoms.physics.jFOF.topo",
+      "description": "Consolidated module for sciona.atoms.physics.jFOF.topo.",
+      "concept_type": "custom",
+      "inputs": [],
+      "outputs": [],
+      "status": "decomposed",
+      "children": [
+        "topological_loss_computation"
+      ],
+      "depth": 0,
+      "type_signature": "module",
+      "matched_primitive": null,
+      "is_optional": false,
+      "is_opaque": false,
+      "is_external": false,
+      "parallelizable": false,
+      "conceptual_summary": "Grouped atoms sharing an upstream family or module.",
+      "critic_notes": "Auto-generated module CDG for consolidation.",
+      "decomposition_rationale": "Replaces singleton atom subpackages with a flat module layout."
+    },
+    {
+      "node_id": "topological_loss_computation",
+      "parent_id": "topo_root",
+      "name": "topological_loss_computation",
+      "description": "Computes a loss measuring how well a grouping algorithm links nearby objects into clusters. Uses model scores, positions, and neighbor lists.",
+      "concept_type": "custom",
+      "inputs": [
+        {
+          "name": "key",
+          "type_desc": "Array",
+          "constraints": "required argument"
+        },
+        {
+          "name": "logits",
+          "type_desc": "Array",
+          "constraints": "required argument"
+        },
+        {
+          "name": "pos32",
+          "type_desc": "Array",
+          "constraints": "required argument"
+        },
+        {
+          "name": "nbr_idx",
+          "type_desc": "Array",
+          "constraints": "required argument"
+        },
+        {
+          "name": "b",
+          "type_desc": "Array",
+          "constraints": "required argument"
+        },
+        {
+          "name": "max_iters",
+          "type_desc": "int",
+          "constraints": "required argument"
+        },
+        {
+          "name": "tau",
+          "type_desc": "float",
+          "constraints": "required argument"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "result",
+          "type_desc": "Scalar",
+          "constraints": "function return value"
+        }
+      ],
+      "status": "atomic",
+      "children": [],
+      "depth": 1,
+      "type_signature": "(key: Array, logits: Array, pos32: Array, nbr_idx: Array, b: Array, max_iters: int, tau: float) -> Scalar",
+      "matched_primitive": null,
+      "is_optional": false,
+      "is_opaque": false,
+      "is_external": false,
+      "parallelizable": false,
+      "conceptual_summary": "Direct callable atom in the consolidated module.",
+      "critic_notes": "Signature derived from the Python wrapper definition.",
+      "decomposition_rationale": "Leaf atom."
+    }
+  ],
+  "edges": []
+}

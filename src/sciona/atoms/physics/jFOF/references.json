@@ -1,0 +1,45 @@
+{
+  "schema_version": "1.1",
+  "atoms": {
+    "sciona.atoms.physics.jFOF.find_fof_clusters@sciona/atoms/physics/jFOF/atoms.py:21": {
+      "references": [
+        {
+          "ref_id": "huchra1982fof",
+          "match_metadata": {
+            "similarity_score": null,
+            "match_type": "manual",
+            "matched_nodes": [],
+            "confidence": "medium",
+            "notes": "Friends-of-friends clustering attribution."
+          }
+        },
+        {
+          "ref_id": "repo_jfof",
+          "match_metadata": {
+            "similarity_score": null,
+            "match_type": "manual",
+            "matched_nodes": [],
+            "confidence": "high",
+            "notes": "Upstream implementation is mapped to the vendored jFOF repository."
+          }
+        }
+      ],
+      "auto_attribution_runs": []
+    },
+    "sciona.atoms.physics.jFOF.topo.topological_loss_computation@sciona/atoms/physics/jFOF/topo.py:19": {
+      "references": [
+        {
+          "ref_id": "repo_jfof",
+          "match_metadata": {
+            "similarity_score": null,
+            "match_type": "manual",
+            "matched_nodes": [],
+            "confidence": "high",
+            "notes": "Upstream implementation is mapped to the vendored jFOF repository."
+          }
+        }
+      ],
+      "auto_attribution_runs": []
+    }
+  }
+}

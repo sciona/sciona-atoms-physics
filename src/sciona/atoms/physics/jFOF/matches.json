@@ -1,0 +1,134 @@
+[
+  {
+    "pdg_node": {
+      "predicate_id": "find_fof_clusters",
+      "statement": "(x: Array of particle positions, typically of shape (n_particles, n_dims)., b: The linking length, a scalar value defining the maximum distance for two particles to be considered 'friends'., L: The size of the periodic box, a scalar or array matching the number of dimensions., mode: A string or enum indicating the specific algorithm or mode to use for the computation., max_neighbors: The maximum number of neighbors to consider for each particle, used to pre-allocate memory., batch_size: The number of particles to process in a single batch to manage memory usage.) -> An array of cluster labels, where each element corresponds to a particle in the input array 'x'.",
+      "informal_desc": "Computes friends-of-friends (FOF) clusters for a set of points on a periodic grid. This is a core clustering algorithm used in cosmology and astrophysics to identify gravitationally bound structures.",
+      "prover": "python",
+      "context": {}
+    },
+    "verified_match": {
+      "candidate": {
+        "declaration": {
+          "name": "find_fof_clusters",
+          "type_signature": "(x: Array of particle positions, typically of shape (n_particles, n_dims)., b: The linking length, a scalar value defining the maximum distance for two particles to be considered 'friends'., L: The size of the periodic box, a scalar or array matching the number of dimensions., mode: A string or enum indicating the specific algorithm or mode to use for the computation., max_neighbors: The maximum number of neighbors to consider for each particle, used to pre-allocate memory., batch_size: The number of particles to process in a single batch to manage memory usage.) -> An array of cluster labels, where each element corresponds to a particle in the input array 'x'.",
+          "docstring": "Computes friends-of-friends (FOF) clusters for a set of points on a periodic grid. This is a core clustering algorithm used in cosmology and astrophysics to identify gravitationally bound structures.",
+          "conceptual_summary": "transitive_proximity_partitioning. Partitions a set of points in an N-dimensional space with periodic boundaries into disjoint subsets. The partitioning is based on constructing a proximity graph where an edge exists between any two points if their distance is below a specified threshold. Each output subset represents a connected component of this graph, effectively forming a transitive closure over the 'is-a-neighbor' relationship.. Applications: Molecular Dynamics: Identifying groups of interacting atoms or molecules in a simulation with a periodic solvent box to study aggregation or complex formation., Epidemiology: Modeling contagion clusters in a population distributed over a geographical area with wrap-around boundaries, where the linking length represents the transmission radius., Materials Science: Analyzing the formation of crystal grains or the propagation of defects within a simulated material lattice that uses periodic boundary conditions., Sensor Networks: Grouping signals from a distributed network of sensors deployed in a toroidal or wrap-around physical space to identify event regions.",
+          "source_lib": "ingester",
+          "prover": "python",
+          "raw_code": ""
+        },
+        "score": 1.0,
+        "retrieval_method": "ingester"
+      },
+      "verified": true,
+      "compiler_output": "",
+      "proof_term": "",
+      "error_message": "",
+      "verification_level": "type_checked"
+    },
+    "all_candidates": [
+      {
+        "declaration": {
+          "name": "find_fof_clusters",
+          "type_signature": "(x: Array of particle positions, typically of shape (n_particles, n_dims)., b: The linking length, a scalar value defining the maximum distance for two particles to be considered 'friends'., L: The size of the periodic box, a scalar or array matching the number of dimensions., mode: A string or enum indicating the specific algorithm or mode to use for the computation., max_neighbors: The maximum number of neighbors to consider for each particle, used to pre-allocate memory., batch_size: The number of particles to process in a single batch to manage memory usage.) -> An array of cluster labels, where each element corresponds to a particle in the input array 'x'.",
+          "docstring": "Computes friends-of-friends (FOF) clusters for a set of points on a periodic grid. This is a core clustering algorithm used in cosmology and astrophysics to identify gravitationally bound structures.",
+          "conceptual_summary": "transitive_proximity_partitioning. Partitions a set of points in an N-dimensional space with periodic boundaries into disjoint subsets. The partitioning is based on constructing a proximity graph where an edge exists between any two points if their distance is below a specified threshold. Each output subset represents a connected component of this graph, effectively forming a transitive closure over the 'is-a-neighbor' relationship.. Applications: Molecular Dynamics: Identifying groups of interacting atoms or molecules in a simulation with a periodic solvent box to study aggregation or complex formation., Epidemiology: Modeling contagion clusters in a population distributed over a geographical area with wrap-around boundaries, where the linking length represents the transmission radius., Materials Science: Analyzing the formation of crystal grains or the propagation of defects within a simulated material lattice that uses periodic boundary conditions., Sensor Networks: Grouping signals from a distributed network of sensors deployed in a toroidal or wrap-around physical space to identify event regions.",
+          "source_lib": "ingester",
+          "prover": "python",
+          "raw_code": ""
+        },
+        "score": 1.0,
+        "retrieval_method": "ingester"
+      }
+    ],
+    "all_verifications": [
+      {
+        "candidate": {
+          "declaration": {
+            "name": "find_fof_clusters",
+            "type_signature": "(x: Array of particle positions, typically of shape (n_particles, n_dims)., b: The linking length, a scalar value defining the maximum distance for two particles to be considered 'friends'., L: The size of the periodic box, a scalar or array matching the number of dimensions., mode: A string or enum indicating the specific algorithm or mode to use for the computation., max_neighbors: The maximum number of neighbors to consider for each particle, used to pre-allocate memory., batch_size: The number of particles to process in a single batch to manage memory usage.) -> An array of cluster labels, where each element corresponds to a particle in the input array 'x'.",
+            "docstring": "Computes friends-of-friends (FOF) clusters for a set of points on a periodic grid. This is a core clustering algorithm used in cosmology and astrophysics to identify gravitationally bound structures.",
+            "conceptual_summary": "transitive_proximity_partitioning. Partitions a set of points in an N-dimensional space with periodic boundaries into disjoint subsets. The partitioning is based on constructing a proximity graph where an edge exists between any two points if their distance is below a specified threshold. Each output subset represents a connected component of this graph, effectively forming a transitive closure over the 'is-a-neighbor' relationship.. Applications: Molecular Dynamics: Identifying groups of interacting atoms or molecules in a simulation with a periodic solvent box to study aggregation or complex formation., Epidemiology: Modeling contagion clusters in a population distributed over a geographical area with wrap-around boundaries, where the linking length represents the transmission radius., Materials Science: Analyzing the formation of crystal grains or the propagation of defects within a simulated material lattice that uses periodic boundary conditions., Sensor Networks: Grouping signals from a distributed network of sensors deployed in a toroidal or wrap-around physical space to identify event regions.",
+            "source_lib": "ingester",
+            "prover": "python",
+            "raw_code": ""
+          },
+          "score": 1.0,
+          "retrieval_method": "ingester"
+        },
+        "verified": true,
+        "compiler_output": "",
+        "proof_term": "",
+        "error_message": "",
+        "verification_level": "type_checked"
+      }
+    ]
+  },
+  {
+    "pdg_node": {
+      "predicate_id": "topological_loss_computation",
+      "statement": "(key: jax.random.PRNGKey, logits: Array, pos32: Array, nbr_idx: Array, b: Array, max_iters: int, tau: float) -> Scalar",
+      "informal_desc": "Computes a topological loss using logits, positional data, and neighborhood indices. The process is stochastic and controlled by a random key.",
+      "prover": "python",
+      "context": {}
+    },
+    "verified_match": {
+      "candidate": {
+        "declaration": {
+          "name": "topological_loss_computation",
+          "type_signature": "(key: jax.random.PRNGKey, logits: Array, pos32: Array, nbr_idx: Array, b: Array, max_iters: int, tau: float) -> Scalar",
+          "docstring": "Computes a topological loss using logits, positional data, and neighborhood indices. The process is stochastic and controlled by a random key.",
+          "conceptual_summary": "spatial_consistency_loss. Computes a scalar discrepancy score between a set of categorical assignments and their corresponding locations in a geometric space. The function iteratively compares the similarity of categorical data (represented by log-probability vectors) against the spatial proximity defined by a neighborhood graph, producing a loss value that is high when spatially close elements have dissimilar categories.. Applications: In computational biology, to enforce that amino acids in a predicted protein structure have physically plausible spatial arrangements based on their sequential neighbors., In computer vision, to regularize an image segmentation model by ensuring that pixels assigned to the same object class are spatially contiguous., In materials science, to simulate crystallization by penalizing atomic configurations where the local arrangement of atom types violates the expected lattice structure., In natural language processing, ensuring that documents with similar topic models are placed near each other in a low-dimensional visualization embedding.",
+          "source_lib": "ingester",
+          "prover": "python",
+          "raw_code": ""
+        },
+        "score": 1.0,
+        "retrieval_method": "ingester"
+      },
+      "verified": true,
+      "compiler_output": "",
+      "proof_term": "",
+      "error_message": "",
+      "verification_level": "type_checked"
+    },
+    "all_candidates": [
+      {
+        "declaration": {
+          "name": "topological_loss_computation",
+          "type_signature": "(key: jax.random.PRNGKey, logits: Array, pos32: Array, nbr_idx: Array, b: Array, max_iters: int, tau: float) -> Scalar",
+          "docstring": "Computes a topological loss using logits, positional data, and neighborhood indices. The process is stochastic and controlled by a random key.",
+          "conceptual_summary": "spatial_consistency_loss. Computes a scalar discrepancy score between a set of categorical assignments and their corresponding locations in a geometric space. The function iteratively compares the similarity of categorical data (represented by log-probability vectors) against the spatial proximity defined by a neighborhood graph, producing a loss value that is high when spatially close elements have dissimilar categories.. Applications: In computational biology, to enforce that amino acids in a predicted protein structure have physically plausible spatial arrangements based on their sequential neighbors., In computer vision, to regularize an image segmentation model by ensuring that pixels assigned to the same object class are spatially contiguous., In materials science, to simulate crystallization by penalizing atomic configurations where the local arrangement of atom types violates the expected lattice structure., In natural language processing, ensuring that documents with similar topic models are placed near each other in a low-dimensional visualization embedding.",
+          "source_lib": "ingester",
+          "prover": "python",
+          "raw_code": ""
+        },
+        "score": 1.0,
+        "retrieval_method": "ingester"
+      }
+    ],
+    "all_verifications": [
+      {
+        "candidate": {
+          "declaration": {
+            "name": "topological_loss_computation",
+            "type_signature": "(key: jax.random.PRNGKey, logits: Array, pos32: Array, nbr_idx: Array, b: Array, max_iters: int, tau: float) -> Scalar",
+            "docstring": "Computes a topological loss using logits, positional data, and neighborhood indices. The process is stochastic and controlled by a random key.",
+            "conceptual_summary": "spatial_consistency_loss. Computes a scalar discrepancy score between a set of categorical assignments and their corresponding locations in a geometric space. The function iteratively compares the similarity of categorical data (represented by log-probability vectors) against the spatial proximity defined by a neighborhood graph, producing a loss value that is high when spatially close elements have dissimilar categories.. Applications: In computational biology, to enforce that amino acids in a predicted protein structure have physically plausible spatial arrangements based on their sequential neighbors., In computer vision, to regularize an image segmentation model by ensuring that pixels assigned to the same object class are spatially contiguous., In materials science, to simulate crystallization by penalizing atomic configurations where the local arrangement of atom types violates the expected lattice structure., In natural language processing, ensuring that documents with similar topic models are placed near each other in a low-dimensional visualization embedding.",
+            "source_lib": "ingester",
+            "prover": "python",
+            "raw_code": ""
+          },
+          "score": 1.0,
+          "retrieval_method": "ingester"
+        },
+        "verified": true,
+        "compiler_output": "",
+        "proof_term": "",
+        "error_message": "",
+        "verification_level": "type_checked"
+      }
+    ]
+  }
+]

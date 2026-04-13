@@ -1,0 +1,108 @@
+{
+  "nodes": [
+    {
+      "node_id": "jfof_root",
+      "parent_id": null,
+      "name": "jFOFFamily",
+      "description": "Canonical CDG for the vendored jFOF wrapper family.",
+      "concept_type": "custom",
+      "inputs": [],
+      "outputs": [],
+      "status": "decomposed",
+      "children": [
+        "find_fof_clusters"
+      ],
+      "depth": 0,
+      "type_signature": "",
+      "matched_primitive": null,
+      "primitive_binding_confidence": 0.0,
+      "primitive_binding_source": "",
+      "is_optional": false,
+      "is_opaque": false,
+      "is_external": false,
+      "parallelizable": false,
+      "conceptual_summary": "",
+      "critic_notes": "",
+      "decomposition_rationale": ""
+    },
+    {
+      "node_id": "find_fof_clusters",
+      "parent_id": "jfof_root",
+      "name": "FindFOFClusters",
+      "description": "Compute friends-of-friends cluster labels for a periodic point cloud.",
+      "concept_type": "graph_optimization",
+      "inputs": [
+        {
+          "name": "x",
+          "type_desc": "ndarray",
+          "constraints": "point cloud with shape (n_particles, n_dims)",
+          "required": true,
+          "default_value_repr": ""
+        },
+        {
+          "name": "b",
+          "type_desc": "float",
+          "constraints": "linking length threshold",
+          "required": true,
+          "default_value_repr": ""
+        },
+        {
+          "name": "L",
+          "type_desc": "float",
+          "constraints": "periodic box size",
+          "required": true,
+          "default_value_repr": ""
+        },
+        {
+          "name": "mode",
+          "type_desc": "str",
+          "constraints": "neighbor-search mode",
+          "required": false,
+          "default_value_repr": "'precompute'"
+        },
+        {
+          "name": "max_neighbors",
+          "type_desc": "int | None",
+          "constraints": "optional neighborhood allocation hint",
+          "required": false,
+          "default_value_repr": "None"
+        },
+        {
+          "name": "batch_size",
+          "type_desc": "int | None",
+          "constraints": "optional batching hint",
+          "required": false,
+          "default_value_repr": "None"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "cluster_labels",
+          "type_desc": "ndarray",
+          "constraints": "one cluster label per particle",
+          "required": true,
+          "default_value_repr": ""
+        }
+      ],
+      "status": "atomic",
+      "children": [],
+      "depth": 1,
+      "type_signature": "(x: ndarray, b: float, L: float, mode: str = 'precompute', max_neighbors: int | None = None, batch_size: int | None = None) -> ndarray",
+      "matched_primitive": null,
+      "primitive_binding_confidence": 0.0,
+      "primitive_binding_source": "",
+      "is_optional": false,
+      "is_opaque": false,
+      "is_external": false,
+      "parallelizable": false,
+      "conceptual_summary": "",
+      "critic_notes": "",
+      "decomposition_rationale": ""
+    }
+  ],
+  "edges": [],
+  "metadata": {
+    "source": "manual_compaction",
+    "family": "jfof"
+  }
+}
