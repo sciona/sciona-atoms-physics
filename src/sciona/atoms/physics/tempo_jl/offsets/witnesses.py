@@ -4,7 +4,7 @@ from __future__ import annotations
 
 from typing import Any
 
-from ageoa.ghost.abstract import AbstractArray, AbstractScalar
+from sciona.ghost.abstract import AbstractArray, AbstractScalar
 
 
 def _offset_output(seconds: Any) -> AbstractArray | AbstractScalar:
@@ -28,6 +28,6 @@ def witness_offset_tt2tdbh(seconds: Any) -> AbstractArray | AbstractScalar:
 
 
 def witness_tt2tdb_offset(seconds: Any) -> AbstractArray | AbstractScalar:
-    """Vectorized TT->TDB offset preserves scalar-vs-array shape semantics."""
+    """Preserve scalar-versus-array shape when converting TT offsets to TDB."""
 
     return _offset_output(seconds)

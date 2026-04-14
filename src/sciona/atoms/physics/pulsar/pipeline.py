@@ -3,12 +3,11 @@
 from __future__ import annotations
 
 import math
-from typing import Any
 
 import icontract
 import numpy as np
 
-from ageoa.ghost.registry import register_atom
+from sciona.ghost.registry import register_atom
 from .witnesses import (
     witness_dedisperse,
     witness_delay_from_dm,
@@ -42,12 +41,12 @@ def delay_from_DM(DM: float, freq_emitted: float) -> float:
 @icontract.require(lambda width: width > 0, "Channel width must be positive")
 @icontract.ensure(lambda result, data: result.shape == data.shape, "Output must preserve input shape")
 def de_disperse(
-    data: np.ndarray[Any, Any],
+    data: np.ndarray,
     DM: float,
     fchan: float,
     width: float,
     tsamp: float,
-) -> np.ndarray[Any, Any]:
+) -> np.ndarray:
     """Apply frequency-dependent delay correction to align a 2D spectrogram across channels.
 
     Args:
@@ -81,7 +80,7 @@ def de_disperse(
 @icontract.require(lambda data: data.ndim == 2, "Input data must be 2D")
 @icontract.require(lambda period: period > 0, "Folding period must be positive")
 @icontract.ensure(lambda result, period: result.shape == (period,), "Profile length must match period")
-def fold_signal(data: np.ndarray[Any, Any], period: int) -> np.ndarray[Any, Any]:
+def fold_signal(data: np.ndarray, period: int) -> np.ndarray:
     """Fold a 1D signal at a known period to build a phase-averaged periodic profile.
 
     Args:
@@ -110,7 +109,7 @@ def fold_signal(data: np.ndarray[Any, Any], period: int) -> np.ndarray[Any, Any]
 @icontract.require(lambda arr: arr.ndim == 1, "Input must be 1D")
 @icontract.require(lambda arr: len(arr) > 0, "Input array must not be empty")
 @icontract.ensure(lambda result: result >= 0, "SNR must be non-negative")
-def SNR(arr: np.ndarray[Any, Any]) -> float:
+def SNR(arr: np.ndarray) -> float:
     """Compute Signal-to-Noise Ratio (SNR) of a periodic profile.
 
     Args:

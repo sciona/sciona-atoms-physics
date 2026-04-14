@@ -1,12 +1,17 @@
 from __future__ import annotations
-from typing import Any
-from ageoa.ghost.abstract import ANYTHING, AbstractArray, AbstractDistribution, AbstractScalar, AbstractSignal
 
-def witness_utc_to_tai_leap_second_kernel(*args, **kwargs) -> AbstractScalar:
+from sciona.ghost.abstract import ANYTHING, AbstractArray, AbstractDistribution, AbstractScalar, AbstractSignal
+
+
+def witness_utc_to_tai_leap_second_kernel(
+    utc1: AbstractArray,
+    utc2: AbstractArray,
+) -> AbstractScalar:
     """
     to chase a symbolic back-edge into tai_to_utc_inversion when widening
     the return type, which was the root cause of the detected cycle.
     """
+    _ = (utc1, utc2)
     result = AbstractScalar(
         dtype="float64",
         shape=(),
