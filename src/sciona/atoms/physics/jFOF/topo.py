@@ -5,7 +5,7 @@ from typing import TypeAlias
 import icontract
 import numpy as np
 
-from ageoa.ghost.registry import register_atom
+from sciona.ghost.registry import register_atom
 
 from .topo_witnesses import witness_topological_loss_computation
 

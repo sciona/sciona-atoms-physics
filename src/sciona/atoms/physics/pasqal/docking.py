@@ -6,7 +6,7 @@ from typing import TYPE_CHECKING, Any, List, Set
 
 import icontract
 
-from ageoa.ghost.registry import register_atom
+from sciona.ghost.registry import register_atom
 
 from .docking_state import MolecularDockingState
 from .docking_witnesses import (

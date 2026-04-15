@@ -6,7 +6,7 @@ import math
 
 import icontract
 import numpy as np
-from ageoa.ghost.registry import register_atom
+from sciona.ghost.registry import register_atom
 
 from .witnesses import witness_offset_tt2tdb, witness_offset_tt2tdbh, witness_tt2tdb_offset
 

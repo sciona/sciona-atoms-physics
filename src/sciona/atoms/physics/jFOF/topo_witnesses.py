@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from ageoa.ghost.abstract import AbstractArray, AbstractScalar
+from sciona.ghost.abstract import AbstractArray, AbstractScalar
 
 
 def witness_topological_loss_computation(
