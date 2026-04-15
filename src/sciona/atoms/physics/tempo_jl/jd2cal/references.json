@@ -1,7 +1,7 @@
 {
   "schema_version": "1.1",
   "atoms": {
-    "ageoa.tempo_jl.jd2cal.date@ageoa/tempo_jl/jd2cal/atoms.py:19": {
+    "sciona.atoms.physics.tempo_jl.jd2cal.date_from_offset@sciona/atoms/physics/tempo_jl/jd2cal/atoms.py:19": {
       "references": [
         {
           "ref_id": "urban2013almanac",
@@ -26,7 +26,7 @@
       ],
       "auto_attribution_runs": []
     },
-    "ageoa.tempo_jl.jd2cal.date@ageoa/tempo_jl/jd2cal/atoms.py:56": {
+    "sciona.atoms.physics.tempo_jl.jd2cal.date_from_year_dayinyear@sciona/atoms/physics/tempo_jl/jd2cal/atoms.py:56": {
       "references": [
         {
           "ref_id": "urban2013almanac",
@@ -51,7 +51,7 @@
       ],
       "auto_attribution_runs": []
     },
-    "ageoa.tempo_jl.jd2cal.datetime@ageoa/tempo_jl/jd2cal/atoms.py:169": {
+    "sciona.atoms.physics.tempo_jl.jd2cal.datetime_from_components@sciona/atoms/physics/tempo_jl/jd2cal/atoms.py:169": {
       "references": [
         {
           "ref_id": "urban2013almanac",
@@ -76,7 +76,7 @@
       ],
       "auto_attribution_runs": []
     },
-    "ageoa.tempo_jl.jd2cal.datetime@ageoa/tempo_jl/jd2cal/atoms.py:188": {
+    "sciona.atoms.physics.tempo_jl.jd2cal.datetime_from_string@sciona/atoms/physics/tempo_jl/jd2cal/atoms.py:188": {
       "references": [
         {
           "ref_id": "urban2013almanac",
@@ -101,7 +101,7 @@
       ],
       "auto_attribution_runs": []
     },
-    "ageoa.tempo_jl.jd2cal.datetime@ageoa/tempo_jl/jd2cal/atoms.py:210": {
+    "sciona.atoms.physics.tempo_jl.jd2cal.datetime_from_seconds@sciona/atoms/physics/tempo_jl/jd2cal/atoms.py:210": {
       "references": [
         {
           "ref_id": "urban2013almanac",
@@ -126,7 +126,7 @@
       ],
       "auto_attribution_runs": []
     },
-    "ageoa.tempo_jl.jd2cal.show@ageoa/tempo_jl/jd2cal/atoms.py:154": {
+    "sciona.atoms.physics.tempo_jl.jd2cal.show_time@sciona/atoms/physics/tempo_jl/jd2cal/atoms.py:154": {
       "references": [
         {
           "ref_id": "urban2013almanac",
@@ -151,7 +151,7 @@
       ],
       "auto_attribution_runs": []
     },
-    "ageoa.tempo_jl.jd2cal.show@ageoa/tempo_jl/jd2cal/atoms.py:79": {
+    "sciona.atoms.physics.tempo_jl.jd2cal.show_date@sciona/atoms/physics/tempo_jl/jd2cal/atoms.py:79": {
       "references": [
         {
           "ref_id": "urban2013almanac",
@@ -176,7 +176,7 @@
       ],
       "auto_attribution_runs": []
     },
-    "ageoa.tempo_jl.jd2cal.time@ageoa/tempo_jl/jd2cal/atoms.py:113": {
+    "sciona.atoms.physics.tempo_jl.jd2cal.time_from_secondinday_fraction@sciona/atoms/physics/tempo_jl/jd2cal/atoms.py:113": {
       "references": [
         {
           "ref_id": "urban2013almanac",
@@ -201,7 +201,7 @@
       ],
       "auto_attribution_runs": []
     },
-    "ageoa.tempo_jl.jd2cal.time@ageoa/tempo_jl/jd2cal/atoms.py:133": {
+    "sciona.atoms.physics.tempo_jl.jd2cal.time_from_secondinday@sciona/atoms/physics/tempo_jl/jd2cal/atoms.py:133": {
       "references": [
         {
           "ref_id": "urban2013almanac",
@@ -226,7 +226,7 @@
       ],
       "auto_attribution_runs": []
     },
-    "ageoa.tempo_jl.jd2cal.time@ageoa/tempo_jl/jd2cal/atoms.py:96": {
+    "sciona.atoms.physics.tempo_jl.jd2cal.time_from_hms@sciona/atoms/physics/tempo_jl/jd2cal/atoms.py:96": {
       "references": [
         {
           "ref_id": "urban2013almanac",

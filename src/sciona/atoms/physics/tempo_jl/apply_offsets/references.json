@@ -1,7 +1,7 @@
 {
   "schema_version": "1.1",
   "atoms": {
-    "ageoa.tempo_jl.apply_offsets.apply_offsets@ageoa/tempo_jl/apply_offsets/atoms.py:51": {
+    "sciona.atoms.physics.tempo_jl.apply_offsets.apply_offsets@sciona/atoms/physics/tempo_jl/apply_offsets/atoms.py:51": {
       "references": [
         {
           "ref_id": "urban2013almanac",
@@ -26,7 +26,7 @@
       ],
       "auto_attribution_runs": []
     },
-    "ageoa.tempo_jl.apply_offsets.show@ageoa/tempo_jl/apply_offsets/atoms.py:20": {
+    "sciona.atoms.physics.tempo_jl.apply_offsets.show@sciona/atoms/physics/tempo_jl/apply_offsets/atoms.py:20": {
       "references": [
         {
           "ref_id": "urban2013almanac",

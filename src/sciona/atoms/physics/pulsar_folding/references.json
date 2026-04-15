@@ -1,7 +1,7 @@
 {
   "schema_version": "1.1",
   "atoms": {
-    "ageoa.pulsar_folding.dm_can_brute_force@ageoa/pulsar_folding/atoms.py:19": {
+    "sciona.atoms.physics.pulsar_folding.dm_can_brute_force@sciona/atoms/physics/pulsar_folding/atoms.py:19": {
       "references": [
         {
           "ref_id": "lorimer2005pulsar",
@@ -26,7 +26,7 @@
       ],
       "auto_attribution_runs": []
     },
-    "ageoa.pulsar_folding.spline_bandpass_correction@ageoa/pulsar_folding/atoms.py:49": {
+    "sciona.atoms.physics.pulsar_folding.spline_bandpass_correction@sciona/atoms/physics/pulsar_folding/atoms.py:49": {
       "references": [
         {
           "ref_id": "lorimer2005pulsar",
@@ -51,7 +51,7 @@
       ],
       "auto_attribution_runs": []
     },
-    "ageoa.pulsar_folding.dm_can.dm_candidate_filter@ageoa/pulsar_folding/dm_can.py:16": {
+    "sciona.atoms.physics.pulsar_folding.dm_candidate_filter@sciona/atoms/physics/pulsar_folding/dm_can.py:16": {
       "references": [
         {
           "ref_id": "lorimer2005pulsar",

@@ -1,7 +1,7 @@
 {
   "schema_version": "1.1",
   "atoms": {
-    "ageoa.skyfield.calculate_vector_angle@ageoa/skyfield/atoms.py:37": {
+    "sciona.atoms.physics.skyfield.calculate_vector_angle@sciona/atoms/physics/skyfield/atoms.py:37": {
       "references": [
         {
           "ref_id": "skyfield2019ascl",
@@ -26,7 +26,7 @@
       ],
       "auto_attribution_runs": []
     },
-    "ageoa.skyfield.compute_spherical_coordinate_rates@ageoa/skyfield/atoms.py:21": {
+    "sciona.atoms.physics.skyfield.compute_spherical_coordinate_rates@sciona/atoms/physics/skyfield/atoms.py:21": {
       "references": [
         {
           "ref_id": "skyfield2019ascl",

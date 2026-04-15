@@ -1,6 +1,6 @@
 """Shared JuliaCall/JuliaPkg runtime configuration for physics provider repos.
 
-This mirrors the runtime setup already used in sciona-matcher and ageo-atoms so
+This mirrors the runtime setup already used in sciona-matcher and the split provider repos so
 Julia-backed provider packages avoid writing lockfiles into shared Python envs.
 """
 

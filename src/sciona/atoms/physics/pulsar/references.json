@@ -1,7 +1,7 @@
 {
   "schema_version": "1.1",
   "atoms": {
-    "ageoa.pulsar.pipeline.SNR@ageoa/pulsar/pipeline.py:113": {
+    "sciona.atoms.physics.pulsar.SNR@sciona/atoms/physics/pulsar/pipeline.py:113": {
       "references": [
         {
           "ref_id": "lorimer2005pulsar",
@@ -16,7 +16,7 @@
       ],
       "auto_attribution_runs": []
     },
-    "ageoa.pulsar.pipeline.de_disperse@ageoa/pulsar/pipeline.py:44": {
+    "sciona.atoms.physics.pulsar.de_disperse@sciona/atoms/physics/pulsar/pipeline.py:44": {
       "references": [
         {
           "ref_id": "lorimer2005pulsar",
@@ -31,7 +31,7 @@
       ],
       "auto_attribution_runs": []
     },
-    "ageoa.pulsar.pipeline.delay_from_DM@ageoa/pulsar/pipeline.py:24": {
+    "sciona.atoms.physics.pulsar.delay_from_DM@sciona/atoms/physics/pulsar/pipeline.py:24": {
       "references": [
         {
           "ref_id": "lorimer2005pulsar",
@@ -46,7 +46,7 @@
       ],
       "auto_attribution_runs": []
     },
-    "ageoa.pulsar.pipeline.fold_signal@ageoa/pulsar/pipeline.py:84": {
+    "sciona.atoms.physics.pulsar.fold_signal@sciona/atoms/physics/pulsar/pipeline.py:84": {
       "references": [
         {
           "ref_id": "lorimer2005pulsar",

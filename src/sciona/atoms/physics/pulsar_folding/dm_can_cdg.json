@@ -3,8 +3,8 @@
     {
       "node_id": "dm_can_root",
       "parent_id": null,
-      "name": "ageoa.pulsar_folding.dm_can",
-      "description": "Consolidated module for ageoa.pulsar_folding.dm_can.",
+      "name": "sciona.pulsar_folding.dm_can",
+      "description": "Consolidated module for sciona.pulsar_folding.dm_can.",
       "concept_type": "custom",
       "inputs": [],
       "outputs": [],
