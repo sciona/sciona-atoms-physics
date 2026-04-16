@@ -1,0 +1,374 @@
+{
+  "authoritative_sources": [
+    {
+      "confidence": "high",
+      "notes": "Primary Tempo.jl software attribution.",
+      "ref_id": "repo_tempo_jl"
+    },
+    {
+      "confidence": "medium",
+      "notes": "Broad astronomical time-scale attribution.",
+      "ref_id": "urban2013almanac"
+    }
+  ],
+  "bundle_scope": "provider_owned_review_batch",
+  "bundle_version": "1.0",
+  "conditional_rows": 0,
+  "covered_rows": 9,
+  "developer_semantic_verdict": "aligned_to_registered_atoms",
+  "family": "sciona.atoms.physics.tempo_jl",
+  "limitations": [],
+  "provider_repo": "sciona-atoms-physics",
+  "ready_rows": 9,
+  "required_actions": [],
+  "review_record_path": "docs/review-records/tempo_jl.md",
+  "review_status": "reviewed",
+  "rows": [
+    {
+      "atom_keys": [
+        "sciona.atoms.physics.tempo_jl.apply_offsets.apply_offsets",
+        "sciona.atoms.physics.tempo_jl.apply_offsets.show"
+      ],
+      "authoritative_sources": [
+        {
+          "confidence": "high",
+          "notes": "Primary Tempo.jl software attribution.",
+          "ref_id": "repo_tempo_jl"
+        },
+        {
+          "confidence": "medium",
+          "notes": "Broad astronomical time-scale attribution.",
+          "ref_id": "urban2013almanac"
+        }
+      ],
+      "developer_semantic_verdict": "aligned_to_registered_atoms",
+      "evidence_files": [
+        "apply_offsets/cdg.json",
+        "apply_offsets/matches.json",
+        "apply_offsets/references.json"
+      ],
+      "limitations": [],
+      "module": "sciona.atoms.physics.tempo_jl.apply_offsets.atoms",
+      "required_actions": [],
+      "review_record_path": "docs/review-records/tempo_jl.md",
+      "review_status": "reviewed",
+      "row_id": "apply_offsets/atoms",
+      "semantic_verdict": "supported",
+      "trust_readiness": "ready"
+    },
+    {
+      "atom_keys": [
+        "sciona.atoms.physics.tempo_jl.graph_time_scale_management",
+        "sciona.atoms.physics.tempo_jl.high_precision_duration"
+      ],
+      "authoritative_sources": [
+        {
+          "confidence": "high",
+          "notes": "Primary Tempo.jl software attribution.",
+          "ref_id": "repo_tempo_jl"
+        },
+        {
+          "confidence": "medium",
+          "notes": "Broad astronomical time-scale attribution.",
+          "ref_id": "urban2013almanac"
+        }
+      ],
+      "developer_semantic_verdict": "aligned_to_registered_atoms",
+      "evidence_files": [
+        "cdg.json",
+        "references.json",
+        "uncertainty.json"
+      ],
+      "limitations": [],
+      "module": "sciona.atoms.physics.tempo_jl.atoms",
+      "required_actions": [],
+      "review_record_path": "docs/review-records/tempo_jl.md",
+      "review_status": "reviewed",
+      "row_id": "atoms",
+      "semantic_verdict": "supported",
+      "trust_readiness": "ready"
+    },
+    {
+      "atom_keys": [
+        "sciona.atoms.physics.tempo_jl.find_month.date_from_offset",
+        "sciona.atoms.physics.tempo_jl.find_month.date_from_year_dayinyear",
+        "sciona.atoms.physics.tempo_jl.find_month.datetime_from_components",
+        "sciona.atoms.physics.tempo_jl.find_month.datetime_from_seconds",
+        "sciona.atoms.physics.tempo_jl.find_month.datetime_from_string",
+        "sciona.atoms.physics.tempo_jl.find_month.show_date",
+        "sciona.atoms.physics.tempo_jl.find_month.show_time",
+        "sciona.atoms.physics.tempo_jl.find_month.time_from_hms",
+        "sciona.atoms.physics.tempo_jl.find_month.time_from_secondinday",
+        "sciona.atoms.physics.tempo_jl.find_month.time_from_secondinday_fraction"
+      ],
+      "authoritative_sources": [
+        {
+          "confidence": "high",
+          "notes": "Primary Tempo.jl software attribution.",
+          "ref_id": "repo_tempo_jl"
+        },
+        {
+          "confidence": "medium",
+          "notes": "Broad astronomical time-scale attribution.",
+          "ref_id": "urban2013almanac"
+        }
+      ],
+      "developer_semantic_verdict": "aligned_to_registered_atoms",
+      "evidence_files": [
+        "find_month/cdg.json",
+        "find_month/matches.json",
+        "find_month/references.json"
+      ],
+      "limitations": [],
+      "module": "sciona.atoms.physics.tempo_jl.find_month.atoms",
+      "required_actions": [],
+      "review_record_path": "docs/review-records/tempo_jl.md",
+      "review_status": "reviewed",
+      "row_id": "find_month/atoms",
+      "semantic_verdict": "supported",
+      "trust_readiness": "ready"
+    },
+    {
+      "atom_keys": [
+        "sciona.atoms.physics.tempo_jl.find_year.cal2jd",
+        "sciona.atoms.physics.tempo_jl.find_year.calhms2jd",
+        "sciona.atoms.physics.tempo_jl.find_year.fd2hms",
+        "sciona.atoms.physics.tempo_jl.find_year.fd2hmsf",
+        "sciona.atoms.physics.tempo_jl.find_year.find_day",
+        "sciona.atoms.physics.tempo_jl.find_year.find_dayinyear",
+        "sciona.atoms.physics.tempo_jl.find_year.find_month",
+        "sciona.atoms.physics.tempo_jl.find_year.find_year",
+        "sciona.atoms.physics.tempo_jl.find_year.hms2fd",
+        "sciona.atoms.physics.tempo_jl.find_year.isleapyear",
+        "sciona.atoms.physics.tempo_jl.find_year.jd2cal",
+        "sciona.atoms.physics.tempo_jl.find_year.jd2calhms",
+        "sciona.atoms.physics.tempo_jl.find_year.lastj2000dayofyear",
+        "sciona.atoms.physics.tempo_jl.find_year.tai2utc",
+        "sciona.atoms.physics.tempo_jl.find_year.utc2tai"
+      ],
+      "authoritative_sources": [
+        {
+          "confidence": "high",
+          "notes": "Primary Tempo.jl software attribution.",
+          "ref_id": "repo_tempo_jl"
+        },
+        {
+          "confidence": "medium",
+          "notes": "Broad astronomical time-scale attribution.",
+          "ref_id": "urban2013almanac"
+        }
+      ],
+      "developer_semantic_verdict": "aligned_to_registered_atoms",
+      "evidence_files": [
+        "find_year/cdg.json",
+        "find_year/matches.json",
+        "find_year/references.json"
+      ],
+      "limitations": [],
+      "module": "sciona.atoms.physics.tempo_jl.find_year.atoms",
+      "required_actions": [],
+      "review_record_path": "docs/review-records/tempo_jl.md",
+      "review_status": "reviewed",
+      "row_id": "find_year/atoms",
+      "semantic_verdict": "supported",
+      "trust_readiness": "ready"
+    },
+    {
+      "atom_keys": [
+        "sciona.atoms.physics.tempo_jl.jd2cal.date_from_offset",
+        "sciona.atoms.physics.tempo_jl.jd2cal.date_from_year_dayinyear",
+        "sciona.atoms.physics.tempo_jl.jd2cal.datetime_from_components",
+        "sciona.atoms.physics.tempo_jl.jd2cal.datetime_from_seconds",
+        "sciona.atoms.physics.tempo_jl.jd2cal.datetime_from_string",
+        "sciona.atoms.physics.tempo_jl.jd2cal.show_date",
+        "sciona.atoms.physics.tempo_jl.jd2cal.show_time",
+        "sciona.atoms.physics.tempo_jl.jd2cal.time_from_hms",
+        "sciona.atoms.physics.tempo_jl.jd2cal.time_from_secondinday",
+        "sciona.atoms.physics.tempo_jl.jd2cal.time_from_secondinday_fraction"
+      ],
+      "authoritative_sources": [
+        {
+          "confidence": "high",
+          "notes": "Primary Tempo.jl software attribution.",
+          "ref_id": "repo_tempo_jl"
+        },
+        {
+          "confidence": "medium",
+          "notes": "Broad astronomical time-scale attribution.",
+          "ref_id": "urban2013almanac"
+        }
+      ],
+      "developer_semantic_verdict": "aligned_to_registered_atoms",
+      "evidence_files": [
+        "jd2cal/cdg.json",
+        "jd2cal/matches.json",
+        "jd2cal/references.json"
+      ],
+      "limitations": [],
+      "module": "sciona.atoms.physics.tempo_jl.jd2cal.atoms",
+      "required_actions": [],
+      "review_record_path": "docs/review-records/tempo_jl.md",
+      "review_status": "reviewed",
+      "row_id": "jd2cal/atoms",
+      "semantic_verdict": "supported",
+      "trust_readiness": "ready"
+    },
+    {
+      "atom_keys": [
+        "sciona.atoms.physics.tempo_jl.offsets.offset_tt2tdb",
+        "sciona.atoms.physics.tempo_jl.offsets.offset_tt2tdbh",
+        "sciona.atoms.physics.tempo_jl.offsets.tt2tdb_offset"
+      ],
+      "authoritative_sources": [
+        {
+          "confidence": "high",
+          "notes": "Primary Tempo.jl software attribution.",
+          "ref_id": "repo_tempo_jl"
+        },
+        {
+          "confidence": "medium",
+          "notes": "Broad astronomical time-scale attribution.",
+          "ref_id": "urban2013almanac"
+        }
+      ],
+      "developer_semantic_verdict": "aligned_to_registered_atoms",
+      "evidence_files": [
+        "offsets/cdg.json",
+        "offsets/matches.json",
+        "offsets/references.json"
+      ],
+      "limitations": [],
+      "module": "sciona.atoms.physics.tempo_jl.offsets.atoms",
+      "required_actions": [],
+      "review_record_path": "docs/review-records/tempo_jl.md",
+      "review_status": "reviewed",
+      "row_id": "offsets/atoms",
+      "semantic_verdict": "supported",
+      "trust_readiness": "ready"
+    },
+    {
+      "atom_keys": [
+        "sciona.atoms.physics.tempo_jl.tai2utc.cal2jd",
+        "sciona.atoms.physics.tempo_jl.tai2utc.calhms2jd",
+        "sciona.atoms.physics.tempo_jl.tai2utc.fd2hms",
+        "sciona.atoms.physics.tempo_jl.tai2utc.fd2hmsf",
+        "sciona.atoms.physics.tempo_jl.tai2utc.find_day",
+        "sciona.atoms.physics.tempo_jl.tai2utc.find_dayinyear",
+        "sciona.atoms.physics.tempo_jl.tai2utc.find_month",
+        "sciona.atoms.physics.tempo_jl.tai2utc.find_year",
+        "sciona.atoms.physics.tempo_jl.tai2utc.hms2fd",
+        "sciona.atoms.physics.tempo_jl.tai2utc.isleapyear",
+        "sciona.atoms.physics.tempo_jl.tai2utc.jd2cal",
+        "sciona.atoms.physics.tempo_jl.tai2utc.jd2calhms",
+        "sciona.atoms.physics.tempo_jl.tai2utc.lastj2000dayofyear",
+        "sciona.atoms.physics.tempo_jl.tai2utc.tai2utc",
+        "sciona.atoms.physics.tempo_jl.tai2utc.utc2tai"
+      ],
+      "authoritative_sources": [
+        {
+          "confidence": "high",
+          "notes": "Primary Tempo.jl software attribution.",
+          "ref_id": "repo_tempo_jl"
+        },
+        {
+          "confidence": "medium",
+          "notes": "Broad astronomical time-scale attribution.",
+          "ref_id": "urban2013almanac"
+        }
+      ],
+      "developer_semantic_verdict": "aligned_to_registered_atoms",
+      "evidence_files": [
+        "tai2utc/cdg.json",
+        "tai2utc/matches.json",
+        "tai2utc/references.json"
+      ],
+      "limitations": [],
+      "module": "sciona.atoms.physics.tempo_jl.tai2utc.atoms",
+      "required_actions": [],
+      "review_record_path": "docs/review-records/tempo_jl.md",
+      "review_status": "reviewed",
+      "row_id": "tai2utc/atoms",
+      "semantic_verdict": "supported",
+      "trust_readiness": "ready"
+    },
+    {
+      "atom_keys": [
+        "sciona.atoms.physics.tempo_jl.tai2utc_d12.tai_to_utc_inversion",
+        "sciona.atoms.physics.tempo_jl.tai2utc_d12.utc_to_tai_leap_second_kernel"
+      ],
+      "authoritative_sources": [
+        {
+          "confidence": "high",
+          "notes": "Primary Tempo.jl software attribution.",
+          "ref_id": "repo_tempo_jl"
+        },
+        {
+          "confidence": "medium",
+          "notes": "Broad astronomical time-scale attribution.",
+          "ref_id": "urban2013almanac"
+        }
+      ],
+      "developer_semantic_verdict": "aligned_to_registered_atoms",
+      "evidence_files": [
+        "tai2utc_d12/cdg.json",
+        "tai2utc_d12/matches.json",
+        "tai2utc_d12/references.json"
+      ],
+      "limitations": [],
+      "module": "sciona.atoms.physics.tempo_jl.tai2utc_d12.atoms",
+      "required_actions": [],
+      "review_record_path": "docs/review-records/tempo_jl.md",
+      "review_status": "reviewed",
+      "row_id": "tai2utc_d12/atoms",
+      "semantic_verdict": "supported",
+      "trust_readiness": "ready"
+    },
+    {
+      "atom_keys": [
+        "sciona.atoms.physics.tempo_jl.utc2tai.cal2jd",
+        "sciona.atoms.physics.tempo_jl.utc2tai.calhms2jd",
+        "sciona.atoms.physics.tempo_jl.utc2tai.fd2hms",
+        "sciona.atoms.physics.tempo_jl.utc2tai.fd2hmsf",
+        "sciona.atoms.physics.tempo_jl.utc2tai.find_day",
+        "sciona.atoms.physics.tempo_jl.utc2tai.find_dayinyear",
+        "sciona.atoms.physics.tempo_jl.utc2tai.find_month",
+        "sciona.atoms.physics.tempo_jl.utc2tai.find_year",
+        "sciona.atoms.physics.tempo_jl.utc2tai.hms2fd",
+        "sciona.atoms.physics.tempo_jl.utc2tai.isleapyear",
+        "sciona.atoms.physics.tempo_jl.utc2tai.jd2cal",
+        "sciona.atoms.physics.tempo_jl.utc2tai.jd2calhms",
+        "sciona.atoms.physics.tempo_jl.utc2tai.lastj2000dayofyear",
+        "sciona.atoms.physics.tempo_jl.utc2tai.tai2utc",
+        "sciona.atoms.physics.tempo_jl.utc2tai.utc2tai"
+      ],
+      "authoritative_sources": [
+        {
+          "confidence": "high",
+          "notes": "Primary Tempo.jl software attribution.",
+          "ref_id": "repo_tempo_jl"
+        },
+        {
+          "confidence": "medium",
+          "notes": "Broad astronomical time-scale attribution.",
+          "ref_id": "urban2013almanac"
+        }
+      ],
+      "developer_semantic_verdict": "aligned_to_registered_atoms",
+      "evidence_files": [
+        "utc2tai/cdg.json",
+        "utc2tai/matches.json",
+        "utc2tai/references.json"
+      ],
+      "limitations": [],
+      "module": "sciona.atoms.physics.tempo_jl.utc2tai.atoms",
+      "required_actions": [],
+      "review_record_path": "docs/review-records/tempo_jl.md",
+      "review_status": "reviewed",
+      "row_id": "utc2tai/atoms",
+      "semantic_verdict": "supported",
+      "trust_readiness": "ready"
+    }
+  ],
+  "semantic_verdict": "supported",
+  "trust_readiness": "ready"
+}
