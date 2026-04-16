@@ -1,0 +1,48 @@
+{
+  "provider_repo": "sciona-atoms-physics",
+  "manifest_version": "1.0",
+  "repo_default_license": {
+    "license_spdx": "NOASSERTION",
+    "status": "unknown",
+    "confidence": "low",
+    "reason": "No repo-level LICENSE, COPYING, or NOTICE file is present in this scratch tree and no verified upstream license source has been added yet."
+  },
+  "family_overrides": [],
+  "unresolved_families": [
+    {
+      "family": "sciona.atoms.physics.astroflow",
+      "status": "unknown",
+      "reason": "No verified upstream license source is available yet."
+    },
+    {
+      "family": "sciona.atoms.physics.jFOF",
+      "status": "unknown",
+      "reason": "No verified upstream license source is available yet."
+    },
+    {
+      "family": "sciona.atoms.physics.pasqal",
+      "status": "unknown",
+      "reason": "No verified upstream license source is available yet."
+    },
+    {
+      "family": "sciona.atoms.physics.pulsar",
+      "status": "unknown",
+      "reason": "No verified upstream license source is available yet."
+    },
+    {
+      "family": "sciona.atoms.physics.pulsar_folding",
+      "status": "unknown",
+      "reason": "No verified upstream license source is available yet."
+    },
+    {
+      "family": "sciona.atoms.physics.skyfield",
+      "status": "unknown",
+      "reason": "No verified upstream license source is available yet."
+    },
+    {
+      "family": "sciona.atoms.physics.tempo_jl",
+      "status": "unknown",
+      "reason": "No verified upstream license source is available yet."
+    }
+  ]
+}
