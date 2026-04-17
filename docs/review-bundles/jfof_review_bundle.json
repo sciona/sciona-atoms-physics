@@ -1,0 +1,98 @@
+{
+  "authoritative_sources": [
+    {
+      "confidence": "medium",
+      "notes": "Friends-of-friends clustering attribution.",
+      "ref_id": "huchra1982fof"
+    },
+    {
+      "confidence": "high",
+      "notes": "Upstream implementation is mapped to the vendored jFOF repository.",
+      "ref_id": "repo_jfof"
+    }
+  ],
+  "bundle_scope": "provider_owned_review_batch",
+  "bundle_version": "1.0",
+  "conditional_rows": 0,
+  "covered_rows": 2,
+  "developer_semantic_verdict": "aligned_to_registered_atoms",
+  "family": "sciona.atoms.physics.jFOF",
+  "limitations": [
+    "Evidence is limited to local wrapper-source review, witness alignment, reference attribution, import smoke, and direct behavior checks.",
+    "The topological-loss row is reviewed against the wrapper's published scalar loss contract rather than a broader stochastic JAX training surface."
+  ],
+  "provider_repo": "sciona-atoms-physics",
+  "ready_rows": 2,
+  "required_actions": [],
+  "review_record_path": "docs/review-records/jfof.md",
+  "review_status": "reviewed",
+  "rows": [
+    {
+      "atom_keys": [
+        "sciona.atoms.physics.jFOF.find_fof_clusters"
+      ],
+      "authoritative_sources": [
+        {
+          "confidence": "medium",
+          "notes": "Friends-of-friends clustering attribution.",
+          "ref_id": "huchra1982fof"
+        },
+        {
+          "confidence": "high",
+          "notes": "Upstream implementation is mapped to the vendored jFOF repository.",
+          "ref_id": "repo_jfof"
+        }
+      ],
+      "developer_semantic_verdict": "aligned_to_registered_atoms",
+      "evidence_files": [
+        "jFOF/atoms.py",
+        "jFOF/cdg.json",
+        "jFOF/matches.json",
+        "jFOF/references.json",
+        "jFOF/witnesses.py"
+      ],
+      "limitations": [
+        "The wrapper publishes integer cluster-root labels derived from a local union-find pass over SciPy neighbor pairs."
+      ],
+      "module": "sciona.atoms.physics.jFOF.atoms",
+      "required_actions": [],
+      "review_record_path": "docs/review-records/jfof.md",
+      "review_status": "reviewed",
+      "row_id": "jFOF/find_fof_clusters",
+      "semantic_verdict": "supported",
+      "trust_readiness": "ready"
+    },
+    {
+      "atom_keys": [
+        "sciona.atoms.physics.jFOF.topo.topological_loss_computation"
+      ],
+      "authoritative_sources": [
+        {
+          "confidence": "high",
+          "notes": "Upstream implementation is mapped to the vendored jFOF repository.",
+          "ref_id": "repo_jfof"
+        }
+      ],
+      "developer_semantic_verdict": "aligned_to_registered_atoms",
+      "evidence_files": [
+        "jFOF/topo.py",
+        "jFOF/topo_cdg.json",
+        "jFOF/matches.json",
+        "jFOF/references.json",
+        "jFOF/topo_witnesses.py"
+      ],
+      "limitations": [
+        "The published contract is a deterministic scalar loss wrapper over local logits and neighbor indices; it does not expose a larger training-loop API."
+      ],
+      "module": "sciona.atoms.physics.jFOF.topo",
+      "required_actions": [],
+      "review_record_path": "docs/review-records/jfof.md",
+      "review_status": "reviewed",
+      "row_id": "jFOF/topo/topological_loss_computation",
+      "semantic_verdict": "supported",
+      "trust_readiness": "ready"
+    }
+  ],
+  "semantic_verdict": "supported",
+  "trust_readiness": "ready"
+}

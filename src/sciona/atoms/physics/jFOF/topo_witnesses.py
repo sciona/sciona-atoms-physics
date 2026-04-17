@@ -9,11 +9,11 @@ def witness_topological_loss_computation(
     pos32: AbstractArray,
     nbr_idx: AbstractArray,
     b: AbstractArray,
-    max_iters: AbstractArray,
-    tau: AbstractArray,
-) -> AbstractArray:
-    """Shape-and-type check for topological loss computation."""
-    return AbstractArray(shape=key.shape, dtype="float64")
+    max_iters: AbstractScalar,
+    tau: AbstractScalar,
+) -> AbstractScalar:
+    """Return scalar metadata for the wrapper's topological loss."""
+    return AbstractScalar(dtype="float64")
 
 
 def witness_compute_topo_loss(
