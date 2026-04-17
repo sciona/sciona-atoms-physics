@@ -1,0 +1,101 @@
+{
+  "authoritative_sources": [
+    {
+      "confidence": "high",
+      "notes": "Preferred Skyfield software citation.",
+      "ref_id": "skyfield2019ascl"
+    },
+    {
+      "confidence": "high",
+      "notes": "Upstream implementation is mapped to the vendored skyfield repository.",
+      "ref_id": "repo_skyfield"
+    }
+  ],
+  "bundle_scope": "provider_owned_review_batch",
+  "bundle_version": "1.0",
+  "conditional_rows": 0,
+  "covered_rows": 2,
+  "developer_semantic_verdict": "aligned_to_registered_atoms",
+  "family": "sciona.atoms.physics.skyfield",
+  "limitations": [
+    "Evidence is limited to wrapper-source review, reference attribution, import smoke, and direct behavior checks.",
+    "The compute_spherical_coordinate_rates row is reviewed against the concrete upstream six-value return contract rather than the earlier shorthand wrapper docstring."
+  ],
+  "provider_repo": "sciona-atoms-physics",
+  "ready_rows": 2,
+  "required_actions": [],
+  "review_record_path": "docs/review-records/skyfield.md",
+  "review_status": "reviewed",
+  "rows": [
+    {
+      "atom_keys": [
+        "sciona.atoms.physics.skyfield.compute_spherical_coordinate_rates"
+      ],
+      "authoritative_sources": [
+        {
+          "confidence": "high",
+          "notes": "Preferred Skyfield software citation.",
+          "ref_id": "skyfield2019ascl"
+        },
+        {
+          "confidence": "high",
+          "notes": "Upstream implementation is mapped to the vendored skyfield repository.",
+          "ref_id": "repo_skyfield"
+        }
+      ],
+      "developer_semantic_verdict": "aligned_to_registered_atoms",
+      "evidence_files": [
+        "skyfield/atoms.py",
+        "skyfield/cdg.json",
+        "skyfield/matches.json",
+        "skyfield/references.json",
+        "skyfield/witnesses.py"
+      ],
+      "limitations": [
+        "The wrapper publishes the six-value `(range, latitude, longitude, range_rate, latitude_rate, longitude_rate)` contract exposed by upstream Skyfield."
+      ],
+      "module": "sciona.atoms.physics.skyfield.atoms",
+      "required_actions": [],
+      "review_record_path": "docs/review-records/skyfield.md",
+      "review_status": "reviewed",
+      "row_id": "skyfield/compute_spherical_coordinate_rates",
+      "semantic_verdict": "supported",
+      "trust_readiness": "ready"
+    },
+    {
+      "atom_keys": [
+        "sciona.atoms.physics.skyfield.calculate_vector_angle"
+      ],
+      "authoritative_sources": [
+        {
+          "confidence": "high",
+          "notes": "Preferred Skyfield software citation.",
+          "ref_id": "skyfield2019ascl"
+        },
+        {
+          "confidence": "high",
+          "notes": "Upstream implementation is mapped to the vendored skyfield repository.",
+          "ref_id": "repo_skyfield"
+        }
+      ],
+      "developer_semantic_verdict": "aligned_to_registered_atoms",
+      "evidence_files": [
+        "skyfield/atoms.py",
+        "skyfield/cdg.json",
+        "skyfield/matches.json",
+        "skyfield/references.json",
+        "skyfield/witnesses.py"
+      ],
+      "limitations": [],
+      "module": "sciona.atoms.physics.skyfield.atoms",
+      "required_actions": [],
+      "review_record_path": "docs/review-records/skyfield.md",
+      "review_status": "reviewed",
+      "row_id": "skyfield/calculate_vector_angle",
+      "semantic_verdict": "supported",
+      "trust_readiness": "ready"
+    }
+  ],
+  "semantic_verdict": "supported",
+  "trust_readiness": "ready"
+}

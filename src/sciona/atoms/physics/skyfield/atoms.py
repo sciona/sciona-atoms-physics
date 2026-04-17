@@ -18,15 +18,18 @@ from skyfield.functions import _to_spherical_and_rates
 @icontract.require(lambda r: r is not None, "r cannot be None")
 @icontract.require(lambda v: v is not None, "v cannot be None")
 @icontract.ensure(lambda result: result is not None, "compute_spherical_coordinate_rates output must not be None")
-def compute_spherical_coordinate_rates(r: np.ndarray, v: np.ndarray) -> tuple[np.ndarray, np.ndarray, np.ndarray]:
-    """Computes spherical coordinate rates.
+def compute_spherical_coordinate_rates(
+    r: np.ndarray,
+    v: np.ndarray,
+) -> tuple[float, float, float, float, float, float]:
+    """Computes spherical coordinates and their instantaneous rates.
 
     Args:
         r: Cartesian position vector(s).
         v: Cartesian velocity vector(s).
 
     Returns:
-        A tuple containing the rates of change for range, right ascension, and declination.
+        A 6-tuple of `(range, latitude, longitude, range_rate, latitude_rate, longitude_rate)`.
     """
     return _to_spherical_and_rates(r, v)
 
