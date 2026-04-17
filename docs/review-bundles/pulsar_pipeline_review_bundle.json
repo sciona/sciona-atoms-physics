@@ -1,0 +1,144 @@
+{
+  "authoritative_sources": [
+    {
+      "confidence": "medium",
+      "notes": "Broad pulsar-search background already attached in local references.",
+      "ref_id": "lorimer2005pulsar"
+    }
+  ],
+  "bundle_scope": "provider_owned_review_batch",
+  "bundle_version": "1.0",
+  "conditional_rows": 0,
+  "covered_rows": 4,
+  "developer_semantic_verdict": "aligned_to_registered_atoms",
+  "family": "sciona.atoms.physics.pulsar.pipeline",
+  "limitations": [
+    "Evidence is limited to local wrapper-source review, witness alignment, reference attribution, import smoke, and direct behavior checks.",
+    "The family is reviewed as a simplified dedispersion, folding, and profile-scoring pipeline rather than as a full radio-astronomy search stack with interpolation, barycentering, or variance-calibrated detection statistics."
+  ],
+  "provider_repo": "sciona-atoms-physics",
+  "ready_rows": 4,
+  "required_actions": [],
+  "review_record_path": "docs/review-records/pulsar_pipeline.md",
+  "review_status": "reviewed",
+  "rows": [
+    {
+      "atom_keys": [
+        "sciona.atoms.physics.pulsar.pipeline.delay_from_DM"
+      ],
+      "authoritative_sources": [
+        {
+          "confidence": "medium",
+          "notes": "Broad pulsar-search background already attached in local references.",
+          "ref_id": "lorimer2005pulsar"
+        }
+      ],
+      "developer_semantic_verdict": "aligned_to_registered_atoms",
+      "evidence_files": [
+        "pulsar/pipeline.py",
+        "pulsar/pipeline_cdg.json",
+        "pulsar/references.json",
+        "pulsar/witnesses.py"
+      ],
+      "limitations": [
+        "The wrapper exposes a simplified DM-delay formula with an explicit zero-frequency guard."
+      ],
+      "module": "sciona.atoms.physics.pulsar.pipeline",
+      "required_actions": [],
+      "review_record_path": "docs/review-records/pulsar_pipeline.md",
+      "review_status": "reviewed",
+      "row_id": "pulsar/pipeline/delay_from_DM",
+      "semantic_verdict": "supported",
+      "trust_readiness": "ready"
+    },
+    {
+      "atom_keys": [
+        "sciona.atoms.physics.pulsar.pipeline.de_disperse"
+      ],
+      "authoritative_sources": [
+        {
+          "confidence": "medium",
+          "notes": "Broad pulsar-search background already attached in local references.",
+          "ref_id": "lorimer2005pulsar"
+        }
+      ],
+      "developer_semantic_verdict": "aligned_to_registered_atoms",
+      "evidence_files": [
+        "pulsar/pipeline.py",
+        "pulsar/pipeline_cdg.json",
+        "pulsar/references.json",
+        "pulsar/witnesses.py"
+      ],
+      "limitations": [
+        "Channel alignment is implemented with integer sample shifts and zero-fill padding rather than interpolation."
+      ],
+      "module": "sciona.atoms.physics.pulsar.pipeline",
+      "required_actions": [],
+      "review_record_path": "docs/review-records/pulsar_pipeline.md",
+      "review_status": "reviewed",
+      "row_id": "pulsar/pipeline/de_disperse",
+      "semantic_verdict": "supported",
+      "trust_readiness": "ready"
+    },
+    {
+      "atom_keys": [
+        "sciona.atoms.physics.pulsar.pipeline.fold_signal"
+      ],
+      "authoritative_sources": [
+        {
+          "confidence": "medium",
+          "notes": "Broad pulsar-search background already attached in local references.",
+          "ref_id": "lorimer2005pulsar"
+        }
+      ],
+      "developer_semantic_verdict": "aligned_to_registered_atoms",
+      "evidence_files": [
+        "pulsar/pipeline.py",
+        "pulsar/pipeline_cdg.json",
+        "pulsar/references.json",
+        "pulsar/witnesses.py"
+      ],
+      "limitations": [
+        "Only complete periods are folded; trailing samples shorter than one period are discarded."
+      ],
+      "module": "sciona.atoms.physics.pulsar.pipeline",
+      "required_actions": [],
+      "review_record_path": "docs/review-records/pulsar_pipeline.md",
+      "review_status": "reviewed",
+      "row_id": "pulsar/pipeline/fold_signal",
+      "semantic_verdict": "supported",
+      "trust_readiness": "ready"
+    },
+    {
+      "atom_keys": [
+        "sciona.atoms.physics.pulsar.pipeline.SNR"
+      ],
+      "authoritative_sources": [
+        {
+          "confidence": "medium",
+          "notes": "Broad pulsar-search background already attached in local references.",
+          "ref_id": "lorimer2005pulsar"
+        }
+      ],
+      "developer_semantic_verdict": "aligned_to_registered_atoms",
+      "evidence_files": [
+        "pulsar/pipeline.py",
+        "pulsar/pipeline_cdg.json",
+        "pulsar/references.json",
+        "pulsar/witnesses.py"
+      ],
+      "limitations": [
+        "The published score is the wrapper's log peak-to-absolute-mean ratio, not a variance-normalized detection statistic."
+      ],
+      "module": "sciona.atoms.physics.pulsar.pipeline",
+      "required_actions": [],
+      "review_record_path": "docs/review-records/pulsar_pipeline.md",
+      "review_status": "reviewed",
+      "row_id": "pulsar/pipeline/SNR",
+      "semantic_verdict": "supported",
+      "trust_readiness": "ready"
+    }
+  ],
+  "semantic_verdict": "supported",
+  "trust_readiness": "ready"
+}
