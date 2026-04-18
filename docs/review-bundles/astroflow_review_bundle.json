@@ -1,0 +1,68 @@
+{
+  "authoritative_sources": [
+    {
+      "confidence": "high",
+      "notes": "Primary AstroFlow paper.",
+      "ref_id": "astroflow2025"
+    },
+    {
+      "confidence": "high",
+      "notes": "Upstream implementation is mapped to the vendored astroflow repository.",
+      "ref_id": "repo_astroflow"
+    }
+  ],
+  "bundle_scope": "provider_owned_review_batch",
+  "bundle_version": "1.0",
+  "conditional_rows": 0,
+  "covered_rows": 1,
+  "developer_semantic_verdict": "aligned_to_registered_atoms",
+  "family": "sciona.atoms.physics.astroflow",
+  "limitations": [
+    "Evidence is limited to local wrapper-source review, witness alignment, reference attribution, import smoke, and direct behavior checks.",
+    "The reviewed contract is the deterministic 2D dedispersion kernel wrapper with output shape `(dm_steps, down_ndata)`; it does not claim the full upstream GPU runtime surface."
+  ],
+  "provider_repo": "sciona-atoms-physics",
+  "ready_rows": 1,
+  "required_actions": [],
+  "review_record_path": "docs/review-records/astroflow.md",
+  "review_status": "reviewed",
+  "rows": [
+    {
+      "atom_keys": [
+        "sciona.atoms.physics.astroflow.dedispersionkernel"
+      ],
+      "authoritative_sources": [
+        {
+          "confidence": "high",
+          "notes": "Primary AstroFlow paper.",
+          "ref_id": "astroflow2025"
+        },
+        {
+          "confidence": "high",
+          "notes": "Upstream implementation is mapped to the vendored astroflow repository.",
+          "ref_id": "repo_astroflow"
+        }
+      ],
+      "developer_semantic_verdict": "aligned_to_registered_atoms",
+      "evidence_files": [
+        "astroflow/atoms.py",
+        "astroflow/cdg.json",
+        "astroflow/matches.json",
+        "astroflow/references.json",
+        "astroflow/witnesses.py"
+      ],
+      "limitations": [
+        "The wrapper publishes a deterministic 2D output signal with shape `(dm_steps, down_ndata)` and local averaging over the frequency channels."
+      ],
+      "module": "sciona.atoms.physics.astroflow.atoms",
+      "required_actions": [],
+      "review_record_path": "docs/review-records/astroflow.md",
+      "review_status": "reviewed",
+      "row_id": "astroflow/dedispersionkernel",
+      "semantic_verdict": "supported",
+      "trust_readiness": "ready"
+    }
+  ],
+  "semantic_verdict": "supported",
+  "trust_readiness": "ready"
+}
