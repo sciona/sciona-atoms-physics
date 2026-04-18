@@ -1,0 +1,69 @@
+{
+  "authoritative_sources": [
+    {
+      "confidence": "medium",
+      "notes": "Broad pulsar-search background already attached in local references.",
+      "ref_id": "lorimer2005pulsar"
+    },
+    {
+      "confidence": "high",
+      "notes": "Upstream implementation is mapped to the vendored Pulsar_Folding repository.",
+      "ref_id": "repo_pulsar_folding"
+    }
+  ],
+  "bundle_scope": "provider_owned_review_batch",
+  "bundle_version": "1.0",
+  "conditional_rows": 0,
+  "covered_rows": 1,
+  "developer_semantic_verdict": "aligned_to_registered_atoms",
+  "family": "sciona.atoms.physics.pulsar_folding",
+  "limitations": [
+    "Evidence is limited to local wrapper-source review, witness alignment, reference attribution, import smoke, and direct behavior checks.",
+    "This bundle covers only the unpublished remainder atom in the family."
+  ],
+  "provider_repo": "sciona-atoms-physics",
+  "ready_rows": 1,
+  "required_actions": [],
+  "review_record_path": "docs/review-records/pulsar_folding.md",
+  "review_status": "reviewed",
+  "rows": [
+    {
+      "atom_keys": [
+        "sciona.atoms.physics.pulsar_folding.dm_can.dm_candidate_filter"
+      ],
+      "authoritative_sources": [
+        {
+          "confidence": "medium",
+          "notes": "Broad pulsar-search background already attached in local references.",
+          "ref_id": "lorimer2005pulsar"
+        },
+        {
+          "confidence": "high",
+          "notes": "Upstream implementation is mapped to the vendored Pulsar_Folding repository.",
+          "ref_id": "repo_pulsar_folding"
+        }
+      ],
+      "developer_semantic_verdict": "aligned_to_registered_atoms",
+      "evidence_files": [
+        "pulsar_folding/dm_can.py",
+        "pulsar_folding/dm_can_cdg.json",
+        "pulsar_folding/dm_can_witnesses.py",
+        "pulsar_folding/matches.json",
+        "pulsar_folding/references.json",
+        "pulsar_folding/_artifacts/dm_can_d12/uncertainty.json"
+      ],
+      "limitations": [
+        "The wrapper publishes a per-candidate score array, not a pruned candidate subset."
+      ],
+      "module": "sciona.atoms.physics.pulsar_folding.dm_can",
+      "required_actions": [],
+      "review_record_path": "docs/review-records/pulsar_folding.md",
+      "review_status": "reviewed",
+      "row_id": "pulsar_folding/dm_can/dm_candidate_filter",
+      "semantic_verdict": "supported",
+      "trust_readiness": "ready"
+    }
+  ],
+  "semantic_verdict": "supported",
+  "trust_readiness": "ready"
+}

@@ -14,7 +14,10 @@ from .dm_can_witnesses import witness_dm_candidate_filter
 @icontract.require(lambda tsamp: isinstance(tsamp, (float, int, np.number)), "tsamp must be numeric")
 @icontract.ensure(lambda result: result is not None, "dm_candidate_filter output must not be None")
 def dm_candidate_filter(data: np.ndarray, data_base: np.ndarray, sens: float, DM_base: float, candidates: np.ndarray, fchan: float, width: float, tsamp: float) -> np.ndarray:
-    """Filters Dispersion Measure (DM) candidates for pulsar detection. Compares observed data against a base DM model using sensitivity and channel parameters to keep only viable candidates.
+    """Scores Dispersion Measure (DM) candidates for pulsar detection.
+
+    Compares observed data against a base DM model using sensitivity and
+    channel parameters to produce one score per candidate.
 
     Args:
         data: Input data.
@@ -27,7 +30,7 @@ def dm_candidate_filter(data: np.ndarray, data_base: np.ndarray, sens: float, DM
         tsamp: tsamp > 0
 
     Returns:
-        subset of input candidates
+        One floating-point score per candidate.
     """
     # DM candidate filter: compute SNR for each candidate DM
     snr_values = []
