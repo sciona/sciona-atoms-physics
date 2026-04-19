@@ -17,7 +17,9 @@
   "covered_rows": 9,
   "developer_semantic_verdict": "aligned_to_registered_atoms",
   "family": "sciona.atoms.physics.tempo_jl",
-  "limitations": [],
+  "limitations": [
+    "`apply_offsets._zero_offset` is reviewed as the Tempo identity-offset helper: it intentionally returns `0.0` for any non-null seconds input and is not a dynamic time-scale correction model."
+  ],
   "provider_repo": "sciona-atoms-physics",
   "ready_rows": 9,
   "required_actions": [],
@@ -27,6 +29,7 @@
     {
       "atom_keys": [
         "sciona.atoms.physics.tempo_jl.apply_offsets.apply_offsets",
+        "sciona.atoms.physics.tempo_jl.apply_offsets._zero_offset",
         "sciona.atoms.physics.tempo_jl.apply_offsets.show"
       ],
       "authoritative_sources": [
@@ -43,11 +46,15 @@
       ],
       "developer_semantic_verdict": "aligned_to_registered_atoms",
       "evidence_files": [
+        "apply_offsets/atoms.py",
         "apply_offsets/cdg.json",
         "apply_offsets/matches.json",
-        "apply_offsets/references.json"
+        "apply_offsets/references.json",
+        "apply_offsets/witnesses.py"
       ],
-      "limitations": [],
+      "limitations": [
+        "`_zero_offset` intentionally ignores the seconds magnitude and returns the additive identity offset."
+      ],
       "module": "sciona.atoms.physics.tempo_jl.apply_offsets.atoms",
       "required_actions": [],
       "review_record_path": "docs/review-records/tempo_jl.md",

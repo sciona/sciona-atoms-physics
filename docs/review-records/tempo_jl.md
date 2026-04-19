@@ -12,3 +12,4 @@ Conditional rows: 0
 
 ## Scope notes
 All rows in this batch have non-repository citations and are ready for merge review.
+`apply_offsets._zero_offset` is included as the intentional identity-offset helper for the Tempo apply-offsets slice; it is not a dynamic astronomical offset model.

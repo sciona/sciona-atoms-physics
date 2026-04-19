@@ -50,6 +50,31 @@
         }
       ],
       "auto_attribution_runs": []
+    },
+    "sciona.atoms.physics.tempo_jl.apply_offsets._zero_offset@sciona/atoms/physics/tempo_jl/apply_offsets/atoms.py:35": {
+      "references": [
+        {
+          "ref_id": "urban2013almanac",
+          "match_metadata": {
+            "similarity_score": null,
+            "match_type": "manual",
+            "matched_nodes": [],
+            "confidence": "medium",
+            "notes": "Broad astronomical time-scale attribution; this row covers the identity-offset helper used by the apply-offsets slice."
+          }
+        },
+        {
+          "ref_id": "repo_tempo_jl",
+          "match_metadata": {
+            "similarity_score": null,
+            "match_type": "manual",
+            "matched_nodes": [],
+            "confidence": "high",
+            "notes": "Primary Tempo.jl software attribution."
+          }
+        }
+      ],
+      "auto_attribution_runs": []
     }
   }
 }

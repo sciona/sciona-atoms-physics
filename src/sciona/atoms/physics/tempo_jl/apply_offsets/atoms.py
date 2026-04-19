@@ -8,9 +8,6 @@ import icontract
 from sciona.ghost.registry import register_atom
 from .witnesses import witness__zero_offset, witness_apply_offsets, witness_show
 
-from juliacall import Main as jl
-
-
 # Witness functions should be imported from the generated witnesses module
 
 @register_atom(witness_show)
@@ -65,17 +62,20 @@ def apply_offsets(sec: float, ts1: float, ts2: float) -> float:
 """Auto-generated FFI bindings for julia implementations."""
 
 
-from juliacall import Main as jl
-
-
 def _show_ffi(io, s):
     """Wrapper that calls the Julia version of show. Passes arguments through and returns the result."""
+    from juliacall import Main as jl
+
     return jl.eval("show(io, s)")
 
 def _zero_offset_ffi(seconds):
     """Wrapper that calls the Julia version of zero offset. Passes arguments through and returns the result."""
+    from juliacall import Main as jl
+
     return jl.eval("_zero_offset(seconds)")
 
 def _apply_offsets_ffi(sec, ts1, ts2):
     """Wrapper that calls the Julia version of apply offsets. Passes arguments through and returns the result."""
+    from juliacall import Main as jl
+
     return jl.eval("apply_offsets(sec, ts1, ts2)")
