@@ -2,9 +2,27 @@ from __future__ import annotations
 
 import numpy as np
 
+from sciona.atoms.physics.pulsar_folding.atoms import dm_can_brute_force, spline_bandpass_correction
 from sciona.atoms.physics.pulsar_folding.dm_can import dm_candidate_filter
 from sciona.atoms.physics.pulsar_folding.dm_can_witnesses import witness_dm_candidate_filter
 from sciona.ghost.abstract import AbstractArray
+
+
+def test_dm_can_brute_force_returns_the_input_when_all_rolls_tie() -> None:
+    data = np.array([2.0, 1.0, 3.0], dtype=np.float64)
+
+    result = dm_can_brute_force(data)
+
+    assert np.array_equal(result, data)
+
+
+def test_spline_bandpass_correction_removes_constant_baseline() -> None:
+    data = np.full(4, 5.0, dtype=np.float64)
+
+    result = spline_bandpass_correction(data)
+
+    assert result.shape == data.shape
+    assert np.allclose(result, np.zeros_like(data))
 
 
 def test_dm_candidate_filter_returns_one_score_per_candidate() -> None:

@@ -12,5 +12,10 @@ def test_pulsar_folding_nested_dm_can_reference_key_is_canonical() -> None:
     payload = json.loads(REFERENCES_PATH.read_text())
     atoms = payload["atoms"]
 
-    assert "sciona.atoms.physics.pulsar_folding.dm_can.dm_candidate_filter@sciona/atoms/physics/pulsar_folding/dm_can.py:16" in atoms
-    assert "sciona.atoms.physics.pulsar_folding.dm_candidate_filter@sciona/atoms/physics/pulsar_folding/dm_can.py:16" not in atoms
+    expected_keys = {
+        "sciona.atoms.physics.pulsar_folding.dm_can_brute_force@sciona/atoms/physics/pulsar_folding/atoms.py:19",
+        "sciona.atoms.physics.pulsar_folding.spline_bandpass_correction@sciona/atoms/physics/pulsar_folding/atoms.py:49",
+        "sciona.atoms.physics.pulsar_folding.dm_can.dm_candidate_filter@sciona/atoms/physics/pulsar_folding/dm_can.py:16",
+    }
+
+    assert set(atoms) == expected_keys

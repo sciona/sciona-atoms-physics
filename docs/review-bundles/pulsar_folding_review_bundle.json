@@ -14,15 +14,15 @@
   "bundle_scope": "provider_owned_review_batch",
   "bundle_version": "1.0",
   "conditional_rows": 0,
-  "covered_rows": 1,
+  "covered_rows": 3,
   "developer_semantic_verdict": "aligned_to_registered_atoms",
   "family": "sciona.atoms.physics.pulsar_folding",
   "limitations": [
     "Evidence is limited to local wrapper-source review, witness alignment, reference attribution, import smoke, and direct behavior checks.",
-    "This bundle covers only the unpublished remainder atom in the family."
+    "This bundle covers the unpublished remainder atoms in the family."
   ],
   "provider_repo": "sciona-atoms-physics",
-  "ready_rows": 1,
+  "ready_rows": 3,
   "required_actions": [],
   "review_record_path": "docs/review-records/pulsar_folding.md",
   "review_status": "reviewed",
@@ -60,6 +60,78 @@
       "review_record_path": "docs/review-records/pulsar_folding.md",
       "review_status": "reviewed",
       "row_id": "pulsar_folding/dm_can/dm_candidate_filter",
+      "semantic_verdict": "supported",
+      "trust_readiness": "ready"
+    },
+    {
+      "atom_keys": [
+        "sciona.atoms.physics.pulsar_folding.dm_can_brute_force"
+      ],
+      "authoritative_sources": [
+        {
+          "confidence": "medium",
+          "notes": "Broad pulsar-search background already attached in local references.",
+          "ref_id": "lorimer2005pulsar"
+        },
+        {
+          "confidence": "high",
+          "notes": "Upstream implementation is mapped to the vendored Pulsar_Folding repository.",
+          "ref_id": "repo_pulsar_folding"
+        }
+      ],
+      "developer_semantic_verdict": "aligned_to_registered_atoms",
+      "evidence_files": [
+        "pulsar_folding/atoms.py",
+        "pulsar_folding/cdg.json",
+        "pulsar_folding/witnesses.py",
+        "pulsar_folding/matches.json",
+        "pulsar_folding/references.json",
+        "pulsar_folding/uncertainty.json"
+      ],
+      "limitations": [
+        "The wrapper returns the best rolled profile rather than a reduced candidate set."
+      ],
+      "module": "sciona.atoms.physics.pulsar_folding.atoms",
+      "required_actions": [],
+      "review_record_path": "docs/review-records/pulsar_folding.md",
+      "review_status": "reviewed",
+      "row_id": "pulsar_folding/dm_can_brute_force",
+      "semantic_verdict": "supported",
+      "trust_readiness": "ready"
+    },
+    {
+      "atom_keys": [
+        "sciona.atoms.physics.pulsar_folding.spline_bandpass_correction"
+      ],
+      "authoritative_sources": [
+        {
+          "confidence": "medium",
+          "notes": "Broad pulsar-search background already attached in local references.",
+          "ref_id": "lorimer2005pulsar"
+        },
+        {
+          "confidence": "high",
+          "notes": "Upstream implementation is mapped to the vendored Pulsar_Folding repository.",
+          "ref_id": "repo_pulsar_folding"
+        }
+      ],
+      "developer_semantic_verdict": "aligned_to_registered_atoms",
+      "evidence_files": [
+        "pulsar_folding/atoms.py",
+        "pulsar_folding/cdg.json",
+        "pulsar_folding/witnesses.py",
+        "pulsar_folding/matches.json",
+        "pulsar_folding/references.json",
+        "pulsar_folding/uncertainty.json"
+      ],
+      "limitations": [
+        "The wrapper subtracts a smoothed baseline from the input array."
+      ],
+      "module": "sciona.atoms.physics.pulsar_folding.atoms",
+      "required_actions": [],
+      "review_record_path": "docs/review-records/pulsar_folding.md",
+      "review_status": "reviewed",
+      "row_id": "pulsar_folding/spline_bandpass_correction",
       "semantic_verdict": "supported",
       "trust_readiness": "ready"
     }
