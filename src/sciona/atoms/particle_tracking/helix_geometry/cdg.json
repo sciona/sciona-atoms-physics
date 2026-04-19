@@ -1,0 +1,146 @@
+{
+  "nodes": [
+    {
+      "node_id": "helix_geometry_root",
+      "name": "helix_geometry",
+      "description": "Helix fitting and querying primitives for charged particle track reconstruction in uniform magnetic fields",
+      "status": "decomposed",
+      "children": [
+        "circle_from_three_points",
+        "helix_pitch_from_two_points",
+        "helix_pitch_least_squares",
+        "helix_direction_from_two_points",
+        "helix_nearest_point_distance"
+      ],
+      "depth": 0
+    },
+    {
+      "node_id": "circle_from_three_points",
+      "name": "circle_from_three_points",
+      "description": "Fit circle through three x,y-plane points with degenerate-case handling",
+      "concept_type": "custom",
+      "status": "atomic",
+      "type_signature": "(x1: NDArray, y1: NDArray, x2: NDArray, y2: NDArray, x3: NDArray, y3: NDArray, large_radius: float) -> tuple[NDArray, NDArray, NDArray]",
+      "depth": 1,
+      "inputs": [
+        {"name": "x1", "type_desc": "NDArray[np.float64]", "required": true},
+        {"name": "y1", "type_desc": "NDArray[np.float64]", "required": true},
+        {"name": "x2", "type_desc": "NDArray[np.float64]", "required": true},
+        {"name": "y2", "type_desc": "NDArray[np.float64]", "required": true},
+        {"name": "x3", "type_desc": "NDArray[np.float64]", "required": true},
+        {"name": "y3", "type_desc": "NDArray[np.float64]", "required": true},
+        {"name": "large_radius", "type_desc": "float", "required": false}
+      ],
+      "outputs": [
+        {"name": "result", "type_desc": "tuple[NDArray[np.float64], NDArray[np.float64], NDArray[np.float64]]"}
+      ]
+    },
+    {
+      "node_id": "helix_pitch_from_two_points",
+      "name": "helix_pitch_from_two_points",
+      "description": "Compute helix pitch from two points and known circle center",
+      "concept_type": "custom",
+      "status": "atomic",
+      "type_signature": "(x1: NDArray, y1: NDArray, z1: NDArray, x2: NDArray, y2: NDArray, z2: NDArray, hel_xm: NDArray, hel_ym: NDArray, zero_pitch: float) -> tuple[NDArray, NDArray, NDArray]",
+      "depth": 1,
+      "inputs": [
+        {"name": "x1", "type_desc": "NDArray[np.float64]", "required": true},
+        {"name": "y1", "type_desc": "NDArray[np.float64]", "required": true},
+        {"name": "z1", "type_desc": "NDArray[np.float64]", "required": true},
+        {"name": "x2", "type_desc": "NDArray[np.float64]", "required": true},
+        {"name": "y2", "type_desc": "NDArray[np.float64]", "required": true},
+        {"name": "z2", "type_desc": "NDArray[np.float64]", "required": true},
+        {"name": "hel_xm", "type_desc": "NDArray[np.float64]", "required": true},
+        {"name": "hel_ym", "type_desc": "NDArray[np.float64]", "required": true},
+        {"name": "zero_pitch", "type_desc": "float", "required": false}
+      ],
+      "outputs": [
+        {"name": "result", "type_desc": "tuple[NDArray[np.float64], NDArray[np.float64], NDArray[np.float64]]"}
+      ]
+    },
+    {
+      "node_id": "helix_pitch_least_squares",
+      "name": "helix_pitch_least_squares",
+      "description": "Optimal helix pitch from three points via least-squares z-vs-phi regression with residual loss",
+      "concept_type": "custom",
+      "status": "atomic",
+      "type_signature": "(x1..z3: NDArray, hel_xm: NDArray, hel_ym: NDArray, zero_pitch: float) -> tuple[NDArray, NDArray, NDArray, NDArray]",
+      "depth": 1,
+      "inputs": [
+        {"name": "x1", "type_desc": "NDArray[np.float64]", "required": true},
+        {"name": "y1", "type_desc": "NDArray[np.float64]", "required": true},
+        {"name": "z1", "type_desc": "NDArray[np.float64]", "required": true},
+        {"name": "x2", "type_desc": "NDArray[np.float64]", "required": true},
+        {"name": "y2", "type_desc": "NDArray[np.float64]", "required": true},
+        {"name": "z2", "type_desc": "NDArray[np.float64]", "required": true},
+        {"name": "x3", "type_desc": "NDArray[np.float64]", "required": true},
+        {"name": "y3", "type_desc": "NDArray[np.float64]", "required": true},
+        {"name": "z3", "type_desc": "NDArray[np.float64]", "required": true},
+        {"name": "hel_xm", "type_desc": "NDArray[np.float64]", "required": true},
+        {"name": "hel_ym", "type_desc": "NDArray[np.float64]", "required": true},
+        {"name": "zero_pitch", "type_desc": "float", "required": false}
+      ],
+      "outputs": [
+        {"name": "result", "type_desc": "tuple[NDArray[np.float64], NDArray[np.float64], NDArray[np.float64], NDArray[np.float64]]"}
+      ]
+    },
+    {
+      "node_id": "helix_direction_from_two_points",
+      "name": "helix_direction_from_two_points",
+      "description": "Determine z-direction of helix motion, handling same-z edge case via rotation sense",
+      "concept_type": "custom",
+      "status": "atomic",
+      "type_signature": "(hel_xm: NDArray, hel_ym: NDArray, hel_pitch: NDArray, x1..z2: NDArray) -> NDArray",
+      "depth": 1,
+      "inputs": [
+        {"name": "hel_xm", "type_desc": "NDArray[np.float64]", "required": true},
+        {"name": "hel_ym", "type_desc": "NDArray[np.float64]", "required": true},
+        {"name": "hel_pitch", "type_desc": "NDArray[np.float64]", "required": true},
+        {"name": "x1", "type_desc": "NDArray[np.float64]", "required": true},
+        {"name": "y1", "type_desc": "NDArray[np.float64]", "required": true},
+        {"name": "z1", "type_desc": "NDArray[np.float64]", "required": true},
+        {"name": "x2", "type_desc": "NDArray[np.float64]", "required": true},
+        {"name": "y2", "type_desc": "NDArray[np.float64]", "required": true},
+        {"name": "z2", "type_desc": "NDArray[np.float64]", "required": true}
+      ],
+      "outputs": [
+        {"name": "result", "type_desc": "NDArray[np.float64]"}
+      ]
+    },
+    {
+      "node_id": "helix_nearest_point_distance",
+      "name": "helix_nearest_point_distance",
+      "description": "Find nearest point on helix to reference point via Kepler-equation Newton's method",
+      "concept_type": "custom",
+      "status": "atomic",
+      "type_signature": "(x0..z0: NDArray, hel_xm..hel_pitch: NDArray, x..z: NDArray, iterations: int) -> tuple[NDArray, NDArray, NDArray, NDArray]",
+      "depth": 1,
+      "inputs": [
+        {"name": "x0", "type_desc": "NDArray[np.float64]", "required": true},
+        {"name": "y0", "type_desc": "NDArray[np.float64]", "required": true},
+        {"name": "z0", "type_desc": "NDArray[np.float64]", "required": true},
+        {"name": "hel_xm", "type_desc": "NDArray[np.float64]", "required": true},
+        {"name": "hel_ym", "type_desc": "NDArray[np.float64]", "required": true},
+        {"name": "hel_r", "type_desc": "NDArray[np.float64]", "required": true},
+        {"name": "hel_pitch", "type_desc": "NDArray[np.float64]", "required": true},
+        {"name": "x", "type_desc": "NDArray[np.float64]", "required": true},
+        {"name": "y", "type_desc": "NDArray[np.float64]", "required": true},
+        {"name": "z", "type_desc": "NDArray[np.float64]", "required": true},
+        {"name": "iterations", "type_desc": "int", "required": false}
+      ],
+      "outputs": [
+        {"name": "result", "type_desc": "tuple[NDArray[np.float64], NDArray[np.float64], NDArray[np.float64], NDArray[np.float64]]"}
+      ]
+    }
+  ],
+  "edges": [
+    {"source_id": "circle_from_three_points", "target_id": "helix_pitch_from_two_points", "edge_type": "data_dependency"},
+    {"source_id": "circle_from_three_points", "target_id": "helix_pitch_least_squares", "edge_type": "data_dependency"}
+  ],
+  "metadata": {
+    "source": "agent_ingestion",
+    "source_repo": "https://github.com/edwinst/trackml_solution",
+    "source_license": "BSD-2-Clause",
+    "competition": "TrackML Particle Tracking Challenge (5th place)"
+  }
+}

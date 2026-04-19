@@ -1,0 +1,237 @@
+{
+  "schema_version": "1.0",
+  "references": {
+    "astroflow2025": {
+      "ref_id": "astroflow2025",
+      "type": "paper",
+      "title": "ASTROFLOW: A Real-Time End-to-End Pipeline for Radio Single-Pulse Searches",
+      "authors": [],
+      "year": 2025,
+      "venue": "arXiv",
+      "match_metadata": {
+        "similarity_score": null,
+        "match_type": "manual",
+        "matched_nodes": [],
+        "confidence": "high",
+        "notes": "Citation requested by the upstream AstroFlow repository."
+      },
+      "url": "https://arxiv.org/abs/2511.02328"
+    },
+    "huchra1982fof": {
+      "ref_id": "huchra1982fof",
+      "type": "paper",
+      "title": "Groups of galaxies. I. Nearby groups",
+      "authors": [
+        "John P. Huchra",
+        "Margaret J. Geller"
+      ],
+      "year": 1982,
+      "venue": "The Astrophysical Journal",
+      "match_metadata": {
+        "similarity_score": null,
+        "match_type": "manual",
+        "matched_nodes": [],
+        "confidence": "high",
+        "notes": "Canonical friends-of-friends clustering reference."
+      },
+      "doi": "10.1086/159999",
+      "url": "https://doi.org/10.1086/159999"
+    },
+    "lorimer2005pulsar": {
+      "ref_id": "lorimer2005pulsar",
+      "type": "book",
+      "title": "Handbook of Pulsar Astronomy",
+      "authors": [
+        "Duncan R. Lorimer",
+        "Michael Kramer"
+      ],
+      "year": 2005,
+      "venue": "Cambridge University Press",
+      "match_metadata": {
+        "similarity_score": null,
+        "match_type": "manual",
+        "matched_nodes": [],
+        "confidence": "high",
+        "notes": "Broad reference for pulsar search, dedispersion, folding, and SNR calculations."
+      },
+      "url": "https://www.cambridge.org/core/books/handbook-of-pulsar-astronomy/2226D0FA66B5D5A6DD7E830A164AD10D"
+    },
+    "moleculardocking2025": {
+      "ref_id": "moleculardocking2025",
+      "type": "paper",
+      "title": "A Scalable Heuristic for Molecular Docking on Neutral-Atom Quantum Processors",
+      "authors": [
+        "Mathieu Garrigues",
+        "Victor Onofre",
+        "Wesley Coelho",
+        "S. Acheche"
+      ],
+      "year": 2025,
+      "venue": "arXiv",
+      "match_metadata": {
+        "similarity_score": null,
+        "match_type": "manual",
+        "matched_nodes": [],
+        "confidence": "high",
+        "notes": "Primary paper cited by the upstream Molecular-Docking repository."
+      },
+      "url": "https://arxiv.org/abs/2508.18147"
+    },
+    "repo_astroflow": {
+      "ref_id": "repo_astroflow",
+      "type": "repository",
+      "title": "astroflow",
+      "authors": [],
+      "year": null,
+      "venue": "GitHub",
+      "url": "https://github.com/lintian233/astroflow",
+      "match_metadata": {
+        "similarity_score": null,
+        "match_type": "manual",
+        "matched_nodes": [],
+        "confidence": "high",
+        "notes": "Repository citation for the upstream implementation used by this atom."
+      }
+    },
+    "repo_jfof": {
+      "ref_id": "repo_jfof",
+      "type": "repository",
+      "title": "jFOF",
+      "authors": [],
+      "year": null,
+      "venue": "GitHub",
+      "url": "https://github.com/bhorowitz/jFOF",
+      "match_metadata": {
+        "similarity_score": null,
+        "match_type": "manual",
+        "matched_nodes": [],
+        "confidence": "high",
+        "notes": "Repository citation for the upstream implementation used by this atom."
+      }
+    },
+    "repo_pulsar_folding": {
+      "ref_id": "repo_pulsar_folding",
+      "type": "repository",
+      "title": "Pulsar_Folding",
+      "authors": [],
+      "year": null,
+      "venue": "GitHub",
+      "url": "https://github.com/PetchMa/Pulsar_Folding",
+      "match_metadata": {
+        "similarity_score": null,
+        "match_type": "manual",
+        "matched_nodes": [],
+        "confidence": "high",
+        "notes": "Repository citation for the upstream implementation used by this atom."
+      }
+    },
+    "repo_skyfield": {
+      "ref_id": "repo_skyfield",
+      "type": "repository",
+      "title": "skyfield",
+      "authors": [],
+      "year": null,
+      "venue": "GitHub",
+      "url": "https://github.com/skyfielders/python-skyfield",
+      "match_metadata": {
+        "similarity_score": null,
+        "match_type": "manual",
+        "matched_nodes": [],
+        "confidence": "high",
+        "notes": "Repository citation for the upstream implementation used by this atom."
+      }
+    },
+    "repo_tempo_jl": {
+      "ref_id": "repo_tempo_jl",
+      "type": "repository",
+      "title": "Tempo.jl",
+      "authors": [],
+      "year": null,
+      "venue": "GitHub",
+      "url": "https://github.com/JuliaSpaceMissionDesign/Tempo.jl",
+      "match_metadata": {
+        "similarity_score": null,
+        "match_type": "manual",
+        "matched_nodes": [],
+        "confidence": "high",
+        "notes": "Repository citation for the upstream implementation used by this atom."
+      }
+    },
+    "skyfield2019ascl": {
+      "ref_id": "skyfield2019ascl",
+      "type": "standard",
+      "title": "Skyfield: Generate high precision research-grade positions for stars, planets, moons, and Earth satellites",
+      "authors": [
+        "Brandon Rhodes"
+      ],
+      "year": 2019,
+      "venue": "Astrophysics Source Code Library",
+      "match_metadata": {
+        "similarity_score": null,
+        "match_type": "manual",
+        "matched_nodes": [],
+        "confidence": "high",
+        "notes": "Preferred Skyfield citation from upstream CITATION.cff."
+      },
+      "url": "https://ui.adsabs.harvard.edu/abs/2019ascl.soft07024R"
+    },
+    "urban2013almanac": {
+      "ref_id": "urban2013almanac",
+      "type": "book",
+      "title": "Explanatory Supplement to the Astronomical Almanac",
+      "authors": [
+        "Sean E. Urban",
+        "P. Kenneth Seidelmann"
+      ],
+      "year": 2013,
+      "venue": "University Science Books",
+      "match_metadata": {
+        "similarity_score": null,
+        "match_type": "manual",
+        "matched_nodes": [],
+        "confidence": "high",
+        "notes": "Authoritative broad reference for astronomical time scales, Julian dates, and time conversions."
+      },
+      "url": "https://books.google.com/books?id=XCjjuwm3SXcC"
+    },
+    "steiner2018trackml": {
+      "ref_id": "steiner2018trackml",
+      "type": "repository",
+      "title": "TrackML Particle Tracking Challenge Solution (5th place)",
+      "authors": [
+        "Edwin Steiner"
+      ],
+      "year": 2018,
+      "venue": "GitHub",
+      "url": "https://github.com/edwinst/trackml_solution",
+      "match_metadata": {
+        "similarity_score": null,
+        "match_type": "manual",
+        "matched_nodes": [],
+        "confidence": "high",
+        "notes": "BSD-2-Clause source repository for helix geometry and track matching code."
+      }
+    },
+    "amrouche2019trackml": {
+      "ref_id": "amrouche2019trackml",
+      "type": "paper",
+      "title": "The Tracking Machine Learning challenge: Accuracy phase",
+      "authors": [
+        "Sabrina Amrouche",
+        "Laurent Basara",
+        "Paolo Calafiura",
+        "et al."
+      ],
+      "year": 2019,
+      "venue": "Springer",
+      "doi": "10.1007/978-3-030-29135-8_9",
+      "match_metadata": {
+        "similarity_score": null,
+        "match_type": "manual",
+        "matched_nodes": [],
+        "confidence": "high",
+        "notes": "Competition description and evaluation methodology."
+      }
+    }
+  }
+}

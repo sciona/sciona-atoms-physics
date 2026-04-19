@@ -1,0 +1,100 @@
+{
+  "schema_version": "1.1",
+  "atoms": {
+    "sciona.atoms.particle_tracking.helix_geometry.circle_from_three_points@sciona/atoms/particle_tracking/helix_geometry/atoms.py:42": {
+      "references": [
+        {
+          "ref_id": "steiner2018trackml",
+          "match_metadata": {
+            "similarity_score": null,
+            "match_type": "manual",
+            "matched_nodes": [],
+            "confidence": "high",
+            "notes": "Upstream source: geometry.py:circleFromThreePoints(). Circumscribed circle fit with degenerate-case handling."
+          }
+        },
+        {
+          "ref_id": "amrouche2019trackml",
+          "match_metadata": {
+            "similarity_score": null,
+            "match_type": "manual",
+            "matched_nodes": [],
+            "confidence": "high",
+            "notes": "Competition context for the helix fitting approach."
+          }
+        }
+      ],
+      "auto_attribution_runs": []
+    },
+    "sciona.atoms.particle_tracking.helix_geometry.helix_pitch_from_two_points@sciona/atoms/particle_tracking/helix_geometry/atoms.py:108": {
+      "references": [
+        {
+          "ref_id": "steiner2018trackml",
+          "match_metadata": {
+            "similarity_score": null,
+            "match_type": "manual",
+            "matched_nodes": [],
+            "confidence": "high",
+            "notes": "Upstream source: geometry.py:helixPitchFromTwoPoints(). Phase-angle pitch estimation with zero-pitch regulation."
+          }
+        }
+      ],
+      "auto_attribution_runs": []
+    },
+    "sciona.atoms.particle_tracking.helix_geometry.helix_pitch_least_squares@sciona/atoms/particle_tracking/helix_geometry/atoms.py:153": {
+      "references": [
+        {
+          "ref_id": "steiner2018trackml",
+          "match_metadata": {
+            "similarity_score": null,
+            "match_type": "manual",
+            "matched_nodes": [],
+            "confidence": "high",
+            "notes": "Upstream source: geometry.py:helixPitchLeastSquares(). Least-squares z-vs-phi regression with phase unwrapping and residual loss."
+          }
+        }
+      ],
+      "auto_attribution_runs": []
+    },
+    "sciona.atoms.particle_tracking.helix_geometry.helix_direction_from_two_points@sciona/atoms/particle_tracking/helix_geometry/atoms.py:232": {
+      "references": [
+        {
+          "ref_id": "steiner2018trackml",
+          "match_metadata": {
+            "similarity_score": null,
+            "match_type": "manual",
+            "matched_nodes": [],
+            "confidence": "high",
+            "notes": "Upstream source: geometry.py:helixDirectionFromTwoPoints(). Direction inference via rotation sense when dz=0."
+          }
+        }
+      ],
+      "auto_attribution_runs": []
+    },
+    "sciona.atoms.particle_tracking.helix_geometry.helix_nearest_point_distance@sciona/atoms/particle_tracking/helix_geometry/atoms.py:270": {
+      "references": [
+        {
+          "ref_id": "steiner2018trackml",
+          "match_metadata": {
+            "similarity_score": null,
+            "match_type": "manual",
+            "matched_nodes": [],
+            "confidence": "high",
+            "notes": "Upstream source: geometry.py:helixNearestPointDistance(). Kepler-equation reduction for helix-point distance via Newton's method."
+          }
+        },
+        {
+          "ref_id": "amrouche2019trackml",
+          "match_metadata": {
+            "similarity_score": null,
+            "match_type": "manual",
+            "matched_nodes": [],
+            "confidence": "high",
+            "notes": "Competition context. The Kepler-equation insight connects helix geometry to orbital mechanics."
+          }
+        }
+      ],
+      "auto_attribution_runs": []
+    }
+  }
+}
