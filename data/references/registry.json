@@ -1,6 +1,27 @@
 {
   "schema_version": "1.0",
   "references": {
+    "amrouche2019trackml": {
+      "ref_id": "amrouche2019trackml",
+      "type": "paper",
+      "title": "The Tracking Machine Learning challenge: Accuracy phase",
+      "authors": [
+        "Sabrina Amrouche",
+        "Laurent Basara",
+        "Paolo Calafiura",
+        "et al."
+      ],
+      "year": 2019,
+      "venue": "Springer",
+      "doi": "10.1007/978-3-030-29135-8_9",
+      "match_metadata": {
+        "similarity_score": null,
+        "match_type": "manual",
+        "matched_nodes": [],
+        "confidence": "high",
+        "notes": "Competition description and evaluation methodology."
+      }
+    },
     "astroflow2025": {
       "ref_id": "astroflow2025",
       "type": "paper",
@@ -175,25 +196,6 @@
       },
       "url": "https://ui.adsabs.harvard.edu/abs/2019ascl.soft07024R"
     },
-    "urban2013almanac": {
-      "ref_id": "urban2013almanac",
-      "type": "book",
-      "title": "Explanatory Supplement to the Astronomical Almanac",
-      "authors": [
-        "Sean E. Urban",
-        "P. Kenneth Seidelmann"
-      ],
-      "year": 2013,
-      "venue": "University Science Books",
-      "match_metadata": {
-        "similarity_score": null,
-        "match_type": "manual",
-        "matched_nodes": [],
-        "confidence": "high",
-        "notes": "Authoritative broad reference for astronomical time scales, Julian dates, and time conversions."
-      },
-      "url": "https://books.google.com/books?id=XCjjuwm3SXcC"
-    },
     "steiner2018trackml": {
       "ref_id": "steiner2018trackml",
       "type": "repository",
@@ -212,26 +214,24 @@
         "notes": "BSD-2-Clause source repository for helix geometry and track matching code."
       }
     },
-    "amrouche2019trackml": {
-      "ref_id": "amrouche2019trackml",
-      "type": "paper",
-      "title": "The Tracking Machine Learning challenge: Accuracy phase",
+    "urban2013almanac": {
+      "ref_id": "urban2013almanac",
+      "type": "book",
+      "title": "Explanatory Supplement to the Astronomical Almanac",
       "authors": [
-        "Sabrina Amrouche",
-        "Laurent Basara",
-        "Paolo Calafiura",
-        "et al."
+        "Sean E. Urban",
+        "P. Kenneth Seidelmann"
       ],
-      "year": 2019,
-      "venue": "Springer",
-      "doi": "10.1007/978-3-030-29135-8_9",
+      "year": 2013,
+      "venue": "University Science Books",
       "match_metadata": {
         "similarity_score": null,
         "match_type": "manual",
         "matched_nodes": [],
         "confidence": "high",
-        "notes": "Competition description and evaluation methodology."
-      }
+        "notes": "Authoritative broad reference for astronomical time scales, Julian dates, and time conversions."
+      },
+      "url": "https://books.google.com/books?id=XCjjuwm3SXcC"
     }
   }
 }
