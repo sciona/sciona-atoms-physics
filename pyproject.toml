@@ -11,6 +11,7 @@ requires-python = ">=3.11"
 dependencies = [
   "icontract",
   "juliacall>=0.9",
+  "networkx",
   "numpy",
   "sciona",
 ]

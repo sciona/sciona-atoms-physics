@@ -10,7 +10,7 @@
             "match_type": "manual",
             "matched_nodes": [],
             "confidence": "high",
-            "notes": "Pasqal docking atoms derive from the Molecular-Docking workflow."
+            "notes": "Pasqal docking workflow attribution for the local deterministic lattice-edge graph transformation wrapper."
           }
         }
       ],
@@ -40,7 +40,7 @@
             "match_type": "manual",
             "matched_nodes": [],
             "confidence": "high",
-            "notes": "Pasqal docking atoms derive from the Molecular-Docking workflow."
+            "notes": "Pasqal docking workflow attribution for the local deterministic sorted-node subgraph mapping wrapper."
           }
         }
       ],

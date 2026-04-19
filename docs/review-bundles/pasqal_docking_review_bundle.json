@@ -1,0 +1,86 @@
+{
+  "authoritative_sources": [
+    {
+      "confidence": "medium",
+      "notes": "Pasqal molecular-docking workflow attribution already attached in local references.",
+      "ref_id": "moleculardocking2025"
+    }
+  ],
+  "bundle_scope": "provider_owned_review_batch",
+  "bundle_version": "1.0",
+  "conditional_rows": 0,
+  "covered_rows": 2,
+  "developer_semantic_verdict": "aligned_to_registered_atoms",
+  "family": "sciona.atoms.physics.pasqal.docking",
+  "limitations": [
+    "Evidence is limited to local wrapper-source review, witness alignment, reference attribution, import smoke, and direct behavior checks.",
+    "This bundle covers only the deterministic graph mapping helpers; it does not review quantum_mwis_solver because that implementation is labeled as a placeholder heuristic."
+  ],
+  "provider_repo": "sciona-atoms-physics",
+  "ready_rows": 2,
+  "required_actions": [],
+  "review_record_path": "docs/review-records/pasqal_docking.md",
+  "review_status": "reviewed",
+  "rows": [
+    {
+      "atom_keys": [
+        "sciona.atoms.physics.pasqal.docking.graph_transformer"
+      ],
+      "authoritative_sources": [
+        {
+          "confidence": "medium",
+          "notes": "Pasqal molecular-docking workflow attribution already attached in local references.",
+          "ref_id": "moleculardocking2025"
+        }
+      ],
+      "developer_semantic_verdict": "aligned_to_registered_atoms",
+      "evidence_files": [
+        "pasqal/docking.py",
+        "pasqal/docking_cdg.json",
+        "pasqal/references.json",
+        "pasqal/docking_witnesses.py"
+      ],
+      "limitations": [
+        "The wrapper deterministically projects mapped molecular edges onto a lattice graph and preserves only edges allowed by the supplied lattice."
+      ],
+      "module": "sciona.atoms.physics.pasqal.docking",
+      "required_actions": [],
+      "review_record_path": "docs/review-records/pasqal_docking.md",
+      "review_status": "reviewed",
+      "row_id": "pasqal/docking/graph_transformer",
+      "semantic_verdict": "supported",
+      "trust_readiness": "ready"
+    },
+    {
+      "atom_keys": [
+        "sciona.atoms.physics.pasqal.docking.sub_graph_embedder"
+      ],
+      "authoritative_sources": [
+        {
+          "confidence": "medium",
+          "notes": "Pasqal molecular-docking workflow attribution already attached in local references.",
+          "ref_id": "moleculardocking2025"
+        }
+      ],
+      "developer_semantic_verdict": "aligned_to_registered_atoms",
+      "evidence_files": [
+        "pasqal/docking.py",
+        "pasqal/docking_cdg.json",
+        "pasqal/references.json",
+        "pasqal/docking_witnesses.py"
+      ],
+      "limitations": [
+        "The wrapper publishes deterministic singleton node-to-lattice mappings for the first sorted graph nodes, capped by graph size."
+      ],
+      "module": "sciona.atoms.physics.pasqal.docking",
+      "required_actions": [],
+      "review_record_path": "docs/review-records/pasqal_docking.md",
+      "review_status": "reviewed",
+      "row_id": "pasqal/docking/sub_graph_embedder",
+      "semantic_verdict": "supported",
+      "trust_readiness": "ready"
+    }
+  ],
+  "semantic_verdict": "supported",
+  "trust_readiness": "ready"
+}
