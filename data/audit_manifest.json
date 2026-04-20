@@ -1,7 +1,7 @@
 {
   "schema_version": "1.1",
   "metadata": {
-    "generated_at": "2026-04-19T17:40:27.167312+00:00",
+    "generated_at": "2026-04-20T13:50:37.225250+00:00",
     "generator": "scripts/apply_audit_review_bundles.py",
     "phase": "phase_1_review_bundle_merge"
   },
@@ -23217,6 +23217,103 @@
       ],
       "module": "sciona.atoms.physics.pasqal.docking",
       "row_id": "pasqal/docking/graph_transformer"
+    },
+    {
+      "atom_name": "sciona.atoms.physics.pasqal.docking.quantum_mwis_solver",
+      "atom_key": "sciona.atoms.physics.pasqal.docking.quantum_mwis_solver",
+      "atom_id": "sciona.atoms.physics.pasqal.docking.quantum_mwis_solver",
+      "module_import_path": "sciona.atoms.physics.pasqal.docking",
+      "module_path": "/Users/conrad/personal/sciona-atoms-physics/src/sciona/atoms/physics/pasqal/docking.py",
+      "module_family": "pasqal",
+      "domain_family": "physics.pasqal",
+      "wrapper_symbol": "quantum_mwis_solver",
+      "argument_names": [
+        "graph",
+        "lattice_id_coord_dic",
+        "mis_sample_quantity",
+        "state"
+      ],
+      "argument_details": [
+        {
+          "name": "graph",
+          "annotation": "'nx.Graph'",
+          "required": true,
+          "kind": "positional_or_keyword"
+        },
+        {
+          "name": "lattice_id_coord_dic",
+          "annotation": "dict[int, tuple[float, float]]",
+          "required": true,
+          "kind": "positional_or_keyword"
+        },
+        {
+          "name": "mis_sample_quantity",
+          "annotation": "int",
+          "required": true,
+          "kind": "positional_or_keyword"
+        },
+        {
+          "name": "state",
+          "annotation": "MolecularDockingState",
+          "required": true,
+          "kind": "positional_or_keyword"
+        }
+      ],
+      "uses_varargs": false,
+      "uses_kwargs": false,
+      "return_annotation": "tuple[list[set[int]], MolecularDockingState]",
+      "docstring_summary": "Sample MWIS candidates with the source Pulser neutral-atom adiabatic solver.",
+      "has_docstring": true,
+      "authoritative_sources": [
+        {
+          "confidence": "medium",
+          "notes": "Pasqal molecular-docking quantum MWIS path delegates to the Pulser neutral-atom sequence and state-vector sampling helper validated in optional backend tests.",
+          "ref_id": "moleculardocking2025"
+        }
+      ],
+      "source_kind": "hand_written",
+      "review_status": "approved",
+      "review_priority": "review_now",
+      "review_semantic_verdict": "pass",
+      "review_developer_semantics_verdict": "pass_with_limits",
+      "trust_readiness": "reviewed_with_limits",
+      "review_required_actions": [],
+      "review_limitations": [
+        "Requires the documented Pulser/emulator optional dependency group for runtime quantum backend execution."
+      ],
+      "trust_blockers": [],
+      "structural_status": "pass",
+      "semantic_status": "pass",
+      "runtime_status": "pass",
+      "developer_semantics_status": "pass",
+      "overall_verdict": "acceptable_with_limits",
+      "risk_tier": "low",
+      "risk_score": 0,
+      "risk_dimensions": {},
+      "risk_reasons": [],
+      "acceptability_score": 70,
+      "acceptability_band": "acceptable_with_limits_candidate",
+      "parity_coverage_level": "unknown",
+      "parity_test_status": "unknown",
+      "parity_fixture_count": 0,
+      "parity_case_count": 0,
+      "required_actions": [],
+      "blocking_findings": [],
+      "review_record_path": "docs/review-records/pasqal_docking.md",
+      "atom_keys": [
+        "sciona.atoms.physics.pasqal.docking.quantum_mwis_solver"
+      ],
+      "evidence_files": [
+        "pasqal/docking.py",
+        "pasqal/_pulser_optional.py",
+        "pasqal/docking_cdg.json",
+        "pasqal/references.json",
+        "pasqal/docking_witnesses.py",
+        "docs/quantum_optional_dependencies.md",
+        "tests/test_pasqal_quantum_optional.py"
+      ],
+      "module": "sciona.atoms.physics.pasqal.docking",
+      "row_id": "pasqal/docking/quantum_mwis_solver"
     },
     {
       "atom_name": "sciona.atoms.physics.pasqal.docking.sub_graph_embedder",

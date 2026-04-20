@@ -9,15 +9,15 @@
   "bundle_scope": "provider_owned_review_batch",
   "bundle_version": "1.0",
   "conditional_rows": 0,
-  "covered_rows": 2,
-  "developer_semantic_verdict": "aligned_to_registered_atoms",
+  "covered_rows": 3,
+  "developer_semantic_verdict": "aligned_to_registered_atoms_with_optional_quantum_backend",
   "family": "sciona.atoms.physics.pasqal.docking",
   "limitations": [
-    "Evidence is limited to local wrapper-source review, witness alignment, reference attribution, import smoke, and direct behavior checks.",
-    "This bundle covers only the deterministic graph mapping helpers; it does not review quantum_mwis_solver because that implementation is labeled as a placeholder heuristic."
+    "Evidence combines local wrapper review, witness alignment, reference attribution, import smoke, direct behavior checks, and focused Pulser state-vector backend coverage.",
+    "quantum_mwis_solver requires the documented Pulser/emulator optional dependency group at runtime; base imports remain dependency-light."
   ],
   "provider_repo": "sciona-atoms-physics",
-  "ready_rows": 2,
+  "ready_rows": 3,
   "required_actions": [],
   "review_record_path": "docs/review-records/pasqal_docking.md",
   "review_status": "reviewed",
@@ -77,6 +77,38 @@
       "review_record_path": "docs/review-records/pasqal_docking.md",
       "review_status": "reviewed",
       "row_id": "pasqal/docking/sub_graph_embedder",
+      "semantic_verdict": "supported",
+      "trust_readiness": "ready"
+    },
+    {
+      "atom_keys": [
+        "sciona.atoms.physics.pasqal.docking.quantum_mwis_solver"
+      ],
+      "authoritative_sources": [
+        {
+          "confidence": "medium",
+          "notes": "Pasqal molecular-docking quantum MWIS path delegates to the Pulser neutral-atom sequence and state-vector sampling helper validated in optional backend tests.",
+          "ref_id": "moleculardocking2025"
+        }
+      ],
+      "developer_semantic_verdict": "aligned_to_registered_atoms_with_optional_quantum_backend",
+      "evidence_files": [
+        "pasqal/docking.py",
+        "pasqal/_pulser_optional.py",
+        "pasqal/docking_cdg.json",
+        "pasqal/references.json",
+        "pasqal/docking_witnesses.py",
+        "docs/quantum_optional_dependencies.md",
+        "tests/test_pasqal_quantum_optional.py"
+      ],
+      "limitations": [
+        "Requires the documented Pulser/emulator optional dependency group for runtime quantum backend execution."
+      ],
+      "module": "sciona.atoms.physics.pasqal.docking",
+      "required_actions": [],
+      "review_record_path": "docs/review-records/pasqal_docking.md",
+      "review_status": "reviewed",
+      "row_id": "pasqal/docking/quantum_mwis_solver",
       "semantic_verdict": "supported",
       "trust_readiness": "ready"
     }

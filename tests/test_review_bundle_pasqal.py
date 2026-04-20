@@ -26,6 +26,6 @@ def test_pasqal_review_bundle_maps_to_registered_atoms() -> None:
 
     assert reviewed_atom_keys == {
         "sciona.atoms.physics.pasqal.docking.graph_transformer",
+        "sciona.atoms.physics.pasqal.docking.quantum_mwis_solver",
         "sciona.atoms.physics.pasqal.docking.sub_graph_embedder",
     }
-    assert "sciona.atoms.physics.pasqal.docking.quantum_mwis_solver" not in reviewed_atom_keys

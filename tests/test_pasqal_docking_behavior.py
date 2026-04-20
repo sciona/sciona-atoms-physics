@@ -9,6 +9,7 @@ import networkx as nx
 from sciona.atoms.physics.pasqal import (
     MolecularDockingState,
     graph_transformer,
+    quantum_mwis_solver,
     sub_graph_embedder,
 )
 
@@ -17,12 +18,12 @@ REPO_ROOT = Path(__file__).resolve().parents[1]
 REFERENCES_PATH = REPO_ROOT / "src/sciona/atoms/physics/pasqal/references.json"
 
 
-def test_pasqal_package_exports_reviewed_docking_helpers_only() -> None:
+def test_pasqal_package_exports_reviewed_docking_helpers() -> None:
     package = importlib.import_module("sciona.atoms.physics.pasqal")
 
     assert package.graph_transformer is graph_transformer
+    assert package.quantum_mwis_solver is quantum_mwis_solver
     assert package.sub_graph_embedder is sub_graph_embedder
-    assert not hasattr(package, "quantum_mwis_solver")
 
 
 def test_sub_graph_embedder_returns_sorted_singleton_mappings() -> None:
@@ -60,6 +61,7 @@ def test_pasqal_references_cover_reviewed_helpers() -> None:
 
     reviewed_prefixes = {
         "sciona.atoms.physics.pasqal.docking.graph_transformer@",
+        "sciona.atoms.physics.pasqal.docking.quantum_mwis_solver@",
         "sciona.atoms.physics.pasqal.docking.sub_graph_embedder@",
     }
 

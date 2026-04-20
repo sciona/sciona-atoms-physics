@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 
-from typing import TYPE_CHECKING, Any, List, Set
+from typing import TYPE_CHECKING, Any
 
 import icontract
 
@@ -14,6 +14,7 @@ from .docking_witnesses import (
     witness_quantum_mwis_solver,
     witness_sub_graph_embedder,
 )
+from ._pulser_optional import solve_quantum_mwis
 
 if TYPE_CHECKING:
     import networkx as nx
@@ -100,19 +101,8 @@ def quantum_mwis_solver(
     mis_sample_quantity: int,
     state: MolecularDockingState,
 ) -> tuple[list[set[int]], MolecularDockingState]:
-    """Deterministic MWIS heuristic used as a combinatorial optimization placeholder."""
-    ordered_nodes = sorted(graph.nodes(), key=lambda n: (graph.degree[n], n))
-
-    selected: set[int] = set()
-    blocked: set[int] = set()
-    for node in ordered_nodes:
-        if node in blocked:
-            continue
-        selected.add(int(node))
-        blocked.add(node)
-        blocked.update(graph.neighbors(node))
-
-    solutions: List[Set[int]] = [set(selected) for _ in range(mis_sample_quantity)]
+    """Sample MWIS candidates with the source Pulser neutral-atom adiabatic solver."""
+    solutions = solve_quantum_mwis(graph, lattice_id_coord_dic, mis_sample_quantity)
     new_state = state.model_copy(
         update={
             "graph": graph,
