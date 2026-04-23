@@ -5,7 +5,7 @@
       "parent_id": null,
       "name": "sciona.atoms.physics.jFOF.topo",
       "description": "Consolidated module for sciona.atoms.physics.jFOF.topo.",
-      "concept_type": "custom",
+      "concept_type": "analysis",
       "inputs": [],
       "outputs": [],
       "status": "decomposed",
@@ -28,7 +28,7 @@
       "parent_id": "topo_root",
       "name": "topological_loss_computation",
       "description": "Computes a loss measuring how well a grouping algorithm links nearby objects into clusters. Uses model scores, positions, and neighbor lists.",
-      "concept_type": "custom",
+      "concept_type": "analysis",
       "inputs": [
         {
           "name": "key",

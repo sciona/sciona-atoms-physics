@@ -5,7 +5,7 @@
       "parent_id": null,
       "name": "jFOFFamily",
       "description": "Canonical CDG for the vendored jFOF wrapper family.",
-      "concept_type": "custom",
+      "concept_type": "clustering",
       "inputs": [],
       "outputs": [],
       "status": "decomposed",

@@ -5,7 +5,7 @@
       "parent_id": null,
       "name": "Astroflow",
       "description": "Canonical CDG for the dedispersion kernel wrapper.",
-      "concept_type": "custom",
+      "concept_type": "signal_transform",
       "inputs": [],
       "outputs": [],
       "status": "decomposed",

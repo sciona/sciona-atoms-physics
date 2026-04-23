@@ -5,7 +5,7 @@
       "parent_id": null,
       "name": "apply_offsets",
       "description": "Ingested pipeline from apply_offsets",
-      "concept_type": "custom",
+      "concept_type": "arithmetic",
       "inputs": [],
       "outputs": [],
       "status": "decomposed",
@@ -101,7 +101,7 @@
       "parent_id": "apply_offsets_root",
       "name": "Apply Offsets",
       "description": "Apply a sequence of time-scale offsets to a seconds value",
-      "concept_type": "custom",
+      "concept_type": "arithmetic",
       "inputs": [
         {
           "name": "sec",

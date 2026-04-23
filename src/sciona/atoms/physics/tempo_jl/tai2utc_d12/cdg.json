@@ -5,7 +5,7 @@
       "parent_id": null,
       "name": "Tai2Utc",
       "description": "Canonical CDG for the TAI/UTC leap-second conversion family.",
-      "concept_type": "custom",
+      "concept_type": "arithmetic",
       "inputs": [],
       "outputs": [],
       "status": "decomposed",

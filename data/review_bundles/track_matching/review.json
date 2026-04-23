@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0",
+  "bundle_id": "sciona.atoms.review_bundle.particle_tracking.track_matching.v1",
+  "provider_repo": "sciona-atoms-physics",
+  "family_batch": "particle_tracking_track_matching",
+  "review_status": "pending",
+  "atoms": [
+    {
+      "name": "helix_cylinder_intersection",
+      "fqdn": "sciona.atoms.particle_tracking.track_matching.helix_cylinder_intersection",
+      "concept_type": "geometry",
+      "source_file": "src/sciona/atoms/particle_tracking/track_matching/atoms.py",
+      "source_mapping": "geometry.py:CylinderIntersector.intersectHelices()"
+    },
+    {
+      "name": "helix_cap_intersection",
+      "fqdn": "sciona.atoms.particle_tracking.track_matching.helix_cap_intersection",
+      "concept_type": "geometry",
+      "source_file": "src/sciona/atoms/particle_tracking/track_matching/atoms.py",
+      "source_mapping": "geometry.py:CapIntersector.intersectHelices()"
+    },
+    {
+      "name": "bayesian_neighbor_evaluation",
+      "fqdn": "sciona.atoms.particle_tracking.track_matching.bayesian_neighbor_evaluation",
+      "concept_type": "searching",
+      "source_file": "src/sciona/atoms/particle_tracking/track_matching/atoms.py",
+      "source_mapping": "algorithm.py:Algorithm.bayesianNeighborEvaluation()"
+    },
+    {
+      "name": "greedy_track_commit",
+      "fqdn": "sciona.atoms.particle_tracking.track_matching.greedy_track_commit",
+      "concept_type": "greedy",
+      "source_file": "src/sciona/atoms/particle_tracking/track_matching/atoms.py",
+      "source_mapping": "candidates.py:zeroUsedHits()"
+    }
+  ],
+  "source_repo": "https://github.com/edwinst/trackml_solution",
+  "source_license": "BSD-2-Clause",
+  "authoritative_sources": [
+    {"kind": "local_wrapper", "path": "src/sciona/atoms/particle_tracking/track_matching/atoms.py"},
+    {"kind": "local_metadata", "path": "src/sciona/atoms/particle_tracking/track_matching/references.json"},
+    {"kind": "local_metadata", "path": "src/sciona/atoms/particle_tracking/track_matching/cdg.json"},
+    {"kind": "local_test", "path": "tests/test_particle_tracking_track_matching_review_bundle.py"},
+    {"kind": "local_test", "path": "tests/test_particle_tracking_track_matching_behavior.py"}
+  ]
+}

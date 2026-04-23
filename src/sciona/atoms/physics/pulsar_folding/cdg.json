@@ -5,7 +5,7 @@
       "parent_id": null,
       "name": "PulsarFolding",
       "description": "Ingested pipeline from PulsarFolding",
-      "concept_type": "custom",
+      "concept_type": "signal_transform",
       "inputs": [],
       "outputs": [],
       "status": "decomposed",

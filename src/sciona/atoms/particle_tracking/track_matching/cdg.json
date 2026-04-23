@@ -1,0 +1,115 @@
+{
+  "nodes": [
+    {
+      "node_id": "track_matching_root",
+      "name": "track_matching",
+      "description": "Track propagation, neighbor evaluation, and candidate commitment for charged particle track reconstruction",
+      "status": "decomposed",
+      "children": [
+        "helix_cylinder_intersection",
+        "helix_cap_intersection",
+        "bayesian_neighbor_evaluation",
+        "greedy_track_commit"
+      ],
+      "depth": 0
+    },
+    {
+      "node_id": "helix_cylinder_intersection",
+      "name": "helix_cylinder_intersection",
+      "description": "Compute helix-cylinder intersection via r^2 harmonic motion and arccos phase solve",
+      "concept_type": "geometry",
+      "status": "atomic",
+      "type_signature": "(x0..z0: NDArray, hel_xm..hel_pitch: NDArray, sign_uz: NDArray, target_r2sqr: NDArray) -> tuple[NDArray, NDArray, NDArray, NDArray]",
+      "depth": 1,
+      "inputs": [
+        {"name": "x0", "type_desc": "NDArray[np.float64]", "required": true},
+        {"name": "y0", "type_desc": "NDArray[np.float64]", "required": true},
+        {"name": "z0", "type_desc": "NDArray[np.float64]", "required": true},
+        {"name": "hel_xm", "type_desc": "NDArray[np.float64]", "required": true},
+        {"name": "hel_ym", "type_desc": "NDArray[np.float64]", "required": true},
+        {"name": "hel_r", "type_desc": "NDArray[np.float64]", "required": true},
+        {"name": "hel_pitch", "type_desc": "NDArray[np.float64]", "required": true},
+        {"name": "sign_uz", "type_desc": "NDArray[np.float64]", "required": true},
+        {"name": "target_r2sqr", "type_desc": "NDArray[np.float64]", "required": true}
+      ],
+      "outputs": [
+        {"name": "result", "type_desc": "tuple[NDArray[np.float64], NDArray[np.float64], NDArray[np.float64], NDArray[np.float64]]"}
+      ]
+    },
+    {
+      "node_id": "helix_cap_intersection",
+      "name": "helix_cap_intersection",
+      "description": "Compute helix-cap (z-plane) intersection via linear z-phase relationship",
+      "concept_type": "geometry",
+      "status": "atomic",
+      "type_signature": "(x0..z0: NDArray, hel_xm..hel_pitch: NDArray, target_z: NDArray) -> tuple[NDArray, NDArray, NDArray, NDArray]",
+      "depth": 1,
+      "inputs": [
+        {"name": "x0", "type_desc": "NDArray[np.float64]", "required": true},
+        {"name": "y0", "type_desc": "NDArray[np.float64]", "required": true},
+        {"name": "z0", "type_desc": "NDArray[np.float64]", "required": true},
+        {"name": "hel_xm", "type_desc": "NDArray[np.float64]", "required": true},
+        {"name": "hel_ym", "type_desc": "NDArray[np.float64]", "required": true},
+        {"name": "hel_r", "type_desc": "NDArray[np.float64]", "required": true},
+        {"name": "hel_pitch", "type_desc": "NDArray[np.float64]", "required": true},
+        {"name": "target_z", "type_desc": "NDArray[np.float64]", "required": true}
+      ],
+      "outputs": [
+        {"name": "result", "type_desc": "tuple[NDArray[np.float64], NDArray[np.float64], NDArray[np.float64], NDArray[np.float64]]"}
+      ]
+    },
+    {
+      "node_id": "bayesian_neighbor_evaluation",
+      "name": "bayesian_neighbor_evaluation",
+      "description": "Bayesian neighbor quality scoring in error-normalized spherical coordinates",
+      "concept_type": "searching",
+      "status": "atomic",
+      "type_signature": "(d_theta: NDArray, d_phi: NDArray, bg_theta: NDArray, bg_phi: NDArray, e_theta: NDArray, e_phi: NDArray, cut_factor: float, dist_trust: float) -> tuple[NDArray[bool], NDArray[bool]]",
+      "depth": 1,
+      "inputs": [
+        {"name": "d_theta", "type_desc": "NDArray[np.float64]", "required": true},
+        {"name": "d_phi", "type_desc": "NDArray[np.float64]", "required": true},
+        {"name": "bg_theta", "type_desc": "NDArray[np.float64]", "required": true},
+        {"name": "bg_phi", "type_desc": "NDArray[np.float64]", "required": true},
+        {"name": "e_theta", "type_desc": "NDArray[np.float64]", "required": true},
+        {"name": "e_phi", "type_desc": "NDArray[np.float64]", "required": true},
+        {"name": "cut_factor", "type_desc": "float", "required": false},
+        {"name": "dist_trust", "type_desc": "float", "required": false}
+      ],
+      "outputs": [
+        {"name": "result", "type_desc": "tuple[NDArray[np.bool_], NDArray[np.bool_]]"}
+      ]
+    },
+    {
+      "node_id": "greedy_track_commit",
+      "name": "greedy_track_commit",
+      "description": "Greedy sequential track commitment with used-hit deduplication and quality filtering",
+      "concept_type": "greedy",
+      "status": "atomic",
+      "type_signature": "(hit_matrix: NDArray[int64], used: NDArray[bool], min_nhits: int, max_nloss: int, max_loss_fraction: float, max_nrows: int) -> tuple[NDArray[int64], NDArray[bool]]",
+      "depth": 1,
+      "inputs": [
+        {"name": "hit_matrix", "type_desc": "NDArray[np.int64]", "required": true},
+        {"name": "used", "type_desc": "NDArray[np.bool_]", "required": true},
+        {"name": "min_nhits", "type_desc": "int", "required": false},
+        {"name": "max_nloss", "type_desc": "int", "required": false},
+        {"name": "max_loss_fraction", "type_desc": "float", "required": false},
+        {"name": "max_nrows", "type_desc": "int", "required": false}
+      ],
+      "outputs": [
+        {"name": "result", "type_desc": "tuple[NDArray[np.int64], NDArray[np.bool_]]"}
+      ]
+    }
+  ],
+  "edges": [
+    {"source_id": "helix_cylinder_intersection", "target_id": "bayesian_neighbor_evaluation", "edge_type": "data_dependency"},
+    {"source_id": "helix_cap_intersection", "target_id": "bayesian_neighbor_evaluation", "edge_type": "data_dependency"},
+    {"source_id": "bayesian_neighbor_evaluation", "target_id": "greedy_track_commit", "edge_type": "data_dependency"}
+  ],
+  "metadata": {
+    "source": "agent_ingestion",
+    "source_repo": "https://github.com/edwinst/trackml_solution",
+    "source_license": "BSD-2-Clause",
+    "competition": "TrackML Particle Tracking Challenge (5th place)"
+  }
+}

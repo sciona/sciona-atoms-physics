@@ -5,7 +5,7 @@
       "parent_id": null,
       "name": "Tempo.offset",
       "description": "Time-scale offset approximations from the Tempo.jl offset module.",
-      "concept_type": "custom",
+      "concept_type": "arithmetic",
       "inputs": [],
       "outputs": [],
       "status": "decomposed",

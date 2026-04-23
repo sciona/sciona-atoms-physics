@@ -5,7 +5,7 @@
       "parent_id": null,
       "name": "greedy_subgraph_solver_vv",
       "description": "Ingested pipeline from greedy_subgraph_solver_vv",
-      "concept_type": "custom",
+      "concept_type": "optimization",
       "inputs": [],
       "outputs": [],
       "status": "decomposed",
@@ -30,7 +30,7 @@
       "parent_id": "greedy_subgraph_solver_vv_root",
       "name": "Sub-graph Embedder",
       "description": "Extracts embeddable subgraphs from the main molecule graph using greedy lattice mapping.",
-      "concept_type": "custom",
+      "concept_type": "data_extraction",
       "inputs": [
         {
           "name": "current_graph",
@@ -68,7 +68,7 @@
       "parent_id": "greedy_subgraph_solver_vv_root",
       "name": "Graph Transformer",
       "description": "Converts a molecular subgraph mapping into a solveable graph on the quantum lattice.",
-      "concept_type": "custom",
+      "concept_type": "graph_signal_processing",
       "inputs": [
         {
           "name": "current_graph",
@@ -111,7 +111,7 @@
       "parent_id": "greedy_subgraph_solver_vv_root",
       "name": "Quantum MWIS Solver",
       "description": "Solves the Maximum Weighted Independent Set problem using a quantum algorithm.",
-      "concept_type": "custom",
+      "concept_type": "optimization",
       "inputs": [
         {
           "name": "graph",

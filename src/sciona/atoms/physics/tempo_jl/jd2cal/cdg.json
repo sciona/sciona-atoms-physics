@@ -5,7 +5,7 @@
       "parent_id": null,
       "name": "jd2cal",
       "description": "Ingested pipeline from jd2cal",
-      "concept_type": "custom",
+      "concept_type": "arithmetic",
       "inputs": [],
       "outputs": [],
       "status": "decomposed",

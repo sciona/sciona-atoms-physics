@@ -5,7 +5,7 @@
       "parent_id": null,
       "name": "find_month",
       "description": "Ingested pipeline from find_month",
-      "concept_type": "custom",
+      "concept_type": "searching",
       "inputs": [],
       "outputs": [],
       "status": "decomposed",

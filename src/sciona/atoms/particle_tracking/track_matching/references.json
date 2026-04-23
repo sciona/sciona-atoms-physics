@@ -1,0 +1,105 @@
+{
+  "schema_version": "1.1",
+  "atoms": {
+    "sciona.atoms.particle_tracking.track_matching.helix_cylinder_intersection@sciona/atoms/particle_tracking/track_matching/atoms.py:45": {
+      "references": [
+        {
+          "ref_id": "steiner2018trackml",
+          "match_metadata": {
+            "similarity_score": null,
+            "match_type": "manual",
+            "matched_nodes": [],
+            "confidence": "high",
+            "notes": "Upstream source: geometry.py:CylinderIntersector.intersectHelices(). r^2 harmonic motion cylinder crossing."
+          }
+        },
+        {
+          "ref_id": "amrouche2021trackml_throughput",
+          "match_metadata": {
+            "similarity_score": null,
+            "match_type": "manual",
+            "matched_nodes": [],
+            "confidence": "high",
+            "notes": "Throughput-phase competition context for cylindrical detector track propagation."
+          }
+        }
+      ],
+      "auto_attribution_runs": []
+    },
+    "sciona.atoms.particle_tracking.track_matching.helix_cap_intersection@sciona/atoms/particle_tracking/track_matching/atoms.py:135": {
+      "references": [
+        {
+          "ref_id": "steiner2018trackml",
+          "match_metadata": {
+            "similarity_score": null,
+            "match_type": "manual",
+            "matched_nodes": [],
+            "confidence": "high",
+            "notes": "Upstream source: geometry.py:CapIntersector.intersectHelices(). Linear z-phase cap crossing."
+          }
+        },
+        {
+          "ref_id": "amrouche2021trackml_throughput",
+          "match_metadata": {
+            "similarity_score": null,
+            "match_type": "manual",
+            "matched_nodes": [],
+            "confidence": "high",
+            "notes": "Throughput-phase competition context for endcap detector track propagation."
+          }
+        }
+      ],
+      "auto_attribution_runs": []
+    },
+    "sciona.atoms.particle_tracking.track_matching.bayesian_neighbor_evaluation@sciona/atoms/particle_tracking/track_matching/atoms.py:189": {
+      "references": [
+        {
+          "ref_id": "steiner2018trackml",
+          "match_metadata": {
+            "similarity_score": null,
+            "match_type": "manual",
+            "matched_nodes": [],
+            "confidence": "high",
+            "notes": "Upstream source: algorithm.py:Algorithm.bayesianNeighborEvaluation(). Error-normalized Bayesian cut."
+          }
+        },
+        {
+          "ref_id": "amrouche2021trackml_throughput",
+          "match_metadata": {
+            "similarity_score": null,
+            "match_type": "manual",
+            "matched_nodes": [],
+            "confidence": "high",
+            "notes": "Throughput-phase competition context for neighbor evaluation strategy."
+          }
+        }
+      ],
+      "auto_attribution_runs": []
+    },
+    "sciona.atoms.particle_tracking.track_matching.greedy_track_commit@sciona/atoms/particle_tracking/track_matching/atoms.py:244": {
+      "references": [
+        {
+          "ref_id": "steiner2018trackml",
+          "match_metadata": {
+            "similarity_score": null,
+            "match_type": "manual",
+            "matched_nodes": [],
+            "confidence": "high",
+            "notes": "Upstream source: candidates.py:zeroUsedHits(). Sequential greedy track commitment with hit uniqueness tracking."
+          }
+        },
+        {
+          "ref_id": "amrouche2021trackml_throughput",
+          "match_metadata": {
+            "similarity_score": null,
+            "match_type": "manual",
+            "matched_nodes": [],
+            "confidence": "high",
+            "notes": "Throughput-phase competition context for greedy track selection strategy."
+          }
+        }
+      ],
+      "auto_attribution_runs": []
+    }
+  }
+}

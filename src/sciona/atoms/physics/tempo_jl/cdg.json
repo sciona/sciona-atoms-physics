@@ -5,7 +5,7 @@
       "parent_id": null,
       "name": "TempoJl",
       "description": "Ingested pipeline from TempoJl",
-      "concept_type": "custom",
+      "concept_type": "arithmetic",
       "inputs": [],
       "outputs": [],
       "status": "decomposed",
@@ -70,7 +70,7 @@
       "parent_id": "TempoJl_root",
       "name": "high_precision_duration",
       "description": "Splits a continuous variable into an integer and fractional part to preserve numerical precision.",
-      "concept_type": "custom",
+      "concept_type": "arithmetic",
       "inputs": [
         {
           "name": "data",

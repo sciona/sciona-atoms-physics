@@ -1,0 +1,39 @@
+{
+  "schema_version": "1.0",
+  "bundle_id": "sciona.atoms.review_bundle.particle_tracking.detector_corrections.v1",
+  "provider_repo": "sciona-atoms-physics",
+  "family_batch": "particle_tracking_detector_corrections",
+  "review_status": "pending",
+  "atoms": [
+    {
+      "name": "coordinate_rescaling_for_knn",
+      "fqdn": "sciona.atoms.particle_tracking.detector_corrections.coordinate_rescaling_for_knn",
+      "concept_type": "signal_transform",
+      "source_file": "src/sciona/atoms/particle_tracking/detector_corrections/atoms.py",
+      "source_mapping": "neighbors.py:transformToNeighborCoords()"
+    },
+    {
+      "name": "perturbative_cap_correction",
+      "fqdn": "sciona.atoms.particle_tracking.detector_corrections.perturbative_cap_correction",
+      "concept_type": "analysis",
+      "source_file": "src/sciona/atoms/particle_tracking/detector_corrections/atoms.py",
+      "source_mapping": "corrections.py:HelixCorrector.correctCapIntersections()"
+    },
+    {
+      "name": "perturbative_cylinder_correction",
+      "fqdn": "sciona.atoms.particle_tracking.detector_corrections.perturbative_cylinder_correction",
+      "concept_type": "analysis",
+      "source_file": "src/sciona/atoms/particle_tracking/detector_corrections/atoms.py",
+      "source_mapping": "corrections.py:HelixCorrector.correctCylinderIntersections()"
+    }
+  ],
+  "source_repo": "https://github.com/edwinst/trackml_solution",
+  "source_license": "BSD-2-Clause",
+  "authoritative_sources": [
+    {"kind": "local_wrapper", "path": "src/sciona/atoms/particle_tracking/detector_corrections/atoms.py"},
+    {"kind": "local_metadata", "path": "src/sciona/atoms/particle_tracking/detector_corrections/references.json"},
+    {"kind": "local_metadata", "path": "src/sciona/atoms/particle_tracking/detector_corrections/cdg.json"},
+    {"kind": "local_test", "path": "tests/test_particle_tracking_detector_corrections_review_bundle.py"},
+    {"kind": "local_test", "path": "tests/test_particle_tracking_detector_corrections_behavior.py"}
+  ]
+}

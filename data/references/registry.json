@@ -196,6 +196,21 @@
       },
       "url": "https://ui.adsabs.harvard.edu/abs/2019ascl.soft07024R"
     },
+    "amrouche2021trackml_throughput": {
+      "ref_id": "amrouche2021trackml_throughput",
+      "type": "paper",
+      "title": "The Tracking Machine Learning challenge: Throughput phase",
+      "authors": ["Sabrina Amrouche", "et al."],
+      "year": 2021,
+      "venue": "Computing and Software for Big Science",
+      "match_metadata": {
+        "similarity_score": null,
+        "match_type": "manual",
+        "matched_nodes": [],
+        "confidence": "high",
+        "notes": "Throughput-phase competition context for track matching algorithms."
+      }
+    },
     "steiner2018trackml": {
       "ref_id": "steiner2018trackml",
       "type": "repository",

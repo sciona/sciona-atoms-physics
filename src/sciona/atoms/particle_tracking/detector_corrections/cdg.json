@@ -1,0 +1,82 @@
+{
+  "nodes": [
+    {
+      "node_id": "detector_corrections_root",
+      "name": "detector_corrections",
+      "description": "Coordinate rescaling and perturbative corrections for helix-detector surface intersections",
+      "status": "decomposed",
+      "children": [
+        "coordinate_rescaling_for_knn",
+        "perturbative_cap_correction",
+        "perturbative_cylinder_correction"
+      ],
+      "depth": 0
+    },
+    {
+      "node_id": "coordinate_rescaling_for_knn",
+      "name": "coordinate_rescaling_for_knn",
+      "description": "Project 3D hit positions onto reference cylinder and z-scale for meaningful k-NN distances",
+      "concept_type": "signal_transform",
+      "status": "atomic",
+      "type_signature": "(coords: NDArray, cyl_mean_r2: float, z_scale: float) -> NDArray",
+      "depth": 1,
+      "inputs": [
+        {"name": "coords", "type_desc": "NDArray[np.float64]", "required": true},
+        {"name": "cyl_mean_r2", "type_desc": "float", "required": false},
+        {"name": "z_scale", "type_desc": "float", "required": false}
+      ],
+      "outputs": [
+        {"name": "result", "type_desc": "NDArray[np.float64]"}
+      ]
+    },
+    {
+      "node_id": "perturbative_cap_correction",
+      "name": "perturbative_cap_correction",
+      "description": "Apply radial/azimuthal displacement corrections at cap intersections scaled by charge and pitch",
+      "concept_type": "analysis",
+      "status": "atomic",
+      "type_signature": "(xi: NDArray, yi: NDArray, hel_pitch: NDArray, charge_sign: NDArray, dp0_radial: NDArray, dp1_azimuthal: NDArray) -> tuple[NDArray, NDArray]",
+      "depth": 1,
+      "inputs": [
+        {"name": "xi", "type_desc": "NDArray[np.float64]", "required": true},
+        {"name": "yi", "type_desc": "NDArray[np.float64]", "required": true},
+        {"name": "hel_pitch", "type_desc": "NDArray[np.float64]", "required": true},
+        {"name": "charge_sign", "type_desc": "NDArray[np.float64]", "required": true},
+        {"name": "dp0_radial", "type_desc": "NDArray[np.float64]", "required": true},
+        {"name": "dp1_azimuthal", "type_desc": "NDArray[np.float64]", "required": true}
+      ],
+      "outputs": [
+        {"name": "result", "type_desc": "tuple[NDArray[np.float64], NDArray[np.float64]]"}
+      ]
+    },
+    {
+      "node_id": "perturbative_cylinder_correction",
+      "name": "perturbative_cylinder_correction",
+      "description": "Apply azimuthal and z-displacement corrections at cylinder intersections scaled by charge and curvature radius",
+      "concept_type": "analysis",
+      "status": "atomic",
+      "type_signature": "(xi: NDArray, yi: NDArray, zi: NDArray, hel_r: NDArray, hel_pitch: NDArray, charge_sign: NDArray, dp0_z: NDArray, dp1_azimuthal: NDArray) -> tuple[NDArray, NDArray, NDArray]",
+      "depth": 1,
+      "inputs": [
+        {"name": "xi", "type_desc": "NDArray[np.float64]", "required": true},
+        {"name": "yi", "type_desc": "NDArray[np.float64]", "required": true},
+        {"name": "zi", "type_desc": "NDArray[np.float64]", "required": true},
+        {"name": "hel_r", "type_desc": "NDArray[np.float64]", "required": true},
+        {"name": "hel_pitch", "type_desc": "NDArray[np.float64]", "required": true},
+        {"name": "charge_sign", "type_desc": "NDArray[np.float64]", "required": true},
+        {"name": "dp0_z", "type_desc": "NDArray[np.float64]", "required": true},
+        {"name": "dp1_azimuthal", "type_desc": "NDArray[np.float64]", "required": true}
+      ],
+      "outputs": [
+        {"name": "result", "type_desc": "tuple[NDArray[np.float64], NDArray[np.float64], NDArray[np.float64]]"}
+      ]
+    }
+  ],
+  "edges": [],
+  "metadata": {
+    "source": "agent_ingestion",
+    "source_repo": "https://github.com/edwinst/trackml_solution",
+    "source_license": "BSD-2-Clause",
+    "competition": "TrackML Particle Tracking Challenge (5th place)"
+  }
+}

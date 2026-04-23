@@ -5,7 +5,7 @@
       "parent_id": null,
       "name": "find_year",
       "description": "Ingested pipeline from find_year",
-      "concept_type": "custom",
+      "concept_type": "arithmetic",
       "inputs": [],
       "outputs": [],
       "status": "decomposed",
@@ -118,7 +118,7 @@
       "parent_id": "find_year_root",
       "name": "Find Year",
       "description": "Find the calendar year corresponding to a day offset",
-      "concept_type": "custom",
+      "concept_type": "searching",
       "inputs": [
         {
           "name": "d",

@@ -5,7 +5,7 @@
       "parent_id": null,
       "name": "SkyfieldVectorIngest",
       "description": "Ingested pipeline from SkyfieldVectorIngest",
-      "concept_type": "custom",
+      "concept_type": "geometry",
       "inputs": [],
       "outputs": [],
       "status": "decomposed",
