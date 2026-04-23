@@ -31,7 +31,7 @@
       "parent_id": "PulsarFolding_root",
       "name": "dm_can_brute_force",
       "description": "Performs a brute-force shift search to maximize the signal-to-noise ratio of a folded profile.",
-      "concept_type": "custom",
+      "concept_type": "optimization",
       "inputs": [
         {
           "name": "data",
@@ -70,7 +70,7 @@
       "parent_id": "PulsarFolding_root",
       "name": "spline_bandpass_correction",
       "description": "Subtracts instrument-induced artifacts across frequency channels using interpolative splines.",
-      "concept_type": "custom",
+      "concept_type": "signal_transform",
       "inputs": [
         {
           "name": "data",

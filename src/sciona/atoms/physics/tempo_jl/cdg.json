@@ -31,7 +31,7 @@
       "parent_id": "TempoJl_root",
       "name": "graph_time_scale_management",
       "description": "Computes transformation paths dynamically using a directed graph representation.",
-      "concept_type": "custom",
+      "concept_type": "signal_transform",
       "inputs": [
         {
           "name": "data",

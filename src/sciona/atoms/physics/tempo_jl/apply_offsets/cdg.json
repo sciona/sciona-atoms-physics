@@ -30,7 +30,7 @@
       "parent_id": "apply_offsets_root",
       "name": "Show",
       "description": "Format and display a value to an output stream",
-      "concept_type": "custom",
+      "concept_type": "observability",
       "inputs": [
         {
           "name": "io",
@@ -68,7 +68,7 @@
       "parent_id": "apply_offsets_root",
       "name": " Zero Offset",
       "description": "Return a zero time offset for a given number of seconds",
-      "concept_type": "custom",
+      "concept_type": "analysis",
       "inputs": [
         {
           "name": "seconds",

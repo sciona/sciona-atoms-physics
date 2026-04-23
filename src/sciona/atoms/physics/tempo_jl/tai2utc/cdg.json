@@ -42,7 +42,7 @@
       "parent_id": "tai2utc_root",
       "name": "Isleapyear",
       "description": "Determine whether a given year is a leap year",
-      "concept_type": "custom",
+      "concept_type": "arithmetic",
       "inputs": [
         {
           "name": "year",
@@ -75,7 +75,7 @@
       "parent_id": "tai2utc_root",
       "name": "Find Dayinyear",
       "description": "Find the day number within a year given month, day, and leap-year flag",
-      "concept_type": "custom",
+      "concept_type": "arithmetic",
       "inputs": [
         {
           "name": "month",
@@ -151,7 +151,7 @@
       "parent_id": "tai2utc_root",
       "name": "Find Month",
       "description": "Find the calendar month from a day-in-year value and leap-year flag",
-      "concept_type": "custom",
+      "concept_type": "arithmetic",
       "inputs": [
         {
           "name": "dayinyear",
@@ -189,7 +189,7 @@
       "parent_id": "tai2utc_root",
       "name": "Find Day",
       "description": "Find the calendar day from a day-in-year value, month, and leap-year flag",
-      "concept_type": "custom",
+      "concept_type": "arithmetic",
       "inputs": [
         {
           "name": "dayinyear",
@@ -232,7 +232,7 @@
       "parent_id": "tai2utc_root",
       "name": "Lastj2000Dayofyear",
       "description": "Return the last J2000 day number of a given year",
-      "concept_type": "custom",
+      "concept_type": "arithmetic",
       "inputs": [
         {
           "name": "year",
@@ -265,7 +265,7 @@
       "parent_id": "tai2utc_root",
       "name": "Hms2Fd",
       "description": "Convert hours, minutes, and seconds to a fractional day",
-      "concept_type": "custom",
+      "concept_type": "arithmetic",
       "inputs": [
         {
           "name": "h",
@@ -308,7 +308,7 @@
       "parent_id": "tai2utc_root",
       "name": "Fd2Hms",
       "description": "Convert a fractional day to hours, minutes, and seconds",
-      "concept_type": "custom",
+      "concept_type": "arithmetic",
       "inputs": [
         {
           "name": "fd",
@@ -341,7 +341,7 @@
       "parent_id": "tai2utc_root",
       "name": "Fd2Hmsf",
       "description": "Convert a fractional day to hours, minutes, seconds, and sub-second fraction",
-      "concept_type": "custom",
+      "concept_type": "arithmetic",
       "inputs": [
         {
           "name": "fd",
@@ -374,7 +374,7 @@
       "parent_id": "tai2utc_root",
       "name": "Cal2Jd",
       "description": "Convert a calendar date (year, month, day) to a Julian date",
-      "concept_type": "custom",
+      "concept_type": "arithmetic",
       "inputs": [
         {
           "name": "Y",
@@ -417,7 +417,7 @@
       "parent_id": "tai2utc_root",
       "name": "Calhms2Jd",
       "description": "Convert a calendar date and time (year, month, day, h, m, s) to a Julian date",
-      "concept_type": "custom",
+      "concept_type": "arithmetic",
       "inputs": [
         {
           "name": "Y",
@@ -475,7 +475,7 @@
       "parent_id": "tai2utc_root",
       "name": "Jd2Cal",
       "description": "Convert a Julian date to a calendar date",
-      "concept_type": "custom",
+      "concept_type": "arithmetic",
       "inputs": [
         {
           "name": "dj1",
@@ -513,7 +513,7 @@
       "parent_id": "tai2utc_root",
       "name": "Jd2Calhms",
       "description": "Convert a Julian date to a calendar date and time (year, month, day, h, m, s)",
-      "concept_type": "custom",
+      "concept_type": "arithmetic",
       "inputs": [
         {
           "name": "dj1",
@@ -551,7 +551,7 @@
       "parent_id": "tai2utc_root",
       "name": "Utc2Tai",
       "description": "Convert UTC Julian date to International Atomic Time (TAI)",
-      "concept_type": "custom",
+      "concept_type": "arithmetic",
       "inputs": [
         {
           "name": "utc1",
@@ -589,7 +589,7 @@
       "parent_id": "tai2utc_root",
       "name": "Tai2Utc",
       "description": "Convert International Atomic Time (TAI) Julian date to UTC",
-      "concept_type": "custom",
+      "concept_type": "arithmetic",
       "inputs": [
         {
           "name": "tai1",

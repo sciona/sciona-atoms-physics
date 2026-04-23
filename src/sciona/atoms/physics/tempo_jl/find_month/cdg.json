@@ -37,7 +37,7 @@
       "parent_id": "find_month_root",
       "name": "Date",
       "description": "Construct a date from a given offset",
-      "concept_type": "custom",
+      "concept_type": "data_assembly",
       "inputs": [
         {
           "name": "offset",
@@ -70,7 +70,7 @@
       "parent_id": "find_month_root",
       "name": "Date",
       "description": "Construct a date from year and day within year",
-      "concept_type": "custom",
+      "concept_type": "data_assembly",
       "inputs": [
         {
           "name": "year",
@@ -108,7 +108,7 @@
       "parent_id": "find_month_root",
       "name": "Show",
       "description": "Format and display a value to an output stream",
-      "concept_type": "custom",
+      "concept_type": "observability",
       "inputs": [
         {
           "name": "io",
@@ -146,7 +146,7 @@
       "parent_id": "find_month_root",
       "name": "Time",
       "description": "Construct a time from hours, minute, and second",
-      "concept_type": "custom",
+      "concept_type": "data_assembly",
       "inputs": [
         {
           "name": "hour",
@@ -189,7 +189,7 @@
       "parent_id": "find_month_root",
       "name": "Time",
       "description": "Construct a time from second within day and fractional part",
-      "concept_type": "custom",
+      "concept_type": "data_assembly",
       "inputs": [
         {
           "name": "secondinday",
@@ -227,7 +227,7 @@
       "parent_id": "find_month_root",
       "name": "Time",
       "description": "Construct a time from a given second within day",
-      "concept_type": "custom",
+      "concept_type": "data_assembly",
       "inputs": [
         {
           "name": "secondinday",
@@ -260,7 +260,7 @@
       "parent_id": "find_month_root",
       "name": "Show",
       "description": "Format and display a value to an output stream",
-      "concept_type": "custom",
+      "concept_type": "observability",
       "inputs": [
         {
           "name": "io",
@@ -298,7 +298,7 @@
       "parent_id": "find_month_root",
       "name": "Datetime",
       "description": "Construct a datetime from year, month, day, hours, minutes, and seconds",
-      "concept_type": "custom",
+      "concept_type": "data_assembly",
       "inputs": [
         {
           "name": "year",
@@ -356,7 +356,7 @@
       "parent_id": "find_month_root",
       "name": "Datetime",
       "description": "Construct a datetime from a string representation",
-      "concept_type": "custom",
+      "concept_type": "data_assembly",
       "inputs": [
         {
           "name": "s",
@@ -389,7 +389,7 @@
       "parent_id": "find_month_root",
       "name": "Datetime",
       "description": "Construct a datetime from a given seconds",
-      "concept_type": "custom",
+      "concept_type": "data_assembly",
       "inputs": [
         {
           "name": "seconds",
