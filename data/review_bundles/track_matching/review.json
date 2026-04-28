@@ -10,37 +10,56 @@
       "fqdn": "sciona.atoms.particle_tracking.track_matching.helix_cylinder_intersection",
       "concept_type": "geometry",
       "source_file": "src/sciona/atoms/particle_tracking/track_matching/atoms.py",
-      "source_mapping": "geometry.py:CylinderIntersector.intersectHelices()"
+      "source_mapping": "geometry.py:CylinderIntersector.intersectHelices()",
+      "atom_name": "sciona.atoms.particle_tracking.track_matching.helix_cylinder_intersection"
     },
     {
       "name": "helix_cap_intersection",
       "fqdn": "sciona.atoms.particle_tracking.track_matching.helix_cap_intersection",
       "concept_type": "geometry",
       "source_file": "src/sciona/atoms/particle_tracking/track_matching/atoms.py",
-      "source_mapping": "geometry.py:CapIntersector.intersectHelices()"
+      "source_mapping": "geometry.py:CapIntersector.intersectHelices()",
+      "atom_name": "sciona.atoms.particle_tracking.track_matching.helix_cap_intersection"
     },
     {
       "name": "bayesian_neighbor_evaluation",
       "fqdn": "sciona.atoms.particle_tracking.track_matching.bayesian_neighbor_evaluation",
       "concept_type": "searching",
       "source_file": "src/sciona/atoms/particle_tracking/track_matching/atoms.py",
-      "source_mapping": "algorithm.py:Algorithm.bayesianNeighborEvaluation()"
+      "source_mapping": "algorithm.py:Algorithm.bayesianNeighborEvaluation()",
+      "atom_name": "sciona.atoms.particle_tracking.track_matching.bayesian_neighbor_evaluation"
     },
     {
       "name": "greedy_track_commit",
       "fqdn": "sciona.atoms.particle_tracking.track_matching.greedy_track_commit",
       "concept_type": "greedy",
       "source_file": "src/sciona/atoms/particle_tracking/track_matching/atoms.py",
-      "source_mapping": "candidates.py:zeroUsedHits()"
+      "source_mapping": "candidates.py:zeroUsedHits()",
+      "atom_name": "sciona.atoms.particle_tracking.track_matching.greedy_track_commit"
     }
   ],
   "source_repo": "https://github.com/edwinst/trackml_solution",
   "source_license": "BSD-2-Clause",
   "authoritative_sources": [
-    {"kind": "local_wrapper", "path": "src/sciona/atoms/particle_tracking/track_matching/atoms.py"},
-    {"kind": "local_metadata", "path": "src/sciona/atoms/particle_tracking/track_matching/references.json"},
-    {"kind": "local_metadata", "path": "src/sciona/atoms/particle_tracking/track_matching/cdg.json"},
-    {"kind": "local_test", "path": "tests/test_particle_tracking_track_matching_review_bundle.py"},
-    {"kind": "local_test", "path": "tests/test_particle_tracking_track_matching_behavior.py"}
+    {
+      "kind": "local_wrapper",
+      "path": "src/sciona/atoms/particle_tracking/track_matching/atoms.py"
+    },
+    {
+      "kind": "local_metadata",
+      "path": "src/sciona/atoms/particle_tracking/track_matching/references.json"
+    },
+    {
+      "kind": "local_metadata",
+      "path": "src/sciona/atoms/particle_tracking/track_matching/cdg.json"
+    },
+    {
+      "kind": "local_test",
+      "path": "tests/test_particle_tracking_track_matching_review_bundle.py"
+    },
+    {
+      "kind": "local_test",
+      "path": "tests/test_particle_tracking_track_matching_behavior.py"
+    }
   ]
 }
