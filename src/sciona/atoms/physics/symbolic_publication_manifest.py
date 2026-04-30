@@ -12,8 +12,10 @@ import hashlib
 import importlib
 import importlib.machinery
 import importlib.util
+import json
 import sys
 import types
+import uuid
 from collections.abc import Iterable, Mapping
 from pathlib import Path
 from typing import Any
@@ -22,6 +24,7 @@ from sciona.ghost.registry import REGISTRY
 
 
 PROVIDER = "sciona-atoms-physics"
+EXPRESSION_NAMESPACE = uuid.uuid5(uuid.NAMESPACE_URL, f"sciona:{PROVIDER}:symbolic")
 
 DEFAULT_SYMBOLIC_ATOM_MODULES = (
     "sciona.atoms.physics.pulsar_folding.dm_can",
@@ -69,14 +72,56 @@ def build_symbolic_publication_manifest(
         artifact_key = _artifact_key(provider, atom_module, atom_name, entry)
         dim_signature = _compact_dim_map(entry.get("dim_signature") or symbolic.dim_map)
         symbolic_dim_signature = _compact_dim_map(symbolic.dim_map)
+        expression_id = _expression_id(provider, atom_module, atom_name)
+        source_expression_id = _source_expression_id(provider, atom_module, atom_name)
+        expression_text = str(symbolic.to_sympy())
+        canonical_expr_hash = _stable_hash("expr", symbolic.srepr_str)
+        topology_hash = _stable_hash("topology", _topology_key(symbolic.srepr_str))
+        dimensional_hash = _stable_hash(
+            "dimensional",
+            {
+                "topology_hash": topology_hash,
+                "dim_signature": symbolic_dim_signature,
+            },
+        )
+        mechanism_tags = _metadata_or_heuristic_tags(
+            symbolic,
+            entry,
+            atom_module,
+            atom_name,
+            "mechanism_tags",
+        )
+        behavioral_archetypes = _metadata_or_heuristic_tags(
+            symbolic,
+            entry,
+            atom_module,
+            atom_name,
+            "behavioral_archetypes",
+        )
         expression_row = {
             "artifact_key": artifact_key,
             "provider": provider,
             "atom_name": atom_name,
             "atom_module": atom_module,
             "registry_name": str(entry.get("name") or atom_name),
+            "expression_id": expression_id,
+            "source_expression_id": source_expression_id,
             "expression_srepr": symbolic.srepr_str,
-            "expression_text": str(symbolic.to_sympy()),
+            "expression_text": expression_text,
+            "sympy_srepr": symbolic.srepr_str,
+            "raw_formula": expression_text,
+            "raw_formula_format": "plain_text",
+            "expression_kind": "equation",
+            "expression_role": "primary",
+            "canonical_expr_hash": canonical_expr_hash,
+            "topology_hash": topology_hash,
+            "dimensional_hash": dimensional_hash,
+            "parse_status": "normalized",
+            "parse_confidence": 1.0,
+            "review_status": "automated_pass",
+            "validation_status": "passed",
+            "mechanism_tags": mechanism_tags,
+            "behavioral_archetypes": behavioral_archetypes,
             "variables": dict(sorted(symbolic.variables.items())),
             "dim_signature": dim_signature,
             "symbolic_dim_signature": symbolic_dim_signature,
@@ -121,6 +166,64 @@ def build_symbolic_publication_manifest(
     }
 
 
+def to_matcher_symbolic_expression_rows(
+    expression_rows: Iterable[Mapping[str, Any]],
+    *,
+    artifact_id_by_key: Mapping[str, str],
+    version_id_by_key: Mapping[str, str],
+) -> list[dict[str, Any]]:
+    """Return matcher staging rows without writing database records.
+
+    The manifest cannot know database-generated artifact/version ids.  This
+    adapter keeps publication loading explicit by requiring the caller to map
+    each ``artifact_key`` to the artifact and version ids resolved by the
+    loader.
+    """
+
+    rows: list[dict[str, Any]] = []
+    for row in expression_rows:
+        artifact_key = str(row["artifact_key"])
+        rows.append(
+            {
+                "expression_id": row["expression_id"],
+                "artifact_id": artifact_id_by_key[artifact_key],
+                "version_id": version_id_by_key[artifact_key],
+                "expression_kind": row["expression_kind"],
+                "expression_role": row["expression_role"],
+                "sympy_srepr": row["sympy_srepr"],
+                "canonical_expr_hash": row["canonical_expr_hash"],
+                "topology_hash": row["topology_hash"],
+                "dimensional_hash": row["dimensional_hash"],
+                "raw_formula": row["raw_formula"],
+                "raw_formula_format": row["raw_formula_format"],
+                "source_expression_id": row["source_expression_id"],
+                "parse_status": row["parse_status"],
+                "parse_confidence": row["parse_confidence"],
+                "review_status": row["review_status"],
+                "validation_status": row["validation_status"],
+                "mechanism_tags": list(row["mechanism_tags"]),
+                "behavioral_archetypes": list(row["behavioral_archetypes"]),
+                "assumptions_json": {
+                    "provider": row["provider"],
+                    "atom_name": row["atom_name"],
+                    "atom_module": row["atom_module"],
+                    "variables": row["variables"],
+                    "constants": row["constants"],
+                    "dim_signature": row["dim_signature"],
+                    "symbolic_dim_signature": row["symbolic_dim_signature"],
+                },
+                "evidence_json": {
+                    "artifact_key": artifact_key,
+                    "local_artifact_key": row["local_artifact_key"],
+                    "registry_name": row["registry_name"],
+                    "artifact_uuid": row["artifact_uuid"],
+                    "bibliography": row["bibliography"],
+                },
+            }
+        )
+    return rows
+
+
 def _registry_uuid(entry: Mapping[str, Any]) -> str | None:
     for key in ("artifact_uuid", "uuid", "id"):
         value = entry.get(key)
@@ -148,6 +251,46 @@ def _local_artifact_key(provider: str, atom_module: str, atom_name: str) -> str:
     return f"local:{provider}:{atom_module}:{atom_name}:{digest}"
 
 
+def _expression_id(provider: str, atom_module: str, atom_name: str) -> str:
+    return str(
+        uuid.uuid5(
+            EXPRESSION_NAMESPACE,
+            _source_expression_id(provider, atom_module, atom_name),
+        )
+    )
+
+
+def _source_expression_id(provider: str, atom_module: str, atom_name: str) -> str:
+    return f"{provider}:{atom_module}:{atom_name}"
+
+
+def _stable_hash(kind: str, payload: Any) -> str:
+    encoded = json.dumps(
+        {"kind": kind, "payload": payload},
+        sort_keys=True,
+        separators=(",", ":"),
+        default=str,
+    )
+    return hashlib.sha256(encoded.encode("utf-8")).hexdigest()
+
+
+def _topology_key(srepr_str: str) -> str:
+    try:
+        import sympy as sp
+
+        from sciona.ghost.symbolic import deserialize_expr, serialize_expr
+
+        expr = deserialize_expr(srepr_str)
+        symbols = sorted(expr.free_symbols, key=lambda symbol: str(symbol))
+        replacements = {
+            symbol: sp.Symbol(f"_v{i}", real=symbol.is_real)
+            for i, symbol in enumerate(symbols)
+        }
+        return serialize_expr(expr.xreplace(replacements))
+    except Exception:  # noqa: BLE001 - fallback keeps manifest generation robust.
+        return srepr_str
+
+
 def _compact_dim_map(dim_map: Mapping[str, Any]) -> dict[str, str]:
     compact: dict[str, str] = {}
     for symbol, dim_signature in sorted(dim_map.items()):
@@ -158,6 +301,76 @@ def _compact_dim_map(dim_map: Mapping[str, Any]) -> dict[str, str]:
         else:
             compact[str(symbol)] = str(dim_signature)
     return compact
+
+
+def _metadata_or_heuristic_tags(
+    symbolic: Any,
+    entry: Mapping[str, Any],
+    atom_module: str,
+    atom_name: str,
+    field_name: str,
+) -> list[str]:
+    explicit = _coerce_string_list(getattr(symbolic, field_name, None))
+    if not explicit:
+        explicit = _coerce_string_list(entry.get(field_name))
+    if explicit:
+        return explicit
+    return _heuristic_tags(atom_module, atom_name, field_name)
+
+
+def _coerce_string_list(value: Any) -> list[str]:
+    if value is None:
+        return []
+    if isinstance(value, str):
+        raw_values = [value]
+    elif isinstance(value, Iterable):
+        raw_values = [str(item) for item in value]
+    else:
+        return []
+    return _dedupe_sorted(
+        item.strip().lower().replace(" ", "_")
+        for item in raw_values
+        if item and str(item).strip()
+    )
+
+
+def _heuristic_tags(atom_module: str, atom_name: str, field_name: str) -> list[str]:
+    module = atom_module.lower()
+    name = atom_name.lower()
+    tags: list[str] = []
+    if "pulsar_folding" in module:
+        tags.extend(
+            ["dispersion", "pulsar_search", "signal_processing"]
+            if field_name == "mechanism_tags"
+            else ["candidate_scoring", "delay_model"]
+        )
+    if "helix_geometry" in module:
+        tags.extend(
+            ["geometric_reconstruction", "helix_geometry", "particle_tracking"]
+            if field_name == "mechanism_tags"
+            else ["geometric_fit", "track_reconstruction"]
+        )
+        if "nearest_point" in name:
+            tags.append("distance_minimization")
+        if "least_squares" in name:
+            tags.append("least_squares_fit")
+    if "skyfield" in module:
+        tags.extend(
+            ["astrometry", "coordinate_transform", "vector_geometry"]
+            if field_name == "mechanism_tags"
+            else ["angular_geometry", "coordinate_transform"]
+        )
+    if "tempo_jl" in module:
+        tags.extend(
+            ["relativistic_timing", "time_scale_conversion"]
+            if field_name == "mechanism_tags"
+            else ["periodic_correction", "time_offset"]
+        )
+    return _dedupe_sorted(tags)
+
+
+def _dedupe_sorted(values: Iterable[str]) -> list[str]:
+    return sorted({value for value in values if value})
 
 
 def _install_optional_import_shims(module_names: tuple[str, ...]) -> None:

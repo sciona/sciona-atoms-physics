@@ -3,7 +3,13 @@ from __future__ import annotations
 from sciona.atoms.physics.symbolic_publication_manifest import (
     DEFAULT_SYMBOLIC_ATOM_MODULES,
     build_symbolic_publication_manifest,
+    to_matcher_symbolic_expression_rows,
 )
+from sciona.physics_ingest.staging import validate_symbolic_expression_row
+
+
+ARTIFACT_ID = "20000000-0000-0000-0000-000000000001"
+VERSION_ID = "30000000-0000-0000-0000-000000000001"
 
 
 def _manifest() -> dict:
@@ -24,22 +30,24 @@ def test_manifest_contract_is_side_effect_free_publication_scaffold() -> None:
     }
 
     expression = manifest["artifact_symbolic_expressions"][0]
-    assert set(expression) == {
-        "artifact_key",
-        "provider",
-        "atom_name",
-        "atom_module",
-        "registry_name",
-        "expression_srepr",
-        "expression_text",
-        "variables",
-        "dim_signature",
-        "symbolic_dim_signature",
-        "constants",
-        "bibliography",
-        "local_artifact_key",
-        "artifact_uuid",
-    }
+    assert set(expression).issuperset(
+        {
+            "artifact_key",
+            "provider",
+            "atom_name",
+            "atom_module",
+            "registry_name",
+            "expression_srepr",
+            "expression_text",
+            "variables",
+            "dim_signature",
+            "symbolic_dim_signature",
+            "constants",
+            "bibliography",
+            "local_artifact_key",
+            "artifact_uuid",
+        }
+    )
     assert expression["artifact_key"].startswith("local:sciona-atoms-physics:")
     assert expression["artifact_uuid"] is None
     assert isinstance(expression["variables"], dict)
@@ -54,6 +62,18 @@ def test_manifest_is_deterministic_and_uses_local_keys_without_uuids() -> None:
     keys = [row["artifact_key"] for row in first["artifact_symbolic_expressions"]]
     assert len(keys) == len(set(keys))
     assert all(key.startswith("local:sciona-atoms-physics:") for key in keys)
+
+    source_ids = [
+        row["source_expression_id"] for row in first["artifact_symbolic_expressions"]
+    ]
+    expression_ids = [
+        row["expression_id"] for row in first["artifact_symbolic_expressions"]
+    ]
+    assert len(source_ids) == len(set(source_ids))
+    assert len(expression_ids) == len(set(expression_ids))
+    assert all(
+        source_id.startswith("sciona-atoms-physics:") for source_id in source_ids
+    )
 
 
 def test_manifest_covers_migrated_symbolic_atom_packages() -> None:
@@ -120,6 +140,65 @@ def test_manifest_emits_expression_variables_and_bounds_rows() -> None:
     assert low_order["constants"]["m1"] == 1.99096871e-7
     assert low_order["dim_signature"]["seconds"] == "T1"
     assert low_order["dim_signature"]["m1"] == "T-1"
+
+
+def test_manifest_emits_stable_hashes_tags_and_loader_fields() -> None:
+    rows = {
+        row["atom_name"]: row for row in _manifest()["artifact_symbolic_expressions"]
+    }
+    dm = rows["dm_candidate_filter"]
+    helix = rows["helix_pitch_least_squares"]
+    angle = rows["calculate_vector_angle"]
+    low_order = rows["offset_tt2tdb"]
+
+    for row in rows.values():
+        assert len(row["canonical_expr_hash"]) == 64
+        assert len(row["topology_hash"]) == 64
+        assert len(row["dimensional_hash"]) == 64
+        assert row["sympy_srepr"] == row["expression_srepr"]
+        assert row["raw_formula"] == row["expression_text"]
+        assert row["raw_formula_format"] == "plain_text"
+        assert row["expression_kind"] == "equation"
+        assert row["expression_role"] == "primary"
+        assert row["parse_status"] == "normalized"
+        assert row["parse_confidence"] == 1.0
+        assert row["review_status"] == "automated_pass"
+        assert row["validation_status"] == "passed"
+        assert row["source_expression_id"].endswith(
+            f":{row['atom_module']}:{row['atom_name']}"
+        )
+
+    assert dm["mechanism_tags"] == [
+        "dispersion",
+        "pulsar_search",
+        "signal_processing",
+    ]
+    assert dm["behavioral_archetypes"] == ["candidate_scoring", "delay_model"]
+    assert "particle_tracking" in helix["mechanism_tags"]
+    assert "least_squares_fit" in helix["behavioral_archetypes"]
+    assert "coordinate_transform" in angle["mechanism_tags"]
+    assert "time_scale_conversion" in low_order["mechanism_tags"]
+
+
+def test_manifest_rows_can_be_adapted_to_matcher_staging_contract() -> None:
+    expression_rows = _manifest()["artifact_symbolic_expressions"]
+    artifact_id_by_key = {row["artifact_key"]: ARTIFACT_ID for row in expression_rows}
+    version_id_by_key = {row["artifact_key"]: VERSION_ID for row in expression_rows}
+
+    loader_rows = to_matcher_symbolic_expression_rows(
+        expression_rows,
+        artifact_id_by_key=artifact_id_by_key,
+        version_id_by_key=version_id_by_key,
+    )
+
+    assert len(loader_rows) == len(expression_rows)
+    staged = [validate_symbolic_expression_row(row) for row in loader_rows]
+    assert {row.expression_id for row in staged} == {
+        row["expression_id"] for row in expression_rows
+    }
+    assert all(row.artifact_id == ARTIFACT_ID for row in staged)
+    assert all(row.version_id == VERSION_ID for row in staged)
+    assert staged[0].to_insert_dict()["source_expression_id"]
 
 
 def test_manifest_can_be_limited_to_selected_modules() -> None:
