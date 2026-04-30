@@ -8,10 +8,12 @@ import networkx as nx
 
 from sciona.atoms.physics.pasqal import (
     MolecularDockingState,
+    SYMBOLIC_REVIEW_BLOCKERS,
     graph_transformer,
     quantum_mwis_solver,
     sub_graph_embedder,
 )
+from sciona.ghost.registry import REGISTRY
 
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
@@ -70,3 +72,17 @@ def test_pasqal_references_cover_reviewed_helpers() -> None:
         assert matching_keys, f"missing reference binding for {prefix}"
         for key in matching_keys:
             assert references[key]["references"][0]["ref_id"] == "moleculardocking2025"
+
+
+def test_pasqal_symbolic_review_blockers_are_explicit() -> None:
+    for atom_name in (
+        "sub_graph_embedder",
+        "graph_transformer",
+        "quantum_mwis_solver",
+    ):
+        assert REGISTRY[atom_name]["symbolic"] is None
+        assert atom_name in SYMBOLIC_REVIEW_BLOCKERS
+
+    assert "discrete graph selection" in SYMBOLIC_REVIEW_BLOCKERS["sub_graph_embedder"]
+    assert "graph topology" in SYMBOLIC_REVIEW_BLOCKERS["graph_transformer"]
+    assert "sample-dependent" in SYMBOLIC_REVIEW_BLOCKERS["quantum_mwis_solver"]

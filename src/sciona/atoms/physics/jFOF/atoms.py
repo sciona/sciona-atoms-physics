@@ -5,12 +5,33 @@ from typing import Any
 import icontract
 import numpy as np
 
+from sciona.ghost.dimensions import DIMENSIONLESS, METER
 from sciona.ghost.registry import register_atom
 
 from .witnesses import witness_find_fof_clusters
 
 
-@register_atom(witness_find_fof_clusters)
+FOF_DIM_MAP = {
+    "x": METER,
+    "b": METER,
+    "L": METER,
+    "mode": DIMENSIONLESS,
+    "max_neighbors": DIMENSIONLESS,
+    "batch_size": DIMENSIONLESS,
+    "labels": DIMENSIONLESS,
+}
+
+SYMBOLIC_REVIEW_BLOCKERS = {
+    "find_fof_clusters": (
+        "No sound @symbolic_atom expression was added: the atom returns "
+        "union-find component labels from thresholded spatial neighbor pairs. "
+        "A closed-form scalar equation would not preserve the graph algorithm, "
+        "label canonicalization, or periodic KD-tree behavior."
+    ),
+}
+
+
+@register_atom(witness_find_fof_clusters, dim_map=FOF_DIM_MAP)
 @icontract.require(lambda x: x is not None, "x cannot be None")
 @icontract.require(lambda b: b is not None, "b cannot be None")
 @icontract.require(lambda L: L is not None, "L cannot be None")

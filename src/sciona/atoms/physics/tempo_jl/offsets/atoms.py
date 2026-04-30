@@ -6,12 +6,30 @@ import math
 
 import icontract
 import numpy as np
-from sciona.ghost.registry import register_atom
+from sciona.ghost.decorators import symbolic_atom
 
+from .expressions import (
+    HIGH_ORDER_TT2TDB_CONSTANTS,
+    HIGH_ORDER_TT2TDB_DIM_MAP,
+    HIGH_ORDER_TT2TDB_EXPR,
+    HIGH_ORDER_TT2TDB_VARIABLES,
+    LOW_ORDER_TT2TDB_CONSTANTS,
+    LOW_ORDER_TT2TDB_DIM_MAP,
+    LOW_ORDER_TT2TDB_EXPR,
+    LOW_ORDER_TT2TDB_VARIABLES,
+    TEMPO_OFFSET_BIBLIOGRAPHY,
+)
 from .witnesses import witness_offset_tt2tdb, witness_offset_tt2tdbh, witness_tt2tdb_offset
 
 
-@register_atom(witness_offset_tt2tdb)
+@symbolic_atom(
+    witness_offset_tt2tdb,
+    expr=LOW_ORDER_TT2TDB_EXPR,
+    dim_map=LOW_ORDER_TT2TDB_DIM_MAP,
+    constants=LOW_ORDER_TT2TDB_CONSTANTS,
+    variables=LOW_ORDER_TT2TDB_VARIABLES,
+    bibliography=TEMPO_OFFSET_BIBLIOGRAPHY,
+)
 @icontract.require(lambda seconds: seconds is not None, "seconds cannot be None")
 @icontract.ensure(lambda result: result is not None, "result must not be None")
 def offset_tt2tdb(seconds: float) -> float:
@@ -32,7 +50,14 @@ def offset_tt2tdb(seconds: float) -> float:
     return k * math.sin(g + eb * math.sin(g))
 
 
-@register_atom(witness_offset_tt2tdbh)
+@symbolic_atom(
+    witness_offset_tt2tdbh,
+    expr=HIGH_ORDER_TT2TDB_EXPR,
+    dim_map=HIGH_ORDER_TT2TDB_DIM_MAP,
+    constants=HIGH_ORDER_TT2TDB_CONSTANTS,
+    variables=HIGH_ORDER_TT2TDB_VARIABLES,
+    bibliography=TEMPO_OFFSET_BIBLIOGRAPHY,
+)
 @icontract.require(lambda seconds: seconds is not None, "seconds cannot be None")
 @icontract.ensure(lambda result: result is not None, "result must not be None")
 def offset_tt2tdbh(seconds: float) -> float:
@@ -58,7 +83,14 @@ def offset_tt2tdbh(seconds: float) -> float:
     )
 
 
-@register_atom(witness_tt2tdb_offset)
+@symbolic_atom(
+    witness_tt2tdb_offset,
+    expr=LOW_ORDER_TT2TDB_EXPR,
+    dim_map=LOW_ORDER_TT2TDB_DIM_MAP,
+    constants=LOW_ORDER_TT2TDB_CONSTANTS,
+    variables=LOW_ORDER_TT2TDB_VARIABLES,
+    bibliography=TEMPO_OFFSET_BIBLIOGRAPHY,
+)
 @icontract.require(lambda seconds: isinstance(seconds, (float, int, np.ndarray, np.number)), "seconds must be numeric")
 @icontract.ensure(lambda result: result is not None, "result must not be None")
 def tt2tdb_offset(seconds: float | np.ndarray) -> float | np.ndarray:

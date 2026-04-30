@@ -5,7 +5,18 @@ from __future__ import annotations
 import numpy as np
 
 import icontract
+from sciona.ghost.decorators import symbolic_atom
 from sciona.ghost.registry import register_atom
+from .expressions import (
+    APPLY_OFFSETS_DIM_MAP,
+    APPLY_OFFSETS_EXPR,
+    APPLY_OFFSETS_VARIABLES,
+    TEMPO_BIBLIOGRAPHY,
+    ZERO_OFFSET_CONSTANTS,
+    ZERO_OFFSET_DIM_MAP,
+    ZERO_OFFSET_EXPR,
+    ZERO_OFFSET_VARIABLES,
+)
 from .witnesses import witness__zero_offset, witness_apply_offsets, witness_show
 
 # Witness functions should be imported from the generated witnesses module
@@ -26,7 +37,14 @@ def show(io: str, s: str) -> str:
     """
     return str(s)
 
-@register_atom(witness__zero_offset)
+@symbolic_atom(
+    witness__zero_offset,
+    expr=ZERO_OFFSET_EXPR,
+    dim_map=ZERO_OFFSET_DIM_MAP,
+    constants=ZERO_OFFSET_CONSTANTS,
+    variables=ZERO_OFFSET_VARIABLES,
+    bibliography=TEMPO_BIBLIOGRAPHY,
+)
 @icontract.require(lambda seconds: seconds is not None, "seconds cannot be None")
 @icontract.ensure(lambda result: result is not None, " Zero Offset output must not be None")
 def _zero_offset(seconds: float) -> float:
@@ -40,7 +58,13 @@ def _zero_offset(seconds: float) -> float:
     """
     return 0.0
 
-@register_atom(witness_apply_offsets)
+@symbolic_atom(
+    witness_apply_offsets,
+    expr=APPLY_OFFSETS_EXPR,
+    dim_map=APPLY_OFFSETS_DIM_MAP,
+    variables=APPLY_OFFSETS_VARIABLES,
+    bibliography=TEMPO_BIBLIOGRAPHY,
+)
 @icontract.require(lambda sec: sec is not None, "sec cannot be None")
 @icontract.require(lambda ts1: ts1 is not None, "ts1 cannot be None")
 @icontract.require(lambda ts2: ts2 is not None, "ts2 cannot be None")

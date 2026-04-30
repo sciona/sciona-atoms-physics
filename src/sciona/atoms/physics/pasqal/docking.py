@@ -20,6 +20,27 @@ if TYPE_CHECKING:
     import networkx as nx
 
 
+SYMBOLIC_REVIEW_BLOCKERS = {
+    "sub_graph_embedder": (
+        "No sound @symbolic_atom expression was added: the atom maps sorted "
+        "NetworkX node identifiers into graph embeddings and returns a copied "
+        "Pydantic state. The behavior is discrete graph selection, not a "
+        "physical equation."
+    ),
+    "graph_transformer": (
+        "No sound @symbolic_atom expression was added: the atom filters and "
+        "rewrites graph edges against a lattice graph while updating state. "
+        "Encoding this as a scalar equation would lose the graph topology."
+    ),
+    "quantum_mwis_solver": (
+        "No sound @symbolic_atom expression was added: the atom delegates to "
+        "the optional Pulser neutral-atom backend and returns sampled "
+        "independent sets. The result is backend- and sample-dependent rather "
+        "than a deterministic SymPy expression."
+    ),
+}
+
+
 def _nx() -> Any:
     import networkx as nx
 

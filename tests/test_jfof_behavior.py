@@ -2,10 +2,16 @@ from __future__ import annotations
 
 import numpy as np
 
+from sciona.atoms.physics.jFOF.atoms import FOF_DIM_MAP
 from sciona.atoms.physics.jFOF.atoms import find_fof_clusters
-from sciona.atoms.physics.jFOF.topo import topological_loss_computation
+from sciona.atoms.physics.jFOF.topo import (
+    TOPOLOGICAL_LOSS_DIM_MAP,
+    topological_loss_computation,
+)
 from sciona.atoms.physics.jFOF.topo_witnesses import witness_topological_loss_computation
 from sciona.ghost.abstract import AbstractArray, AbstractScalar
+from sciona.ghost.dimensions import DIMENSIONLESS, METER
+from sciona.ghost.registry import REGISTRY
 
 
 def test_find_fof_clusters_groups_nearby_points() -> None:
@@ -54,3 +60,26 @@ def test_topological_loss_witness_is_scalar() -> None:
 
     assert isinstance(result, AbstractScalar)
     assert result.dtype == "float64"
+
+
+def test_jfof_registers_dimensional_metadata_without_forcing_symbolic_equations() -> None:
+    cluster_entry = REGISTRY["find_fof_clusters"]
+    loss_entry = REGISTRY["topological_loss_computation"]
+
+    assert cluster_entry["symbolic"] is None
+    assert loss_entry["symbolic"] is None
+    assert cluster_entry["dim_signature"] == FOF_DIM_MAP
+    assert loss_entry["dim_signature"] == TOPOLOGICAL_LOSS_DIM_MAP
+    assert cluster_entry["dim_signature"]["x"] == METER
+    assert cluster_entry["dim_signature"]["b"] == METER
+    assert cluster_entry["dim_signature"]["labels"] == DIMENSIONLESS
+    assert loss_entry["dim_signature"]["pos32"] == METER
+    assert loss_entry["dim_signature"]["b"] == METER
+    assert loss_entry["dim_signature"]["loss"] == DIMENSIONLESS
+
+
+def test_jfof_symbolic_review_blockers_are_explicit() -> None:
+    from sciona.atoms.physics.jFOF import atoms, topo
+
+    assert "union-find component labels" in atoms.SYMBOLIC_REVIEW_BLOCKERS["find_fof_clusters"]
+    assert "neighbor-indexed softmax" in topo.SYMBOLIC_REVIEW_BLOCKERS["topological_loss_computation"]

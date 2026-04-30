@@ -5,6 +5,7 @@ from typing import TypeAlias
 import icontract
 import numpy as np
 
+from sciona.ghost.dimensions import DIMENSIONLESS, METER
 from sciona.ghost.registry import register_atom
 
 from .topo_witnesses import witness_topological_loss_computation
@@ -13,7 +14,28 @@ Array: TypeAlias = np.ndarray
 Scalar: TypeAlias = float
 
 
-@register_atom(witness_topological_loss_computation)
+TOPOLOGICAL_LOSS_DIM_MAP = {
+    "key": DIMENSIONLESS,
+    "logits": DIMENSIONLESS,
+    "pos32": METER,
+    "nbr_idx": DIMENSIONLESS,
+    "b": METER,
+    "max_iters": DIMENSIONLESS,
+    "tau": DIMENSIONLESS,
+    "loss": DIMENSIONLESS,
+}
+
+SYMBOLIC_REVIEW_BLOCKERS = {
+    "topological_loss_computation": (
+        "No sound @symbolic_atom expression was added: the implementation is "
+        "a neighbor-indexed softmax cross-entropy reduction over arrays. The "
+        "current SymbolicExpression dimensional checker does not model indexed "
+        "sums, graph adjacency, loop bounds, or array shape-dependent reductions."
+    ),
+}
+
+
+@register_atom(witness_topological_loss_computation, dim_map=TOPOLOGICAL_LOSS_DIM_MAP)
 @icontract.require(lambda tau: isinstance(tau, (float, int, np.number)), "tau must be numeric")
 @icontract.ensure(lambda result: result is not None, "topological_loss_computation output must not be None")
 def topological_loss_computation(

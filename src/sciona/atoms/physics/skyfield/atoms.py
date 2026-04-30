@@ -5,7 +5,18 @@ from __future__ import annotations
 import numpy as np
 
 import icontract
-from sciona.ghost.registry import register_atom
+from sciona.ghost.decorators import symbolic_atom
+from .expressions import (
+    SKYFIELD_BIBLIOGRAPHY,
+    SPHERICAL_RANGE_RATE_EXPR,
+    SPHERICAL_RATES_DIM_MAP,
+    SPHERICAL_RATES_VALIDITY_BOUNDS,
+    SPHERICAL_RATES_VARIABLES,
+    VECTOR_ANGLE_DIM_MAP,
+    VECTOR_ANGLE_EXPR,
+    VECTOR_ANGLE_VALIDITY_BOUNDS,
+    VECTOR_ANGLE_VARIABLES,
+)
 from .witnesses import (
     witness_compute_spherical_coordinate_rates,
     witness_calculate_vector_angle,
@@ -14,7 +25,14 @@ from skyfield.functions import angle_between
 from skyfield.functions import _to_spherical_and_rates
 
 
-@register_atom(witness_compute_spherical_coordinate_rates)
+@symbolic_atom(
+    witness_compute_spherical_coordinate_rates,
+    expr=SPHERICAL_RANGE_RATE_EXPR,
+    dim_map=SPHERICAL_RATES_DIM_MAP,
+    validity_bounds=SPHERICAL_RATES_VALIDITY_BOUNDS,
+    variables=SPHERICAL_RATES_VARIABLES,
+    bibliography=SKYFIELD_BIBLIOGRAPHY,
+)
 @icontract.require(lambda r: r is not None, "r cannot be None")
 @icontract.require(lambda v: v is not None, "v cannot be None")
 @icontract.ensure(lambda result: result is not None, "compute_spherical_coordinate_rates output must not be None")
@@ -33,7 +51,14 @@ def compute_spherical_coordinate_rates(
     """
     return _to_spherical_and_rates(r, v)
 
-@register_atom(witness_calculate_vector_angle)
+@symbolic_atom(
+    witness_calculate_vector_angle,
+    expr=VECTOR_ANGLE_EXPR,
+    dim_map=VECTOR_ANGLE_DIM_MAP,
+    validity_bounds=VECTOR_ANGLE_VALIDITY_BOUNDS,
+    variables=VECTOR_ANGLE_VARIABLES,
+    bibliography=SKYFIELD_BIBLIOGRAPHY,
+)
 @icontract.require(lambda u: u is not None, "u cannot be None")
 @icontract.require(lambda v: v is not None, "v cannot be None")
 @icontract.ensure(lambda result: result is not None, "calculate_vector_angle output must not be None")
