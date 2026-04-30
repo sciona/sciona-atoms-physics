@@ -51,7 +51,7 @@
       ],
       "auto_attribution_runs": []
     },
-    "sciona.atoms.physics.pulsar_folding.dm_can.dm_candidate_filter@sciona/atoms/physics/pulsar_folding/dm_can.py:16": {
+    "sciona.atoms.physics.pulsar_folding.dm_can.dm_candidate_filter@sciona/atoms/physics/pulsar_folding/dm_can.py:34": {
       "references": [
         {
           "ref_id": "lorimer2005pulsar",

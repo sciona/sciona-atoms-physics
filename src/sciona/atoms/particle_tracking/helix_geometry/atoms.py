@@ -25,8 +25,30 @@ import numpy as np
 from numpy.typing import NDArray
 
 import icontract
-from sciona.ghost.registry import register_atom
+from sciona.ghost.decorators import symbolic_atom
 
+from .expressions import (
+    CIRCLE_DIM_MAP,
+    CIRCLE_RADIUS_EXPR,
+    CIRCLE_VALIDITY_BOUNDS,
+    CIRCLE_VARIABLES,
+    HELIX_DIRECTION_DIM_MAP,
+    HELIX_DIRECTION_EXPR,
+    HELIX_DIRECTION_VARIABLES,
+    HELIX_GEOMETRY_BIBLIOGRAPHY,
+    LEAST_SQUARES_PITCH_DIM_MAP,
+    LEAST_SQUARES_PITCH_EXPR,
+    LEAST_SQUARES_PITCH_VALIDITY_BOUNDS,
+    LEAST_SQUARES_PITCH_VARIABLES,
+    NEAREST_POINT_DISTANCE_DIM_MAP,
+    NEAREST_POINT_DISTANCE_EXPR,
+    NEAREST_POINT_DISTANCE_VALIDITY_BOUNDS,
+    NEAREST_POINT_DISTANCE_VARIABLES,
+    PITCH_FROM_TWO_POINTS_DIM_MAP,
+    PITCH_FROM_TWO_POINTS_EXPR,
+    PITCH_FROM_TWO_POINTS_VALIDITY_BOUNDS,
+    PITCH_FROM_TWO_POINTS_VARIABLES,
+)
 from .witnesses import (
     witness_circle_from_three_points,
     witness_helix_direction_from_two_points,
@@ -36,7 +58,14 @@ from .witnesses import (
 )
 
 
-@register_atom(witness_circle_from_three_points)
+@symbolic_atom(
+    witness_circle_from_three_points,
+    expr=CIRCLE_RADIUS_EXPR,
+    dim_map=CIRCLE_DIM_MAP,
+    validity_bounds=CIRCLE_VALIDITY_BOUNDS,
+    variables=CIRCLE_VARIABLES,
+    bibliography=HELIX_GEOMETRY_BIBLIOGRAPHY,
+)
 @icontract.require(lambda x1: len(x1) >= 1, "need at least one point triple")
 @icontract.ensure(lambda result: all(np.all(np.isfinite(a)) for a in result), "all outputs must be finite")
 def circle_from_three_points(
@@ -102,7 +131,14 @@ def circle_from_three_points(
     return xm, ym, r
 
 
-@register_atom(witness_helix_pitch_from_two_points)
+@symbolic_atom(
+    witness_helix_pitch_from_two_points,
+    expr=PITCH_FROM_TWO_POINTS_EXPR,
+    dim_map=PITCH_FROM_TWO_POINTS_DIM_MAP,
+    validity_bounds=PITCH_FROM_TWO_POINTS_VALIDITY_BOUNDS,
+    variables=PITCH_FROM_TWO_POINTS_VARIABLES,
+    bibliography=["steiner2018trackml"],
+)
 @icontract.require(lambda x1: len(x1) >= 1, "need at least one point pair")
 @icontract.ensure(lambda result: np.all(np.isfinite(result[0])), "pitch must be finite")
 def helix_pitch_from_two_points(
@@ -147,7 +183,14 @@ def helix_pitch_from_two_points(
     return hel_pitch, phid, dz
 
 
-@register_atom(witness_helix_pitch_least_squares)
+@symbolic_atom(
+    witness_helix_pitch_least_squares,
+    expr=LEAST_SQUARES_PITCH_EXPR,
+    dim_map=LEAST_SQUARES_PITCH_DIM_MAP,
+    validity_bounds=LEAST_SQUARES_PITCH_VALIDITY_BOUNDS,
+    variables=LEAST_SQUARES_PITCH_VARIABLES,
+    bibliography=["steiner2018trackml"],
+)
 @icontract.require(lambda x1: len(x1) >= 1, "need at least one point triple")
 @icontract.ensure(lambda result: np.all(np.isfinite(result[0])), "pitch must be finite")
 def helix_pitch_least_squares(
@@ -226,7 +269,13 @@ def helix_pitch_least_squares(
     return hel_pitch, phid, dz, loss
 
 
-@register_atom(witness_helix_direction_from_two_points)
+@symbolic_atom(
+    witness_helix_direction_from_two_points,
+    expr=HELIX_DIRECTION_EXPR,
+    dim_map=HELIX_DIRECTION_DIM_MAP,
+    variables=HELIX_DIRECTION_VARIABLES,
+    bibliography=["steiner2018trackml"],
+)
 @icontract.require(lambda hel_xm: len(hel_xm) >= 1, "need at least one helix")
 @icontract.ensure(lambda result: np.all(np.isfinite(result)), "direction must be finite")
 def helix_direction_from_two_points(
@@ -264,7 +313,14 @@ def helix_direction_from_two_points(
     return hel_dz
 
 
-@register_atom(witness_helix_nearest_point_distance)
+@symbolic_atom(
+    witness_helix_nearest_point_distance,
+    expr=NEAREST_POINT_DISTANCE_EXPR,
+    dim_map=NEAREST_POINT_DISTANCE_DIM_MAP,
+    validity_bounds=NEAREST_POINT_DISTANCE_VALIDITY_BOUNDS,
+    variables=NEAREST_POINT_DISTANCE_VARIABLES,
+    bibliography=HELIX_GEOMETRY_BIBLIOGRAPHY,
+)
 @icontract.require(lambda x: len(x) >= 1, "need at least one reference point")
 @icontract.ensure(lambda result: np.all(result[3] >= 0), "distances must be non-negative")
 def helix_nearest_point_distance(

@@ -1,11 +1,14 @@
 from __future__ import annotations
 
 import numpy as np
+import sympy as sp
 
 from sciona.atoms.physics.pulsar_folding.atoms import dm_can_brute_force, spline_bandpass_correction
 from sciona.atoms.physics.pulsar_folding.dm_can import dm_candidate_filter
 from sciona.atoms.physics.pulsar_folding.dm_can_witnesses import witness_dm_candidate_filter
+from sciona.ghost.dimensions import DimensionalSignature
 from sciona.ghost.abstract import AbstractArray
+from sciona.ghost.registry import REGISTRY
 
 
 def test_dm_can_brute_force_returns_the_input_when_all_rolls_tie() -> None:
@@ -42,6 +45,27 @@ def test_dm_candidate_filter_returns_one_score_per_candidate() -> None:
 
     assert result.shape == (3,)
     assert np.array_equal(result, np.array([1.0, 1.0, 1.0], dtype=np.float64))
+
+
+def test_dm_candidate_filter_registers_dispersion_delay_symbolic_metadata() -> None:
+    entry = REGISTRY["dm_candidate_filter"]
+    symbolic = entry["symbolic"]
+
+    assert symbolic is not None
+    assert symbolic.constants == {"K": 4.148808e3}
+    assert entry["dim_signature"]["DM"] == DimensionalSignature(L=-2)
+    assert symbolic.validity_bounds["DM"] == (0.0, None)
+    assert symbolic.validity_bounds["candidates"] == (0.0, None)
+    assert symbolic.validity_bounds["fchan"] == (0.0, None)
+    assert symbolic.validity_bounds["sens"] == (0.0, None)
+    assert symbolic.validity_bounds["width"] == (0.0, None)
+    assert symbolic.validity_bounds["tsamp"] == (0.0, None)
+    assert symbolic.check_dimensional_consistency() == []
+
+    equation = symbolic.to_sympy()
+    K, DM, fchan = sp.symbols("K DM fchan")
+    assert str(equation.lhs) == "delay"
+    assert sp.simplify(equation.rhs - K * DM * fchan**-2) == 0
 
 
 def test_dm_candidate_filter_witness_tracks_candidate_count() -> None:
