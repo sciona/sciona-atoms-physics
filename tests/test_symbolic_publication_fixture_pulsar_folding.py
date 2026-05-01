@@ -65,10 +65,14 @@ def test_pulsar_folding_publication_fixture_surfaces_symbolic_review_metadata() 
     assert variables["K"]["variable_role"] == "constant"
     assert variables["delay"]["variable_role"] == "output"
     assert variables["fchan"]["dimension_source"] == "source"
+    assert variables["DM_base"]["variable_role"] == "input"
+    assert variables["candidates"]["dim_signature"] == "L-2"
+    assert variables["sens"]["dim_signature"] == "1"
 
     assert bounds["DM"]["lower_value"] == 0.0
     assert bounds["DM"]["upper_value"] is None
     assert bounds["DM"]["validity_statement"] == "DM >= 0.0"
+    assert bounds["DM_base"]["validity_statement"] == "DM_base >= 0.0"
     assert bounds["fchan"]["dim_signature"] == "T-1"
 
 
@@ -145,8 +149,8 @@ def test_pulsar_folding_publication_fixture_loads_without_database_io() -> None:
     assert result.diagnostics == ()
     rows = result.to_insert_rows()
     assert len(rows["artifact_symbolic_expressions"]) == 1
-    assert len(rows["artifact_symbolic_variables"]) == 4
-    assert len(rows["artifact_validity_bounds"]) == 2
+    assert len(rows["artifact_symbolic_variables"]) == 9
+    assert len(rows["artifact_validity_bounds"]) == 7
     assert rows["artifact_symbolic_expressions"][0]["mechanism_tags"] == [
         "dispersion",
         "pulsar_search",
