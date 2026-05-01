@@ -1,0 +1,963 @@
+{
+  "provider": "sciona-atoms-physics",
+  "modules": [
+    "sciona.atoms.physics.skyfield.atoms"
+  ],
+  "artifact_symbolic_expressions": [
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.skyfield.atoms:calculate_vector_angle:0edac416b32fd6fd",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "calculate_vector_angle",
+      "atom_module": "sciona.atoms.physics.skyfield.atoms",
+      "registry_name": "calculate_vector_angle",
+      "expression_id": "63e4d024-102a-5f8e-9323-16ecb93b34c3",
+      "source_expression_id": "sciona-atoms-physics:sciona.atoms.physics.skyfield.atoms:calculate_vector_angle",
+      "expression_srepr": "Equality(cos(Symbol('theta')), Mul(Pow(Symbol('u_norm'), Integer(-1)), Pow(Symbol('w_norm'), Integer(-1)), Add(Mul(Symbol('ux'), Symbol('wx')), Mul(Symbol('uy'), Symbol('wy')), Mul(Symbol('uz'), Symbol('wz')))))",
+      "expression_text": "Eq(cos(theta), (ux*wx + uy*wy + uz*wz)/(u_norm*w_norm))",
+      "sympy_srepr": "Equality(cos(Symbol('theta')), Mul(Pow(Symbol('u_norm'), Integer(-1)), Pow(Symbol('w_norm'), Integer(-1)), Add(Mul(Symbol('ux'), Symbol('wx')), Mul(Symbol('uy'), Symbol('wy')), Mul(Symbol('uz'), Symbol('wz')))))",
+      "raw_formula": "Eq(cos(theta), (ux*wx + uy*wy + uz*wz)/(u_norm*w_norm))",
+      "raw_formula_format": "plain_text",
+      "expression_kind": "equation",
+      "expression_role": "primary",
+      "canonical_expr_hash": "0e51e4f8a371ee137daad7c79a3066c0e46b307a7fc2ad442cf5dbfe6a764962",
+      "topology_hash": "f324f3a119bfca536d8396aa2a0fd439b54dfc8c4d2c7447a8900eb4194cea5b",
+      "dimensional_hash": "521c4d11126cf9378f6d890bcbaee995d2e65bbda81ef391a5c2ba9e54e5710a",
+      "parse_status": "normalized",
+      "parse_confidence": 1.0,
+      "review_status": "automated_pass",
+      "validation_status": "passed",
+      "mechanism_tags": [
+        "astrometry",
+        "coordinate_transform",
+        "vector_geometry"
+      ],
+      "behavioral_archetypes": [
+        "angular_geometry",
+        "coordinate_transform"
+      ],
+      "variables": {
+        "theta": "output",
+        "u": "input",
+        "u_norm": "parameter",
+        "ux": "input",
+        "uy": "input",
+        "uz": "input",
+        "v": "input",
+        "w_norm": "parameter",
+        "wx": "input",
+        "wy": "input",
+        "wz": "input"
+      },
+      "dim_signature": {
+        "theta": "1",
+        "u": "L1",
+        "u_norm": "L1",
+        "ux": "L1",
+        "uy": "L1",
+        "uz": "L1",
+        "v": "L1",
+        "w_norm": "L1",
+        "wx": "L1",
+        "wy": "L1",
+        "wz": "L1"
+      },
+      "symbolic_dim_signature": {
+        "theta": "1",
+        "u": "L1",
+        "u_norm": "L1",
+        "ux": "L1",
+        "uy": "L1",
+        "uz": "L1",
+        "v": "L1",
+        "w_norm": "L1",
+        "wx": "L1",
+        "wy": "L1",
+        "wz": "L1"
+      },
+      "constants": {},
+      "bibliography": [
+        "skyfield2019ascl",
+        "repo_skyfield"
+      ],
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.skyfield.atoms:calculate_vector_angle:0edac416b32fd6fd",
+      "artifact_uuid": null
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.skyfield.atoms:compute_spherical_coordinate_rates:0dc680816afe0c66",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "compute_spherical_coordinate_rates",
+      "atom_module": "sciona.atoms.physics.skyfield.atoms",
+      "registry_name": "compute_spherical_coordinate_rates",
+      "expression_id": "a4aa3eb5-4b84-5527-bbef-2751a4e3f3f1",
+      "source_expression_id": "sciona-atoms-physics:sciona.atoms.physics.skyfield.atoms:compute_spherical_coordinate_rates",
+      "expression_srepr": "Equality(Symbol('range_rate'), Mul(Pow(Symbol('range'), Integer(-1)), Add(Mul(Symbol('rx'), Symbol('vx')), Mul(Symbol('ry'), Symbol('vy')), Mul(Symbol('rz'), Symbol('vz')))))",
+      "expression_text": "Eq(range_rate, (rx*vx + ry*vy + rz*vz)/range)",
+      "sympy_srepr": "Equality(Symbol('range_rate'), Mul(Pow(Symbol('range'), Integer(-1)), Add(Mul(Symbol('rx'), Symbol('vx')), Mul(Symbol('ry'), Symbol('vy')), Mul(Symbol('rz'), Symbol('vz')))))",
+      "raw_formula": "Eq(range_rate, (rx*vx + ry*vy + rz*vz)/range)",
+      "raw_formula_format": "plain_text",
+      "expression_kind": "equation",
+      "expression_role": "primary",
+      "canonical_expr_hash": "a8516d6f1d1edbbd1562c85bc4ab4cb689236785f627ed0357a4a622fe5c3387",
+      "topology_hash": "7a12dc06d44a6e5e450f50b91068898ae3a98ecfc82911f3d53184d33bf496f8",
+      "dimensional_hash": "618326860939b000aa75691fc88365e32a1763b06756c10175f0b32a04c8453e",
+      "parse_status": "normalized",
+      "parse_confidence": 1.0,
+      "review_status": "automated_pass",
+      "validation_status": "passed",
+      "mechanism_tags": [
+        "astrometry",
+        "coordinate_transform",
+        "vector_geometry"
+      ],
+      "behavioral_archetypes": [
+        "angular_geometry",
+        "coordinate_transform"
+      ],
+      "variables": {
+        "latitude": "output",
+        "latitude_rate": "output",
+        "longitude": "output",
+        "longitude_rate": "output",
+        "r": "input",
+        "range": "output",
+        "range_rate": "output",
+        "rx": "input",
+        "ry": "input",
+        "rz": "input",
+        "v": "input",
+        "vx": "input",
+        "vy": "input",
+        "vz": "input"
+      },
+      "dim_signature": {
+        "latitude": "1",
+        "latitude_rate": "T-1",
+        "longitude": "1",
+        "longitude_rate": "T-1",
+        "r": "L1",
+        "range": "L1",
+        "range_rate": "L1T-1",
+        "rx": "L1",
+        "ry": "L1",
+        "rz": "L1",
+        "v": "L1T-1",
+        "vx": "L1T-1",
+        "vy": "L1T-1",
+        "vz": "L1T-1"
+      },
+      "symbolic_dim_signature": {
+        "latitude": "1",
+        "latitude_rate": "T-1",
+        "longitude": "1",
+        "longitude_rate": "T-1",
+        "r": "L1",
+        "range": "L1",
+        "range_rate": "L1T-1",
+        "rx": "L1",
+        "ry": "L1",
+        "rz": "L1",
+        "v": "L1T-1",
+        "vx": "L1T-1",
+        "vy": "L1T-1",
+        "vz": "L1T-1"
+      },
+      "constants": {},
+      "bibliography": [
+        "skyfield2019ascl",
+        "repo_skyfield"
+      ],
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.skyfield.atoms:compute_spherical_coordinate_rates:0dc680816afe0c66",
+      "artifact_uuid": null
+    }
+  ],
+  "artifact_symbolic_variables": [
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.skyfield.atoms:calculate_vector_angle:0edac416b32fd6fd",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.skyfield.atoms:calculate_vector_angle:0edac416b32fd6fd",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "calculate_vector_angle",
+      "atom_module": "sciona.atoms.physics.skyfield.atoms",
+      "registry_name": "calculate_vector_angle",
+      "expression_id": "63e4d024-102a-5f8e-9323-16ecb93b34c3",
+      "symbol": "theta",
+      "symbol_name": "theta",
+      "source_symbol": "theta",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.physics.skyfield.atoms:calculate_vector_angle:variable:theta",
+      "role": "output",
+      "variable_role": "output",
+      "dim_signature": "1",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "1",
+        "symbolic_role": "output"
+      },
+      "evidence_json": {
+        "source_symbol": "theta",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.physics.skyfield.atoms:calculate_vector_angle"
+      },
+      "ordinal": 0
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.skyfield.atoms:calculate_vector_angle:0edac416b32fd6fd",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.skyfield.atoms:calculate_vector_angle:0edac416b32fd6fd",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "calculate_vector_angle",
+      "atom_module": "sciona.atoms.physics.skyfield.atoms",
+      "registry_name": "calculate_vector_angle",
+      "expression_id": "63e4d024-102a-5f8e-9323-16ecb93b34c3",
+      "symbol": "u",
+      "symbol_name": "u",
+      "source_symbol": "u",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.physics.skyfield.atoms:calculate_vector_angle:variable:u",
+      "role": "input",
+      "variable_role": "input",
+      "dim_signature": "L1",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "L1",
+        "symbolic_role": "input"
+      },
+      "evidence_json": {
+        "source_symbol": "u",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.physics.skyfield.atoms:calculate_vector_angle"
+      },
+      "ordinal": 1
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.skyfield.atoms:calculate_vector_angle:0edac416b32fd6fd",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.skyfield.atoms:calculate_vector_angle:0edac416b32fd6fd",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "calculate_vector_angle",
+      "atom_module": "sciona.atoms.physics.skyfield.atoms",
+      "registry_name": "calculate_vector_angle",
+      "expression_id": "63e4d024-102a-5f8e-9323-16ecb93b34c3",
+      "symbol": "u_norm",
+      "symbol_name": "u_norm",
+      "source_symbol": "u_norm",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.physics.skyfield.atoms:calculate_vector_angle:variable:u_norm",
+      "role": "parameter",
+      "variable_role": "parameter",
+      "dim_signature": "L1",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "L1",
+        "symbolic_role": "parameter"
+      },
+      "evidence_json": {
+        "source_symbol": "u_norm",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.physics.skyfield.atoms:calculate_vector_angle"
+      },
+      "ordinal": 2
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.skyfield.atoms:calculate_vector_angle:0edac416b32fd6fd",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.skyfield.atoms:calculate_vector_angle:0edac416b32fd6fd",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "calculate_vector_angle",
+      "atom_module": "sciona.atoms.physics.skyfield.atoms",
+      "registry_name": "calculate_vector_angle",
+      "expression_id": "63e4d024-102a-5f8e-9323-16ecb93b34c3",
+      "symbol": "ux",
+      "symbol_name": "ux",
+      "source_symbol": "ux",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.physics.skyfield.atoms:calculate_vector_angle:variable:ux",
+      "role": "input",
+      "variable_role": "input",
+      "dim_signature": "L1",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "L1",
+        "symbolic_role": "input"
+      },
+      "evidence_json": {
+        "source_symbol": "ux",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.physics.skyfield.atoms:calculate_vector_angle"
+      },
+      "ordinal": 3
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.skyfield.atoms:calculate_vector_angle:0edac416b32fd6fd",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.skyfield.atoms:calculate_vector_angle:0edac416b32fd6fd",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "calculate_vector_angle",
+      "atom_module": "sciona.atoms.physics.skyfield.atoms",
+      "registry_name": "calculate_vector_angle",
+      "expression_id": "63e4d024-102a-5f8e-9323-16ecb93b34c3",
+      "symbol": "uy",
+      "symbol_name": "uy",
+      "source_symbol": "uy",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.physics.skyfield.atoms:calculate_vector_angle:variable:uy",
+      "role": "input",
+      "variable_role": "input",
+      "dim_signature": "L1",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "L1",
+        "symbolic_role": "input"
+      },
+      "evidence_json": {
+        "source_symbol": "uy",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.physics.skyfield.atoms:calculate_vector_angle"
+      },
+      "ordinal": 4
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.skyfield.atoms:calculate_vector_angle:0edac416b32fd6fd",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.skyfield.atoms:calculate_vector_angle:0edac416b32fd6fd",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "calculate_vector_angle",
+      "atom_module": "sciona.atoms.physics.skyfield.atoms",
+      "registry_name": "calculate_vector_angle",
+      "expression_id": "63e4d024-102a-5f8e-9323-16ecb93b34c3",
+      "symbol": "uz",
+      "symbol_name": "uz",
+      "source_symbol": "uz",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.physics.skyfield.atoms:calculate_vector_angle:variable:uz",
+      "role": "input",
+      "variable_role": "input",
+      "dim_signature": "L1",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "L1",
+        "symbolic_role": "input"
+      },
+      "evidence_json": {
+        "source_symbol": "uz",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.physics.skyfield.atoms:calculate_vector_angle"
+      },
+      "ordinal": 5
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.skyfield.atoms:calculate_vector_angle:0edac416b32fd6fd",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.skyfield.atoms:calculate_vector_angle:0edac416b32fd6fd",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "calculate_vector_angle",
+      "atom_module": "sciona.atoms.physics.skyfield.atoms",
+      "registry_name": "calculate_vector_angle",
+      "expression_id": "63e4d024-102a-5f8e-9323-16ecb93b34c3",
+      "symbol": "v",
+      "symbol_name": "v",
+      "source_symbol": "v",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.physics.skyfield.atoms:calculate_vector_angle:variable:v",
+      "role": "input",
+      "variable_role": "input",
+      "dim_signature": "L1",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "L1",
+        "symbolic_role": "input"
+      },
+      "evidence_json": {
+        "source_symbol": "v",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.physics.skyfield.atoms:calculate_vector_angle"
+      },
+      "ordinal": 6
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.skyfield.atoms:calculate_vector_angle:0edac416b32fd6fd",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.skyfield.atoms:calculate_vector_angle:0edac416b32fd6fd",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "calculate_vector_angle",
+      "atom_module": "sciona.atoms.physics.skyfield.atoms",
+      "registry_name": "calculate_vector_angle",
+      "expression_id": "63e4d024-102a-5f8e-9323-16ecb93b34c3",
+      "symbol": "w_norm",
+      "symbol_name": "w_norm",
+      "source_symbol": "w_norm",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.physics.skyfield.atoms:calculate_vector_angle:variable:w_norm",
+      "role": "parameter",
+      "variable_role": "parameter",
+      "dim_signature": "L1",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "L1",
+        "symbolic_role": "parameter"
+      },
+      "evidence_json": {
+        "source_symbol": "w_norm",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.physics.skyfield.atoms:calculate_vector_angle"
+      },
+      "ordinal": 7
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.skyfield.atoms:calculate_vector_angle:0edac416b32fd6fd",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.skyfield.atoms:calculate_vector_angle:0edac416b32fd6fd",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "calculate_vector_angle",
+      "atom_module": "sciona.atoms.physics.skyfield.atoms",
+      "registry_name": "calculate_vector_angle",
+      "expression_id": "63e4d024-102a-5f8e-9323-16ecb93b34c3",
+      "symbol": "wx",
+      "symbol_name": "wx",
+      "source_symbol": "wx",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.physics.skyfield.atoms:calculate_vector_angle:variable:wx",
+      "role": "input",
+      "variable_role": "input",
+      "dim_signature": "L1",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "L1",
+        "symbolic_role": "input"
+      },
+      "evidence_json": {
+        "source_symbol": "wx",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.physics.skyfield.atoms:calculate_vector_angle"
+      },
+      "ordinal": 8
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.skyfield.atoms:calculate_vector_angle:0edac416b32fd6fd",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.skyfield.atoms:calculate_vector_angle:0edac416b32fd6fd",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "calculate_vector_angle",
+      "atom_module": "sciona.atoms.physics.skyfield.atoms",
+      "registry_name": "calculate_vector_angle",
+      "expression_id": "63e4d024-102a-5f8e-9323-16ecb93b34c3",
+      "symbol": "wy",
+      "symbol_name": "wy",
+      "source_symbol": "wy",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.physics.skyfield.atoms:calculate_vector_angle:variable:wy",
+      "role": "input",
+      "variable_role": "input",
+      "dim_signature": "L1",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "L1",
+        "symbolic_role": "input"
+      },
+      "evidence_json": {
+        "source_symbol": "wy",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.physics.skyfield.atoms:calculate_vector_angle"
+      },
+      "ordinal": 9
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.skyfield.atoms:calculate_vector_angle:0edac416b32fd6fd",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.skyfield.atoms:calculate_vector_angle:0edac416b32fd6fd",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "calculate_vector_angle",
+      "atom_module": "sciona.atoms.physics.skyfield.atoms",
+      "registry_name": "calculate_vector_angle",
+      "expression_id": "63e4d024-102a-5f8e-9323-16ecb93b34c3",
+      "symbol": "wz",
+      "symbol_name": "wz",
+      "source_symbol": "wz",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.physics.skyfield.atoms:calculate_vector_angle:variable:wz",
+      "role": "input",
+      "variable_role": "input",
+      "dim_signature": "L1",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "L1",
+        "symbolic_role": "input"
+      },
+      "evidence_json": {
+        "source_symbol": "wz",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.physics.skyfield.atoms:calculate_vector_angle"
+      },
+      "ordinal": 10
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.skyfield.atoms:compute_spherical_coordinate_rates:0dc680816afe0c66",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.skyfield.atoms:compute_spherical_coordinate_rates:0dc680816afe0c66",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "compute_spherical_coordinate_rates",
+      "atom_module": "sciona.atoms.physics.skyfield.atoms",
+      "registry_name": "compute_spherical_coordinate_rates",
+      "expression_id": "a4aa3eb5-4b84-5527-bbef-2751a4e3f3f1",
+      "symbol": "latitude",
+      "symbol_name": "latitude",
+      "source_symbol": "latitude",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.physics.skyfield.atoms:compute_spherical_coordinate_rates:variable:latitude",
+      "role": "output",
+      "variable_role": "output",
+      "dim_signature": "1",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "1",
+        "symbolic_role": "output"
+      },
+      "evidence_json": {
+        "source_symbol": "latitude",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.physics.skyfield.atoms:compute_spherical_coordinate_rates"
+      },
+      "ordinal": 0
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.skyfield.atoms:compute_spherical_coordinate_rates:0dc680816afe0c66",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.skyfield.atoms:compute_spherical_coordinate_rates:0dc680816afe0c66",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "compute_spherical_coordinate_rates",
+      "atom_module": "sciona.atoms.physics.skyfield.atoms",
+      "registry_name": "compute_spherical_coordinate_rates",
+      "expression_id": "a4aa3eb5-4b84-5527-bbef-2751a4e3f3f1",
+      "symbol": "latitude_rate",
+      "symbol_name": "latitude_rate",
+      "source_symbol": "latitude_rate",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.physics.skyfield.atoms:compute_spherical_coordinate_rates:variable:latitude_rate",
+      "role": "output",
+      "variable_role": "output",
+      "dim_signature": "T-1",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "T-1",
+        "symbolic_role": "output"
+      },
+      "evidence_json": {
+        "source_symbol": "latitude_rate",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.physics.skyfield.atoms:compute_spherical_coordinate_rates"
+      },
+      "ordinal": 1
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.skyfield.atoms:compute_spherical_coordinate_rates:0dc680816afe0c66",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.skyfield.atoms:compute_spherical_coordinate_rates:0dc680816afe0c66",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "compute_spherical_coordinate_rates",
+      "atom_module": "sciona.atoms.physics.skyfield.atoms",
+      "registry_name": "compute_spherical_coordinate_rates",
+      "expression_id": "a4aa3eb5-4b84-5527-bbef-2751a4e3f3f1",
+      "symbol": "longitude",
+      "symbol_name": "longitude",
+      "source_symbol": "longitude",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.physics.skyfield.atoms:compute_spherical_coordinate_rates:variable:longitude",
+      "role": "output",
+      "variable_role": "output",
+      "dim_signature": "1",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "1",
+        "symbolic_role": "output"
+      },
+      "evidence_json": {
+        "source_symbol": "longitude",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.physics.skyfield.atoms:compute_spherical_coordinate_rates"
+      },
+      "ordinal": 2
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.skyfield.atoms:compute_spherical_coordinate_rates:0dc680816afe0c66",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.skyfield.atoms:compute_spherical_coordinate_rates:0dc680816afe0c66",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "compute_spherical_coordinate_rates",
+      "atom_module": "sciona.atoms.physics.skyfield.atoms",
+      "registry_name": "compute_spherical_coordinate_rates",
+      "expression_id": "a4aa3eb5-4b84-5527-bbef-2751a4e3f3f1",
+      "symbol": "longitude_rate",
+      "symbol_name": "longitude_rate",
+      "source_symbol": "longitude_rate",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.physics.skyfield.atoms:compute_spherical_coordinate_rates:variable:longitude_rate",
+      "role": "output",
+      "variable_role": "output",
+      "dim_signature": "T-1",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "T-1",
+        "symbolic_role": "output"
+      },
+      "evidence_json": {
+        "source_symbol": "longitude_rate",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.physics.skyfield.atoms:compute_spherical_coordinate_rates"
+      },
+      "ordinal": 3
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.skyfield.atoms:compute_spherical_coordinate_rates:0dc680816afe0c66",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.skyfield.atoms:compute_spherical_coordinate_rates:0dc680816afe0c66",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "compute_spherical_coordinate_rates",
+      "atom_module": "sciona.atoms.physics.skyfield.atoms",
+      "registry_name": "compute_spherical_coordinate_rates",
+      "expression_id": "a4aa3eb5-4b84-5527-bbef-2751a4e3f3f1",
+      "symbol": "r",
+      "symbol_name": "r",
+      "source_symbol": "r",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.physics.skyfield.atoms:compute_spherical_coordinate_rates:variable:r",
+      "role": "input",
+      "variable_role": "input",
+      "dim_signature": "L1",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "L1",
+        "symbolic_role": "input"
+      },
+      "evidence_json": {
+        "source_symbol": "r",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.physics.skyfield.atoms:compute_spherical_coordinate_rates"
+      },
+      "ordinal": 4
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.skyfield.atoms:compute_spherical_coordinate_rates:0dc680816afe0c66",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.skyfield.atoms:compute_spherical_coordinate_rates:0dc680816afe0c66",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "compute_spherical_coordinate_rates",
+      "atom_module": "sciona.atoms.physics.skyfield.atoms",
+      "registry_name": "compute_spherical_coordinate_rates",
+      "expression_id": "a4aa3eb5-4b84-5527-bbef-2751a4e3f3f1",
+      "symbol": "range",
+      "symbol_name": "range",
+      "source_symbol": "range",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.physics.skyfield.atoms:compute_spherical_coordinate_rates:variable:range",
+      "role": "output",
+      "variable_role": "output",
+      "dim_signature": "L1",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "L1",
+        "symbolic_role": "output"
+      },
+      "evidence_json": {
+        "source_symbol": "range",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.physics.skyfield.atoms:compute_spherical_coordinate_rates"
+      },
+      "ordinal": 5
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.skyfield.atoms:compute_spherical_coordinate_rates:0dc680816afe0c66",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.skyfield.atoms:compute_spherical_coordinate_rates:0dc680816afe0c66",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "compute_spherical_coordinate_rates",
+      "atom_module": "sciona.atoms.physics.skyfield.atoms",
+      "registry_name": "compute_spherical_coordinate_rates",
+      "expression_id": "a4aa3eb5-4b84-5527-bbef-2751a4e3f3f1",
+      "symbol": "range_rate",
+      "symbol_name": "range_rate",
+      "source_symbol": "range_rate",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.physics.skyfield.atoms:compute_spherical_coordinate_rates:variable:range_rate",
+      "role": "output",
+      "variable_role": "output",
+      "dim_signature": "L1T-1",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "L1T-1",
+        "symbolic_role": "output"
+      },
+      "evidence_json": {
+        "source_symbol": "range_rate",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.physics.skyfield.atoms:compute_spherical_coordinate_rates"
+      },
+      "ordinal": 6
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.skyfield.atoms:compute_spherical_coordinate_rates:0dc680816afe0c66",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.skyfield.atoms:compute_spherical_coordinate_rates:0dc680816afe0c66",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "compute_spherical_coordinate_rates",
+      "atom_module": "sciona.atoms.physics.skyfield.atoms",
+      "registry_name": "compute_spherical_coordinate_rates",
+      "expression_id": "a4aa3eb5-4b84-5527-bbef-2751a4e3f3f1",
+      "symbol": "rx",
+      "symbol_name": "rx",
+      "source_symbol": "rx",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.physics.skyfield.atoms:compute_spherical_coordinate_rates:variable:rx",
+      "role": "input",
+      "variable_role": "input",
+      "dim_signature": "L1",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "L1",
+        "symbolic_role": "input"
+      },
+      "evidence_json": {
+        "source_symbol": "rx",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.physics.skyfield.atoms:compute_spherical_coordinate_rates"
+      },
+      "ordinal": 7
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.skyfield.atoms:compute_spherical_coordinate_rates:0dc680816afe0c66",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.skyfield.atoms:compute_spherical_coordinate_rates:0dc680816afe0c66",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "compute_spherical_coordinate_rates",
+      "atom_module": "sciona.atoms.physics.skyfield.atoms",
+      "registry_name": "compute_spherical_coordinate_rates",
+      "expression_id": "a4aa3eb5-4b84-5527-bbef-2751a4e3f3f1",
+      "symbol": "ry",
+      "symbol_name": "ry",
+      "source_symbol": "ry",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.physics.skyfield.atoms:compute_spherical_coordinate_rates:variable:ry",
+      "role": "input",
+      "variable_role": "input",
+      "dim_signature": "L1",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "L1",
+        "symbolic_role": "input"
+      },
+      "evidence_json": {
+        "source_symbol": "ry",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.physics.skyfield.atoms:compute_spherical_coordinate_rates"
+      },
+      "ordinal": 8
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.skyfield.atoms:compute_spherical_coordinate_rates:0dc680816afe0c66",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.skyfield.atoms:compute_spherical_coordinate_rates:0dc680816afe0c66",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "compute_spherical_coordinate_rates",
+      "atom_module": "sciona.atoms.physics.skyfield.atoms",
+      "registry_name": "compute_spherical_coordinate_rates",
+      "expression_id": "a4aa3eb5-4b84-5527-bbef-2751a4e3f3f1",
+      "symbol": "rz",
+      "symbol_name": "rz",
+      "source_symbol": "rz",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.physics.skyfield.atoms:compute_spherical_coordinate_rates:variable:rz",
+      "role": "input",
+      "variable_role": "input",
+      "dim_signature": "L1",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "L1",
+        "symbolic_role": "input"
+      },
+      "evidence_json": {
+        "source_symbol": "rz",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.physics.skyfield.atoms:compute_spherical_coordinate_rates"
+      },
+      "ordinal": 9
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.skyfield.atoms:compute_spherical_coordinate_rates:0dc680816afe0c66",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.skyfield.atoms:compute_spherical_coordinate_rates:0dc680816afe0c66",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "compute_spherical_coordinate_rates",
+      "atom_module": "sciona.atoms.physics.skyfield.atoms",
+      "registry_name": "compute_spherical_coordinate_rates",
+      "expression_id": "a4aa3eb5-4b84-5527-bbef-2751a4e3f3f1",
+      "symbol": "v",
+      "symbol_name": "v",
+      "source_symbol": "v",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.physics.skyfield.atoms:compute_spherical_coordinate_rates:variable:v",
+      "role": "input",
+      "variable_role": "input",
+      "dim_signature": "L1T-1",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "L1T-1",
+        "symbolic_role": "input"
+      },
+      "evidence_json": {
+        "source_symbol": "v",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.physics.skyfield.atoms:compute_spherical_coordinate_rates"
+      },
+      "ordinal": 10
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.skyfield.atoms:compute_spherical_coordinate_rates:0dc680816afe0c66",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.skyfield.atoms:compute_spherical_coordinate_rates:0dc680816afe0c66",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "compute_spherical_coordinate_rates",
+      "atom_module": "sciona.atoms.physics.skyfield.atoms",
+      "registry_name": "compute_spherical_coordinate_rates",
+      "expression_id": "a4aa3eb5-4b84-5527-bbef-2751a4e3f3f1",
+      "symbol": "vx",
+      "symbol_name": "vx",
+      "source_symbol": "vx",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.physics.skyfield.atoms:compute_spherical_coordinate_rates:variable:vx",
+      "role": "input",
+      "variable_role": "input",
+      "dim_signature": "L1T-1",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "L1T-1",
+        "symbolic_role": "input"
+      },
+      "evidence_json": {
+        "source_symbol": "vx",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.physics.skyfield.atoms:compute_spherical_coordinate_rates"
+      },
+      "ordinal": 11
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.skyfield.atoms:compute_spherical_coordinate_rates:0dc680816afe0c66",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.skyfield.atoms:compute_spherical_coordinate_rates:0dc680816afe0c66",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "compute_spherical_coordinate_rates",
+      "atom_module": "sciona.atoms.physics.skyfield.atoms",
+      "registry_name": "compute_spherical_coordinate_rates",
+      "expression_id": "a4aa3eb5-4b84-5527-bbef-2751a4e3f3f1",
+      "symbol": "vy",
+      "symbol_name": "vy",
+      "source_symbol": "vy",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.physics.skyfield.atoms:compute_spherical_coordinate_rates:variable:vy",
+      "role": "input",
+      "variable_role": "input",
+      "dim_signature": "L1T-1",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "L1T-1",
+        "symbolic_role": "input"
+      },
+      "evidence_json": {
+        "source_symbol": "vy",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.physics.skyfield.atoms:compute_spherical_coordinate_rates"
+      },
+      "ordinal": 12
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.skyfield.atoms:compute_spherical_coordinate_rates:0dc680816afe0c66",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.skyfield.atoms:compute_spherical_coordinate_rates:0dc680816afe0c66",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "compute_spherical_coordinate_rates",
+      "atom_module": "sciona.atoms.physics.skyfield.atoms",
+      "registry_name": "compute_spherical_coordinate_rates",
+      "expression_id": "a4aa3eb5-4b84-5527-bbef-2751a4e3f3f1",
+      "symbol": "vz",
+      "symbol_name": "vz",
+      "source_symbol": "vz",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.physics.skyfield.atoms:compute_spherical_coordinate_rates:variable:vz",
+      "role": "input",
+      "variable_role": "input",
+      "dim_signature": "L1T-1",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "L1T-1",
+        "symbolic_role": "input"
+      },
+      "evidence_json": {
+        "source_symbol": "vz",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.physics.skyfield.atoms:compute_spherical_coordinate_rates"
+      },
+      "ordinal": 13
+    }
+  ],
+  "artifact_validity_bounds": [
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.skyfield.atoms:calculate_vector_angle:0edac416b32fd6fd",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.skyfield.atoms:calculate_vector_angle:0edac416b32fd6fd",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "calculate_vector_angle",
+      "atom_module": "sciona.atoms.physics.skyfield.atoms",
+      "registry_name": "calculate_vector_angle",
+      "expression_id": "63e4d024-102a-5f8e-9323-16ecb93b34c3",
+      "symbol": "theta",
+      "variable_name": "theta",
+      "source_symbol": "theta",
+      "source_bound_id": "sciona-atoms-physics:sciona.atoms.physics.skyfield.atoms:calculate_vector_angle:bound:theta",
+      "scope": "variable",
+      "bound_kind": "domain",
+      "min_value": 0.0,
+      "max_value": 3.141592653589793,
+      "lower_value": 0.0,
+      "upper_value": 3.141592653589793,
+      "lower_inclusive": true,
+      "upper_inclusive": true,
+      "dim_signature": "1",
+      "validity_statement": "0.0 <= theta <= 3.141592653589793",
+      "evidence_ref_key": "sciona-atoms-physics:sciona.atoms.physics.skyfield.atoms:calculate_vector_angle:bound:theta",
+      "confidence": "high",
+      "review_status": "automated_pass",
+      "metadata": {
+        "provider": "sciona-atoms-physics",
+        "atom_module": "sciona.atoms.physics.skyfield.atoms",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.physics.skyfield.atoms:calculate_vector_angle",
+        "source_symbol": "theta",
+        "ordinal": 0
+      },
+      "ordinal": 0
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.skyfield.atoms:calculate_vector_angle:0edac416b32fd6fd",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.skyfield.atoms:calculate_vector_angle:0edac416b32fd6fd",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "calculate_vector_angle",
+      "atom_module": "sciona.atoms.physics.skyfield.atoms",
+      "registry_name": "calculate_vector_angle",
+      "expression_id": "63e4d024-102a-5f8e-9323-16ecb93b34c3",
+      "symbol": "u_norm",
+      "variable_name": "u_norm",
+      "source_symbol": "u_norm",
+      "source_bound_id": "sciona-atoms-physics:sciona.atoms.physics.skyfield.atoms:calculate_vector_angle:bound:u_norm",
+      "scope": "variable",
+      "bound_kind": "domain",
+      "min_value": 0.0,
+      "max_value": null,
+      "lower_value": 0.0,
+      "upper_value": null,
+      "lower_inclusive": true,
+      "upper_inclusive": true,
+      "dim_signature": "L1",
+      "validity_statement": "u_norm >= 0.0",
+      "evidence_ref_key": "sciona-atoms-physics:sciona.atoms.physics.skyfield.atoms:calculate_vector_angle:bound:u_norm",
+      "confidence": "high",
+      "review_status": "automated_pass",
+      "metadata": {
+        "provider": "sciona-atoms-physics",
+        "atom_module": "sciona.atoms.physics.skyfield.atoms",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.physics.skyfield.atoms:calculate_vector_angle",
+        "source_symbol": "u_norm",
+        "ordinal": 1
+      },
+      "ordinal": 1
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.skyfield.atoms:calculate_vector_angle:0edac416b32fd6fd",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.skyfield.atoms:calculate_vector_angle:0edac416b32fd6fd",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "calculate_vector_angle",
+      "atom_module": "sciona.atoms.physics.skyfield.atoms",
+      "registry_name": "calculate_vector_angle",
+      "expression_id": "63e4d024-102a-5f8e-9323-16ecb93b34c3",
+      "symbol": "w_norm",
+      "variable_name": "w_norm",
+      "source_symbol": "w_norm",
+      "source_bound_id": "sciona-atoms-physics:sciona.atoms.physics.skyfield.atoms:calculate_vector_angle:bound:w_norm",
+      "scope": "variable",
+      "bound_kind": "domain",
+      "min_value": 0.0,
+      "max_value": null,
+      "lower_value": 0.0,
+      "upper_value": null,
+      "lower_inclusive": true,
+      "upper_inclusive": true,
+      "dim_signature": "L1",
+      "validity_statement": "w_norm >= 0.0",
+      "evidence_ref_key": "sciona-atoms-physics:sciona.atoms.physics.skyfield.atoms:calculate_vector_angle:bound:w_norm",
+      "confidence": "high",
+      "review_status": "automated_pass",
+      "metadata": {
+        "provider": "sciona-atoms-physics",
+        "atom_module": "sciona.atoms.physics.skyfield.atoms",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.physics.skyfield.atoms:calculate_vector_angle",
+        "source_symbol": "w_norm",
+        "ordinal": 2
+      },
+      "ordinal": 2
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.skyfield.atoms:compute_spherical_coordinate_rates:0dc680816afe0c66",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.skyfield.atoms:compute_spherical_coordinate_rates:0dc680816afe0c66",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "compute_spherical_coordinate_rates",
+      "atom_module": "sciona.atoms.physics.skyfield.atoms",
+      "registry_name": "compute_spherical_coordinate_rates",
+      "expression_id": "a4aa3eb5-4b84-5527-bbef-2751a4e3f3f1",
+      "symbol": "range",
+      "variable_name": "range",
+      "source_symbol": "range",
+      "source_bound_id": "sciona-atoms-physics:sciona.atoms.physics.skyfield.atoms:compute_spherical_coordinate_rates:bound:range",
+      "scope": "variable",
+      "bound_kind": "domain",
+      "min_value": 0.0,
+      "max_value": null,
+      "lower_value": 0.0,
+      "upper_value": null,
+      "lower_inclusive": true,
+      "upper_inclusive": true,
+      "dim_signature": "L1",
+      "validity_statement": "range >= 0.0",
+      "evidence_ref_key": "sciona-atoms-physics:sciona.atoms.physics.skyfield.atoms:compute_spherical_coordinate_rates:bound:range",
+      "confidence": "high",
+      "review_status": "automated_pass",
+      "metadata": {
+        "provider": "sciona-atoms-physics",
+        "atom_module": "sciona.atoms.physics.skyfield.atoms",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.physics.skyfield.atoms:compute_spherical_coordinate_rates",
+        "source_symbol": "range",
+        "ordinal": 0
+      },
+      "ordinal": 0
+    }
+  ]
+}
