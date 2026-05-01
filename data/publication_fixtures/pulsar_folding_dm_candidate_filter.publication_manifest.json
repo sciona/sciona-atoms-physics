@@ -1,0 +1,258 @@
+{
+  "provider": "sciona-atoms-physics",
+  "modules": [
+    "sciona.atoms.physics.pulsar_folding.dm_can"
+  ],
+  "artifact_symbolic_expressions": [
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.pulsar_folding.dm_can:dm_candidate_filter:4b4eb2012e3692a2",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "dm_candidate_filter",
+      "atom_module": "sciona.atoms.physics.pulsar_folding.dm_can",
+      "registry_name": "dm_candidate_filter",
+      "expression_id": "5d6920bf-bb0b-5d61-b587-187c95d4bb0f",
+      "source_expression_id": "sciona-atoms-physics:sciona.atoms.physics.pulsar_folding.dm_can:dm_candidate_filter",
+      "expression_srepr": "Equality(Symbol('delay'), Mul(Symbol('DM'), Symbol('K'), Pow(Symbol('fchan'), Integer(-2))))",
+      "expression_text": "Eq(delay, DM*K/fchan**2)",
+      "sympy_srepr": "Equality(Symbol('delay'), Mul(Symbol('DM'), Symbol('K'), Pow(Symbol('fchan'), Integer(-2))))",
+      "raw_formula": "Eq(delay, DM*K/fchan**2)",
+      "raw_formula_format": "plain_text",
+      "expression_kind": "equation",
+      "expression_role": "primary",
+      "canonical_expr_hash": "bbd921d012dffc5b946ddfa5e678e2d38d298f52cfd80a582b8d33e39f3dc853",
+      "topology_hash": "f088e9d4cd26489cbfda14f633b356eaf7b53ad496a6a385d98b4829a716888c",
+      "dimensional_hash": "9ad8086c9758f131d10f3e0996eb6f6a302c7b1295b02da766dcc78d467146cb",
+      "parse_status": "normalized",
+      "parse_confidence": 1.0,
+      "review_status": "automated_pass",
+      "validation_status": "passed",
+      "mechanism_tags": [
+        "dispersion",
+        "pulsar_search",
+        "signal_processing"
+      ],
+      "behavioral_archetypes": [
+        "candidate_scoring",
+        "delay_model"
+      ],
+      "variables": {
+        "DM": "input",
+        "DM_base": "input",
+        "K": "constant",
+        "candidates": "input",
+        "delay": "output",
+        "fchan": "input",
+        "sens": "parameter",
+        "tsamp": "parameter",
+        "width": "parameter"
+      },
+      "dim_signature": {
+        "DM": "L-2",
+        "DM_base": "L-2",
+        "K": "L2T-1",
+        "candidates": "L-2",
+        "delay": "T1",
+        "fchan": "T-1",
+        "sens": "1",
+        "tsamp": "T1",
+        "width": "T1"
+      },
+      "symbolic_dim_signature": {
+        "DM": "L-2",
+        "DM_base": "L-2",
+        "K": "L2T-1",
+        "candidates": "L-2",
+        "delay": "T1",
+        "fchan": "T-1",
+        "sens": "1",
+        "tsamp": "T1",
+        "width": "T1"
+      },
+      "constants": {
+        "K": 4148.808
+      },
+      "bibliography": [
+        "lorimer2005pulsar",
+        "repo_pulsar_folding"
+      ],
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.pulsar_folding.dm_can:dm_candidate_filter:4b4eb2012e3692a2",
+      "artifact_uuid": null
+    }
+  ],
+  "artifact_symbolic_variables": [
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.pulsar_folding.dm_can:dm_candidate_filter:4b4eb2012e3692a2",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.pulsar_folding.dm_can:dm_candidate_filter:4b4eb2012e3692a2",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "dm_candidate_filter",
+      "atom_module": "sciona.atoms.physics.pulsar_folding.dm_can",
+      "registry_name": "dm_candidate_filter",
+      "expression_id": "5d6920bf-bb0b-5d61-b587-187c95d4bb0f",
+      "symbol": "DM",
+      "symbol_name": "DM",
+      "source_symbol": "DM",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.physics.pulsar_folding.dm_can:dm_candidate_filter:variable:DM",
+      "role": "input",
+      "variable_role": "input",
+      "dim_signature": "L-2",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "L-2",
+        "symbolic_role": "input"
+      },
+      "evidence_json": {
+        "source_symbol": "DM",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.physics.pulsar_folding.dm_can:dm_candidate_filter"
+      },
+      "ordinal": 0
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.pulsar_folding.dm_can:dm_candidate_filter:4b4eb2012e3692a2",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.pulsar_folding.dm_can:dm_candidate_filter:4b4eb2012e3692a2",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "dm_candidate_filter",
+      "atom_module": "sciona.atoms.physics.pulsar_folding.dm_can",
+      "registry_name": "dm_candidate_filter",
+      "expression_id": "5d6920bf-bb0b-5d61-b587-187c95d4bb0f",
+      "symbol": "K",
+      "symbol_name": "K",
+      "source_symbol": "K",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.physics.pulsar_folding.dm_can:dm_candidate_filter:variable:K",
+      "role": "constant",
+      "variable_role": "constant",
+      "dim_signature": "L2T-1",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "L2T-1",
+        "symbolic_role": "constant"
+      },
+      "evidence_json": {
+        "source_symbol": "K",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.physics.pulsar_folding.dm_can:dm_candidate_filter"
+      },
+      "ordinal": 2
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.pulsar_folding.dm_can:dm_candidate_filter:4b4eb2012e3692a2",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.pulsar_folding.dm_can:dm_candidate_filter:4b4eb2012e3692a2",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "dm_candidate_filter",
+      "atom_module": "sciona.atoms.physics.pulsar_folding.dm_can",
+      "registry_name": "dm_candidate_filter",
+      "expression_id": "5d6920bf-bb0b-5d61-b587-187c95d4bb0f",
+      "symbol": "delay",
+      "symbol_name": "delay",
+      "source_symbol": "delay",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.physics.pulsar_folding.dm_can:dm_candidate_filter:variable:delay",
+      "role": "output",
+      "variable_role": "output",
+      "dim_signature": "T1",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "T1",
+        "symbolic_role": "output"
+      },
+      "evidence_json": {
+        "source_symbol": "delay",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.physics.pulsar_folding.dm_can:dm_candidate_filter"
+      },
+      "ordinal": 4
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.pulsar_folding.dm_can:dm_candidate_filter:4b4eb2012e3692a2",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.pulsar_folding.dm_can:dm_candidate_filter:4b4eb2012e3692a2",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "dm_candidate_filter",
+      "atom_module": "sciona.atoms.physics.pulsar_folding.dm_can",
+      "registry_name": "dm_candidate_filter",
+      "expression_id": "5d6920bf-bb0b-5d61-b587-187c95d4bb0f",
+      "symbol": "fchan",
+      "symbol_name": "fchan",
+      "source_symbol": "fchan",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.physics.pulsar_folding.dm_can:dm_candidate_filter:variable:fchan",
+      "role": "input",
+      "variable_role": "input",
+      "dim_signature": "T-1",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "T-1",
+        "symbolic_role": "input"
+      },
+      "evidence_json": {
+        "source_symbol": "fchan",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.physics.pulsar_folding.dm_can:dm_candidate_filter"
+      },
+      "ordinal": 5
+    }
+  ],
+  "artifact_validity_bounds": [
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.pulsar_folding.dm_can:dm_candidate_filter:4b4eb2012e3692a2",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.pulsar_folding.dm_can:dm_candidate_filter:4b4eb2012e3692a2",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "dm_candidate_filter",
+      "atom_module": "sciona.atoms.physics.pulsar_folding.dm_can",
+      "registry_name": "dm_candidate_filter",
+      "expression_id": "5d6920bf-bb0b-5d61-b587-187c95d4bb0f",
+      "symbol": "DM",
+      "variable_name": "DM",
+      "source_symbol": "DM",
+      "source_bound_id": "sciona-atoms-physics:sciona.atoms.physics.pulsar_folding.dm_can:dm_candidate_filter:bound:DM",
+      "scope": "variable",
+      "bound_kind": "domain",
+      "min_value": 0.0,
+      "max_value": null,
+      "lower_value": 0.0,
+      "upper_value": null,
+      "lower_inclusive": true,
+      "upper_inclusive": true,
+      "dim_signature": "L-2",
+      "validity_statement": "DM >= 0.0",
+      "evidence_ref_key": "sciona-atoms-physics:sciona.atoms.physics.pulsar_folding.dm_can:dm_candidate_filter:bound:DM",
+      "confidence": "high",
+      "review_status": "automated_pass",
+      "metadata": {
+        "provider": "sciona-atoms-physics",
+        "atom_module": "sciona.atoms.physics.pulsar_folding.dm_can",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.physics.pulsar_folding.dm_can:dm_candidate_filter",
+        "source_symbol": "DM",
+        "ordinal": 0
+      },
+      "ordinal": 0
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.pulsar_folding.dm_can:dm_candidate_filter:4b4eb2012e3692a2",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.pulsar_folding.dm_can:dm_candidate_filter:4b4eb2012e3692a2",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "dm_candidate_filter",
+      "atom_module": "sciona.atoms.physics.pulsar_folding.dm_can",
+      "registry_name": "dm_candidate_filter",
+      "expression_id": "5d6920bf-bb0b-5d61-b587-187c95d4bb0f",
+      "symbol": "fchan",
+      "variable_name": "fchan",
+      "source_symbol": "fchan",
+      "source_bound_id": "sciona-atoms-physics:sciona.atoms.physics.pulsar_folding.dm_can:dm_candidate_filter:bound:fchan",
+      "scope": "variable",
+      "bound_kind": "domain",
+      "min_value": 0.0,
+      "max_value": null,
+      "lower_value": 0.0,
+      "upper_value": null,
+      "lower_inclusive": true,
+      "upper_inclusive": true,
+      "dim_signature": "T-1",
+      "validity_statement": "fchan >= 0.0",
+      "evidence_ref_key": "sciona-atoms-physics:sciona.atoms.physics.pulsar_folding.dm_can:dm_candidate_filter:bound:fchan",
+      "confidence": "high",
+      "review_status": "automated_pass",
+      "metadata": {
+        "provider": "sciona-atoms-physics",
+        "atom_module": "sciona.atoms.physics.pulsar_folding.dm_can",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.physics.pulsar_folding.dm_can:dm_candidate_filter",
+        "source_symbol": "fchan",
+        "ordinal": 3
+      },
+      "ordinal": 3
+    }
+  ]
+}
