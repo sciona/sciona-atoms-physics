@@ -1,0 +1,2540 @@
+{
+  "provider": "sciona-atoms-physics",
+  "modules": [
+    "sciona.atoms.particle_tracking.helix_geometry.atoms"
+  ],
+  "artifact_symbolic_expressions": [
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:circle_from_three_points:119c0eb9064151c9",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "circle_from_three_points",
+      "atom_module": "sciona.atoms.particle_tracking.helix_geometry.atoms",
+      "registry_name": "circle_from_three_points",
+      "expression_id": "e2a81d12-0418-5bf0-b0f5-3b87689821f0",
+      "source_expression_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:circle_from_three_points",
+      "expression_srepr": "Equality(Pow(Symbol('r'), Integer(2)), Add(Pow(Add(Symbol('x1'), Mul(Integer(-1), Symbol('xm'))), Integer(2)), Pow(Add(Symbol('y1'), Mul(Integer(-1), Symbol('ym'))), Integer(2))))",
+      "expression_text": "Eq(r**2, (x1 - xm)**2 + (y1 - ym)**2)",
+      "sympy_srepr": "Equality(Pow(Symbol('r'), Integer(2)), Add(Pow(Add(Symbol('x1'), Mul(Integer(-1), Symbol('xm'))), Integer(2)), Pow(Add(Symbol('y1'), Mul(Integer(-1), Symbol('ym'))), Integer(2))))",
+      "raw_formula": "Eq(r**2, (x1 - xm)**2 + (y1 - ym)**2)",
+      "raw_formula_format": "plain_text",
+      "expression_kind": "equation",
+      "expression_role": "primary",
+      "canonical_expr_hash": "bcbf10c872e96eea06a9e9e26b9f37d026a74be065b925640a1ad15e029c4606",
+      "topology_hash": "ada041b7cbecbcea4f59405861a5e11c4daf0a0719032017e8e2e741f4fc9e18",
+      "dimensional_hash": "d57f08e1cb145fe1bf9359adb53a758f8c2382cca5b950804fd3dbe615ecee39",
+      "parse_status": "normalized",
+      "parse_confidence": 1.0,
+      "review_status": "automated_pass",
+      "validation_status": "passed",
+      "mechanism_tags": [
+        "geometric_reconstruction",
+        "helix_geometry",
+        "particle_tracking"
+      ],
+      "behavioral_archetypes": [
+        "geometric_fit",
+        "track_reconstruction"
+      ],
+      "variables": {
+        "large_radius": "parameter",
+        "r": "output",
+        "x1": "input",
+        "x2": "input",
+        "x3": "input",
+        "xm": "output",
+        "y1": "input",
+        "y2": "input",
+        "y3": "input",
+        "ym": "output"
+      },
+      "dim_signature": {
+        "large_radius": "L1",
+        "r": "L1",
+        "x1": "L1",
+        "x2": "L1",
+        "x3": "L1",
+        "xm": "L1",
+        "y1": "L1",
+        "y2": "L1",
+        "y3": "L1",
+        "ym": "L1"
+      },
+      "symbolic_dim_signature": {
+        "large_radius": "L1",
+        "r": "L1",
+        "x1": "L1",
+        "x2": "L1",
+        "x3": "L1",
+        "xm": "L1",
+        "y1": "L1",
+        "y2": "L1",
+        "y3": "L1",
+        "ym": "L1"
+      },
+      "constants": {},
+      "bibliography": [
+        "steiner2018trackml",
+        "amrouche2019trackml"
+      ],
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:circle_from_three_points:119c0eb9064151c9",
+      "artifact_uuid": null
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_direction_from_two_points:1f26c909330a11ad",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "helix_direction_from_two_points",
+      "atom_module": "sciona.atoms.particle_tracking.helix_geometry.atoms",
+      "registry_name": "helix_direction_from_two_points",
+      "expression_id": "221c68cb-7a09-5918-a510-46c481d9d15a",
+      "source_expression_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_direction_from_two_points",
+      "expression_srepr": "Equality(Symbol('hel_dz'), Add(Mul(Integer(-1), Symbol('z1')), Symbol('z2')))",
+      "expression_text": "Eq(hel_dz, -z1 + z2)",
+      "sympy_srepr": "Equality(Symbol('hel_dz'), Add(Mul(Integer(-1), Symbol('z1')), Symbol('z2')))",
+      "raw_formula": "Eq(hel_dz, -z1 + z2)",
+      "raw_formula_format": "plain_text",
+      "expression_kind": "equation",
+      "expression_role": "primary",
+      "canonical_expr_hash": "acf24d11e2e04766b0e00380f7bf32d18b55671613c7b46c836c4cd9b0887d5e",
+      "topology_hash": "fb70ae55b8d9b7b6965208649923c3014cad8b940074acd0738abcb57e6291cb",
+      "dimensional_hash": "5f91d2f466d89a6aeaa8a4bfe3926730bd069a71addb1e50b4ef3ee3d8de47fa",
+      "parse_status": "normalized",
+      "parse_confidence": 1.0,
+      "review_status": "automated_pass",
+      "validation_status": "passed",
+      "mechanism_tags": [
+        "geometric_reconstruction",
+        "helix_geometry",
+        "particle_tracking"
+      ],
+      "behavioral_archetypes": [
+        "geometric_fit",
+        "track_reconstruction"
+      ],
+      "variables": {
+        "hel_dz": "output",
+        "hel_pitch": "input",
+        "hel_xm": "input",
+        "hel_ym": "input",
+        "x1": "input",
+        "x2": "input",
+        "y1": "input",
+        "y2": "input",
+        "z1": "input",
+        "z2": "input"
+      },
+      "dim_signature": {
+        "hel_dz": "L1",
+        "hel_pitch": "L1",
+        "hel_xm": "L1",
+        "hel_ym": "L1",
+        "x1": "L1",
+        "x2": "L1",
+        "y1": "L1",
+        "y2": "L1",
+        "z1": "L1",
+        "z2": "L1"
+      },
+      "symbolic_dim_signature": {
+        "hel_dz": "L1",
+        "hel_pitch": "L1",
+        "hel_xm": "L1",
+        "hel_ym": "L1",
+        "x1": "L1",
+        "x2": "L1",
+        "y1": "L1",
+        "y2": "L1",
+        "z1": "L1",
+        "z2": "L1"
+      },
+      "constants": {},
+      "bibliography": [
+        "steiner2018trackml"
+      ],
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_direction_from_two_points:1f26c909330a11ad",
+      "artifact_uuid": null
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_nearest_point_distance:6159912051be184b",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "helix_nearest_point_distance",
+      "atom_module": "sciona.atoms.particle_tracking.helix_geometry.atoms",
+      "registry_name": "helix_nearest_point_distance",
+      "expression_id": "ea082954-be9c-520f-9b74-0bffb2ead94a",
+      "source_expression_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_nearest_point_distance",
+      "expression_srepr": "Equality(Pow(Symbol('dist'), Integer(2)), Add(Pow(Add(Symbol('x'), Mul(Integer(-1), Symbol('x1'))), Integer(2)), Pow(Add(Symbol('y'), Mul(Integer(-1), Symbol('y1'))), Integer(2)), Pow(Add(Symbol('z'), Mul(Integer(-1), Symbol('z1'))), Integer(2))))",
+      "expression_text": "Eq(dist**2, (x - x1)**2 + (y - y1)**2 + (z - z1)**2)",
+      "sympy_srepr": "Equality(Pow(Symbol('dist'), Integer(2)), Add(Pow(Add(Symbol('x'), Mul(Integer(-1), Symbol('x1'))), Integer(2)), Pow(Add(Symbol('y'), Mul(Integer(-1), Symbol('y1'))), Integer(2)), Pow(Add(Symbol('z'), Mul(Integer(-1), Symbol('z1'))), Integer(2))))",
+      "raw_formula": "Eq(dist**2, (x - x1)**2 + (y - y1)**2 + (z - z1)**2)",
+      "raw_formula_format": "plain_text",
+      "expression_kind": "equation",
+      "expression_role": "primary",
+      "canonical_expr_hash": "3ce347080c1b1e9bac727bd2a0d97819a9660503de062ad8d9e96c5a73d521e7",
+      "topology_hash": "7eb44b28fd392d38cab51dad97e10a5a03ffa76ae03f128f2593a608ac040477",
+      "dimensional_hash": "424d027b27226b4ffa4a1980dd86b19f6a88abca5d2c32f02ca2382271c8b82c",
+      "parse_status": "normalized",
+      "parse_confidence": 1.0,
+      "review_status": "automated_pass",
+      "validation_status": "passed",
+      "mechanism_tags": [
+        "distance_minimization",
+        "geometric_reconstruction",
+        "helix_geometry",
+        "particle_tracking"
+      ],
+      "behavioral_archetypes": [
+        "distance_minimization",
+        "geometric_fit",
+        "track_reconstruction"
+      ],
+      "variables": {
+        "dist": "output",
+        "hel_pitch": "input",
+        "hel_r": "input",
+        "hel_xm": "input",
+        "hel_ym": "input",
+        "iterations": "parameter",
+        "x": "input",
+        "x0": "input",
+        "x1": "output",
+        "y": "input",
+        "y0": "input",
+        "y1": "output",
+        "z": "input",
+        "z0": "input",
+        "z1": "output"
+      },
+      "dim_signature": {
+        "dist": "L1",
+        "hel_pitch": "L1",
+        "hel_r": "L1",
+        "hel_xm": "L1",
+        "hel_ym": "L1",
+        "iterations": "1",
+        "x": "L1",
+        "x0": "L1",
+        "x1": "L1",
+        "y": "L1",
+        "y0": "L1",
+        "y1": "L1",
+        "z": "L1",
+        "z0": "L1",
+        "z1": "L1"
+      },
+      "symbolic_dim_signature": {
+        "dist": "L1",
+        "hel_pitch": "L1",
+        "hel_r": "L1",
+        "hel_xm": "L1",
+        "hel_ym": "L1",
+        "iterations": "1",
+        "x": "L1",
+        "x0": "L1",
+        "x1": "L1",
+        "y": "L1",
+        "y0": "L1",
+        "y1": "L1",
+        "z": "L1",
+        "z0": "L1",
+        "z1": "L1"
+      },
+      "constants": {},
+      "bibliography": [
+        "steiner2018trackml",
+        "amrouche2019trackml"
+      ],
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_nearest_point_distance:6159912051be184b",
+      "artifact_uuid": null
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_pitch_from_two_points:0183443448230645",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "helix_pitch_from_two_points",
+      "atom_module": "sciona.atoms.particle_tracking.helix_geometry.atoms",
+      "registry_name": "helix_pitch_from_two_points",
+      "expression_id": "5cd2af57-04e9-5bf4-a4bc-0c3d30bc67dc",
+      "source_expression_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_pitch_from_two_points",
+      "expression_srepr": "Equality(Symbol('hel_pitch'), Mul(Integer(2), pi, Symbol('dz'), Pow(Symbol('phid'), Integer(-1))))",
+      "expression_text": "Eq(hel_pitch, 2*pi*dz/phid)",
+      "sympy_srepr": "Equality(Symbol('hel_pitch'), Mul(Integer(2), pi, Symbol('dz'), Pow(Symbol('phid'), Integer(-1))))",
+      "raw_formula": "Eq(hel_pitch, 2*pi*dz/phid)",
+      "raw_formula_format": "plain_text",
+      "expression_kind": "equation",
+      "expression_role": "primary",
+      "canonical_expr_hash": "1607463e3c209303d4c6352fda66a95978750ea0d4dc90d31c5ba85472da085d",
+      "topology_hash": "fa337ae22201a515c9399d8112bc9e0c617638dd57db30431858d22e155af1e2",
+      "dimensional_hash": "64b30567d7effe8d290a83737fd77375fc10d59c27d2aae5d3745a27994d18e7",
+      "parse_status": "normalized",
+      "parse_confidence": 1.0,
+      "review_status": "automated_pass",
+      "validation_status": "passed",
+      "mechanism_tags": [
+        "geometric_reconstruction",
+        "helix_geometry",
+        "particle_tracking"
+      ],
+      "behavioral_archetypes": [
+        "geometric_fit",
+        "track_reconstruction"
+      ],
+      "variables": {
+        "dz": "output",
+        "hel_pitch": "output",
+        "hel_xm": "input",
+        "hel_ym": "input",
+        "phid": "output",
+        "x1": "input",
+        "x2": "input",
+        "x3": "input",
+        "y1": "input",
+        "y2": "input",
+        "y3": "input",
+        "z1": "input",
+        "z2": "input",
+        "z3": "input",
+        "zero_pitch": "parameter"
+      },
+      "dim_signature": {
+        "dz": "L1",
+        "hel_pitch": "L1",
+        "hel_xm": "L1",
+        "hel_ym": "L1",
+        "phid": "1",
+        "x1": "L1",
+        "x2": "L1",
+        "x3": "L1",
+        "y1": "L1",
+        "y2": "L1",
+        "y3": "L1",
+        "z1": "L1",
+        "z2": "L1",
+        "z3": "L1",
+        "zero_pitch": "L1"
+      },
+      "symbolic_dim_signature": {
+        "dz": "L1",
+        "hel_pitch": "L1",
+        "hel_xm": "L1",
+        "hel_ym": "L1",
+        "phid": "1",
+        "x1": "L1",
+        "x2": "L1",
+        "x3": "L1",
+        "y1": "L1",
+        "y2": "L1",
+        "y3": "L1",
+        "z1": "L1",
+        "z2": "L1",
+        "z3": "L1",
+        "zero_pitch": "L1"
+      },
+      "constants": {},
+      "bibliography": [
+        "steiner2018trackml"
+      ],
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_pitch_from_two_points:0183443448230645",
+      "artifact_uuid": null
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_pitch_least_squares:ab64a44b63c15dff",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "helix_pitch_least_squares",
+      "atom_module": "sciona.atoms.particle_tracking.helix_geometry.atoms",
+      "registry_name": "helix_pitch_least_squares",
+      "expression_id": "59ba29e7-e244-59a0-b1cf-91a2f251815e",
+      "source_expression_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_pitch_least_squares",
+      "expression_srepr": "Equality(Symbol('hel_pitch'), Mul(Integer(2), pi, Pow(Add(Mul(Integer(-1), Pow(Symbol('sum_phi'), Integer(2))), Mul(Integer(3), Symbol('sum_phisqr'))), Integer(-1)), Add(Mul(Integer(-1), Symbol('sum_phi'), Symbol('sum_z')), Mul(Integer(3), Symbol('sum_zphi')))))",
+      "expression_text": "Eq(hel_pitch, 2*pi*(-sum_phi*sum_z + 3*sum_zphi)/(-sum_phi**2 + 3*sum_phisqr))",
+      "sympy_srepr": "Equality(Symbol('hel_pitch'), Mul(Integer(2), pi, Pow(Add(Mul(Integer(-1), Pow(Symbol('sum_phi'), Integer(2))), Mul(Integer(3), Symbol('sum_phisqr'))), Integer(-1)), Add(Mul(Integer(-1), Symbol('sum_phi'), Symbol('sum_z')), Mul(Integer(3), Symbol('sum_zphi')))))",
+      "raw_formula": "Eq(hel_pitch, 2*pi*(-sum_phi*sum_z + 3*sum_zphi)/(-sum_phi**2 + 3*sum_phisqr))",
+      "raw_formula_format": "plain_text",
+      "expression_kind": "equation",
+      "expression_role": "primary",
+      "canonical_expr_hash": "0673b1349629869f617698c05c8d39daf271e00bd76d593a8334850db31d98de",
+      "topology_hash": "f81d316ccb99b045c4782ff728041ae72497c5178ef0b445ea82cd25b022d033",
+      "dimensional_hash": "cd93ad682db803a4d4d839f356c527b54d3e0c6c980b1ff04a05bcf3e17683a0",
+      "parse_status": "normalized",
+      "parse_confidence": 1.0,
+      "review_status": "automated_pass",
+      "validation_status": "passed",
+      "mechanism_tags": [
+        "geometric_reconstruction",
+        "helix_geometry",
+        "least_squares_fit",
+        "particle_tracking"
+      ],
+      "behavioral_archetypes": [
+        "geometric_fit",
+        "least_squares_fit",
+        "track_reconstruction"
+      ],
+      "variables": {
+        "dz": "output",
+        "hel_pitch": "output",
+        "hel_xm": "input",
+        "hel_ym": "input",
+        "loss": "output",
+        "phid": "output",
+        "sum_phi": "parameter",
+        "sum_phisqr": "parameter",
+        "sum_z": "parameter",
+        "sum_zphi": "parameter",
+        "x1": "input",
+        "x2": "input",
+        "x3": "input",
+        "y1": "input",
+        "y2": "input",
+        "y3": "input",
+        "z1": "input",
+        "z2": "input",
+        "z3": "input",
+        "zero_pitch": "parameter"
+      },
+      "dim_signature": {
+        "dz": "L1",
+        "hel_pitch": "L1",
+        "hel_xm": "L1",
+        "hel_ym": "L1",
+        "loss": "L2",
+        "phid": "1",
+        "sum_phi": "1",
+        "sum_phisqr": "1",
+        "sum_z": "L1",
+        "sum_zphi": "L1",
+        "x1": "L1",
+        "x2": "L1",
+        "x3": "L1",
+        "y1": "L1",
+        "y2": "L1",
+        "y3": "L1",
+        "z1": "L1",
+        "z2": "L1",
+        "z3": "L1",
+        "zero_pitch": "L1"
+      },
+      "symbolic_dim_signature": {
+        "dz": "L1",
+        "hel_pitch": "L1",
+        "hel_xm": "L1",
+        "hel_ym": "L1",
+        "loss": "L2",
+        "phid": "1",
+        "sum_phi": "1",
+        "sum_phisqr": "1",
+        "sum_z": "L1",
+        "sum_zphi": "L1",
+        "x1": "L1",
+        "x2": "L1",
+        "x3": "L1",
+        "y1": "L1",
+        "y2": "L1",
+        "y3": "L1",
+        "z1": "L1",
+        "z2": "L1",
+        "z3": "L1",
+        "zero_pitch": "L1"
+      },
+      "constants": {},
+      "bibliography": [
+        "steiner2018trackml"
+      ],
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_pitch_least_squares:ab64a44b63c15dff",
+      "artifact_uuid": null
+    }
+  ],
+  "artifact_symbolic_variables": [
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:circle_from_three_points:119c0eb9064151c9",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:circle_from_three_points:119c0eb9064151c9",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "circle_from_three_points",
+      "atom_module": "sciona.atoms.particle_tracking.helix_geometry.atoms",
+      "registry_name": "circle_from_three_points",
+      "expression_id": "e2a81d12-0418-5bf0-b0f5-3b87689821f0",
+      "symbol": "large_radius",
+      "symbol_name": "large_radius",
+      "source_symbol": "large_radius",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:circle_from_three_points:variable:large_radius",
+      "role": "parameter",
+      "variable_role": "parameter",
+      "dim_signature": "L1",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "L1",
+        "symbolic_role": "parameter"
+      },
+      "evidence_json": {
+        "source_symbol": "large_radius",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:circle_from_three_points"
+      },
+      "ordinal": 0
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:circle_from_three_points:119c0eb9064151c9",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:circle_from_three_points:119c0eb9064151c9",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "circle_from_three_points",
+      "atom_module": "sciona.atoms.particle_tracking.helix_geometry.atoms",
+      "registry_name": "circle_from_three_points",
+      "expression_id": "e2a81d12-0418-5bf0-b0f5-3b87689821f0",
+      "symbol": "r",
+      "symbol_name": "r",
+      "source_symbol": "r",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:circle_from_three_points:variable:r",
+      "role": "output",
+      "variable_role": "output",
+      "dim_signature": "L1",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "L1",
+        "symbolic_role": "output"
+      },
+      "evidence_json": {
+        "source_symbol": "r",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:circle_from_three_points"
+      },
+      "ordinal": 1
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:circle_from_three_points:119c0eb9064151c9",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:circle_from_three_points:119c0eb9064151c9",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "circle_from_three_points",
+      "atom_module": "sciona.atoms.particle_tracking.helix_geometry.atoms",
+      "registry_name": "circle_from_three_points",
+      "expression_id": "e2a81d12-0418-5bf0-b0f5-3b87689821f0",
+      "symbol": "x1",
+      "symbol_name": "x1",
+      "source_symbol": "x1",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:circle_from_three_points:variable:x1",
+      "role": "input",
+      "variable_role": "input",
+      "dim_signature": "L1",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "L1",
+        "symbolic_role": "input"
+      },
+      "evidence_json": {
+        "source_symbol": "x1",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:circle_from_three_points"
+      },
+      "ordinal": 2
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:circle_from_three_points:119c0eb9064151c9",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:circle_from_three_points:119c0eb9064151c9",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "circle_from_three_points",
+      "atom_module": "sciona.atoms.particle_tracking.helix_geometry.atoms",
+      "registry_name": "circle_from_three_points",
+      "expression_id": "e2a81d12-0418-5bf0-b0f5-3b87689821f0",
+      "symbol": "x2",
+      "symbol_name": "x2",
+      "source_symbol": "x2",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:circle_from_three_points:variable:x2",
+      "role": "input",
+      "variable_role": "input",
+      "dim_signature": "L1",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "L1",
+        "symbolic_role": "input"
+      },
+      "evidence_json": {
+        "source_symbol": "x2",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:circle_from_three_points"
+      },
+      "ordinal": 3
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:circle_from_three_points:119c0eb9064151c9",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:circle_from_three_points:119c0eb9064151c9",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "circle_from_three_points",
+      "atom_module": "sciona.atoms.particle_tracking.helix_geometry.atoms",
+      "registry_name": "circle_from_three_points",
+      "expression_id": "e2a81d12-0418-5bf0-b0f5-3b87689821f0",
+      "symbol": "x3",
+      "symbol_name": "x3",
+      "source_symbol": "x3",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:circle_from_three_points:variable:x3",
+      "role": "input",
+      "variable_role": "input",
+      "dim_signature": "L1",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "L1",
+        "symbolic_role": "input"
+      },
+      "evidence_json": {
+        "source_symbol": "x3",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:circle_from_three_points"
+      },
+      "ordinal": 4
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:circle_from_three_points:119c0eb9064151c9",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:circle_from_three_points:119c0eb9064151c9",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "circle_from_three_points",
+      "atom_module": "sciona.atoms.particle_tracking.helix_geometry.atoms",
+      "registry_name": "circle_from_three_points",
+      "expression_id": "e2a81d12-0418-5bf0-b0f5-3b87689821f0",
+      "symbol": "xm",
+      "symbol_name": "xm",
+      "source_symbol": "xm",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:circle_from_three_points:variable:xm",
+      "role": "output",
+      "variable_role": "output",
+      "dim_signature": "L1",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "L1",
+        "symbolic_role": "output"
+      },
+      "evidence_json": {
+        "source_symbol": "xm",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:circle_from_three_points"
+      },
+      "ordinal": 5
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:circle_from_three_points:119c0eb9064151c9",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:circle_from_three_points:119c0eb9064151c9",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "circle_from_three_points",
+      "atom_module": "sciona.atoms.particle_tracking.helix_geometry.atoms",
+      "registry_name": "circle_from_three_points",
+      "expression_id": "e2a81d12-0418-5bf0-b0f5-3b87689821f0",
+      "symbol": "y1",
+      "symbol_name": "y1",
+      "source_symbol": "y1",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:circle_from_three_points:variable:y1",
+      "role": "input",
+      "variable_role": "input",
+      "dim_signature": "L1",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "L1",
+        "symbolic_role": "input"
+      },
+      "evidence_json": {
+        "source_symbol": "y1",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:circle_from_three_points"
+      },
+      "ordinal": 6
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:circle_from_three_points:119c0eb9064151c9",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:circle_from_three_points:119c0eb9064151c9",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "circle_from_three_points",
+      "atom_module": "sciona.atoms.particle_tracking.helix_geometry.atoms",
+      "registry_name": "circle_from_three_points",
+      "expression_id": "e2a81d12-0418-5bf0-b0f5-3b87689821f0",
+      "symbol": "y2",
+      "symbol_name": "y2",
+      "source_symbol": "y2",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:circle_from_three_points:variable:y2",
+      "role": "input",
+      "variable_role": "input",
+      "dim_signature": "L1",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "L1",
+        "symbolic_role": "input"
+      },
+      "evidence_json": {
+        "source_symbol": "y2",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:circle_from_three_points"
+      },
+      "ordinal": 7
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:circle_from_three_points:119c0eb9064151c9",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:circle_from_three_points:119c0eb9064151c9",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "circle_from_three_points",
+      "atom_module": "sciona.atoms.particle_tracking.helix_geometry.atoms",
+      "registry_name": "circle_from_three_points",
+      "expression_id": "e2a81d12-0418-5bf0-b0f5-3b87689821f0",
+      "symbol": "y3",
+      "symbol_name": "y3",
+      "source_symbol": "y3",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:circle_from_three_points:variable:y3",
+      "role": "input",
+      "variable_role": "input",
+      "dim_signature": "L1",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "L1",
+        "symbolic_role": "input"
+      },
+      "evidence_json": {
+        "source_symbol": "y3",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:circle_from_three_points"
+      },
+      "ordinal": 8
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:circle_from_three_points:119c0eb9064151c9",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:circle_from_three_points:119c0eb9064151c9",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "circle_from_three_points",
+      "atom_module": "sciona.atoms.particle_tracking.helix_geometry.atoms",
+      "registry_name": "circle_from_three_points",
+      "expression_id": "e2a81d12-0418-5bf0-b0f5-3b87689821f0",
+      "symbol": "ym",
+      "symbol_name": "ym",
+      "source_symbol": "ym",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:circle_from_three_points:variable:ym",
+      "role": "output",
+      "variable_role": "output",
+      "dim_signature": "L1",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "L1",
+        "symbolic_role": "output"
+      },
+      "evidence_json": {
+        "source_symbol": "ym",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:circle_from_three_points"
+      },
+      "ordinal": 9
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_direction_from_two_points:1f26c909330a11ad",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_direction_from_two_points:1f26c909330a11ad",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "helix_direction_from_two_points",
+      "atom_module": "sciona.atoms.particle_tracking.helix_geometry.atoms",
+      "registry_name": "helix_direction_from_two_points",
+      "expression_id": "221c68cb-7a09-5918-a510-46c481d9d15a",
+      "symbol": "hel_dz",
+      "symbol_name": "hel_dz",
+      "source_symbol": "hel_dz",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_direction_from_two_points:variable:hel_dz",
+      "role": "output",
+      "variable_role": "output",
+      "dim_signature": "L1",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "L1",
+        "symbolic_role": "output"
+      },
+      "evidence_json": {
+        "source_symbol": "hel_dz",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_direction_from_two_points"
+      },
+      "ordinal": 0
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_direction_from_two_points:1f26c909330a11ad",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_direction_from_two_points:1f26c909330a11ad",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "helix_direction_from_two_points",
+      "atom_module": "sciona.atoms.particle_tracking.helix_geometry.atoms",
+      "registry_name": "helix_direction_from_two_points",
+      "expression_id": "221c68cb-7a09-5918-a510-46c481d9d15a",
+      "symbol": "hel_pitch",
+      "symbol_name": "hel_pitch",
+      "source_symbol": "hel_pitch",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_direction_from_two_points:variable:hel_pitch",
+      "role": "input",
+      "variable_role": "input",
+      "dim_signature": "L1",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "L1",
+        "symbolic_role": "input"
+      },
+      "evidence_json": {
+        "source_symbol": "hel_pitch",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_direction_from_two_points"
+      },
+      "ordinal": 1
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_direction_from_two_points:1f26c909330a11ad",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_direction_from_two_points:1f26c909330a11ad",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "helix_direction_from_two_points",
+      "atom_module": "sciona.atoms.particle_tracking.helix_geometry.atoms",
+      "registry_name": "helix_direction_from_two_points",
+      "expression_id": "221c68cb-7a09-5918-a510-46c481d9d15a",
+      "symbol": "hel_xm",
+      "symbol_name": "hel_xm",
+      "source_symbol": "hel_xm",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_direction_from_two_points:variable:hel_xm",
+      "role": "input",
+      "variable_role": "input",
+      "dim_signature": "L1",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "L1",
+        "symbolic_role": "input"
+      },
+      "evidence_json": {
+        "source_symbol": "hel_xm",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_direction_from_two_points"
+      },
+      "ordinal": 2
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_direction_from_two_points:1f26c909330a11ad",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_direction_from_two_points:1f26c909330a11ad",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "helix_direction_from_two_points",
+      "atom_module": "sciona.atoms.particle_tracking.helix_geometry.atoms",
+      "registry_name": "helix_direction_from_two_points",
+      "expression_id": "221c68cb-7a09-5918-a510-46c481d9d15a",
+      "symbol": "hel_ym",
+      "symbol_name": "hel_ym",
+      "source_symbol": "hel_ym",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_direction_from_two_points:variable:hel_ym",
+      "role": "input",
+      "variable_role": "input",
+      "dim_signature": "L1",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "L1",
+        "symbolic_role": "input"
+      },
+      "evidence_json": {
+        "source_symbol": "hel_ym",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_direction_from_two_points"
+      },
+      "ordinal": 3
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_direction_from_two_points:1f26c909330a11ad",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_direction_from_two_points:1f26c909330a11ad",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "helix_direction_from_two_points",
+      "atom_module": "sciona.atoms.particle_tracking.helix_geometry.atoms",
+      "registry_name": "helix_direction_from_two_points",
+      "expression_id": "221c68cb-7a09-5918-a510-46c481d9d15a",
+      "symbol": "x1",
+      "symbol_name": "x1",
+      "source_symbol": "x1",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_direction_from_two_points:variable:x1",
+      "role": "input",
+      "variable_role": "input",
+      "dim_signature": "L1",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "L1",
+        "symbolic_role": "input"
+      },
+      "evidence_json": {
+        "source_symbol": "x1",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_direction_from_two_points"
+      },
+      "ordinal": 4
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_direction_from_two_points:1f26c909330a11ad",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_direction_from_two_points:1f26c909330a11ad",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "helix_direction_from_two_points",
+      "atom_module": "sciona.atoms.particle_tracking.helix_geometry.atoms",
+      "registry_name": "helix_direction_from_two_points",
+      "expression_id": "221c68cb-7a09-5918-a510-46c481d9d15a",
+      "symbol": "x2",
+      "symbol_name": "x2",
+      "source_symbol": "x2",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_direction_from_two_points:variable:x2",
+      "role": "input",
+      "variable_role": "input",
+      "dim_signature": "L1",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "L1",
+        "symbolic_role": "input"
+      },
+      "evidence_json": {
+        "source_symbol": "x2",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_direction_from_two_points"
+      },
+      "ordinal": 5
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_direction_from_two_points:1f26c909330a11ad",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_direction_from_two_points:1f26c909330a11ad",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "helix_direction_from_two_points",
+      "atom_module": "sciona.atoms.particle_tracking.helix_geometry.atoms",
+      "registry_name": "helix_direction_from_two_points",
+      "expression_id": "221c68cb-7a09-5918-a510-46c481d9d15a",
+      "symbol": "y1",
+      "symbol_name": "y1",
+      "source_symbol": "y1",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_direction_from_two_points:variable:y1",
+      "role": "input",
+      "variable_role": "input",
+      "dim_signature": "L1",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "L1",
+        "symbolic_role": "input"
+      },
+      "evidence_json": {
+        "source_symbol": "y1",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_direction_from_two_points"
+      },
+      "ordinal": 6
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_direction_from_two_points:1f26c909330a11ad",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_direction_from_two_points:1f26c909330a11ad",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "helix_direction_from_two_points",
+      "atom_module": "sciona.atoms.particle_tracking.helix_geometry.atoms",
+      "registry_name": "helix_direction_from_two_points",
+      "expression_id": "221c68cb-7a09-5918-a510-46c481d9d15a",
+      "symbol": "y2",
+      "symbol_name": "y2",
+      "source_symbol": "y2",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_direction_from_two_points:variable:y2",
+      "role": "input",
+      "variable_role": "input",
+      "dim_signature": "L1",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "L1",
+        "symbolic_role": "input"
+      },
+      "evidence_json": {
+        "source_symbol": "y2",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_direction_from_two_points"
+      },
+      "ordinal": 7
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_direction_from_two_points:1f26c909330a11ad",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_direction_from_two_points:1f26c909330a11ad",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "helix_direction_from_two_points",
+      "atom_module": "sciona.atoms.particle_tracking.helix_geometry.atoms",
+      "registry_name": "helix_direction_from_two_points",
+      "expression_id": "221c68cb-7a09-5918-a510-46c481d9d15a",
+      "symbol": "z1",
+      "symbol_name": "z1",
+      "source_symbol": "z1",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_direction_from_two_points:variable:z1",
+      "role": "input",
+      "variable_role": "input",
+      "dim_signature": "L1",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "L1",
+        "symbolic_role": "input"
+      },
+      "evidence_json": {
+        "source_symbol": "z1",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_direction_from_two_points"
+      },
+      "ordinal": 8
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_direction_from_two_points:1f26c909330a11ad",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_direction_from_two_points:1f26c909330a11ad",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "helix_direction_from_two_points",
+      "atom_module": "sciona.atoms.particle_tracking.helix_geometry.atoms",
+      "registry_name": "helix_direction_from_two_points",
+      "expression_id": "221c68cb-7a09-5918-a510-46c481d9d15a",
+      "symbol": "z2",
+      "symbol_name": "z2",
+      "source_symbol": "z2",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_direction_from_two_points:variable:z2",
+      "role": "input",
+      "variable_role": "input",
+      "dim_signature": "L1",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "L1",
+        "symbolic_role": "input"
+      },
+      "evidence_json": {
+        "source_symbol": "z2",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_direction_from_two_points"
+      },
+      "ordinal": 9
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_nearest_point_distance:6159912051be184b",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_nearest_point_distance:6159912051be184b",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "helix_nearest_point_distance",
+      "atom_module": "sciona.atoms.particle_tracking.helix_geometry.atoms",
+      "registry_name": "helix_nearest_point_distance",
+      "expression_id": "ea082954-be9c-520f-9b74-0bffb2ead94a",
+      "symbol": "dist",
+      "symbol_name": "dist",
+      "source_symbol": "dist",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_nearest_point_distance:variable:dist",
+      "role": "output",
+      "variable_role": "output",
+      "dim_signature": "L1",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "L1",
+        "symbolic_role": "output"
+      },
+      "evidence_json": {
+        "source_symbol": "dist",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_nearest_point_distance"
+      },
+      "ordinal": 0
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_nearest_point_distance:6159912051be184b",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_nearest_point_distance:6159912051be184b",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "helix_nearest_point_distance",
+      "atom_module": "sciona.atoms.particle_tracking.helix_geometry.atoms",
+      "registry_name": "helix_nearest_point_distance",
+      "expression_id": "ea082954-be9c-520f-9b74-0bffb2ead94a",
+      "symbol": "hel_pitch",
+      "symbol_name": "hel_pitch",
+      "source_symbol": "hel_pitch",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_nearest_point_distance:variable:hel_pitch",
+      "role": "input",
+      "variable_role": "input",
+      "dim_signature": "L1",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "L1",
+        "symbolic_role": "input"
+      },
+      "evidence_json": {
+        "source_symbol": "hel_pitch",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_nearest_point_distance"
+      },
+      "ordinal": 1
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_nearest_point_distance:6159912051be184b",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_nearest_point_distance:6159912051be184b",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "helix_nearest_point_distance",
+      "atom_module": "sciona.atoms.particle_tracking.helix_geometry.atoms",
+      "registry_name": "helix_nearest_point_distance",
+      "expression_id": "ea082954-be9c-520f-9b74-0bffb2ead94a",
+      "symbol": "hel_r",
+      "symbol_name": "hel_r",
+      "source_symbol": "hel_r",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_nearest_point_distance:variable:hel_r",
+      "role": "input",
+      "variable_role": "input",
+      "dim_signature": "L1",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "L1",
+        "symbolic_role": "input"
+      },
+      "evidence_json": {
+        "source_symbol": "hel_r",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_nearest_point_distance"
+      },
+      "ordinal": 2
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_nearest_point_distance:6159912051be184b",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_nearest_point_distance:6159912051be184b",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "helix_nearest_point_distance",
+      "atom_module": "sciona.atoms.particle_tracking.helix_geometry.atoms",
+      "registry_name": "helix_nearest_point_distance",
+      "expression_id": "ea082954-be9c-520f-9b74-0bffb2ead94a",
+      "symbol": "hel_xm",
+      "symbol_name": "hel_xm",
+      "source_symbol": "hel_xm",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_nearest_point_distance:variable:hel_xm",
+      "role": "input",
+      "variable_role": "input",
+      "dim_signature": "L1",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "L1",
+        "symbolic_role": "input"
+      },
+      "evidence_json": {
+        "source_symbol": "hel_xm",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_nearest_point_distance"
+      },
+      "ordinal": 3
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_nearest_point_distance:6159912051be184b",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_nearest_point_distance:6159912051be184b",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "helix_nearest_point_distance",
+      "atom_module": "sciona.atoms.particle_tracking.helix_geometry.atoms",
+      "registry_name": "helix_nearest_point_distance",
+      "expression_id": "ea082954-be9c-520f-9b74-0bffb2ead94a",
+      "symbol": "hel_ym",
+      "symbol_name": "hel_ym",
+      "source_symbol": "hel_ym",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_nearest_point_distance:variable:hel_ym",
+      "role": "input",
+      "variable_role": "input",
+      "dim_signature": "L1",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "L1",
+        "symbolic_role": "input"
+      },
+      "evidence_json": {
+        "source_symbol": "hel_ym",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_nearest_point_distance"
+      },
+      "ordinal": 4
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_nearest_point_distance:6159912051be184b",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_nearest_point_distance:6159912051be184b",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "helix_nearest_point_distance",
+      "atom_module": "sciona.atoms.particle_tracking.helix_geometry.atoms",
+      "registry_name": "helix_nearest_point_distance",
+      "expression_id": "ea082954-be9c-520f-9b74-0bffb2ead94a",
+      "symbol": "iterations",
+      "symbol_name": "iterations",
+      "source_symbol": "iterations",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_nearest_point_distance:variable:iterations",
+      "role": "parameter",
+      "variable_role": "parameter",
+      "dim_signature": "1",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "1",
+        "symbolic_role": "parameter"
+      },
+      "evidence_json": {
+        "source_symbol": "iterations",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_nearest_point_distance"
+      },
+      "ordinal": 5
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_nearest_point_distance:6159912051be184b",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_nearest_point_distance:6159912051be184b",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "helix_nearest_point_distance",
+      "atom_module": "sciona.atoms.particle_tracking.helix_geometry.atoms",
+      "registry_name": "helix_nearest_point_distance",
+      "expression_id": "ea082954-be9c-520f-9b74-0bffb2ead94a",
+      "symbol": "x",
+      "symbol_name": "x",
+      "source_symbol": "x",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_nearest_point_distance:variable:x",
+      "role": "input",
+      "variable_role": "input",
+      "dim_signature": "L1",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "L1",
+        "symbolic_role": "input"
+      },
+      "evidence_json": {
+        "source_symbol": "x",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_nearest_point_distance"
+      },
+      "ordinal": 6
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_nearest_point_distance:6159912051be184b",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_nearest_point_distance:6159912051be184b",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "helix_nearest_point_distance",
+      "atom_module": "sciona.atoms.particle_tracking.helix_geometry.atoms",
+      "registry_name": "helix_nearest_point_distance",
+      "expression_id": "ea082954-be9c-520f-9b74-0bffb2ead94a",
+      "symbol": "x0",
+      "symbol_name": "x0",
+      "source_symbol": "x0",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_nearest_point_distance:variable:x0",
+      "role": "input",
+      "variable_role": "input",
+      "dim_signature": "L1",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "L1",
+        "symbolic_role": "input"
+      },
+      "evidence_json": {
+        "source_symbol": "x0",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_nearest_point_distance"
+      },
+      "ordinal": 7
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_nearest_point_distance:6159912051be184b",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_nearest_point_distance:6159912051be184b",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "helix_nearest_point_distance",
+      "atom_module": "sciona.atoms.particle_tracking.helix_geometry.atoms",
+      "registry_name": "helix_nearest_point_distance",
+      "expression_id": "ea082954-be9c-520f-9b74-0bffb2ead94a",
+      "symbol": "x1",
+      "symbol_name": "x1",
+      "source_symbol": "x1",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_nearest_point_distance:variable:x1",
+      "role": "output",
+      "variable_role": "output",
+      "dim_signature": "L1",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "L1",
+        "symbolic_role": "output"
+      },
+      "evidence_json": {
+        "source_symbol": "x1",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_nearest_point_distance"
+      },
+      "ordinal": 8
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_nearest_point_distance:6159912051be184b",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_nearest_point_distance:6159912051be184b",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "helix_nearest_point_distance",
+      "atom_module": "sciona.atoms.particle_tracking.helix_geometry.atoms",
+      "registry_name": "helix_nearest_point_distance",
+      "expression_id": "ea082954-be9c-520f-9b74-0bffb2ead94a",
+      "symbol": "y",
+      "symbol_name": "y",
+      "source_symbol": "y",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_nearest_point_distance:variable:y",
+      "role": "input",
+      "variable_role": "input",
+      "dim_signature": "L1",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "L1",
+        "symbolic_role": "input"
+      },
+      "evidence_json": {
+        "source_symbol": "y",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_nearest_point_distance"
+      },
+      "ordinal": 9
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_nearest_point_distance:6159912051be184b",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_nearest_point_distance:6159912051be184b",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "helix_nearest_point_distance",
+      "atom_module": "sciona.atoms.particle_tracking.helix_geometry.atoms",
+      "registry_name": "helix_nearest_point_distance",
+      "expression_id": "ea082954-be9c-520f-9b74-0bffb2ead94a",
+      "symbol": "y0",
+      "symbol_name": "y0",
+      "source_symbol": "y0",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_nearest_point_distance:variable:y0",
+      "role": "input",
+      "variable_role": "input",
+      "dim_signature": "L1",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "L1",
+        "symbolic_role": "input"
+      },
+      "evidence_json": {
+        "source_symbol": "y0",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_nearest_point_distance"
+      },
+      "ordinal": 10
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_nearest_point_distance:6159912051be184b",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_nearest_point_distance:6159912051be184b",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "helix_nearest_point_distance",
+      "atom_module": "sciona.atoms.particle_tracking.helix_geometry.atoms",
+      "registry_name": "helix_nearest_point_distance",
+      "expression_id": "ea082954-be9c-520f-9b74-0bffb2ead94a",
+      "symbol": "y1",
+      "symbol_name": "y1",
+      "source_symbol": "y1",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_nearest_point_distance:variable:y1",
+      "role": "output",
+      "variable_role": "output",
+      "dim_signature": "L1",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "L1",
+        "symbolic_role": "output"
+      },
+      "evidence_json": {
+        "source_symbol": "y1",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_nearest_point_distance"
+      },
+      "ordinal": 11
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_nearest_point_distance:6159912051be184b",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_nearest_point_distance:6159912051be184b",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "helix_nearest_point_distance",
+      "atom_module": "sciona.atoms.particle_tracking.helix_geometry.atoms",
+      "registry_name": "helix_nearest_point_distance",
+      "expression_id": "ea082954-be9c-520f-9b74-0bffb2ead94a",
+      "symbol": "z",
+      "symbol_name": "z",
+      "source_symbol": "z",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_nearest_point_distance:variable:z",
+      "role": "input",
+      "variable_role": "input",
+      "dim_signature": "L1",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "L1",
+        "symbolic_role": "input"
+      },
+      "evidence_json": {
+        "source_symbol": "z",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_nearest_point_distance"
+      },
+      "ordinal": 12
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_nearest_point_distance:6159912051be184b",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_nearest_point_distance:6159912051be184b",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "helix_nearest_point_distance",
+      "atom_module": "sciona.atoms.particle_tracking.helix_geometry.atoms",
+      "registry_name": "helix_nearest_point_distance",
+      "expression_id": "ea082954-be9c-520f-9b74-0bffb2ead94a",
+      "symbol": "z0",
+      "symbol_name": "z0",
+      "source_symbol": "z0",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_nearest_point_distance:variable:z0",
+      "role": "input",
+      "variable_role": "input",
+      "dim_signature": "L1",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "L1",
+        "symbolic_role": "input"
+      },
+      "evidence_json": {
+        "source_symbol": "z0",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_nearest_point_distance"
+      },
+      "ordinal": 13
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_nearest_point_distance:6159912051be184b",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_nearest_point_distance:6159912051be184b",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "helix_nearest_point_distance",
+      "atom_module": "sciona.atoms.particle_tracking.helix_geometry.atoms",
+      "registry_name": "helix_nearest_point_distance",
+      "expression_id": "ea082954-be9c-520f-9b74-0bffb2ead94a",
+      "symbol": "z1",
+      "symbol_name": "z1",
+      "source_symbol": "z1",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_nearest_point_distance:variable:z1",
+      "role": "output",
+      "variable_role": "output",
+      "dim_signature": "L1",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "L1",
+        "symbolic_role": "output"
+      },
+      "evidence_json": {
+        "source_symbol": "z1",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_nearest_point_distance"
+      },
+      "ordinal": 14
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_pitch_from_two_points:0183443448230645",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_pitch_from_two_points:0183443448230645",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "helix_pitch_from_two_points",
+      "atom_module": "sciona.atoms.particle_tracking.helix_geometry.atoms",
+      "registry_name": "helix_pitch_from_two_points",
+      "expression_id": "5cd2af57-04e9-5bf4-a4bc-0c3d30bc67dc",
+      "symbol": "dz",
+      "symbol_name": "dz",
+      "source_symbol": "dz",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_pitch_from_two_points:variable:dz",
+      "role": "output",
+      "variable_role": "output",
+      "dim_signature": "L1",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "L1",
+        "symbolic_role": "output"
+      },
+      "evidence_json": {
+        "source_symbol": "dz",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_pitch_from_two_points"
+      },
+      "ordinal": 0
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_pitch_from_two_points:0183443448230645",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_pitch_from_two_points:0183443448230645",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "helix_pitch_from_two_points",
+      "atom_module": "sciona.atoms.particle_tracking.helix_geometry.atoms",
+      "registry_name": "helix_pitch_from_two_points",
+      "expression_id": "5cd2af57-04e9-5bf4-a4bc-0c3d30bc67dc",
+      "symbol": "hel_pitch",
+      "symbol_name": "hel_pitch",
+      "source_symbol": "hel_pitch",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_pitch_from_two_points:variable:hel_pitch",
+      "role": "output",
+      "variable_role": "output",
+      "dim_signature": "L1",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "L1",
+        "symbolic_role": "output"
+      },
+      "evidence_json": {
+        "source_symbol": "hel_pitch",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_pitch_from_two_points"
+      },
+      "ordinal": 1
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_pitch_from_two_points:0183443448230645",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_pitch_from_two_points:0183443448230645",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "helix_pitch_from_two_points",
+      "atom_module": "sciona.atoms.particle_tracking.helix_geometry.atoms",
+      "registry_name": "helix_pitch_from_two_points",
+      "expression_id": "5cd2af57-04e9-5bf4-a4bc-0c3d30bc67dc",
+      "symbol": "hel_xm",
+      "symbol_name": "hel_xm",
+      "source_symbol": "hel_xm",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_pitch_from_two_points:variable:hel_xm",
+      "role": "input",
+      "variable_role": "input",
+      "dim_signature": "L1",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "L1",
+        "symbolic_role": "input"
+      },
+      "evidence_json": {
+        "source_symbol": "hel_xm",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_pitch_from_two_points"
+      },
+      "ordinal": 2
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_pitch_from_two_points:0183443448230645",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_pitch_from_two_points:0183443448230645",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "helix_pitch_from_two_points",
+      "atom_module": "sciona.atoms.particle_tracking.helix_geometry.atoms",
+      "registry_name": "helix_pitch_from_two_points",
+      "expression_id": "5cd2af57-04e9-5bf4-a4bc-0c3d30bc67dc",
+      "symbol": "hel_ym",
+      "symbol_name": "hel_ym",
+      "source_symbol": "hel_ym",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_pitch_from_two_points:variable:hel_ym",
+      "role": "input",
+      "variable_role": "input",
+      "dim_signature": "L1",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "L1",
+        "symbolic_role": "input"
+      },
+      "evidence_json": {
+        "source_symbol": "hel_ym",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_pitch_from_two_points"
+      },
+      "ordinal": 3
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_pitch_from_two_points:0183443448230645",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_pitch_from_two_points:0183443448230645",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "helix_pitch_from_two_points",
+      "atom_module": "sciona.atoms.particle_tracking.helix_geometry.atoms",
+      "registry_name": "helix_pitch_from_two_points",
+      "expression_id": "5cd2af57-04e9-5bf4-a4bc-0c3d30bc67dc",
+      "symbol": "phid",
+      "symbol_name": "phid",
+      "source_symbol": "phid",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_pitch_from_two_points:variable:phid",
+      "role": "output",
+      "variable_role": "output",
+      "dim_signature": "1",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "1",
+        "symbolic_role": "output"
+      },
+      "evidence_json": {
+        "source_symbol": "phid",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_pitch_from_two_points"
+      },
+      "ordinal": 4
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_pitch_from_two_points:0183443448230645",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_pitch_from_two_points:0183443448230645",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "helix_pitch_from_two_points",
+      "atom_module": "sciona.atoms.particle_tracking.helix_geometry.atoms",
+      "registry_name": "helix_pitch_from_two_points",
+      "expression_id": "5cd2af57-04e9-5bf4-a4bc-0c3d30bc67dc",
+      "symbol": "x1",
+      "symbol_name": "x1",
+      "source_symbol": "x1",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_pitch_from_two_points:variable:x1",
+      "role": "input",
+      "variable_role": "input",
+      "dim_signature": "L1",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "L1",
+        "symbolic_role": "input"
+      },
+      "evidence_json": {
+        "source_symbol": "x1",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_pitch_from_two_points"
+      },
+      "ordinal": 5
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_pitch_from_two_points:0183443448230645",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_pitch_from_two_points:0183443448230645",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "helix_pitch_from_two_points",
+      "atom_module": "sciona.atoms.particle_tracking.helix_geometry.atoms",
+      "registry_name": "helix_pitch_from_two_points",
+      "expression_id": "5cd2af57-04e9-5bf4-a4bc-0c3d30bc67dc",
+      "symbol": "x2",
+      "symbol_name": "x2",
+      "source_symbol": "x2",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_pitch_from_two_points:variable:x2",
+      "role": "input",
+      "variable_role": "input",
+      "dim_signature": "L1",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "L1",
+        "symbolic_role": "input"
+      },
+      "evidence_json": {
+        "source_symbol": "x2",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_pitch_from_two_points"
+      },
+      "ordinal": 6
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_pitch_from_two_points:0183443448230645",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_pitch_from_two_points:0183443448230645",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "helix_pitch_from_two_points",
+      "atom_module": "sciona.atoms.particle_tracking.helix_geometry.atoms",
+      "registry_name": "helix_pitch_from_two_points",
+      "expression_id": "5cd2af57-04e9-5bf4-a4bc-0c3d30bc67dc",
+      "symbol": "x3",
+      "symbol_name": "x3",
+      "source_symbol": "x3",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_pitch_from_two_points:variable:x3",
+      "role": "input",
+      "variable_role": "input",
+      "dim_signature": "L1",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "L1",
+        "symbolic_role": "input"
+      },
+      "evidence_json": {
+        "source_symbol": "x3",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_pitch_from_two_points"
+      },
+      "ordinal": 7
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_pitch_from_two_points:0183443448230645",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_pitch_from_two_points:0183443448230645",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "helix_pitch_from_two_points",
+      "atom_module": "sciona.atoms.particle_tracking.helix_geometry.atoms",
+      "registry_name": "helix_pitch_from_two_points",
+      "expression_id": "5cd2af57-04e9-5bf4-a4bc-0c3d30bc67dc",
+      "symbol": "y1",
+      "symbol_name": "y1",
+      "source_symbol": "y1",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_pitch_from_two_points:variable:y1",
+      "role": "input",
+      "variable_role": "input",
+      "dim_signature": "L1",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "L1",
+        "symbolic_role": "input"
+      },
+      "evidence_json": {
+        "source_symbol": "y1",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_pitch_from_two_points"
+      },
+      "ordinal": 8
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_pitch_from_two_points:0183443448230645",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_pitch_from_two_points:0183443448230645",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "helix_pitch_from_two_points",
+      "atom_module": "sciona.atoms.particle_tracking.helix_geometry.atoms",
+      "registry_name": "helix_pitch_from_two_points",
+      "expression_id": "5cd2af57-04e9-5bf4-a4bc-0c3d30bc67dc",
+      "symbol": "y2",
+      "symbol_name": "y2",
+      "source_symbol": "y2",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_pitch_from_two_points:variable:y2",
+      "role": "input",
+      "variable_role": "input",
+      "dim_signature": "L1",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "L1",
+        "symbolic_role": "input"
+      },
+      "evidence_json": {
+        "source_symbol": "y2",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_pitch_from_two_points"
+      },
+      "ordinal": 9
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_pitch_from_two_points:0183443448230645",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_pitch_from_two_points:0183443448230645",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "helix_pitch_from_two_points",
+      "atom_module": "sciona.atoms.particle_tracking.helix_geometry.atoms",
+      "registry_name": "helix_pitch_from_two_points",
+      "expression_id": "5cd2af57-04e9-5bf4-a4bc-0c3d30bc67dc",
+      "symbol": "y3",
+      "symbol_name": "y3",
+      "source_symbol": "y3",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_pitch_from_two_points:variable:y3",
+      "role": "input",
+      "variable_role": "input",
+      "dim_signature": "L1",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "L1",
+        "symbolic_role": "input"
+      },
+      "evidence_json": {
+        "source_symbol": "y3",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_pitch_from_two_points"
+      },
+      "ordinal": 10
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_pitch_from_two_points:0183443448230645",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_pitch_from_two_points:0183443448230645",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "helix_pitch_from_two_points",
+      "atom_module": "sciona.atoms.particle_tracking.helix_geometry.atoms",
+      "registry_name": "helix_pitch_from_two_points",
+      "expression_id": "5cd2af57-04e9-5bf4-a4bc-0c3d30bc67dc",
+      "symbol": "z1",
+      "symbol_name": "z1",
+      "source_symbol": "z1",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_pitch_from_two_points:variable:z1",
+      "role": "input",
+      "variable_role": "input",
+      "dim_signature": "L1",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "L1",
+        "symbolic_role": "input"
+      },
+      "evidence_json": {
+        "source_symbol": "z1",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_pitch_from_two_points"
+      },
+      "ordinal": 11
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_pitch_from_two_points:0183443448230645",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_pitch_from_two_points:0183443448230645",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "helix_pitch_from_two_points",
+      "atom_module": "sciona.atoms.particle_tracking.helix_geometry.atoms",
+      "registry_name": "helix_pitch_from_two_points",
+      "expression_id": "5cd2af57-04e9-5bf4-a4bc-0c3d30bc67dc",
+      "symbol": "z2",
+      "symbol_name": "z2",
+      "source_symbol": "z2",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_pitch_from_two_points:variable:z2",
+      "role": "input",
+      "variable_role": "input",
+      "dim_signature": "L1",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "L1",
+        "symbolic_role": "input"
+      },
+      "evidence_json": {
+        "source_symbol": "z2",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_pitch_from_two_points"
+      },
+      "ordinal": 12
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_pitch_from_two_points:0183443448230645",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_pitch_from_two_points:0183443448230645",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "helix_pitch_from_two_points",
+      "atom_module": "sciona.atoms.particle_tracking.helix_geometry.atoms",
+      "registry_name": "helix_pitch_from_two_points",
+      "expression_id": "5cd2af57-04e9-5bf4-a4bc-0c3d30bc67dc",
+      "symbol": "z3",
+      "symbol_name": "z3",
+      "source_symbol": "z3",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_pitch_from_two_points:variable:z3",
+      "role": "input",
+      "variable_role": "input",
+      "dim_signature": "L1",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "L1",
+        "symbolic_role": "input"
+      },
+      "evidence_json": {
+        "source_symbol": "z3",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_pitch_from_two_points"
+      },
+      "ordinal": 13
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_pitch_from_two_points:0183443448230645",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_pitch_from_two_points:0183443448230645",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "helix_pitch_from_two_points",
+      "atom_module": "sciona.atoms.particle_tracking.helix_geometry.atoms",
+      "registry_name": "helix_pitch_from_two_points",
+      "expression_id": "5cd2af57-04e9-5bf4-a4bc-0c3d30bc67dc",
+      "symbol": "zero_pitch",
+      "symbol_name": "zero_pitch",
+      "source_symbol": "zero_pitch",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_pitch_from_two_points:variable:zero_pitch",
+      "role": "parameter",
+      "variable_role": "parameter",
+      "dim_signature": "L1",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "L1",
+        "symbolic_role": "parameter"
+      },
+      "evidence_json": {
+        "source_symbol": "zero_pitch",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_pitch_from_two_points"
+      },
+      "ordinal": 14
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_pitch_least_squares:ab64a44b63c15dff",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_pitch_least_squares:ab64a44b63c15dff",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "helix_pitch_least_squares",
+      "atom_module": "sciona.atoms.particle_tracking.helix_geometry.atoms",
+      "registry_name": "helix_pitch_least_squares",
+      "expression_id": "59ba29e7-e244-59a0-b1cf-91a2f251815e",
+      "symbol": "dz",
+      "symbol_name": "dz",
+      "source_symbol": "dz",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_pitch_least_squares:variable:dz",
+      "role": "output",
+      "variable_role": "output",
+      "dim_signature": "L1",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "L1",
+        "symbolic_role": "output"
+      },
+      "evidence_json": {
+        "source_symbol": "dz",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_pitch_least_squares"
+      },
+      "ordinal": 0
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_pitch_least_squares:ab64a44b63c15dff",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_pitch_least_squares:ab64a44b63c15dff",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "helix_pitch_least_squares",
+      "atom_module": "sciona.atoms.particle_tracking.helix_geometry.atoms",
+      "registry_name": "helix_pitch_least_squares",
+      "expression_id": "59ba29e7-e244-59a0-b1cf-91a2f251815e",
+      "symbol": "hel_pitch",
+      "symbol_name": "hel_pitch",
+      "source_symbol": "hel_pitch",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_pitch_least_squares:variable:hel_pitch",
+      "role": "output",
+      "variable_role": "output",
+      "dim_signature": "L1",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "L1",
+        "symbolic_role": "output"
+      },
+      "evidence_json": {
+        "source_symbol": "hel_pitch",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_pitch_least_squares"
+      },
+      "ordinal": 1
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_pitch_least_squares:ab64a44b63c15dff",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_pitch_least_squares:ab64a44b63c15dff",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "helix_pitch_least_squares",
+      "atom_module": "sciona.atoms.particle_tracking.helix_geometry.atoms",
+      "registry_name": "helix_pitch_least_squares",
+      "expression_id": "59ba29e7-e244-59a0-b1cf-91a2f251815e",
+      "symbol": "hel_xm",
+      "symbol_name": "hel_xm",
+      "source_symbol": "hel_xm",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_pitch_least_squares:variable:hel_xm",
+      "role": "input",
+      "variable_role": "input",
+      "dim_signature": "L1",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "L1",
+        "symbolic_role": "input"
+      },
+      "evidence_json": {
+        "source_symbol": "hel_xm",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_pitch_least_squares"
+      },
+      "ordinal": 2
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_pitch_least_squares:ab64a44b63c15dff",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_pitch_least_squares:ab64a44b63c15dff",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "helix_pitch_least_squares",
+      "atom_module": "sciona.atoms.particle_tracking.helix_geometry.atoms",
+      "registry_name": "helix_pitch_least_squares",
+      "expression_id": "59ba29e7-e244-59a0-b1cf-91a2f251815e",
+      "symbol": "hel_ym",
+      "symbol_name": "hel_ym",
+      "source_symbol": "hel_ym",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_pitch_least_squares:variable:hel_ym",
+      "role": "input",
+      "variable_role": "input",
+      "dim_signature": "L1",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "L1",
+        "symbolic_role": "input"
+      },
+      "evidence_json": {
+        "source_symbol": "hel_ym",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_pitch_least_squares"
+      },
+      "ordinal": 3
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_pitch_least_squares:ab64a44b63c15dff",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_pitch_least_squares:ab64a44b63c15dff",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "helix_pitch_least_squares",
+      "atom_module": "sciona.atoms.particle_tracking.helix_geometry.atoms",
+      "registry_name": "helix_pitch_least_squares",
+      "expression_id": "59ba29e7-e244-59a0-b1cf-91a2f251815e",
+      "symbol": "loss",
+      "symbol_name": "loss",
+      "source_symbol": "loss",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_pitch_least_squares:variable:loss",
+      "role": "output",
+      "variable_role": "output",
+      "dim_signature": "L2",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "L2",
+        "symbolic_role": "output"
+      },
+      "evidence_json": {
+        "source_symbol": "loss",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_pitch_least_squares"
+      },
+      "ordinal": 4
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_pitch_least_squares:ab64a44b63c15dff",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_pitch_least_squares:ab64a44b63c15dff",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "helix_pitch_least_squares",
+      "atom_module": "sciona.atoms.particle_tracking.helix_geometry.atoms",
+      "registry_name": "helix_pitch_least_squares",
+      "expression_id": "59ba29e7-e244-59a0-b1cf-91a2f251815e",
+      "symbol": "phid",
+      "symbol_name": "phid",
+      "source_symbol": "phid",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_pitch_least_squares:variable:phid",
+      "role": "output",
+      "variable_role": "output",
+      "dim_signature": "1",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "1",
+        "symbolic_role": "output"
+      },
+      "evidence_json": {
+        "source_symbol": "phid",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_pitch_least_squares"
+      },
+      "ordinal": 5
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_pitch_least_squares:ab64a44b63c15dff",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_pitch_least_squares:ab64a44b63c15dff",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "helix_pitch_least_squares",
+      "atom_module": "sciona.atoms.particle_tracking.helix_geometry.atoms",
+      "registry_name": "helix_pitch_least_squares",
+      "expression_id": "59ba29e7-e244-59a0-b1cf-91a2f251815e",
+      "symbol": "sum_phi",
+      "symbol_name": "sum_phi",
+      "source_symbol": "sum_phi",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_pitch_least_squares:variable:sum_phi",
+      "role": "parameter",
+      "variable_role": "parameter",
+      "dim_signature": "1",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "1",
+        "symbolic_role": "parameter"
+      },
+      "evidence_json": {
+        "source_symbol": "sum_phi",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_pitch_least_squares"
+      },
+      "ordinal": 6
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_pitch_least_squares:ab64a44b63c15dff",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_pitch_least_squares:ab64a44b63c15dff",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "helix_pitch_least_squares",
+      "atom_module": "sciona.atoms.particle_tracking.helix_geometry.atoms",
+      "registry_name": "helix_pitch_least_squares",
+      "expression_id": "59ba29e7-e244-59a0-b1cf-91a2f251815e",
+      "symbol": "sum_phisqr",
+      "symbol_name": "sum_phisqr",
+      "source_symbol": "sum_phisqr",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_pitch_least_squares:variable:sum_phisqr",
+      "role": "parameter",
+      "variable_role": "parameter",
+      "dim_signature": "1",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "1",
+        "symbolic_role": "parameter"
+      },
+      "evidence_json": {
+        "source_symbol": "sum_phisqr",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_pitch_least_squares"
+      },
+      "ordinal": 7
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_pitch_least_squares:ab64a44b63c15dff",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_pitch_least_squares:ab64a44b63c15dff",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "helix_pitch_least_squares",
+      "atom_module": "sciona.atoms.particle_tracking.helix_geometry.atoms",
+      "registry_name": "helix_pitch_least_squares",
+      "expression_id": "59ba29e7-e244-59a0-b1cf-91a2f251815e",
+      "symbol": "sum_z",
+      "symbol_name": "sum_z",
+      "source_symbol": "sum_z",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_pitch_least_squares:variable:sum_z",
+      "role": "parameter",
+      "variable_role": "parameter",
+      "dim_signature": "L1",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "L1",
+        "symbolic_role": "parameter"
+      },
+      "evidence_json": {
+        "source_symbol": "sum_z",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_pitch_least_squares"
+      },
+      "ordinal": 8
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_pitch_least_squares:ab64a44b63c15dff",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_pitch_least_squares:ab64a44b63c15dff",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "helix_pitch_least_squares",
+      "atom_module": "sciona.atoms.particle_tracking.helix_geometry.atoms",
+      "registry_name": "helix_pitch_least_squares",
+      "expression_id": "59ba29e7-e244-59a0-b1cf-91a2f251815e",
+      "symbol": "sum_zphi",
+      "symbol_name": "sum_zphi",
+      "source_symbol": "sum_zphi",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_pitch_least_squares:variable:sum_zphi",
+      "role": "parameter",
+      "variable_role": "parameter",
+      "dim_signature": "L1",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "L1",
+        "symbolic_role": "parameter"
+      },
+      "evidence_json": {
+        "source_symbol": "sum_zphi",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_pitch_least_squares"
+      },
+      "ordinal": 9
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_pitch_least_squares:ab64a44b63c15dff",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_pitch_least_squares:ab64a44b63c15dff",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "helix_pitch_least_squares",
+      "atom_module": "sciona.atoms.particle_tracking.helix_geometry.atoms",
+      "registry_name": "helix_pitch_least_squares",
+      "expression_id": "59ba29e7-e244-59a0-b1cf-91a2f251815e",
+      "symbol": "x1",
+      "symbol_name": "x1",
+      "source_symbol": "x1",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_pitch_least_squares:variable:x1",
+      "role": "input",
+      "variable_role": "input",
+      "dim_signature": "L1",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "L1",
+        "symbolic_role": "input"
+      },
+      "evidence_json": {
+        "source_symbol": "x1",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_pitch_least_squares"
+      },
+      "ordinal": 10
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_pitch_least_squares:ab64a44b63c15dff",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_pitch_least_squares:ab64a44b63c15dff",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "helix_pitch_least_squares",
+      "atom_module": "sciona.atoms.particle_tracking.helix_geometry.atoms",
+      "registry_name": "helix_pitch_least_squares",
+      "expression_id": "59ba29e7-e244-59a0-b1cf-91a2f251815e",
+      "symbol": "x2",
+      "symbol_name": "x2",
+      "source_symbol": "x2",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_pitch_least_squares:variable:x2",
+      "role": "input",
+      "variable_role": "input",
+      "dim_signature": "L1",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "L1",
+        "symbolic_role": "input"
+      },
+      "evidence_json": {
+        "source_symbol": "x2",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_pitch_least_squares"
+      },
+      "ordinal": 11
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_pitch_least_squares:ab64a44b63c15dff",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_pitch_least_squares:ab64a44b63c15dff",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "helix_pitch_least_squares",
+      "atom_module": "sciona.atoms.particle_tracking.helix_geometry.atoms",
+      "registry_name": "helix_pitch_least_squares",
+      "expression_id": "59ba29e7-e244-59a0-b1cf-91a2f251815e",
+      "symbol": "x3",
+      "symbol_name": "x3",
+      "source_symbol": "x3",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_pitch_least_squares:variable:x3",
+      "role": "input",
+      "variable_role": "input",
+      "dim_signature": "L1",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "L1",
+        "symbolic_role": "input"
+      },
+      "evidence_json": {
+        "source_symbol": "x3",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_pitch_least_squares"
+      },
+      "ordinal": 12
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_pitch_least_squares:ab64a44b63c15dff",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_pitch_least_squares:ab64a44b63c15dff",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "helix_pitch_least_squares",
+      "atom_module": "sciona.atoms.particle_tracking.helix_geometry.atoms",
+      "registry_name": "helix_pitch_least_squares",
+      "expression_id": "59ba29e7-e244-59a0-b1cf-91a2f251815e",
+      "symbol": "y1",
+      "symbol_name": "y1",
+      "source_symbol": "y1",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_pitch_least_squares:variable:y1",
+      "role": "input",
+      "variable_role": "input",
+      "dim_signature": "L1",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "L1",
+        "symbolic_role": "input"
+      },
+      "evidence_json": {
+        "source_symbol": "y1",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_pitch_least_squares"
+      },
+      "ordinal": 13
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_pitch_least_squares:ab64a44b63c15dff",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_pitch_least_squares:ab64a44b63c15dff",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "helix_pitch_least_squares",
+      "atom_module": "sciona.atoms.particle_tracking.helix_geometry.atoms",
+      "registry_name": "helix_pitch_least_squares",
+      "expression_id": "59ba29e7-e244-59a0-b1cf-91a2f251815e",
+      "symbol": "y2",
+      "symbol_name": "y2",
+      "source_symbol": "y2",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_pitch_least_squares:variable:y2",
+      "role": "input",
+      "variable_role": "input",
+      "dim_signature": "L1",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "L1",
+        "symbolic_role": "input"
+      },
+      "evidence_json": {
+        "source_symbol": "y2",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_pitch_least_squares"
+      },
+      "ordinal": 14
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_pitch_least_squares:ab64a44b63c15dff",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_pitch_least_squares:ab64a44b63c15dff",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "helix_pitch_least_squares",
+      "atom_module": "sciona.atoms.particle_tracking.helix_geometry.atoms",
+      "registry_name": "helix_pitch_least_squares",
+      "expression_id": "59ba29e7-e244-59a0-b1cf-91a2f251815e",
+      "symbol": "y3",
+      "symbol_name": "y3",
+      "source_symbol": "y3",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_pitch_least_squares:variable:y3",
+      "role": "input",
+      "variable_role": "input",
+      "dim_signature": "L1",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "L1",
+        "symbolic_role": "input"
+      },
+      "evidence_json": {
+        "source_symbol": "y3",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_pitch_least_squares"
+      },
+      "ordinal": 15
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_pitch_least_squares:ab64a44b63c15dff",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_pitch_least_squares:ab64a44b63c15dff",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "helix_pitch_least_squares",
+      "atom_module": "sciona.atoms.particle_tracking.helix_geometry.atoms",
+      "registry_name": "helix_pitch_least_squares",
+      "expression_id": "59ba29e7-e244-59a0-b1cf-91a2f251815e",
+      "symbol": "z1",
+      "symbol_name": "z1",
+      "source_symbol": "z1",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_pitch_least_squares:variable:z1",
+      "role": "input",
+      "variable_role": "input",
+      "dim_signature": "L1",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "L1",
+        "symbolic_role": "input"
+      },
+      "evidence_json": {
+        "source_symbol": "z1",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_pitch_least_squares"
+      },
+      "ordinal": 16
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_pitch_least_squares:ab64a44b63c15dff",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_pitch_least_squares:ab64a44b63c15dff",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "helix_pitch_least_squares",
+      "atom_module": "sciona.atoms.particle_tracking.helix_geometry.atoms",
+      "registry_name": "helix_pitch_least_squares",
+      "expression_id": "59ba29e7-e244-59a0-b1cf-91a2f251815e",
+      "symbol": "z2",
+      "symbol_name": "z2",
+      "source_symbol": "z2",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_pitch_least_squares:variable:z2",
+      "role": "input",
+      "variable_role": "input",
+      "dim_signature": "L1",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "L1",
+        "symbolic_role": "input"
+      },
+      "evidence_json": {
+        "source_symbol": "z2",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_pitch_least_squares"
+      },
+      "ordinal": 17
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_pitch_least_squares:ab64a44b63c15dff",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_pitch_least_squares:ab64a44b63c15dff",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "helix_pitch_least_squares",
+      "atom_module": "sciona.atoms.particle_tracking.helix_geometry.atoms",
+      "registry_name": "helix_pitch_least_squares",
+      "expression_id": "59ba29e7-e244-59a0-b1cf-91a2f251815e",
+      "symbol": "z3",
+      "symbol_name": "z3",
+      "source_symbol": "z3",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_pitch_least_squares:variable:z3",
+      "role": "input",
+      "variable_role": "input",
+      "dim_signature": "L1",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "L1",
+        "symbolic_role": "input"
+      },
+      "evidence_json": {
+        "source_symbol": "z3",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_pitch_least_squares"
+      },
+      "ordinal": 18
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_pitch_least_squares:ab64a44b63c15dff",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_pitch_least_squares:ab64a44b63c15dff",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "helix_pitch_least_squares",
+      "atom_module": "sciona.atoms.particle_tracking.helix_geometry.atoms",
+      "registry_name": "helix_pitch_least_squares",
+      "expression_id": "59ba29e7-e244-59a0-b1cf-91a2f251815e",
+      "symbol": "zero_pitch",
+      "symbol_name": "zero_pitch",
+      "source_symbol": "zero_pitch",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_pitch_least_squares:variable:zero_pitch",
+      "role": "parameter",
+      "variable_role": "parameter",
+      "dim_signature": "L1",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "L1",
+        "symbolic_role": "parameter"
+      },
+      "evidence_json": {
+        "source_symbol": "zero_pitch",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_pitch_least_squares"
+      },
+      "ordinal": 19
+    }
+  ],
+  "artifact_validity_bounds": [
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:circle_from_three_points:119c0eb9064151c9",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:circle_from_three_points:119c0eb9064151c9",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "circle_from_three_points",
+      "atom_module": "sciona.atoms.particle_tracking.helix_geometry.atoms",
+      "registry_name": "circle_from_three_points",
+      "expression_id": "e2a81d12-0418-5bf0-b0f5-3b87689821f0",
+      "symbol": "large_radius",
+      "variable_name": "large_radius",
+      "source_symbol": "large_radius",
+      "source_bound_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:circle_from_three_points:bound:large_radius",
+      "scope": "variable",
+      "bound_kind": "domain",
+      "min_value": 0.0,
+      "max_value": null,
+      "lower_value": 0.0,
+      "upper_value": null,
+      "lower_inclusive": true,
+      "upper_inclusive": true,
+      "dim_signature": "L1",
+      "validity_statement": "large_radius >= 0.0",
+      "evidence_ref_key": "sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:circle_from_three_points:bound:large_radius",
+      "confidence": "high",
+      "review_status": "automated_pass",
+      "metadata": {
+        "provider": "sciona-atoms-physics",
+        "atom_module": "sciona.atoms.particle_tracking.helix_geometry.atoms",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:circle_from_three_points",
+        "source_symbol": "large_radius",
+        "ordinal": 0
+      },
+      "ordinal": 0
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:circle_from_three_points:119c0eb9064151c9",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:circle_from_three_points:119c0eb9064151c9",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "circle_from_three_points",
+      "atom_module": "sciona.atoms.particle_tracking.helix_geometry.atoms",
+      "registry_name": "circle_from_three_points",
+      "expression_id": "e2a81d12-0418-5bf0-b0f5-3b87689821f0",
+      "symbol": "r",
+      "variable_name": "r",
+      "source_symbol": "r",
+      "source_bound_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:circle_from_three_points:bound:r",
+      "scope": "variable",
+      "bound_kind": "domain",
+      "min_value": 0.0,
+      "max_value": null,
+      "lower_value": 0.0,
+      "upper_value": null,
+      "lower_inclusive": true,
+      "upper_inclusive": true,
+      "dim_signature": "L1",
+      "validity_statement": "r >= 0.0",
+      "evidence_ref_key": "sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:circle_from_three_points:bound:r",
+      "confidence": "high",
+      "review_status": "automated_pass",
+      "metadata": {
+        "provider": "sciona-atoms-physics",
+        "atom_module": "sciona.atoms.particle_tracking.helix_geometry.atoms",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:circle_from_three_points",
+        "source_symbol": "r",
+        "ordinal": 1
+      },
+      "ordinal": 1
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_nearest_point_distance:6159912051be184b",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_nearest_point_distance:6159912051be184b",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "helix_nearest_point_distance",
+      "atom_module": "sciona.atoms.particle_tracking.helix_geometry.atoms",
+      "registry_name": "helix_nearest_point_distance",
+      "expression_id": "ea082954-be9c-520f-9b74-0bffb2ead94a",
+      "symbol": "dist",
+      "variable_name": "dist",
+      "source_symbol": "dist",
+      "source_bound_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_nearest_point_distance:bound:dist",
+      "scope": "variable",
+      "bound_kind": "domain",
+      "min_value": 0.0,
+      "max_value": null,
+      "lower_value": 0.0,
+      "upper_value": null,
+      "lower_inclusive": true,
+      "upper_inclusive": true,
+      "dim_signature": "L1",
+      "validity_statement": "dist >= 0.0",
+      "evidence_ref_key": "sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_nearest_point_distance:bound:dist",
+      "confidence": "high",
+      "review_status": "automated_pass",
+      "metadata": {
+        "provider": "sciona-atoms-physics",
+        "atom_module": "sciona.atoms.particle_tracking.helix_geometry.atoms",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_nearest_point_distance",
+        "source_symbol": "dist",
+        "ordinal": 0
+      },
+      "ordinal": 0
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_nearest_point_distance:6159912051be184b",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_nearest_point_distance:6159912051be184b",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "helix_nearest_point_distance",
+      "atom_module": "sciona.atoms.particle_tracking.helix_geometry.atoms",
+      "registry_name": "helix_nearest_point_distance",
+      "expression_id": "ea082954-be9c-520f-9b74-0bffb2ead94a",
+      "symbol": "hel_r",
+      "variable_name": "hel_r",
+      "source_symbol": "hel_r",
+      "source_bound_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_nearest_point_distance:bound:hel_r",
+      "scope": "variable",
+      "bound_kind": "domain",
+      "min_value": 0.0,
+      "max_value": null,
+      "lower_value": 0.0,
+      "upper_value": null,
+      "lower_inclusive": true,
+      "upper_inclusive": true,
+      "dim_signature": "L1",
+      "validity_statement": "hel_r >= 0.0",
+      "evidence_ref_key": "sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_nearest_point_distance:bound:hel_r",
+      "confidence": "high",
+      "review_status": "automated_pass",
+      "metadata": {
+        "provider": "sciona-atoms-physics",
+        "atom_module": "sciona.atoms.particle_tracking.helix_geometry.atoms",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_nearest_point_distance",
+        "source_symbol": "hel_r",
+        "ordinal": 1
+      },
+      "ordinal": 1
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_nearest_point_distance:6159912051be184b",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_nearest_point_distance:6159912051be184b",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "helix_nearest_point_distance",
+      "atom_module": "sciona.atoms.particle_tracking.helix_geometry.atoms",
+      "registry_name": "helix_nearest_point_distance",
+      "expression_id": "ea082954-be9c-520f-9b74-0bffb2ead94a",
+      "symbol": "iterations",
+      "variable_name": "iterations",
+      "source_symbol": "iterations",
+      "source_bound_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_nearest_point_distance:bound:iterations",
+      "scope": "variable",
+      "bound_kind": "domain",
+      "min_value": 1.0,
+      "max_value": null,
+      "lower_value": 1.0,
+      "upper_value": null,
+      "lower_inclusive": true,
+      "upper_inclusive": true,
+      "dim_signature": "1",
+      "validity_statement": "iterations >= 1.0",
+      "evidence_ref_key": "sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_nearest_point_distance:bound:iterations",
+      "confidence": "high",
+      "review_status": "automated_pass",
+      "metadata": {
+        "provider": "sciona-atoms-physics",
+        "atom_module": "sciona.atoms.particle_tracking.helix_geometry.atoms",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_nearest_point_distance",
+        "source_symbol": "iterations",
+        "ordinal": 2
+      },
+      "ordinal": 2
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_pitch_from_two_points:0183443448230645",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_pitch_from_two_points:0183443448230645",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "helix_pitch_from_two_points",
+      "atom_module": "sciona.atoms.particle_tracking.helix_geometry.atoms",
+      "registry_name": "helix_pitch_from_two_points",
+      "expression_id": "5cd2af57-04e9-5bf4-a4bc-0c3d30bc67dc",
+      "symbol": "phid",
+      "variable_name": "phid",
+      "source_symbol": "phid",
+      "source_bound_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_pitch_from_two_points:bound:phid",
+      "scope": "variable",
+      "bound_kind": "domain",
+      "min_value": -3.141592653589793,
+      "max_value": 3.141592653589793,
+      "lower_value": -3.141592653589793,
+      "upper_value": 3.141592653589793,
+      "lower_inclusive": true,
+      "upper_inclusive": true,
+      "dim_signature": "1",
+      "validity_statement": "-3.141592653589793 <= phid <= 3.141592653589793",
+      "evidence_ref_key": "sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_pitch_from_two_points:bound:phid",
+      "confidence": "high",
+      "review_status": "automated_pass",
+      "metadata": {
+        "provider": "sciona-atoms-physics",
+        "atom_module": "sciona.atoms.particle_tracking.helix_geometry.atoms",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_pitch_from_two_points",
+        "source_symbol": "phid",
+        "ordinal": 0
+      },
+      "ordinal": 0
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_pitch_from_two_points:0183443448230645",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_pitch_from_two_points:0183443448230645",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "helix_pitch_from_two_points",
+      "atom_module": "sciona.atoms.particle_tracking.helix_geometry.atoms",
+      "registry_name": "helix_pitch_from_two_points",
+      "expression_id": "5cd2af57-04e9-5bf4-a4bc-0c3d30bc67dc",
+      "symbol": "zero_pitch",
+      "variable_name": "zero_pitch",
+      "source_symbol": "zero_pitch",
+      "source_bound_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_pitch_from_two_points:bound:zero_pitch",
+      "scope": "variable",
+      "bound_kind": "domain",
+      "min_value": 0.0,
+      "max_value": null,
+      "lower_value": 0.0,
+      "upper_value": null,
+      "lower_inclusive": true,
+      "upper_inclusive": true,
+      "dim_signature": "L1",
+      "validity_statement": "zero_pitch >= 0.0",
+      "evidence_ref_key": "sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_pitch_from_two_points:bound:zero_pitch",
+      "confidence": "high",
+      "review_status": "automated_pass",
+      "metadata": {
+        "provider": "sciona-atoms-physics",
+        "atom_module": "sciona.atoms.particle_tracking.helix_geometry.atoms",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_pitch_from_two_points",
+        "source_symbol": "zero_pitch",
+        "ordinal": 1
+      },
+      "ordinal": 1
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_pitch_least_squares:ab64a44b63c15dff",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_pitch_least_squares:ab64a44b63c15dff",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "helix_pitch_least_squares",
+      "atom_module": "sciona.atoms.particle_tracking.helix_geometry.atoms",
+      "registry_name": "helix_pitch_least_squares",
+      "expression_id": "59ba29e7-e244-59a0-b1cf-91a2f251815e",
+      "symbol": "zero_pitch",
+      "variable_name": "zero_pitch",
+      "source_symbol": "zero_pitch",
+      "source_bound_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_pitch_least_squares:bound:zero_pitch",
+      "scope": "variable",
+      "bound_kind": "domain",
+      "min_value": 0.0,
+      "max_value": null,
+      "lower_value": 0.0,
+      "upper_value": null,
+      "lower_inclusive": true,
+      "upper_inclusive": true,
+      "dim_signature": "L1",
+      "validity_statement": "zero_pitch >= 0.0",
+      "evidence_ref_key": "sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_pitch_least_squares:bound:zero_pitch",
+      "confidence": "high",
+      "review_status": "automated_pass",
+      "metadata": {
+        "provider": "sciona-atoms-physics",
+        "atom_module": "sciona.atoms.particle_tracking.helix_geometry.atoms",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.helix_geometry.atoms:helix_pitch_least_squares",
+        "source_symbol": "zero_pitch",
+        "ordinal": 0
+      },
+      "ordinal": 0
+    }
+  ]
+}
