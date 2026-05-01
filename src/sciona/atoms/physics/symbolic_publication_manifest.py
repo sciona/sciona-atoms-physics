@@ -132,28 +132,91 @@ def build_symbolic_publication_manifest(
         }
         expressions.append(expression_row)
 
-        for symbol, role in sorted(symbolic.variables.items()):
+        for ordinal, (symbol, role) in enumerate(sorted(symbolic.variables.items())):
+            dim_signature = symbolic_dim_signature.get(symbol, "")
             variables.append(
                 {
                     "artifact_key": artifact_key,
+                    "local_artifact_key": expression_row["local_artifact_key"],
                     "provider": provider,
                     "atom_name": atom_name,
+                    "atom_module": atom_module,
+                    "registry_name": expression_row["registry_name"],
+                    "expression_id": expression_id,
                     "symbol": symbol,
+                    "symbol_name": symbol,
+                    "source_symbol": symbol,
+                    "source_variable_id": _source_variable_id(
+                        provider,
+                        atom_module,
+                        atom_name,
+                        symbol,
+                    ),
                     "role": role,
-                    "dim_signature": symbolic_dim_signature.get(symbol, ""),
+                    "variable_role": role,
+                    "dim_signature": dim_signature,
+                    "dimension_source": "source" if dim_signature else "unknown",
+                    "assumptions_json": {
+                        "dim_signature": dim_signature,
+                        "symbolic_role": role,
+                    },
+                    "evidence_json": {
+                        "source_symbol": symbol,
+                        "source_expression_id": source_expression_id,
+                    },
+                    "ordinal": ordinal,
                 }
             )
 
-        for symbol, bounds in sorted(symbolic.validity_bounds.items()):
+        for ordinal, (symbol, bounds) in enumerate(
+            sorted(symbolic.validity_bounds.items())
+        ):
             min_value, max_value = bounds
+            dim_signature = symbolic_dim_signature.get(symbol, "")
+            source_bound_id = _source_bound_id(
+                provider,
+                atom_module,
+                atom_name,
+                symbol,
+            )
             validity_bounds.append(
                 {
                     "artifact_key": artifact_key,
+                    "local_artifact_key": expression_row["local_artifact_key"],
                     "provider": provider,
                     "atom_name": atom_name,
+                    "atom_module": atom_module,
+                    "registry_name": expression_row["registry_name"],
+                    "expression_id": expression_id,
                     "symbol": symbol,
+                    "variable_name": symbol,
+                    "source_symbol": symbol,
+                    "source_bound_id": source_bound_id,
+                    "scope": "variable",
+                    "bound_kind": "domain",
                     "min_value": min_value,
                     "max_value": max_value,
+                    "lower_value": min_value,
+                    "upper_value": max_value,
+                    "lower_inclusive": True,
+                    "upper_inclusive": True,
+                    "dim_signature": dim_signature,
+                    "validity_statement": _validity_statement(
+                        symbol,
+                        min_value,
+                        max_value,
+                    ),
+                    "evidence_ref_key": source_bound_id,
+                    "confidence": "high",
+                    "review_status": "automated_pass",
+                    "metadata": {
+                        "provider": provider,
+                        "atom_module": atom_module,
+                        "source_expression_id": source_expression_id,
+                        "source_symbol": symbol,
+                        "ordinal": ordinal,
+                    },
+                    "ordinal": ordinal,
                 }
             )
 
@@ -262,6 +325,34 @@ def _expression_id(provider: str, atom_module: str, atom_name: str) -> str:
 
 def _source_expression_id(provider: str, atom_module: str, atom_name: str) -> str:
     return f"{provider}:{atom_module}:{atom_name}"
+
+
+def _source_variable_id(
+    provider: str,
+    atom_module: str,
+    atom_name: str,
+    symbol: str,
+) -> str:
+    return f"{_source_expression_id(provider, atom_module, atom_name)}:variable:{symbol}"
+
+
+def _source_bound_id(
+    provider: str,
+    atom_module: str,
+    atom_name: str,
+    symbol: str,
+) -> str:
+    return f"{_source_expression_id(provider, atom_module, atom_name)}:bound:{symbol}"
+
+
+def _validity_statement(symbol: str, lower: Any, upper: Any) -> str:
+    if lower is None and upper is None:
+        return ""
+    if lower is None:
+        return f"{symbol} <= {upper}"
+    if upper is None:
+        return f"{symbol} >= {lower}"
+    return f"{lower} <= {symbol} <= {upper}"
 
 
 def _stable_hash(kind: str, payload: Any) -> str:

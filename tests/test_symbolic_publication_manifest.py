@@ -5,6 +5,7 @@ from sciona.atoms.physics.symbolic_publication_manifest import (
     build_symbolic_publication_manifest,
     to_matcher_symbolic_expression_rows,
 )
+from sciona.physics_ingest.publication import load_symbolic_publication_manifest
 from sciona.physics_ingest.staging import validate_symbolic_expression_row
 
 
@@ -121,7 +122,15 @@ def test_manifest_emits_expression_variables_and_bounds_rows() -> None:
         if row["artifact_key"] == dm_key
     }
     assert dm_variables["DM"]["role"] == "input"
+    assert dm_variables["DM"]["variable_role"] == "input"
+    assert dm_variables["DM"]["symbol_name"] == "DM"
+    assert dm_variables["DM"]["source_symbol"] == "DM"
     assert dm_variables["DM"]["dim_signature"] == "L-2"
+    assert dm_variables["DM"]["dimension_source"] == "source"
+    assert dm_variables["DM"]["ordinal"] < dm_variables["delay"]["ordinal"]
+    assert dm_variables["DM"]["source_variable_id"].endswith(
+        ":dm_candidate_filter:variable:DM"
+    )
     assert dm_variables["delay"]["role"] == "output"
     assert dm_variables["delay"]["dim_signature"] == "T1"
     assert rows_by_name["dm_candidate_filter"]["constants"]["K"] == 4.148808e3
@@ -133,8 +142,25 @@ def test_manifest_emits_expression_variables_and_bounds_rows() -> None:
         if row["artifact_key"] == angle_key
     }
     assert angle_bounds["theta"]["min_value"] == 0.0
+    assert angle_bounds["theta"]["lower_value"] == 0.0
     assert angle_bounds["theta"]["max_value"] > 3.0
+    assert angle_bounds["theta"]["upper_value"] > 3.0
+    assert angle_bounds["theta"]["variable_name"] == "theta"
+    assert angle_bounds["theta"]["source_symbol"] == "theta"
+    assert angle_bounds["theta"]["scope"] == "variable"
+    assert angle_bounds["theta"]["bound_kind"] == "domain"
+    assert angle_bounds["theta"]["confidence"] == "high"
+    assert angle_bounds["theta"]["review_status"] == "automated_pass"
+    assert angle_bounds["theta"]["validity_statement"].startswith("0.0 <= theta <=")
+    assert angle_bounds["theta"]["source_bound_id"].endswith(
+        ":calculate_vector_angle:bound:theta"
+    )
+    assert angle_bounds["theta"]["evidence_ref_key"] == angle_bounds["theta"][
+        "source_bound_id"
+    ]
+    assert angle_bounds["theta"]["metadata"]["source_symbol"] == "theta"
     assert angle_bounds["u_norm"]["max_value"] is None
+    assert angle_bounds["u_norm"]["validity_statement"] == "u_norm >= 0.0"
 
     low_order = rows_by_name["offset_tt2tdb"]
     assert low_order["constants"]["m1"] == 1.99096871e-7
@@ -199,6 +225,46 @@ def test_manifest_rows_can_be_adapted_to_matcher_staging_contract() -> None:
     assert all(row.artifact_id == ARTIFACT_ID for row in staged)
     assert all(row.version_id == VERSION_ID for row in staged)
     assert staged[0].to_insert_dict()["source_expression_id"]
+
+
+def test_manifest_rows_load_through_matcher_publication_loader_with_bindings() -> None:
+    manifest = _manifest()
+    expression_rows = manifest["artifact_symbolic_expressions"]
+    artifact_bindings = {
+        row["artifact_key"]: {
+            "artifact_id": f"20000000-0000-0000-0000-{index:012d}",
+            "version_id": f"30000000-0000-0000-0000-{index:012d}",
+        }
+        for index, row in enumerate(expression_rows, start=1)
+    }
+
+    result = load_symbolic_publication_manifest(manifest, artifact_bindings)
+    rows = result.to_insert_rows()
+
+    assert result.diagnostics == ()
+    assert len(rows["artifact_symbolic_expressions"]) == len(expression_rows)
+    assert len(rows["artifact_symbolic_variables"]) == len(
+        manifest["artifact_symbolic_variables"]
+    )
+    assert len(rows["artifact_validity_bounds"]) == len(
+        manifest["artifact_validity_bounds"]
+    )
+
+    variable = next(
+        row for row in rows["artifact_symbolic_variables"] if row["symbol_name"] == "DM"
+    )
+    assert variable["source_symbol"] == "DM"
+    assert variable["dimension_source"] == "source"
+    assert variable["ordinal"] >= 0
+
+    bound = next(
+        row for row in rows["artifact_validity_bounds"] if row["variable_name"] == "DM"
+    )
+    assert bound["scope"] == "variable"
+    assert bound["confidence"] == "high"
+    assert bound["metadata"]["publication_manifest"]["source_bound_id"].endswith(
+        ":dm_candidate_filter:bound:DM"
+    )
 
 
 def test_manifest_can_be_limited_to_selected_modules() -> None:
