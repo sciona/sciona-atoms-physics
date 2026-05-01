@@ -1,0 +1,304 @@
+{
+  "provider": "sciona-atoms-physics",
+  "modules": [
+    "sciona.atoms.physics.tempo_jl.apply_offsets.atoms"
+  ],
+  "artifact_symbolic_expressions": [
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.tempo_jl.apply_offsets.atoms:_zero_offset:1adb877964962105",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "_zero_offset",
+      "atom_module": "sciona.atoms.physics.tempo_jl.apply_offsets.atoms",
+      "registry_name": "_zero_offset",
+      "expression_id": "1e7bde90-e1ce-55bb-8fc2-05eff6ab4d6f",
+      "source_expression_id": "sciona-atoms-physics:sciona.atoms.physics.tempo_jl.apply_offsets.atoms:_zero_offset",
+      "expression_srepr": "Equality(Symbol('offset'), Symbol('zero_offset'))",
+      "expression_text": "Eq(offset, zero_offset)",
+      "sympy_srepr": "Equality(Symbol('offset'), Symbol('zero_offset'))",
+      "raw_formula": "Eq(offset, zero_offset)",
+      "raw_formula_format": "plain_text",
+      "expression_kind": "equation",
+      "expression_role": "primary",
+      "canonical_expr_hash": "a38215fd70fb52cfb62edcb20635fa97344cda9f4e0fce7191048cf40b452878",
+      "topology_hash": "afea2cf9271be5542e79df1864612b882e5043f2b2b4e227c2c114f9a554ef98",
+      "dimensional_hash": "906c2f46ac778288928d45c6412d038bcb442a9bef7c2a1721d7d8781414c8b5",
+      "parse_status": "normalized",
+      "parse_confidence": 1.0,
+      "review_status": "automated_pass",
+      "validation_status": "passed",
+      "mechanism_tags": [
+        "relativistic_timing",
+        "time_scale_conversion"
+      ],
+      "behavioral_archetypes": [
+        "periodic_correction",
+        "time_offset"
+      ],
+      "variables": {
+        "offset": "output",
+        "seconds": "input",
+        "zero_offset": "constant"
+      },
+      "dim_signature": {
+        "offset": "T1",
+        "seconds": "T1",
+        "zero_offset": "T1"
+      },
+      "symbolic_dim_signature": {
+        "offset": "T1",
+        "seconds": "T1",
+        "zero_offset": "T1"
+      },
+      "constants": {
+        "zero_offset": 0.0
+      },
+      "bibliography": [
+        "iau2006sofa",
+        "repo_tempo_jl"
+      ],
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.tempo_jl.apply_offsets.atoms:_zero_offset:1adb877964962105",
+      "artifact_uuid": null
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.tempo_jl.apply_offsets.atoms:apply_offsets:c7c1b126dd566586",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "apply_offsets",
+      "atom_module": "sciona.atoms.physics.tempo_jl.apply_offsets.atoms",
+      "registry_name": "apply_offsets",
+      "expression_id": "d9c77c1c-25b7-5491-b9a7-ffc826df9676",
+      "source_expression_id": "sciona-atoms-physics:sciona.atoms.physics.tempo_jl.apply_offsets.atoms:apply_offsets",
+      "expression_srepr": "Equality(Symbol('result'), Add(Symbol('sec'), Symbol('ts1'), Mul(Integer(-1), Symbol('ts2'))))",
+      "expression_text": "Eq(result, sec + ts1 - ts2)",
+      "sympy_srepr": "Equality(Symbol('result'), Add(Symbol('sec'), Symbol('ts1'), Mul(Integer(-1), Symbol('ts2'))))",
+      "raw_formula": "Eq(result, sec + ts1 - ts2)",
+      "raw_formula_format": "plain_text",
+      "expression_kind": "equation",
+      "expression_role": "primary",
+      "canonical_expr_hash": "4701ddc7d53a17887affc81ced857e97d5e336f03b7fe3c3cb5f3f1ffa46a348",
+      "topology_hash": "b3d1bc19cc5ca5ec4a700d61621648d4a1fe684cb0fe6f226b2ddea04efee74e",
+      "dimensional_hash": "2c29334d765cb2d3d8f70a31070e8a72dd21b113178cffacc5be4618a176bf2f",
+      "parse_status": "normalized",
+      "parse_confidence": 1.0,
+      "review_status": "automated_pass",
+      "validation_status": "passed",
+      "mechanism_tags": [
+        "relativistic_timing",
+        "time_scale_conversion"
+      ],
+      "behavioral_archetypes": [
+        "periodic_correction",
+        "time_offset"
+      ],
+      "variables": {
+        "result": "output",
+        "sec": "input",
+        "ts1": "input",
+        "ts2": "input"
+      },
+      "dim_signature": {
+        "result": "T1",
+        "sec": "T1",
+        "ts1": "T1",
+        "ts2": "T1"
+      },
+      "symbolic_dim_signature": {
+        "result": "T1",
+        "sec": "T1",
+        "ts1": "T1",
+        "ts2": "T1"
+      },
+      "constants": {},
+      "bibliography": [
+        "iau2006sofa",
+        "repo_tempo_jl"
+      ],
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.tempo_jl.apply_offsets.atoms:apply_offsets:c7c1b126dd566586",
+      "artifact_uuid": null
+    }
+  ],
+  "artifact_symbolic_variables": [
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.tempo_jl.apply_offsets.atoms:_zero_offset:1adb877964962105",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.tempo_jl.apply_offsets.atoms:_zero_offset:1adb877964962105",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "_zero_offset",
+      "atom_module": "sciona.atoms.physics.tempo_jl.apply_offsets.atoms",
+      "registry_name": "_zero_offset",
+      "expression_id": "1e7bde90-e1ce-55bb-8fc2-05eff6ab4d6f",
+      "symbol": "offset",
+      "symbol_name": "offset",
+      "source_symbol": "offset",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.physics.tempo_jl.apply_offsets.atoms:_zero_offset:variable:offset",
+      "role": "output",
+      "variable_role": "output",
+      "dim_signature": "T1",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "T1",
+        "symbolic_role": "output"
+      },
+      "evidence_json": {
+        "source_symbol": "offset",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.physics.tempo_jl.apply_offsets.atoms:_zero_offset"
+      },
+      "ordinal": 0
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.tempo_jl.apply_offsets.atoms:_zero_offset:1adb877964962105",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.tempo_jl.apply_offsets.atoms:_zero_offset:1adb877964962105",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "_zero_offset",
+      "atom_module": "sciona.atoms.physics.tempo_jl.apply_offsets.atoms",
+      "registry_name": "_zero_offset",
+      "expression_id": "1e7bde90-e1ce-55bb-8fc2-05eff6ab4d6f",
+      "symbol": "seconds",
+      "symbol_name": "seconds",
+      "source_symbol": "seconds",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.physics.tempo_jl.apply_offsets.atoms:_zero_offset:variable:seconds",
+      "role": "input",
+      "variable_role": "input",
+      "dim_signature": "T1",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "T1",
+        "symbolic_role": "input"
+      },
+      "evidence_json": {
+        "source_symbol": "seconds",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.physics.tempo_jl.apply_offsets.atoms:_zero_offset"
+      },
+      "ordinal": 1
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.tempo_jl.apply_offsets.atoms:_zero_offset:1adb877964962105",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.tempo_jl.apply_offsets.atoms:_zero_offset:1adb877964962105",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "_zero_offset",
+      "atom_module": "sciona.atoms.physics.tempo_jl.apply_offsets.atoms",
+      "registry_name": "_zero_offset",
+      "expression_id": "1e7bde90-e1ce-55bb-8fc2-05eff6ab4d6f",
+      "symbol": "zero_offset",
+      "symbol_name": "zero_offset",
+      "source_symbol": "zero_offset",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.physics.tempo_jl.apply_offsets.atoms:_zero_offset:variable:zero_offset",
+      "role": "constant",
+      "variable_role": "constant",
+      "dim_signature": "T1",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "T1",
+        "symbolic_role": "constant"
+      },
+      "evidence_json": {
+        "source_symbol": "zero_offset",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.physics.tempo_jl.apply_offsets.atoms:_zero_offset"
+      },
+      "ordinal": 2
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.tempo_jl.apply_offsets.atoms:apply_offsets:c7c1b126dd566586",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.tempo_jl.apply_offsets.atoms:apply_offsets:c7c1b126dd566586",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "apply_offsets",
+      "atom_module": "sciona.atoms.physics.tempo_jl.apply_offsets.atoms",
+      "registry_name": "apply_offsets",
+      "expression_id": "d9c77c1c-25b7-5491-b9a7-ffc826df9676",
+      "symbol": "result",
+      "symbol_name": "result",
+      "source_symbol": "result",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.physics.tempo_jl.apply_offsets.atoms:apply_offsets:variable:result",
+      "role": "output",
+      "variable_role": "output",
+      "dim_signature": "T1",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "T1",
+        "symbolic_role": "output"
+      },
+      "evidence_json": {
+        "source_symbol": "result",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.physics.tempo_jl.apply_offsets.atoms:apply_offsets"
+      },
+      "ordinal": 0
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.tempo_jl.apply_offsets.atoms:apply_offsets:c7c1b126dd566586",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.tempo_jl.apply_offsets.atoms:apply_offsets:c7c1b126dd566586",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "apply_offsets",
+      "atom_module": "sciona.atoms.physics.tempo_jl.apply_offsets.atoms",
+      "registry_name": "apply_offsets",
+      "expression_id": "d9c77c1c-25b7-5491-b9a7-ffc826df9676",
+      "symbol": "sec",
+      "symbol_name": "sec",
+      "source_symbol": "sec",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.physics.tempo_jl.apply_offsets.atoms:apply_offsets:variable:sec",
+      "role": "input",
+      "variable_role": "input",
+      "dim_signature": "T1",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "T1",
+        "symbolic_role": "input"
+      },
+      "evidence_json": {
+        "source_symbol": "sec",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.physics.tempo_jl.apply_offsets.atoms:apply_offsets"
+      },
+      "ordinal": 1
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.tempo_jl.apply_offsets.atoms:apply_offsets:c7c1b126dd566586",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.tempo_jl.apply_offsets.atoms:apply_offsets:c7c1b126dd566586",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "apply_offsets",
+      "atom_module": "sciona.atoms.physics.tempo_jl.apply_offsets.atoms",
+      "registry_name": "apply_offsets",
+      "expression_id": "d9c77c1c-25b7-5491-b9a7-ffc826df9676",
+      "symbol": "ts1",
+      "symbol_name": "ts1",
+      "source_symbol": "ts1",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.physics.tempo_jl.apply_offsets.atoms:apply_offsets:variable:ts1",
+      "role": "input",
+      "variable_role": "input",
+      "dim_signature": "T1",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "T1",
+        "symbolic_role": "input"
+      },
+      "evidence_json": {
+        "source_symbol": "ts1",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.physics.tempo_jl.apply_offsets.atoms:apply_offsets"
+      },
+      "ordinal": 2
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.tempo_jl.apply_offsets.atoms:apply_offsets:c7c1b126dd566586",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.tempo_jl.apply_offsets.atoms:apply_offsets:c7c1b126dd566586",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "apply_offsets",
+      "atom_module": "sciona.atoms.physics.tempo_jl.apply_offsets.atoms",
+      "registry_name": "apply_offsets",
+      "expression_id": "d9c77c1c-25b7-5491-b9a7-ffc826df9676",
+      "symbol": "ts2",
+      "symbol_name": "ts2",
+      "source_symbol": "ts2",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.physics.tempo_jl.apply_offsets.atoms:apply_offsets:variable:ts2",
+      "role": "input",
+      "variable_role": "input",
+      "dim_signature": "T1",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "T1",
+        "symbolic_role": "input"
+      },
+      "evidence_json": {
+        "source_symbol": "ts2",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.physics.tempo_jl.apply_offsets.atoms:apply_offsets"
+      },
+      "ordinal": 3
+    }
+  ],
+  "artifact_validity_bounds": []
+}
