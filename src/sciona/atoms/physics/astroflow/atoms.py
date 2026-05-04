@@ -5,12 +5,26 @@ from __future__ import annotations
 import numpy as np
 
 import icontract
-from sciona.ghost.registry import register_atom
+from sciona.ghost.decorators import symbolic_atom
+from .expressions import (
+    DEDISPERSION_KERNEL_BIBLIOGRAPHY,
+    DEDISPERSION_KERNEL_DIM_MAP,
+    DEDISPERSION_KERNEL_EXPR,
+    DEDISPERSION_KERNEL_VALIDITY_BOUNDS,
+    DEDISPERSION_KERNEL_VARIABLES,
+)
 from .witnesses import witness_dedispersionkernel
 
 # Witness functions should be imported from the generated witnesses module
 
-@register_atom(witness_dedispersionkernel)
+@symbolic_atom(
+    witness_dedispersionkernel,
+    expr=DEDISPERSION_KERNEL_EXPR,
+    dim_map=DEDISPERSION_KERNEL_DIM_MAP,
+    validity_bounds=DEDISPERSION_KERNEL_VALIDITY_BOUNDS,
+    variables=DEDISPERSION_KERNEL_VARIABLES,
+    bibliography=DEDISPERSION_KERNEL_BIBLIOGRAPHY,
+)
 @icontract.require(lambda input_data: input_data is not None, "input_data cannot be None")
 @icontract.require(lambda delay_table: delay_table is not None, "delay_table cannot be None")
 @icontract.require(lambda dm_steps: dm_steps is not None, "dm_steps cannot be None")

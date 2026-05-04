@@ -83,6 +83,7 @@ def test_manifest_covers_migrated_symbolic_atom_packages() -> None:
     }
 
     assert {
+        "dedispersionkernel",
         "dm_candidate_filter",
         "circle_from_three_points",
         "helix_pitch_from_two_points",
@@ -98,6 +99,7 @@ def test_manifest_covers_migrated_symbolic_atom_packages() -> None:
         "tt2tdb_offset",
     }.issubset(rows)
 
+    assert rows["dedispersionkernel"]["atom_module"].endswith("astroflow.atoms")
     assert rows["dm_candidate_filter"]["atom_module"].endswith("pulsar_folding.dm_can")
     assert rows["circle_from_three_points"]["atom_module"].endswith(
         "particle_tracking.helix_geometry.atoms"
@@ -173,6 +175,7 @@ def test_manifest_emits_stable_hashes_tags_and_loader_fields() -> None:
         row["atom_name"]: row for row in _manifest()["artifact_symbolic_expressions"]
     }
     dm = rows["dm_candidate_filter"]
+    dedispersion = rows["dedispersionkernel"]
     helix = rows["helix_pitch_least_squares"]
     angle = rows["calculate_vector_angle"]
     low_order = rows["offset_tt2tdb"]
@@ -200,6 +203,15 @@ def test_manifest_emits_stable_hashes_tags_and_loader_fields() -> None:
         "signal_processing",
     ]
     assert dm["behavioral_archetypes"] == ["candidate_scoring", "delay_model"]
+    assert dedispersion["mechanism_tags"] == [
+        "dedispersion",
+        "pulsar_search",
+        "signal_processing",
+    ]
+    assert dedispersion["behavioral_archetypes"] == [
+        "channel_aggregation",
+        "delay_alignment",
+    ]
     assert "particle_tracking" in helix["mechanism_tags"]
     assert "least_squares_fit" in helix["behavioral_archetypes"]
     assert "coordinate_transform" in angle["mechanism_tags"]

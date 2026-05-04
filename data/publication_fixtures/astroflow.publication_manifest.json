@@ -1,0 +1,522 @@
+{
+  "provider": "sciona-atoms-physics",
+  "modules": [
+    "sciona.atoms.physics.astroflow.atoms"
+  ],
+  "artifact_symbolic_expressions": [
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.astroflow.atoms:dedispersionkernel:0b3014e844989a17",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "dedispersionkernel",
+      "atom_module": "sciona.atoms.physics.astroflow.atoms",
+      "registry_name": "dedispersionkernel",
+      "expression_id": "ecc57104-045d-54a4-a8df-4d5247d3f0b6",
+      "source_expression_id": "sciona-atoms-physics:sciona.atoms.physics.astroflow.atoms:dedispersionkernel",
+      "expression_srepr": "Equality(Symbol('output_sample'), Mul(Symbol('input_sum'), Pow(Symbol('nchans'), Integer(-1))))",
+      "expression_text": "Eq(output_sample, input_sum/nchans)",
+      "sympy_srepr": "Equality(Symbol('output_sample'), Mul(Symbol('input_sum'), Pow(Symbol('nchans'), Integer(-1))))",
+      "raw_formula": "Eq(output_sample, input_sum/nchans)",
+      "raw_formula_format": "plain_text",
+      "expression_kind": "equation",
+      "expression_role": "primary",
+      "canonical_expr_hash": "6a757d2a23c32d370aa3abe92a7e270305bfbe97534a7f1c2db2653ef304cc56",
+      "topology_hash": "e092793735194caabd6dfefcf96fb85a37ae690e5da27730c83193dc13eaf2be",
+      "dimensional_hash": "62a94c34a1791e29f613d19d64cbc66ee14dbb9eecc8d99e7248b797dd560e11",
+      "parse_status": "normalized",
+      "parse_confidence": 1.0,
+      "review_status": "automated_pass",
+      "validation_status": "passed",
+      "mechanism_tags": [
+        "dedispersion",
+        "pulsar_search",
+        "signal_processing"
+      ],
+      "behavioral_archetypes": [
+        "channel_aggregation",
+        "delay_alignment"
+      ],
+      "variables": {
+        "block_dim_x": "parameter",
+        "delay_samples": "input",
+        "dm_steps": "parameter",
+        "down_ndata": "parameter",
+        "input_sum": "input",
+        "nchans": "parameter",
+        "output_sample": "output",
+        "shared_mem_size": "parameter",
+        "time_downsample": "parameter"
+      },
+      "dim_signature": {
+        "block_dim_x": "1",
+        "delay_samples": "1",
+        "dm_steps": "1",
+        "down_ndata": "1",
+        "input_sum": "1",
+        "nchans": "1",
+        "output_sample": "1",
+        "shared_mem_size": "1",
+        "time_downsample": "1"
+      },
+      "symbolic_dim_signature": {
+        "block_dim_x": "1",
+        "delay_samples": "1",
+        "dm_steps": "1",
+        "down_ndata": "1",
+        "input_sum": "1",
+        "nchans": "1",
+        "output_sample": "1",
+        "shared_mem_size": "1",
+        "time_downsample": "1"
+      },
+      "constants": {},
+      "bibliography": [
+        "astroflow2025",
+        "repo_astroflow"
+      ],
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.astroflow.atoms:dedispersionkernel:0b3014e844989a17",
+      "artifact_uuid": null
+    }
+  ],
+  "artifact_symbolic_variables": [
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.astroflow.atoms:dedispersionkernel:0b3014e844989a17",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.astroflow.atoms:dedispersionkernel:0b3014e844989a17",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "dedispersionkernel",
+      "atom_module": "sciona.atoms.physics.astroflow.atoms",
+      "registry_name": "dedispersionkernel",
+      "expression_id": "ecc57104-045d-54a4-a8df-4d5247d3f0b6",
+      "symbol": "block_dim_x",
+      "symbol_name": "block_dim_x",
+      "source_symbol": "block_dim_x",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.physics.astroflow.atoms:dedispersionkernel:variable:block_dim_x",
+      "role": "parameter",
+      "variable_role": "parameter",
+      "dim_signature": "1",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "1",
+        "symbolic_role": "parameter"
+      },
+      "evidence_json": {
+        "source_symbol": "block_dim_x",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.physics.astroflow.atoms:dedispersionkernel"
+      },
+      "ordinal": 0
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.astroflow.atoms:dedispersionkernel:0b3014e844989a17",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.astroflow.atoms:dedispersionkernel:0b3014e844989a17",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "dedispersionkernel",
+      "atom_module": "sciona.atoms.physics.astroflow.atoms",
+      "registry_name": "dedispersionkernel",
+      "expression_id": "ecc57104-045d-54a4-a8df-4d5247d3f0b6",
+      "symbol": "delay_samples",
+      "symbol_name": "delay_samples",
+      "source_symbol": "delay_samples",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.physics.astroflow.atoms:dedispersionkernel:variable:delay_samples",
+      "role": "input",
+      "variable_role": "input",
+      "dim_signature": "1",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "1",
+        "symbolic_role": "input"
+      },
+      "evidence_json": {
+        "source_symbol": "delay_samples",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.physics.astroflow.atoms:dedispersionkernel"
+      },
+      "ordinal": 1
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.astroflow.atoms:dedispersionkernel:0b3014e844989a17",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.astroflow.atoms:dedispersionkernel:0b3014e844989a17",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "dedispersionkernel",
+      "atom_module": "sciona.atoms.physics.astroflow.atoms",
+      "registry_name": "dedispersionkernel",
+      "expression_id": "ecc57104-045d-54a4-a8df-4d5247d3f0b6",
+      "symbol": "dm_steps",
+      "symbol_name": "dm_steps",
+      "source_symbol": "dm_steps",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.physics.astroflow.atoms:dedispersionkernel:variable:dm_steps",
+      "role": "parameter",
+      "variable_role": "parameter",
+      "dim_signature": "1",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "1",
+        "symbolic_role": "parameter"
+      },
+      "evidence_json": {
+        "source_symbol": "dm_steps",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.physics.astroflow.atoms:dedispersionkernel"
+      },
+      "ordinal": 2
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.astroflow.atoms:dedispersionkernel:0b3014e844989a17",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.astroflow.atoms:dedispersionkernel:0b3014e844989a17",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "dedispersionkernel",
+      "atom_module": "sciona.atoms.physics.astroflow.atoms",
+      "registry_name": "dedispersionkernel",
+      "expression_id": "ecc57104-045d-54a4-a8df-4d5247d3f0b6",
+      "symbol": "down_ndata",
+      "symbol_name": "down_ndata",
+      "source_symbol": "down_ndata",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.physics.astroflow.atoms:dedispersionkernel:variable:down_ndata",
+      "role": "parameter",
+      "variable_role": "parameter",
+      "dim_signature": "1",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "1",
+        "symbolic_role": "parameter"
+      },
+      "evidence_json": {
+        "source_symbol": "down_ndata",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.physics.astroflow.atoms:dedispersionkernel"
+      },
+      "ordinal": 3
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.astroflow.atoms:dedispersionkernel:0b3014e844989a17",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.astroflow.atoms:dedispersionkernel:0b3014e844989a17",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "dedispersionkernel",
+      "atom_module": "sciona.atoms.physics.astroflow.atoms",
+      "registry_name": "dedispersionkernel",
+      "expression_id": "ecc57104-045d-54a4-a8df-4d5247d3f0b6",
+      "symbol": "input_sum",
+      "symbol_name": "input_sum",
+      "source_symbol": "input_sum",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.physics.astroflow.atoms:dedispersionkernel:variable:input_sum",
+      "role": "input",
+      "variable_role": "input",
+      "dim_signature": "1",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "1",
+        "symbolic_role": "input"
+      },
+      "evidence_json": {
+        "source_symbol": "input_sum",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.physics.astroflow.atoms:dedispersionkernel"
+      },
+      "ordinal": 4
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.astroflow.atoms:dedispersionkernel:0b3014e844989a17",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.astroflow.atoms:dedispersionkernel:0b3014e844989a17",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "dedispersionkernel",
+      "atom_module": "sciona.atoms.physics.astroflow.atoms",
+      "registry_name": "dedispersionkernel",
+      "expression_id": "ecc57104-045d-54a4-a8df-4d5247d3f0b6",
+      "symbol": "nchans",
+      "symbol_name": "nchans",
+      "source_symbol": "nchans",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.physics.astroflow.atoms:dedispersionkernel:variable:nchans",
+      "role": "parameter",
+      "variable_role": "parameter",
+      "dim_signature": "1",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "1",
+        "symbolic_role": "parameter"
+      },
+      "evidence_json": {
+        "source_symbol": "nchans",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.physics.astroflow.atoms:dedispersionkernel"
+      },
+      "ordinal": 5
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.astroflow.atoms:dedispersionkernel:0b3014e844989a17",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.astroflow.atoms:dedispersionkernel:0b3014e844989a17",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "dedispersionkernel",
+      "atom_module": "sciona.atoms.physics.astroflow.atoms",
+      "registry_name": "dedispersionkernel",
+      "expression_id": "ecc57104-045d-54a4-a8df-4d5247d3f0b6",
+      "symbol": "output_sample",
+      "symbol_name": "output_sample",
+      "source_symbol": "output_sample",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.physics.astroflow.atoms:dedispersionkernel:variable:output_sample",
+      "role": "output",
+      "variable_role": "output",
+      "dim_signature": "1",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "1",
+        "symbolic_role": "output"
+      },
+      "evidence_json": {
+        "source_symbol": "output_sample",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.physics.astroflow.atoms:dedispersionkernel"
+      },
+      "ordinal": 6
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.astroflow.atoms:dedispersionkernel:0b3014e844989a17",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.astroflow.atoms:dedispersionkernel:0b3014e844989a17",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "dedispersionkernel",
+      "atom_module": "sciona.atoms.physics.astroflow.atoms",
+      "registry_name": "dedispersionkernel",
+      "expression_id": "ecc57104-045d-54a4-a8df-4d5247d3f0b6",
+      "symbol": "shared_mem_size",
+      "symbol_name": "shared_mem_size",
+      "source_symbol": "shared_mem_size",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.physics.astroflow.atoms:dedispersionkernel:variable:shared_mem_size",
+      "role": "parameter",
+      "variable_role": "parameter",
+      "dim_signature": "1",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "1",
+        "symbolic_role": "parameter"
+      },
+      "evidence_json": {
+        "source_symbol": "shared_mem_size",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.physics.astroflow.atoms:dedispersionkernel"
+      },
+      "ordinal": 7
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.astroflow.atoms:dedispersionkernel:0b3014e844989a17",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.astroflow.atoms:dedispersionkernel:0b3014e844989a17",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "dedispersionkernel",
+      "atom_module": "sciona.atoms.physics.astroflow.atoms",
+      "registry_name": "dedispersionkernel",
+      "expression_id": "ecc57104-045d-54a4-a8df-4d5247d3f0b6",
+      "symbol": "time_downsample",
+      "symbol_name": "time_downsample",
+      "source_symbol": "time_downsample",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.physics.astroflow.atoms:dedispersionkernel:variable:time_downsample",
+      "role": "parameter",
+      "variable_role": "parameter",
+      "dim_signature": "1",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "1",
+        "symbolic_role": "parameter"
+      },
+      "evidence_json": {
+        "source_symbol": "time_downsample",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.physics.astroflow.atoms:dedispersionkernel"
+      },
+      "ordinal": 8
+    }
+  ],
+  "artifact_validity_bounds": [
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.astroflow.atoms:dedispersionkernel:0b3014e844989a17",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.astroflow.atoms:dedispersionkernel:0b3014e844989a17",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "dedispersionkernel",
+      "atom_module": "sciona.atoms.physics.astroflow.atoms",
+      "registry_name": "dedispersionkernel",
+      "expression_id": "ecc57104-045d-54a4-a8df-4d5247d3f0b6",
+      "symbol": "block_dim_x",
+      "variable_name": "block_dim_x",
+      "source_symbol": "block_dim_x",
+      "source_bound_id": "sciona-atoms-physics:sciona.atoms.physics.astroflow.atoms:dedispersionkernel:bound:block_dim_x",
+      "scope": "variable",
+      "bound_kind": "domain",
+      "min_value": 1.0,
+      "max_value": null,
+      "lower_value": 1.0,
+      "upper_value": null,
+      "lower_inclusive": true,
+      "upper_inclusive": true,
+      "dim_signature": "1",
+      "validity_statement": "block_dim_x >= 1.0",
+      "evidence_ref_key": "sciona-atoms-physics:sciona.atoms.physics.astroflow.atoms:dedispersionkernel:bound:block_dim_x",
+      "confidence": "high",
+      "review_status": "automated_pass",
+      "metadata": {
+        "provider": "sciona-atoms-physics",
+        "atom_module": "sciona.atoms.physics.astroflow.atoms",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.physics.astroflow.atoms:dedispersionkernel",
+        "source_symbol": "block_dim_x",
+        "ordinal": 0
+      },
+      "ordinal": 0
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.astroflow.atoms:dedispersionkernel:0b3014e844989a17",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.astroflow.atoms:dedispersionkernel:0b3014e844989a17",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "dedispersionkernel",
+      "atom_module": "sciona.atoms.physics.astroflow.atoms",
+      "registry_name": "dedispersionkernel",
+      "expression_id": "ecc57104-045d-54a4-a8df-4d5247d3f0b6",
+      "symbol": "dm_steps",
+      "variable_name": "dm_steps",
+      "source_symbol": "dm_steps",
+      "source_bound_id": "sciona-atoms-physics:sciona.atoms.physics.astroflow.atoms:dedispersionkernel:bound:dm_steps",
+      "scope": "variable",
+      "bound_kind": "domain",
+      "min_value": 1.0,
+      "max_value": null,
+      "lower_value": 1.0,
+      "upper_value": null,
+      "lower_inclusive": true,
+      "upper_inclusive": true,
+      "dim_signature": "1",
+      "validity_statement": "dm_steps >= 1.0",
+      "evidence_ref_key": "sciona-atoms-physics:sciona.atoms.physics.astroflow.atoms:dedispersionkernel:bound:dm_steps",
+      "confidence": "high",
+      "review_status": "automated_pass",
+      "metadata": {
+        "provider": "sciona-atoms-physics",
+        "atom_module": "sciona.atoms.physics.astroflow.atoms",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.physics.astroflow.atoms:dedispersionkernel",
+        "source_symbol": "dm_steps",
+        "ordinal": 1
+      },
+      "ordinal": 1
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.astroflow.atoms:dedispersionkernel:0b3014e844989a17",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.astroflow.atoms:dedispersionkernel:0b3014e844989a17",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "dedispersionkernel",
+      "atom_module": "sciona.atoms.physics.astroflow.atoms",
+      "registry_name": "dedispersionkernel",
+      "expression_id": "ecc57104-045d-54a4-a8df-4d5247d3f0b6",
+      "symbol": "down_ndata",
+      "variable_name": "down_ndata",
+      "source_symbol": "down_ndata",
+      "source_bound_id": "sciona-atoms-physics:sciona.atoms.physics.astroflow.atoms:dedispersionkernel:bound:down_ndata",
+      "scope": "variable",
+      "bound_kind": "domain",
+      "min_value": 1.0,
+      "max_value": null,
+      "lower_value": 1.0,
+      "upper_value": null,
+      "lower_inclusive": true,
+      "upper_inclusive": true,
+      "dim_signature": "1",
+      "validity_statement": "down_ndata >= 1.0",
+      "evidence_ref_key": "sciona-atoms-physics:sciona.atoms.physics.astroflow.atoms:dedispersionkernel:bound:down_ndata",
+      "confidence": "high",
+      "review_status": "automated_pass",
+      "metadata": {
+        "provider": "sciona-atoms-physics",
+        "atom_module": "sciona.atoms.physics.astroflow.atoms",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.physics.astroflow.atoms:dedispersionkernel",
+        "source_symbol": "down_ndata",
+        "ordinal": 2
+      },
+      "ordinal": 2
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.astroflow.atoms:dedispersionkernel:0b3014e844989a17",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.astroflow.atoms:dedispersionkernel:0b3014e844989a17",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "dedispersionkernel",
+      "atom_module": "sciona.atoms.physics.astroflow.atoms",
+      "registry_name": "dedispersionkernel",
+      "expression_id": "ecc57104-045d-54a4-a8df-4d5247d3f0b6",
+      "symbol": "nchans",
+      "variable_name": "nchans",
+      "source_symbol": "nchans",
+      "source_bound_id": "sciona-atoms-physics:sciona.atoms.physics.astroflow.atoms:dedispersionkernel:bound:nchans",
+      "scope": "variable",
+      "bound_kind": "domain",
+      "min_value": 1.0,
+      "max_value": null,
+      "lower_value": 1.0,
+      "upper_value": null,
+      "lower_inclusive": true,
+      "upper_inclusive": true,
+      "dim_signature": "1",
+      "validity_statement": "nchans >= 1.0",
+      "evidence_ref_key": "sciona-atoms-physics:sciona.atoms.physics.astroflow.atoms:dedispersionkernel:bound:nchans",
+      "confidence": "high",
+      "review_status": "automated_pass",
+      "metadata": {
+        "provider": "sciona-atoms-physics",
+        "atom_module": "sciona.atoms.physics.astroflow.atoms",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.physics.astroflow.atoms:dedispersionkernel",
+        "source_symbol": "nchans",
+        "ordinal": 3
+      },
+      "ordinal": 3
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.astroflow.atoms:dedispersionkernel:0b3014e844989a17",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.astroflow.atoms:dedispersionkernel:0b3014e844989a17",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "dedispersionkernel",
+      "atom_module": "sciona.atoms.physics.astroflow.atoms",
+      "registry_name": "dedispersionkernel",
+      "expression_id": "ecc57104-045d-54a4-a8df-4d5247d3f0b6",
+      "symbol": "shared_mem_size",
+      "variable_name": "shared_mem_size",
+      "source_symbol": "shared_mem_size",
+      "source_bound_id": "sciona-atoms-physics:sciona.atoms.physics.astroflow.atoms:dedispersionkernel:bound:shared_mem_size",
+      "scope": "variable",
+      "bound_kind": "domain",
+      "min_value": 0.0,
+      "max_value": null,
+      "lower_value": 0.0,
+      "upper_value": null,
+      "lower_inclusive": true,
+      "upper_inclusive": true,
+      "dim_signature": "1",
+      "validity_statement": "shared_mem_size >= 0.0",
+      "evidence_ref_key": "sciona-atoms-physics:sciona.atoms.physics.astroflow.atoms:dedispersionkernel:bound:shared_mem_size",
+      "confidence": "high",
+      "review_status": "automated_pass",
+      "metadata": {
+        "provider": "sciona-atoms-physics",
+        "atom_module": "sciona.atoms.physics.astroflow.atoms",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.physics.astroflow.atoms:dedispersionkernel",
+        "source_symbol": "shared_mem_size",
+        "ordinal": 4
+      },
+      "ordinal": 4
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.astroflow.atoms:dedispersionkernel:0b3014e844989a17",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.astroflow.atoms:dedispersionkernel:0b3014e844989a17",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "dedispersionkernel",
+      "atom_module": "sciona.atoms.physics.astroflow.atoms",
+      "registry_name": "dedispersionkernel",
+      "expression_id": "ecc57104-045d-54a4-a8df-4d5247d3f0b6",
+      "symbol": "time_downsample",
+      "variable_name": "time_downsample",
+      "source_symbol": "time_downsample",
+      "source_bound_id": "sciona-atoms-physics:sciona.atoms.physics.astroflow.atoms:dedispersionkernel:bound:time_downsample",
+      "scope": "variable",
+      "bound_kind": "domain",
+      "min_value": 1.0,
+      "max_value": null,
+      "lower_value": 1.0,
+      "upper_value": null,
+      "lower_inclusive": true,
+      "upper_inclusive": true,
+      "dim_signature": "1",
+      "validity_statement": "time_downsample >= 1.0",
+      "evidence_ref_key": "sciona-atoms-physics:sciona.atoms.physics.astroflow.atoms:dedispersionkernel:bound:time_downsample",
+      "confidence": "high",
+      "review_status": "automated_pass",
+      "metadata": {
+        "provider": "sciona-atoms-physics",
+        "atom_module": "sciona.atoms.physics.astroflow.atoms",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.physics.astroflow.atoms:dedispersionkernel",
+        "source_symbol": "time_downsample",
+        "ordinal": 5
+      },
+      "ordinal": 5
+    }
+  ]
+}

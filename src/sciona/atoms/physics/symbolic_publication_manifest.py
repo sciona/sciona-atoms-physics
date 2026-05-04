@@ -27,6 +27,7 @@ PROVIDER = "sciona-atoms-physics"
 EXPRESSION_NAMESPACE = uuid.uuid5(uuid.NAMESPACE_URL, f"sciona:{PROVIDER}:symbolic")
 
 DEFAULT_SYMBOLIC_ATOM_MODULES = (
+    "sciona.atoms.physics.astroflow.atoms",
     "sciona.atoms.physics.pulsar_folding.dm_can",
     "sciona.atoms.particle_tracking.helix_geometry.atoms",
     "sciona.atoms.physics.skyfield.atoms",
@@ -434,6 +435,12 @@ def _heuristic_tags(atom_module: str, atom_name: str, field_name: str) -> list[s
             ["dispersion", "pulsar_search", "signal_processing"]
             if field_name == "mechanism_tags"
             else ["candidate_scoring", "delay_model"]
+        )
+    if "astroflow" in module:
+        tags.extend(
+            ["dedispersion", "pulsar_search", "signal_processing"]
+            if field_name == "mechanism_tags"
+            else ["channel_aggregation", "delay_alignment"]
         )
     if "helix_geometry" in module:
         tags.extend(
