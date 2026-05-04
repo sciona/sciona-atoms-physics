@@ -35,6 +35,7 @@ DEFAULT_SYMBOLIC_ATOM_MODULES = (
     "sciona.atoms.particle_tracking.helix_geometry.atoms",
     "sciona.atoms.particle_tracking.track_matching.atoms",
     "sciona.atoms.physics.skyfield.atoms",
+    "sciona.atoms.physics.tempo_jl.atoms",
     "sciona.atoms.physics.tempo_jl.apply_offsets.atoms",
     "sciona.atoms.physics.tempo_jl.offsets.atoms",
     "sciona.atoms.physics.tempo_jl.tai2utc_d12.atoms",
@@ -552,6 +553,19 @@ def _heuristic_tags(atom_module: str, atom_name: str, field_name: str) -> list[s
                 if field_name == "mechanism_tags"
                 else ["inverse_time_mapping", "leap_offset"]
             )
+        elif module.endswith("tempo_jl.atoms"):
+            if name == "graph_time_scale_management":
+                tags.extend(
+                    ["time_scale_conversion", "time_scale_graph"]
+                    if field_name == "mechanism_tags"
+                    else ["identity_mapping", "path_transform"]
+                )
+            elif name == "high_precision_duration":
+                tags.extend(
+                    ["precision_management", "time_scale_conversion"]
+                    if field_name == "mechanism_tags"
+                    else ["fractional_decomposition", "time_duration_split"]
+                )
         else:
             tags.extend(
                 ["relativistic_timing", "time_scale_conversion"]

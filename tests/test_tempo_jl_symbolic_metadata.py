@@ -11,6 +11,7 @@ from sciona.ghost.registry import REGISTRY
 
 
 def _load_tempo_symbolic_atoms() -> None:
+    importlib.import_module("sciona.atoms.physics.tempo_jl.atoms")
     importlib.import_module("sciona.atoms.physics.tempo_jl.apply_offsets.atoms")
     importlib.import_module("sciona.atoms.physics.tempo_jl.offsets.atoms")
 
@@ -31,6 +32,8 @@ def test_tempo_offset_atoms_register_symbolic_metadata() -> None:
     for name in {
         "_zero_offset",
         "apply_offsets",
+        "graph_time_scale_management",
+        "high_precision_duration",
         "offset_tt2tdb",
         "offset_tt2tdbh",
         "tt2tdb_offset",
@@ -66,6 +69,15 @@ def test_tempo_offset_dimensions_are_registered() -> None:
     assert high_order_dims["century_to_seconds"] == SECOND
     assert high_order_dims["offset"] == SECOND
 
+    graph_dims = REGISTRY["graph_time_scale_management"]["dim_signature"]
+    assert graph_dims["source_time"] == SECOND
+    assert graph_dims["target_time"] == SECOND
+
+    duration_dims = REGISTRY["high_precision_duration"]["dim_signature"]
+    assert duration_dims["duration"] == SECOND
+    assert duration_dims["integer_duration"] == SECOND
+    assert duration_dims["fractional_duration"] == SECOND
+
 
 def test_tempo_symbolic_migration_preserves_offset_runtime_behavior() -> None:
     _load_tempo_symbolic_atoms()
@@ -73,6 +85,8 @@ def test_tempo_symbolic_migration_preserves_offset_runtime_behavior() -> None:
     zero_offset = REGISTRY["_zero_offset"]["impl"]
     offset_tt2tdb = REGISTRY["offset_tt2tdb"]["impl"]
     tt2tdb_offset = REGISTRY["tt2tdb_offset"]["impl"]
+    graph_time_scale_management = REGISTRY["graph_time_scale_management"]["impl"]
+    high_precision_duration = REGISTRY["high_precision_duration"]["impl"]
 
     assert zero_offset(42.5) == 0.0
     assert apply_offsets(10.0, 1.25, 0.5) == 10.75
@@ -81,6 +95,13 @@ def test_tempo_symbolic_migration_preserves_offset_runtime_behavior() -> None:
     vectorized = tt2tdb_offset(seconds)
     scalarized = np.array([offset_tt2tdb(float(value)) for value in seconds])
     np.testing.assert_allclose(vectorized, scalarized)
+
+    data = np.array([1.25, 2.75])
+    np.testing.assert_allclose(graph_time_scale_management(data), data)
+    np.testing.assert_allclose(
+        high_precision_duration(data),
+        np.array([[1.0, 2.0], [0.25, 0.75]]),
+    )
 
 
 def test_tempo_symbolic_metadata_records_constants_and_bibliography() -> None:
@@ -94,6 +115,14 @@ def test_tempo_symbolic_metadata_records_constants_and_bibliography() -> None:
     zero = REGISTRY["_zero_offset"]["symbolic"]
     assert zero.constants["zero_offset"] == 0.0
     assert zero.variables["offset"] == "output"
+
+    graph = REGISTRY["graph_time_scale_management"]["symbolic"]
+    assert graph.bibliography == ["urban2013almanac", "repo_tempo_jl"]
+    assert graph.variables["target_time"] == "output"
+
+    duration = REGISTRY["high_precision_duration"]["symbolic"]
+    assert duration.variables["fractional_duration"] == "output"
+    assert duration.validity_bounds["fractional_duration"] == (0.0, 1.0)
 
 
 def test_tai2utc_d12_atoms_register_symbolic_metadata() -> None:

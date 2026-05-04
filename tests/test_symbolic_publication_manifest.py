@@ -105,6 +105,8 @@ def test_manifest_covers_migrated_symbolic_atom_packages() -> None:
         "helix_nearest_point_distance",
         "compute_spherical_coordinate_rates",
         "calculate_vector_angle",
+        "graph_time_scale_management",
+        "high_precision_duration",
         "_zero_offset",
         "apply_offsets",
         "offset_tt2tdb",
@@ -128,6 +130,9 @@ def test_manifest_covers_migrated_symbolic_atom_packages() -> None:
         "particle_tracking.helix_geometry.atoms"
     )
     assert rows["calculate_vector_angle"]["atom_module"].endswith("skyfield.atoms")
+    assert rows["graph_time_scale_management"]["atom_module"].endswith(
+        "tempo_jl.atoms"
+    )
     assert rows["offset_tt2tdb"]["atom_module"].endswith("tempo_jl.offsets.atoms")
     assert rows["tai_to_utc_inversion"]["atom_module"].endswith(
         "tempo_jl.tai2utc_d12.atoms"
@@ -215,6 +220,8 @@ def test_manifest_emits_stable_hashes_tags_and_loader_fields() -> None:
     matching_greedy = rows["greedy_track_commit"]
     helix = rows["helix_pitch_least_squares"]
     angle = rows["calculate_vector_angle"]
+    graph_time_scale = rows["graph_time_scale_management"]
+    duration_split = rows["high_precision_duration"]
     low_order = rows["offset_tt2tdb"]
     leap_forward = rows["utc_to_tai_leap_second_kernel"]
 
@@ -309,6 +316,22 @@ def test_manifest_emits_stable_hashes_tags_and_loader_fields() -> None:
     assert "particle_tracking" in helix["mechanism_tags"]
     assert "least_squares_fit" in helix["behavioral_archetypes"]
     assert "coordinate_transform" in angle["mechanism_tags"]
+    assert graph_time_scale["mechanism_tags"] == [
+        "time_scale_conversion",
+        "time_scale_graph",
+    ]
+    assert graph_time_scale["behavioral_archetypes"] == [
+        "identity_mapping",
+        "path_transform",
+    ]
+    assert duration_split["mechanism_tags"] == [
+        "precision_management",
+        "time_scale_conversion",
+    ]
+    assert duration_split["behavioral_archetypes"] == [
+        "fractional_decomposition",
+        "time_duration_split",
+    ]
     assert "time_scale_conversion" in low_order["mechanism_tags"]
     assert leap_forward["mechanism_tags"] == [
         "leap_second",

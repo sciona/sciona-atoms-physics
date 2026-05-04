@@ -1,0 +1,279 @@
+{
+  "provider": "sciona-atoms-physics",
+  "modules": [
+    "sciona.atoms.physics.tempo_jl.atoms"
+  ],
+  "artifact_symbolic_expressions": [
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.tempo_jl.atoms:graph_time_scale_management:557940106b305e68",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "graph_time_scale_management",
+      "atom_module": "sciona.atoms.physics.tempo_jl.atoms",
+      "registry_name": "graph_time_scale_management",
+      "expression_id": "0c6f8a1c-b25a-5469-ab6a-1affcd255581",
+      "source_expression_id": "sciona-atoms-physics:sciona.atoms.physics.tempo_jl.atoms:graph_time_scale_management",
+      "expression_srepr": "Equality(Symbol('target_time'), Symbol('source_time'))",
+      "expression_text": "Eq(target_time, source_time)",
+      "sympy_srepr": "Equality(Symbol('target_time'), Symbol('source_time'))",
+      "raw_formula": "Eq(target_time, source_time)",
+      "raw_formula_format": "plain_text",
+      "expression_kind": "equation",
+      "expression_role": "primary",
+      "canonical_expr_hash": "f11c78d18026c636232ad4ab7736ce7dbab6d807f10d2598d49fdecefd3ee08d",
+      "topology_hash": "b5498553afd8b8122cd51c18c61d73e4b0c3bc143becc30365a41d90c10450c4",
+      "dimensional_hash": "d8ed035f3f9a9157e7fbf71cec06686087ba481b51ab439cf448b59c1a2ccef2",
+      "parse_status": "normalized",
+      "parse_confidence": 1.0,
+      "review_status": "automated_pass",
+      "validation_status": "passed",
+      "mechanism_tags": [
+        "time_scale_conversion",
+        "time_scale_graph"
+      ],
+      "behavioral_archetypes": [
+        "identity_mapping",
+        "path_transform"
+      ],
+      "variables": {
+        "source_time": "input",
+        "target_time": "output"
+      },
+      "dim_signature": {
+        "source_time": "T1",
+        "target_time": "T1"
+      },
+      "symbolic_dim_signature": {
+        "source_time": "T1",
+        "target_time": "T1"
+      },
+      "constants": {},
+      "bibliography": [
+        "urban2013almanac",
+        "repo_tempo_jl"
+      ],
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.tempo_jl.atoms:graph_time_scale_management:557940106b305e68",
+      "artifact_uuid": null
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.tempo_jl.atoms:high_precision_duration:765c0f7da5c9517b",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "high_precision_duration",
+      "atom_module": "sciona.atoms.physics.tempo_jl.atoms",
+      "registry_name": "high_precision_duration",
+      "expression_id": "a69d5826-17bd-5882-89dd-6a3e59ee5d3f",
+      "source_expression_id": "sciona-atoms-physics:sciona.atoms.physics.tempo_jl.atoms:high_precision_duration",
+      "expression_srepr": "Equality(Symbol('duration'), Add(Symbol('fractional_duration'), Symbol('integer_duration')))",
+      "expression_text": "Eq(duration, fractional_duration + integer_duration)",
+      "sympy_srepr": "Equality(Symbol('duration'), Add(Symbol('fractional_duration'), Symbol('integer_duration')))",
+      "raw_formula": "Eq(duration, fractional_duration + integer_duration)",
+      "raw_formula_format": "plain_text",
+      "expression_kind": "equation",
+      "expression_role": "primary",
+      "canonical_expr_hash": "b55b29f46cc45efdb33ee82fd1d2d7aa27d0299eb6c9c81dbd990ee9a34806bc",
+      "topology_hash": "ed5aa1d13981d068731e5d44a09423e6c2f66dd27959b1709248b56c510dc8b6",
+      "dimensional_hash": "e0192ba18d7bf1e89f69534edc95d7b3cefcc8bcba3c04cf0927b04dad80148a",
+      "parse_status": "normalized",
+      "parse_confidence": 1.0,
+      "review_status": "automated_pass",
+      "validation_status": "passed",
+      "mechanism_tags": [
+        "precision_management",
+        "time_scale_conversion"
+      ],
+      "behavioral_archetypes": [
+        "fractional_decomposition",
+        "time_duration_split"
+      ],
+      "variables": {
+        "duration": "input",
+        "fractional_duration": "output",
+        "integer_duration": "output"
+      },
+      "dim_signature": {
+        "duration": "T1",
+        "fractional_duration": "T1",
+        "integer_duration": "T1"
+      },
+      "symbolic_dim_signature": {
+        "duration": "T1",
+        "fractional_duration": "T1",
+        "integer_duration": "T1"
+      },
+      "constants": {},
+      "bibliography": [
+        "urban2013almanac",
+        "repo_tempo_jl"
+      ],
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.tempo_jl.atoms:high_precision_duration:765c0f7da5c9517b",
+      "artifact_uuid": null
+    }
+  ],
+  "artifact_symbolic_variables": [
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.tempo_jl.atoms:graph_time_scale_management:557940106b305e68",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.tempo_jl.atoms:graph_time_scale_management:557940106b305e68",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "graph_time_scale_management",
+      "atom_module": "sciona.atoms.physics.tempo_jl.atoms",
+      "registry_name": "graph_time_scale_management",
+      "expression_id": "0c6f8a1c-b25a-5469-ab6a-1affcd255581",
+      "symbol": "source_time",
+      "symbol_name": "source_time",
+      "source_symbol": "source_time",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.physics.tempo_jl.atoms:graph_time_scale_management:variable:source_time",
+      "role": "input",
+      "variable_role": "input",
+      "dim_signature": "T1",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "T1",
+        "symbolic_role": "input"
+      },
+      "evidence_json": {
+        "source_symbol": "source_time",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.physics.tempo_jl.atoms:graph_time_scale_management"
+      },
+      "ordinal": 0
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.tempo_jl.atoms:graph_time_scale_management:557940106b305e68",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.tempo_jl.atoms:graph_time_scale_management:557940106b305e68",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "graph_time_scale_management",
+      "atom_module": "sciona.atoms.physics.tempo_jl.atoms",
+      "registry_name": "graph_time_scale_management",
+      "expression_id": "0c6f8a1c-b25a-5469-ab6a-1affcd255581",
+      "symbol": "target_time",
+      "symbol_name": "target_time",
+      "source_symbol": "target_time",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.physics.tempo_jl.atoms:graph_time_scale_management:variable:target_time",
+      "role": "output",
+      "variable_role": "output",
+      "dim_signature": "T1",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "T1",
+        "symbolic_role": "output"
+      },
+      "evidence_json": {
+        "source_symbol": "target_time",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.physics.tempo_jl.atoms:graph_time_scale_management"
+      },
+      "ordinal": 1
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.tempo_jl.atoms:high_precision_duration:765c0f7da5c9517b",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.tempo_jl.atoms:high_precision_duration:765c0f7da5c9517b",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "high_precision_duration",
+      "atom_module": "sciona.atoms.physics.tempo_jl.atoms",
+      "registry_name": "high_precision_duration",
+      "expression_id": "a69d5826-17bd-5882-89dd-6a3e59ee5d3f",
+      "symbol": "duration",
+      "symbol_name": "duration",
+      "source_symbol": "duration",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.physics.tempo_jl.atoms:high_precision_duration:variable:duration",
+      "role": "input",
+      "variable_role": "input",
+      "dim_signature": "T1",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "T1",
+        "symbolic_role": "input"
+      },
+      "evidence_json": {
+        "source_symbol": "duration",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.physics.tempo_jl.atoms:high_precision_duration"
+      },
+      "ordinal": 0
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.tempo_jl.atoms:high_precision_duration:765c0f7da5c9517b",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.tempo_jl.atoms:high_precision_duration:765c0f7da5c9517b",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "high_precision_duration",
+      "atom_module": "sciona.atoms.physics.tempo_jl.atoms",
+      "registry_name": "high_precision_duration",
+      "expression_id": "a69d5826-17bd-5882-89dd-6a3e59ee5d3f",
+      "symbol": "fractional_duration",
+      "symbol_name": "fractional_duration",
+      "source_symbol": "fractional_duration",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.physics.tempo_jl.atoms:high_precision_duration:variable:fractional_duration",
+      "role": "output",
+      "variable_role": "output",
+      "dim_signature": "T1",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "T1",
+        "symbolic_role": "output"
+      },
+      "evidence_json": {
+        "source_symbol": "fractional_duration",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.physics.tempo_jl.atoms:high_precision_duration"
+      },
+      "ordinal": 1
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.tempo_jl.atoms:high_precision_duration:765c0f7da5c9517b",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.tempo_jl.atoms:high_precision_duration:765c0f7da5c9517b",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "high_precision_duration",
+      "atom_module": "sciona.atoms.physics.tempo_jl.atoms",
+      "registry_name": "high_precision_duration",
+      "expression_id": "a69d5826-17bd-5882-89dd-6a3e59ee5d3f",
+      "symbol": "integer_duration",
+      "symbol_name": "integer_duration",
+      "source_symbol": "integer_duration",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.physics.tempo_jl.atoms:high_precision_duration:variable:integer_duration",
+      "role": "output",
+      "variable_role": "output",
+      "dim_signature": "T1",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "T1",
+        "symbolic_role": "output"
+      },
+      "evidence_json": {
+        "source_symbol": "integer_duration",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.physics.tempo_jl.atoms:high_precision_duration"
+      },
+      "ordinal": 2
+    }
+  ],
+  "artifact_validity_bounds": [
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.tempo_jl.atoms:high_precision_duration:765c0f7da5c9517b",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.tempo_jl.atoms:high_precision_duration:765c0f7da5c9517b",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "high_precision_duration",
+      "atom_module": "sciona.atoms.physics.tempo_jl.atoms",
+      "registry_name": "high_precision_duration",
+      "expression_id": "a69d5826-17bd-5882-89dd-6a3e59ee5d3f",
+      "symbol": "fractional_duration",
+      "variable_name": "fractional_duration",
+      "source_symbol": "fractional_duration",
+      "source_bound_id": "sciona-atoms-physics:sciona.atoms.physics.tempo_jl.atoms:high_precision_duration:bound:fractional_duration",
+      "scope": "variable",
+      "bound_kind": "domain",
+      "min_value": 0.0,
+      "max_value": 1.0,
+      "lower_value": 0.0,
+      "upper_value": 1.0,
+      "lower_inclusive": true,
+      "upper_inclusive": true,
+      "dim_signature": "T1",
+      "validity_statement": "0.0 <= fractional_duration <= 1.0",
+      "evidence_ref_key": "sciona-atoms-physics:sciona.atoms.physics.tempo_jl.atoms:high_precision_duration:bound:fractional_duration",
+      "confidence": "high",
+      "review_status": "automated_pass",
+      "metadata": {
+        "provider": "sciona-atoms-physics",
+        "atom_module": "sciona.atoms.physics.tempo_jl.atoms",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.physics.tempo_jl.atoms:high_precision_duration",
+        "source_symbol": "fractional_duration",
+        "ordinal": 0
+      },
+      "ordinal": 0
+    }
+  ]
+}
