@@ -2,12 +2,32 @@
 
 import numpy as np
 import icontract
-from sciona.ghost.registry import register_atom
+from sciona.ghost.decorators import symbolic_atom
+
+from .dimensions import BANDPASS_CORRECTION_DIM_MAP, DM_BRUTE_FORCE_DIM_MAP
+from .expressions import (
+    BANDPASS_CORRECTION_BIBLIOGRAPHY,
+    BANDPASS_CORRECTION_EQUATION,
+    BANDPASS_CORRECTION_VALIDITY_BOUNDS,
+    BANDPASS_CORRECTION_VARIABLES,
+    DM_BRUTE_FORCE_BIBLIOGRAPHY,
+    DM_BRUTE_FORCE_CONSTANTS,
+    DM_BRUTE_FORCE_EQUATION,
+    DM_BRUTE_FORCE_VALIDITY_BOUNDS,
+    DM_BRUTE_FORCE_VARIABLES,
+)
 from .witnesses import witness_dm_can_brute_force, witness_spline_bandpass_correction
 
 
-
-@register_atom(witness_dm_can_brute_force)
+@symbolic_atom(
+    witness_dm_can_brute_force,
+    expr=DM_BRUTE_FORCE_EQUATION,
+    dim_map=DM_BRUTE_FORCE_DIM_MAP,
+    validity_bounds=DM_BRUTE_FORCE_VALIDITY_BOUNDS,
+    variables=DM_BRUTE_FORCE_VARIABLES,
+    constants=DM_BRUTE_FORCE_CONSTANTS,
+    bibliography=DM_BRUTE_FORCE_BIBLIOGRAPHY,
+)
 @icontract.require(lambda data: np.isfinite(data).all(), "data must contain only finite values")
 @icontract.require(lambda data: data.shape[0] > 0, "data must not be empty")
 @icontract.require(lambda data: data.ndim >= 1, "data must have at least one dimension")
@@ -37,7 +57,14 @@ def dm_can_brute_force(data: np.ndarray) -> np.ndarray:
             best_profile = rolled
     return best_profile
 
-@register_atom(witness_spline_bandpass_correction)
+@symbolic_atom(
+    witness_spline_bandpass_correction,
+    expr=BANDPASS_CORRECTION_EQUATION,
+    dim_map=BANDPASS_CORRECTION_DIM_MAP,
+    validity_bounds=BANDPASS_CORRECTION_VALIDITY_BOUNDS,
+    variables=BANDPASS_CORRECTION_VARIABLES,
+    bibliography=BANDPASS_CORRECTION_BIBLIOGRAPHY,
+)
 @icontract.require(lambda data: np.isfinite(data).all(), "data must contain only finite values")
 @icontract.require(lambda data: data.shape[0] > 0, "data must not be empty")
 @icontract.require(lambda data: data.ndim >= 1, "data must have at least one dimension")

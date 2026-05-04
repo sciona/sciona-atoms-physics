@@ -1,0 +1,587 @@
+{
+  "provider": "sciona-atoms-physics",
+  "modules": [
+    "sciona.atoms.physics.pulsar_folding.atoms"
+  ],
+  "artifact_symbolic_expressions": [
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.pulsar_folding.atoms:dm_can_brute_force:781de6dfdfc970d3",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "dm_can_brute_force",
+      "atom_module": "sciona.atoms.physics.pulsar_folding.atoms",
+      "registry_name": "dm_can_brute_force",
+      "expression_id": "bdf23d18-288c-53ec-862d-c323619cc5ba",
+      "source_expression_id": "sciona-atoms-physics:sciona.atoms.physics.pulsar_folding.atoms:dm_can_brute_force",
+      "expression_srepr": "Equality(Symbol('snr'), Mul(Symbol('shifted_mean'), Pow(Add(Symbol('epsilon'), Symbol('shifted_std')), Integer(-1))))",
+      "expression_text": "Eq(snr, shifted_mean/(epsilon + shifted_std))",
+      "sympy_srepr": "Equality(Symbol('snr'), Mul(Symbol('shifted_mean'), Pow(Add(Symbol('epsilon'), Symbol('shifted_std')), Integer(-1))))",
+      "raw_formula": "Eq(snr, shifted_mean/(epsilon + shifted_std))",
+      "raw_formula_format": "plain_text",
+      "expression_kind": "equation",
+      "expression_role": "primary",
+      "canonical_expr_hash": "12c67f5ac0da2c98cc17192e80e7af2f16b36adc69ce3679205d15ba1cad2477",
+      "topology_hash": "58af055098b4f0f7e67548658688acd51a56b0fa6ad23b2a52923202f0519834",
+      "dimensional_hash": "1798f5ff54d6116b58abda32679321648666c35dd9da6b90243d7d778afe17b1",
+      "parse_status": "normalized",
+      "parse_confidence": 1.0,
+      "review_status": "automated_pass",
+      "validation_status": "passed",
+      "mechanism_tags": [
+        "pulsar_search",
+        "shift_search",
+        "signal_processing"
+      ],
+      "behavioral_archetypes": [
+        "argmax_selection",
+        "snr_scoring"
+      ],
+      "variables": {
+        "best_profile": "output",
+        "data": "input",
+        "epsilon": "constant",
+        "shift": "parameter",
+        "shifted_mean": "input",
+        "shifted_std": "input",
+        "snr": "output"
+      },
+      "dim_signature": {
+        "best_profile": "1",
+        "data": "1",
+        "epsilon": "1",
+        "shift": "1",
+        "shifted_mean": "1",
+        "shifted_std": "1",
+        "snr": "1"
+      },
+      "symbolic_dim_signature": {
+        "best_profile": "1",
+        "data": "1",
+        "epsilon": "1",
+        "shift": "1",
+        "shifted_mean": "1",
+        "shifted_std": "1",
+        "snr": "1"
+      },
+      "constants": {
+        "epsilon": 1e-15
+      },
+      "bibliography": [
+        "lorimer2005pulsar",
+        "repo_pulsar_folding"
+      ],
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.pulsar_folding.atoms:dm_can_brute_force:781de6dfdfc970d3",
+      "artifact_uuid": null
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.pulsar_folding.atoms:spline_bandpass_correction:6b9dce1c7b69c466",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "spline_bandpass_correction",
+      "atom_module": "sciona.atoms.physics.pulsar_folding.atoms",
+      "registry_name": "spline_bandpass_correction",
+      "expression_id": "c1d218e6-a8c1-57e2-9bd9-523cf299a477",
+      "source_expression_id": "sciona-atoms-physics:sciona.atoms.physics.pulsar_folding.atoms:spline_bandpass_correction",
+      "expression_srepr": "Equality(Symbol('corrected_sample'), Add(Mul(Integer(-1), Symbol('baseline_sample')), Symbol('raw_sample')))",
+      "expression_text": "Eq(corrected_sample, -baseline_sample + raw_sample)",
+      "sympy_srepr": "Equality(Symbol('corrected_sample'), Add(Mul(Integer(-1), Symbol('baseline_sample')), Symbol('raw_sample')))",
+      "raw_formula": "Eq(corrected_sample, -baseline_sample + raw_sample)",
+      "raw_formula_format": "plain_text",
+      "expression_kind": "equation",
+      "expression_role": "primary",
+      "canonical_expr_hash": "d7488afbb59a34c99c24d2cc84ad3b125d05379446044c64950491265d6489f7",
+      "topology_hash": "4abbf123bd776e220607549130ab506ca35050aa21cb6392ecc84378a59aad0a",
+      "dimensional_hash": "562c626e3250b70547f9578234afaec2f005479ec19218b55da83904286cfd2a",
+      "parse_status": "normalized",
+      "parse_confidence": 1.0,
+      "review_status": "automated_pass",
+      "validation_status": "passed",
+      "mechanism_tags": [
+        "bandpass_correction",
+        "instrumental_baseline",
+        "signal_processing"
+      ],
+      "behavioral_archetypes": [
+        "baseline_subtraction",
+        "spline_smoothing"
+      ],
+      "variables": {
+        "baseline_sample": "parameter",
+        "corrected_sample": "output",
+        "data": "input",
+        "raw_sample": "input",
+        "sample_index": "input"
+      },
+      "dim_signature": {
+        "baseline_sample": "1",
+        "corrected_sample": "1",
+        "data": "1",
+        "raw_sample": "1",
+        "sample_index": "1"
+      },
+      "symbolic_dim_signature": {
+        "baseline_sample": "1",
+        "corrected_sample": "1",
+        "data": "1",
+        "raw_sample": "1",
+        "sample_index": "1"
+      },
+      "constants": {},
+      "bibliography": [
+        "repo_pulsar_folding"
+      ],
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.pulsar_folding.atoms:spline_bandpass_correction:6b9dce1c7b69c466",
+      "artifact_uuid": null
+    }
+  ],
+  "artifact_symbolic_variables": [
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.pulsar_folding.atoms:dm_can_brute_force:781de6dfdfc970d3",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.pulsar_folding.atoms:dm_can_brute_force:781de6dfdfc970d3",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "dm_can_brute_force",
+      "atom_module": "sciona.atoms.physics.pulsar_folding.atoms",
+      "registry_name": "dm_can_brute_force",
+      "expression_id": "bdf23d18-288c-53ec-862d-c323619cc5ba",
+      "symbol": "best_profile",
+      "symbol_name": "best_profile",
+      "source_symbol": "best_profile",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.physics.pulsar_folding.atoms:dm_can_brute_force:variable:best_profile",
+      "role": "output",
+      "variable_role": "output",
+      "dim_signature": "1",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "1",
+        "symbolic_role": "output"
+      },
+      "evidence_json": {
+        "source_symbol": "best_profile",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.physics.pulsar_folding.atoms:dm_can_brute_force"
+      },
+      "ordinal": 0
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.pulsar_folding.atoms:dm_can_brute_force:781de6dfdfc970d3",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.pulsar_folding.atoms:dm_can_brute_force:781de6dfdfc970d3",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "dm_can_brute_force",
+      "atom_module": "sciona.atoms.physics.pulsar_folding.atoms",
+      "registry_name": "dm_can_brute_force",
+      "expression_id": "bdf23d18-288c-53ec-862d-c323619cc5ba",
+      "symbol": "data",
+      "symbol_name": "data",
+      "source_symbol": "data",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.physics.pulsar_folding.atoms:dm_can_brute_force:variable:data",
+      "role": "input",
+      "variable_role": "input",
+      "dim_signature": "1",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "1",
+        "symbolic_role": "input"
+      },
+      "evidence_json": {
+        "source_symbol": "data",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.physics.pulsar_folding.atoms:dm_can_brute_force"
+      },
+      "ordinal": 1
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.pulsar_folding.atoms:dm_can_brute_force:781de6dfdfc970d3",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.pulsar_folding.atoms:dm_can_brute_force:781de6dfdfc970d3",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "dm_can_brute_force",
+      "atom_module": "sciona.atoms.physics.pulsar_folding.atoms",
+      "registry_name": "dm_can_brute_force",
+      "expression_id": "bdf23d18-288c-53ec-862d-c323619cc5ba",
+      "symbol": "epsilon",
+      "symbol_name": "epsilon",
+      "source_symbol": "epsilon",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.physics.pulsar_folding.atoms:dm_can_brute_force:variable:epsilon",
+      "role": "constant",
+      "variable_role": "constant",
+      "dim_signature": "1",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "1",
+        "symbolic_role": "constant"
+      },
+      "evidence_json": {
+        "source_symbol": "epsilon",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.physics.pulsar_folding.atoms:dm_can_brute_force"
+      },
+      "ordinal": 2
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.pulsar_folding.atoms:dm_can_brute_force:781de6dfdfc970d3",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.pulsar_folding.atoms:dm_can_brute_force:781de6dfdfc970d3",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "dm_can_brute_force",
+      "atom_module": "sciona.atoms.physics.pulsar_folding.atoms",
+      "registry_name": "dm_can_brute_force",
+      "expression_id": "bdf23d18-288c-53ec-862d-c323619cc5ba",
+      "symbol": "shift",
+      "symbol_name": "shift",
+      "source_symbol": "shift",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.physics.pulsar_folding.atoms:dm_can_brute_force:variable:shift",
+      "role": "parameter",
+      "variable_role": "parameter",
+      "dim_signature": "1",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "1",
+        "symbolic_role": "parameter"
+      },
+      "evidence_json": {
+        "source_symbol": "shift",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.physics.pulsar_folding.atoms:dm_can_brute_force"
+      },
+      "ordinal": 3
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.pulsar_folding.atoms:dm_can_brute_force:781de6dfdfc970d3",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.pulsar_folding.atoms:dm_can_brute_force:781de6dfdfc970d3",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "dm_can_brute_force",
+      "atom_module": "sciona.atoms.physics.pulsar_folding.atoms",
+      "registry_name": "dm_can_brute_force",
+      "expression_id": "bdf23d18-288c-53ec-862d-c323619cc5ba",
+      "symbol": "shifted_mean",
+      "symbol_name": "shifted_mean",
+      "source_symbol": "shifted_mean",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.physics.pulsar_folding.atoms:dm_can_brute_force:variable:shifted_mean",
+      "role": "input",
+      "variable_role": "input",
+      "dim_signature": "1",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "1",
+        "symbolic_role": "input"
+      },
+      "evidence_json": {
+        "source_symbol": "shifted_mean",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.physics.pulsar_folding.atoms:dm_can_brute_force"
+      },
+      "ordinal": 4
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.pulsar_folding.atoms:dm_can_brute_force:781de6dfdfc970d3",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.pulsar_folding.atoms:dm_can_brute_force:781de6dfdfc970d3",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "dm_can_brute_force",
+      "atom_module": "sciona.atoms.physics.pulsar_folding.atoms",
+      "registry_name": "dm_can_brute_force",
+      "expression_id": "bdf23d18-288c-53ec-862d-c323619cc5ba",
+      "symbol": "shifted_std",
+      "symbol_name": "shifted_std",
+      "source_symbol": "shifted_std",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.physics.pulsar_folding.atoms:dm_can_brute_force:variable:shifted_std",
+      "role": "input",
+      "variable_role": "input",
+      "dim_signature": "1",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "1",
+        "symbolic_role": "input"
+      },
+      "evidence_json": {
+        "source_symbol": "shifted_std",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.physics.pulsar_folding.atoms:dm_can_brute_force"
+      },
+      "ordinal": 5
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.pulsar_folding.atoms:dm_can_brute_force:781de6dfdfc970d3",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.pulsar_folding.atoms:dm_can_brute_force:781de6dfdfc970d3",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "dm_can_brute_force",
+      "atom_module": "sciona.atoms.physics.pulsar_folding.atoms",
+      "registry_name": "dm_can_brute_force",
+      "expression_id": "bdf23d18-288c-53ec-862d-c323619cc5ba",
+      "symbol": "snr",
+      "symbol_name": "snr",
+      "source_symbol": "snr",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.physics.pulsar_folding.atoms:dm_can_brute_force:variable:snr",
+      "role": "output",
+      "variable_role": "output",
+      "dim_signature": "1",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "1",
+        "symbolic_role": "output"
+      },
+      "evidence_json": {
+        "source_symbol": "snr",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.physics.pulsar_folding.atoms:dm_can_brute_force"
+      },
+      "ordinal": 6
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.pulsar_folding.atoms:spline_bandpass_correction:6b9dce1c7b69c466",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.pulsar_folding.atoms:spline_bandpass_correction:6b9dce1c7b69c466",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "spline_bandpass_correction",
+      "atom_module": "sciona.atoms.physics.pulsar_folding.atoms",
+      "registry_name": "spline_bandpass_correction",
+      "expression_id": "c1d218e6-a8c1-57e2-9bd9-523cf299a477",
+      "symbol": "baseline_sample",
+      "symbol_name": "baseline_sample",
+      "source_symbol": "baseline_sample",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.physics.pulsar_folding.atoms:spline_bandpass_correction:variable:baseline_sample",
+      "role": "parameter",
+      "variable_role": "parameter",
+      "dim_signature": "1",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "1",
+        "symbolic_role": "parameter"
+      },
+      "evidence_json": {
+        "source_symbol": "baseline_sample",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.physics.pulsar_folding.atoms:spline_bandpass_correction"
+      },
+      "ordinal": 0
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.pulsar_folding.atoms:spline_bandpass_correction:6b9dce1c7b69c466",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.pulsar_folding.atoms:spline_bandpass_correction:6b9dce1c7b69c466",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "spline_bandpass_correction",
+      "atom_module": "sciona.atoms.physics.pulsar_folding.atoms",
+      "registry_name": "spline_bandpass_correction",
+      "expression_id": "c1d218e6-a8c1-57e2-9bd9-523cf299a477",
+      "symbol": "corrected_sample",
+      "symbol_name": "corrected_sample",
+      "source_symbol": "corrected_sample",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.physics.pulsar_folding.atoms:spline_bandpass_correction:variable:corrected_sample",
+      "role": "output",
+      "variable_role": "output",
+      "dim_signature": "1",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "1",
+        "symbolic_role": "output"
+      },
+      "evidence_json": {
+        "source_symbol": "corrected_sample",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.physics.pulsar_folding.atoms:spline_bandpass_correction"
+      },
+      "ordinal": 1
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.pulsar_folding.atoms:spline_bandpass_correction:6b9dce1c7b69c466",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.pulsar_folding.atoms:spline_bandpass_correction:6b9dce1c7b69c466",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "spline_bandpass_correction",
+      "atom_module": "sciona.atoms.physics.pulsar_folding.atoms",
+      "registry_name": "spline_bandpass_correction",
+      "expression_id": "c1d218e6-a8c1-57e2-9bd9-523cf299a477",
+      "symbol": "data",
+      "symbol_name": "data",
+      "source_symbol": "data",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.physics.pulsar_folding.atoms:spline_bandpass_correction:variable:data",
+      "role": "input",
+      "variable_role": "input",
+      "dim_signature": "1",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "1",
+        "symbolic_role": "input"
+      },
+      "evidence_json": {
+        "source_symbol": "data",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.physics.pulsar_folding.atoms:spline_bandpass_correction"
+      },
+      "ordinal": 2
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.pulsar_folding.atoms:spline_bandpass_correction:6b9dce1c7b69c466",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.pulsar_folding.atoms:spline_bandpass_correction:6b9dce1c7b69c466",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "spline_bandpass_correction",
+      "atom_module": "sciona.atoms.physics.pulsar_folding.atoms",
+      "registry_name": "spline_bandpass_correction",
+      "expression_id": "c1d218e6-a8c1-57e2-9bd9-523cf299a477",
+      "symbol": "raw_sample",
+      "symbol_name": "raw_sample",
+      "source_symbol": "raw_sample",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.physics.pulsar_folding.atoms:spline_bandpass_correction:variable:raw_sample",
+      "role": "input",
+      "variable_role": "input",
+      "dim_signature": "1",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "1",
+        "symbolic_role": "input"
+      },
+      "evidence_json": {
+        "source_symbol": "raw_sample",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.physics.pulsar_folding.atoms:spline_bandpass_correction"
+      },
+      "ordinal": 3
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.pulsar_folding.atoms:spline_bandpass_correction:6b9dce1c7b69c466",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.pulsar_folding.atoms:spline_bandpass_correction:6b9dce1c7b69c466",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "spline_bandpass_correction",
+      "atom_module": "sciona.atoms.physics.pulsar_folding.atoms",
+      "registry_name": "spline_bandpass_correction",
+      "expression_id": "c1d218e6-a8c1-57e2-9bd9-523cf299a477",
+      "symbol": "sample_index",
+      "symbol_name": "sample_index",
+      "source_symbol": "sample_index",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.physics.pulsar_folding.atoms:spline_bandpass_correction:variable:sample_index",
+      "role": "input",
+      "variable_role": "input",
+      "dim_signature": "1",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "1",
+        "symbolic_role": "input"
+      },
+      "evidence_json": {
+        "source_symbol": "sample_index",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.physics.pulsar_folding.atoms:spline_bandpass_correction"
+      },
+      "ordinal": 4
+    }
+  ],
+  "artifact_validity_bounds": [
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.pulsar_folding.atoms:dm_can_brute_force:781de6dfdfc970d3",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.pulsar_folding.atoms:dm_can_brute_force:781de6dfdfc970d3",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "dm_can_brute_force",
+      "atom_module": "sciona.atoms.physics.pulsar_folding.atoms",
+      "registry_name": "dm_can_brute_force",
+      "expression_id": "bdf23d18-288c-53ec-862d-c323619cc5ba",
+      "symbol": "epsilon",
+      "variable_name": "epsilon",
+      "source_symbol": "epsilon",
+      "source_bound_id": "sciona-atoms-physics:sciona.atoms.physics.pulsar_folding.atoms:dm_can_brute_force:bound:epsilon",
+      "scope": "variable",
+      "bound_kind": "domain",
+      "min_value": 0.0,
+      "max_value": null,
+      "lower_value": 0.0,
+      "upper_value": null,
+      "lower_inclusive": true,
+      "upper_inclusive": true,
+      "dim_signature": "1",
+      "validity_statement": "epsilon >= 0.0",
+      "evidence_ref_key": "sciona-atoms-physics:sciona.atoms.physics.pulsar_folding.atoms:dm_can_brute_force:bound:epsilon",
+      "confidence": "high",
+      "review_status": "automated_pass",
+      "metadata": {
+        "provider": "sciona-atoms-physics",
+        "atom_module": "sciona.atoms.physics.pulsar_folding.atoms",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.physics.pulsar_folding.atoms:dm_can_brute_force",
+        "source_symbol": "epsilon",
+        "ordinal": 0
+      },
+      "ordinal": 0
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.pulsar_folding.atoms:dm_can_brute_force:781de6dfdfc970d3",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.pulsar_folding.atoms:dm_can_brute_force:781de6dfdfc970d3",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "dm_can_brute_force",
+      "atom_module": "sciona.atoms.physics.pulsar_folding.atoms",
+      "registry_name": "dm_can_brute_force",
+      "expression_id": "bdf23d18-288c-53ec-862d-c323619cc5ba",
+      "symbol": "shift",
+      "variable_name": "shift",
+      "source_symbol": "shift",
+      "source_bound_id": "sciona-atoms-physics:sciona.atoms.physics.pulsar_folding.atoms:dm_can_brute_force:bound:shift",
+      "scope": "variable",
+      "bound_kind": "domain",
+      "min_value": 0.0,
+      "max_value": null,
+      "lower_value": 0.0,
+      "upper_value": null,
+      "lower_inclusive": true,
+      "upper_inclusive": true,
+      "dim_signature": "1",
+      "validity_statement": "shift >= 0.0",
+      "evidence_ref_key": "sciona-atoms-physics:sciona.atoms.physics.pulsar_folding.atoms:dm_can_brute_force:bound:shift",
+      "confidence": "high",
+      "review_status": "automated_pass",
+      "metadata": {
+        "provider": "sciona-atoms-physics",
+        "atom_module": "sciona.atoms.physics.pulsar_folding.atoms",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.physics.pulsar_folding.atoms:dm_can_brute_force",
+        "source_symbol": "shift",
+        "ordinal": 1
+      },
+      "ordinal": 1
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.pulsar_folding.atoms:dm_can_brute_force:781de6dfdfc970d3",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.pulsar_folding.atoms:dm_can_brute_force:781de6dfdfc970d3",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "dm_can_brute_force",
+      "atom_module": "sciona.atoms.physics.pulsar_folding.atoms",
+      "registry_name": "dm_can_brute_force",
+      "expression_id": "bdf23d18-288c-53ec-862d-c323619cc5ba",
+      "symbol": "shifted_std",
+      "variable_name": "shifted_std",
+      "source_symbol": "shifted_std",
+      "source_bound_id": "sciona-atoms-physics:sciona.atoms.physics.pulsar_folding.atoms:dm_can_brute_force:bound:shifted_std",
+      "scope": "variable",
+      "bound_kind": "domain",
+      "min_value": 0.0,
+      "max_value": null,
+      "lower_value": 0.0,
+      "upper_value": null,
+      "lower_inclusive": true,
+      "upper_inclusive": true,
+      "dim_signature": "1",
+      "validity_statement": "shifted_std >= 0.0",
+      "evidence_ref_key": "sciona-atoms-physics:sciona.atoms.physics.pulsar_folding.atoms:dm_can_brute_force:bound:shifted_std",
+      "confidence": "high",
+      "review_status": "automated_pass",
+      "metadata": {
+        "provider": "sciona-atoms-physics",
+        "atom_module": "sciona.atoms.physics.pulsar_folding.atoms",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.physics.pulsar_folding.atoms:dm_can_brute_force",
+        "source_symbol": "shifted_std",
+        "ordinal": 2
+      },
+      "ordinal": 2
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.pulsar_folding.atoms:spline_bandpass_correction:6b9dce1c7b69c466",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.pulsar_folding.atoms:spline_bandpass_correction:6b9dce1c7b69c466",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "spline_bandpass_correction",
+      "atom_module": "sciona.atoms.physics.pulsar_folding.atoms",
+      "registry_name": "spline_bandpass_correction",
+      "expression_id": "c1d218e6-a8c1-57e2-9bd9-523cf299a477",
+      "symbol": "sample_index",
+      "variable_name": "sample_index",
+      "source_symbol": "sample_index",
+      "source_bound_id": "sciona-atoms-physics:sciona.atoms.physics.pulsar_folding.atoms:spline_bandpass_correction:bound:sample_index",
+      "scope": "variable",
+      "bound_kind": "domain",
+      "min_value": 0.0,
+      "max_value": null,
+      "lower_value": 0.0,
+      "upper_value": null,
+      "lower_inclusive": true,
+      "upper_inclusive": true,
+      "dim_signature": "1",
+      "validity_statement": "sample_index >= 0.0",
+      "evidence_ref_key": "sciona-atoms-physics:sciona.atoms.physics.pulsar_folding.atoms:spline_bandpass_correction:bound:sample_index",
+      "confidence": "high",
+      "review_status": "automated_pass",
+      "metadata": {
+        "provider": "sciona-atoms-physics",
+        "atom_module": "sciona.atoms.physics.pulsar_folding.atoms",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.physics.pulsar_folding.atoms:spline_bandpass_correction",
+        "source_symbol": "sample_index",
+        "ordinal": 0
+      },
+      "ordinal": 0
+    }
+  ]
+}

@@ -68,6 +68,40 @@ def test_dm_candidate_filter_registers_dispersion_delay_symbolic_metadata() -> N
     assert sp.simplify(equation.rhs - K * DM * fchan**-2) == 0
 
 
+def test_pulsar_folding_remainder_atoms_register_symbolic_metadata() -> None:
+    brute_force = REGISTRY["dm_can_brute_force"]["symbolic"]
+    bandpass = REGISTRY["spline_bandpass_correction"]["symbolic"]
+
+    assert brute_force is not None
+    assert brute_force.constants == {"epsilon": 1e-15}
+    assert brute_force.validity_bounds["shifted_std"] == (0.0, None)
+    assert brute_force.check_dimensional_consistency() == []
+    shifted_mean, shifted_std, epsilon = sp.symbols(
+        "shifted_mean shifted_std epsilon"
+    )
+    assert str(brute_force.to_sympy().lhs) == "snr"
+    assert (
+        sp.simplify(
+            brute_force.to_sympy().rhs
+            - shifted_mean / (shifted_std + epsilon)
+        )
+        == 0
+    )
+
+    assert bandpass is not None
+    assert bandpass.validity_bounds["sample_index"] == (0.0, None)
+    assert bandpass.check_dimensional_consistency() == []
+    raw_sample, baseline_sample = sp.symbols("raw_sample baseline_sample")
+    assert str(bandpass.to_sympy().lhs) == "corrected_sample"
+    assert (
+        sp.simplify(
+            bandpass.to_sympy().rhs
+            - (raw_sample - baseline_sample)
+        )
+        == 0
+    )
+
+
 def test_dm_candidate_filter_witness_tracks_candidate_count() -> None:
     result = witness_dm_candidate_filter(
         data=AbstractArray(shape=(2,), dtype="float64"),

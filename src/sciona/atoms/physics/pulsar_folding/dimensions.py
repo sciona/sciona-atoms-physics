@@ -25,3 +25,21 @@ DISPERSION_DELAY_DIM_MAP = {
     "width": SECOND,
     "tsamp": SECOND,
 }
+
+DM_BRUTE_FORCE_DIM_MAP = {
+    "snr": DIMENSIONLESS,
+    "shifted_mean": DIMENSIONLESS,
+    "shifted_std": DIMENSIONLESS,
+    "epsilon": DIMENSIONLESS,
+    "data": DIMENSIONLESS,
+    "best_profile": DIMENSIONLESS,
+    "shift": DIMENSIONLESS,
+}
+
+BANDPASS_CORRECTION_DIM_MAP = {
+    "corrected_sample": DIMENSIONLESS,
+    "raw_sample": DIMENSIONLESS,
+    "baseline_sample": DIMENSIONLESS,
+    "data": DIMENSIONLESS,
+    "sample_index": DIMENSIONLESS,
+}

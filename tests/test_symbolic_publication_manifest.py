@@ -87,8 +87,10 @@ def test_manifest_covers_migrated_symbolic_atom_packages() -> None:
         "de_disperse",
         "dedispersionkernel",
         "delay_from_DM",
+        "dm_can_brute_force",
         "dm_candidate_filter",
         "fold_signal",
+        "spline_bandpass_correction",
         "circle_from_three_points",
         "helix_pitch_from_two_points",
         "helix_pitch_least_squares",
@@ -105,6 +107,7 @@ def test_manifest_covers_migrated_symbolic_atom_packages() -> None:
 
     assert rows["dedispersionkernel"]["atom_module"].endswith("astroflow.atoms")
     assert rows["delay_from_DM"]["atom_module"].endswith("pulsar.pipeline")
+    assert rows["dm_can_brute_force"]["atom_module"].endswith("pulsar_folding.atoms")
     assert rows["dm_candidate_filter"]["atom_module"].endswith("pulsar_folding.dm_can")
     assert rows["circle_from_three_points"]["atom_module"].endswith(
         "particle_tracking.helix_geometry.atoms"
@@ -184,6 +187,8 @@ def test_manifest_emits_stable_hashes_tags_and_loader_fields() -> None:
     pulsar_delay = rows["delay_from_DM"]
     pulsar_fold = rows["fold_signal"]
     pulsar_snr = rows["SNR"]
+    folding_search = rows["dm_can_brute_force"]
+    bandpass = rows["spline_bandpass_correction"]
     helix = rows["helix_pitch_least_squares"]
     angle = rows["calculate_vector_angle"]
     low_order = rows["offset_tt2tdb"]
@@ -234,6 +239,24 @@ def test_manifest_emits_stable_hashes_tags_and_loader_fields() -> None:
         "windowed_average",
     ]
     assert pulsar_snr["behavioral_archetypes"] == ["log_ratio", "peak_to_background"]
+    assert folding_search["mechanism_tags"] == [
+        "pulsar_search",
+        "shift_search",
+        "signal_processing",
+    ]
+    assert folding_search["behavioral_archetypes"] == [
+        "argmax_selection",
+        "snr_scoring",
+    ]
+    assert bandpass["mechanism_tags"] == [
+        "bandpass_correction",
+        "instrumental_baseline",
+        "signal_processing",
+    ]
+    assert bandpass["behavioral_archetypes"] == [
+        "baseline_subtraction",
+        "spline_smoothing",
+    ]
     assert "particle_tracking" in helix["mechanism_tags"]
     assert "least_squares_fit" in helix["behavioral_archetypes"]
     assert "coordinate_transform" in angle["mechanism_tags"]
