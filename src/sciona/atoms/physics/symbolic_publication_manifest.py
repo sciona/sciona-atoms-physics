@@ -39,6 +39,7 @@ DEFAULT_SYMBOLIC_ATOM_MODULES = (
     "sciona.atoms.physics.tempo_jl.apply_offsets.atoms",
     "sciona.atoms.physics.tempo_jl.find_year.atoms",
     "sciona.atoms.physics.tempo_jl.offsets.atoms",
+    "sciona.atoms.physics.tempo_jl.tai2utc.atoms",
     "sciona.atoms.physics.tempo_jl.tai2utc_d12.atoms",
     "sciona.atoms.physics.tempo_jl.utc2tai.atoms",
 )
@@ -594,7 +595,11 @@ def _heuristic_tags(atom_module: str, atom_name: str, field_name: str) -> list[s
                     if field_name == "mechanism_tags"
                     else ["fractional_decomposition", "time_duration_split"]
                 )
-        elif "tempo_jl.find_year" in module or "tempo_jl.utc2tai" in module:
+        elif (
+            "tempo_jl.find_year" in module
+            or "tempo_jl.tai2utc" in module
+            or "tempo_jl.utc2tai" in module
+        ):
             if name in {"utc2tai", "tai2utc"}:
                 tags.extend(
                     ["leap_second", "tai_utc_conversion", "time_scale_conversion"]

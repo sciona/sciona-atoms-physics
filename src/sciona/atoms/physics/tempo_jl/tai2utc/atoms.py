@@ -1,11 +1,63 @@
-from __future__ import annotations
 """Auto-generated atom wrappers following the sciona pattern."""
 
-
-import numpy as np
+from __future__ import annotations
 
 import icontract
-from sciona.ghost.registry import register_atom
+from sciona.ghost.decorators import symbolic_atom
+
+from .expressions import (
+    CAL2JD_DIM_MAP,
+    CAL2JD_EXPR,
+    CAL2JD_VARIABLES,
+    CALENDAR_VALIDITY_BOUNDS,
+    CALHMS2JD_DIM_MAP,
+    CALHMS2JD_EXPR,
+    CALHMS2JD_VARIABLES,
+    FD2HMS_DIM_MAP,
+    FD2HMS_EXPR,
+    FD2HMS_VARIABLES,
+    FD2HMSF_DIM_MAP,
+    FD2HMSF_EXPR,
+    FD2HMSF_VARIABLES,
+    FIND_DAY_DIM_MAP,
+    FIND_DAY_EXPR,
+    FIND_DAY_VARIABLES,
+    FIND_DAYINYEAR_DIM_MAP,
+    FIND_DAYINYEAR_EXPR,
+    FIND_DAYINYEAR_VARIABLES,
+    FIND_MONTH_DIM_MAP,
+    FIND_MONTH_EXPR,
+    FIND_MONTH_VARIABLES,
+    FIND_YEAR_DIM_MAP,
+    FIND_YEAR_EXPR,
+    FIND_YEAR_VARIABLES,
+    HMS2FD_DIM_MAP,
+    HMS2FD_EXPR,
+    HMS2FD_VARIABLES,
+    ISLEAPYEAR_DIM_MAP,
+    ISLEAPYEAR_EXPR,
+    ISLEAPYEAR_VARIABLES,
+    JD2CAL_DIM_MAP,
+    JD2CAL_EXPR,
+    JD2CAL_VARIABLES,
+    JD2CALHMS_DIM_MAP,
+    JD2CALHMS_EXPR,
+    JD2CALHMS_VARIABLES,
+    JD_CONSTANTS,
+    LASTJ2000DAYOFYEAR_DIM_MAP,
+    LASTJ2000DAYOFYEAR_EXPR,
+    LASTJ2000DAYOFYEAR_VARIABLES,
+    LEAP_SECOND_VALIDITY_BOUNDS,
+    TAI2UTC_DIM_MAP,
+    TAI2UTC_EXPR,
+    TAI2UTC_VARIABLES,
+    TEMPO_CALENDAR_BIBLIOGRAPHY,
+    TIME_CONSTANTS,
+    TIME_OF_DAY_VALIDITY_BOUNDS,
+    UTC2TAI_DIM_MAP,
+    UTC2TAI_EXPR,
+    UTC2TAI_VARIABLES,
+)
 from .witnesses import witness_cal2jd, witness_calhms2jd, witness_fd2hms, witness_fd2hmsf, witness_find_day, witness_find_dayinyear, witness_find_month, witness_find_year, witness_hms2fd, witness_isleapyear, witness_jd2cal, witness_jd2calhms, witness_lastj2000dayofyear, witness_tai2utc, witness_utc2tai
 
 from juliacall import Main as jl
@@ -13,7 +65,14 @@ from juliacall import Main as jl
 
 # Witness functions should be imported from the generated witnesses module
 
-@register_atom(witness_isleapyear)
+@symbolic_atom(
+    witness_isleapyear,
+    expr=ISLEAPYEAR_EXPR,
+    dim_map=ISLEAPYEAR_DIM_MAP,
+    variables=ISLEAPYEAR_VARIABLES,
+    bibliography=TEMPO_CALENDAR_BIBLIOGRAPHY,
+    skip_dim_check=True,
+)
 @icontract.require(lambda year: year is not None, "year cannot be None")
 @icontract.ensure(lambda result: result is not None, "Isleapyear output must not be None")
 def isleapyear(year: int) -> bool:
@@ -27,7 +86,18 @@ def isleapyear(year: int) -> bool:
     """
     return year % 4 == 0 and (year % 400 == 0 or year % 100 != 0)
 
-@register_atom(witness_find_dayinyear)
+@symbolic_atom(
+    witness_find_dayinyear,
+    expr=FIND_DAYINYEAR_EXPR,
+    dim_map=FIND_DAYINYEAR_DIM_MAP,
+    validity_bounds={
+        "month": CALENDAR_VALIDITY_BOUNDS["month"],
+        "day": CALENDAR_VALIDITY_BOUNDS["day"],
+        "dayinyear": CALENDAR_VALIDITY_BOUNDS["dayinyear"],
+    },
+    variables=FIND_DAYINYEAR_VARIABLES,
+    bibliography=TEMPO_CALENDAR_BIBLIOGRAPHY,
+)
 @icontract.require(lambda month: month is not None, "month cannot be None")
 @icontract.require(lambda day: day is not None, "day cannot be None")
 @icontract.require(lambda isleap: isleap is not None, "isleap cannot be None")
@@ -49,7 +119,14 @@ def find_dayinyear(month: int, day: int, isleap: bool) -> int:
         return day + _PREV_MONTH_END_LEAP[month - 1]
     return day + _PREV_MONTH_END[month - 1]
 
-@register_atom(witness_find_year)
+@symbolic_atom(
+    witness_find_year,
+    expr=FIND_YEAR_EXPR,
+    dim_map=FIND_YEAR_DIM_MAP,
+    validity_bounds={"dayinyear": CALENDAR_VALIDITY_BOUNDS["dayinyear"]},
+    variables=FIND_YEAR_VARIABLES,
+    bibliography=TEMPO_CALENDAR_BIBLIOGRAPHY,
+)
 @icontract.require(lambda d: d is not None, "d cannot be None")
 @icontract.ensure(lambda result: result is not None, "Find Year output must not be None")
 def find_year(d: float) -> int:
@@ -67,7 +144,18 @@ def find_year(d: float) -> int:
         year -= 1
     return year
 
-@register_atom(witness_find_month)
+@symbolic_atom(
+    witness_find_month,
+    expr=FIND_MONTH_EXPR,
+    dim_map=FIND_MONTH_DIM_MAP,
+    validity_bounds={
+        "dayinyear": CALENDAR_VALIDITY_BOUNDS["dayinyear"],
+        "month": CALENDAR_VALIDITY_BOUNDS["month"],
+        "day": CALENDAR_VALIDITY_BOUNDS["day"],
+    },
+    variables=FIND_MONTH_VARIABLES,
+    bibliography=TEMPO_CALENDAR_BIBLIOGRAPHY,
+)
 @icontract.require(lambda dayinyear: dayinyear is not None, "dayinyear cannot be None")
 @icontract.require(lambda isleap: isleap is not None, "isleap cannot be None")
 @icontract.ensure(lambda result: result is not None, "Find Month output must not be None")
@@ -86,7 +174,18 @@ def find_month(dayinyear: int, isleap: bool) -> int:
         return 1
     return (10 * dayinyear + offset) // 306
 
-@register_atom(witness_find_day)
+@symbolic_atom(
+    witness_find_day,
+    expr=FIND_DAY_EXPR,
+    dim_map=FIND_DAY_DIM_MAP,
+    validity_bounds={
+        "dayinyear": CALENDAR_VALIDITY_BOUNDS["dayinyear"],
+        "month": CALENDAR_VALIDITY_BOUNDS["month"],
+        "day": CALENDAR_VALIDITY_BOUNDS["day"],
+    },
+    variables=FIND_DAY_VARIABLES,
+    bibliography=TEMPO_CALENDAR_BIBLIOGRAPHY,
+)
 @icontract.require(lambda dayinyear: dayinyear is not None, "dayinyear cannot be None")
 @icontract.require(lambda month: month is not None, "month cannot be None")
 @icontract.require(lambda isleap: isleap is not None, "isleap cannot be None")
@@ -107,7 +206,14 @@ def find_day(dayinyear: int, month: int, isleap: bool) -> int:
     previous_days = _PREV_MONTH_END_LEAP if isleap else _PREV_MONTH_END
     return dayinyear - previous_days[month - 1]
 
-@register_atom(witness_lastj2000dayofyear)
+@symbolic_atom(
+    witness_lastj2000dayofyear,
+    expr=LASTJ2000DAYOFYEAR_EXPR,
+    dim_map=LASTJ2000DAYOFYEAR_DIM_MAP,
+    variables=LASTJ2000DAYOFYEAR_VARIABLES,
+    bibliography=TEMPO_CALENDAR_BIBLIOGRAPHY,
+    skip_dim_check=True,
+)
 @icontract.require(lambda year: year is not None, "year cannot be None")
 @icontract.ensure(lambda result: result is not None, "Lastj2000Dayofyear output must not be None")
 def lastj2000dayofyear(year: int) -> int:
@@ -121,7 +227,20 @@ def lastj2000dayofyear(year: int) -> int:
     """
     return 365 * year + year // 4 - year // 100 + year // 400 - 730120
 
-@register_atom(witness_hms2fd)
+@symbolic_atom(
+    witness_hms2fd,
+    expr=HMS2FD_EXPR,
+    dim_map=HMS2FD_DIM_MAP,
+    constants=TIME_CONSTANTS,
+    validity_bounds={
+        "h": TIME_OF_DAY_VALIDITY_BOUNDS["h"],
+        "m": TIME_OF_DAY_VALIDITY_BOUNDS["m"],
+        "s": TIME_OF_DAY_VALIDITY_BOUNDS["s"],
+        "fd": CALENDAR_VALIDITY_BOUNDS["fd"],
+    },
+    variables=HMS2FD_VARIABLES,
+    bibliography=TEMPO_CALENDAR_BIBLIOGRAPHY,
+)
 @icontract.require(lambda h: h is not None, "h cannot be None")
 @icontract.require(lambda m: m is not None, "m cannot be None")
 @icontract.require(lambda s: s is not None, "s cannot be None")
@@ -139,7 +258,20 @@ def hms2fd(h: int, m: int, s: float) -> float:
     """
     return ((60 * (60 * h + m)) + s) / 86400.0
 
-@register_atom(witness_fd2hms)
+@symbolic_atom(
+    witness_fd2hms,
+    expr=FD2HMS_EXPR,
+    dim_map=FD2HMS_DIM_MAP,
+    constants=TIME_CONSTANTS,
+    validity_bounds={
+        "fd": CALENDAR_VALIDITY_BOUNDS["fd"],
+        "h": TIME_OF_DAY_VALIDITY_BOUNDS["h"],
+        "m": TIME_OF_DAY_VALIDITY_BOUNDS["m"],
+        "s": TIME_OF_DAY_VALIDITY_BOUNDS["s"],
+    },
+    variables=FD2HMS_VARIABLES,
+    bibliography=TEMPO_CALENDAR_BIBLIOGRAPHY,
+)
 @icontract.require(lambda fd: fd is not None, "fd cannot be None")
 @icontract.ensure(lambda result: result is not None, "Fd2Hms output must not be None")
 def fd2hms(fd: float) -> tuple[int, int, float]:
@@ -158,7 +290,21 @@ def fd2hms(fd: float) -> tuple[int, int, float]:
     secinday -= 60 * mins
     return (hours, mins, secinday)
 
-@register_atom(witness_fd2hmsf)
+@symbolic_atom(
+    witness_fd2hmsf,
+    expr=FD2HMSF_EXPR,
+    dim_map=FD2HMSF_DIM_MAP,
+    constants=TIME_CONSTANTS,
+    validity_bounds={
+        "fd": CALENDAR_VALIDITY_BOUNDS["fd"],
+        "h": TIME_OF_DAY_VALIDITY_BOUNDS["h"],
+        "m": TIME_OF_DAY_VALIDITY_BOUNDS["m"],
+        "sec": TIME_OF_DAY_VALIDITY_BOUNDS["sec"],
+        "fsec": TIME_OF_DAY_VALIDITY_BOUNDS["fsec"],
+    },
+    variables=FD2HMSF_VARIABLES,
+    bibliography=TEMPO_CALENDAR_BIBLIOGRAPHY,
+)
 @icontract.require(lambda fd: fd is not None, "fd cannot be None")
 @icontract.ensure(lambda result: result is not None, "Fd2Hmsf output must not be None")
 def fd2hmsf(fd: float) -> tuple[int, int, int, float]:
@@ -175,7 +321,18 @@ def fd2hmsf(fd: float) -> tuple[int, int, int, float]:
     fsec = sid - sec
     return (h, m, sec, fsec)
 
-@register_atom(witness_cal2jd)
+@symbolic_atom(
+    witness_cal2jd,
+    expr=CAL2JD_EXPR,
+    dim_map=CAL2JD_DIM_MAP,
+    constants=JD_CONSTANTS,
+    validity_bounds={
+        "M": CALENDAR_VALIDITY_BOUNDS["M"],
+        "D": CALENDAR_VALIDITY_BOUNDS["D"],
+    },
+    variables=CAL2JD_VARIABLES,
+    bibliography=TEMPO_CALENDAR_BIBLIOGRAPHY,
+)
 @icontract.require(lambda Y: Y is not None, "Y cannot be None")
 @icontract.require(lambda M: M is not None, "M cannot be None")
 @icontract.require(lambda D: D is not None, "D cannot be None")
@@ -199,7 +356,22 @@ def cal2jd(Y: int, M: int, D: int) -> float:
     d = d1 + d2
     return (DJ2000, float(d))
 
-@register_atom(witness_calhms2jd)
+@symbolic_atom(
+    witness_calhms2jd,
+    expr=CALHMS2JD_EXPR,
+    dim_map=CALHMS2JD_DIM_MAP,
+    constants=JD_CONSTANTS,
+    validity_bounds={
+        "M": CALENDAR_VALIDITY_BOUNDS["M"],
+        "D": CALENDAR_VALIDITY_BOUNDS["D"],
+        "h": TIME_OF_DAY_VALIDITY_BOUNDS["h"],
+        "m": TIME_OF_DAY_VALIDITY_BOUNDS["m"],
+        "sec": TIME_OF_DAY_VALIDITY_BOUNDS["sec"],
+        "fd": CALENDAR_VALIDITY_BOUNDS["fd"],
+    },
+    variables=CALHMS2JD_VARIABLES,
+    bibliography=TEMPO_CALENDAR_BIBLIOGRAPHY,
+)
 @icontract.require(lambda Y, M, D: 1 <= M <= 12 and 1 <= D <= 31, "M must be 1-12, D must be 1-31")
 @icontract.ensure(lambda result: result is not None, "Calhms2Jd output must not be None")
 def calhms2jd(Y: int, M: int, D: int, h: int, m: int, sec: float) -> float:
@@ -220,7 +392,18 @@ def calhms2jd(Y: int, M: int, D: int, h: int, m: int, sec: float) -> float:
     fd = hms2fd(h, m, sec)
     return (jd1, jd2 + fd - 0.5)
 
-@register_atom(witness_jd2cal)
+@symbolic_atom(
+    witness_jd2cal,
+    expr=JD2CAL_EXPR,
+    dim_map=JD2CAL_DIM_MAP,
+    validity_bounds={
+        "M": CALENDAR_VALIDITY_BOUNDS["M"],
+        "D": CALENDAR_VALIDITY_BOUNDS["D"],
+        "fd": CALENDAR_VALIDITY_BOUNDS["fd"],
+    },
+    variables=JD2CAL_VARIABLES,
+    bibliography=TEMPO_CALENDAR_BIBLIOGRAPHY,
+)
 @icontract.require(lambda dj1: dj1 is not None, "dj1 cannot be None")
 @icontract.require(lambda dj2: dj2 is not None, "dj2 cannot be None")
 @icontract.ensure(lambda result: result is not None, "Jd2Cal output must not be None")
@@ -270,20 +453,34 @@ def jd2cal(dj1: float, dj2: float) -> tuple[int, int, int, float]:
         if -eps_f / 2.0 < f:
             jd += 1
             f = max(f, 0.0)
-    l = int(jd) + 68569
-    n = (4 * l) // 146097
-    l -= (146097 * n + 3) // 4
-    i = (4000 * (l + 1)) // 1461001
-    l -= (1461 * i) // 4 - 31
-    k = (80 * l) // 2447
-    D = l - (2447 * k) // 80
-    l = k // 11
-    M = k + 2 - 12 * l
-    Y = 100 * (n - 49) + i + l
+    ell = int(jd) + 68569
+    n = (4 * ell) // 146097
+    ell -= (146097 * n + 3) // 4
+    i = (4000 * (ell + 1)) // 1461001
+    ell -= (1461 * i) // 4 - 31
+    k = (80 * ell) // 2447
+    D = ell - (2447 * k) // 80
+    ell = k // 11
+    M = k + 2 - 12 * ell
+    Y = 100 * (n - 49) + i + ell
     fd = f
     return (int(Y), int(M), int(D), fd)
 
-@register_atom(witness_jd2calhms)
+@symbolic_atom(
+    witness_jd2calhms,
+    expr=JD2CALHMS_EXPR,
+    dim_map=JD2CALHMS_DIM_MAP,
+    validity_bounds={
+        "M": CALENDAR_VALIDITY_BOUNDS["M"],
+        "D": CALENDAR_VALIDITY_BOUNDS["D"],
+        "fd": CALENDAR_VALIDITY_BOUNDS["fd"],
+        "h": TIME_OF_DAY_VALIDITY_BOUNDS["h"],
+        "m": TIME_OF_DAY_VALIDITY_BOUNDS["m"],
+        "sec": TIME_OF_DAY_VALIDITY_BOUNDS["sec"],
+    },
+    variables=JD2CALHMS_VARIABLES,
+    bibliography=TEMPO_CALENDAR_BIBLIOGRAPHY,
+)
 @icontract.require(lambda dj1: dj1 is not None, "dj1 cannot be None")
 @icontract.require(lambda dj2: dj2 is not None, "dj2 cannot be None")
 @icontract.ensure(lambda result: result is not None, "Jd2Calhms output must not be None")
@@ -301,7 +498,15 @@ def jd2calhms(dj1: float, dj2: float) -> tuple[int, int, int, int, int, float]:
     h, mn, sec = fd2hms(fd)
     return (y, m, d, h, mn, sec)
 
-@register_atom(witness_utc2tai)
+@symbolic_atom(
+    witness_utc2tai,
+    expr=UTC2TAI_EXPR,
+    dim_map=UTC2TAI_DIM_MAP,
+    constants={"day_seconds": TIME_CONSTANTS["day_seconds"]},
+    validity_bounds=LEAP_SECOND_VALIDITY_BOUNDS,
+    variables=UTC2TAI_VARIABLES,
+    bibliography=TEMPO_CALENDAR_BIBLIOGRAPHY,
+)
 @icontract.require(lambda utc1: utc1 is not None, "utc1 cannot be None")
 @icontract.require(lambda utc2: utc2 is not None, "utc2 cannot be None")
 @icontract.ensure(lambda result: result is not None, "Utc2Tai output must not be None")
@@ -345,7 +550,15 @@ def utc2tai(utc1: float, utc2: float) -> float:
         return (u1, a2)
     return (a2, u1)
 
-@register_atom(witness_tai2utc)
+@symbolic_atom(
+    witness_tai2utc,
+    expr=TAI2UTC_EXPR,
+    dim_map=TAI2UTC_DIM_MAP,
+    constants={"day_seconds": TIME_CONSTANTS["day_seconds"]},
+    validity_bounds=LEAP_SECOND_VALIDITY_BOUNDS,
+    variables=TAI2UTC_VARIABLES,
+    bibliography=TEMPO_CALENDAR_BIBLIOGRAPHY,
+)
 @icontract.require(lambda tai1: tai1 is not None, "tai1 cannot be None")
 @icontract.require(lambda tai2: tai2 is not None, "tai2 cannot be None")
 @icontract.ensure(lambda result: result is not None, "Tai2Utc output must not be None")
@@ -378,65 +591,62 @@ def tai2utc(tai1: float, tai2: float) -> float:
 """Auto-generated FFI bindings for julia implementations."""
 
 
-from juliacall import Main as jl
-
-
-def _isleapyear_ffi(year):
+def _isleapyear_ffi(year: int) -> bool:
     """Wrapper that calls the Julia version of isleapyear. Passes arguments through and returns the result."""
     return jl.eval("isleapyear(year)")
 
-def _find_dayinyear_ffi(month, day, isleap):
+def _find_dayinyear_ffi(month: int, day: int, isleap: bool) -> int:
     """Wrapper that calls the Julia version of find dayinyear. Passes arguments through and returns the result."""
     return jl.eval("find_dayinyear(month, day, isleap)")
 
-def _find_year_ffi(d):
+def _find_year_ffi(d: float) -> int:
     """Wrapper that calls the Julia version of find year. Passes arguments through and returns the result."""
     return jl.eval("find_year(d)")
 
-def _find_month_ffi(dayinyear, isleap):
+def _find_month_ffi(dayinyear: int, isleap: bool) -> int:
     """Wrapper that calls the Julia version of find month. Passes arguments through and returns the result."""
     return jl.eval("find_month(dayinyear, isleap)")
 
-def _find_day_ffi(dayinyear, month, isleap):
+def _find_day_ffi(dayinyear: int, month: int, isleap: bool) -> int:
     """Wrapper that calls the Julia version of find day. Passes arguments through and returns the result."""
     return jl.eval("find_day(dayinyear, month, isleap)")
 
-def _lastj2000dayofyear_ffi(year):
+def _lastj2000dayofyear_ffi(year: int) -> int:
     """Wrapper that calls the Julia version of lastj2000 dayofyear. Passes arguments through and returns the result."""
     return jl.eval("lastj2000dayofyear(year)")
 
-def _hms2fd_ffi(h, m, s):
+def _hms2fd_ffi(h: int, m: int, s: float) -> float:
     """Wrapper that calls the Julia version of hms2 fd. Passes arguments through and returns the result."""
     return jl.eval("hms2fd(h, m, s)")
 
-def _fd2hms_ffi(fd):
+def _fd2hms_ffi(fd: float) -> tuple[int, int, float]:
     """Wrapper that calls the Julia version of fd2 hms. Passes arguments through and returns the result."""
     return jl.eval("fd2hms(fd)")
 
-def _fd2hmsf_ffi(fd):
+def _fd2hmsf_ffi(fd: float) -> tuple[int, int, int, float]:
     """Wrapper that calls the Julia version of fd2 hmsf. Passes arguments through and returns the result."""
     return jl.eval("fd2hmsf(fd)")
 
-def _cal2jd_ffi(Y, M, D):
+def _cal2jd_ffi(Y: int, M: int, D: int) -> float:
     """Wrapper that calls the Julia version of cal2 jd. Passes arguments through and returns the result."""
     return jl.eval("cal2jd(Y, M, D)")
 
-def _calhms2jd_ffi(Y, M, D, h, m, sec):
+def _calhms2jd_ffi(Y: int, M: int, D: int, h: int, m: int, sec: float) -> float:
     """Wrapper that calls the Julia version of calhms2 jd. Passes arguments through and returns the result."""
     return jl.eval("calhms2jd(Y, M, D, h, m, sec)")
 
-def _jd2cal_ffi(dj1, dj2):
+def _jd2cal_ffi(dj1: float, dj2: float) -> tuple[int, int, int, float]:
     """Wrapper that calls the Julia version of jd2 cal. Passes arguments through and returns the result."""
     return jl.eval("jd2cal(dj1, dj2)")
 
-def _jd2calhms_ffi(dj1, dj2):
+def _jd2calhms_ffi(dj1: float, dj2: float) -> tuple[int, int, int, int, int, float]:
     """Wrapper that calls the Julia version of jd2 calhms. Passes arguments through and returns the result."""
     return jl.eval("jd2calhms(dj1, dj2)")
 
-def _utc2tai_ffi(utc1, utc2):
+def _utc2tai_ffi(utc1: float, utc2: float) -> float:
     """Wrapper that calls the Julia version of utc2 tai. Passes arguments through and returns the result."""
     return jl.eval("utc2tai(utc1, utc2)")
 
-def _tai2utc_ffi(tai1, tai2):
+def _tai2utc_ffi(tai1: float, tai2: float) -> float:
     """Wrapper that calls the Julia version of tai2 utc. Passes arguments through and returns the result."""
     return jl.eval("tai2utc(tai1, tai2)")

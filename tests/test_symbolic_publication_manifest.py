@@ -146,6 +146,10 @@ def test_manifest_covers_migrated_symbolic_atom_packages() -> None:
         "sciona.atoms.physics.tempo_jl.utc2tai.atoms",
         "cal2jd",
     ) in rows_by_module_name
+    assert (
+        "sciona.atoms.physics.tempo_jl.tai2utc.atoms",
+        "cal2jd",
+    ) in rows_by_module_name
     assert rows["offset_tt2tdb"]["atom_module"].endswith("tempo_jl.offsets.atoms")
     assert rows["tai_to_utc_inversion"]["atom_module"].endswith(
         "tempo_jl.tai2utc_d12.atoms"
@@ -242,6 +246,9 @@ def test_manifest_emits_stable_hashes_tags_and_loader_fields() -> None:
     ]
     utc_calendar_to_jd = rows_by_module_name[
         ("sciona.atoms.physics.tempo_jl.utc2tai.atoms", "cal2jd")
+    ]
+    tai_calendar_to_jd = rows_by_module_name[
+        ("sciona.atoms.physics.tempo_jl.tai2utc.atoms", "cal2jd")
     ]
     low_order = rows["offset_tt2tdb"]
     leap_forward = rows["utc_to_tai_leap_second_kernel"]
@@ -357,6 +364,8 @@ def test_manifest_emits_stable_hashes_tags_and_loader_fields() -> None:
     assert "epoch_offset" in calendar_to_jd["behavioral_archetypes"]
     assert "julian_date" in utc_calendar_to_jd["mechanism_tags"]
     assert "epoch_offset" in utc_calendar_to_jd["behavioral_archetypes"]
+    assert "julian_date" in tai_calendar_to_jd["mechanism_tags"]
+    assert "epoch_offset" in tai_calendar_to_jd["behavioral_archetypes"]
     assert "time_scale_conversion" in low_order["mechanism_tags"]
     assert leap_forward["mechanism_tags"] == [
         "leap_second",
