@@ -143,6 +143,14 @@ def test_manifest_covers_migrated_symbolic_atom_packages() -> None:
         "cal2jd",
     ) in rows_by_module_name
     assert (
+        "sciona.atoms.physics.tempo_jl.find_month.atoms",
+        "date_from_offset",
+    ) in rows_by_module_name
+    assert (
+        "sciona.atoms.physics.tempo_jl.jd2cal.atoms",
+        "datetime_from_seconds",
+    ) in rows_by_module_name
+    assert (
         "sciona.atoms.physics.tempo_jl.utc2tai.atoms",
         "cal2jd",
     ) in rows_by_module_name

@@ -1,19 +1,52 @@
-from __future__ import annotations
 """Auto-generated atom wrappers following the sciona pattern."""
 
+from __future__ import annotations
 
-import numpy as np
 
 import icontract
+from sciona.ghost.decorators import symbolic_atom
 from sciona.ghost.registry import register_atom
-from .witnesses import witness_date, witness_datetime, witness_show, witness_time
 
+from .expressions import (
+    CALENDAR_VALIDITY_BOUNDS,
+    DATE_FROM_OFFSET_DIM_MAP,
+    DATE_FROM_OFFSET_EXPR,
+    DATE_FROM_OFFSET_VARIABLES,
+    DATE_FROM_YEAR_DAYINYEAR_DIM_MAP,
+    DATE_FROM_YEAR_DAYINYEAR_EXPR,
+    DATE_FROM_YEAR_DAYINYEAR_VARIABLES,
+    DATETIME_FROM_SECONDS_DIM_MAP,
+    DATETIME_FROM_SECONDS_EXPR,
+    DATETIME_FROM_SECONDS_VARIABLES,
+    JD_SECONDS_CONSTANTS,
+    TEMPO_CONSTRUCTOR_BIBLIOGRAPHY,
+    TIME_CONSTANTS,
+    TIME_FROM_SECONDINDAY_DIM_MAP,
+    TIME_FROM_SECONDINDAY_EXPR,
+    TIME_FROM_SECONDINDAY_FRACTION_DIM_MAP,
+    TIME_FROM_SECONDINDAY_FRACTION_EXPR,
+    TIME_FROM_SECONDINDAY_FRACTION_VARIABLES,
+    TIME_FROM_SECONDINDAY_VARIABLES,
+    TIME_OF_DAY_VALIDITY_BOUNDS,
+)
+from .witnesses import witness_date, witness_datetime, witness_show, witness_time
 from juliacall import Main as jl
 
 
 # Witness functions should be imported from the generated witnesses module
 
-@register_atom(witness_date, name="date_from_offset")
+@symbolic_atom(
+    witness_date,
+    name="date_from_offset",
+    expr=DATE_FROM_OFFSET_EXPR,
+    dim_map=DATE_FROM_OFFSET_DIM_MAP,
+    validity_bounds={
+        "month": CALENDAR_VALIDITY_BOUNDS["month"],
+        "day": CALENDAR_VALIDITY_BOUNDS["day"],
+    },
+    variables=DATE_FROM_OFFSET_VARIABLES,
+    bibliography=TEMPO_CONSTRUCTOR_BIBLIOGRAPHY,
+)
 @icontract.require(lambda offset: offset is not None, "offset cannot be None")
 @icontract.ensure(lambda result: result is not None, "Date output must not be None")
 def date(offset: int) -> tuple[int, int, int]:
@@ -51,7 +84,19 @@ def date(offset: int) -> tuple[int, int, int]:
 
 date_from_offset = date
 
-@register_atom(witness_date, name="date_from_year_dayinyear")
+@symbolic_atom(
+    witness_date,
+    name="date_from_year_dayinyear",
+    expr=DATE_FROM_YEAR_DAYINYEAR_EXPR,
+    dim_map=DATE_FROM_YEAR_DAYINYEAR_DIM_MAP,
+    validity_bounds={
+        "dayinyear": CALENDAR_VALIDITY_BOUNDS["dayinyear"],
+        "month": CALENDAR_VALIDITY_BOUNDS["month"],
+        "day": CALENDAR_VALIDITY_BOUNDS["day"],
+    },
+    variables=DATE_FROM_YEAR_DAYINYEAR_VARIABLES,
+    bibliography=TEMPO_CONSTRUCTOR_BIBLIOGRAPHY,
+)
 @icontract.require(lambda year: year is not None, "year cannot be None")
 @icontract.require(lambda dayinyear: dayinyear is not None, "dayinyear cannot be None")
 @icontract.ensure(lambda result: result is not None, "Date output must not be None")
@@ -114,7 +159,25 @@ def time(hour: int, minute: int, second: float) -> tuple[int, int, float]:
 
 time_from_hms = time
 
-@register_atom(witness_time, name="time_from_secondinday_fraction")
+@symbolic_atom(
+    witness_time,
+    name="time_from_secondinday_fraction",
+    expr=TIME_FROM_SECONDINDAY_FRACTION_EXPR,
+    dim_map=TIME_FROM_SECONDINDAY_FRACTION_DIM_MAP,
+    validity_bounds={
+        "secondinday": TIME_OF_DAY_VALIDITY_BOUNDS["secondinday"],
+        "fraction": TIME_OF_DAY_VALIDITY_BOUNDS["fraction"],
+        "h": TIME_OF_DAY_VALIDITY_BOUNDS["h"],
+        "m": TIME_OF_DAY_VALIDITY_BOUNDS["m"],
+        "s": TIME_OF_DAY_VALIDITY_BOUNDS["s"],
+    },
+    constants={
+        "hour_seconds": TIME_CONSTANTS["hour_seconds"],
+        "minute_seconds": TIME_CONSTANTS["minute_seconds"],
+    },
+    variables=TIME_FROM_SECONDINDAY_FRACTION_VARIABLES,
+    bibliography=TEMPO_CONSTRUCTOR_BIBLIOGRAPHY,
+)
 @icontract.require(lambda secondinday: secondinday is not None, "secondinday cannot be None")
 @icontract.require(lambda fraction: fraction is not None, "fraction cannot be None")
 @icontract.ensure(lambda result: result is not None, "Time output must not be None")
@@ -137,7 +200,24 @@ def time(secondinday: int, fraction: float) -> tuple[int, int, float]:
 
 time_from_secondinday_fraction = time
 
-@register_atom(witness_time, name="time_from_secondinday")
+@symbolic_atom(
+    witness_time,
+    name="time_from_secondinday",
+    expr=TIME_FROM_SECONDINDAY_EXPR,
+    dim_map=TIME_FROM_SECONDINDAY_DIM_MAP,
+    validity_bounds={
+        "secondinday": TIME_OF_DAY_VALIDITY_BOUNDS["secondinday"],
+        "h": TIME_OF_DAY_VALIDITY_BOUNDS["h"],
+        "m": TIME_OF_DAY_VALIDITY_BOUNDS["m"],
+        "s": TIME_OF_DAY_VALIDITY_BOUNDS["s"],
+    },
+    constants={
+        "hour_seconds": TIME_CONSTANTS["hour_seconds"],
+        "minute_seconds": TIME_CONSTANTS["minute_seconds"],
+    },
+    variables=TIME_FROM_SECONDINDAY_VARIABLES,
+    bibliography=TEMPO_CONSTRUCTOR_BIBLIOGRAPHY,
+)
 @icontract.require(lambda secondinday: secondinday is not None, "secondinday cannot be None")
 @icontract.ensure(lambda result: result is not None, "Time output must not be None")
 def time(secondinday: int) -> tuple[int, int, float]:
@@ -222,7 +302,22 @@ def datetime(s: str) -> tuple[int, int, int, int, int, float]:
 
 datetime_from_string = datetime
 
-@register_atom(witness_datetime, name="datetime_from_seconds")
+@symbolic_atom(
+    witness_datetime,
+    name="datetime_from_seconds",
+    expr=DATETIME_FROM_SECONDS_EXPR,
+    dim_map=DATETIME_FROM_SECONDS_DIM_MAP,
+    validity_bounds={
+        "M": CALENDAR_VALIDITY_BOUNDS["M"],
+        "D": CALENDAR_VALIDITY_BOUNDS["D"],
+        "h": TIME_OF_DAY_VALIDITY_BOUNDS["h"],
+        "m": TIME_OF_DAY_VALIDITY_BOUNDS["m"],
+        "s": TIME_OF_DAY_VALIDITY_BOUNDS["s"],
+    },
+    constants=JD_SECONDS_CONSTANTS,
+    variables=DATETIME_FROM_SECONDS_VARIABLES,
+    bibliography=TEMPO_CONSTRUCTOR_BIBLIOGRAPHY,
+)
 @icontract.require(lambda seconds: seconds is not None, "seconds cannot be None")
 @icontract.ensure(lambda result: result is not None, "Datetime output must not be None")
 def datetime(seconds: float) -> tuple[int, int, int, int, int, float]:
@@ -274,16 +369,16 @@ def datetime(seconds: float) -> tuple[int, int, int, int, int, float]:
         if -eps_f / 2.0 < f:
             jd += 1
             f = max(f, 0.0)
-    l = int(jd) + 68569
-    n = (4 * l) // 146097
-    l -= (146097 * n + 3) // 4
-    i = (4000 * (l + 1)) // 1461001
-    l -= (1461 * i) // 4 - 31
-    k = (80 * l) // 2447
-    D = l - (2447 * k) // 80
-    l = k // 11
-    M = k + 2 - 12 * l
-    Y = 100 * (n - 49) + i + l
+    ell = int(jd) + 68569
+    n = (4 * ell) // 146097
+    ell -= (146097 * n + 3) // 4
+    i = (4000 * (ell + 1)) // 1461001
+    ell -= (1461 * i) // 4 - 31
+    k = (80 * ell) // 2447
+    D = ell - (2447 * k) // 80
+    ell = k // 11
+    M = k + 2 - 12 * ell
+    Y = 100 * (n - 49) + i + ell
     fd = f
 
     secinday = fd * DAY2SEC
@@ -297,9 +392,6 @@ datetime_from_seconds = datetime
 
 
 """Auto-generated FFI bindings for julia implementations."""
-
-
-from juliacall import Main as jl
 
 
 def _date_ffi(offset):

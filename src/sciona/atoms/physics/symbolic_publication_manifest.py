@@ -37,7 +37,9 @@ DEFAULT_SYMBOLIC_ATOM_MODULES = (
     "sciona.atoms.physics.skyfield.atoms",
     "sciona.atoms.physics.tempo_jl.atoms",
     "sciona.atoms.physics.tempo_jl.apply_offsets.atoms",
+    "sciona.atoms.physics.tempo_jl.find_month.atoms",
     "sciona.atoms.physics.tempo_jl.find_year.atoms",
+    "sciona.atoms.physics.tempo_jl.jd2cal.atoms",
     "sciona.atoms.physics.tempo_jl.offsets.atoms",
     "sciona.atoms.physics.tempo_jl.tai2utc.atoms",
     "sciona.atoms.physics.tempo_jl.tai2utc_d12.atoms",
@@ -597,6 +599,8 @@ def _heuristic_tags(atom_module: str, atom_name: str, field_name: str) -> list[s
                 )
         elif (
             "tempo_jl.find_year" in module
+            or "tempo_jl.find_month" in module
+            or "tempo_jl.jd2cal" in module
             or "tempo_jl.tai2utc" in module
             or "tempo_jl.utc2tai" in module
         ):
@@ -613,6 +617,21 @@ def _heuristic_tags(atom_module: str, atom_name: str, field_name: str) -> list[s
                     else ["fractional_day_conversion", "unit_conversion"]
                 )
             elif name in {"cal2jd", "calhms2jd", "jd2cal", "jd2calhms"}:
+                tags.extend(
+                    ["calendar_conversion", "julian_date", "time_scale_conversion"]
+                    if field_name == "mechanism_tags"
+                    else ["calendar_coordinate_mapping", "epoch_offset"]
+                )
+            elif name in {
+                "time_from_secondinday",
+                "time_from_secondinday_fraction",
+            }:
+                tags.extend(
+                    ["calendar_time", "time_of_day_conversion"]
+                    if field_name == "mechanism_tags"
+                    else ["seconds_decomposition", "unit_conversion"]
+                )
+            elif name == "datetime_from_seconds":
                 tags.extend(
                     ["calendar_conversion", "julian_date", "time_scale_conversion"]
                     if field_name == "mechanism_tags"

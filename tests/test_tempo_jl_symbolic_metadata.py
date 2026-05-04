@@ -41,6 +41,14 @@ def _load_tai2utc_symbolic_atoms() -> None:
     importlib.import_module("sciona.atoms.physics.tempo_jl.tai2utc.atoms")
 
 
+def _load_constructor_symbolic_atoms(module: str) -> None:
+    sys.modules.setdefault("juliacall", SimpleNamespace(Main=_JuliaMainStub()))
+    if module in sys.modules:
+        importlib.reload(sys.modules[module])
+    else:
+        importlib.import_module(module)
+
+
 def test_tempo_offset_atoms_register_symbolic_metadata() -> None:
     _load_tempo_symbolic_atoms()
 
@@ -233,3 +241,44 @@ def test_tempo_tai2utc_atoms_register_symbolic_metadata() -> None:
     assert inverse.variables["utc_total"] == "output"
     assert inverse.dim_map["delta_at"] == SECOND
     assert inverse.check_dimensional_consistency() == []
+
+
+def test_tempo_constructor_modules_only_mark_equations_symbolic() -> None:
+    for module in (
+        "sciona.atoms.physics.tempo_jl.find_month.atoms",
+        "sciona.atoms.physics.tempo_jl.jd2cal.atoms",
+    ):
+        _load_constructor_symbolic_atoms(module)
+
+        date_from_offset = REGISTRY["date_from_offset"]["symbolic"]
+        time_from_secondinday = REGISTRY["time_from_secondinday"]["symbolic"]
+        datetime_from_seconds = REGISTRY["datetime_from_seconds"]["symbolic"]
+
+        assert REGISTRY["date_from_offset"]["module"] == module
+        assert date_from_offset is not None
+        assert date_from_offset.variables["offset"] == "input"
+        assert date_from_offset.variables["day"] == "output"
+        assert date_from_offset.check_dimensional_consistency() == []
+
+        assert time_from_secondinday is not None
+        assert time_from_secondinday.constants["hour_seconds"] == 3600.0
+        assert time_from_secondinday.dim_map["secondinday"] == SECOND
+        assert time_from_secondinday.variables["s"] == "output"
+        assert time_from_secondinday.check_dimensional_consistency() == []
+
+        assert datetime_from_seconds is not None
+        assert datetime_from_seconds.constants["jd_epoch"] == 2451545.0
+        assert datetime_from_seconds.variables["seconds"] == "input"
+        assert datetime_from_seconds.variables["Y"] == "output"
+        assert datetime_from_seconds.check_dimensional_consistency() == []
+
+        for non_equation_name in {
+            "show_date",
+            "show_time",
+            "time_from_hms",
+            "datetime_from_components",
+            "datetime_from_string",
+        }:
+            entry = REGISTRY[non_equation_name]
+            assert entry["module"] == module
+            assert entry["symbolic"] is None
