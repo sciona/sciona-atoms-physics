@@ -107,6 +107,9 @@ def test_manifest_covers_migrated_symbolic_atom_packages() -> None:
         "calculate_vector_angle",
         "graph_time_scale_management",
         "high_precision_duration",
+        "cal2jd",
+        "hms2fd",
+        "utc2tai",
         "_zero_offset",
         "apply_offsets",
         "offset_tt2tdb",
@@ -133,6 +136,7 @@ def test_manifest_covers_migrated_symbolic_atom_packages() -> None:
     assert rows["graph_time_scale_management"]["atom_module"].endswith(
         "tempo_jl.atoms"
     )
+    assert rows["cal2jd"]["atom_module"].endswith("tempo_jl.find_year.atoms")
     assert rows["offset_tt2tdb"]["atom_module"].endswith("tempo_jl.offsets.atoms")
     assert rows["tai_to_utc_inversion"]["atom_module"].endswith(
         "tempo_jl.tai2utc_d12.atoms"
@@ -222,6 +226,7 @@ def test_manifest_emits_stable_hashes_tags_and_loader_fields() -> None:
     angle = rows["calculate_vector_angle"]
     graph_time_scale = rows["graph_time_scale_management"]
     duration_split = rows["high_precision_duration"]
+    calendar_to_jd = rows["cal2jd"]
     low_order = rows["offset_tt2tdb"]
     leap_forward = rows["utc_to_tai_leap_second_kernel"]
 
@@ -332,6 +337,8 @@ def test_manifest_emits_stable_hashes_tags_and_loader_fields() -> None:
         "fractional_decomposition",
         "time_duration_split",
     ]
+    assert "julian_date" in calendar_to_jd["mechanism_tags"]
+    assert "epoch_offset" in calendar_to_jd["behavioral_archetypes"]
     assert "time_scale_conversion" in low_order["mechanism_tags"]
     assert leap_forward["mechanism_tags"] == [
         "leap_second",

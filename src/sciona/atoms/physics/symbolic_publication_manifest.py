@@ -37,6 +37,7 @@ DEFAULT_SYMBOLIC_ATOM_MODULES = (
     "sciona.atoms.physics.skyfield.atoms",
     "sciona.atoms.physics.tempo_jl.atoms",
     "sciona.atoms.physics.tempo_jl.apply_offsets.atoms",
+    "sciona.atoms.physics.tempo_jl.find_year.atoms",
     "sciona.atoms.physics.tempo_jl.offsets.atoms",
     "sciona.atoms.physics.tempo_jl.tai2utc_d12.atoms",
 )
@@ -59,15 +60,12 @@ def build_symbolic_publication_manifest(
 
     module_names = tuple(modules)
     _install_optional_import_shims(module_names)
-    for module_name in module_names:
-        importlib.import_module(module_name)
-
-    source_registry = registry or REGISTRY
+    source_registry = registry or _load_registry_entries_by_module(module_names)
     expressions: list[dict[str, Any]] = []
     variables: list[dict[str, Any]] = []
     validity_bounds: list[dict[str, Any]] = []
 
-    for atom_name, entry in sorted(source_registry.items()):
+    for registry_key, entry in sorted(source_registry.items()):
         symbolic = entry.get("symbolic")
         if symbolic is None:
             continue
@@ -76,6 +74,7 @@ def build_symbolic_publication_manifest(
         if atom_module not in module_names:
             continue
 
+        atom_name = str(entry.get("name") or registry_key)
         artifact_key = _artifact_key(provider, atom_module, atom_name, entry)
         dim_signature = _compact_dim_map(entry.get("dim_signature") or symbolic.dim_map)
         symbolic_dim_signature = _compact_dim_map(symbolic.dim_map)
@@ -234,6 +233,34 @@ def build_symbolic_publication_manifest(
         "artifact_symbolic_variables": variables,
         "artifact_validity_bounds": validity_bounds,
     }
+
+
+def _load_registry_entries_by_module(
+    module_names: tuple[str, ...],
+) -> dict[str, Mapping[str, Any]]:
+    """Import modules and snapshot their symbolic registry rows before collisions.
+
+    Several generated Tempo.jl subpackages reuse atom names such as
+    ``cal2jd`` and ``utc2tai``.  The global registry is keyed by atom name, so
+    imports from a later module can replace entries from an earlier one.  The
+    publication manifest is module-scoped, so capture rows immediately after
+    each import/reload under a module-qualified key.
+    """
+
+    entries: dict[str, Mapping[str, Any]] = {}
+    for module_name in module_names:
+        if module_name in sys.modules:
+            importlib.reload(sys.modules[module_name])
+        else:
+            importlib.import_module(module_name)
+        for atom_name, entry in REGISTRY.items():
+            symbolic = entry.get("symbolic")
+            if symbolic is None:
+                continue
+            if str(entry.get("module") or "") != module_name:
+                continue
+            entries[f"{module_name}:{atom_name}"] = entry
+    return entries
 
 
 def to_matcher_symbolic_expression_rows(
@@ -565,6 +592,31 @@ def _heuristic_tags(atom_module: str, atom_name: str, field_name: str) -> list[s
                     ["precision_management", "time_scale_conversion"]
                     if field_name == "mechanism_tags"
                     else ["fractional_decomposition", "time_duration_split"]
+                )
+        elif "tempo_jl.find_year" in module:
+            if name in {"utc2tai", "tai2utc"}:
+                tags.extend(
+                    ["leap_second", "tai_utc_conversion", "time_scale_conversion"]
+                    if field_name == "mechanism_tags"
+                    else ["inverse_time_mapping", "leap_offset"]
+                )
+            elif name in {"hms2fd", "fd2hms", "fd2hmsf"}:
+                tags.extend(
+                    ["calendar_time", "time_of_day_conversion"]
+                    if field_name == "mechanism_tags"
+                    else ["fractional_day_conversion", "unit_conversion"]
+                )
+            elif name in {"cal2jd", "calhms2jd", "jd2cal", "jd2calhms"}:
+                tags.extend(
+                    ["calendar_conversion", "julian_date", "time_scale_conversion"]
+                    if field_name == "mechanism_tags"
+                    else ["calendar_coordinate_mapping", "epoch_offset"]
+                )
+            else:
+                tags.extend(
+                    ["calendar_arithmetic", "julian_date"]
+                    if field_name == "mechanism_tags"
+                    else ["calendar_lookup", "integer_time_mapping"]
                 )
         else:
             tags.extend(

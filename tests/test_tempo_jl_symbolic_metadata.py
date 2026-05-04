@@ -26,6 +26,11 @@ def _load_tai2utc_d12_symbolic_atoms() -> None:
     importlib.import_module("sciona.atoms.physics.tempo_jl.tai2utc_d12.atoms")
 
 
+def _load_find_year_symbolic_atoms() -> None:
+    sys.modules.setdefault("juliacall", SimpleNamespace(Main=_JuliaMainStub()))
+    importlib.import_module("sciona.atoms.physics.tempo_jl.find_year.atoms")
+
+
 def test_tempo_offset_atoms_register_symbolic_metadata() -> None:
     _load_tempo_symbolic_atoms()
 
@@ -142,3 +147,29 @@ def test_tai2utc_d12_atoms_register_symbolic_metadata() -> None:
     assert inverse.variables["candidate_utc"] == "output"
     assert inverse.validity_bounds["day_seconds"] == (1.0, None)
     assert inverse.check_dimensional_consistency() == []
+
+
+def test_tempo_find_year_atoms_register_symbolic_metadata() -> None:
+    _load_find_year_symbolic_atoms()
+
+    hms = REGISTRY["hms2fd"]["symbolic"]
+    cal = REGISTRY["cal2jd"]["symbolic"]
+    utc = REGISTRY["utc2tai"]["symbolic"]
+
+    assert hms is not None
+    assert hms.constants["day_seconds"] == 86400.0
+    assert hms.variables["fd"] == "output"
+    assert hms.validity_bounds["fd"] == (0.0, 1.0)
+    assert hms.check_dimensional_consistency() == []
+
+    assert cal is not None
+    assert cal.constants["jd_epoch"] == 2451545.0
+    assert cal.variables["julian_day"] == "output"
+    assert cal.validity_bounds["M"] == (1.0, 12.0)
+    assert cal.check_dimensional_consistency() == []
+
+    assert utc is not None
+    assert utc.constants["day_seconds"] == 86400.0
+    assert utc.variables["delta_at"] == "parameter"
+    assert utc.dim_map["delta_at"] == SECOND
+    assert utc.check_dimensional_consistency() == []
