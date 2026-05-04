@@ -37,6 +37,7 @@ DEFAULT_SYMBOLIC_ATOM_MODULES = (
     "sciona.atoms.physics.skyfield.atoms",
     "sciona.atoms.physics.tempo_jl.apply_offsets.atoms",
     "sciona.atoms.physics.tempo_jl.offsets.atoms",
+    "sciona.atoms.physics.tempo_jl.tai2utc_d12.atoms",
 )
 
 
@@ -545,11 +546,18 @@ def _heuristic_tags(atom_module: str, atom_name: str, field_name: str) -> list[s
             else ["angular_geometry", "coordinate_transform"]
         )
     if "tempo_jl" in module:
-        tags.extend(
-            ["relativistic_timing", "time_scale_conversion"]
-            if field_name == "mechanism_tags"
-            else ["periodic_correction", "time_offset"]
-        )
+        if "tai2utc_d12" in module:
+            tags.extend(
+                ["leap_second", "tai_utc_conversion", "time_scale_conversion"]
+                if field_name == "mechanism_tags"
+                else ["inverse_time_mapping", "leap_offset"]
+            )
+        else:
+            tags.extend(
+                ["relativistic_timing", "time_scale_conversion"]
+                if field_name == "mechanism_tags"
+                else ["periodic_correction", "time_offset"]
+            )
     return _dedupe_sorted(tags)
 
 
@@ -575,6 +583,19 @@ def _install_optional_import_shims(module_names: tuple[str, ...]) -> None:
             is_package=True,
         )
         sys.modules[package_name] = tempo_module
+    if needs_tempo and "juliacall" not in sys.modules:
+        juliacall_module = types.ModuleType("juliacall")
+        juliacall_module.__spec__ = importlib.machinery.ModuleSpec("juliacall", None)
+
+        class _JuliaMainStub:
+            def eval(self, expression: str) -> Any:
+                raise ImportError(
+                    "juliacall is required to execute this Tempo atom: "
+                    f"{expression}"
+                )
+
+        juliacall_module.Main = _JuliaMainStub()
+        sys.modules["juliacall"] = juliacall_module
 
     needs_skyfield = any(
         module_name.startswith("sciona.atoms.physics.skyfield")

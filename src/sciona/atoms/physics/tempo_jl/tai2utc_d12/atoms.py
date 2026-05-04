@@ -1,19 +1,43 @@
-from __future__ import annotations
 """Auto-generated atom wrappers following the sciona pattern."""
 
+from __future__ import annotations
 
 import numpy as np
 
 import icontract
-from sciona.ghost.registry import register_atom
-from .witnesses import witness_tai_to_utc_inversion, witness_utc_to_tai_leap_second_kernel
-
+from sciona.ghost.decorators import symbolic_atom
+from .expressions import (
+    TAI2UTC_D12_BIBLIOGRAPHY,
+    TAI_TO_UTC_CONSTANTS,
+    TAI_TO_UTC_DIM_MAP,
+    TAI_TO_UTC_EXPR,
+    TAI_TO_UTC_VALIDITY_BOUNDS,
+    TAI_TO_UTC_VARIABLES,
+    UTC_TO_TAI_CONSTANTS,
+    UTC_TO_TAI_DIM_MAP,
+    UTC_TO_TAI_EXPR,
+    UTC_TO_TAI_VALIDITY_BOUNDS,
+    UTC_TO_TAI_VARIABLES,
+)
+from .witnesses import (
+    witness_tai_to_utc_inversion,
+    witness_utc_to_tai_leap_second_kernel,
+)
 from juliacall import Main as jl  # type: ignore[import-untyped]
 
 
 # Witness functions should be imported from the generated witnesses module
 
-@register_atom(witness_utc_to_tai_leap_second_kernel)  # type: ignore[name-defined, untyped-decorator]
+
+@symbolic_atom(
+    witness_utc_to_tai_leap_second_kernel,
+    expr=UTC_TO_TAI_EXPR,
+    dim_map=UTC_TO_TAI_DIM_MAP,
+    validity_bounds=UTC_TO_TAI_VALIDITY_BOUNDS,
+    variables=UTC_TO_TAI_VARIABLES,
+    constants=UTC_TO_TAI_CONSTANTS,
+    bibliography=TAI2UTC_D12_BIBLIOGRAPHY,
+)  # type: ignore[name-defined, untyped-decorator]
 @icontract.require(lambda utc1: isinstance(utc1, (float, int, np.number)), "utc1 must be numeric")
 @icontract.require(lambda utc2: isinstance(utc2, (float, int, np.number)), "utc2 must be numeric")
 @icontract.ensure(lambda result: all(r is not None for r in result), "utc_to_tai_leap_second_kernel all outputs must not be None")
@@ -48,7 +72,16 @@ Returns:
         delta_at = _LEAP_SECONDS[idx]
     return (utc1, utc2 + delta_at / 86400.0)
 
-@register_atom(witness_tai_to_utc_inversion)  # type: ignore[name-defined, untyped-decorator]
+
+@symbolic_atom(
+    witness_tai_to_utc_inversion,
+    expr=TAI_TO_UTC_EXPR,
+    dim_map=TAI_TO_UTC_DIM_MAP,
+    validity_bounds=TAI_TO_UTC_VALIDITY_BOUNDS,
+    variables=TAI_TO_UTC_VARIABLES,
+    constants=TAI_TO_UTC_CONSTANTS,
+    bibliography=TAI2UTC_D12_BIBLIOGRAPHY,
+)  # type: ignore[name-defined, untyped-decorator]
 @icontract.require(lambda tai1: isinstance(tai1, (float, int, np.number)), "tai1 must be numeric")
 @icontract.require(lambda tai2: isinstance(tai2, (float, int, np.number)), "tai2 must be numeric")
 @icontract.require(lambda tai_estimate: isinstance(tai_estimate, (float, int, np.number)), "tai_estimate must be numeric")
@@ -97,12 +130,10 @@ Returns:
 """Auto-generated FFI bindings for julia implementations."""
 
 
-from juliacall import Main as jl
-
-
 def _utc_to_tai_leap_second_kernel_ffi(utc1: float, utc2: float) -> object:
     """Wrapper that calls the Julia version of utc to tai leap second kernel. Passes arguments through and returns the result."""
     return jl.eval("utc_to_tai_leap_second_kernel(utc1, utc2)")
+
 
 def _tai_to_utc_inversion_ffi(tai1: float, tai2: float, tai_estimate: float) -> object:
     """Wrapper that calls the Julia version of tai to utc inversion. Passes arguments through and returns the result."""

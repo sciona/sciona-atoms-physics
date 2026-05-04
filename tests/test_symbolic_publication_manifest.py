@@ -110,6 +110,8 @@ def test_manifest_covers_migrated_symbolic_atom_packages() -> None:
         "offset_tt2tdb",
         "offset_tt2tdbh",
         "tt2tdb_offset",
+        "tai_to_utc_inversion",
+        "utc_to_tai_leap_second_kernel",
     }.issubset(rows)
 
     assert rows["dedispersionkernel"]["atom_module"].endswith("astroflow.atoms")
@@ -127,6 +129,9 @@ def test_manifest_covers_migrated_symbolic_atom_packages() -> None:
     )
     assert rows["calculate_vector_angle"]["atom_module"].endswith("skyfield.atoms")
     assert rows["offset_tt2tdb"]["atom_module"].endswith("tempo_jl.offsets.atoms")
+    assert rows["tai_to_utc_inversion"]["atom_module"].endswith(
+        "tempo_jl.tai2utc_d12.atoms"
+    )
 
 
 def test_manifest_emits_expression_variables_and_bounds_rows() -> None:
@@ -211,6 +216,7 @@ def test_manifest_emits_stable_hashes_tags_and_loader_fields() -> None:
     helix = rows["helix_pitch_least_squares"]
     angle = rows["calculate_vector_angle"]
     low_order = rows["offset_tt2tdb"]
+    leap_forward = rows["utc_to_tai_leap_second_kernel"]
 
     for row in rows.values():
         assert len(row["canonical_expr_hash"]) == 64
@@ -304,6 +310,15 @@ def test_manifest_emits_stable_hashes_tags_and_loader_fields() -> None:
     assert "least_squares_fit" in helix["behavioral_archetypes"]
     assert "coordinate_transform" in angle["mechanism_tags"]
     assert "time_scale_conversion" in low_order["mechanism_tags"]
+    assert leap_forward["mechanism_tags"] == [
+        "leap_second",
+        "tai_utc_conversion",
+        "time_scale_conversion",
+    ]
+    assert leap_forward["behavioral_archetypes"] == [
+        "inverse_time_mapping",
+        "leap_offset",
+    ]
 
 
 def test_manifest_rows_can_be_adapted_to_matcher_staging_contract() -> None:

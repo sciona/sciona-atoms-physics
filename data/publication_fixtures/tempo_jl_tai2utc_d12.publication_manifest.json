@@ -1,0 +1,677 @@
+{
+  "provider": "sciona-atoms-physics",
+  "modules": [
+    "sciona.atoms.physics.tempo_jl.tai2utc_d12.atoms"
+  ],
+  "artifact_symbolic_expressions": [
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.tempo_jl.tai2utc_d12.atoms:tai_to_utc_inversion:152c4de8da184e67",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "tai_to_utc_inversion",
+      "atom_module": "sciona.atoms.physics.tempo_jl.tai2utc_d12.atoms",
+      "registry_name": "tai_to_utc_inversion",
+      "expression_id": "fb14322c-88e8-547f-9ebf-da80ca8c0277",
+      "source_expression_id": "sciona-atoms-physics:sciona.atoms.physics.tempo_jl.tai2utc_d12.atoms:tai_to_utc_inversion",
+      "expression_srepr": "Equality(Symbol('candidate_utc'), Add(Symbol('tai1'), Symbol('tai2'), Mul(Integer(-1), Pow(Symbol('day_seconds'), Integer(-1)), Symbol('delta_at'))))",
+      "expression_text": "Eq(candidate_utc, tai1 + tai2 - delta_at/day_seconds)",
+      "sympy_srepr": "Equality(Symbol('candidate_utc'), Add(Symbol('tai1'), Symbol('tai2'), Mul(Integer(-1), Pow(Symbol('day_seconds'), Integer(-1)), Symbol('delta_at'))))",
+      "raw_formula": "Eq(candidate_utc, tai1 + tai2 - delta_at/day_seconds)",
+      "raw_formula_format": "plain_text",
+      "expression_kind": "equation",
+      "expression_role": "primary",
+      "canonical_expr_hash": "1627619c2c6890587a0f1ec9ce7815a3e7f3f18bfb77ccbb1659e919ef2ac241",
+      "topology_hash": "118bbe4f38bb7a92fe136297a97e313f5ef21d3583365caee2cf86360e10207a",
+      "dimensional_hash": "fdd5ef46c8a732b15a6a680b79e95e8df49cfdfea6c812c6d8fd40041fb79478",
+      "parse_status": "normalized",
+      "parse_confidence": 1.0,
+      "review_status": "automated_pass",
+      "validation_status": "passed",
+      "mechanism_tags": [
+        "leap_second",
+        "tai_utc_conversion",
+        "time_scale_conversion"
+      ],
+      "behavioral_archetypes": [
+        "inverse_time_mapping",
+        "leap_offset"
+      ],
+      "variables": {
+        "candidate_utc": "output",
+        "day_seconds": "constant",
+        "delta_at": "parameter",
+        "tai1": "input",
+        "tai2": "input",
+        "tai_estimate": "input",
+        "utc1": "output",
+        "utc2": "output"
+      },
+      "dim_signature": {
+        "candidate_utc": "T1",
+        "day_seconds": "1",
+        "delta_at": "T1",
+        "tai1": "T1",
+        "tai2": "T1",
+        "tai_estimate": "T1",
+        "utc1": "T1",
+        "utc2": "T1"
+      },
+      "symbolic_dim_signature": {
+        "candidate_utc": "T1",
+        "day_seconds": "1",
+        "delta_at": "T1",
+        "tai1": "T1",
+        "tai2": "T1",
+        "tai_estimate": "T1",
+        "utc1": "T1",
+        "utc2": "T1"
+      },
+      "constants": {
+        "day_seconds": 86400.0
+      },
+      "bibliography": [
+        "iau2006sofa",
+        "repo_tempo_jl"
+      ],
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.tempo_jl.tai2utc_d12.atoms:tai_to_utc_inversion:152c4de8da184e67",
+      "artifact_uuid": null
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.tempo_jl.tai2utc_d12.atoms:utc_to_tai_leap_second_kernel:2f70fdff029fc8b2",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "utc_to_tai_leap_second_kernel",
+      "atom_module": "sciona.atoms.physics.tempo_jl.tai2utc_d12.atoms",
+      "registry_name": "utc_to_tai_leap_second_kernel",
+      "expression_id": "668218de-6d85-5d62-91b1-0e7f5b909b1f",
+      "source_expression_id": "sciona-atoms-physics:sciona.atoms.physics.tempo_jl.tai2utc_d12.atoms:utc_to_tai_leap_second_kernel",
+      "expression_srepr": "Equality(Symbol('tai_total'), Add(Symbol('utc1'), Symbol('utc2'), Mul(Pow(Symbol('day_seconds'), Integer(-1)), Symbol('delta_at'))))",
+      "expression_text": "Eq(tai_total, utc1 + utc2 + delta_at/day_seconds)",
+      "sympy_srepr": "Equality(Symbol('tai_total'), Add(Symbol('utc1'), Symbol('utc2'), Mul(Pow(Symbol('day_seconds'), Integer(-1)), Symbol('delta_at'))))",
+      "raw_formula": "Eq(tai_total, utc1 + utc2 + delta_at/day_seconds)",
+      "raw_formula_format": "plain_text",
+      "expression_kind": "equation",
+      "expression_role": "primary",
+      "canonical_expr_hash": "1b095a148c01762882ec68a0dafba9e02e3146b16279b15b3d4064be37ed1d31",
+      "topology_hash": "b5b81a4b6f78f530d50be22096f1a023b732363280ad4617ff05af247c61075e",
+      "dimensional_hash": "1025bf4a1bd2525c30ad1482e0abb9516647785cd790edc9e3b551f653b59c2c",
+      "parse_status": "normalized",
+      "parse_confidence": 1.0,
+      "review_status": "automated_pass",
+      "validation_status": "passed",
+      "mechanism_tags": [
+        "leap_second",
+        "tai_utc_conversion",
+        "time_scale_conversion"
+      ],
+      "behavioral_archetypes": [
+        "inverse_time_mapping",
+        "leap_offset"
+      ],
+      "variables": {
+        "day_seconds": "constant",
+        "delta_at": "parameter",
+        "tai1": "output",
+        "tai2": "output",
+        "tai_total": "output",
+        "utc1": "input",
+        "utc2": "input"
+      },
+      "dim_signature": {
+        "day_seconds": "1",
+        "delta_at": "T1",
+        "tai1": "T1",
+        "tai2": "T1",
+        "tai_total": "T1",
+        "utc1": "T1",
+        "utc2": "T1"
+      },
+      "symbolic_dim_signature": {
+        "day_seconds": "1",
+        "delta_at": "T1",
+        "tai1": "T1",
+        "tai2": "T1",
+        "tai_total": "T1",
+        "utc1": "T1",
+        "utc2": "T1"
+      },
+      "constants": {
+        "day_seconds": 86400.0
+      },
+      "bibliography": [
+        "iau2006sofa",
+        "repo_tempo_jl"
+      ],
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.tempo_jl.tai2utc_d12.atoms:utc_to_tai_leap_second_kernel:2f70fdff029fc8b2",
+      "artifact_uuid": null
+    }
+  ],
+  "artifact_symbolic_variables": [
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.tempo_jl.tai2utc_d12.atoms:tai_to_utc_inversion:152c4de8da184e67",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.tempo_jl.tai2utc_d12.atoms:tai_to_utc_inversion:152c4de8da184e67",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "tai_to_utc_inversion",
+      "atom_module": "sciona.atoms.physics.tempo_jl.tai2utc_d12.atoms",
+      "registry_name": "tai_to_utc_inversion",
+      "expression_id": "fb14322c-88e8-547f-9ebf-da80ca8c0277",
+      "symbol": "candidate_utc",
+      "symbol_name": "candidate_utc",
+      "source_symbol": "candidate_utc",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.physics.tempo_jl.tai2utc_d12.atoms:tai_to_utc_inversion:variable:candidate_utc",
+      "role": "output",
+      "variable_role": "output",
+      "dim_signature": "T1",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "T1",
+        "symbolic_role": "output"
+      },
+      "evidence_json": {
+        "source_symbol": "candidate_utc",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.physics.tempo_jl.tai2utc_d12.atoms:tai_to_utc_inversion"
+      },
+      "ordinal": 0
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.tempo_jl.tai2utc_d12.atoms:tai_to_utc_inversion:152c4de8da184e67",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.tempo_jl.tai2utc_d12.atoms:tai_to_utc_inversion:152c4de8da184e67",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "tai_to_utc_inversion",
+      "atom_module": "sciona.atoms.physics.tempo_jl.tai2utc_d12.atoms",
+      "registry_name": "tai_to_utc_inversion",
+      "expression_id": "fb14322c-88e8-547f-9ebf-da80ca8c0277",
+      "symbol": "day_seconds",
+      "symbol_name": "day_seconds",
+      "source_symbol": "day_seconds",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.physics.tempo_jl.tai2utc_d12.atoms:tai_to_utc_inversion:variable:day_seconds",
+      "role": "constant",
+      "variable_role": "constant",
+      "dim_signature": "1",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "1",
+        "symbolic_role": "constant"
+      },
+      "evidence_json": {
+        "source_symbol": "day_seconds",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.physics.tempo_jl.tai2utc_d12.atoms:tai_to_utc_inversion"
+      },
+      "ordinal": 1
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.tempo_jl.tai2utc_d12.atoms:tai_to_utc_inversion:152c4de8da184e67",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.tempo_jl.tai2utc_d12.atoms:tai_to_utc_inversion:152c4de8da184e67",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "tai_to_utc_inversion",
+      "atom_module": "sciona.atoms.physics.tempo_jl.tai2utc_d12.atoms",
+      "registry_name": "tai_to_utc_inversion",
+      "expression_id": "fb14322c-88e8-547f-9ebf-da80ca8c0277",
+      "symbol": "delta_at",
+      "symbol_name": "delta_at",
+      "source_symbol": "delta_at",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.physics.tempo_jl.tai2utc_d12.atoms:tai_to_utc_inversion:variable:delta_at",
+      "role": "parameter",
+      "variable_role": "parameter",
+      "dim_signature": "T1",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "T1",
+        "symbolic_role": "parameter"
+      },
+      "evidence_json": {
+        "source_symbol": "delta_at",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.physics.tempo_jl.tai2utc_d12.atoms:tai_to_utc_inversion"
+      },
+      "ordinal": 2
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.tempo_jl.tai2utc_d12.atoms:tai_to_utc_inversion:152c4de8da184e67",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.tempo_jl.tai2utc_d12.atoms:tai_to_utc_inversion:152c4de8da184e67",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "tai_to_utc_inversion",
+      "atom_module": "sciona.atoms.physics.tempo_jl.tai2utc_d12.atoms",
+      "registry_name": "tai_to_utc_inversion",
+      "expression_id": "fb14322c-88e8-547f-9ebf-da80ca8c0277",
+      "symbol": "tai1",
+      "symbol_name": "tai1",
+      "source_symbol": "tai1",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.physics.tempo_jl.tai2utc_d12.atoms:tai_to_utc_inversion:variable:tai1",
+      "role": "input",
+      "variable_role": "input",
+      "dim_signature": "T1",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "T1",
+        "symbolic_role": "input"
+      },
+      "evidence_json": {
+        "source_symbol": "tai1",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.physics.tempo_jl.tai2utc_d12.atoms:tai_to_utc_inversion"
+      },
+      "ordinal": 3
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.tempo_jl.tai2utc_d12.atoms:tai_to_utc_inversion:152c4de8da184e67",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.tempo_jl.tai2utc_d12.atoms:tai_to_utc_inversion:152c4de8da184e67",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "tai_to_utc_inversion",
+      "atom_module": "sciona.atoms.physics.tempo_jl.tai2utc_d12.atoms",
+      "registry_name": "tai_to_utc_inversion",
+      "expression_id": "fb14322c-88e8-547f-9ebf-da80ca8c0277",
+      "symbol": "tai2",
+      "symbol_name": "tai2",
+      "source_symbol": "tai2",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.physics.tempo_jl.tai2utc_d12.atoms:tai_to_utc_inversion:variable:tai2",
+      "role": "input",
+      "variable_role": "input",
+      "dim_signature": "T1",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "T1",
+        "symbolic_role": "input"
+      },
+      "evidence_json": {
+        "source_symbol": "tai2",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.physics.tempo_jl.tai2utc_d12.atoms:tai_to_utc_inversion"
+      },
+      "ordinal": 4
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.tempo_jl.tai2utc_d12.atoms:tai_to_utc_inversion:152c4de8da184e67",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.tempo_jl.tai2utc_d12.atoms:tai_to_utc_inversion:152c4de8da184e67",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "tai_to_utc_inversion",
+      "atom_module": "sciona.atoms.physics.tempo_jl.tai2utc_d12.atoms",
+      "registry_name": "tai_to_utc_inversion",
+      "expression_id": "fb14322c-88e8-547f-9ebf-da80ca8c0277",
+      "symbol": "tai_estimate",
+      "symbol_name": "tai_estimate",
+      "source_symbol": "tai_estimate",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.physics.tempo_jl.tai2utc_d12.atoms:tai_to_utc_inversion:variable:tai_estimate",
+      "role": "input",
+      "variable_role": "input",
+      "dim_signature": "T1",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "T1",
+        "symbolic_role": "input"
+      },
+      "evidence_json": {
+        "source_symbol": "tai_estimate",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.physics.tempo_jl.tai2utc_d12.atoms:tai_to_utc_inversion"
+      },
+      "ordinal": 5
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.tempo_jl.tai2utc_d12.atoms:tai_to_utc_inversion:152c4de8da184e67",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.tempo_jl.tai2utc_d12.atoms:tai_to_utc_inversion:152c4de8da184e67",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "tai_to_utc_inversion",
+      "atom_module": "sciona.atoms.physics.tempo_jl.tai2utc_d12.atoms",
+      "registry_name": "tai_to_utc_inversion",
+      "expression_id": "fb14322c-88e8-547f-9ebf-da80ca8c0277",
+      "symbol": "utc1",
+      "symbol_name": "utc1",
+      "source_symbol": "utc1",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.physics.tempo_jl.tai2utc_d12.atoms:tai_to_utc_inversion:variable:utc1",
+      "role": "output",
+      "variable_role": "output",
+      "dim_signature": "T1",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "T1",
+        "symbolic_role": "output"
+      },
+      "evidence_json": {
+        "source_symbol": "utc1",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.physics.tempo_jl.tai2utc_d12.atoms:tai_to_utc_inversion"
+      },
+      "ordinal": 6
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.tempo_jl.tai2utc_d12.atoms:tai_to_utc_inversion:152c4de8da184e67",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.tempo_jl.tai2utc_d12.atoms:tai_to_utc_inversion:152c4de8da184e67",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "tai_to_utc_inversion",
+      "atom_module": "sciona.atoms.physics.tempo_jl.tai2utc_d12.atoms",
+      "registry_name": "tai_to_utc_inversion",
+      "expression_id": "fb14322c-88e8-547f-9ebf-da80ca8c0277",
+      "symbol": "utc2",
+      "symbol_name": "utc2",
+      "source_symbol": "utc2",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.physics.tempo_jl.tai2utc_d12.atoms:tai_to_utc_inversion:variable:utc2",
+      "role": "output",
+      "variable_role": "output",
+      "dim_signature": "T1",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "T1",
+        "symbolic_role": "output"
+      },
+      "evidence_json": {
+        "source_symbol": "utc2",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.physics.tempo_jl.tai2utc_d12.atoms:tai_to_utc_inversion"
+      },
+      "ordinal": 7
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.tempo_jl.tai2utc_d12.atoms:utc_to_tai_leap_second_kernel:2f70fdff029fc8b2",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.tempo_jl.tai2utc_d12.atoms:utc_to_tai_leap_second_kernel:2f70fdff029fc8b2",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "utc_to_tai_leap_second_kernel",
+      "atom_module": "sciona.atoms.physics.tempo_jl.tai2utc_d12.atoms",
+      "registry_name": "utc_to_tai_leap_second_kernel",
+      "expression_id": "668218de-6d85-5d62-91b1-0e7f5b909b1f",
+      "symbol": "day_seconds",
+      "symbol_name": "day_seconds",
+      "source_symbol": "day_seconds",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.physics.tempo_jl.tai2utc_d12.atoms:utc_to_tai_leap_second_kernel:variable:day_seconds",
+      "role": "constant",
+      "variable_role": "constant",
+      "dim_signature": "1",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "1",
+        "symbolic_role": "constant"
+      },
+      "evidence_json": {
+        "source_symbol": "day_seconds",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.physics.tempo_jl.tai2utc_d12.atoms:utc_to_tai_leap_second_kernel"
+      },
+      "ordinal": 0
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.tempo_jl.tai2utc_d12.atoms:utc_to_tai_leap_second_kernel:2f70fdff029fc8b2",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.tempo_jl.tai2utc_d12.atoms:utc_to_tai_leap_second_kernel:2f70fdff029fc8b2",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "utc_to_tai_leap_second_kernel",
+      "atom_module": "sciona.atoms.physics.tempo_jl.tai2utc_d12.atoms",
+      "registry_name": "utc_to_tai_leap_second_kernel",
+      "expression_id": "668218de-6d85-5d62-91b1-0e7f5b909b1f",
+      "symbol": "delta_at",
+      "symbol_name": "delta_at",
+      "source_symbol": "delta_at",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.physics.tempo_jl.tai2utc_d12.atoms:utc_to_tai_leap_second_kernel:variable:delta_at",
+      "role": "parameter",
+      "variable_role": "parameter",
+      "dim_signature": "T1",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "T1",
+        "symbolic_role": "parameter"
+      },
+      "evidence_json": {
+        "source_symbol": "delta_at",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.physics.tempo_jl.tai2utc_d12.atoms:utc_to_tai_leap_second_kernel"
+      },
+      "ordinal": 1
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.tempo_jl.tai2utc_d12.atoms:utc_to_tai_leap_second_kernel:2f70fdff029fc8b2",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.tempo_jl.tai2utc_d12.atoms:utc_to_tai_leap_second_kernel:2f70fdff029fc8b2",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "utc_to_tai_leap_second_kernel",
+      "atom_module": "sciona.atoms.physics.tempo_jl.tai2utc_d12.atoms",
+      "registry_name": "utc_to_tai_leap_second_kernel",
+      "expression_id": "668218de-6d85-5d62-91b1-0e7f5b909b1f",
+      "symbol": "tai1",
+      "symbol_name": "tai1",
+      "source_symbol": "tai1",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.physics.tempo_jl.tai2utc_d12.atoms:utc_to_tai_leap_second_kernel:variable:tai1",
+      "role": "output",
+      "variable_role": "output",
+      "dim_signature": "T1",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "T1",
+        "symbolic_role": "output"
+      },
+      "evidence_json": {
+        "source_symbol": "tai1",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.physics.tempo_jl.tai2utc_d12.atoms:utc_to_tai_leap_second_kernel"
+      },
+      "ordinal": 2
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.tempo_jl.tai2utc_d12.atoms:utc_to_tai_leap_second_kernel:2f70fdff029fc8b2",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.tempo_jl.tai2utc_d12.atoms:utc_to_tai_leap_second_kernel:2f70fdff029fc8b2",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "utc_to_tai_leap_second_kernel",
+      "atom_module": "sciona.atoms.physics.tempo_jl.tai2utc_d12.atoms",
+      "registry_name": "utc_to_tai_leap_second_kernel",
+      "expression_id": "668218de-6d85-5d62-91b1-0e7f5b909b1f",
+      "symbol": "tai2",
+      "symbol_name": "tai2",
+      "source_symbol": "tai2",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.physics.tempo_jl.tai2utc_d12.atoms:utc_to_tai_leap_second_kernel:variable:tai2",
+      "role": "output",
+      "variable_role": "output",
+      "dim_signature": "T1",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "T1",
+        "symbolic_role": "output"
+      },
+      "evidence_json": {
+        "source_symbol": "tai2",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.physics.tempo_jl.tai2utc_d12.atoms:utc_to_tai_leap_second_kernel"
+      },
+      "ordinal": 3
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.tempo_jl.tai2utc_d12.atoms:utc_to_tai_leap_second_kernel:2f70fdff029fc8b2",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.tempo_jl.tai2utc_d12.atoms:utc_to_tai_leap_second_kernel:2f70fdff029fc8b2",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "utc_to_tai_leap_second_kernel",
+      "atom_module": "sciona.atoms.physics.tempo_jl.tai2utc_d12.atoms",
+      "registry_name": "utc_to_tai_leap_second_kernel",
+      "expression_id": "668218de-6d85-5d62-91b1-0e7f5b909b1f",
+      "symbol": "tai_total",
+      "symbol_name": "tai_total",
+      "source_symbol": "tai_total",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.physics.tempo_jl.tai2utc_d12.atoms:utc_to_tai_leap_second_kernel:variable:tai_total",
+      "role": "output",
+      "variable_role": "output",
+      "dim_signature": "T1",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "T1",
+        "symbolic_role": "output"
+      },
+      "evidence_json": {
+        "source_symbol": "tai_total",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.physics.tempo_jl.tai2utc_d12.atoms:utc_to_tai_leap_second_kernel"
+      },
+      "ordinal": 4
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.tempo_jl.tai2utc_d12.atoms:utc_to_tai_leap_second_kernel:2f70fdff029fc8b2",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.tempo_jl.tai2utc_d12.atoms:utc_to_tai_leap_second_kernel:2f70fdff029fc8b2",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "utc_to_tai_leap_second_kernel",
+      "atom_module": "sciona.atoms.physics.tempo_jl.tai2utc_d12.atoms",
+      "registry_name": "utc_to_tai_leap_second_kernel",
+      "expression_id": "668218de-6d85-5d62-91b1-0e7f5b909b1f",
+      "symbol": "utc1",
+      "symbol_name": "utc1",
+      "source_symbol": "utc1",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.physics.tempo_jl.tai2utc_d12.atoms:utc_to_tai_leap_second_kernel:variable:utc1",
+      "role": "input",
+      "variable_role": "input",
+      "dim_signature": "T1",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "T1",
+        "symbolic_role": "input"
+      },
+      "evidence_json": {
+        "source_symbol": "utc1",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.physics.tempo_jl.tai2utc_d12.atoms:utc_to_tai_leap_second_kernel"
+      },
+      "ordinal": 5
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.tempo_jl.tai2utc_d12.atoms:utc_to_tai_leap_second_kernel:2f70fdff029fc8b2",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.tempo_jl.tai2utc_d12.atoms:utc_to_tai_leap_second_kernel:2f70fdff029fc8b2",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "utc_to_tai_leap_second_kernel",
+      "atom_module": "sciona.atoms.physics.tempo_jl.tai2utc_d12.atoms",
+      "registry_name": "utc_to_tai_leap_second_kernel",
+      "expression_id": "668218de-6d85-5d62-91b1-0e7f5b909b1f",
+      "symbol": "utc2",
+      "symbol_name": "utc2",
+      "source_symbol": "utc2",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.physics.tempo_jl.tai2utc_d12.atoms:utc_to_tai_leap_second_kernel:variable:utc2",
+      "role": "input",
+      "variable_role": "input",
+      "dim_signature": "T1",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "T1",
+        "symbolic_role": "input"
+      },
+      "evidence_json": {
+        "source_symbol": "utc2",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.physics.tempo_jl.tai2utc_d12.atoms:utc_to_tai_leap_second_kernel"
+      },
+      "ordinal": 6
+    }
+  ],
+  "artifact_validity_bounds": [
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.tempo_jl.tai2utc_d12.atoms:tai_to_utc_inversion:152c4de8da184e67",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.tempo_jl.tai2utc_d12.atoms:tai_to_utc_inversion:152c4de8da184e67",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "tai_to_utc_inversion",
+      "atom_module": "sciona.atoms.physics.tempo_jl.tai2utc_d12.atoms",
+      "registry_name": "tai_to_utc_inversion",
+      "expression_id": "fb14322c-88e8-547f-9ebf-da80ca8c0277",
+      "symbol": "day_seconds",
+      "variable_name": "day_seconds",
+      "source_symbol": "day_seconds",
+      "source_bound_id": "sciona-atoms-physics:sciona.atoms.physics.tempo_jl.tai2utc_d12.atoms:tai_to_utc_inversion:bound:day_seconds",
+      "scope": "variable",
+      "bound_kind": "domain",
+      "min_value": 1.0,
+      "max_value": null,
+      "lower_value": 1.0,
+      "upper_value": null,
+      "lower_inclusive": true,
+      "upper_inclusive": true,
+      "dim_signature": "1",
+      "validity_statement": "day_seconds >= 1.0",
+      "evidence_ref_key": "sciona-atoms-physics:sciona.atoms.physics.tempo_jl.tai2utc_d12.atoms:tai_to_utc_inversion:bound:day_seconds",
+      "confidence": "high",
+      "review_status": "automated_pass",
+      "metadata": {
+        "provider": "sciona-atoms-physics",
+        "atom_module": "sciona.atoms.physics.tempo_jl.tai2utc_d12.atoms",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.physics.tempo_jl.tai2utc_d12.atoms:tai_to_utc_inversion",
+        "source_symbol": "day_seconds",
+        "ordinal": 0
+      },
+      "ordinal": 0
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.tempo_jl.tai2utc_d12.atoms:tai_to_utc_inversion:152c4de8da184e67",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.tempo_jl.tai2utc_d12.atoms:tai_to_utc_inversion:152c4de8da184e67",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "tai_to_utc_inversion",
+      "atom_module": "sciona.atoms.physics.tempo_jl.tai2utc_d12.atoms",
+      "registry_name": "tai_to_utc_inversion",
+      "expression_id": "fb14322c-88e8-547f-9ebf-da80ca8c0277",
+      "symbol": "delta_at",
+      "variable_name": "delta_at",
+      "source_symbol": "delta_at",
+      "source_bound_id": "sciona-atoms-physics:sciona.atoms.physics.tempo_jl.tai2utc_d12.atoms:tai_to_utc_inversion:bound:delta_at",
+      "scope": "variable",
+      "bound_kind": "domain",
+      "min_value": 0.0,
+      "max_value": null,
+      "lower_value": 0.0,
+      "upper_value": null,
+      "lower_inclusive": true,
+      "upper_inclusive": true,
+      "dim_signature": "T1",
+      "validity_statement": "delta_at >= 0.0",
+      "evidence_ref_key": "sciona-atoms-physics:sciona.atoms.physics.tempo_jl.tai2utc_d12.atoms:tai_to_utc_inversion:bound:delta_at",
+      "confidence": "high",
+      "review_status": "automated_pass",
+      "metadata": {
+        "provider": "sciona-atoms-physics",
+        "atom_module": "sciona.atoms.physics.tempo_jl.tai2utc_d12.atoms",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.physics.tempo_jl.tai2utc_d12.atoms:tai_to_utc_inversion",
+        "source_symbol": "delta_at",
+        "ordinal": 1
+      },
+      "ordinal": 1
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.tempo_jl.tai2utc_d12.atoms:utc_to_tai_leap_second_kernel:2f70fdff029fc8b2",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.tempo_jl.tai2utc_d12.atoms:utc_to_tai_leap_second_kernel:2f70fdff029fc8b2",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "utc_to_tai_leap_second_kernel",
+      "atom_module": "sciona.atoms.physics.tempo_jl.tai2utc_d12.atoms",
+      "registry_name": "utc_to_tai_leap_second_kernel",
+      "expression_id": "668218de-6d85-5d62-91b1-0e7f5b909b1f",
+      "symbol": "day_seconds",
+      "variable_name": "day_seconds",
+      "source_symbol": "day_seconds",
+      "source_bound_id": "sciona-atoms-physics:sciona.atoms.physics.tempo_jl.tai2utc_d12.atoms:utc_to_tai_leap_second_kernel:bound:day_seconds",
+      "scope": "variable",
+      "bound_kind": "domain",
+      "min_value": 1.0,
+      "max_value": null,
+      "lower_value": 1.0,
+      "upper_value": null,
+      "lower_inclusive": true,
+      "upper_inclusive": true,
+      "dim_signature": "1",
+      "validity_statement": "day_seconds >= 1.0",
+      "evidence_ref_key": "sciona-atoms-physics:sciona.atoms.physics.tempo_jl.tai2utc_d12.atoms:utc_to_tai_leap_second_kernel:bound:day_seconds",
+      "confidence": "high",
+      "review_status": "automated_pass",
+      "metadata": {
+        "provider": "sciona-atoms-physics",
+        "atom_module": "sciona.atoms.physics.tempo_jl.tai2utc_d12.atoms",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.physics.tempo_jl.tai2utc_d12.atoms:utc_to_tai_leap_second_kernel",
+        "source_symbol": "day_seconds",
+        "ordinal": 0
+      },
+      "ordinal": 0
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.tempo_jl.tai2utc_d12.atoms:utc_to_tai_leap_second_kernel:2f70fdff029fc8b2",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.tempo_jl.tai2utc_d12.atoms:utc_to_tai_leap_second_kernel:2f70fdff029fc8b2",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "utc_to_tai_leap_second_kernel",
+      "atom_module": "sciona.atoms.physics.tempo_jl.tai2utc_d12.atoms",
+      "registry_name": "utc_to_tai_leap_second_kernel",
+      "expression_id": "668218de-6d85-5d62-91b1-0e7f5b909b1f",
+      "symbol": "delta_at",
+      "variable_name": "delta_at",
+      "source_symbol": "delta_at",
+      "source_bound_id": "sciona-atoms-physics:sciona.atoms.physics.tempo_jl.tai2utc_d12.atoms:utc_to_tai_leap_second_kernel:bound:delta_at",
+      "scope": "variable",
+      "bound_kind": "domain",
+      "min_value": 0.0,
+      "max_value": null,
+      "lower_value": 0.0,
+      "upper_value": null,
+      "lower_inclusive": true,
+      "upper_inclusive": true,
+      "dim_signature": "T1",
+      "validity_statement": "delta_at >= 0.0",
+      "evidence_ref_key": "sciona-atoms-physics:sciona.atoms.physics.tempo_jl.tai2utc_d12.atoms:utc_to_tai_leap_second_kernel:bound:delta_at",
+      "confidence": "high",
+      "review_status": "automated_pass",
+      "metadata": {
+        "provider": "sciona-atoms-physics",
+        "atom_module": "sciona.atoms.physics.tempo_jl.tai2utc_d12.atoms",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.physics.tempo_jl.tai2utc_d12.atoms:utc_to_tai_leap_second_kernel",
+        "source_symbol": "delta_at",
+        "ordinal": 1
+      },
+      "ordinal": 1
+    }
+  ]
+}

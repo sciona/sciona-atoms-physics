@@ -1,6 +1,8 @@
 from __future__ import annotations
 
 import importlib
+import sys
+from types import SimpleNamespace
 
 import numpy as np
 
@@ -11,6 +13,16 @@ from sciona.ghost.registry import REGISTRY
 def _load_tempo_symbolic_atoms() -> None:
     importlib.import_module("sciona.atoms.physics.tempo_jl.apply_offsets.atoms")
     importlib.import_module("sciona.atoms.physics.tempo_jl.offsets.atoms")
+
+
+class _JuliaMainStub:
+    def eval(self, expression: str) -> object:
+        raise RuntimeError(f"Julia FFI is unavailable in metadata tests: {expression}")
+
+
+def _load_tai2utc_d12_symbolic_atoms() -> None:
+    sys.modules.setdefault("juliacall", SimpleNamespace(Main=_JuliaMainStub()))
+    importlib.import_module("sciona.atoms.physics.tempo_jl.tai2utc_d12.atoms")
 
 
 def test_tempo_offset_atoms_register_symbolic_metadata() -> None:
@@ -82,3 +94,22 @@ def test_tempo_symbolic_metadata_records_constants_and_bibliography() -> None:
     zero = REGISTRY["_zero_offset"]["symbolic"]
     assert zero.constants["zero_offset"] == 0.0
     assert zero.variables["offset"] == "output"
+
+
+def test_tai2utc_d12_atoms_register_symbolic_metadata() -> None:
+    _load_tai2utc_d12_symbolic_atoms()
+
+    forward = REGISTRY["utc_to_tai_leap_second_kernel"]["symbolic"]
+    inverse = REGISTRY["tai_to_utc_inversion"]["symbolic"]
+
+    assert forward is not None
+    assert forward.constants["day_seconds"] == 86400.0
+    assert forward.variables["tai_total"] == "output"
+    assert forward.validity_bounds["delta_at"] == (0.0, None)
+    assert forward.check_dimensional_consistency() == []
+
+    assert inverse is not None
+    assert inverse.constants["day_seconds"] == 86400.0
+    assert inverse.variables["candidate_utc"] == "output"
+    assert inverse.validity_bounds["day_seconds"] == (1.0, None)
+    assert inverse.check_dimensional_consistency() == []
