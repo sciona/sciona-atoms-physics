@@ -28,6 +28,7 @@ EXPRESSION_NAMESPACE = uuid.uuid5(uuid.NAMESPACE_URL, f"sciona:{PROVIDER}:symbol
 
 DEFAULT_SYMBOLIC_ATOM_MODULES = (
     "sciona.atoms.physics.astroflow.atoms",
+    "sciona.atoms.physics.pulsar.pipeline",
     "sciona.atoms.physics.pulsar_folding.dm_can",
     "sciona.atoms.particle_tracking.helix_geometry.atoms",
     "sciona.atoms.physics.skyfield.atoms",
@@ -436,6 +437,31 @@ def _heuristic_tags(atom_module: str, atom_name: str, field_name: str) -> list[s
             if field_name == "mechanism_tags"
             else ["candidate_scoring", "delay_model"]
         )
+    if "pulsar.pipeline" in module:
+        if name == "delay_from_dm":
+            tags.extend(
+                ["dispersion_measure", "pulsar_timing", "signal_propagation"]
+                if field_name == "mechanism_tags"
+                else ["delay_model", "inverse_square_scaling"]
+            )
+        elif name == "de_disperse":
+            tags.extend(
+                ["dedispersion", "pulsar_search", "signal_processing"]
+                if field_name == "mechanism_tags"
+                else ["delay_alignment", "time_series_shift"]
+            )
+        elif name == "fold_signal":
+            tags.extend(
+                ["periodic_signal", "pulsar_search", "signal_processing"]
+                if field_name == "mechanism_tags"
+                else ["phase_folding", "windowed_average"]
+            )
+        elif name == "snr":
+            tags.extend(
+                ["noise_model", "signal_detection", "signal_processing"]
+                if field_name == "mechanism_tags"
+                else ["log_ratio", "peak_to_background"]
+            )
     if "astroflow" in module:
         tags.extend(
             ["dedispersion", "pulsar_search", "signal_processing"]

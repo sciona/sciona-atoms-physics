@@ -83,8 +83,12 @@ def test_manifest_covers_migrated_symbolic_atom_packages() -> None:
     }
 
     assert {
+        "SNR",
+        "de_disperse",
         "dedispersionkernel",
+        "delay_from_DM",
         "dm_candidate_filter",
+        "fold_signal",
         "circle_from_three_points",
         "helix_pitch_from_two_points",
         "helix_pitch_least_squares",
@@ -100,6 +104,7 @@ def test_manifest_covers_migrated_symbolic_atom_packages() -> None:
     }.issubset(rows)
 
     assert rows["dedispersionkernel"]["atom_module"].endswith("astroflow.atoms")
+    assert rows["delay_from_DM"]["atom_module"].endswith("pulsar.pipeline")
     assert rows["dm_candidate_filter"]["atom_module"].endswith("pulsar_folding.dm_can")
     assert rows["circle_from_three_points"]["atom_module"].endswith(
         "particle_tracking.helix_geometry.atoms"
@@ -176,6 +181,9 @@ def test_manifest_emits_stable_hashes_tags_and_loader_fields() -> None:
     }
     dm = rows["dm_candidate_filter"]
     dedispersion = rows["dedispersionkernel"]
+    pulsar_delay = rows["delay_from_DM"]
+    pulsar_fold = rows["fold_signal"]
+    pulsar_snr = rows["SNR"]
     helix = rows["helix_pitch_least_squares"]
     angle = rows["calculate_vector_angle"]
     low_order = rows["offset_tt2tdb"]
@@ -212,6 +220,20 @@ def test_manifest_emits_stable_hashes_tags_and_loader_fields() -> None:
         "channel_aggregation",
         "delay_alignment",
     ]
+    assert pulsar_delay["mechanism_tags"] == [
+        "dispersion_measure",
+        "pulsar_timing",
+        "signal_propagation",
+    ]
+    assert pulsar_delay["behavioral_archetypes"] == [
+        "delay_model",
+        "inverse_square_scaling",
+    ]
+    assert pulsar_fold["behavioral_archetypes"] == [
+        "phase_folding",
+        "windowed_average",
+    ]
+    assert pulsar_snr["behavioral_archetypes"] == ["log_ratio", "peak_to_background"]
     assert "particle_tracking" in helix["mechanism_tags"]
     assert "least_squares_fit" in helix["behavioral_archetypes"]
     assert "coordinate_transform" in angle["mechanism_tags"]
@@ -263,14 +285,26 @@ def test_manifest_rows_load_through_matcher_publication_loader_with_bindings() -
     )
 
     variable = next(
-        row for row in rows["artifact_symbolic_variables"] if row["symbol_name"] == "DM"
+        row
+        for row in rows["artifact_symbolic_variables"]
+        if (
+            row["evidence_json"]["publication_manifest"]["atom_name"]
+            == "dm_candidate_filter"
+            and row["symbol_name"] == "DM"
+        )
     )
     assert variable["source_symbol"] == "DM"
     assert variable["dimension_source"] == "source"
     assert variable["ordinal"] >= 0
 
     bound = next(
-        row for row in rows["artifact_validity_bounds"] if row["variable_name"] == "DM"
+        row
+        for row in rows["artifact_validity_bounds"]
+        if (
+            row["metadata"]["publication_manifest"]["atom_name"]
+            == "dm_candidate_filter"
+            and row["variable_name"] == "DM"
+        )
     )
     assert bound["scope"] == "variable"
     assert bound["confidence"] == "high"

@@ -7,7 +7,29 @@ import math
 import icontract
 import numpy as np
 
-from sciona.ghost.registry import register_atom
+from sciona.ghost.decorators import symbolic_atom
+from .dimensions import (
+    PULSAR_DEDISPERSION_DIM_MAP,
+    PULSAR_DELAY_DIM_MAP,
+    PULSAR_FOLD_DIM_MAP,
+    PULSAR_SNR_DIM_MAP,
+)
+from .expressions import (
+    DEDISPERSE_SHIFT_EXPR,
+    DEDISPERSE_VALIDITY_BOUNDS,
+    DEDISPERSE_VARIABLES,
+    DELAY_FROM_DM_CONSTANTS,
+    DELAY_FROM_DM_EXPR,
+    DELAY_FROM_DM_VALIDITY_BOUNDS,
+    DELAY_FROM_DM_VARIABLES,
+    FOLD_SIGNAL_EXPR,
+    FOLD_SIGNAL_VALIDITY_BOUNDS,
+    FOLD_SIGNAL_VARIABLES,
+    PULSAR_PIPELINE_BIBLIOGRAPHY,
+    SNR_EXPR,
+    SNR_VALIDITY_BOUNDS,
+    SNR_VARIABLES,
+)
 from .witnesses import (
     witness_dedisperse,
     witness_delay_from_dm,
@@ -16,7 +38,15 @@ from .witnesses import (
 )
 
 
-@register_atom(witness_delay_from_dm)
+@symbolic_atom(
+    witness_delay_from_dm,
+    expr=DELAY_FROM_DM_EXPR,
+    dim_map=PULSAR_DELAY_DIM_MAP,
+    validity_bounds=DELAY_FROM_DM_VALIDITY_BOUNDS,
+    variables=DELAY_FROM_DM_VARIABLES,
+    constants=DELAY_FROM_DM_CONSTANTS,
+    bibliography=PULSAR_PIPELINE_BIBLIOGRAPHY,
+)
 @icontract.require(lambda DM: DM >= 0, "DM must be non-negative")
 @icontract.require(lambda freq_emitted: freq_emitted >= 0, "Frequency must be non-negative")
 @icontract.ensure(lambda result: result >= 0, "Delay must be non-negative")
@@ -35,7 +65,14 @@ def delay_from_DM(DM: float, freq_emitted: float) -> float:
     return 0.0
 
 
-@register_atom(witness_dedisperse)
+@symbolic_atom(
+    witness_dedisperse,
+    expr=DEDISPERSE_SHIFT_EXPR,
+    dim_map=PULSAR_DEDISPERSION_DIM_MAP,
+    validity_bounds=DEDISPERSE_VALIDITY_BOUNDS,
+    variables=DEDISPERSE_VARIABLES,
+    bibliography=PULSAR_PIPELINE_BIBLIOGRAPHY,
+)
 @icontract.require(lambda data: data.ndim == 2, "Input data must be 2D (Time, Frequency)")
 @icontract.require(lambda tsamp: tsamp > 0, "tsamp must be positive")
 @icontract.require(lambda width: width > 0, "Channel width must be positive")
@@ -76,7 +113,14 @@ def de_disperse(
     return clean
 
 
-@register_atom(witness_fold_signal)
+@symbolic_atom(
+    witness_fold_signal,
+    expr=FOLD_SIGNAL_EXPR,
+    dim_map=PULSAR_FOLD_DIM_MAP,
+    validity_bounds=FOLD_SIGNAL_VALIDITY_BOUNDS,
+    variables=FOLD_SIGNAL_VARIABLES,
+    bibliography=PULSAR_PIPELINE_BIBLIOGRAPHY,
+)
 @icontract.require(lambda data: data.ndim == 2, "Input data must be 2D")
 @icontract.require(lambda period: period > 0, "Folding period must be positive")
 @icontract.ensure(lambda result, period: result.shape == (period,), "Profile length must match period")
@@ -105,7 +149,14 @@ def fold_signal(data: np.ndarray, period: int) -> np.ndarray:
     return folded.mean(axis=1)
 
 
-@register_atom(witness_snr)
+@symbolic_atom(
+    witness_snr,
+    expr=SNR_EXPR,
+    dim_map=PULSAR_SNR_DIM_MAP,
+    validity_bounds=SNR_VALIDITY_BOUNDS,
+    variables=SNR_VARIABLES,
+    bibliography=PULSAR_PIPELINE_BIBLIOGRAPHY,
+)
 @icontract.require(lambda arr: arr.ndim == 1, "Input must be 1D")
 @icontract.require(lambda arr: len(arr) > 0, "Input array must not be empty")
 @icontract.ensure(lambda result: result >= 0, "SNR must be non-negative")
