@@ -1,6 +1,9 @@
 from __future__ import annotations
 
 import numpy as np
+import sympy as sp
+
+from sciona.ghost.registry import REGISTRY
 
 
 def test_all_four_atoms_import() -> None:
@@ -211,3 +214,34 @@ def test_greedy_track_commit_respects_max_nrows() -> None:
     # Only first 2 rows should be committed; row 3 zeroed
     assert np.all(result_matrix[2] == 0)
     assert not result_used[7] and not result_used[8] and not result_used[9]
+
+
+def test_track_matching_atoms_register_symbolic_metadata() -> None:
+    import sciona.atoms.particle_tracking.track_matching.atoms  # noqa: F401
+
+    cylinder = REGISTRY["helix_cylinder_intersection"]["symbolic"]
+    cap = REGISTRY["helix_cap_intersection"]["symbolic"]
+    bayes = REGISTRY["bayesian_neighbor_evaluation"]["symbolic"]
+    greedy = REGISTRY["greedy_track_commit"]["symbolic"]
+
+    assert cylinder is not None
+    assert cylinder.validity_bounds["target_r2sqr"] == (0.0, None)
+    assert cylinder.check_dimensional_consistency() == []
+    xi, yi = sp.symbols("xi yi")
+    assert str(cylinder.to_sympy().lhs) == "target_r2sqr"
+    assert sp.simplify(cylinder.to_sympy().rhs - (xi**2 + yi**2)) == 0
+
+    assert cap is not None
+    assert cap.validity_bounds["hel_p"] == (0.0, None)
+    assert cap.check_dimensional_consistency() == []
+    target_z, z0, hel_p = sp.symbols("target_z z0 hel_p")
+    assert str(cap.to_sympy().lhs) == "dphi"
+    assert sp.simplify(cap.to_sympy().rhs - ((target_z - z0) / hel_p)) == 0
+
+    assert bayes is not None
+    assert bayes.validity_bounds["e_theta"] == (0.0, None)
+    assert bayes.check_dimensional_consistency() == []
+
+    assert greedy is not None
+    assert greedy.validity_bounds["loss_fraction"] == (0.0, 1.0)
+    assert greedy.check_dimensional_consistency() == []

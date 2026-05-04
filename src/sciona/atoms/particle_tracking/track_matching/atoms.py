@@ -27,8 +27,27 @@ import numpy as np
 from numpy.typing import NDArray
 
 import icontract
-from sciona.ghost.registry import register_atom
+from sciona.ghost.decorators import symbolic_atom
 
+from .expressions import (
+    BAYESIAN_NEIGHBOR_EVALUATION_DIM_MAP,
+    BAYESIAN_NEIGHBOR_EVALUATION_EXPR,
+    BAYESIAN_NEIGHBOR_EVALUATION_VALIDITY_BOUNDS,
+    BAYESIAN_NEIGHBOR_EVALUATION_VARIABLES,
+    GREEDY_TRACK_COMMIT_DIM_MAP,
+    GREEDY_TRACK_COMMIT_EXPR,
+    GREEDY_TRACK_COMMIT_VALIDITY_BOUNDS,
+    GREEDY_TRACK_COMMIT_VARIABLES,
+    HELIX_CAP_INTERSECTION_DIM_MAP,
+    HELIX_CAP_INTERSECTION_EXPR,
+    HELIX_CAP_INTERSECTION_VALIDITY_BOUNDS,
+    HELIX_CAP_INTERSECTION_VARIABLES,
+    HELIX_CYLINDER_INTERSECTION_DIM_MAP,
+    HELIX_CYLINDER_INTERSECTION_EXPR,
+    HELIX_CYLINDER_INTERSECTION_VALIDITY_BOUNDS,
+    HELIX_CYLINDER_INTERSECTION_VARIABLES,
+    TRACK_MATCHING_BIBLIOGRAPHY,
+)
 from .witnesses import (
     witness_helix_cylinder_intersection,
     witness_helix_cap_intersection,
@@ -37,7 +56,14 @@ from .witnesses import (
 )
 
 
-@register_atom(witness_helix_cylinder_intersection)
+@symbolic_atom(
+    witness_helix_cylinder_intersection,
+    expr=HELIX_CYLINDER_INTERSECTION_EXPR,
+    dim_map=HELIX_CYLINDER_INTERSECTION_DIM_MAP,
+    validity_bounds=HELIX_CYLINDER_INTERSECTION_VALIDITY_BOUNDS,
+    variables=HELIX_CYLINDER_INTERSECTION_VARIABLES,
+    bibliography=TRACK_MATCHING_BIBLIOGRAPHY,
+)
 @icontract.require(lambda x0: len(x0) >= 1, "need at least one helix")
 @icontract.require(lambda hel_r: np.all(hel_r > 0), "helix radii must be positive")
 @icontract.require(lambda target_r2sqr: np.all(target_r2sqr > 0), "target cylinder r^2 must be positive")
@@ -128,7 +154,14 @@ def helix_cylinder_intersection(
     return xi, yi, zi, dphi
 
 
-@register_atom(witness_helix_cap_intersection)
+@symbolic_atom(
+    witness_helix_cap_intersection,
+    expr=HELIX_CAP_INTERSECTION_EXPR,
+    dim_map=HELIX_CAP_INTERSECTION_DIM_MAP,
+    validity_bounds=HELIX_CAP_INTERSECTION_VALIDITY_BOUNDS,
+    variables=HELIX_CAP_INTERSECTION_VARIABLES,
+    bibliography=TRACK_MATCHING_BIBLIOGRAPHY,
+)
 @icontract.require(lambda x0: len(x0) >= 1, "need at least one helix")
 @icontract.require(lambda hel_pitch: np.all(hel_pitch != 0), "helix pitch must be nonzero")
 @icontract.ensure(lambda result: all(np.all(np.isfinite(a)) for a in result), "all outputs must be finite")
@@ -179,7 +212,14 @@ def helix_cap_intersection(
     return xi, yi, zi, dphi
 
 
-@register_atom(witness_bayesian_neighbor_evaluation)
+@symbolic_atom(
+    witness_bayesian_neighbor_evaluation,
+    expr=BAYESIAN_NEIGHBOR_EVALUATION_EXPR,
+    dim_map=BAYESIAN_NEIGHBOR_EVALUATION_DIM_MAP,
+    validity_bounds=BAYESIAN_NEIGHBOR_EVALUATION_VALIDITY_BOUNDS,
+    variables=BAYESIAN_NEIGHBOR_EVALUATION_VARIABLES,
+    bibliography=TRACK_MATCHING_BIBLIOGRAPHY,
+)
 @icontract.require(lambda d_theta: len(d_theta) >= 1, "need at least one neighbor")
 @icontract.require(lambda e_theta: np.all(e_theta > 0), "error estimates must be positive")
 @icontract.require(lambda e_phi: np.all(e_phi > 0), "error estimates must be positive")
@@ -236,7 +276,14 @@ def bayesian_neighbor_evaluation(
     return good, dubious
 
 
-@register_atom(witness_greedy_track_commit)
+@symbolic_atom(
+    witness_greedy_track_commit,
+    expr=GREEDY_TRACK_COMMIT_EXPR,
+    dim_map=GREEDY_TRACK_COMMIT_DIM_MAP,
+    validity_bounds=GREEDY_TRACK_COMMIT_VALIDITY_BOUNDS,
+    variables=GREEDY_TRACK_COMMIT_VARIABLES,
+    bibliography=TRACK_MATCHING_BIBLIOGRAPHY,
+)
 @icontract.require(lambda hit_matrix: hit_matrix.ndim == 2, "hit_matrix must be 2D")
 @icontract.require(lambda used: used.ndim == 1, "used must be 1D")
 @icontract.require(lambda min_nhits: min_nhits >= 1, "min_nhits must be at least 1")

@@ -33,6 +33,7 @@ DEFAULT_SYMBOLIC_ATOM_MODULES = (
     "sciona.atoms.physics.pulsar_folding.dm_can",
     "sciona.atoms.particle_tracking.detector_corrections.atoms",
     "sciona.atoms.particle_tracking.helix_geometry.atoms",
+    "sciona.atoms.particle_tracking.track_matching.atoms",
     "sciona.atoms.physics.skyfield.atoms",
     "sciona.atoms.physics.tempo_jl.apply_offsets.atoms",
     "sciona.atoms.physics.tempo_jl.offsets.atoms",
@@ -511,6 +512,31 @@ def _heuristic_tags(atom_module: str, atom_name: str, field_name: str) -> list[s
                 ["detector_geometry", "particle_tracking", "surface_correction"]
                 if field_name == "mechanism_tags"
                 else ["curvature_scaled_update", "perturbative_update"]
+            )
+    if "track_matching" in module:
+        if "cylinder_intersection" in name:
+            tags.extend(
+                ["helix_geometry", "particle_tracking", "surface_intersection"]
+                if field_name == "mechanism_tags"
+                else ["cylinder_intersection", "phase_advance"]
+            )
+        elif "cap_intersection" in name:
+            tags.extend(
+                ["helix_geometry", "particle_tracking", "surface_intersection"]
+                if field_name == "mechanism_tags"
+                else ["cap_intersection", "phase_advance"]
+            )
+        elif name == "bayesian_neighbor_evaluation":
+            tags.extend(
+                ["bayesian_filtering", "particle_tracking", "track_extension"]
+                if field_name == "mechanism_tags"
+                else ["likelihood_ratio_cut", "normalized_distance"]
+            )
+        elif name == "greedy_track_commit":
+            tags.extend(
+                ["deduplication", "particle_tracking", "track_commitment"]
+                if field_name == "mechanism_tags"
+                else ["greedy_selection", "loss_fraction_gate"]
             )
     if "skyfield" in module:
         tags.extend(

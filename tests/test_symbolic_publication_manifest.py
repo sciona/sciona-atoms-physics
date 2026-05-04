@@ -84,6 +84,7 @@ def test_manifest_covers_migrated_symbolic_atom_packages() -> None:
 
     assert {
         "SNR",
+        "bayesian_neighbor_evaluation",
         "coordinate_rescaling_for_knn",
         "de_disperse",
         "dedispersionkernel",
@@ -91,6 +92,9 @@ def test_manifest_covers_migrated_symbolic_atom_packages() -> None:
         "dm_can_brute_force",
         "dm_candidate_filter",
         "fold_signal",
+        "greedy_track_commit",
+        "helix_cap_intersection",
+        "helix_cylinder_intersection",
         "perturbative_cap_correction",
         "perturbative_cylinder_correction",
         "spline_bandpass_correction",
@@ -114,6 +118,9 @@ def test_manifest_covers_migrated_symbolic_atom_packages() -> None:
     assert rows["dm_candidate_filter"]["atom_module"].endswith("pulsar_folding.dm_can")
     assert rows["coordinate_rescaling_for_knn"]["atom_module"].endswith(
         "detector_corrections.atoms"
+    )
+    assert rows["helix_cylinder_intersection"]["atom_module"].endswith(
+        "track_matching.atoms"
     )
     assert rows["circle_from_three_points"]["atom_module"].endswith(
         "particle_tracking.helix_geometry.atoms"
@@ -198,6 +205,9 @@ def test_manifest_emits_stable_hashes_tags_and_loader_fields() -> None:
     detector_rescale = rows["coordinate_rescaling_for_knn"]
     detector_cap = rows["perturbative_cap_correction"]
     detector_cylinder = rows["perturbative_cylinder_correction"]
+    matching_cylinder = rows["helix_cylinder_intersection"]
+    matching_bayes = rows["bayesian_neighbor_evaluation"]
+    matching_greedy = rows["greedy_track_commit"]
     helix = rows["helix_pitch_least_squares"]
     angle = rows["calculate_vector_angle"]
     low_order = rows["offset_tt2tdb"]
@@ -277,6 +287,18 @@ def test_manifest_emits_stable_hashes_tags_and_loader_fields() -> None:
     assert detector_cylinder["behavioral_archetypes"] == [
         "curvature_scaled_update",
         "perturbative_update",
+    ]
+    assert matching_cylinder["behavioral_archetypes"] == [
+        "cylinder_intersection",
+        "phase_advance",
+    ]
+    assert matching_bayes["behavioral_archetypes"] == [
+        "likelihood_ratio_cut",
+        "normalized_distance",
+    ]
+    assert matching_greedy["behavioral_archetypes"] == [
+        "greedy_selection",
+        "loss_fraction_gate",
     ]
     assert "particle_tracking" in helix["mechanism_tags"]
     assert "least_squares_fit" in helix["behavioral_archetypes"]
