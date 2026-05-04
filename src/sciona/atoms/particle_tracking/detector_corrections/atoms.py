@@ -24,8 +24,23 @@ import numpy as np
 from numpy.typing import NDArray
 
 import icontract
-from sciona.ghost.registry import register_atom
+from sciona.ghost.decorators import symbolic_atom
 
+from .expressions import (
+    CAP_CORRECTION_DIM_MAP,
+    CAP_CORRECTION_EXPR,
+    CAP_CORRECTION_VALIDITY_BOUNDS,
+    CAP_CORRECTION_VARIABLES,
+    COORDINATE_RESCALING_DIM_MAP,
+    COORDINATE_RESCALING_EXPR,
+    COORDINATE_RESCALING_VALIDITY_BOUNDS,
+    COORDINATE_RESCALING_VARIABLES,
+    CYLINDER_CORRECTION_DIM_MAP,
+    CYLINDER_CORRECTION_EXPR,
+    CYLINDER_CORRECTION_VALIDITY_BOUNDS,
+    CYLINDER_CORRECTION_VARIABLES,
+    DETECTOR_CORRECTIONS_BIBLIOGRAPHY,
+)
 from .witnesses import (
     witness_coordinate_rescaling_for_knn,
     witness_perturbative_cap_correction,
@@ -33,7 +48,14 @@ from .witnesses import (
 )
 
 
-@register_atom(witness_coordinate_rescaling_for_knn)
+@symbolic_atom(
+    witness_coordinate_rescaling_for_knn,
+    expr=COORDINATE_RESCALING_EXPR,
+    dim_map=COORDINATE_RESCALING_DIM_MAP,
+    validity_bounds=COORDINATE_RESCALING_VALIDITY_BOUNDS,
+    variables=COORDINATE_RESCALING_VARIABLES,
+    bibliography=DETECTOR_CORRECTIONS_BIBLIOGRAPHY,
+)
 @icontract.require(lambda coords: coords.ndim == 2 and coords.shape[1] == 3, "coords must be (N, 3)")
 @icontract.require(lambda cyl_mean_r2: cyl_mean_r2 > 0, "cyl_mean_r2 must be positive")
 @icontract.ensure(lambda result: np.all(np.isfinite(result)), "output must be finite")
@@ -71,7 +93,14 @@ def coordinate_rescaling_for_knn(
     return vnorm
 
 
-@register_atom(witness_perturbative_cap_correction)
+@symbolic_atom(
+    witness_perturbative_cap_correction,
+    expr=CAP_CORRECTION_EXPR,
+    dim_map=CAP_CORRECTION_DIM_MAP,
+    validity_bounds=CAP_CORRECTION_VALIDITY_BOUNDS,
+    variables=CAP_CORRECTION_VARIABLES,
+    bibliography=DETECTOR_CORRECTIONS_BIBLIOGRAPHY,
+)
 @icontract.require(lambda xi: len(xi) >= 1, "need at least one intersection point")
 @icontract.ensure(lambda result: all(np.all(np.isfinite(a)) for a in result), "corrections must be finite")
 def perturbative_cap_correction(
@@ -121,7 +150,14 @@ def perturbative_cap_correction(
     return xi + dx, yi + dy
 
 
-@register_atom(witness_perturbative_cylinder_correction)
+@symbolic_atom(
+    witness_perturbative_cylinder_correction,
+    expr=CYLINDER_CORRECTION_EXPR,
+    dim_map=CYLINDER_CORRECTION_DIM_MAP,
+    validity_bounds=CYLINDER_CORRECTION_VALIDITY_BOUNDS,
+    variables=CYLINDER_CORRECTION_VARIABLES,
+    bibliography=DETECTOR_CORRECTIONS_BIBLIOGRAPHY,
+)
 @icontract.require(lambda xi: len(xi) >= 1, "need at least one intersection point")
 @icontract.require(lambda hel_r: np.all(hel_r > 0), "helix radii must be positive")
 @icontract.ensure(lambda result: all(np.all(np.isfinite(a)) for a in result), "corrections must be finite")

@@ -1,0 +1,1274 @@
+{
+  "provider": "sciona-atoms-physics",
+  "modules": [
+    "sciona.atoms.particle_tracking.detector_corrections.atoms"
+  ],
+  "artifact_symbolic_expressions": [
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.detector_corrections.atoms:coordinate_rescaling_for_knn:46ca134cfb64ad72",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "coordinate_rescaling_for_knn",
+      "atom_module": "sciona.atoms.particle_tracking.detector_corrections.atoms",
+      "registry_name": "coordinate_rescaling_for_knn",
+      "expression_id": "6328c5f8-ef40-5cf6-97b7-b9f84e314a3c",
+      "source_expression_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.detector_corrections.atoms:coordinate_rescaling_for_knn",
+      "expression_srepr": "Equality(Symbol('x_scaled'), Mul(Symbol('cyl_mean_r2'), Pow(Symbol('r_xy'), Integer(-1)), Symbol('x'), Symbol('z_scale')))",
+      "expression_text": "Eq(x_scaled, cyl_mean_r2*x*z_scale/r_xy)",
+      "sympy_srepr": "Equality(Symbol('x_scaled'), Mul(Symbol('cyl_mean_r2'), Pow(Symbol('r_xy'), Integer(-1)), Symbol('x'), Symbol('z_scale')))",
+      "raw_formula": "Eq(x_scaled, cyl_mean_r2*x*z_scale/r_xy)",
+      "raw_formula_format": "plain_text",
+      "expression_kind": "equation",
+      "expression_role": "primary",
+      "canonical_expr_hash": "3829ccd34ea958621bc65c8c557c95450873c494f0c25c053a446a4282d42d1a",
+      "topology_hash": "3525c77122a08b56b98d75532eca66ebc17547c156e121545e12a019eff45f30",
+      "dimensional_hash": "e72e6704b755c9ee43eca040582735a13c48b58cdb1f58c9c1ea85c80de76b47",
+      "parse_status": "normalized",
+      "parse_confidence": 1.0,
+      "review_status": "automated_pass",
+      "validation_status": "passed",
+      "mechanism_tags": [
+        "detector_geometry",
+        "knn_search",
+        "particle_tracking"
+      ],
+      "behavioral_archetypes": [
+        "coordinate_rescaling",
+        "radius_normalization"
+      ],
+      "variables": {
+        "coords": "input",
+        "cyl_mean_r2": "parameter",
+        "r_xy": "input",
+        "x": "input",
+        "x_scaled": "output",
+        "y": "input",
+        "z": "input",
+        "z_scale": "parameter"
+      },
+      "dim_signature": {
+        "coords": "L1",
+        "cyl_mean_r2": "L1",
+        "r_xy": "L1",
+        "x": "L1",
+        "x_scaled": "L1",
+        "y": "L1",
+        "z": "L1",
+        "z_scale": "1"
+      },
+      "symbolic_dim_signature": {
+        "coords": "L1",
+        "cyl_mean_r2": "L1",
+        "r_xy": "L1",
+        "x": "L1",
+        "x_scaled": "L1",
+        "y": "L1",
+        "z": "L1",
+        "z_scale": "1"
+      },
+      "constants": {},
+      "bibliography": [
+        "steiner2018trackml",
+        "amrouche2019trackml"
+      ],
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.detector_corrections.atoms:coordinate_rescaling_for_knn:46ca134cfb64ad72",
+      "artifact_uuid": null
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.detector_corrections.atoms:perturbative_cap_correction:c564ebfef5ef5c7f",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "perturbative_cap_correction",
+      "atom_module": "sciona.atoms.particle_tracking.detector_corrections.atoms",
+      "registry_name": "perturbative_cap_correction",
+      "expression_id": "6ddfddc1-81a7-53fe-a044-2811a5f5da0e",
+      "source_expression_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.detector_corrections.atoms:perturbative_cap_correction",
+      "expression_srepr": "Equality(Symbol('xi_corrected'), Add(Mul(Symbol('charge_sign'), Pow(Symbol('hel_p_abs'), Integer(-1)), Add(Mul(Symbol('dp0_radial'), Symbol('ur_x')), Mul(Symbol('dp1_azimuthal'), Symbol('uphi_x')))), Symbol('xi')))",
+      "expression_text": "Eq(xi_corrected, charge_sign*(dp0_radial*ur_x + dp1_azimuthal*uphi_x)/hel_p_abs + xi)",
+      "sympy_srepr": "Equality(Symbol('xi_corrected'), Add(Mul(Symbol('charge_sign'), Pow(Symbol('hel_p_abs'), Integer(-1)), Add(Mul(Symbol('dp0_radial'), Symbol('ur_x')), Mul(Symbol('dp1_azimuthal'), Symbol('uphi_x')))), Symbol('xi')))",
+      "raw_formula": "Eq(xi_corrected, charge_sign*(dp0_radial*ur_x + dp1_azimuthal*uphi_x)/hel_p_abs + xi)",
+      "raw_formula_format": "plain_text",
+      "expression_kind": "equation",
+      "expression_role": "primary",
+      "canonical_expr_hash": "c30f2fdf120d3c559bdfd8b552d627d91135706f6be7563eaf51b4b5b34f9f1a",
+      "topology_hash": "56959dafc70c7cdd986b12e261ea02f34e5c84b515657d667f9afa8010425824",
+      "dimensional_hash": "1a4ab684471bc985c8190ad82625c5c699f5282836e10b9dfcff8509b1f4451c",
+      "parse_status": "normalized",
+      "parse_confidence": 1.0,
+      "review_status": "automated_pass",
+      "validation_status": "passed",
+      "mechanism_tags": [
+        "detector_geometry",
+        "particle_tracking",
+        "surface_correction"
+      ],
+      "behavioral_archetypes": [
+        "azimuthal_radial_correction",
+        "perturbative_update"
+      ],
+      "variables": {
+        "charge_sign": "parameter",
+        "dp0_radial": "input",
+        "dp1_azimuthal": "input",
+        "hel_p_abs": "parameter",
+        "hel_pitch": "input",
+        "uphi_x": "parameter",
+        "uphi_y": "parameter",
+        "ur_x": "parameter",
+        "ur_y": "parameter",
+        "xi": "input",
+        "xi_corrected": "output",
+        "yi": "input",
+        "yi_corrected": "output"
+      },
+      "dim_signature": {
+        "charge_sign": "1",
+        "dp0_radial": "L2",
+        "dp1_azimuthal": "L2",
+        "hel_p_abs": "L1",
+        "hel_pitch": "L1",
+        "uphi_x": "1",
+        "uphi_y": "1",
+        "ur_x": "1",
+        "ur_y": "1",
+        "xi": "L1",
+        "xi_corrected": "L1",
+        "yi": "L1",
+        "yi_corrected": "L1"
+      },
+      "symbolic_dim_signature": {
+        "charge_sign": "1",
+        "dp0_radial": "L2",
+        "dp1_azimuthal": "L2",
+        "hel_p_abs": "L1",
+        "hel_pitch": "L1",
+        "uphi_x": "1",
+        "uphi_y": "1",
+        "ur_x": "1",
+        "ur_y": "1",
+        "xi": "L1",
+        "xi_corrected": "L1",
+        "yi": "L1",
+        "yi_corrected": "L1"
+      },
+      "constants": {},
+      "bibliography": [
+        "steiner2018trackml",
+        "amrouche2019trackml"
+      ],
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.detector_corrections.atoms:perturbative_cap_correction:c564ebfef5ef5c7f",
+      "artifact_uuid": null
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.detector_corrections.atoms:perturbative_cylinder_correction:eb3a03c216d182e5",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "perturbative_cylinder_correction",
+      "atom_module": "sciona.atoms.particle_tracking.detector_corrections.atoms",
+      "registry_name": "perturbative_cylinder_correction",
+      "expression_id": "88ed5e85-56e2-56c0-a5c0-e8c1ceed0caa",
+      "source_expression_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.detector_corrections.atoms:perturbative_cylinder_correction",
+      "expression_srepr": "Equality(Symbol('zi_corrected'), Add(Mul(Symbol('charge_sign'), Pow(Symbol('curvature_radius'), Integer(-1)), Symbol('dp0_z')), Symbol('zi')))",
+      "expression_text": "Eq(zi_corrected, charge_sign*dp0_z/curvature_radius + zi)",
+      "sympy_srepr": "Equality(Symbol('zi_corrected'), Add(Mul(Symbol('charge_sign'), Pow(Symbol('curvature_radius'), Integer(-1)), Symbol('dp0_z')), Symbol('zi')))",
+      "raw_formula": "Eq(zi_corrected, charge_sign*dp0_z/curvature_radius + zi)",
+      "raw_formula_format": "plain_text",
+      "expression_kind": "equation",
+      "expression_role": "primary",
+      "canonical_expr_hash": "7ffa472e35a5a28524a4af8ec2c1c2112b3ae3bb3797076eac23ed07ca4f35af",
+      "topology_hash": "2b6ef70778a53e59ce481e75687ccdfc63750bc1373c989d5fc01cc6672a0054",
+      "dimensional_hash": "8d41a0f0b98e4e7e69dd4f0737a913010d41c60b2863f33bc1271c5bedca5fd2",
+      "parse_status": "normalized",
+      "parse_confidence": 1.0,
+      "review_status": "automated_pass",
+      "validation_status": "passed",
+      "mechanism_tags": [
+        "detector_geometry",
+        "particle_tracking",
+        "surface_correction"
+      ],
+      "behavioral_archetypes": [
+        "curvature_scaled_update",
+        "perturbative_update"
+      ],
+      "variables": {
+        "charge_sign": "parameter",
+        "curvature_radius": "parameter",
+        "dp0_z": "input",
+        "dp1_azimuthal": "input",
+        "hel_pitch": "input",
+        "hel_r": "input",
+        "xi": "input",
+        "xi_corrected": "output",
+        "yi": "input",
+        "yi_corrected": "output",
+        "zi": "input",
+        "zi_corrected": "output"
+      },
+      "dim_signature": {
+        "charge_sign": "1",
+        "curvature_radius": "L1",
+        "dp0_z": "L2",
+        "dp1_azimuthal": "L2",
+        "hel_pitch": "L1",
+        "hel_r": "L1",
+        "xi": "L1",
+        "xi_corrected": "L1",
+        "yi": "L1",
+        "yi_corrected": "L1",
+        "zi": "L1",
+        "zi_corrected": "L1"
+      },
+      "symbolic_dim_signature": {
+        "charge_sign": "1",
+        "curvature_radius": "L1",
+        "dp0_z": "L2",
+        "dp1_azimuthal": "L2",
+        "hel_pitch": "L1",
+        "hel_r": "L1",
+        "xi": "L1",
+        "xi_corrected": "L1",
+        "yi": "L1",
+        "yi_corrected": "L1",
+        "zi": "L1",
+        "zi_corrected": "L1"
+      },
+      "constants": {},
+      "bibliography": [
+        "steiner2018trackml",
+        "amrouche2019trackml"
+      ],
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.detector_corrections.atoms:perturbative_cylinder_correction:eb3a03c216d182e5",
+      "artifact_uuid": null
+    }
+  ],
+  "artifact_symbolic_variables": [
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.detector_corrections.atoms:coordinate_rescaling_for_knn:46ca134cfb64ad72",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.detector_corrections.atoms:coordinate_rescaling_for_knn:46ca134cfb64ad72",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "coordinate_rescaling_for_knn",
+      "atom_module": "sciona.atoms.particle_tracking.detector_corrections.atoms",
+      "registry_name": "coordinate_rescaling_for_knn",
+      "expression_id": "6328c5f8-ef40-5cf6-97b7-b9f84e314a3c",
+      "symbol": "coords",
+      "symbol_name": "coords",
+      "source_symbol": "coords",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.detector_corrections.atoms:coordinate_rescaling_for_knn:variable:coords",
+      "role": "input",
+      "variable_role": "input",
+      "dim_signature": "L1",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "L1",
+        "symbolic_role": "input"
+      },
+      "evidence_json": {
+        "source_symbol": "coords",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.detector_corrections.atoms:coordinate_rescaling_for_knn"
+      },
+      "ordinal": 0
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.detector_corrections.atoms:coordinate_rescaling_for_knn:46ca134cfb64ad72",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.detector_corrections.atoms:coordinate_rescaling_for_knn:46ca134cfb64ad72",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "coordinate_rescaling_for_knn",
+      "atom_module": "sciona.atoms.particle_tracking.detector_corrections.atoms",
+      "registry_name": "coordinate_rescaling_for_knn",
+      "expression_id": "6328c5f8-ef40-5cf6-97b7-b9f84e314a3c",
+      "symbol": "cyl_mean_r2",
+      "symbol_name": "cyl_mean_r2",
+      "source_symbol": "cyl_mean_r2",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.detector_corrections.atoms:coordinate_rescaling_for_knn:variable:cyl_mean_r2",
+      "role": "parameter",
+      "variable_role": "parameter",
+      "dim_signature": "L1",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "L1",
+        "symbolic_role": "parameter"
+      },
+      "evidence_json": {
+        "source_symbol": "cyl_mean_r2",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.detector_corrections.atoms:coordinate_rescaling_for_knn"
+      },
+      "ordinal": 1
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.detector_corrections.atoms:coordinate_rescaling_for_knn:46ca134cfb64ad72",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.detector_corrections.atoms:coordinate_rescaling_for_knn:46ca134cfb64ad72",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "coordinate_rescaling_for_knn",
+      "atom_module": "sciona.atoms.particle_tracking.detector_corrections.atoms",
+      "registry_name": "coordinate_rescaling_for_knn",
+      "expression_id": "6328c5f8-ef40-5cf6-97b7-b9f84e314a3c",
+      "symbol": "r_xy",
+      "symbol_name": "r_xy",
+      "source_symbol": "r_xy",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.detector_corrections.atoms:coordinate_rescaling_for_knn:variable:r_xy",
+      "role": "input",
+      "variable_role": "input",
+      "dim_signature": "L1",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "L1",
+        "symbolic_role": "input"
+      },
+      "evidence_json": {
+        "source_symbol": "r_xy",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.detector_corrections.atoms:coordinate_rescaling_for_knn"
+      },
+      "ordinal": 2
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.detector_corrections.atoms:coordinate_rescaling_for_knn:46ca134cfb64ad72",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.detector_corrections.atoms:coordinate_rescaling_for_knn:46ca134cfb64ad72",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "coordinate_rescaling_for_knn",
+      "atom_module": "sciona.atoms.particle_tracking.detector_corrections.atoms",
+      "registry_name": "coordinate_rescaling_for_knn",
+      "expression_id": "6328c5f8-ef40-5cf6-97b7-b9f84e314a3c",
+      "symbol": "x",
+      "symbol_name": "x",
+      "source_symbol": "x",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.detector_corrections.atoms:coordinate_rescaling_for_knn:variable:x",
+      "role": "input",
+      "variable_role": "input",
+      "dim_signature": "L1",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "L1",
+        "symbolic_role": "input"
+      },
+      "evidence_json": {
+        "source_symbol": "x",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.detector_corrections.atoms:coordinate_rescaling_for_knn"
+      },
+      "ordinal": 3
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.detector_corrections.atoms:coordinate_rescaling_for_knn:46ca134cfb64ad72",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.detector_corrections.atoms:coordinate_rescaling_for_knn:46ca134cfb64ad72",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "coordinate_rescaling_for_knn",
+      "atom_module": "sciona.atoms.particle_tracking.detector_corrections.atoms",
+      "registry_name": "coordinate_rescaling_for_knn",
+      "expression_id": "6328c5f8-ef40-5cf6-97b7-b9f84e314a3c",
+      "symbol": "x_scaled",
+      "symbol_name": "x_scaled",
+      "source_symbol": "x_scaled",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.detector_corrections.atoms:coordinate_rescaling_for_knn:variable:x_scaled",
+      "role": "output",
+      "variable_role": "output",
+      "dim_signature": "L1",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "L1",
+        "symbolic_role": "output"
+      },
+      "evidence_json": {
+        "source_symbol": "x_scaled",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.detector_corrections.atoms:coordinate_rescaling_for_knn"
+      },
+      "ordinal": 4
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.detector_corrections.atoms:coordinate_rescaling_for_knn:46ca134cfb64ad72",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.detector_corrections.atoms:coordinate_rescaling_for_knn:46ca134cfb64ad72",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "coordinate_rescaling_for_knn",
+      "atom_module": "sciona.atoms.particle_tracking.detector_corrections.atoms",
+      "registry_name": "coordinate_rescaling_for_knn",
+      "expression_id": "6328c5f8-ef40-5cf6-97b7-b9f84e314a3c",
+      "symbol": "y",
+      "symbol_name": "y",
+      "source_symbol": "y",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.detector_corrections.atoms:coordinate_rescaling_for_knn:variable:y",
+      "role": "input",
+      "variable_role": "input",
+      "dim_signature": "L1",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "L1",
+        "symbolic_role": "input"
+      },
+      "evidence_json": {
+        "source_symbol": "y",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.detector_corrections.atoms:coordinate_rescaling_for_knn"
+      },
+      "ordinal": 5
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.detector_corrections.atoms:coordinate_rescaling_for_knn:46ca134cfb64ad72",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.detector_corrections.atoms:coordinate_rescaling_for_knn:46ca134cfb64ad72",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "coordinate_rescaling_for_knn",
+      "atom_module": "sciona.atoms.particle_tracking.detector_corrections.atoms",
+      "registry_name": "coordinate_rescaling_for_knn",
+      "expression_id": "6328c5f8-ef40-5cf6-97b7-b9f84e314a3c",
+      "symbol": "z",
+      "symbol_name": "z",
+      "source_symbol": "z",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.detector_corrections.atoms:coordinate_rescaling_for_knn:variable:z",
+      "role": "input",
+      "variable_role": "input",
+      "dim_signature": "L1",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "L1",
+        "symbolic_role": "input"
+      },
+      "evidence_json": {
+        "source_symbol": "z",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.detector_corrections.atoms:coordinate_rescaling_for_knn"
+      },
+      "ordinal": 6
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.detector_corrections.atoms:coordinate_rescaling_for_knn:46ca134cfb64ad72",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.detector_corrections.atoms:coordinate_rescaling_for_knn:46ca134cfb64ad72",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "coordinate_rescaling_for_knn",
+      "atom_module": "sciona.atoms.particle_tracking.detector_corrections.atoms",
+      "registry_name": "coordinate_rescaling_for_knn",
+      "expression_id": "6328c5f8-ef40-5cf6-97b7-b9f84e314a3c",
+      "symbol": "z_scale",
+      "symbol_name": "z_scale",
+      "source_symbol": "z_scale",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.detector_corrections.atoms:coordinate_rescaling_for_knn:variable:z_scale",
+      "role": "parameter",
+      "variable_role": "parameter",
+      "dim_signature": "1",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "1",
+        "symbolic_role": "parameter"
+      },
+      "evidence_json": {
+        "source_symbol": "z_scale",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.detector_corrections.atoms:coordinate_rescaling_for_knn"
+      },
+      "ordinal": 7
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.detector_corrections.atoms:perturbative_cap_correction:c564ebfef5ef5c7f",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.detector_corrections.atoms:perturbative_cap_correction:c564ebfef5ef5c7f",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "perturbative_cap_correction",
+      "atom_module": "sciona.atoms.particle_tracking.detector_corrections.atoms",
+      "registry_name": "perturbative_cap_correction",
+      "expression_id": "6ddfddc1-81a7-53fe-a044-2811a5f5da0e",
+      "symbol": "charge_sign",
+      "symbol_name": "charge_sign",
+      "source_symbol": "charge_sign",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.detector_corrections.atoms:perturbative_cap_correction:variable:charge_sign",
+      "role": "parameter",
+      "variable_role": "parameter",
+      "dim_signature": "1",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "1",
+        "symbolic_role": "parameter"
+      },
+      "evidence_json": {
+        "source_symbol": "charge_sign",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.detector_corrections.atoms:perturbative_cap_correction"
+      },
+      "ordinal": 0
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.detector_corrections.atoms:perturbative_cap_correction:c564ebfef5ef5c7f",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.detector_corrections.atoms:perturbative_cap_correction:c564ebfef5ef5c7f",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "perturbative_cap_correction",
+      "atom_module": "sciona.atoms.particle_tracking.detector_corrections.atoms",
+      "registry_name": "perturbative_cap_correction",
+      "expression_id": "6ddfddc1-81a7-53fe-a044-2811a5f5da0e",
+      "symbol": "dp0_radial",
+      "symbol_name": "dp0_radial",
+      "source_symbol": "dp0_radial",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.detector_corrections.atoms:perturbative_cap_correction:variable:dp0_radial",
+      "role": "input",
+      "variable_role": "input",
+      "dim_signature": "L2",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "L2",
+        "symbolic_role": "input"
+      },
+      "evidence_json": {
+        "source_symbol": "dp0_radial",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.detector_corrections.atoms:perturbative_cap_correction"
+      },
+      "ordinal": 1
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.detector_corrections.atoms:perturbative_cap_correction:c564ebfef5ef5c7f",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.detector_corrections.atoms:perturbative_cap_correction:c564ebfef5ef5c7f",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "perturbative_cap_correction",
+      "atom_module": "sciona.atoms.particle_tracking.detector_corrections.atoms",
+      "registry_name": "perturbative_cap_correction",
+      "expression_id": "6ddfddc1-81a7-53fe-a044-2811a5f5da0e",
+      "symbol": "dp1_azimuthal",
+      "symbol_name": "dp1_azimuthal",
+      "source_symbol": "dp1_azimuthal",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.detector_corrections.atoms:perturbative_cap_correction:variable:dp1_azimuthal",
+      "role": "input",
+      "variable_role": "input",
+      "dim_signature": "L2",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "L2",
+        "symbolic_role": "input"
+      },
+      "evidence_json": {
+        "source_symbol": "dp1_azimuthal",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.detector_corrections.atoms:perturbative_cap_correction"
+      },
+      "ordinal": 2
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.detector_corrections.atoms:perturbative_cap_correction:c564ebfef5ef5c7f",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.detector_corrections.atoms:perturbative_cap_correction:c564ebfef5ef5c7f",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "perturbative_cap_correction",
+      "atom_module": "sciona.atoms.particle_tracking.detector_corrections.atoms",
+      "registry_name": "perturbative_cap_correction",
+      "expression_id": "6ddfddc1-81a7-53fe-a044-2811a5f5da0e",
+      "symbol": "hel_p_abs",
+      "symbol_name": "hel_p_abs",
+      "source_symbol": "hel_p_abs",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.detector_corrections.atoms:perturbative_cap_correction:variable:hel_p_abs",
+      "role": "parameter",
+      "variable_role": "parameter",
+      "dim_signature": "L1",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "L1",
+        "symbolic_role": "parameter"
+      },
+      "evidence_json": {
+        "source_symbol": "hel_p_abs",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.detector_corrections.atoms:perturbative_cap_correction"
+      },
+      "ordinal": 3
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.detector_corrections.atoms:perturbative_cap_correction:c564ebfef5ef5c7f",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.detector_corrections.atoms:perturbative_cap_correction:c564ebfef5ef5c7f",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "perturbative_cap_correction",
+      "atom_module": "sciona.atoms.particle_tracking.detector_corrections.atoms",
+      "registry_name": "perturbative_cap_correction",
+      "expression_id": "6ddfddc1-81a7-53fe-a044-2811a5f5da0e",
+      "symbol": "hel_pitch",
+      "symbol_name": "hel_pitch",
+      "source_symbol": "hel_pitch",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.detector_corrections.atoms:perturbative_cap_correction:variable:hel_pitch",
+      "role": "input",
+      "variable_role": "input",
+      "dim_signature": "L1",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "L1",
+        "symbolic_role": "input"
+      },
+      "evidence_json": {
+        "source_symbol": "hel_pitch",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.detector_corrections.atoms:perturbative_cap_correction"
+      },
+      "ordinal": 4
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.detector_corrections.atoms:perturbative_cap_correction:c564ebfef5ef5c7f",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.detector_corrections.atoms:perturbative_cap_correction:c564ebfef5ef5c7f",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "perturbative_cap_correction",
+      "atom_module": "sciona.atoms.particle_tracking.detector_corrections.atoms",
+      "registry_name": "perturbative_cap_correction",
+      "expression_id": "6ddfddc1-81a7-53fe-a044-2811a5f5da0e",
+      "symbol": "uphi_x",
+      "symbol_name": "uphi_x",
+      "source_symbol": "uphi_x",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.detector_corrections.atoms:perturbative_cap_correction:variable:uphi_x",
+      "role": "parameter",
+      "variable_role": "parameter",
+      "dim_signature": "1",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "1",
+        "symbolic_role": "parameter"
+      },
+      "evidence_json": {
+        "source_symbol": "uphi_x",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.detector_corrections.atoms:perturbative_cap_correction"
+      },
+      "ordinal": 5
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.detector_corrections.atoms:perturbative_cap_correction:c564ebfef5ef5c7f",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.detector_corrections.atoms:perturbative_cap_correction:c564ebfef5ef5c7f",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "perturbative_cap_correction",
+      "atom_module": "sciona.atoms.particle_tracking.detector_corrections.atoms",
+      "registry_name": "perturbative_cap_correction",
+      "expression_id": "6ddfddc1-81a7-53fe-a044-2811a5f5da0e",
+      "symbol": "uphi_y",
+      "symbol_name": "uphi_y",
+      "source_symbol": "uphi_y",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.detector_corrections.atoms:perturbative_cap_correction:variable:uphi_y",
+      "role": "parameter",
+      "variable_role": "parameter",
+      "dim_signature": "1",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "1",
+        "symbolic_role": "parameter"
+      },
+      "evidence_json": {
+        "source_symbol": "uphi_y",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.detector_corrections.atoms:perturbative_cap_correction"
+      },
+      "ordinal": 6
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.detector_corrections.atoms:perturbative_cap_correction:c564ebfef5ef5c7f",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.detector_corrections.atoms:perturbative_cap_correction:c564ebfef5ef5c7f",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "perturbative_cap_correction",
+      "atom_module": "sciona.atoms.particle_tracking.detector_corrections.atoms",
+      "registry_name": "perturbative_cap_correction",
+      "expression_id": "6ddfddc1-81a7-53fe-a044-2811a5f5da0e",
+      "symbol": "ur_x",
+      "symbol_name": "ur_x",
+      "source_symbol": "ur_x",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.detector_corrections.atoms:perturbative_cap_correction:variable:ur_x",
+      "role": "parameter",
+      "variable_role": "parameter",
+      "dim_signature": "1",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "1",
+        "symbolic_role": "parameter"
+      },
+      "evidence_json": {
+        "source_symbol": "ur_x",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.detector_corrections.atoms:perturbative_cap_correction"
+      },
+      "ordinal": 7
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.detector_corrections.atoms:perturbative_cap_correction:c564ebfef5ef5c7f",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.detector_corrections.atoms:perturbative_cap_correction:c564ebfef5ef5c7f",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "perturbative_cap_correction",
+      "atom_module": "sciona.atoms.particle_tracking.detector_corrections.atoms",
+      "registry_name": "perturbative_cap_correction",
+      "expression_id": "6ddfddc1-81a7-53fe-a044-2811a5f5da0e",
+      "symbol": "ur_y",
+      "symbol_name": "ur_y",
+      "source_symbol": "ur_y",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.detector_corrections.atoms:perturbative_cap_correction:variable:ur_y",
+      "role": "parameter",
+      "variable_role": "parameter",
+      "dim_signature": "1",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "1",
+        "symbolic_role": "parameter"
+      },
+      "evidence_json": {
+        "source_symbol": "ur_y",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.detector_corrections.atoms:perturbative_cap_correction"
+      },
+      "ordinal": 8
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.detector_corrections.atoms:perturbative_cap_correction:c564ebfef5ef5c7f",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.detector_corrections.atoms:perturbative_cap_correction:c564ebfef5ef5c7f",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "perturbative_cap_correction",
+      "atom_module": "sciona.atoms.particle_tracking.detector_corrections.atoms",
+      "registry_name": "perturbative_cap_correction",
+      "expression_id": "6ddfddc1-81a7-53fe-a044-2811a5f5da0e",
+      "symbol": "xi",
+      "symbol_name": "xi",
+      "source_symbol": "xi",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.detector_corrections.atoms:perturbative_cap_correction:variable:xi",
+      "role": "input",
+      "variable_role": "input",
+      "dim_signature": "L1",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "L1",
+        "symbolic_role": "input"
+      },
+      "evidence_json": {
+        "source_symbol": "xi",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.detector_corrections.atoms:perturbative_cap_correction"
+      },
+      "ordinal": 9
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.detector_corrections.atoms:perturbative_cap_correction:c564ebfef5ef5c7f",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.detector_corrections.atoms:perturbative_cap_correction:c564ebfef5ef5c7f",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "perturbative_cap_correction",
+      "atom_module": "sciona.atoms.particle_tracking.detector_corrections.atoms",
+      "registry_name": "perturbative_cap_correction",
+      "expression_id": "6ddfddc1-81a7-53fe-a044-2811a5f5da0e",
+      "symbol": "xi_corrected",
+      "symbol_name": "xi_corrected",
+      "source_symbol": "xi_corrected",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.detector_corrections.atoms:perturbative_cap_correction:variable:xi_corrected",
+      "role": "output",
+      "variable_role": "output",
+      "dim_signature": "L1",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "L1",
+        "symbolic_role": "output"
+      },
+      "evidence_json": {
+        "source_symbol": "xi_corrected",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.detector_corrections.atoms:perturbative_cap_correction"
+      },
+      "ordinal": 10
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.detector_corrections.atoms:perturbative_cap_correction:c564ebfef5ef5c7f",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.detector_corrections.atoms:perturbative_cap_correction:c564ebfef5ef5c7f",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "perturbative_cap_correction",
+      "atom_module": "sciona.atoms.particle_tracking.detector_corrections.atoms",
+      "registry_name": "perturbative_cap_correction",
+      "expression_id": "6ddfddc1-81a7-53fe-a044-2811a5f5da0e",
+      "symbol": "yi",
+      "symbol_name": "yi",
+      "source_symbol": "yi",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.detector_corrections.atoms:perturbative_cap_correction:variable:yi",
+      "role": "input",
+      "variable_role": "input",
+      "dim_signature": "L1",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "L1",
+        "symbolic_role": "input"
+      },
+      "evidence_json": {
+        "source_symbol": "yi",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.detector_corrections.atoms:perturbative_cap_correction"
+      },
+      "ordinal": 11
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.detector_corrections.atoms:perturbative_cap_correction:c564ebfef5ef5c7f",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.detector_corrections.atoms:perturbative_cap_correction:c564ebfef5ef5c7f",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "perturbative_cap_correction",
+      "atom_module": "sciona.atoms.particle_tracking.detector_corrections.atoms",
+      "registry_name": "perturbative_cap_correction",
+      "expression_id": "6ddfddc1-81a7-53fe-a044-2811a5f5da0e",
+      "symbol": "yi_corrected",
+      "symbol_name": "yi_corrected",
+      "source_symbol": "yi_corrected",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.detector_corrections.atoms:perturbative_cap_correction:variable:yi_corrected",
+      "role": "output",
+      "variable_role": "output",
+      "dim_signature": "L1",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "L1",
+        "symbolic_role": "output"
+      },
+      "evidence_json": {
+        "source_symbol": "yi_corrected",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.detector_corrections.atoms:perturbative_cap_correction"
+      },
+      "ordinal": 12
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.detector_corrections.atoms:perturbative_cylinder_correction:eb3a03c216d182e5",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.detector_corrections.atoms:perturbative_cylinder_correction:eb3a03c216d182e5",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "perturbative_cylinder_correction",
+      "atom_module": "sciona.atoms.particle_tracking.detector_corrections.atoms",
+      "registry_name": "perturbative_cylinder_correction",
+      "expression_id": "88ed5e85-56e2-56c0-a5c0-e8c1ceed0caa",
+      "symbol": "charge_sign",
+      "symbol_name": "charge_sign",
+      "source_symbol": "charge_sign",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.detector_corrections.atoms:perturbative_cylinder_correction:variable:charge_sign",
+      "role": "parameter",
+      "variable_role": "parameter",
+      "dim_signature": "1",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "1",
+        "symbolic_role": "parameter"
+      },
+      "evidence_json": {
+        "source_symbol": "charge_sign",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.detector_corrections.atoms:perturbative_cylinder_correction"
+      },
+      "ordinal": 0
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.detector_corrections.atoms:perturbative_cylinder_correction:eb3a03c216d182e5",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.detector_corrections.atoms:perturbative_cylinder_correction:eb3a03c216d182e5",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "perturbative_cylinder_correction",
+      "atom_module": "sciona.atoms.particle_tracking.detector_corrections.atoms",
+      "registry_name": "perturbative_cylinder_correction",
+      "expression_id": "88ed5e85-56e2-56c0-a5c0-e8c1ceed0caa",
+      "symbol": "curvature_radius",
+      "symbol_name": "curvature_radius",
+      "source_symbol": "curvature_radius",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.detector_corrections.atoms:perturbative_cylinder_correction:variable:curvature_radius",
+      "role": "parameter",
+      "variable_role": "parameter",
+      "dim_signature": "L1",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "L1",
+        "symbolic_role": "parameter"
+      },
+      "evidence_json": {
+        "source_symbol": "curvature_radius",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.detector_corrections.atoms:perturbative_cylinder_correction"
+      },
+      "ordinal": 1
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.detector_corrections.atoms:perturbative_cylinder_correction:eb3a03c216d182e5",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.detector_corrections.atoms:perturbative_cylinder_correction:eb3a03c216d182e5",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "perturbative_cylinder_correction",
+      "atom_module": "sciona.atoms.particle_tracking.detector_corrections.atoms",
+      "registry_name": "perturbative_cylinder_correction",
+      "expression_id": "88ed5e85-56e2-56c0-a5c0-e8c1ceed0caa",
+      "symbol": "dp0_z",
+      "symbol_name": "dp0_z",
+      "source_symbol": "dp0_z",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.detector_corrections.atoms:perturbative_cylinder_correction:variable:dp0_z",
+      "role": "input",
+      "variable_role": "input",
+      "dim_signature": "L2",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "L2",
+        "symbolic_role": "input"
+      },
+      "evidence_json": {
+        "source_symbol": "dp0_z",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.detector_corrections.atoms:perturbative_cylinder_correction"
+      },
+      "ordinal": 2
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.detector_corrections.atoms:perturbative_cylinder_correction:eb3a03c216d182e5",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.detector_corrections.atoms:perturbative_cylinder_correction:eb3a03c216d182e5",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "perturbative_cylinder_correction",
+      "atom_module": "sciona.atoms.particle_tracking.detector_corrections.atoms",
+      "registry_name": "perturbative_cylinder_correction",
+      "expression_id": "88ed5e85-56e2-56c0-a5c0-e8c1ceed0caa",
+      "symbol": "dp1_azimuthal",
+      "symbol_name": "dp1_azimuthal",
+      "source_symbol": "dp1_azimuthal",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.detector_corrections.atoms:perturbative_cylinder_correction:variable:dp1_azimuthal",
+      "role": "input",
+      "variable_role": "input",
+      "dim_signature": "L2",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "L2",
+        "symbolic_role": "input"
+      },
+      "evidence_json": {
+        "source_symbol": "dp1_azimuthal",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.detector_corrections.atoms:perturbative_cylinder_correction"
+      },
+      "ordinal": 3
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.detector_corrections.atoms:perturbative_cylinder_correction:eb3a03c216d182e5",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.detector_corrections.atoms:perturbative_cylinder_correction:eb3a03c216d182e5",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "perturbative_cylinder_correction",
+      "atom_module": "sciona.atoms.particle_tracking.detector_corrections.atoms",
+      "registry_name": "perturbative_cylinder_correction",
+      "expression_id": "88ed5e85-56e2-56c0-a5c0-e8c1ceed0caa",
+      "symbol": "hel_pitch",
+      "symbol_name": "hel_pitch",
+      "source_symbol": "hel_pitch",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.detector_corrections.atoms:perturbative_cylinder_correction:variable:hel_pitch",
+      "role": "input",
+      "variable_role": "input",
+      "dim_signature": "L1",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "L1",
+        "symbolic_role": "input"
+      },
+      "evidence_json": {
+        "source_symbol": "hel_pitch",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.detector_corrections.atoms:perturbative_cylinder_correction"
+      },
+      "ordinal": 4
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.detector_corrections.atoms:perturbative_cylinder_correction:eb3a03c216d182e5",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.detector_corrections.atoms:perturbative_cylinder_correction:eb3a03c216d182e5",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "perturbative_cylinder_correction",
+      "atom_module": "sciona.atoms.particle_tracking.detector_corrections.atoms",
+      "registry_name": "perturbative_cylinder_correction",
+      "expression_id": "88ed5e85-56e2-56c0-a5c0-e8c1ceed0caa",
+      "symbol": "hel_r",
+      "symbol_name": "hel_r",
+      "source_symbol": "hel_r",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.detector_corrections.atoms:perturbative_cylinder_correction:variable:hel_r",
+      "role": "input",
+      "variable_role": "input",
+      "dim_signature": "L1",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "L1",
+        "symbolic_role": "input"
+      },
+      "evidence_json": {
+        "source_symbol": "hel_r",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.detector_corrections.atoms:perturbative_cylinder_correction"
+      },
+      "ordinal": 5
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.detector_corrections.atoms:perturbative_cylinder_correction:eb3a03c216d182e5",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.detector_corrections.atoms:perturbative_cylinder_correction:eb3a03c216d182e5",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "perturbative_cylinder_correction",
+      "atom_module": "sciona.atoms.particle_tracking.detector_corrections.atoms",
+      "registry_name": "perturbative_cylinder_correction",
+      "expression_id": "88ed5e85-56e2-56c0-a5c0-e8c1ceed0caa",
+      "symbol": "xi",
+      "symbol_name": "xi",
+      "source_symbol": "xi",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.detector_corrections.atoms:perturbative_cylinder_correction:variable:xi",
+      "role": "input",
+      "variable_role": "input",
+      "dim_signature": "L1",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "L1",
+        "symbolic_role": "input"
+      },
+      "evidence_json": {
+        "source_symbol": "xi",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.detector_corrections.atoms:perturbative_cylinder_correction"
+      },
+      "ordinal": 6
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.detector_corrections.atoms:perturbative_cylinder_correction:eb3a03c216d182e5",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.detector_corrections.atoms:perturbative_cylinder_correction:eb3a03c216d182e5",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "perturbative_cylinder_correction",
+      "atom_module": "sciona.atoms.particle_tracking.detector_corrections.atoms",
+      "registry_name": "perturbative_cylinder_correction",
+      "expression_id": "88ed5e85-56e2-56c0-a5c0-e8c1ceed0caa",
+      "symbol": "xi_corrected",
+      "symbol_name": "xi_corrected",
+      "source_symbol": "xi_corrected",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.detector_corrections.atoms:perturbative_cylinder_correction:variable:xi_corrected",
+      "role": "output",
+      "variable_role": "output",
+      "dim_signature": "L1",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "L1",
+        "symbolic_role": "output"
+      },
+      "evidence_json": {
+        "source_symbol": "xi_corrected",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.detector_corrections.atoms:perturbative_cylinder_correction"
+      },
+      "ordinal": 7
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.detector_corrections.atoms:perturbative_cylinder_correction:eb3a03c216d182e5",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.detector_corrections.atoms:perturbative_cylinder_correction:eb3a03c216d182e5",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "perturbative_cylinder_correction",
+      "atom_module": "sciona.atoms.particle_tracking.detector_corrections.atoms",
+      "registry_name": "perturbative_cylinder_correction",
+      "expression_id": "88ed5e85-56e2-56c0-a5c0-e8c1ceed0caa",
+      "symbol": "yi",
+      "symbol_name": "yi",
+      "source_symbol": "yi",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.detector_corrections.atoms:perturbative_cylinder_correction:variable:yi",
+      "role": "input",
+      "variable_role": "input",
+      "dim_signature": "L1",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "L1",
+        "symbolic_role": "input"
+      },
+      "evidence_json": {
+        "source_symbol": "yi",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.detector_corrections.atoms:perturbative_cylinder_correction"
+      },
+      "ordinal": 8
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.detector_corrections.atoms:perturbative_cylinder_correction:eb3a03c216d182e5",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.detector_corrections.atoms:perturbative_cylinder_correction:eb3a03c216d182e5",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "perturbative_cylinder_correction",
+      "atom_module": "sciona.atoms.particle_tracking.detector_corrections.atoms",
+      "registry_name": "perturbative_cylinder_correction",
+      "expression_id": "88ed5e85-56e2-56c0-a5c0-e8c1ceed0caa",
+      "symbol": "yi_corrected",
+      "symbol_name": "yi_corrected",
+      "source_symbol": "yi_corrected",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.detector_corrections.atoms:perturbative_cylinder_correction:variable:yi_corrected",
+      "role": "output",
+      "variable_role": "output",
+      "dim_signature": "L1",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "L1",
+        "symbolic_role": "output"
+      },
+      "evidence_json": {
+        "source_symbol": "yi_corrected",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.detector_corrections.atoms:perturbative_cylinder_correction"
+      },
+      "ordinal": 9
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.detector_corrections.atoms:perturbative_cylinder_correction:eb3a03c216d182e5",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.detector_corrections.atoms:perturbative_cylinder_correction:eb3a03c216d182e5",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "perturbative_cylinder_correction",
+      "atom_module": "sciona.atoms.particle_tracking.detector_corrections.atoms",
+      "registry_name": "perturbative_cylinder_correction",
+      "expression_id": "88ed5e85-56e2-56c0-a5c0-e8c1ceed0caa",
+      "symbol": "zi",
+      "symbol_name": "zi",
+      "source_symbol": "zi",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.detector_corrections.atoms:perturbative_cylinder_correction:variable:zi",
+      "role": "input",
+      "variable_role": "input",
+      "dim_signature": "L1",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "L1",
+        "symbolic_role": "input"
+      },
+      "evidence_json": {
+        "source_symbol": "zi",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.detector_corrections.atoms:perturbative_cylinder_correction"
+      },
+      "ordinal": 10
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.detector_corrections.atoms:perturbative_cylinder_correction:eb3a03c216d182e5",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.detector_corrections.atoms:perturbative_cylinder_correction:eb3a03c216d182e5",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "perturbative_cylinder_correction",
+      "atom_module": "sciona.atoms.particle_tracking.detector_corrections.atoms",
+      "registry_name": "perturbative_cylinder_correction",
+      "expression_id": "88ed5e85-56e2-56c0-a5c0-e8c1ceed0caa",
+      "symbol": "zi_corrected",
+      "symbol_name": "zi_corrected",
+      "source_symbol": "zi_corrected",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.detector_corrections.atoms:perturbative_cylinder_correction:variable:zi_corrected",
+      "role": "output",
+      "variable_role": "output",
+      "dim_signature": "L1",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "L1",
+        "symbolic_role": "output"
+      },
+      "evidence_json": {
+        "source_symbol": "zi_corrected",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.detector_corrections.atoms:perturbative_cylinder_correction"
+      },
+      "ordinal": 11
+    }
+  ],
+  "artifact_validity_bounds": [
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.detector_corrections.atoms:coordinate_rescaling_for_knn:46ca134cfb64ad72",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.detector_corrections.atoms:coordinate_rescaling_for_knn:46ca134cfb64ad72",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "coordinate_rescaling_for_knn",
+      "atom_module": "sciona.atoms.particle_tracking.detector_corrections.atoms",
+      "registry_name": "coordinate_rescaling_for_knn",
+      "expression_id": "6328c5f8-ef40-5cf6-97b7-b9f84e314a3c",
+      "symbol": "cyl_mean_r2",
+      "variable_name": "cyl_mean_r2",
+      "source_symbol": "cyl_mean_r2",
+      "source_bound_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.detector_corrections.atoms:coordinate_rescaling_for_knn:bound:cyl_mean_r2",
+      "scope": "variable",
+      "bound_kind": "domain",
+      "min_value": 0.0,
+      "max_value": null,
+      "lower_value": 0.0,
+      "upper_value": null,
+      "lower_inclusive": true,
+      "upper_inclusive": true,
+      "dim_signature": "L1",
+      "validity_statement": "cyl_mean_r2 >= 0.0",
+      "evidence_ref_key": "sciona-atoms-physics:sciona.atoms.particle_tracking.detector_corrections.atoms:coordinate_rescaling_for_knn:bound:cyl_mean_r2",
+      "confidence": "high",
+      "review_status": "automated_pass",
+      "metadata": {
+        "provider": "sciona-atoms-physics",
+        "atom_module": "sciona.atoms.particle_tracking.detector_corrections.atoms",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.detector_corrections.atoms:coordinate_rescaling_for_knn",
+        "source_symbol": "cyl_mean_r2",
+        "ordinal": 0
+      },
+      "ordinal": 0
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.detector_corrections.atoms:coordinate_rescaling_for_knn:46ca134cfb64ad72",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.detector_corrections.atoms:coordinate_rescaling_for_knn:46ca134cfb64ad72",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "coordinate_rescaling_for_knn",
+      "atom_module": "sciona.atoms.particle_tracking.detector_corrections.atoms",
+      "registry_name": "coordinate_rescaling_for_knn",
+      "expression_id": "6328c5f8-ef40-5cf6-97b7-b9f84e314a3c",
+      "symbol": "r_xy",
+      "variable_name": "r_xy",
+      "source_symbol": "r_xy",
+      "source_bound_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.detector_corrections.atoms:coordinate_rescaling_for_knn:bound:r_xy",
+      "scope": "variable",
+      "bound_kind": "domain",
+      "min_value": 0.0,
+      "max_value": null,
+      "lower_value": 0.0,
+      "upper_value": null,
+      "lower_inclusive": true,
+      "upper_inclusive": true,
+      "dim_signature": "L1",
+      "validity_statement": "r_xy >= 0.0",
+      "evidence_ref_key": "sciona-atoms-physics:sciona.atoms.particle_tracking.detector_corrections.atoms:coordinate_rescaling_for_knn:bound:r_xy",
+      "confidence": "high",
+      "review_status": "automated_pass",
+      "metadata": {
+        "provider": "sciona-atoms-physics",
+        "atom_module": "sciona.atoms.particle_tracking.detector_corrections.atoms",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.detector_corrections.atoms:coordinate_rescaling_for_knn",
+        "source_symbol": "r_xy",
+        "ordinal": 1
+      },
+      "ordinal": 1
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.detector_corrections.atoms:perturbative_cap_correction:c564ebfef5ef5c7f",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.detector_corrections.atoms:perturbative_cap_correction:c564ebfef5ef5c7f",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "perturbative_cap_correction",
+      "atom_module": "sciona.atoms.particle_tracking.detector_corrections.atoms",
+      "registry_name": "perturbative_cap_correction",
+      "expression_id": "6ddfddc1-81a7-53fe-a044-2811a5f5da0e",
+      "symbol": "hel_p_abs",
+      "variable_name": "hel_p_abs",
+      "source_symbol": "hel_p_abs",
+      "source_bound_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.detector_corrections.atoms:perturbative_cap_correction:bound:hel_p_abs",
+      "scope": "variable",
+      "bound_kind": "domain",
+      "min_value": 0.0,
+      "max_value": null,
+      "lower_value": 0.0,
+      "upper_value": null,
+      "lower_inclusive": true,
+      "upper_inclusive": true,
+      "dim_signature": "L1",
+      "validity_statement": "hel_p_abs >= 0.0",
+      "evidence_ref_key": "sciona-atoms-physics:sciona.atoms.particle_tracking.detector_corrections.atoms:perturbative_cap_correction:bound:hel_p_abs",
+      "confidence": "high",
+      "review_status": "automated_pass",
+      "metadata": {
+        "provider": "sciona-atoms-physics",
+        "atom_module": "sciona.atoms.particle_tracking.detector_corrections.atoms",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.detector_corrections.atoms:perturbative_cap_correction",
+        "source_symbol": "hel_p_abs",
+        "ordinal": 0
+      },
+      "ordinal": 0
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.detector_corrections.atoms:perturbative_cylinder_correction:eb3a03c216d182e5",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.detector_corrections.atoms:perturbative_cylinder_correction:eb3a03c216d182e5",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "perturbative_cylinder_correction",
+      "atom_module": "sciona.atoms.particle_tracking.detector_corrections.atoms",
+      "registry_name": "perturbative_cylinder_correction",
+      "expression_id": "88ed5e85-56e2-56c0-a5c0-e8c1ceed0caa",
+      "symbol": "curvature_radius",
+      "variable_name": "curvature_radius",
+      "source_symbol": "curvature_radius",
+      "source_bound_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.detector_corrections.atoms:perturbative_cylinder_correction:bound:curvature_radius",
+      "scope": "variable",
+      "bound_kind": "domain",
+      "min_value": 0.0,
+      "max_value": null,
+      "lower_value": 0.0,
+      "upper_value": null,
+      "lower_inclusive": true,
+      "upper_inclusive": true,
+      "dim_signature": "L1",
+      "validity_statement": "curvature_radius >= 0.0",
+      "evidence_ref_key": "sciona-atoms-physics:sciona.atoms.particle_tracking.detector_corrections.atoms:perturbative_cylinder_correction:bound:curvature_radius",
+      "confidence": "high",
+      "review_status": "automated_pass",
+      "metadata": {
+        "provider": "sciona-atoms-physics",
+        "atom_module": "sciona.atoms.particle_tracking.detector_corrections.atoms",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.detector_corrections.atoms:perturbative_cylinder_correction",
+        "source_symbol": "curvature_radius",
+        "ordinal": 0
+      },
+      "ordinal": 0
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.detector_corrections.atoms:perturbative_cylinder_correction:eb3a03c216d182e5",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.particle_tracking.detector_corrections.atoms:perturbative_cylinder_correction:eb3a03c216d182e5",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "perturbative_cylinder_correction",
+      "atom_module": "sciona.atoms.particle_tracking.detector_corrections.atoms",
+      "registry_name": "perturbative_cylinder_correction",
+      "expression_id": "88ed5e85-56e2-56c0-a5c0-e8c1ceed0caa",
+      "symbol": "hel_r",
+      "variable_name": "hel_r",
+      "source_symbol": "hel_r",
+      "source_bound_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.detector_corrections.atoms:perturbative_cylinder_correction:bound:hel_r",
+      "scope": "variable",
+      "bound_kind": "domain",
+      "min_value": 0.0,
+      "max_value": null,
+      "lower_value": 0.0,
+      "upper_value": null,
+      "lower_inclusive": true,
+      "upper_inclusive": true,
+      "dim_signature": "L1",
+      "validity_statement": "hel_r >= 0.0",
+      "evidence_ref_key": "sciona-atoms-physics:sciona.atoms.particle_tracking.detector_corrections.atoms:perturbative_cylinder_correction:bound:hel_r",
+      "confidence": "high",
+      "review_status": "automated_pass",
+      "metadata": {
+        "provider": "sciona-atoms-physics",
+        "atom_module": "sciona.atoms.particle_tracking.detector_corrections.atoms",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.particle_tracking.detector_corrections.atoms:perturbative_cylinder_correction",
+        "source_symbol": "hel_r",
+        "ordinal": 1
+      },
+      "ordinal": 1
+    }
+  ]
+}

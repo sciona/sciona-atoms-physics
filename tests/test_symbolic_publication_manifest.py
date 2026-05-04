@@ -84,12 +84,15 @@ def test_manifest_covers_migrated_symbolic_atom_packages() -> None:
 
     assert {
         "SNR",
+        "coordinate_rescaling_for_knn",
         "de_disperse",
         "dedispersionkernel",
         "delay_from_DM",
         "dm_can_brute_force",
         "dm_candidate_filter",
         "fold_signal",
+        "perturbative_cap_correction",
+        "perturbative_cylinder_correction",
         "spline_bandpass_correction",
         "circle_from_three_points",
         "helix_pitch_from_two_points",
@@ -109,6 +112,9 @@ def test_manifest_covers_migrated_symbolic_atom_packages() -> None:
     assert rows["delay_from_DM"]["atom_module"].endswith("pulsar.pipeline")
     assert rows["dm_can_brute_force"]["atom_module"].endswith("pulsar_folding.atoms")
     assert rows["dm_candidate_filter"]["atom_module"].endswith("pulsar_folding.dm_can")
+    assert rows["coordinate_rescaling_for_knn"]["atom_module"].endswith(
+        "detector_corrections.atoms"
+    )
     assert rows["circle_from_three_points"]["atom_module"].endswith(
         "particle_tracking.helix_geometry.atoms"
     )
@@ -189,6 +195,9 @@ def test_manifest_emits_stable_hashes_tags_and_loader_fields() -> None:
     pulsar_snr = rows["SNR"]
     folding_search = rows["dm_can_brute_force"]
     bandpass = rows["spline_bandpass_correction"]
+    detector_rescale = rows["coordinate_rescaling_for_knn"]
+    detector_cap = rows["perturbative_cap_correction"]
+    detector_cylinder = rows["perturbative_cylinder_correction"]
     helix = rows["helix_pitch_least_squares"]
     angle = rows["calculate_vector_angle"]
     low_order = rows["offset_tt2tdb"]
@@ -256,6 +265,18 @@ def test_manifest_emits_stable_hashes_tags_and_loader_fields() -> None:
     assert bandpass["behavioral_archetypes"] == [
         "baseline_subtraction",
         "spline_smoothing",
+    ]
+    assert detector_rescale["behavioral_archetypes"] == [
+        "coordinate_rescaling",
+        "radius_normalization",
+    ]
+    assert detector_cap["behavioral_archetypes"] == [
+        "azimuthal_radial_correction",
+        "perturbative_update",
+    ]
+    assert detector_cylinder["behavioral_archetypes"] == [
+        "curvature_scaled_update",
+        "perturbative_update",
     ]
     assert "particle_tracking" in helix["mechanism_tags"]
     assert "least_squares_fit" in helix["behavioral_archetypes"]

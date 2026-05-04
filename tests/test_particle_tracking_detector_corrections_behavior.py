@@ -1,6 +1,9 @@
 from __future__ import annotations
 
 import numpy as np
+import sympy as sp
+
+from sciona.ghost.registry import REGISTRY
 
 
 def test_all_three_atoms_import() -> None:
@@ -156,3 +159,35 @@ def test_cylinder_correction_opposite_charges() -> None:
 
     assert np.allclose(xi_p - xi, -(xi_n - xi)), "Opposite charges, opposite dx"
     assert np.allclose(zi_p - zi, -(zi_n - zi)), "Opposite charges, opposite dz"
+
+
+def test_detector_corrections_register_symbolic_metadata() -> None:
+    import sciona.atoms.particle_tracking.detector_corrections.atoms  # noqa: F401
+
+    rescaling = REGISTRY["coordinate_rescaling_for_knn"]["symbolic"]
+    cap = REGISTRY["perturbative_cap_correction"]["symbolic"]
+    cylinder = REGISTRY["perturbative_cylinder_correction"]["symbolic"]
+
+    assert rescaling is not None
+    assert rescaling.validity_bounds["cyl_mean_r2"] == (0.0, None)
+    assert rescaling.check_dimensional_consistency() == []
+    x, cyl_mean_r2, z_scale, r_xy = sp.symbols(
+        "x cyl_mean_r2 z_scale r_xy"
+    )
+    assert str(rescaling.to_sympy().lhs) == "x_scaled"
+    assert (
+        sp.simplify(
+            rescaling.to_sympy().rhs
+            - (x * cyl_mean_r2 * z_scale / r_xy)
+        )
+        == 0
+    )
+
+    assert cap is not None
+    assert cap.validity_bounds["hel_p_abs"] == (0.0, None)
+    assert cap.check_dimensional_consistency() == []
+
+    assert cylinder is not None
+    assert cylinder.validity_bounds["hel_r"] == (0.0, None)
+    assert cylinder.validity_bounds["curvature_radius"] == (0.0, None)
+    assert cylinder.check_dimensional_consistency() == []

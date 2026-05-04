@@ -31,6 +31,7 @@ DEFAULT_SYMBOLIC_ATOM_MODULES = (
     "sciona.atoms.physics.pulsar.pipeline",
     "sciona.atoms.physics.pulsar_folding.atoms",
     "sciona.atoms.physics.pulsar_folding.dm_can",
+    "sciona.atoms.particle_tracking.detector_corrections.atoms",
     "sciona.atoms.particle_tracking.helix_geometry.atoms",
     "sciona.atoms.physics.skyfield.atoms",
     "sciona.atoms.physics.tempo_jl.apply_offsets.atoms",
@@ -492,6 +493,25 @@ def _heuristic_tags(atom_module: str, atom_name: str, field_name: str) -> list[s
             tags.append("distance_minimization")
         if "least_squares" in name:
             tags.append("least_squares_fit")
+    if "detector_corrections" in module:
+        if name == "coordinate_rescaling_for_knn":
+            tags.extend(
+                ["detector_geometry", "knn_search", "particle_tracking"]
+                if field_name == "mechanism_tags"
+                else ["coordinate_rescaling", "radius_normalization"]
+            )
+        elif name == "perturbative_cap_correction":
+            tags.extend(
+                ["detector_geometry", "particle_tracking", "surface_correction"]
+                if field_name == "mechanism_tags"
+                else ["azimuthal_radial_correction", "perturbative_update"]
+            )
+        elif name == "perturbative_cylinder_correction":
+            tags.extend(
+                ["detector_geometry", "particle_tracking", "surface_correction"]
+                if field_name == "mechanism_tags"
+                else ["curvature_scaled_update", "perturbative_update"]
+            )
     if "skyfield" in module:
         tags.extend(
             ["astrometry", "coordinate_transform", "vector_geometry"]
