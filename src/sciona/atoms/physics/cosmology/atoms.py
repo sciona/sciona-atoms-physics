@@ -10,12 +10,26 @@ import numpy as np
 from numpy.typing import NDArray
 
 import icontract
-from sciona.ghost.registry import register_atom
+from sciona.ghost.decorators import symbolic_atom
 
+from .expressions import (
+    COSMOLOGY_BIBLIOGRAPHY,
+    FLUX_K_CORRECTION_DIM_MAP,
+    FLUX_K_CORRECTION_EXPR,
+    FLUX_K_CORRECTION_VALIDITY_BOUNDS,
+    FLUX_K_CORRECTION_VARIABLES,
+)
 from .witnesses import witness_flux_k_correction
 
 
-@register_atom(witness_flux_k_correction)
+@symbolic_atom(
+    witness_flux_k_correction,
+    expr=FLUX_K_CORRECTION_EXPR,
+    dim_map=FLUX_K_CORRECTION_DIM_MAP,
+    validity_bounds=FLUX_K_CORRECTION_VALIDITY_BOUNDS,
+    variables=FLUX_K_CORRECTION_VARIABLES,
+    bibliography=COSMOLOGY_BIBLIOGRAPHY,
+)
 @icontract.require(lambda flux: np.all(np.isfinite(flux)), "Flux must be finite")
 @icontract.require(lambda redshift: np.all(redshift >= 0), "Redshift must be non-negative")
 @icontract.ensure(lambda result: np.all(np.isfinite(result)), "Corrected flux must be finite")

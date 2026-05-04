@@ -21,6 +21,16 @@ from .witnesses import witness__zero_offset, witness_apply_offsets, witness_show
 
 # Witness functions should be imported from the generated witnesses module
 
+SYMBOLIC_REVIEW_BLOCKERS = {
+    "show": (
+        "No sound @symbolic_atom expression was added: this atom formats an "
+        "already computed string-like time-scale object for display. It does "
+        "not introduce an independent physical equation or dimensional "
+        "relationship beyond identity string conversion."
+    ),
+}
+
+
 @register_atom(witness_show)
 @icontract.require(lambda io: io is not None, "io cannot be None")
 @icontract.require(lambda s: s is not None, "s cannot be None")

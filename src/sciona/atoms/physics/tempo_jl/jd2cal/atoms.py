@@ -35,6 +35,37 @@ from juliacall import Main as jl
 
 # Witness functions should be imported from the generated witnesses module
 
+SYMBOLIC_REVIEW_BLOCKERS = {
+    "show_date": (
+        "No sound @symbolic_atom expression was added: this atom is display "
+        "formatting for a date value. It preserves runtime rendering behavior "
+        "but does not define a physical equation or dimensional relationship."
+    ),
+    "time_from_hms": (
+        "No sound @symbolic_atom expression was added: this atom is a tuple "
+        "constructor that returns the supplied hour, minute, and second "
+        "components unchanged. The actual unit conversion equations are "
+        "captured by the seconds-of-day and fractional-day atoms."
+    ),
+    "show_time": (
+        "No sound @symbolic_atom expression was added: this atom is display "
+        "formatting for a time value. It does not add an independent symbolic "
+        "equation beyond string conversion."
+    ),
+    "datetime_from_components": (
+        "No sound @symbolic_atom expression was added: this atom assembles "
+        "already separated calendar and time fields into a tuple-like "
+        "datetime object. The calendar and time arithmetic are represented by "
+        "the symbolic constructor conversion atoms."
+    ),
+    "datetime_from_string": (
+        "No sound @symbolic_atom expression was added: this atom parses a "
+        "string into datetime fields. It is input decoding rather than a "
+        "physical equation or dimensional relationship."
+    ),
+}
+
+
 @symbolic_atom(
     witness_date,
     name="date_from_offset",

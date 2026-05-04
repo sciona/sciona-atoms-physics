@@ -1,0 +1,241 @@
+{
+  "provider": "sciona-atoms-physics",
+  "modules": [
+    "sciona.atoms.physics.cosmology.atoms"
+  ],
+  "artifact_symbolic_expressions": [
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.cosmology.atoms:flux_k_correction:7c917265a2265715",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "flux_k_correction",
+      "atom_module": "sciona.atoms.physics.cosmology.atoms",
+      "registry_name": "flux_k_correction",
+      "expression_id": "a6043969-02d2-5006-a311-1081e0bd70eb",
+      "source_expression_id": "sciona-atoms-physics:sciona.atoms.physics.cosmology.atoms:flux_k_correction",
+      "expression_srepr": "Equality(Symbol('corrected_flux'), Mul(Symbol('flux'), Add(Symbol('redshift'), Integer(1))))",
+      "expression_text": "Eq(corrected_flux, flux*(redshift + 1))",
+      "sympy_srepr": "Equality(Symbol('corrected_flux'), Mul(Symbol('flux'), Add(Symbol('redshift'), Integer(1))))",
+      "raw_formula": "Eq(corrected_flux, flux*(redshift + 1))",
+      "raw_formula_format": "plain_text",
+      "expression_kind": "equation",
+      "expression_role": "primary",
+      "canonical_expr_hash": "a1c6ed671ebcfc225b3b9b1c25f244a6dc9ce2dc1640a557358bf23766822336",
+      "topology_hash": "2d1166ca613395a4da0ce2b18ab59e77c68f962c66a41be8119710e0983493f1",
+      "dimensional_hash": "c2fc5b42e85ffa71df4e58f77bfce29e41ffa894979d1150b1934de0805a8c72",
+      "parse_status": "normalized",
+      "parse_confidence": 1.0,
+      "review_status": "automated_pass",
+      "validation_status": "passed",
+      "mechanism_tags": [
+        "cosmological_redshift",
+        "flux_correction",
+        "photometry"
+      ],
+      "behavioral_archetypes": [
+        "multiplicative_scaling",
+        "redshift_correction"
+      ],
+      "variables": {
+        "band_index": "parameter",
+        "corrected_flux": "output",
+        "flux": "input",
+        "redshift": "input"
+      },
+      "dim_signature": {
+        "band_index": "1",
+        "corrected_flux": "M1T-3",
+        "flux": "M1T-3",
+        "redshift": "1"
+      },
+      "symbolic_dim_signature": {
+        "band_index": "1",
+        "corrected_flux": "M1T-3",
+        "flux": "M1T-3",
+        "redshift": "1"
+      },
+      "constants": {},
+      "bibliography": [
+        "hogg2002distance",
+        "repo_sciona_atoms_physics"
+      ],
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.cosmology.atoms:flux_k_correction:7c917265a2265715",
+      "artifact_uuid": null
+    }
+  ],
+  "artifact_symbolic_variables": [
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.cosmology.atoms:flux_k_correction:7c917265a2265715",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.cosmology.atoms:flux_k_correction:7c917265a2265715",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "flux_k_correction",
+      "atom_module": "sciona.atoms.physics.cosmology.atoms",
+      "registry_name": "flux_k_correction",
+      "expression_id": "a6043969-02d2-5006-a311-1081e0bd70eb",
+      "symbol": "band_index",
+      "symbol_name": "band_index",
+      "source_symbol": "band_index",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.physics.cosmology.atoms:flux_k_correction:variable:band_index",
+      "role": "parameter",
+      "variable_role": "parameter",
+      "dim_signature": "1",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "1",
+        "symbolic_role": "parameter"
+      },
+      "evidence_json": {
+        "source_symbol": "band_index",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.physics.cosmology.atoms:flux_k_correction"
+      },
+      "ordinal": 0
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.cosmology.atoms:flux_k_correction:7c917265a2265715",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.cosmology.atoms:flux_k_correction:7c917265a2265715",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "flux_k_correction",
+      "atom_module": "sciona.atoms.physics.cosmology.atoms",
+      "registry_name": "flux_k_correction",
+      "expression_id": "a6043969-02d2-5006-a311-1081e0bd70eb",
+      "symbol": "corrected_flux",
+      "symbol_name": "corrected_flux",
+      "source_symbol": "corrected_flux",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.physics.cosmology.atoms:flux_k_correction:variable:corrected_flux",
+      "role": "output",
+      "variable_role": "output",
+      "dim_signature": "M1T-3",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "M1T-3",
+        "symbolic_role": "output"
+      },
+      "evidence_json": {
+        "source_symbol": "corrected_flux",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.physics.cosmology.atoms:flux_k_correction"
+      },
+      "ordinal": 1
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.cosmology.atoms:flux_k_correction:7c917265a2265715",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.cosmology.atoms:flux_k_correction:7c917265a2265715",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "flux_k_correction",
+      "atom_module": "sciona.atoms.physics.cosmology.atoms",
+      "registry_name": "flux_k_correction",
+      "expression_id": "a6043969-02d2-5006-a311-1081e0bd70eb",
+      "symbol": "flux",
+      "symbol_name": "flux",
+      "source_symbol": "flux",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.physics.cosmology.atoms:flux_k_correction:variable:flux",
+      "role": "input",
+      "variable_role": "input",
+      "dim_signature": "M1T-3",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "M1T-3",
+        "symbolic_role": "input"
+      },
+      "evidence_json": {
+        "source_symbol": "flux",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.physics.cosmology.atoms:flux_k_correction"
+      },
+      "ordinal": 2
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.cosmology.atoms:flux_k_correction:7c917265a2265715",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.cosmology.atoms:flux_k_correction:7c917265a2265715",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "flux_k_correction",
+      "atom_module": "sciona.atoms.physics.cosmology.atoms",
+      "registry_name": "flux_k_correction",
+      "expression_id": "a6043969-02d2-5006-a311-1081e0bd70eb",
+      "symbol": "redshift",
+      "symbol_name": "redshift",
+      "source_symbol": "redshift",
+      "source_variable_id": "sciona-atoms-physics:sciona.atoms.physics.cosmology.atoms:flux_k_correction:variable:redshift",
+      "role": "input",
+      "variable_role": "input",
+      "dim_signature": "1",
+      "dimension_source": "source",
+      "assumptions_json": {
+        "dim_signature": "1",
+        "symbolic_role": "input"
+      },
+      "evidence_json": {
+        "source_symbol": "redshift",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.physics.cosmology.atoms:flux_k_correction"
+      },
+      "ordinal": 3
+    }
+  ],
+  "artifact_validity_bounds": [
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.cosmology.atoms:flux_k_correction:7c917265a2265715",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.cosmology.atoms:flux_k_correction:7c917265a2265715",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "flux_k_correction",
+      "atom_module": "sciona.atoms.physics.cosmology.atoms",
+      "registry_name": "flux_k_correction",
+      "expression_id": "a6043969-02d2-5006-a311-1081e0bd70eb",
+      "symbol": "band_index",
+      "variable_name": "band_index",
+      "source_symbol": "band_index",
+      "source_bound_id": "sciona-atoms-physics:sciona.atoms.physics.cosmology.atoms:flux_k_correction:bound:band_index",
+      "scope": "variable",
+      "bound_kind": "domain",
+      "min_value": 0.0,
+      "max_value": null,
+      "lower_value": 0.0,
+      "upper_value": null,
+      "lower_inclusive": true,
+      "upper_inclusive": true,
+      "dim_signature": "1",
+      "validity_statement": "band_index >= 0.0",
+      "evidence_ref_key": "sciona-atoms-physics:sciona.atoms.physics.cosmology.atoms:flux_k_correction:bound:band_index",
+      "confidence": "high",
+      "review_status": "automated_pass",
+      "metadata": {
+        "provider": "sciona-atoms-physics",
+        "atom_module": "sciona.atoms.physics.cosmology.atoms",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.physics.cosmology.atoms:flux_k_correction",
+        "source_symbol": "band_index",
+        "ordinal": 0
+      },
+      "ordinal": 0
+    },
+    {
+      "artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.cosmology.atoms:flux_k_correction:7c917265a2265715",
+      "local_artifact_key": "local:sciona-atoms-physics:sciona.atoms.physics.cosmology.atoms:flux_k_correction:7c917265a2265715",
+      "provider": "sciona-atoms-physics",
+      "atom_name": "flux_k_correction",
+      "atom_module": "sciona.atoms.physics.cosmology.atoms",
+      "registry_name": "flux_k_correction",
+      "expression_id": "a6043969-02d2-5006-a311-1081e0bd70eb",
+      "symbol": "redshift",
+      "variable_name": "redshift",
+      "source_symbol": "redshift",
+      "source_bound_id": "sciona-atoms-physics:sciona.atoms.physics.cosmology.atoms:flux_k_correction:bound:redshift",
+      "scope": "variable",
+      "bound_kind": "domain",
+      "min_value": 0.0,
+      "max_value": null,
+      "lower_value": 0.0,
+      "upper_value": null,
+      "lower_inclusive": true,
+      "upper_inclusive": true,
+      "dim_signature": "1",
+      "validity_statement": "redshift >= 0.0",
+      "evidence_ref_key": "sciona-atoms-physics:sciona.atoms.physics.cosmology.atoms:flux_k_correction:bound:redshift",
+      "confidence": "high",
+      "review_status": "automated_pass",
+      "metadata": {
+        "provider": "sciona-atoms-physics",
+        "atom_module": "sciona.atoms.physics.cosmology.atoms",
+        "source_expression_id": "sciona-atoms-physics:sciona.atoms.physics.cosmology.atoms:flux_k_correction",
+        "source_symbol": "redshift",
+        "ordinal": 1
+      },
+      "ordinal": 1
+    }
+  ]
+}

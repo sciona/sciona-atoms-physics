@@ -94,6 +94,7 @@ def test_manifest_covers_migrated_symbolic_atom_packages() -> None:
         "dm_can_brute_force",
         "dm_candidate_filter",
         "fold_signal",
+        "flux_k_correction",
         "greedy_track_commit",
         "helix_cap_intersection",
         "helix_cylinder_intersection",
@@ -122,6 +123,7 @@ def test_manifest_covers_migrated_symbolic_atom_packages() -> None:
     }.issubset(rows)
 
     assert rows["dedispersionkernel"]["atom_module"].endswith("astroflow.atoms")
+    assert rows["flux_k_correction"]["atom_module"].endswith("cosmology.atoms")
     assert rows["delay_from_DM"]["atom_module"].endswith("pulsar.pipeline")
     assert rows["dm_can_brute_force"]["atom_module"].endswith("pulsar_folding.atoms")
     assert rows["dm_candidate_filter"]["atom_module"].endswith("pulsar_folding.dm_can")
