@@ -20,6 +20,8 @@ from collections.abc import Iterable, Mapping
 from pathlib import Path
 from typing import Any
 
+from fractions import Fraction
+
 from sciona.ghost.registry import REGISTRY
 
 
@@ -95,6 +97,18 @@ def build_symbolic_publication_manifest(
                 "dim_signature": symbolic_dim_signature,
             },
         )
+        equivalence_class_hash = _canonical_zero_form(symbolic.srepr_str)
+        exp_sig = _exponent_signature(
+            symbolic.srepr_str,
+            symbolic.constants,
+            symbolic.variables,
+        )
+        exp_sig_hash = _exponent_signature_hash(exp_sig)
+        inv_forms = _invariant_forms(
+            symbolic.srepr_str,
+            symbolic.variables,
+            symbolic.constants,
+        )
         mechanism_tags = _metadata_or_heuristic_tags(
             symbolic,
             entry,
@@ -127,6 +141,11 @@ def build_symbolic_publication_manifest(
             "canonical_expr_hash": canonical_expr_hash,
             "topology_hash": topology_hash,
             "dimensional_hash": dimensional_hash,
+            "equivalence_class_hash": equivalence_class_hash,
+            "equivalence_class_representative": False,  # set in post-pass
+            "exponent_signature": exp_sig,
+            "exponent_signature_hash": exp_sig_hash,
+            "invariant_forms": inv_forms,
             "parse_status": "normalized",
             "parse_confidence": 1.0,
             "review_status": "automated_pass",
@@ -230,6 +249,14 @@ def build_symbolic_publication_manifest(
                     "ordinal": ordinal,
                 }
             )
+
+    # Post-pass: mark one representative per equivalence class.
+    seen_equivalence_classes: set[str] = set()
+    for row in expressions:
+        eq_hash = row["equivalence_class_hash"]
+        if eq_hash not in seen_equivalence_classes:
+            row["equivalence_class_representative"] = True
+            seen_equivalence_classes.add(eq_hash)
 
     return {
         "provider": provider,
@@ -419,6 +446,209 @@ def _topology_key(srepr_str: str) -> str:
         return serialize_expr(expr.xreplace(replacements))
     except Exception:  # noqa: BLE001 - fallback keeps manifest generation robust.
         return srepr_str
+
+
+def _canonical_zero_form(srepr_str: str) -> str:
+    """Reduce an equation to a canonical zero-form hash for equivalence grouping.
+
+    For ``Eq(lhs, rhs)`` the canonical form is the *monic polynomial* of the
+    expanded numerator of ``cancel(lhs - rhs)``.  This normalizes away both
+    sign and denominator differences so that ``F = ma``, ``a = F/m``, and
+    ``F - ma = 0`` all hash to the same equivalence class.
+    """
+    try:
+        import signal
+        import sympy as sp
+
+        from sciona.ghost.symbolic import deserialize_expr, serialize_expr
+
+        def _timeout_handler(_signum: int, _frame: Any) -> None:
+            raise TimeoutError
+
+        old_handler = signal.signal(signal.SIGALRM, _timeout_handler)
+        signal.alarm(5)
+        try:
+            expr = deserialize_expr(srepr_str)
+            if isinstance(expr, sp.Equality):
+                diff = expr.lhs - expr.rhs
+            else:
+                diff = expr
+            # cancel() clears fractions; extract numerator to remove denominator.
+            numer = sp.fraction(sp.cancel(diff))[0]
+            expanded = sp.expand(numer)
+            # Convert to monic polynomial so the sign/leading coefficient is stable.
+            free = sorted(expanded.free_symbols, key=lambda s: str(s))
+            if free:
+                try:
+                    canonical = sp.Poly(expanded, *free).monic().as_expr()
+                except (sp.PolynomialError, sp.GeneratorsNeeded):
+                    canonical = expanded
+            else:
+                canonical = expanded
+            # Replace symbols with positional placeholders for canonical ordering.
+            symbols = sorted(canonical.free_symbols, key=lambda s: str(s))
+            replacements = {
+                s: sp.Symbol(f"_v{i}", real=s.is_real) for i, s in enumerate(symbols)
+            }
+            canonical_srepr = serialize_expr(canonical.xreplace(replacements))
+            return _stable_hash("equivalence_class", canonical_srepr)
+        finally:
+            signal.alarm(0)
+            signal.signal(signal.SIGALRM, old_handler)
+    except Exception:  # noqa: BLE001
+        return _stable_hash("equivalence_class", srepr_str)
+
+
+def _exponent_signature(
+    srepr_str: str,
+    constants: Mapping[str, float],
+    variables: Mapping[str, str],
+) -> dict[str, str] | None:
+    """Extract power-law exponent signature from a monomial expression.
+
+    For expressions of the form ``y = C * x1^a * x2^b * ...`` this returns a
+    dict mapping each data-backed variable symbol to its rational exponent
+    string (e.g. ``{"DM": "1", "fchan": "-2"}``).  Returns ``None`` for
+    non-monomial expressions (those containing ``Add``, ``sin``, ``log``, etc.).
+    """
+    try:
+        import sympy as sp
+
+        from sciona.ghost.symbolic import deserialize_expr
+
+        expr = deserialize_expr(srepr_str)
+        if isinstance(expr, sp.Equality):
+            # Work with the RHS; the LHS is the output variable.
+            rhs = expr.rhs
+            output_symbol = expr.lhs
+        else:
+            return None
+
+        # Substitute known constants with numeric values.
+        const_subs = {}
+        for sym in rhs.free_symbols:
+            name = str(sym)
+            if name in constants:
+                const_subs[sym] = sp.Rational(constants[name]).limit_denominator(10**12)
+        substituted = rhs.subs(const_subs)
+
+        # Check if the result is a monomial (product of powers of symbols).
+        # After expanding, it must be a single Mul/Pow/Symbol term — no Add.
+        simplified = sp.powsimp(substituted, force=True)
+        if simplified.has(sp.sin, sp.cos, sp.tan, sp.log, sp.exp, sp.Add):
+            return None
+
+        # Extract exponents for each remaining symbol.
+        data_symbols = {
+            sym
+            for sym in simplified.free_symbols
+            if str(sym) != str(output_symbol)
+        }
+        if not data_symbols:
+            return None
+
+        signature: dict[str, str] = {}
+        for sym in sorted(data_symbols, key=lambda s: str(s)):
+            name = str(sym)
+            role = variables.get(name, "")
+            if role == "constant":
+                continue
+            exp = simplified.as_coeff_exponent(sym)[1]
+            # For multi-variable monomials, as_coeff_exponent may not work.
+            # Fall back to as_powers_dict.
+            if exp == 0:
+                powers = simplified.as_powers_dict()
+                exp = powers.get(sym, sp.Integer(0))
+            if exp == 0:
+                continue
+            frac = Fraction(str(exp)).limit_denominator(12)
+            signature[name] = str(frac)
+        return signature if signature else None
+    except Exception:  # noqa: BLE001
+        return None
+
+
+def _exponent_signature_hash(signature: dict[str, str] | None) -> str | None:
+    """Hash an exponent signature for O(1) lookup."""
+    if signature is None:
+        return None
+    # Sort by symbol name for deterministic hashing.
+    return _stable_hash("exponent_sig", sorted(signature.items()))
+
+
+def _invariant_forms(
+    srepr_str: str,
+    variables: Mapping[str, str],
+    constants: Mapping[str, float],
+) -> list[dict[str, Any]] | None:
+    """Isolate each unknown constant to produce invariant expressions.
+
+    For ``delay = K * DM / f^2``, isolating ``K`` yields ``K = delay * f^2 / DM``,
+    so the invariant expression over data-only variables is ``delay * f^2 / DM``.
+    If that expression evaluates to a near-constant array over the dataset, the
+    law holds and the mean is the fitted constant.
+
+    Returns a list of dicts, one per successfully isolated constant, or ``None``
+    if no constants exist or isolation fails for all of them.
+    """
+    try:
+        import signal
+        import sympy as sp
+
+        from sciona.ghost.symbolic import deserialize_expr, serialize_expr
+
+        expr = deserialize_expr(srepr_str)
+        if not isinstance(expr, sp.Equality):
+            return None
+
+        constant_symbols = {
+            sym: str(sym)
+            for sym in expr.free_symbols
+            if variables.get(str(sym)) == "constant"
+        }
+        if not constant_symbols:
+            return None
+
+        def _timeout_handler(_signum: int, _frame: Any) -> None:
+            raise TimeoutError
+
+        forms: list[dict[str, Any]] = []
+        for const_sym, const_name in sorted(constant_symbols.items(), key=lambda kv: kv[1]):
+            try:
+                # Guard against sympy.solve hanging on complex expressions.
+                old_handler = signal.signal(signal.SIGALRM, _timeout_handler)
+                signal.alarm(5)
+                try:
+                    solutions = sp.solve(expr, const_sym, dict=True)
+                finally:
+                    signal.alarm(0)
+                    signal.signal(signal.SIGALRM, old_handler)
+                if not solutions:
+                    continue
+                isolated_expr = solutions[0][const_sym]
+                # Substitute other constants with numeric values so the invariant
+                # only contains data-backed variables.
+                other_const_subs = {}
+                for sym in isolated_expr.free_symbols:
+                    name = str(sym)
+                    if name in constants and name != const_name:
+                        other_const_subs[sym] = sp.Rational(
+                            constants[name]
+                        ).limit_denominator(10**12)
+                invariant_expr = isolated_expr.subs(other_const_subs)
+                forms.append(
+                    {
+                        "isolated_symbol": const_name,
+                        "known_value": constants.get(const_name),
+                        "invariant_expr_srepr": serialize_expr(invariant_expr),
+                        "invariant_expr_text": str(invariant_expr),
+                    }
+                )
+            except Exception:  # noqa: BLE001
+                continue
+        return forms if forms else None
+    except Exception:  # noqa: BLE001
+        return None
 
 
 def _compact_dim_map(dim_map: Mapping[str, Any]) -> dict[str, str]:
