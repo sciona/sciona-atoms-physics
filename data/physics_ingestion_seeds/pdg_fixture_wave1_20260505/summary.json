@@ -1,0 +1,88 @@
+{
+  "apply": {
+    "ok": true,
+    "performed": true,
+    "reason": "applied",
+    "requested": true
+  },
+  "equation_count": 3,
+  "generated_at": "2026-05-05T16:05:38.336539+00:00",
+  "graph_diagnostic_count": 0,
+  "inference_edge_count": 2,
+  "out_dir": "output/physics_pdg_first_wave_local_apply_20260505",
+  "payload": "/Users/conrad/personal/sciona-matcher/tests/physics_ingest/fixtures/pdg_payloads/solve_substitute_chain.pdg.json",
+  "pdg_publication_summary": {
+    "artifact_envelope_row_counts": {
+      "artifact_versions": 1,
+      "artifacts": 1
+    },
+    "artifact_envelope_total_row_count": 2,
+    "artifact_relationship_row_count": 2,
+    "cdg_candidate_manifest_count": 1,
+    "diagnostic_count": 0,
+    "diagnostics_by_reason": {},
+    "diagnostics_by_severity": {},
+    "diagnostics_by_table": {},
+    "operation_kind_counts": {
+      "solve": 1,
+      "substitute": 1
+    },
+    "relationship_kind_counts": {
+      "algebraic_rearrangement_of": 1,
+      "derives_from": 1
+    },
+    "scaffold_version": "phase4.pdg_cdg_scaffold.v1",
+    "source_system": "physics_derivation_graph",
+    "summary_kind": "pdg_cdg_publication_rows_summary.v1",
+    "table_row_counts": {
+      "artifact_cdg_bindings": 4,
+      "artifact_cdg_edges": 1,
+      "artifact_cdg_nodes": 2,
+      "artifact_relationships": 2,
+      "artifact_versions": 1,
+      "artifacts": 1
+    }
+  },
+  "relationship_summary": {
+    "cdg_candidate_manifest_count": 1,
+    "operation_kind_counts": {
+      "solve_for": 1,
+      "substitution": 1
+    },
+    "relationship_kind_counts": {
+      "algebraic_rearrangement_of": 1,
+      "derives_from": 1
+    },
+    "relationship_row_count": 2,
+    "scaffold_version": "phase4.pdg_cdg_scaffold.v1",
+    "skipped_edge_count": 0,
+    "skipped_edge_reasons": {},
+    "source_system": "physics_derivation_graph",
+    "summary_kind": "pdg_relationship_ingest_summary.v1"
+  },
+  "snapshot_id": "8b175a30-04dd-5fd3-afe9-4d9e4831797e",
+  "source_version": "pdg-first-wave-2026-05-05",
+  "table_row_counts": {
+    "artifact_cdg_bindings": 4,
+    "artifact_cdg_edges": 1,
+    "artifact_cdg_nodes": 2,
+    "artifact_relationships": 2,
+    "artifact_symbolic_expressions": 3,
+    "artifact_versions": 4,
+    "artifacts": 4,
+    "physics_equation_candidates": 3,
+    "physics_ingest_snapshots": 1
+  },
+  "write_plan_table_modes": {
+    "artifact_cdg_bindings": "upsert",
+    "artifact_cdg_edges": "upsert",
+    "artifact_cdg_nodes": "upsert",
+    "artifact_relationships": "upsert",
+    "artifact_symbolic_expressions": "upsert",
+    "artifact_versions": "upsert",
+    "artifacts": "upsert",
+    "physics_equation_candidates": "upsert",
+    "physics_ingest_snapshots": "upsert"
+  },
+  "write_plan_total_row_count": 24
+}

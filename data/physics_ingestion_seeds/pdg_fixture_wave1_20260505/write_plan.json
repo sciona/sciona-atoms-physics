@@ -1,0 +1,579 @@
+{
+  "audit_summary": {
+    "batch_count": 9,
+    "input_row_counts": {
+      "artifact_cdg_bindings": 4,
+      "artifact_cdg_edges": 1,
+      "artifact_cdg_nodes": 2,
+      "artifact_relationships": 2,
+      "artifact_symbolic_expressions": 3,
+      "artifact_versions": 4,
+      "artifacts": 4,
+      "physics_equation_candidates": 3,
+      "physics_ingest_snapshots": 1
+    },
+    "planned_row_counts": {
+      "artifact_cdg_bindings": 4,
+      "artifact_cdg_edges": 1,
+      "artifact_cdg_nodes": 2,
+      "artifact_relationships": 2,
+      "artifact_symbolic_expressions": 3,
+      "artifact_versions": 4,
+      "artifacts": 4,
+      "physics_equation_candidates": 3,
+      "physics_ingest_snapshots": 1
+    },
+    "table_order": [
+      "physics_ingest_snapshots",
+      "physics_equation_candidates",
+      "artifacts",
+      "artifact_versions",
+      "artifact_symbolic_expressions",
+      "artifact_relationships",
+      "artifact_cdg_nodes",
+      "artifact_cdg_edges",
+      "artifact_cdg_bindings"
+    ],
+    "total_row_count": 24
+  },
+  "batches": [
+    {
+      "conflict_keys": [
+        "snapshot_id"
+      ],
+      "row_count": 1,
+      "rows": [
+        {
+          "adapter_name": "sciona.physics_ingest.sources.pdg",
+          "adapter_version": "wave1.pdg_scaffold.v1",
+          "license_expression": "",
+          "payload": {
+            "description": "Offline PDG payload fixture covering a solve and substitute chain.",
+            "equations": [
+              {
+                "id": "eq:newton_second_law",
+                "label": "Newton's second law",
+                "latex": "F = m a",
+                "mechanism_tags": [
+                  "dynamics",
+                  "force_balance"
+                ]
+              },
+              {
+                "id": "eq:acceleration_solved",
+                "label": "Acceleration from force",
+                "latex": "a = F / m"
+              },
+              {
+                "id": "eq:constant_mass_force",
+                "label": "Force for constant mass",
+                "latex": "F(t) = m \\frac{d^2 x}{dt^2}"
+              }
+            ],
+            "fixture_id": "pdg_solve_substitute_chain",
+            "inference_edges": [
+              {
+                "bindings": {
+                  "solve_for": "a"
+                },
+                "confidence": 0.93,
+                "id": "edge:solve_for_a",
+                "rule": "solve for acceleration",
+                "source": "eq:newton_second_law",
+                "target": "eq:acceleration_solved"
+              },
+              {
+                "assumptions": [
+                  "mass is constant"
+                ],
+                "confidence": 0.81,
+                "id": "edge:substitute_acceleration",
+                "rule": "substitution",
+                "source": "eq:acceleration_solved",
+                "target": "eq:constant_mass_force"
+              }
+            ],
+            "validation_subject": "pdg_fixture:solve_substitute_chain"
+          },
+          "payload_sha256": "f3f9c2529446cf31829dd11f37f9d2a5ce2d753e053cbea217350d16f1a266e5",
+          "provenance_summary": "First local PDG ingestion wave from a checked-in derivation fixture.",
+          "retrieved_at": "2026-05-05T16:05:37.864890+00:00",
+          "snapshot_id": "8b175a30-04dd-5fd3-afe9-4d9e4831797e",
+          "source_system": "physics_derivation_graph",
+          "source_uri": "/Users/conrad/personal/sciona-matcher/tests/physics_ingest/fixtures/pdg_payloads/solve_substitute_chain.pdg.json",
+          "source_version": "pdg-first-wave-2026-05-05"
+        }
+      ],
+      "table": "physics_ingest_snapshots"
+    },
+    {
+      "conflict_keys": [
+        "candidate_id"
+      ],
+      "row_count": 3,
+      "rows": [
+        {
+          "behavioral_archetypes": [],
+          "candidate_id": "b8ec5e5a-7af8-56ed-b62c-0f3c7d4e8a42",
+          "candidate_status": "raw_imported",
+          "mechanism_tags": [
+            "dynamics",
+            "force_balance"
+          ],
+          "notes": "Imported from Physics Derivation Graph; symbolic normalization pending.",
+          "parse_confidence": 0.0,
+          "priority_score": 0.0,
+          "raw_formula": "F = m a",
+          "raw_formula_format": "latex",
+          "snapshot_id": "8b175a30-04dd-5fd3-afe9-4d9e4831797e",
+          "source_candidate_id": "eq:newton_second_law",
+          "source_description": "",
+          "source_entity_uri": "",
+          "source_label": "Newton's second law",
+          "source_payload": {
+            "id": "eq:newton_second_law",
+            "label": "Newton's second law",
+            "latex": "F = m a",
+            "mechanism_tags": [
+              "dynamics",
+              "force_balance"
+            ]
+          }
+        },
+        {
+          "behavioral_archetypes": [],
+          "candidate_id": "84c458c6-c7a3-5a62-9144-76a83c90ce16",
+          "candidate_status": "raw_imported",
+          "mechanism_tags": [],
+          "notes": "Imported from Physics Derivation Graph; symbolic normalization pending.",
+          "parse_confidence": 0.0,
+          "priority_score": 0.0,
+          "raw_formula": "a = F / m",
+          "raw_formula_format": "latex",
+          "snapshot_id": "8b175a30-04dd-5fd3-afe9-4d9e4831797e",
+          "source_candidate_id": "eq:acceleration_solved",
+          "source_description": "",
+          "source_entity_uri": "",
+          "source_label": "Acceleration from force",
+          "source_payload": {
+            "id": "eq:acceleration_solved",
+            "label": "Acceleration from force",
+            "latex": "a = F / m"
+          }
+        },
+        {
+          "behavioral_archetypes": [],
+          "candidate_id": "0d6e4192-e071-55ca-8549-3ccfec0eabca",
+          "candidate_status": "raw_imported",
+          "mechanism_tags": [],
+          "notes": "Imported from Physics Derivation Graph; symbolic normalization pending.",
+          "parse_confidence": 0.0,
+          "priority_score": 0.0,
+          "raw_formula": "F(t) = m \\frac{d^2 x}{dt^2}",
+          "raw_formula_format": "latex",
+          "snapshot_id": "8b175a30-04dd-5fd3-afe9-4d9e4831797e",
+          "source_candidate_id": "eq:constant_mass_force",
+          "source_description": "",
+          "source_entity_uri": "",
+          "source_label": "Force for constant mass",
+          "source_payload": {
+            "id": "eq:constant_mass_force",
+            "label": "Force for constant mass",
+            "latex": "F(t) = m \\frac{d^2 x}{dt^2}"
+          }
+        }
+      ],
+      "table": "physics_equation_candidates"
+    },
+    {
+      "conflict_keys": [
+        "artifact_id"
+      ],
+      "row_count": 4,
+      "rows": [
+        {
+          "artifact_id": "a5e01ded-9470-58ed-9521-dddb9fecfdbe",
+          "artifact_kind": "atom",
+          "description": "PDG equation node: Newton's second law",
+          "fqdn": "physics.pdg.first_wave.equation.eq_newton_second_law",
+          "is_ffi": false,
+          "is_publishable": false,
+          "is_stochastic": false,
+          "leaf_count": 1,
+          "namespace_path": "pdg/first_wave/equations",
+          "namespace_root": "physics",
+          "source_kind": "generated",
+          "source_module_path": "pdg.equations",
+          "source_package": "pdg",
+          "source_symbol": "eq_newton_second_law",
+          "status": "draft",
+          "top_level_input_arity": 0,
+          "top_level_output_arity": 1,
+          "topo_hash": "",
+          "verified_leaf_coverage": 0.0,
+          "visibility_tier": "internal"
+        },
+        {
+          "artifact_id": "b50afc70-2eb4-5142-9481-496ef24804d7",
+          "artifact_kind": "atom",
+          "description": "PDG equation node: Acceleration from force",
+          "fqdn": "physics.pdg.first_wave.equation.eq_acceleration_solved",
+          "is_ffi": false,
+          "is_publishable": false,
+          "is_stochastic": false,
+          "leaf_count": 1,
+          "namespace_path": "pdg/first_wave/equations",
+          "namespace_root": "physics",
+          "source_kind": "generated",
+          "source_module_path": "pdg.equations",
+          "source_package": "pdg",
+          "source_symbol": "eq_acceleration_solved",
+          "status": "draft",
+          "top_level_input_arity": 0,
+          "top_level_output_arity": 1,
+          "topo_hash": "",
+          "verified_leaf_coverage": 0.0,
+          "visibility_tier": "internal"
+        },
+        {
+          "artifact_id": "635b5db3-2b77-5d15-8b98-af325678ee79",
+          "artifact_kind": "atom",
+          "description": "PDG equation node: Force for constant mass",
+          "fqdn": "physics.pdg.first_wave.equation.eq_constant_mass_force",
+          "is_ffi": false,
+          "is_publishable": false,
+          "is_stochastic": false,
+          "leaf_count": 1,
+          "namespace_path": "pdg/first_wave/equations",
+          "namespace_root": "physics",
+          "source_kind": "generated",
+          "source_module_path": "pdg.equations",
+          "source_package": "pdg",
+          "source_symbol": "eq_constant_mass_force",
+          "status": "draft",
+          "top_level_input_arity": 0,
+          "top_level_output_arity": 1,
+          "topo_hash": "",
+          "verified_leaf_coverage": 0.0,
+          "visibility_tier": "internal"
+        },
+        {
+          "artifact_id": "93997609-5796-5a3e-8824-85448fad3dd2",
+          "artifact_kind": "cdg",
+          "description": "First-wave PDG-derived CDG from checked-in source payload",
+          "fqdn": "physics.pdg.first_wave.cdg.pdg_cdg_candidate_e8f50f43f1a04601",
+          "is_ffi": false,
+          "is_publishable": false,
+          "is_stochastic": false,
+          "leaf_count": 2,
+          "namespace_path": "pdg/first_wave/cdg",
+          "namespace_root": "physics",
+          "source_kind": "generated",
+          "source_module_path": "pdg.derivations",
+          "source_package": "pdg",
+          "source_symbol": "pdg_first_wave_cdg_pdg_cdg_candidate_e8f50f43f1a04601",
+          "status": "draft",
+          "top_level_input_arity": 3,
+          "top_level_output_arity": 1,
+          "topo_hash": "",
+          "verified_leaf_coverage": 0.0,
+          "visibility_tier": "internal"
+        }
+      ],
+      "table": "artifacts"
+    },
+    {
+      "conflict_keys": [
+        "version_id"
+      ],
+      "row_count": 4,
+      "rows": [
+        {
+          "artifact_id": "a5e01ded-9470-58ed-9521-dddb9fecfdbe",
+          "content_hash": "5d5c2212cdac7d4db02e845f4ee79d734702fc39499bfa7e09a93cfe3145f67f",
+          "fingerprint": "5d5c2212cdac7d4db02e845f4ee79d734702fc39499bfa7e09a93cfe3145f67f",
+          "is_latest": true,
+          "s3_key": "",
+          "semver": "2026.5.5",
+          "version_id": "cb3666b1-4b72-5899-92cf-8ab2c2a99b25"
+        },
+        {
+          "artifact_id": "b50afc70-2eb4-5142-9481-496ef24804d7",
+          "content_hash": "a16acbe89caf16f1a2526ba0c48e8a9eb42823dd6500b1471bf59c30892c2254",
+          "fingerprint": "a16acbe89caf16f1a2526ba0c48e8a9eb42823dd6500b1471bf59c30892c2254",
+          "is_latest": true,
+          "s3_key": "",
+          "semver": "2026.5.5",
+          "version_id": "f6cb2225-a698-5d35-b408-079bca1d4247"
+        },
+        {
+          "artifact_id": "635b5db3-2b77-5d15-8b98-af325678ee79",
+          "content_hash": "8a181e8e72499adbe83a1e75e548d08a5c228f045822f1e228a67003879b028f",
+          "fingerprint": "8a181e8e72499adbe83a1e75e548d08a5c228f045822f1e228a67003879b028f",
+          "is_latest": true,
+          "s3_key": "",
+          "semver": "2026.5.5",
+          "version_id": "7fb7db3c-23b3-564d-a86f-52e3b89e19d5"
+        },
+        {
+          "artifact_id": "93997609-5796-5a3e-8824-85448fad3dd2",
+          "content_hash": "97dbc4000139b6514d678829e16c39e045f02f47ecbe91356863028decb932b3",
+          "fingerprint": "97dbc4000139b6514d678829e16c39e045f02f47ecbe91356863028decb932b3",
+          "is_latest": true,
+          "s3_key": "",
+          "semver": "2026.5.5",
+          "version_id": "693697cf-a97c-53bd-8d6b-19dc3c7697c1"
+        }
+      ],
+      "table": "artifact_versions"
+    },
+    {
+      "conflict_keys": [
+        "expression_id"
+      ],
+      "row_count": 3,
+      "rows": [
+        {
+          "artifact_id": "a5e01ded-9470-58ed-9521-dddb9fecfdbe",
+          "assumptions_json": {
+            "assumptions": []
+          },
+          "behavioral_archetypes": [],
+          "candidate_id": "b8ec5e5a-7af8-56ed-b62c-0f3c7d4e8a42",
+          "evidence_json": {
+            "label": "Newton's second law",
+            "pdg_node_id": "eq:newton_second_law",
+            "source_system": "physics_derivation_graph",
+            "source_version": "pdg-first-wave-2026-05-05"
+          },
+          "expression_id": "d81a1afd-19fc-5104-8b38-f87f5843e72e",
+          "expression_kind": "equation",
+          "expression_role": "primary",
+          "mechanism_tags": [
+            "dynamics",
+            "force_balance"
+          ],
+          "parse_confidence": 0.5,
+          "parse_status": "raw_imported",
+          "raw_formula": "F = m a",
+          "raw_formula_format": "latex",
+          "review_status": "needs_human",
+          "source_expression_id": "eq:newton_second_law",
+          "validation_status": "unknown",
+          "version_id": "cb3666b1-4b72-5899-92cf-8ab2c2a99b25"
+        },
+        {
+          "artifact_id": "b50afc70-2eb4-5142-9481-496ef24804d7",
+          "assumptions_json": {
+            "assumptions": []
+          },
+          "behavioral_archetypes": [],
+          "candidate_id": "84c458c6-c7a3-5a62-9144-76a83c90ce16",
+          "evidence_json": {
+            "label": "Acceleration from force",
+            "pdg_node_id": "eq:acceleration_solved",
+            "source_system": "physics_derivation_graph",
+            "source_version": "pdg-first-wave-2026-05-05"
+          },
+          "expression_id": "13d98092-31ea-55a2-a3a0-b1f8820ccd63",
+          "expression_kind": "equation",
+          "expression_role": "primary",
+          "mechanism_tags": [],
+          "parse_confidence": 0.5,
+          "parse_status": "raw_imported",
+          "raw_formula": "a = F / m",
+          "raw_formula_format": "latex",
+          "review_status": "needs_human",
+          "source_expression_id": "eq:acceleration_solved",
+          "validation_status": "unknown",
+          "version_id": "f6cb2225-a698-5d35-b408-079bca1d4247"
+        },
+        {
+          "artifact_id": "635b5db3-2b77-5d15-8b98-af325678ee79",
+          "assumptions_json": {
+            "assumptions": []
+          },
+          "behavioral_archetypes": [],
+          "candidate_id": "0d6e4192-e071-55ca-8549-3ccfec0eabca",
+          "evidence_json": {
+            "label": "Force for constant mass",
+            "pdg_node_id": "eq:constant_mass_force",
+            "source_system": "physics_derivation_graph",
+            "source_version": "pdg-first-wave-2026-05-05"
+          },
+          "expression_id": "f80a4411-adcd-57e7-9e1e-3d134b786ff3",
+          "expression_kind": "equation",
+          "expression_role": "primary",
+          "mechanism_tags": [],
+          "parse_confidence": 0.5,
+          "parse_status": "raw_imported",
+          "raw_formula": "F(t) = m \\frac{d^2 x}{dt^2}",
+          "raw_formula_format": "latex",
+          "review_status": "needs_human",
+          "source_expression_id": "eq:constant_mass_force",
+          "validation_status": "unknown",
+          "version_id": "7fb7db3c-23b3-564d-a86f-52e3b89e19d5"
+        }
+      ],
+      "table": "artifact_symbolic_expressions"
+    },
+    {
+      "conflict_keys": [
+        "relationship_id"
+      ],
+      "row_count": 2,
+      "rows": [
+        {
+          "assumptions_json": {
+            "assumptions": []
+          },
+          "binding_metadata": {
+            "solve_for": "a"
+          },
+          "confidence": 0.93,
+          "evidence_json": {
+            "evidence": {},
+            "operation_kind": "solve_for",
+            "pdg_edge_id": "edge:solve_for_a",
+            "pdg_source_node_id": "eq:newton_second_law",
+            "pdg_target_node_id": "eq:acceleration_solved",
+            "source_system": "physics_derivation_graph"
+          },
+          "inference_rule_id": "solve_for_acceleration",
+          "relationship_id": "1be3862b-dddd-5341-84eb-6fd240029c20",
+          "relationship_kind": "algebraic_rearrangement_of",
+          "relationship_label": "solve for acceleration",
+          "source_expression_id": "13d98092-31ea-55a2-a3a0-b1f8820ccd63",
+          "source_kind": "physics_derivation_graph",
+          "source_node_id": "eq:acceleration_solved",
+          "target_expression_id": "d81a1afd-19fc-5104-8b38-f87f5843e72e",
+          "target_node_id": "eq:newton_second_law",
+          "verified": false
+        },
+        {
+          "assumptions_json": {
+            "assumptions": [
+              "mass is constant"
+            ]
+          },
+          "binding_metadata": {},
+          "confidence": 0.81,
+          "evidence_json": {
+            "evidence": {},
+            "operation_kind": "substitution",
+            "pdg_edge_id": "edge:substitute_acceleration",
+            "pdg_source_node_id": "eq:acceleration_solved",
+            "pdg_target_node_id": "eq:constant_mass_force",
+            "source_system": "physics_derivation_graph"
+          },
+          "inference_rule_id": "substitution",
+          "relationship_id": "cd0af4a9-d0f3-58ce-8ba9-5e41999c452f",
+          "relationship_kind": "derives_from",
+          "relationship_label": "substitution",
+          "source_expression_id": "f80a4411-adcd-57e7-9e1e-3d134b786ff3",
+          "source_kind": "physics_derivation_graph",
+          "source_node_id": "eq:constant_mass_force",
+          "target_expression_id": "13d98092-31ea-55a2-a3a0-b1f8820ccd63",
+          "target_node_id": "eq:acceleration_solved",
+          "verified": false
+        }
+      ],
+      "table": "artifact_relationships"
+    },
+    {
+      "conflict_keys": [
+        "version_id",
+        "node_id"
+      ],
+      "row_count": 2,
+      "rows": [
+        {
+          "concept_type": "pdg_derivation_step",
+          "description": "PDG algebraic_rearrangement_of step from edge edge:solve_for_a",
+          "matched_primitive": "solve",
+          "name": "solve for acceleration",
+          "node_id": "pdg_step_1",
+          "parent_node_id": "",
+          "status": "candidate",
+          "type_signature": "{\"assumptions\":[],\"dimensions\":{},\"inference_rule_id\":\"solve_for_acceleration\",\"inputs\":[\"d81a1afd-19fc-5104-8b38-f87f5843e72e\"],\"operation_kind\":\"solve\",\"output\":\"13d98092-31ea-55a2-a3a0-b1f8820ccd63\",\"relationship_kind\":\"algebraic_rearrangement_of\",\"source_pdg_inference_id\":\"edge:solve_for_a\",\"variable_bindings\":{\"solve_for\":\"a\"}}",
+          "version_id": "693697cf-a97c-53bd-8d6b-19dc3c7697c1"
+        },
+        {
+          "concept_type": "pdg_derivation_step",
+          "description": "PDG derives_from step from edge edge:substitute_acceleration",
+          "matched_primitive": "substitute",
+          "name": "substitution",
+          "node_id": "pdg_step_2",
+          "parent_node_id": "",
+          "status": "candidate",
+          "type_signature": "{\"assumptions\":[\"mass is constant\"],\"dimensions\":{},\"inference_rule_id\":\"substitution\",\"inputs\":[\"13d98092-31ea-55a2-a3a0-b1f8820ccd63\"],\"operation_kind\":\"substitute\",\"output\":\"f80a4411-adcd-57e7-9e1e-3d134b786ff3\",\"relationship_kind\":\"derives_from\",\"source_pdg_inference_id\":\"edge:substitute_acceleration\",\"variable_bindings\":{}}",
+          "version_id": "693697cf-a97c-53bd-8d6b-19dc3c7697c1"
+        }
+      ],
+      "table": "artifact_cdg_nodes"
+    },
+    {
+      "conflict_keys": [
+        "version_id",
+        "source_id",
+        "target_id",
+        "output_name",
+        "input_name"
+      ],
+      "row_count": 1,
+      "rows": [
+        {
+          "input_name": "input",
+          "output_name": "13d98092-31ea-55a2-a3a0-b1f8820ccd63",
+          "source_id": "pdg_step_1",
+          "target_id": "pdg_step_2",
+          "version_id": "693697cf-a97c-53bd-8d6b-19dc3c7697c1"
+        }
+      ],
+      "table": "artifact_cdg_edges"
+    },
+    {
+      "conflict_keys": [
+        "version_id",
+        "node_id",
+        "bound_artifact_fqdn"
+      ],
+      "row_count": 4,
+      "rows": [
+        {
+          "binding_confidence": 0.75,
+          "binding_source": "pdg_first_wave",
+          "bound_artifact_fqdn": "physics.pdg.first_wave.equation.eq_newton_second_law",
+          "bound_version_content_hash": "5d5c2212cdac7d4db02e845f4ee79d734702fc39499bfa7e09a93cfe3145f67f",
+          "node_id": "pdg_step_1",
+          "version_id": "693697cf-a97c-53bd-8d6b-19dc3c7697c1"
+        },
+        {
+          "binding_confidence": 0.75,
+          "binding_source": "pdg_first_wave",
+          "bound_artifact_fqdn": "physics.pdg.first_wave.equation.eq_acceleration_solved",
+          "bound_version_content_hash": "a16acbe89caf16f1a2526ba0c48e8a9eb42823dd6500b1471bf59c30892c2254",
+          "node_id": "pdg_step_1",
+          "version_id": "693697cf-a97c-53bd-8d6b-19dc3c7697c1"
+        },
+        {
+          "binding_confidence": 0.75,
+          "binding_source": "pdg_first_wave",
+          "bound_artifact_fqdn": "physics.pdg.first_wave.equation.eq_acceleration_solved",
+          "bound_version_content_hash": "a16acbe89caf16f1a2526ba0c48e8a9eb42823dd6500b1471bf59c30892c2254",
+          "node_id": "pdg_step_2",
+          "version_id": "693697cf-a97c-53bd-8d6b-19dc3c7697c1"
+        },
+        {
+          "binding_confidence": 0.75,
+          "binding_source": "pdg_first_wave",
+          "bound_artifact_fqdn": "physics.pdg.first_wave.equation.eq_constant_mass_force",
+          "bound_version_content_hash": "8a181e8e72499adbe83a1e75e548d08a5c228f045822f1e228a67003879b028f",
+          "node_id": "pdg_step_2",
+          "version_id": "693697cf-a97c-53bd-8d6b-19dc3c7697c1"
+        }
+      ],
+      "table": "artifact_cdg_bindings"
+    }
+  ]
+}

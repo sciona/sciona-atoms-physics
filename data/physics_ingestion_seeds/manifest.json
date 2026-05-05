@@ -1,0 +1,177 @@
+{
+  "generated_at": "2026-05-05T00:00:00Z",
+  "license_note": "Seed rows preserve source license expressions in each write plan row. PDG remote rows were ingested as CC-BY-4.0; Wikidata rows preserve Wikidata-derived provenance in row payloads.",
+  "manifest_version": "sciona-atoms-physics.physics_ingestion_seed_manifest.v1",
+  "seeds": [
+    {
+      "description": "Wikidata physics equations",
+      "kind": "wikidata",
+      "order": 1,
+      "seed_id": "wikidata_physics_20260505",
+      "selected_derivation_ids": [],
+      "snapshot_id": "d66a5026-a727-5223-954d-561c0b90baa8",
+      "source_version": "wikidata-physics-candidates-2026-05-05-limit-50",
+      "summary_path": "wikidata_physics_20260505/summary.json",
+      "summary_sha256": "6afd2530bf1bce2e13a91a142e1edb491ea7bc7d518781553e12c8266de6c817",
+      "table_row_counts": {
+        "physics_equation_candidates": 23,
+        "physics_ingest_snapshots": 1
+      },
+      "total_row_count": 24,
+      "write_plan_path": "wikidata_physics_20260505/write_plan.json",
+      "write_plan_sha256": "e6ab1e50c2c0800b01d30913926fbe90f62bb65321d2737869413be07101184e"
+    },
+    {
+      "description": "Checked-in PDG fixture first wave",
+      "kind": "pdg_fixture",
+      "order": 2,
+      "seed_id": "pdg_fixture_wave1_20260505",
+      "selected_derivation_ids": [],
+      "snapshot_id": "8b175a30-04dd-5fd3-afe9-4d9e4831797e",
+      "source_version": "pdg-first-wave-2026-05-05",
+      "summary_path": "pdg_fixture_wave1_20260505/summary.json",
+      "summary_sha256": "ff9eb530e5ecb74dd990a101369f9d769d16fe48012d6324bcb688421a6c358d",
+      "table_row_counts": {
+        "artifact_cdg_bindings": 4,
+        "artifact_cdg_edges": 1,
+        "artifact_cdg_nodes": 2,
+        "artifact_relationships": 2,
+        "artifact_symbolic_expressions": 3,
+        "artifact_versions": 4,
+        "artifacts": 4,
+        "physics_equation_candidates": 3,
+        "physics_ingest_snapshots": 1
+      },
+      "total_row_count": 24,
+      "write_plan_path": "pdg_fixture_wave1_20260505/write_plan.json",
+      "write_plan_sha256": "373a08e91e985e28133f5d0a6b202efc5865b14cb1da3aeb152360e882af268c"
+    },
+    {
+      "description": "Remote PDG promotion wave 1",
+      "kind": "pdg_remote",
+      "order": 3,
+      "seed_id": "pdg_remote_wave1_20260505",
+      "selected_derivation_ids": [
+        "000008",
+        "000009",
+        "000018",
+        "129143",
+        "000004"
+      ],
+      "snapshot_id": "4bdbb3bd-f872-54dd-9c0b-b7ae18e55b09",
+      "source_version": "pdg-remote-wave1-2026-05-05",
+      "summary_path": "pdg_remote_wave1_20260505/summary.json",
+      "summary_sha256": "c047b412ce08a9efebee1453116c03fe980292e5bcdccbf53e555951ed7183e1",
+      "table_row_counts": {
+        "artifact_cdg_bindings": 166,
+        "artifact_cdg_edges": 51,
+        "artifact_cdg_nodes": 83,
+        "artifact_relationships": 83,
+        "artifact_symbolic_expressions": 80,
+        "artifact_versions": 85,
+        "artifacts": 85,
+        "physics_equation_candidates": 80,
+        "physics_ingest_snapshots": 1
+      },
+      "total_row_count": 714,
+      "write_plan_path": "pdg_remote_wave1_20260505/write_plan.json",
+      "write_plan_sha256": "b5b06d61589fa209d3572c808108175a6e85d716e3fcfe05f9fbe36ba390573a"
+    },
+    {
+      "description": "Remote PDG promotion wave 2",
+      "kind": "pdg_remote",
+      "order": 4,
+      "seed_id": "pdg_remote_wave2_20260505",
+      "selected_derivation_ids": [
+        "000001",
+        "000006",
+        "142831",
+        "146432",
+        "884319"
+      ],
+      "snapshot_id": "5c5183a9-80c2-58e0-9c4e-9f7bdda7431d",
+      "source_version": "pdg-remote-wave2-2026-05-05",
+      "summary_path": "pdg_remote_wave2_20260505/summary.json",
+      "summary_sha256": "904fe37cfc89214e88713fdac16c500078a93a9c59b8d4d3aa1dbc7a4d009bf8",
+      "table_row_counts": {
+        "artifact_cdg_bindings": 133,
+        "artifact_cdg_edges": 49,
+        "artifact_cdg_nodes": 67,
+        "artifact_relationships": 67,
+        "artifact_symbolic_expressions": 64,
+        "artifact_versions": 69,
+        "artifacts": 69,
+        "physics_equation_candidates": 64,
+        "physics_ingest_snapshots": 1
+      },
+      "total_row_count": 583,
+      "write_plan_path": "pdg_remote_wave2_20260505/write_plan.json",
+      "write_plan_sha256": "c4755c134a73d1857b7a29f78ff63b6570bc248984229129ff7196ef48cb63f7"
+    },
+    {
+      "description": "Remote PDG promotion wave 3",
+      "kind": "pdg_remote",
+      "order": 5,
+      "seed_id": "pdg_remote_wave3_20260505",
+      "selected_derivation_ids": [
+        "000005",
+        "000011",
+        "000015",
+        "670255",
+        "513999"
+      ],
+      "snapshot_id": "9f7f3d0f-fcd8-5209-bb81-cd19097ba1f7",
+      "source_version": "pdg-remote-wave3-2026-05-05",
+      "summary_path": "pdg_remote_wave3_20260505/summary.json",
+      "summary_sha256": "4e8b20dbf8f775f570b3c9c97fe4cd7b8933e3f7d914cd98772f3f45afbe7bdd",
+      "table_row_counts": {
+        "artifact_cdg_bindings": 106,
+        "artifact_cdg_edges": 39,
+        "artifact_cdg_nodes": 53,
+        "artifact_relationships": 52,
+        "artifact_symbolic_expressions": 57,
+        "artifact_versions": 62,
+        "artifacts": 62,
+        "physics_equation_candidates": 57,
+        "physics_ingest_snapshots": 1
+      },
+      "total_row_count": 489,
+      "write_plan_path": "pdg_remote_wave3_20260505/write_plan.json",
+      "write_plan_sha256": "a9b1830ad38042865a654acdd756855ea9f064ded40ddf65d2233aa8d7c4b3b9"
+    },
+    {
+      "description": "Remote PDG promotion wave 4",
+      "kind": "pdg_remote",
+      "order": 6,
+      "seed_id": "pdg_remote_wave4_20260505",
+      "selected_derivation_ids": [
+        "000002",
+        "000003",
+        "000007",
+        "000012",
+        "000013"
+      ],
+      "snapshot_id": "aaaac912-cd48-5f46-af66-c2faffd955b0",
+      "source_version": "pdg-remote-wave4-2026-05-05",
+      "summary_path": "pdg_remote_wave4_20260505/summary.json",
+      "summary_sha256": "2fbc49ab278640b49a54dc98e89e4b5b8b566bd3fc025ddf5eeb9f9dd1d6a75d",
+      "table_row_counts": {
+        "artifact_cdg_bindings": 104,
+        "artifact_cdg_edges": 35,
+        "artifact_cdg_nodes": 52,
+        "artifact_relationships": 51,
+        "artifact_symbolic_expressions": 49,
+        "artifact_versions": 54,
+        "artifacts": 54,
+        "physics_equation_candidates": 49,
+        "physics_ingest_snapshots": 1
+      },
+      "total_row_count": 449,
+      "write_plan_path": "pdg_remote_wave4_20260505/write_plan.json",
+      "write_plan_sha256": "64ffff43f3d20b188a6d1cd26a84d842b3835db3108f875efd8f33bf208be0ef"
+    }
+  ],
+  "source_repo": "sciona-matcher local physics ingestion outputs",
+  "total_row_count": 2283,
+  "total_seed_count": 6
+}

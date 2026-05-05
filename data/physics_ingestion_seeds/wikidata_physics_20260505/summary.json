@@ -1,0 +1,33 @@
+{
+  "apply": {
+    "ok": true,
+    "performed": true,
+    "reason": "applied",
+    "requested": true
+  },
+  "artifact_paths": {
+    "apply_report": "output/physics_wikidata_physics_ingestion_local_apply_20260505T001957Z/apply_report.json",
+    "backfill_report": "output/physics_wikidata_physics_ingestion_local_apply_20260505T001957Z/backfill_report.json",
+    "insert_rows_by_table": "output/physics_wikidata_physics_ingestion_local_apply_20260505T001957Z/insert_rows_by_table.json",
+    "learnings": "output/physics_wikidata_physics_ingestion_local_apply_20260505T001957Z/ingestion_template_learnings.md",
+    "planned_source_bundle": "output/physics_wikidata_physics_ingestion_local_apply_20260505T001957Z/planned_source_bundle.json",
+    "source_bundle": "output/physics_wikidata_physics_ingestion_local_apply_20260505T001957Z/source_bundle.json",
+    "summary": "output/physics_wikidata_physics_ingestion_local_apply_20260505T001957Z/summary.json",
+    "write_plan": "output/physics_wikidata_physics_ingestion_local_apply_20260505T001957Z/write_plan.json"
+  },
+  "candidate_count": 23,
+  "candidate_dir": "output/physics_wikidata_physics_candidate_list_20260505T001957Z",
+  "generated_at": "2026-05-05T15:44:49.703507+00:00",
+  "out_dir": "output/physics_wikidata_physics_ingestion_local_apply_20260505T001957Z",
+  "snapshot_id": "d66a5026-a727-5223-954d-561c0b90baa8",
+  "source_version": "wikidata-physics-candidates-2026-05-05-limit-50",
+  "table_row_counts": {
+    "physics_equation_candidates": 23,
+    "physics_ingest_snapshots": 1
+  },
+  "write_plan_table_modes": {
+    "physics_equation_candidates": "upsert",
+    "physics_ingest_snapshots": "upsert"
+  },
+  "write_plan_total_row_count": 24
+}

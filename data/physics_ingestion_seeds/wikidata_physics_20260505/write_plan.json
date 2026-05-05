@@ -1,0 +1,2631 @@
+{
+  "audit_summary": {
+    "batch_count": 2,
+    "input_row_counts": {
+      "physics_equation_candidates": 23,
+      "physics_ingest_snapshots": 1
+    },
+    "planned_row_counts": {
+      "physics_equation_candidates": 23,
+      "physics_ingest_snapshots": 1
+    },
+    "table_order": [
+      "physics_ingest_snapshots",
+      "physics_equation_candidates"
+    ],
+    "total_row_count": 24
+  },
+  "batches": [
+    {
+      "conflict_keys": [
+        "snapshot_id"
+      ],
+      "row_count": 1,
+      "rows": [
+        {
+          "adapter_name": "sciona.physics_ingest.sources.wikidata",
+          "adapter_version": "0.1.0",
+          "license_expression": "CC0-1.0",
+          "payload": {
+            "query": "SELECT ?item ?itemLabel ?itemDescription ?formulaProperty ?formula ?alias ?use ?useLabel ?useDescription WHERE {\n  VALUES ?formulaProperty { wdt:P2534 }\n  ?item ?formulaProperty ?formula .\n  VALUES ?classRoot { wd:Q36338801 wd:Q214070 }\n  ?item wdt:P31/wdt:P279* ?classRoot .\n  OPTIONAL { ?item skos:altLabel ?alias . FILTER(LANG(?alias) = \"en\") }\n  OPTIONAL { ?item wdt:P366 ?use . }\n  SERVICE wikibase:label {\n    bd:serviceParam wikibase:language \"en,mul,en\".\n  }\n} LIMIT 50",
+            "response": {
+              "head": {
+                "vars": [
+                  "item",
+                  "itemLabel",
+                  "itemDescription",
+                  "formulaProperty",
+                  "formula",
+                  "alias",
+                  "use",
+                  "useLabel",
+                  "useDescription"
+                ]
+              },
+              "results": {
+                "bindings": [
+                  {
+                    "alias": {
+                      "type": "literal",
+                      "value": "universal gravitation",
+                      "xml:lang": "en"
+                    },
+                    "formula": {
+                      "datatype": "http://www.w3.org/1998/Math/MathML",
+                      "type": "literal",
+                      "value": "<math class=\"mwe-math-element mwe-math-element-inline\" xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow data-mjx-texclass=\"ORD\"><mstyle displaystyle=\"true\" scriptlevel=\"0\"><msub><mi>F</mi><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mi mathvariant=\"normal\">g</mi></mrow></mrow></msub><mo stretchy=\"false\">=</mo><mi>G</mi><mfrac><mrow><msub><mi>m</mi><mrow data-mjx-texclass=\"ORD\"><mn>1</mn></mrow></msub><msub><mi>m</mi><mrow data-mjx-texclass=\"ORD\"><mn>2</mn></mrow></msub></mrow><mrow><msup><mi>r</mi><mrow data-mjx-texclass=\"ORD\"><mn>2</mn></mrow></msup></mrow></mfrac></mstyle></mrow></math>"
+                    },
+                    "formulaProperty": {
+                      "type": "uri",
+                      "value": "http://www.wikidata.org/prop/direct/P2534"
+                    },
+                    "item": {
+                      "type": "uri",
+                      "value": "http://www.wikidata.org/entity/Q134465"
+                    },
+                    "itemDescription": {
+                      "type": "literal",
+                      "value": "classical mechanics physical law",
+                      "xml:lang": "en"
+                    },
+                    "itemLabel": {
+                      "type": "literal",
+                      "value": "Newton's law of universal gravitation",
+                      "xml:lang": "en"
+                    }
+                  },
+                  {
+                    "alias": {
+                      "type": "literal",
+                      "value": "Newtonian gravity",
+                      "xml:lang": "en"
+                    },
+                    "formula": {
+                      "datatype": "http://www.w3.org/1998/Math/MathML",
+                      "type": "literal",
+                      "value": "<math class=\"mwe-math-element mwe-math-element-inline\" xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow data-mjx-texclass=\"ORD\"><mstyle displaystyle=\"true\" scriptlevel=\"0\"><msub><mi>F</mi><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mi mathvariant=\"normal\">g</mi></mrow></mrow></msub><mo stretchy=\"false\">=</mo><mi>G</mi><mfrac><mrow><msub><mi>m</mi><mrow data-mjx-texclass=\"ORD\"><mn>1</mn></mrow></msub><msub><mi>m</mi><mrow data-mjx-texclass=\"ORD\"><mn>2</mn></mrow></msub></mrow><mrow><msup><mi>r</mi><mrow data-mjx-texclass=\"ORD\"><mn>2</mn></mrow></msup></mrow></mfrac></mstyle></mrow></math>"
+                    },
+                    "formulaProperty": {
+                      "type": "uri",
+                      "value": "http://www.wikidata.org/prop/direct/P2534"
+                    },
+                    "item": {
+                      "type": "uri",
+                      "value": "http://www.wikidata.org/entity/Q134465"
+                    },
+                    "itemDescription": {
+                      "type": "literal",
+                      "value": "classical mechanics physical law",
+                      "xml:lang": "en"
+                    },
+                    "itemLabel": {
+                      "type": "literal",
+                      "value": "Newton's law of universal gravitation",
+                      "xml:lang": "en"
+                    }
+                  },
+                  {
+                    "alias": {
+                      "type": "literal",
+                      "value": "Newton's theory of gravitation",
+                      "xml:lang": "en"
+                    },
+                    "formula": {
+                      "datatype": "http://www.w3.org/1998/Math/MathML",
+                      "type": "literal",
+                      "value": "<math class=\"mwe-math-element mwe-math-element-inline\" xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow data-mjx-texclass=\"ORD\"><mstyle displaystyle=\"true\" scriptlevel=\"0\"><msub><mi>F</mi><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mi mathvariant=\"normal\">g</mi></mrow></mrow></msub><mo stretchy=\"false\">=</mo><mi>G</mi><mfrac><mrow><msub><mi>m</mi><mrow data-mjx-texclass=\"ORD\"><mn>1</mn></mrow></msub><msub><mi>m</mi><mrow data-mjx-texclass=\"ORD\"><mn>2</mn></mrow></msub></mrow><mrow><msup><mi>r</mi><mrow data-mjx-texclass=\"ORD\"><mn>2</mn></mrow></msup></mrow></mfrac></mstyle></mrow></math>"
+                    },
+                    "formulaProperty": {
+                      "type": "uri",
+                      "value": "http://www.wikidata.org/prop/direct/P2534"
+                    },
+                    "item": {
+                      "type": "uri",
+                      "value": "http://www.wikidata.org/entity/Q134465"
+                    },
+                    "itemDescription": {
+                      "type": "literal",
+                      "value": "classical mechanics physical law",
+                      "xml:lang": "en"
+                    },
+                    "itemLabel": {
+                      "type": "literal",
+                      "value": "Newton's law of universal gravitation",
+                      "xml:lang": "en"
+                    }
+                  },
+                  {
+                    "formula": {
+                      "datatype": "http://www.w3.org/1998/Math/MathML",
+                      "type": "literal",
+                      "value": "<math class=\"mwe-math-element mwe-math-element-inline\" xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow data-mjx-texclass=\"ORD\"><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mi>F</mi><mo stretchy=\"false\">=</mo><mi>k</mi><mi mathvariant=\"normal\">&#x0394;</mi><mi>l</mi></mstyle></mrow></math>"
+                    },
+                    "formulaProperty": {
+                      "type": "uri",
+                      "value": "http://www.wikidata.org/prop/direct/P2534"
+                    },
+                    "item": {
+                      "type": "uri",
+                      "value": "http://www.wikidata.org/entity/Q170282"
+                    },
+                    "itemDescription": {
+                      "type": "literal",
+                      "value": "empirical physical law of mechanics that the force on a spring is proportional to its displacement",
+                      "xml:lang": "en"
+                    },
+                    "itemLabel": {
+                      "type": "literal",
+                      "value": "Hooke's law",
+                      "xml:lang": "en"
+                    }
+                  },
+                  {
+                    "alias": {
+                      "type": "literal",
+                      "value": "Avogadro's principle",
+                      "xml:lang": "en"
+                    },
+                    "formula": {
+                      "datatype": "http://www.w3.org/1998/Math/MathML",
+                      "type": "literal",
+                      "value": "<math class=\"mwe-math-element mwe-math-element-inline\" xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow data-mjx-texclass=\"ORD\"><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mi>V</mi><mo stretchy=\"false\">&#x221D;</mo><mi>n</mi></mstyle></mrow></math>"
+                    },
+                    "formulaProperty": {
+                      "type": "uri",
+                      "value": "http://www.wikidata.org/prop/direct/P2534"
+                    },
+                    "item": {
+                      "type": "uri",
+                      "value": "http://www.wikidata.org/entity/Q170431"
+                    },
+                    "itemDescription": {
+                      "type": "literal",
+                      "value": "physical law that equal volumes of all gases at the same temperature and pressure have the same number of molecules",
+                      "xml:lang": "en"
+                    },
+                    "itemLabel": {
+                      "type": "literal",
+                      "value": "Avogadro's law",
+                      "xml:lang": "en"
+                    }
+                  },
+                  {
+                    "alias": {
+                      "type": "literal",
+                      "value": "Avogadro's principle",
+                      "xml:lang": "en"
+                    },
+                    "formula": {
+                      "datatype": "http://www.w3.org/1998/Math/MathML",
+                      "type": "literal",
+                      "value": "<math class=\"mwe-math-element mwe-math-element-inline\" xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow data-mjx-texclass=\"ORD\"><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mrow data-mjx-texclass=\"ORD\"><mfrac><mrow data-mjx-texclass=\"ORD\"><mi>V</mi></mrow><mrow data-mjx-texclass=\"ORD\"><mi>n</mi></mrow></mfrac></mrow><mo stretchy=\"false\">=</mo><mi>k</mi></mstyle></mrow></math>"
+                    },
+                    "formulaProperty": {
+                      "type": "uri",
+                      "value": "http://www.wikidata.org/prop/direct/P2534"
+                    },
+                    "item": {
+                      "type": "uri",
+                      "value": "http://www.wikidata.org/entity/Q170431"
+                    },
+                    "itemDescription": {
+                      "type": "literal",
+                      "value": "physical law that equal volumes of all gases at the same temperature and pressure have the same number of molecules",
+                      "xml:lang": "en"
+                    },
+                    "itemLabel": {
+                      "type": "literal",
+                      "value": "Avogadro's law",
+                      "xml:lang": "en"
+                    }
+                  },
+                  {
+                    "alias": {
+                      "type": "literal",
+                      "value": "Avogadro's hypothesis",
+                      "xml:lang": "en"
+                    },
+                    "formula": {
+                      "datatype": "http://www.w3.org/1998/Math/MathML",
+                      "type": "literal",
+                      "value": "<math class=\"mwe-math-element mwe-math-element-inline\" xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow data-mjx-texclass=\"ORD\"><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mi>V</mi><mo stretchy=\"false\">&#x221D;</mo><mi>n</mi></mstyle></mrow></math>"
+                    },
+                    "formulaProperty": {
+                      "type": "uri",
+                      "value": "http://www.wikidata.org/prop/direct/P2534"
+                    },
+                    "item": {
+                      "type": "uri",
+                      "value": "http://www.wikidata.org/entity/Q170431"
+                    },
+                    "itemDescription": {
+                      "type": "literal",
+                      "value": "physical law that equal volumes of all gases at the same temperature and pressure have the same number of molecules",
+                      "xml:lang": "en"
+                    },
+                    "itemLabel": {
+                      "type": "literal",
+                      "value": "Avogadro's law",
+                      "xml:lang": "en"
+                    }
+                  },
+                  {
+                    "alias": {
+                      "type": "literal",
+                      "value": "Avogadro's hypothesis",
+                      "xml:lang": "en"
+                    },
+                    "formula": {
+                      "datatype": "http://www.w3.org/1998/Math/MathML",
+                      "type": "literal",
+                      "value": "<math class=\"mwe-math-element mwe-math-element-inline\" xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow data-mjx-texclass=\"ORD\"><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mrow data-mjx-texclass=\"ORD\"><mfrac><mrow data-mjx-texclass=\"ORD\"><mi>V</mi></mrow><mrow data-mjx-texclass=\"ORD\"><mi>n</mi></mrow></mfrac></mrow><mo stretchy=\"false\">=</mo><mi>k</mi></mstyle></mrow></math>"
+                    },
+                    "formulaProperty": {
+                      "type": "uri",
+                      "value": "http://www.wikidata.org/prop/direct/P2534"
+                    },
+                    "item": {
+                      "type": "uri",
+                      "value": "http://www.wikidata.org/entity/Q170431"
+                    },
+                    "itemDescription": {
+                      "type": "literal",
+                      "value": "physical law that equal volumes of all gases at the same temperature and pressure have the same number of molecules",
+                      "xml:lang": "en"
+                    },
+                    "itemLabel": {
+                      "type": "literal",
+                      "value": "Avogadro's law",
+                      "xml:lang": "en"
+                    }
+                  },
+                  {
+                    "alias": {
+                      "type": "literal",
+                      "value": "Gauss law",
+                      "xml:lang": "en"
+                    },
+                    "formula": {
+                      "datatype": "http://www.w3.org/1998/Math/MathML",
+                      "type": "literal",
+                      "value": "<math class=\"mwe-math-element mwe-math-element-inline\" xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow data-mjx-texclass=\"ORD\"><mstyle displaystyle=\"true\" scriptlevel=\"0\"><msub><mi mathvariant=\"normal\">&#x03A6;</mi><mrow data-mjx-texclass=\"ORD\"><mi>E</mi></mrow></msub><mo stretchy=\"false\">=</mo><mrow data-mjx-texclass=\"ORD\"><mfrac><mrow data-mjx-texclass=\"ORD\"><mi>Q</mi></mrow><mrow data-mjx-texclass=\"ORD\"><msub><mi>&#x03B5;</mi><mrow data-mjx-texclass=\"ORD\"><mn>0</mn></mrow></msub></mrow></mfrac></mrow></mstyle></mrow></math>"
+                    },
+                    "formulaProperty": {
+                      "type": "uri",
+                      "value": "http://www.wikidata.org/prop/direct/P2534"
+                    },
+                    "item": {
+                      "type": "uri",
+                      "value": "http://www.wikidata.org/entity/Q173356"
+                    },
+                    "itemDescription": {
+                      "type": "literal",
+                      "value": "foundational law of electromagnetism",
+                      "xml:lang": "en"
+                    },
+                    "itemLabel": {
+                      "type": "literal",
+                      "value": "Gauss's law",
+                      "xml:lang": "en"
+                    }
+                  },
+                  {
+                    "alias": {
+                      "type": "literal",
+                      "value": "Gauss' law",
+                      "xml:lang": "en"
+                    },
+                    "formula": {
+                      "datatype": "http://www.w3.org/1998/Math/MathML",
+                      "type": "literal",
+                      "value": "<math class=\"mwe-math-element mwe-math-element-inline\" xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow data-mjx-texclass=\"ORD\"><mstyle displaystyle=\"true\" scriptlevel=\"0\"><msub><mi mathvariant=\"normal\">&#x03A6;</mi><mrow data-mjx-texclass=\"ORD\"><mi>E</mi></mrow></msub><mo stretchy=\"false\">=</mo><mrow data-mjx-texclass=\"ORD\"><mfrac><mrow data-mjx-texclass=\"ORD\"><mi>Q</mi></mrow><mrow data-mjx-texclass=\"ORD\"><msub><mi>&#x03B5;</mi><mrow data-mjx-texclass=\"ORD\"><mn>0</mn></mrow></msub></mrow></mfrac></mrow></mstyle></mrow></math>"
+                    },
+                    "formulaProperty": {
+                      "type": "uri",
+                      "value": "http://www.wikidata.org/prop/direct/P2534"
+                    },
+                    "item": {
+                      "type": "uri",
+                      "value": "http://www.wikidata.org/entity/Q173356"
+                    },
+                    "itemDescription": {
+                      "type": "literal",
+                      "value": "foundational law of electromagnetism",
+                      "xml:lang": "en"
+                    },
+                    "itemLabel": {
+                      "type": "literal",
+                      "value": "Gauss's law",
+                      "xml:lang": "en"
+                    }
+                  },
+                  {
+                    "alias": {
+                      "type": "literal",
+                      "value": "Mariotte's law",
+                      "xml:lang": "en"
+                    },
+                    "formula": {
+                      "datatype": "http://www.w3.org/1998/Math/MathML",
+                      "type": "literal",
+                      "value": "<math class=\"mwe-math-element mwe-math-element-inline\" xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow data-mjx-texclass=\"ORD\"><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mi>P</mi><mi>V</mi><mo stretchy=\"false\">=</mo><mi>k</mi></mstyle></mrow></math>"
+                    },
+                    "formulaProperty": {
+                      "type": "uri",
+                      "value": "http://www.wikidata.org/prop/direct/P2534"
+                    },
+                    "item": {
+                      "type": "uri",
+                      "value": "http://www.wikidata.org/entity/Q175974"
+                    },
+                    "itemDescription": {
+                      "type": "literal",
+                      "value": "experimental gas law",
+                      "xml:lang": "en"
+                    },
+                    "itemLabel": {
+                      "type": "literal",
+                      "value": "Boyle's law",
+                      "xml:lang": "en"
+                    }
+                  },
+                  {
+                    "alias": {
+                      "type": "literal",
+                      "value": "Mariotte's law",
+                      "xml:lang": "en"
+                    },
+                    "formula": {
+                      "datatype": "http://www.w3.org/1998/Math/MathML",
+                      "type": "literal",
+                      "value": "<math class=\"mwe-math-element mwe-math-element-inline\" xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow data-mjx-texclass=\"ORD\"><mstyle displaystyle=\"true\" scriptlevel=\"0\"><msub><mi>P</mi><mrow data-mjx-texclass=\"ORD\"><mn>1</mn></mrow></msub><msub><mi>V</mi><mrow data-mjx-texclass=\"ORD\"><mn>1</mn></mrow></msub><mo stretchy=\"false\">=</mo><msub><mi>P</mi><mrow data-mjx-texclass=\"ORD\"><mn>2</mn></mrow></msub><msub><mi>V</mi><mrow data-mjx-texclass=\"ORD\"><mn>2</mn></mrow></msub></mstyle></mrow></math>"
+                    },
+                    "formulaProperty": {
+                      "type": "uri",
+                      "value": "http://www.wikidata.org/prop/direct/P2534"
+                    },
+                    "item": {
+                      "type": "uri",
+                      "value": "http://www.wikidata.org/entity/Q175974"
+                    },
+                    "itemDescription": {
+                      "type": "literal",
+                      "value": "experimental gas law",
+                      "xml:lang": "en"
+                    },
+                    "itemLabel": {
+                      "type": "literal",
+                      "value": "Boyle's law",
+                      "xml:lang": "en"
+                    }
+                  },
+                  {
+                    "alias": {
+                      "type": "literal",
+                      "value": "Boyle\u2013Mariotte law",
+                      "xml:lang": "en"
+                    },
+                    "formula": {
+                      "datatype": "http://www.w3.org/1998/Math/MathML",
+                      "type": "literal",
+                      "value": "<math class=\"mwe-math-element mwe-math-element-inline\" xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow data-mjx-texclass=\"ORD\"><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mi>P</mi><mi>V</mi><mo stretchy=\"false\">=</mo><mi>k</mi></mstyle></mrow></math>"
+                    },
+                    "formulaProperty": {
+                      "type": "uri",
+                      "value": "http://www.wikidata.org/prop/direct/P2534"
+                    },
+                    "item": {
+                      "type": "uri",
+                      "value": "http://www.wikidata.org/entity/Q175974"
+                    },
+                    "itemDescription": {
+                      "type": "literal",
+                      "value": "experimental gas law",
+                      "xml:lang": "en"
+                    },
+                    "itemLabel": {
+                      "type": "literal",
+                      "value": "Boyle's law",
+                      "xml:lang": "en"
+                    }
+                  },
+                  {
+                    "alias": {
+                      "type": "literal",
+                      "value": "Boyle\u2013Mariotte law",
+                      "xml:lang": "en"
+                    },
+                    "formula": {
+                      "datatype": "http://www.w3.org/1998/Math/MathML",
+                      "type": "literal",
+                      "value": "<math class=\"mwe-math-element mwe-math-element-inline\" xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow data-mjx-texclass=\"ORD\"><mstyle displaystyle=\"true\" scriptlevel=\"0\"><msub><mi>P</mi><mrow data-mjx-texclass=\"ORD\"><mn>1</mn></mrow></msub><msub><mi>V</mi><mrow data-mjx-texclass=\"ORD\"><mn>1</mn></mrow></msub><mo stretchy=\"false\">=</mo><msub><mi>P</mi><mrow data-mjx-texclass=\"ORD\"><mn>2</mn></mrow></msub><msub><mi>V</mi><mrow data-mjx-texclass=\"ORD\"><mn>2</mn></mrow></msub></mstyle></mrow></math>"
+                    },
+                    "formulaProperty": {
+                      "type": "uri",
+                      "value": "http://www.wikidata.org/prop/direct/P2534"
+                    },
+                    "item": {
+                      "type": "uri",
+                      "value": "http://www.wikidata.org/entity/Q175974"
+                    },
+                    "itemDescription": {
+                      "type": "literal",
+                      "value": "experimental gas law",
+                      "xml:lang": "en"
+                    },
+                    "itemLabel": {
+                      "type": "literal",
+                      "value": "Boyle's law",
+                      "xml:lang": "en"
+                    }
+                  },
+                  {
+                    "alias": {
+                      "type": "literal",
+                      "value": "Boyle-Mariotte law",
+                      "xml:lang": "en"
+                    },
+                    "formula": {
+                      "datatype": "http://www.w3.org/1998/Math/MathML",
+                      "type": "literal",
+                      "value": "<math class=\"mwe-math-element mwe-math-element-inline\" xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow data-mjx-texclass=\"ORD\"><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mi>P</mi><mi>V</mi><mo stretchy=\"false\">=</mo><mi>k</mi></mstyle></mrow></math>"
+                    },
+                    "formulaProperty": {
+                      "type": "uri",
+                      "value": "http://www.wikidata.org/prop/direct/P2534"
+                    },
+                    "item": {
+                      "type": "uri",
+                      "value": "http://www.wikidata.org/entity/Q175974"
+                    },
+                    "itemDescription": {
+                      "type": "literal",
+                      "value": "experimental gas law",
+                      "xml:lang": "en"
+                    },
+                    "itemLabel": {
+                      "type": "literal",
+                      "value": "Boyle's law",
+                      "xml:lang": "en"
+                    }
+                  },
+                  {
+                    "alias": {
+                      "type": "literal",
+                      "value": "Boyle-Mariotte law",
+                      "xml:lang": "en"
+                    },
+                    "formula": {
+                      "datatype": "http://www.w3.org/1998/Math/MathML",
+                      "type": "literal",
+                      "value": "<math class=\"mwe-math-element mwe-math-element-inline\" xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow data-mjx-texclass=\"ORD\"><mstyle displaystyle=\"true\" scriptlevel=\"0\"><msub><mi>P</mi><mrow data-mjx-texclass=\"ORD\"><mn>1</mn></mrow></msub><msub><mi>V</mi><mrow data-mjx-texclass=\"ORD\"><mn>1</mn></mrow></msub><mo stretchy=\"false\">=</mo><msub><mi>P</mi><mrow data-mjx-texclass=\"ORD\"><mn>2</mn></mrow></msub><msub><mi>V</mi><mrow data-mjx-texclass=\"ORD\"><mn>2</mn></mrow></msub></mstyle></mrow></math>"
+                    },
+                    "formulaProperty": {
+                      "type": "uri",
+                      "value": "http://www.wikidata.org/prop/direct/P2534"
+                    },
+                    "item": {
+                      "type": "uri",
+                      "value": "http://www.wikidata.org/entity/Q175974"
+                    },
+                    "itemDescription": {
+                      "type": "literal",
+                      "value": "experimental gas law",
+                      "xml:lang": "en"
+                    },
+                    "itemLabel": {
+                      "type": "literal",
+                      "value": "Boyle's law",
+                      "xml:lang": "en"
+                    }
+                  },
+                  {
+                    "alias": {
+                      "type": "literal",
+                      "value": "Planck radiation law",
+                      "xml:lang": "en"
+                    },
+                    "formula": {
+                      "datatype": "http://www.w3.org/1998/Math/MathML",
+                      "type": "literal",
+                      "value": "<math class=\"mwe-math-element mwe-math-element-inline\" xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow data-mjx-texclass=\"ORD\"><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mrow data-mjx-texclass=\"ORD\"><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mi>B</mi><mo stretchy=\"false\">(</mo><mi>&#x03BD;</mi><mo>,</mo><mi>T</mi><mo stretchy=\"false\">)</mo><mo stretchy=\"false\">=</mo><mrow data-mjx-texclass=\"ORD\"><mfrac><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mn>2</mn><mi>h</mi><msup><mi>&#x03BD;</mi><mrow data-mjx-texclass=\"ORD\"><mn>3</mn></mrow></msup></mrow></mrow><mrow data-mjx-texclass=\"ORD\"><msup><mi>c</mi><mrow data-mjx-texclass=\"ORD\"><mn>2</mn></mrow></msup></mrow></mfrac></mrow><mrow data-mjx-texclass=\"ORD\"><mfrac><mrow data-mjx-texclass=\"ORD\"><mn>1</mn></mrow><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><msup><mi>e</mi><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mfrac><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mi>h</mi><mi>&#x03BD;</mi></mrow></mrow><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><msub><mi>k</mi><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mi mathvariant=\"normal\">B</mi></mrow></mrow></msub><mi>T</mi></mrow></mrow></mfrac></mrow></mrow></msup><mo stretchy=\"false\">&#x2212;</mo><mn>1</mn></mrow></mrow></mfrac></mrow></mstyle></mrow></mstyle></mrow></math>"
+                    },
+                    "formulaProperty": {
+                      "type": "uri",
+                      "value": "http://www.wikidata.org/prop/direct/P2534"
+                    },
+                    "item": {
+                      "type": "uri",
+                      "value": "http://www.wikidata.org/entity/Q212986"
+                    },
+                    "itemDescription": {
+                      "type": "literal",
+                      "value": "physical law that describes the amount of spectral radiance at a certain wavelength radiated by a black body cavity in thermal equilibrium",
+                      "xml:lang": "en"
+                    },
+                    "itemLabel": {
+                      "type": "literal",
+                      "value": "Planck's law",
+                      "xml:lang": "en"
+                    }
+                  },
+                  {
+                    "formula": {
+                      "datatype": "http://www.w3.org/1998/Math/MathML",
+                      "type": "literal",
+                      "value": "<math class=\"mwe-math-element mwe-math-element-inline\" xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow data-mjx-texclass=\"ORD\"><mstyle displaystyle=\"true\" scriptlevel=\"0\"><msub><mi>&#x03BB;</mi><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mtext>max</mtext></mrow></mrow></msub><mo stretchy=\"false\">=</mo><mrow data-mjx-texclass=\"ORD\"><mfrac><mrow data-mjx-texclass=\"ORD\"><mi>b</mi></mrow><mrow data-mjx-texclass=\"ORD\"><mi>T</mi></mrow></mfrac></mrow></mstyle></mrow></math>"
+                    },
+                    "formulaProperty": {
+                      "type": "uri",
+                      "value": "http://www.wikidata.org/prop/direct/P2534"
+                    },
+                    "item": {
+                      "type": "uri",
+                      "value": "http://www.wikidata.org/entity/Q214336"
+                    },
+                    "itemDescription": {
+                      "type": "literal",
+                      "value": "relation between the wavelength of the black-body radiation curve peak and the temperature",
+                      "xml:lang": "en"
+                    },
+                    "itemLabel": {
+                      "type": "literal",
+                      "value": "Wien's displacement law",
+                      "xml:lang": "en"
+                    }
+                  },
+                  {
+                    "formula": {
+                      "datatype": "http://www.w3.org/1998/Math/MathML",
+                      "type": "literal",
+                      "value": "<math class=\"mwe-math-element mwe-math-element-inline\" xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow data-mjx-texclass=\"ORD\"><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mi>p</mi><mo stretchy=\"false\">=</mo><mrow data-mjx-texclass=\"ORD\"><mfrac><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mi>R</mi><mi>T</mi></mrow></mrow><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mi>V</mi><mo stretchy=\"false\">&#x2212;</mo><mi>b</mi></mrow></mrow></mfrac></mrow><mi>exp</mi><mo>&#x2061;</mo><mrow data-mjx-texclass=\"INNER\"><mo data-mjx-texclass=\"OPEN\">(</mo><mo stretchy=\"false\">&#x2212;</mo><mrow data-mjx-texclass=\"ORD\"><mfrac><mrow data-mjx-texclass=\"ORD\"><mi>a</mi></mrow><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mi>R</mi><mi>T</mi><mi>V</mi></mrow></mrow></mfrac></mrow><mo data-mjx-texclass=\"CLOSE\">)</mo></mrow></mstyle></mrow></math>"
+                    },
+                    "formulaProperty": {
+                      "type": "uri",
+                      "value": "http://www.wikidata.org/prop/direct/P2534"
+                    },
+                    "item": {
+                      "type": "uri",
+                      "value": "http://www.wikidata.org/entity/Q230907"
+                    },
+                    "itemLabel": {
+                      "type": "literal",
+                      "value": "Q230907"
+                    }
+                  },
+                  {
+                    "formula": {
+                      "datatype": "http://www.w3.org/1998/Math/MathML",
+                      "type": "literal",
+                      "value": "<math class=\"mwe-math-element mwe-math-element-inline\" xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow data-mjx-texclass=\"ORD\"><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mi>p</mi><mo stretchy=\"false\">=</mo><mrow data-mjx-texclass=\"ORD\"><mfrac><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mi>R</mi><mo stretchy=\"false\">&#x22C5;</mo><mi>T</mi></mrow></mrow><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><msub><mi>V</mi><mrow data-mjx-texclass=\"ORD\"><mi>m</mi></mrow></msub><mo stretchy=\"false\">&#x2212;</mo><mi>b</mi></mrow></mrow></mfrac></mrow><mo stretchy=\"false\">&#x2212;</mo><mrow data-mjx-texclass=\"ORD\"><mfrac><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mi>a</mi><mo stretchy=\"false\">(</mo><mi>T</mi><mo stretchy=\"false\">)</mo></mrow></mrow><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><msubsup><mi>V</mi><mrow data-mjx-texclass=\"ORD\"><mi>m</mi></mrow><mrow data-mjx-texclass=\"ORD\"><mn>2</mn></mrow></msubsup><mo stretchy=\"false\">+</mo><mn>2</mn><mo stretchy=\"false\">&#x22C5;</mo><mi>b</mi><mo stretchy=\"false\">&#x22C5;</mo><msub><mi>V</mi><mrow data-mjx-texclass=\"ORD\"><mi>m</mi></mrow></msub><mo stretchy=\"false\">&#x2212;</mo><msup><mi>b</mi><mrow data-mjx-texclass=\"ORD\"><mn>2</mn></mrow></msup></mrow></mrow></mfrac></mrow></mstyle></mrow></math>"
+                    },
+                    "formulaProperty": {
+                      "type": "uri",
+                      "value": "http://www.wikidata.org/prop/direct/P2534"
+                    },
+                    "item": {
+                      "type": "uri",
+                      "value": "http://www.wikidata.org/entity/Q230917"
+                    },
+                    "itemLabel": {
+                      "type": "literal",
+                      "value": "Q230917"
+                    }
+                  },
+                  {
+                    "alias": {
+                      "type": "literal",
+                      "value": "Van der Waals equation of state",
+                      "xml:lang": "en"
+                    },
+                    "formula": {
+                      "datatype": "http://www.w3.org/1998/Math/MathML",
+                      "type": "literal",
+                      "value": "<math class=\"mwe-math-element mwe-math-element-inline\" xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow data-mjx-texclass=\"ORD\"><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mrow data-mjx-texclass=\"INNER\"><mo data-mjx-texclass=\"OPEN\">(</mo><mi>p</mi><mo stretchy=\"false\">+</mo><mrow data-mjx-texclass=\"ORD\"><mfrac><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><msup><mi>a</mi><mo>&#x2032;</mo></msup></mrow></mrow><mrow data-mjx-texclass=\"ORD\"><msup><mi>v</mi><mrow data-mjx-texclass=\"ORD\"><mn>2</mn></mrow></msup></mrow></mfrac></mrow><mo data-mjx-texclass=\"CLOSE\">)</mo></mrow><mrow data-mjx-texclass=\"INNER\"><mo data-mjx-texclass=\"OPEN\">(</mo><mi>v</mi><mo stretchy=\"false\">&#x2212;</mo><msup><mi>b</mi><mo>&#x2032;</mo></msup><mo data-mjx-texclass=\"CLOSE\">)</mo></mrow><mo stretchy=\"false\">=</mo><mi>k</mi><mi>T</mi></mstyle></mrow></math>"
+                    },
+                    "formulaProperty": {
+                      "type": "uri",
+                      "value": "http://www.wikidata.org/prop/direct/P2534"
+                    },
+                    "item": {
+                      "type": "uri",
+                      "value": "http://www.wikidata.org/entity/Q254329"
+                    },
+                    "itemDescription": {
+                      "type": "literal",
+                      "value": "equation of state that generalizes the ideal gas law",
+                      "xml:lang": "en"
+                    },
+                    "itemLabel": {
+                      "type": "literal",
+                      "value": "van der Waals equation",
+                      "xml:lang": "en"
+                    }
+                  },
+                  {
+                    "alias": {
+                      "type": "literal",
+                      "value": "Van der Waals equation of state",
+                      "xml:lang": "en"
+                    },
+                    "formula": {
+                      "datatype": "http://www.w3.org/1998/Math/MathML",
+                      "type": "literal",
+                      "value": "<math class=\"mwe-math-element mwe-math-element-inline\" xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow data-mjx-texclass=\"ORD\"><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mrow data-mjx-texclass=\"INNER\"><mo data-mjx-texclass=\"OPEN\">(</mo><mi>p</mi><mo stretchy=\"false\">+</mo><mrow data-mjx-texclass=\"ORD\"><mfrac><mrow data-mjx-texclass=\"ORD\"><mi>a</mi></mrow><mrow data-mjx-texclass=\"ORD\"><msup><msub><mi>V</mi><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mtext>m</mtext></mrow></mrow></msub><mrow data-mjx-texclass=\"ORD\"><mn>2</mn></mrow></msup></mrow></mfrac></mrow><mo data-mjx-texclass=\"CLOSE\">)</mo></mrow><mrow data-mjx-texclass=\"INNER\"><mo data-mjx-texclass=\"OPEN\">(</mo><msub><mi>V</mi><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mtext>m</mtext></mrow></mrow></msub><mo stretchy=\"false\">&#x2212;</mo><mi>b</mi><mo data-mjx-texclass=\"CLOSE\">)</mo></mrow><mo stretchy=\"false\">=</mo><mi>R</mi><mi>T</mi></mstyle></mrow></math>"
+                    },
+                    "formulaProperty": {
+                      "type": "uri",
+                      "value": "http://www.wikidata.org/prop/direct/P2534"
+                    },
+                    "item": {
+                      "type": "uri",
+                      "value": "http://www.wikidata.org/entity/Q254329"
+                    },
+                    "itemDescription": {
+                      "type": "literal",
+                      "value": "equation of state that generalizes the ideal gas law",
+                      "xml:lang": "en"
+                    },
+                    "itemLabel": {
+                      "type": "literal",
+                      "value": "van der Waals equation",
+                      "xml:lang": "en"
+                    }
+                  },
+                  {
+                    "alias": {
+                      "type": "literal",
+                      "value": "law of equipartition of energy",
+                      "xml:lang": "en"
+                    },
+                    "formula": {
+                      "datatype": "http://www.w3.org/1998/Math/MathML",
+                      "type": "literal",
+                      "value": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" class=\"mwe-math-element mwe-math-element-inline\"><mrow data-mjx-texclass=\"ORD\"><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mrow data-mjx-texclass=\"INNER\"><mo data-mjx-texclass=\"OPEN\">\u27e8</mo><msub><mi>x</mi><mrow data-mjx-texclass=\"ORD\"><mi>m</mi></mrow></msub><mrow data-mjx-texclass=\"ORD\"><mfrac><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mi>\u2202</mi><mi>H</mi></mrow></mrow><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mi>\u2202</mi><msub><mi>x</mi><mrow data-mjx-texclass=\"ORD\"><mi>n</mi></mrow></msub></mrow></mrow></mfrac></mrow><mo data-mjx-texclass=\"CLOSE\">\u27e9</mo></mrow><mo stretchy=\"false\">=</mo><msub><mi>\u03b4</mi><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mi>m</mi><mi>n</mi></mrow></mrow></msub><msub><mi>k</mi><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mtext>B</mtext></mrow></mrow></msub><mi>T</mi></mstyle></mrow></math>"
+                    },
+                    "formulaProperty": {
+                      "type": "uri",
+                      "value": "http://www.wikidata.org/prop/direct/P2534"
+                    },
+                    "item": {
+                      "type": "uri",
+                      "value": "http://www.wikidata.org/entity/Q255996"
+                    },
+                    "itemDescription": {
+                      "type": "literal",
+                      "value": "theorem",
+                      "xml:lang": "en"
+                    },
+                    "itemLabel": {
+                      "type": "literal",
+                      "value": "equipartition theorem",
+                      "xml:lang": "en"
+                    }
+                  },
+                  {
+                    "alias": {
+                      "type": "literal",
+                      "value": "law of equipartition of energy",
+                      "xml:lang": "en"
+                    },
+                    "formula": {
+                      "datatype": "http://www.w3.org/1998/Math/MathML",
+                      "type": "literal",
+                      "value": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" class=\"mwe-math-element mwe-math-element-inline\"><mrow data-mjx-texclass=\"ORD\"><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mrow data-mjx-texclass=\"INNER\"><mo data-mjx-texclass=\"OPEN\">\u27e8</mo><msub><mi>x</mi><mrow data-mjx-texclass=\"ORD\"><mi>m</mi></mrow></msub><mrow data-mjx-texclass=\"ORD\"><mfrac><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mi>\u2202</mi><mi>H</mi></mrow></mrow><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mi>\u2202</mi><msub><mi>x</mi><mrow data-mjx-texclass=\"ORD\"><mi>n</mi></mrow></msub></mrow></mrow></mfrac></mrow><mo data-mjx-texclass=\"CLOSE\">\u27e9</mo></mrow><mo stretchy=\"false\">=</mo><msub><mi>\u03b4</mi><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mi>m</mi><mi>n</mi></mrow></mrow></msub><msub><mi>k</mi><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mtext>B</mtext></mrow></mrow></msub><mi>T</mi></mstyle></mrow></math>"
+                    },
+                    "formulaProperty": {
+                      "type": "uri",
+                      "value": "http://www.wikidata.org/prop/direct/P2534"
+                    },
+                    "item": {
+                      "type": "uri",
+                      "value": "http://www.wikidata.org/entity/Q255996"
+                    },
+                    "itemDescription": {
+                      "type": "literal",
+                      "value": "theorem",
+                      "xml:lang": "en"
+                    },
+                    "itemLabel": {
+                      "type": "literal",
+                      "value": "equipartition theorem",
+                      "xml:lang": "en"
+                    }
+                  },
+                  {
+                    "alias": {
+                      "type": "literal",
+                      "value": "equipartition of energy",
+                      "xml:lang": "en"
+                    },
+                    "formula": {
+                      "datatype": "http://www.w3.org/1998/Math/MathML",
+                      "type": "literal",
+                      "value": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" class=\"mwe-math-element mwe-math-element-inline\"><mrow data-mjx-texclass=\"ORD\"><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mrow data-mjx-texclass=\"INNER\"><mo data-mjx-texclass=\"OPEN\">\u27e8</mo><msub><mi>x</mi><mrow data-mjx-texclass=\"ORD\"><mi>m</mi></mrow></msub><mrow data-mjx-texclass=\"ORD\"><mfrac><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mi>\u2202</mi><mi>H</mi></mrow></mrow><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mi>\u2202</mi><msub><mi>x</mi><mrow data-mjx-texclass=\"ORD\"><mi>n</mi></mrow></msub></mrow></mrow></mfrac></mrow><mo data-mjx-texclass=\"CLOSE\">\u27e9</mo></mrow><mo stretchy=\"false\">=</mo><msub><mi>\u03b4</mi><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mi>m</mi><mi>n</mi></mrow></mrow></msub><msub><mi>k</mi><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mtext>B</mtext></mrow></mrow></msub><mi>T</mi></mstyle></mrow></math>"
+                    },
+                    "formulaProperty": {
+                      "type": "uri",
+                      "value": "http://www.wikidata.org/prop/direct/P2534"
+                    },
+                    "item": {
+                      "type": "uri",
+                      "value": "http://www.wikidata.org/entity/Q255996"
+                    },
+                    "itemDescription": {
+                      "type": "literal",
+                      "value": "theorem",
+                      "xml:lang": "en"
+                    },
+                    "itemLabel": {
+                      "type": "literal",
+                      "value": "equipartition theorem",
+                      "xml:lang": "en"
+                    }
+                  },
+                  {
+                    "alias": {
+                      "type": "literal",
+                      "value": "equipartition of energy",
+                      "xml:lang": "en"
+                    },
+                    "formula": {
+                      "datatype": "http://www.w3.org/1998/Math/MathML",
+                      "type": "literal",
+                      "value": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" class=\"mwe-math-element mwe-math-element-inline\"><mrow data-mjx-texclass=\"ORD\"><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mrow data-mjx-texclass=\"INNER\"><mo data-mjx-texclass=\"OPEN\">\u27e8</mo><msub><mi>x</mi><mrow data-mjx-texclass=\"ORD\"><mi>m</mi></mrow></msub><mrow data-mjx-texclass=\"ORD\"><mfrac><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mi>\u2202</mi><mi>H</mi></mrow></mrow><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mi>\u2202</mi><msub><mi>x</mi><mrow data-mjx-texclass=\"ORD\"><mi>n</mi></mrow></msub></mrow></mrow></mfrac></mrow><mo data-mjx-texclass=\"CLOSE\">\u27e9</mo></mrow><mo stretchy=\"false\">=</mo><msub><mi>\u03b4</mi><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mi>m</mi><mi>n</mi></mrow></mrow></msub><msub><mi>k</mi><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mtext>B</mtext></mrow></mrow></msub><mi>T</mi></mstyle></mrow></math>"
+                    },
+                    "formulaProperty": {
+                      "type": "uri",
+                      "value": "http://www.wikidata.org/prop/direct/P2534"
+                    },
+                    "item": {
+                      "type": "uri",
+                      "value": "http://www.wikidata.org/entity/Q255996"
+                    },
+                    "itemDescription": {
+                      "type": "literal",
+                      "value": "theorem",
+                      "xml:lang": "en"
+                    },
+                    "itemLabel": {
+                      "type": "literal",
+                      "value": "equipartition theorem",
+                      "xml:lang": "en"
+                    }
+                  },
+                  {
+                    "alias": {
+                      "type": "literal",
+                      "value": "equipartition",
+                      "xml:lang": "en"
+                    },
+                    "formula": {
+                      "datatype": "http://www.w3.org/1998/Math/MathML",
+                      "type": "literal",
+                      "value": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" class=\"mwe-math-element mwe-math-element-inline\"><mrow data-mjx-texclass=\"ORD\"><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mrow data-mjx-texclass=\"INNER\"><mo data-mjx-texclass=\"OPEN\">\u27e8</mo><msub><mi>x</mi><mrow data-mjx-texclass=\"ORD\"><mi>m</mi></mrow></msub><mrow data-mjx-texclass=\"ORD\"><mfrac><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mi>\u2202</mi><mi>H</mi></mrow></mrow><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mi>\u2202</mi><msub><mi>x</mi><mrow data-mjx-texclass=\"ORD\"><mi>n</mi></mrow></msub></mrow></mrow></mfrac></mrow><mo data-mjx-texclass=\"CLOSE\">\u27e9</mo></mrow><mo stretchy=\"false\">=</mo><msub><mi>\u03b4</mi><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mi>m</mi><mi>n</mi></mrow></mrow></msub><msub><mi>k</mi><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mtext>B</mtext></mrow></mrow></msub><mi>T</mi></mstyle></mrow></math>"
+                    },
+                    "formulaProperty": {
+                      "type": "uri",
+                      "value": "http://www.wikidata.org/prop/direct/P2534"
+                    },
+                    "item": {
+                      "type": "uri",
+                      "value": "http://www.wikidata.org/entity/Q255996"
+                    },
+                    "itemDescription": {
+                      "type": "literal",
+                      "value": "theorem",
+                      "xml:lang": "en"
+                    },
+                    "itemLabel": {
+                      "type": "literal",
+                      "value": "equipartition theorem",
+                      "xml:lang": "en"
+                    }
+                  },
+                  {
+                    "alias": {
+                      "type": "literal",
+                      "value": "equipartition",
+                      "xml:lang": "en"
+                    },
+                    "formula": {
+                      "datatype": "http://www.w3.org/1998/Math/MathML",
+                      "type": "literal",
+                      "value": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" class=\"mwe-math-element mwe-math-element-inline\"><mrow data-mjx-texclass=\"ORD\"><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mrow data-mjx-texclass=\"INNER\"><mo data-mjx-texclass=\"OPEN\">\u27e8</mo><msub><mi>x</mi><mrow data-mjx-texclass=\"ORD\"><mi>m</mi></mrow></msub><mrow data-mjx-texclass=\"ORD\"><mfrac><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mi>\u2202</mi><mi>H</mi></mrow></mrow><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mi>\u2202</mi><msub><mi>x</mi><mrow data-mjx-texclass=\"ORD\"><mi>n</mi></mrow></msub></mrow></mrow></mfrac></mrow><mo data-mjx-texclass=\"CLOSE\">\u27e9</mo></mrow><mo stretchy=\"false\">=</mo><msub><mi>\u03b4</mi><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mi>m</mi><mi>n</mi></mrow></mrow></msub><msub><mi>k</mi><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mtext>B</mtext></mrow></mrow></msub><mi>T</mi></mstyle></mrow></math>"
+                    },
+                    "formulaProperty": {
+                      "type": "uri",
+                      "value": "http://www.wikidata.org/prop/direct/P2534"
+                    },
+                    "item": {
+                      "type": "uri",
+                      "value": "http://www.wikidata.org/entity/Q255996"
+                    },
+                    "itemDescription": {
+                      "type": "literal",
+                      "value": "theorem",
+                      "xml:lang": "en"
+                    },
+                    "itemLabel": {
+                      "type": "literal",
+                      "value": "equipartition theorem",
+                      "xml:lang": "en"
+                    }
+                  },
+                  {
+                    "alias": {
+                      "type": "literal",
+                      "value": "conservation of charge",
+                      "xml:lang": "en"
+                    },
+                    "formula": {
+                      "datatype": "http://www.w3.org/1998/Math/MathML",
+                      "type": "literal",
+                      "value": "<math class=\"mwe-math-element mwe-math-element-inline\" xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow data-mjx-texclass=\"ORD\"><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mi>Q</mi><mo stretchy=\"false\">(</mo><msub><mi>t</mi><mrow data-mjx-texclass=\"ORD\"><mn>2</mn></mrow></msub><mo stretchy=\"false\">)</mo><mtext>&#160;</mtext><mo stretchy=\"false\">=</mo><mtext>&#160;</mtext><mi>Q</mi><mo stretchy=\"false\">(</mo><msub><mi>t</mi><mrow data-mjx-texclass=\"ORD\"><mn>1</mn></mrow></msub><mo stretchy=\"false\">)</mo><mo stretchy=\"false\">+</mo><msub><mi>Q</mi><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mi mathvariant=\"normal\">I</mi><mi mathvariant=\"normal\">N</mi></mrow></mrow></mrow></msub><mo stretchy=\"false\">&#x2212;</mo><msub><mi>Q</mi><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mi mathvariant=\"normal\">O</mi><mi mathvariant=\"normal\">U</mi><mi mathvariant=\"normal\">T</mi></mrow></mrow></mrow></msub></mstyle></mrow></math>"
+                    },
+                    "formulaProperty": {
+                      "type": "uri",
+                      "value": "http://www.wikidata.org/prop/direct/P2534"
+                    },
+                    "item": {
+                      "type": "uri",
+                      "value": "http://www.wikidata.org/entity/Q304054"
+                    },
+                    "itemDescription": {
+                      "type": "literal",
+                      "value": "conservation law",
+                      "xml:lang": "en"
+                    },
+                    "itemLabel": {
+                      "type": "literal",
+                      "value": "charge conservation",
+                      "xml:lang": "en"
+                    }
+                  },
+                  {
+                    "alias": {
+                      "type": "literal",
+                      "value": "Amontons\u2019 law",
+                      "xml:lang": "en"
+                    },
+                    "formula": {
+                      "datatype": "http://www.w3.org/1998/Math/MathML",
+                      "type": "literal",
+                      "value": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" class=\"mwe-math-element mwe-math-element-inline\"><mrow data-mjx-texclass=\"ORD\"><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mi>F</mi><mo stretchy=\"false\">\u2264</mo><mi>\u03bc</mi><mi>N</mi></mstyle></mrow></math>"
+                    },
+                    "formulaProperty": {
+                      "type": "uri",
+                      "value": "http://www.wikidata.org/prop/direct/P2534"
+                    },
+                    "item": {
+                      "type": "uri",
+                      "value": "http://www.wikidata.org/entity/Q473991"
+                    },
+                    "itemDescription": {
+                      "type": "literal",
+                      "value": "physical law that friction is at most proportional to the normal force",
+                      "xml:lang": "en"
+                    },
+                    "itemLabel": {
+                      "type": "literal",
+                      "value": "Coulomb friction",
+                      "xml:lang": "en"
+                    }
+                  },
+                  {
+                    "alias": {
+                      "type": "literal",
+                      "value": "Amontons\u2019 law",
+                      "xml:lang": "en"
+                    },
+                    "formula": {
+                      "datatype": "http://www.w3.org/1998/Math/MathML",
+                      "type": "literal",
+                      "value": "<math class=\"mwe-math-element mwe-math-element-inline\" xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow data-mjx-texclass=\"ORD\"><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mi>F</mi><mo stretchy=\"false\">=</mo><mi>&#x03BC;</mi><mi>N</mi></mstyle></mrow></math>"
+                    },
+                    "formulaProperty": {
+                      "type": "uri",
+                      "value": "http://www.wikidata.org/prop/direct/P2534"
+                    },
+                    "item": {
+                      "type": "uri",
+                      "value": "http://www.wikidata.org/entity/Q473991"
+                    },
+                    "itemDescription": {
+                      "type": "literal",
+                      "value": "physical law that friction is at most proportional to the normal force",
+                      "xml:lang": "en"
+                    },
+                    "itemLabel": {
+                      "type": "literal",
+                      "value": "Coulomb friction",
+                      "xml:lang": "en"
+                    }
+                  },
+                  {
+                    "alias": {
+                      "type": "literal",
+                      "value": "Amontons\u2013Coulomb law",
+                      "xml:lang": "en"
+                    },
+                    "formula": {
+                      "datatype": "http://www.w3.org/1998/Math/MathML",
+                      "type": "literal",
+                      "value": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" class=\"mwe-math-element mwe-math-element-inline\"><mrow data-mjx-texclass=\"ORD\"><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mi>F</mi><mo stretchy=\"false\">\u2264</mo><mi>\u03bc</mi><mi>N</mi></mstyle></mrow></math>"
+                    },
+                    "formulaProperty": {
+                      "type": "uri",
+                      "value": "http://www.wikidata.org/prop/direct/P2534"
+                    },
+                    "item": {
+                      "type": "uri",
+                      "value": "http://www.wikidata.org/entity/Q473991"
+                    },
+                    "itemDescription": {
+                      "type": "literal",
+                      "value": "physical law that friction is at most proportional to the normal force",
+                      "xml:lang": "en"
+                    },
+                    "itemLabel": {
+                      "type": "literal",
+                      "value": "Coulomb friction",
+                      "xml:lang": "en"
+                    }
+                  },
+                  {
+                    "alias": {
+                      "type": "literal",
+                      "value": "Amontons\u2013Coulomb law",
+                      "xml:lang": "en"
+                    },
+                    "formula": {
+                      "datatype": "http://www.w3.org/1998/Math/MathML",
+                      "type": "literal",
+                      "value": "<math class=\"mwe-math-element mwe-math-element-inline\" xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow data-mjx-texclass=\"ORD\"><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mi>F</mi><mo stretchy=\"false\">=</mo><mi>&#x03BC;</mi><mi>N</mi></mstyle></mrow></math>"
+                    },
+                    "formulaProperty": {
+                      "type": "uri",
+                      "value": "http://www.wikidata.org/prop/direct/P2534"
+                    },
+                    "item": {
+                      "type": "uri",
+                      "value": "http://www.wikidata.org/entity/Q473991"
+                    },
+                    "itemDescription": {
+                      "type": "literal",
+                      "value": "physical law that friction is at most proportional to the normal force",
+                      "xml:lang": "en"
+                    },
+                    "itemLabel": {
+                      "type": "literal",
+                      "value": "Coulomb friction",
+                      "xml:lang": "en"
+                    }
+                  },
+                  {
+                    "alias": {
+                      "type": "literal",
+                      "value": "Coulomb's law of friction",
+                      "xml:lang": "en"
+                    },
+                    "formula": {
+                      "datatype": "http://www.w3.org/1998/Math/MathML",
+                      "type": "literal",
+                      "value": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" class=\"mwe-math-element mwe-math-element-inline\"><mrow data-mjx-texclass=\"ORD\"><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mi>F</mi><mo stretchy=\"false\">\u2264</mo><mi>\u03bc</mi><mi>N</mi></mstyle></mrow></math>"
+                    },
+                    "formulaProperty": {
+                      "type": "uri",
+                      "value": "http://www.wikidata.org/prop/direct/P2534"
+                    },
+                    "item": {
+                      "type": "uri",
+                      "value": "http://www.wikidata.org/entity/Q473991"
+                    },
+                    "itemDescription": {
+                      "type": "literal",
+                      "value": "physical law that friction is at most proportional to the normal force",
+                      "xml:lang": "en"
+                    },
+                    "itemLabel": {
+                      "type": "literal",
+                      "value": "Coulomb friction",
+                      "xml:lang": "en"
+                    }
+                  },
+                  {
+                    "alias": {
+                      "type": "literal",
+                      "value": "Coulomb's law of friction",
+                      "xml:lang": "en"
+                    },
+                    "formula": {
+                      "datatype": "http://www.w3.org/1998/Math/MathML",
+                      "type": "literal",
+                      "value": "<math class=\"mwe-math-element mwe-math-element-inline\" xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow data-mjx-texclass=\"ORD\"><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mi>F</mi><mo stretchy=\"false\">=</mo><mi>&#x03BC;</mi><mi>N</mi></mstyle></mrow></math>"
+                    },
+                    "formulaProperty": {
+                      "type": "uri",
+                      "value": "http://www.wikidata.org/prop/direct/P2534"
+                    },
+                    "item": {
+                      "type": "uri",
+                      "value": "http://www.wikidata.org/entity/Q473991"
+                    },
+                    "itemDescription": {
+                      "type": "literal",
+                      "value": "physical law that friction is at most proportional to the normal force",
+                      "xml:lang": "en"
+                    },
+                    "itemLabel": {
+                      "type": "literal",
+                      "value": "Coulomb friction",
+                      "xml:lang": "en"
+                    }
+                  },
+                  {
+                    "alias": {
+                      "type": "literal",
+                      "value": "Coulomb's law",
+                      "xml:lang": "en"
+                    },
+                    "formula": {
+                      "datatype": "http://www.w3.org/1998/Math/MathML",
+                      "type": "literal",
+                      "value": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" class=\"mwe-math-element mwe-math-element-inline\"><mrow data-mjx-texclass=\"ORD\"><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mi>F</mi><mo stretchy=\"false\">\u2264</mo><mi>\u03bc</mi><mi>N</mi></mstyle></mrow></math>"
+                    },
+                    "formulaProperty": {
+                      "type": "uri",
+                      "value": "http://www.wikidata.org/prop/direct/P2534"
+                    },
+                    "item": {
+                      "type": "uri",
+                      "value": "http://www.wikidata.org/entity/Q473991"
+                    },
+                    "itemDescription": {
+                      "type": "literal",
+                      "value": "physical law that friction is at most proportional to the normal force",
+                      "xml:lang": "en"
+                    },
+                    "itemLabel": {
+                      "type": "literal",
+                      "value": "Coulomb friction",
+                      "xml:lang": "en"
+                    }
+                  },
+                  {
+                    "alias": {
+                      "type": "literal",
+                      "value": "Coulomb's law",
+                      "xml:lang": "en"
+                    },
+                    "formula": {
+                      "datatype": "http://www.w3.org/1998/Math/MathML",
+                      "type": "literal",
+                      "value": "<math class=\"mwe-math-element mwe-math-element-inline\" xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow data-mjx-texclass=\"ORD\"><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mi>F</mi><mo stretchy=\"false\">=</mo><mi>&#x03BC;</mi><mi>N</mi></mstyle></mrow></math>"
+                    },
+                    "formulaProperty": {
+                      "type": "uri",
+                      "value": "http://www.wikidata.org/prop/direct/P2534"
+                    },
+                    "item": {
+                      "type": "uri",
+                      "value": "http://www.wikidata.org/entity/Q473991"
+                    },
+                    "itemDescription": {
+                      "type": "literal",
+                      "value": "physical law that friction is at most proportional to the normal force",
+                      "xml:lang": "en"
+                    },
+                    "itemLabel": {
+                      "type": "literal",
+                      "value": "Coulomb friction",
+                      "xml:lang": "en"
+                    }
+                  },
+                  {
+                    "alias": {
+                      "type": "literal",
+                      "value": "Landauer limit",
+                      "xml:lang": "en"
+                    },
+                    "formula": {
+                      "datatype": "http://www.w3.org/1998/Math/MathML",
+                      "type": "literal",
+                      "value": "<math class=\"mwe-math-element mwe-math-element-inline\" xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow data-mjx-texclass=\"ORD\"><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mi>E</mi><mo stretchy=\"false\">&#x2265;</mo><msub><mi>k</mi><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mi mathvariant=\"normal\">B</mi></mrow></mrow></msub><mi>T</mi><mi>ln</mi><mo>&#x2061;</mo><mn>2</mn></mstyle></mrow></math>"
+                    },
+                    "formulaProperty": {
+                      "type": "uri",
+                      "value": "http://www.wikidata.org/prop/direct/P2534"
+                    },
+                    "item": {
+                      "type": "uri",
+                      "value": "http://www.wikidata.org/entity/Q657486"
+                    },
+                    "itemDescription": {
+                      "type": "literal",
+                      "value": "physical principle that erasing one bit of information at temperature \ud835\udc47 requires energy \ud835\udc58\ud835\udc47ln(2)",
+                      "xml:lang": "en"
+                    },
+                    "itemLabel": {
+                      "type": "literal",
+                      "value": "Landauer's principle",
+                      "xml:lang": "en"
+                    }
+                  },
+                  {
+                    "alias": {
+                      "type": "literal",
+                      "value": "Landauer bound",
+                      "xml:lang": "en"
+                    },
+                    "formula": {
+                      "datatype": "http://www.w3.org/1998/Math/MathML",
+                      "type": "literal",
+                      "value": "<math class=\"mwe-math-element mwe-math-element-inline\" xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow data-mjx-texclass=\"ORD\"><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mi>E</mi><mo stretchy=\"false\">&#x2265;</mo><msub><mi>k</mi><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mi mathvariant=\"normal\">B</mi></mrow></mrow></msub><mi>T</mi><mi>ln</mi><mo>&#x2061;</mo><mn>2</mn></mstyle></mrow></math>"
+                    },
+                    "formulaProperty": {
+                      "type": "uri",
+                      "value": "http://www.wikidata.org/prop/direct/P2534"
+                    },
+                    "item": {
+                      "type": "uri",
+                      "value": "http://www.wikidata.org/entity/Q657486"
+                    },
+                    "itemDescription": {
+                      "type": "literal",
+                      "value": "physical principle that erasing one bit of information at temperature \ud835\udc47 requires energy \ud835\udc58\ud835\udc47ln(2)",
+                      "xml:lang": "en"
+                    },
+                    "itemLabel": {
+                      "type": "literal",
+                      "value": "Landauer's principle",
+                      "xml:lang": "en"
+                    }
+                  },
+                  {
+                    "alias": {
+                      "type": "literal",
+                      "value": "Stefan's law",
+                      "xml:lang": "en"
+                    },
+                    "formula": {
+                      "datatype": "http://www.w3.org/1998/Math/MathML",
+                      "type": "literal",
+                      "value": "<math class=\"mwe-math-element mwe-math-element-inline\" xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow data-mjx-texclass=\"ORD\"><mstyle displaystyle=\"true\" scriptlevel=\"0\"><msub><mi>M</mi><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mi mathvariant=\"normal\">b</mi></mrow></mrow></msub><mo stretchy=\"false\">=</mo><mi>&#x03C3;</mi><msup><mi>T</mi><mrow data-mjx-texclass=\"ORD\"><mn>4</mn></mrow></msup></mstyle></mrow></math>"
+                    },
+                    "formulaProperty": {
+                      "type": "uri",
+                      "value": "http://www.wikidata.org/prop/direct/P2534"
+                    },
+                    "item": {
+                      "type": "uri",
+                      "value": "http://www.wikidata.org/entity/Q704747"
+                    },
+                    "itemDescription": {
+                      "type": "literal",
+                      "value": "physical law on the emissive power of black body",
+                      "xml:lang": "en"
+                    },
+                    "itemLabel": {
+                      "type": "literal",
+                      "value": "Stefan-Boltzmann law",
+                      "xml:lang": "en"
+                    }
+                  },
+                  {
+                    "alias": {
+                      "type": "literal",
+                      "value": "Stefan-Boltzmann's law",
+                      "xml:lang": "en"
+                    },
+                    "formula": {
+                      "datatype": "http://www.w3.org/1998/Math/MathML",
+                      "type": "literal",
+                      "value": "<math class=\"mwe-math-element mwe-math-element-inline\" xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow data-mjx-texclass=\"ORD\"><mstyle displaystyle=\"true\" scriptlevel=\"0\"><msub><mi>M</mi><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mi mathvariant=\"normal\">b</mi></mrow></mrow></msub><mo stretchy=\"false\">=</mo><mi>&#x03C3;</mi><msup><mi>T</mi><mrow data-mjx-texclass=\"ORD\"><mn>4</mn></mrow></msup></mstyle></mrow></math>"
+                    },
+                    "formulaProperty": {
+                      "type": "uri",
+                      "value": "http://www.wikidata.org/prop/direct/P2534"
+                    },
+                    "item": {
+                      "type": "uri",
+                      "value": "http://www.wikidata.org/entity/Q704747"
+                    },
+                    "itemDescription": {
+                      "type": "literal",
+                      "value": "physical law on the emissive power of black body",
+                      "xml:lang": "en"
+                    },
+                    "itemLabel": {
+                      "type": "literal",
+                      "value": "Stefan-Boltzmann law",
+                      "xml:lang": "en"
+                    }
+                  },
+                  {
+                    "alias": {
+                      "type": "literal",
+                      "value": "isothermal atmosphere",
+                      "xml:lang": "en"
+                    },
+                    "formula": {
+                      "datatype": "http://www.w3.org/1998/Math/MathML",
+                      "type": "literal",
+                      "value": "<math class=\"mwe-math-element mwe-math-element-inline\" xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow data-mjx-texclass=\"ORD\"><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mi>p</mi><mo stretchy=\"false\">=</mo><msub><mi>p</mi><mrow data-mjx-texclass=\"ORD\"><mn>0</mn></mrow></msub><mi>exp</mi><mo>&#x2061;</mo><mrow data-mjx-texclass=\"INNER\"><mo data-mjx-texclass=\"OPEN\">[</mo><mo stretchy=\"false\">&#x2212;</mo><mi>M</mi><mi>g</mi><mrow data-mjx-texclass=\"ORD\"><mfrac><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mi>h</mi><mo stretchy=\"false\">&#x2212;</mo><msub><mi>h</mi><mrow data-mjx-texclass=\"ORD\"><mn>0</mn></mrow></msub></mrow></mrow><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mi>R</mi><mi>T</mi></mrow></mrow></mfrac></mrow><mo data-mjx-texclass=\"CLOSE\">]</mo></mrow></mstyle></mrow></math>"
+                    },
+                    "formulaProperty": {
+                      "type": "uri",
+                      "value": "http://www.wikidata.org/prop/direct/P2534"
+                    },
+                    "item": {
+                      "type": "uri",
+                      "value": "http://www.wikidata.org/entity/Q808592"
+                    },
+                    "itemDescription": {
+                      "type": "literal",
+                      "value": "formula used to model how air pressure varies with altitude",
+                      "xml:lang": "en"
+                    },
+                    "itemLabel": {
+                      "type": "literal",
+                      "value": "barometric formula",
+                      "xml:lang": "en"
+                    }
+                  },
+                  {
+                    "alias": {
+                      "type": "literal",
+                      "value": "exponential atmosphere",
+                      "xml:lang": "en"
+                    },
+                    "formula": {
+                      "datatype": "http://www.w3.org/1998/Math/MathML",
+                      "type": "literal",
+                      "value": "<math class=\"mwe-math-element mwe-math-element-inline\" xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow data-mjx-texclass=\"ORD\"><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mi>p</mi><mo stretchy=\"false\">=</mo><msub><mi>p</mi><mrow data-mjx-texclass=\"ORD\"><mn>0</mn></mrow></msub><mi>exp</mi><mo>&#x2061;</mo><mrow data-mjx-texclass=\"INNER\"><mo data-mjx-texclass=\"OPEN\">[</mo><mo stretchy=\"false\">&#x2212;</mo><mi>M</mi><mi>g</mi><mrow data-mjx-texclass=\"ORD\"><mfrac><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mi>h</mi><mo stretchy=\"false\">&#x2212;</mo><msub><mi>h</mi><mrow data-mjx-texclass=\"ORD\"><mn>0</mn></mrow></msub></mrow></mrow><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mi>R</mi><mi>T</mi></mrow></mrow></mfrac></mrow><mo data-mjx-texclass=\"CLOSE\">]</mo></mrow></mstyle></mrow></math>"
+                    },
+                    "formulaProperty": {
+                      "type": "uri",
+                      "value": "http://www.wikidata.org/prop/direct/P2534"
+                    },
+                    "item": {
+                      "type": "uri",
+                      "value": "http://www.wikidata.org/entity/Q808592"
+                    },
+                    "itemDescription": {
+                      "type": "literal",
+                      "value": "formula used to model how air pressure varies with altitude",
+                      "xml:lang": "en"
+                    },
+                    "itemLabel": {
+                      "type": "literal",
+                      "value": "barometric formula",
+                      "xml:lang": "en"
+                    }
+                  },
+                  {
+                    "formula": {
+                      "datatype": "http://www.w3.org/1998/Math/MathML",
+                      "type": "literal",
+                      "value": "<math class=\"mwe-math-element mwe-math-element-inline\" xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow data-mjx-texclass=\"ORD\"><mstyle displaystyle=\"true\" scriptlevel=\"0\"><msub><mi>F</mi><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mi mathvariant=\"normal\">D</mi></mrow></mrow></msub><mo stretchy=\"false\">=</mo><mn>6</mn><mi>&#x03C0;</mi><mi>&#x03B7;</mi><mi>r</mi><mi>v</mi></mstyle></mrow></math>"
+                    },
+                    "formulaProperty": {
+                      "type": "uri",
+                      "value": "http://www.wikidata.org/prop/direct/P2534"
+                    },
+                    "item": {
+                      "type": "uri",
+                      "value": "http://www.wikidata.org/entity/Q824561"
+                    },
+                    "itemDescription": {
+                      "type": "literal",
+                      "value": "expression for frictional force on small spherical object moving through a viscous fluid",
+                      "xml:lang": "en"
+                    },
+                    "itemLabel": {
+                      "type": "literal",
+                      "value": "Stokes' law",
+                      "xml:lang": "en"
+                    }
+                  },
+                  {
+                    "alias": {
+                      "type": "literal",
+                      "value": "Bragg reflection",
+                      "xml:lang": "en"
+                    },
+                    "formula": {
+                      "datatype": "http://www.w3.org/1998/Math/MathML",
+                      "type": "literal",
+                      "value": "<math class=\"mwe-math-element mwe-math-element-inline\" xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow data-mjx-texclass=\"ORD\"><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mi>n</mi><mi>&#x03BB;</mi><mo stretchy=\"false\">=</mo><mn>2</mn><mi>d</mi><mi>sin</mi><mo>&#x2061;</mo><mi>&#x03B8;</mi></mstyle></mrow></math>"
+                    },
+                    "formulaProperty": {
+                      "type": "uri",
+                      "value": "http://www.wikidata.org/prop/direct/P2534"
+                    },
+                    "item": {
+                      "type": "uri",
+                      "value": "http://www.wikidata.org/entity/Q847354"
+                    },
+                    "itemDescription": {
+                      "type": "literal",
+                      "value": "gives the angles for coherent and incoherent scattering from a crystal lattice",
+                      "xml:lang": "en"
+                    },
+                    "itemLabel": {
+                      "type": "literal",
+                      "value": "Bragg's law",
+                      "xml:lang": "en"
+                    }
+                  },
+                  {
+                    "alias": {
+                      "type": "literal",
+                      "value": "Bragg equation",
+                      "xml:lang": "en"
+                    },
+                    "formula": {
+                      "datatype": "http://www.w3.org/1998/Math/MathML",
+                      "type": "literal",
+                      "value": "<math class=\"mwe-math-element mwe-math-element-inline\" xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow data-mjx-texclass=\"ORD\"><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mi>n</mi><mi>&#x03BB;</mi><mo stretchy=\"false\">=</mo><mn>2</mn><mi>d</mi><mi>sin</mi><mo>&#x2061;</mo><mi>&#x03B8;</mi></mstyle></mrow></math>"
+                    },
+                    "formulaProperty": {
+                      "type": "uri",
+                      "value": "http://www.wikidata.org/prop/direct/P2534"
+                    },
+                    "item": {
+                      "type": "uri",
+                      "value": "http://www.wikidata.org/entity/Q847354"
+                    },
+                    "itemDescription": {
+                      "type": "literal",
+                      "value": "gives the angles for coherent and incoherent scattering from a crystal lattice",
+                      "xml:lang": "en"
+                    },
+                    "itemLabel": {
+                      "type": "literal",
+                      "value": "Bragg's law",
+                      "xml:lang": "en"
+                    }
+                  },
+                  {
+                    "alias": {
+                      "type": "literal",
+                      "value": "Bragg Diffraction",
+                      "xml:lang": "en"
+                    },
+                    "formula": {
+                      "datatype": "http://www.w3.org/1998/Math/MathML",
+                      "type": "literal",
+                      "value": "<math class=\"mwe-math-element mwe-math-element-inline\" xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow data-mjx-texclass=\"ORD\"><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mi>n</mi><mi>&#x03BB;</mi><mo stretchy=\"false\">=</mo><mn>2</mn><mi>d</mi><mi>sin</mi><mo>&#x2061;</mo><mi>&#x03B8;</mi></mstyle></mrow></math>"
+                    },
+                    "formulaProperty": {
+                      "type": "uri",
+                      "value": "http://www.wikidata.org/prop/direct/P2534"
+                    },
+                    "item": {
+                      "type": "uri",
+                      "value": "http://www.wikidata.org/entity/Q847354"
+                    },
+                    "itemDescription": {
+                      "type": "literal",
+                      "value": "gives the angles for coherent and incoherent scattering from a crystal lattice",
+                      "xml:lang": "en"
+                    },
+                    "itemLabel": {
+                      "type": "literal",
+                      "value": "Bragg's law",
+                      "xml:lang": "en"
+                    }
+                  },
+                  {
+                    "alias": {
+                      "type": "literal",
+                      "value": "Klein\u2013Gordon\u2013Fock equation",
+                      "xml:lang": "en"
+                    },
+                    "formula": {
+                      "datatype": "http://www.w3.org/1998/Math/MathML",
+                      "type": "literal",
+                      "value": "<math class=\"mwe-math-element mwe-math-element-inline\" xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow data-mjx-texclass=\"ORD\"><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mrow data-mjx-texclass=\"ORD\"><mfrac><mrow data-mjx-texclass=\"ORD\"><mn>1</mn></mrow><mrow data-mjx-texclass=\"ORD\"><msup><mi>c</mi><mrow data-mjx-texclass=\"ORD\"><mn>2</mn></mrow></msup></mrow></mfrac></mrow><mrow data-mjx-texclass=\"ORD\"><mfrac><mrow data-mjx-texclass=\"ORD\"><msup><mi>&#x2202;</mi><mrow data-mjx-texclass=\"ORD\"><mn>2</mn></mrow></msup></mrow><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mi>&#x2202;</mi><msup><mi>t</mi><mrow data-mjx-texclass=\"ORD\"><mn>2</mn></mrow></msup></mrow></mrow></mfrac></mrow><mi>&#x03C8;</mi><mo stretchy=\"false\">&#x2212;</mo><msup><mi mathvariant=\"normal\">&#x2207;</mi><mrow data-mjx-texclass=\"ORD\"><mn>2</mn></mrow></msup><mi>&#x03C8;</mi><mo stretchy=\"false\">+</mo><mrow data-mjx-texclass=\"ORD\"><mfrac><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><msup><mi>m</mi><mrow data-mjx-texclass=\"ORD\"><mn>2</mn></mrow></msup><msup><mi>c</mi><mrow data-mjx-texclass=\"ORD\"><mn>2</mn></mrow></msup></mrow></mrow><mrow data-mjx-texclass=\"ORD\"><msup><mi alternate=\"1\">&#x210F;</mi><mrow data-mjx-texclass=\"ORD\"><mn>2</mn></mrow></msup></mrow></mfrac></mrow><mi>&#x03C8;</mi><mo stretchy=\"false\">=</mo><mn>0</mn></mstyle></mrow></math>"
+                    },
+                    "formulaProperty": {
+                      "type": "uri",
+                      "value": "http://www.wikidata.org/prop/direct/P2534"
+                    },
+                    "item": {
+                      "type": "uri",
+                      "value": "http://www.wikidata.org/entity/Q868967"
+                    },
+                    "itemDescription": {
+                      "type": "literal",
+                      "value": "relativistic wave equation in quantum mechanics",
+                      "xml:lang": "en"
+                    },
+                    "itemLabel": {
+                      "type": "literal",
+                      "value": "Klein\u2013Gordon equation",
+                      "xml:lang": "en"
+                    }
+                  },
+                  {
+                    "alias": {
+                      "type": "literal",
+                      "value": "Klein\u2013Fock\u2013Gordon equation",
+                      "xml:lang": "en"
+                    },
+                    "formula": {
+                      "datatype": "http://www.w3.org/1998/Math/MathML",
+                      "type": "literal",
+                      "value": "<math class=\"mwe-math-element mwe-math-element-inline\" xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow data-mjx-texclass=\"ORD\"><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mrow data-mjx-texclass=\"ORD\"><mfrac><mrow data-mjx-texclass=\"ORD\"><mn>1</mn></mrow><mrow data-mjx-texclass=\"ORD\"><msup><mi>c</mi><mrow data-mjx-texclass=\"ORD\"><mn>2</mn></mrow></msup></mrow></mfrac></mrow><mrow data-mjx-texclass=\"ORD\"><mfrac><mrow data-mjx-texclass=\"ORD\"><msup><mi>&#x2202;</mi><mrow data-mjx-texclass=\"ORD\"><mn>2</mn></mrow></msup></mrow><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mi>&#x2202;</mi><msup><mi>t</mi><mrow data-mjx-texclass=\"ORD\"><mn>2</mn></mrow></msup></mrow></mrow></mfrac></mrow><mi>&#x03C8;</mi><mo stretchy=\"false\">&#x2212;</mo><msup><mi mathvariant=\"normal\">&#x2207;</mi><mrow data-mjx-texclass=\"ORD\"><mn>2</mn></mrow></msup><mi>&#x03C8;</mi><mo stretchy=\"false\">+</mo><mrow data-mjx-texclass=\"ORD\"><mfrac><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><msup><mi>m</mi><mrow data-mjx-texclass=\"ORD\"><mn>2</mn></mrow></msup><msup><mi>c</mi><mrow data-mjx-texclass=\"ORD\"><mn>2</mn></mrow></msup></mrow></mrow><mrow data-mjx-texclass=\"ORD\"><msup><mi alternate=\"1\">&#x210F;</mi><mrow data-mjx-texclass=\"ORD\"><mn>2</mn></mrow></msup></mrow></mfrac></mrow><mi>&#x03C8;</mi><mo stretchy=\"false\">=</mo><mn>0</mn></mstyle></mrow></math>"
+                    },
+                    "formulaProperty": {
+                      "type": "uri",
+                      "value": "http://www.wikidata.org/prop/direct/P2534"
+                    },
+                    "item": {
+                      "type": "uri",
+                      "value": "http://www.wikidata.org/entity/Q868967"
+                    },
+                    "itemDescription": {
+                      "type": "literal",
+                      "value": "relativistic wave equation in quantum mechanics",
+                      "xml:lang": "en"
+                    },
+                    "itemLabel": {
+                      "type": "literal",
+                      "value": "Klein\u2013Gordon equation",
+                      "xml:lang": "en"
+                    }
+                  },
+                  {
+                    "alias": {
+                      "type": "literal",
+                      "value": "Klein-Gordon Equation",
+                      "xml:lang": "en"
+                    },
+                    "formula": {
+                      "datatype": "http://www.w3.org/1998/Math/MathML",
+                      "type": "literal",
+                      "value": "<math class=\"mwe-math-element mwe-math-element-inline\" xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow data-mjx-texclass=\"ORD\"><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mrow data-mjx-texclass=\"ORD\"><mfrac><mrow data-mjx-texclass=\"ORD\"><mn>1</mn></mrow><mrow data-mjx-texclass=\"ORD\"><msup><mi>c</mi><mrow data-mjx-texclass=\"ORD\"><mn>2</mn></mrow></msup></mrow></mfrac></mrow><mrow data-mjx-texclass=\"ORD\"><mfrac><mrow data-mjx-texclass=\"ORD\"><msup><mi>&#x2202;</mi><mrow data-mjx-texclass=\"ORD\"><mn>2</mn></mrow></msup></mrow><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mi>&#x2202;</mi><msup><mi>t</mi><mrow data-mjx-texclass=\"ORD\"><mn>2</mn></mrow></msup></mrow></mrow></mfrac></mrow><mi>&#x03C8;</mi><mo stretchy=\"false\">&#x2212;</mo><msup><mi mathvariant=\"normal\">&#x2207;</mi><mrow data-mjx-texclass=\"ORD\"><mn>2</mn></mrow></msup><mi>&#x03C8;</mi><mo stretchy=\"false\">+</mo><mrow data-mjx-texclass=\"ORD\"><mfrac><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><msup><mi>m</mi><mrow data-mjx-texclass=\"ORD\"><mn>2</mn></mrow></msup><msup><mi>c</mi><mrow data-mjx-texclass=\"ORD\"><mn>2</mn></mrow></msup></mrow></mrow><mrow data-mjx-texclass=\"ORD\"><msup><mi alternate=\"1\">&#x210F;</mi><mrow data-mjx-texclass=\"ORD\"><mn>2</mn></mrow></msup></mrow></mfrac></mrow><mi>&#x03C8;</mi><mo stretchy=\"false\">=</mo><mn>0</mn></mstyle></mrow></math>"
+                    },
+                    "formulaProperty": {
+                      "type": "uri",
+                      "value": "http://www.wikidata.org/prop/direct/P2534"
+                    },
+                    "item": {
+                      "type": "uri",
+                      "value": "http://www.wikidata.org/entity/Q868967"
+                    },
+                    "itemDescription": {
+                      "type": "literal",
+                      "value": "relativistic wave equation in quantum mechanics",
+                      "xml:lang": "en"
+                    },
+                    "itemLabel": {
+                      "type": "literal",
+                      "value": "Klein\u2013Gordon equation",
+                      "xml:lang": "en"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "payload_sha256": "dbe2b42a2da224d2d424296ede8215a954b3e828c17b9139a66a658dc2b81635",
+          "provenance_summary": "Wikidata physics-scoped ingestion queue built from items classified under Physics equations or physical law roots.",
+          "snapshot_id": "d66a5026-a727-5223-954d-561c0b90baa8",
+          "source_system": "wikidata",
+          "source_uri": "https://query.wikidata.org/sparql",
+          "source_version": "wikidata-physics-candidates-2026-05-05-limit-50"
+        }
+      ],
+      "table": "physics_ingest_snapshots"
+    },
+    {
+      "conflict_keys": [
+        "candidate_id"
+      ],
+      "row_count": 23,
+      "rows": [
+        {
+          "behavioral_archetypes": [],
+          "candidate_id": "996f76d5-f735-5039-b84a-66633c017710",
+          "candidate_status": "raw_imported",
+          "mechanism_tags": [],
+          "notes": "",
+          "parse_confidence": 0.0,
+          "priority_score": 0.0,
+          "raw_formula": "<math class=\"mwe-math-element mwe-math-element-inline\" xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow data-mjx-texclass=\"ORD\"><mstyle displaystyle=\"true\" scriptlevel=\"0\"><msub><mi>F</mi><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mi mathvariant=\"normal\">g</mi></mrow></mrow></msub><mo stretchy=\"false\">=</mo><mi>G</mi><mfrac><mrow><msub><mi>m</mi><mrow data-mjx-texclass=\"ORD\"><mn>1</mn></mrow></msub><msub><mi>m</mi><mrow data-mjx-texclass=\"ORD\"><mn>2</mn></mrow></msub></mrow><mrow><msup><mi>r</mi><mrow data-mjx-texclass=\"ORD\"><mn>2</mn></mrow></msup></mrow></mfrac></mstyle></mrow></math>",
+          "raw_formula_format": "wikidata_math",
+          "snapshot_id": "d66a5026-a727-5223-954d-561c0b90baa8",
+          "source_candidate_id": "Q134465:P2534:f807bb767ecc16be",
+          "source_description": "classical mechanics physical law",
+          "source_entity_uri": "http://www.wikidata.org/entity/Q134465",
+          "source_label": "Newton's law of universal gravitation",
+          "source_payload": {
+            "aliases": [
+              "Newton's theory of gravitation",
+              "Newtonian gravity",
+              "universal gravitation"
+            ],
+            "formula_parse_hint": "mathml_plain_text_extracted",
+            "formula_plain_text": "F_g = G ((m_1 m_2)/(r^2))",
+            "formula_plain_text_format": "plain_text",
+            "formula_property_id": "P2534",
+            "source_rows": [
+              {
+                "alias": "universal gravitation",
+                "formula": "<math class=\"mwe-math-element mwe-math-element-inline\" xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow data-mjx-texclass=\"ORD\"><mstyle displaystyle=\"true\" scriptlevel=\"0\"><msub><mi>F</mi><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mi mathvariant=\"normal\">g</mi></mrow></mrow></msub><mo stretchy=\"false\">=</mo><mi>G</mi><mfrac><mrow><msub><mi>m</mi><mrow data-mjx-texclass=\"ORD\"><mn>1</mn></mrow></msub><msub><mi>m</mi><mrow data-mjx-texclass=\"ORD\"><mn>2</mn></mrow></msub></mrow><mrow><msup><mi>r</mi><mrow data-mjx-texclass=\"ORD\"><mn>2</mn></mrow></msup></mrow></mfrac></mstyle></mrow></math>",
+                "formulaProperty": "http://www.wikidata.org/prop/direct/P2534",
+                "item": "http://www.wikidata.org/entity/Q134465",
+                "itemDescription": "classical mechanics physical law",
+                "itemLabel": "Newton's law of universal gravitation"
+              },
+              {
+                "alias": "Newtonian gravity",
+                "formula": "<math class=\"mwe-math-element mwe-math-element-inline\" xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow data-mjx-texclass=\"ORD\"><mstyle displaystyle=\"true\" scriptlevel=\"0\"><msub><mi>F</mi><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mi mathvariant=\"normal\">g</mi></mrow></mrow></msub><mo stretchy=\"false\">=</mo><mi>G</mi><mfrac><mrow><msub><mi>m</mi><mrow data-mjx-texclass=\"ORD\"><mn>1</mn></mrow></msub><msub><mi>m</mi><mrow data-mjx-texclass=\"ORD\"><mn>2</mn></mrow></msub></mrow><mrow><msup><mi>r</mi><mrow data-mjx-texclass=\"ORD\"><mn>2</mn></mrow></msup></mrow></mfrac></mstyle></mrow></math>",
+                "formulaProperty": "http://www.wikidata.org/prop/direct/P2534",
+                "item": "http://www.wikidata.org/entity/Q134465",
+                "itemDescription": "classical mechanics physical law",
+                "itemLabel": "Newton's law of universal gravitation"
+              },
+              {
+                "alias": "Newton's theory of gravitation",
+                "formula": "<math class=\"mwe-math-element mwe-math-element-inline\" xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow data-mjx-texclass=\"ORD\"><mstyle displaystyle=\"true\" scriptlevel=\"0\"><msub><mi>F</mi><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mi mathvariant=\"normal\">g</mi></mrow></mrow></msub><mo stretchy=\"false\">=</mo><mi>G</mi><mfrac><mrow><msub><mi>m</mi><mrow data-mjx-texclass=\"ORD\"><mn>1</mn></mrow></msub><msub><mi>m</mi><mrow data-mjx-texclass=\"ORD\"><mn>2</mn></mrow></msub></mrow><mrow><msup><mi>r</mi><mrow data-mjx-texclass=\"ORD\"><mn>2</mn></mrow></msup></mrow></mfrac></mstyle></mrow></math>",
+                "formulaProperty": "http://www.wikidata.org/prop/direct/P2534",
+                "item": "http://www.wikidata.org/entity/Q134465",
+                "itemDescription": "classical mechanics physical law",
+                "itemLabel": "Newton's law of universal gravitation"
+              }
+            ],
+            "source_system": "wikidata",
+            "uses": [],
+            "wikidata_entity_id": "Q134465"
+          }
+        },
+        {
+          "behavioral_archetypes": [],
+          "candidate_id": "1e4f1972-6e5a-5b8f-b095-219814529a00",
+          "candidate_status": "raw_imported",
+          "mechanism_tags": [],
+          "notes": "",
+          "parse_confidence": 0.0,
+          "priority_score": 0.0,
+          "raw_formula": "<math class=\"mwe-math-element mwe-math-element-inline\" xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow data-mjx-texclass=\"ORD\"><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mi>F</mi><mo stretchy=\"false\">=</mo><mi>k</mi><mi mathvariant=\"normal\">&#x0394;</mi><mi>l</mi></mstyle></mrow></math>",
+          "raw_formula_format": "wikidata_math",
+          "snapshot_id": "d66a5026-a727-5223-954d-561c0b90baa8",
+          "source_candidate_id": "Q170282:P2534:919bc24707814d06",
+          "source_description": "empirical physical law of mechanics that the force on a spring is proportional to its displacement",
+          "source_entity_uri": "http://www.wikidata.org/entity/Q170282",
+          "source_label": "Hooke's law",
+          "source_payload": {
+            "aliases": [],
+            "formula_parse_hint": "mathml_plain_text_extracted",
+            "formula_plain_text": "F = k Delta l",
+            "formula_plain_text_format": "plain_text",
+            "formula_property_id": "P2534",
+            "source_rows": [
+              {
+                "formula": "<math class=\"mwe-math-element mwe-math-element-inline\" xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow data-mjx-texclass=\"ORD\"><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mi>F</mi><mo stretchy=\"false\">=</mo><mi>k</mi><mi mathvariant=\"normal\">&#x0394;</mi><mi>l</mi></mstyle></mrow></math>",
+                "formulaProperty": "http://www.wikidata.org/prop/direct/P2534",
+                "item": "http://www.wikidata.org/entity/Q170282",
+                "itemDescription": "empirical physical law of mechanics that the force on a spring is proportional to its displacement",
+                "itemLabel": "Hooke's law"
+              }
+            ],
+            "source_system": "wikidata",
+            "uses": [],
+            "wikidata_entity_id": "Q170282"
+          }
+        },
+        {
+          "behavioral_archetypes": [],
+          "candidate_id": "9ba41cdc-0b6d-5393-a0c3-d14305728734",
+          "candidate_status": "raw_imported",
+          "mechanism_tags": [],
+          "notes": "",
+          "parse_confidence": 0.0,
+          "priority_score": 0.0,
+          "raw_formula": "<math class=\"mwe-math-element mwe-math-element-inline\" xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow data-mjx-texclass=\"ORD\"><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mrow data-mjx-texclass=\"ORD\"><mfrac><mrow data-mjx-texclass=\"ORD\"><mi>V</mi></mrow><mrow data-mjx-texclass=\"ORD\"><mi>n</mi></mrow></mfrac></mrow><mo stretchy=\"false\">=</mo><mi>k</mi></mstyle></mrow></math>",
+          "raw_formula_format": "wikidata_math",
+          "snapshot_id": "d66a5026-a727-5223-954d-561c0b90baa8",
+          "source_candidate_id": "Q170431:P2534:15e0e63172c0919a",
+          "source_description": "physical law that equal volumes of all gases at the same temperature and pressure have the same number of molecules",
+          "source_entity_uri": "http://www.wikidata.org/entity/Q170431",
+          "source_label": "Avogadro's law",
+          "source_payload": {
+            "aliases": [
+              "Avogadro's hypothesis",
+              "Avogadro's principle"
+            ],
+            "formula_parse_hint": "mathml_plain_text_extracted",
+            "formula_plain_text": "((V)/(n)) = k",
+            "formula_plain_text_format": "plain_text",
+            "formula_property_id": "P2534",
+            "source_rows": [
+              {
+                "alias": "Avogadro's principle",
+                "formula": "<math class=\"mwe-math-element mwe-math-element-inline\" xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow data-mjx-texclass=\"ORD\"><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mrow data-mjx-texclass=\"ORD\"><mfrac><mrow data-mjx-texclass=\"ORD\"><mi>V</mi></mrow><mrow data-mjx-texclass=\"ORD\"><mi>n</mi></mrow></mfrac></mrow><mo stretchy=\"false\">=</mo><mi>k</mi></mstyle></mrow></math>",
+                "formulaProperty": "http://www.wikidata.org/prop/direct/P2534",
+                "item": "http://www.wikidata.org/entity/Q170431",
+                "itemDescription": "physical law that equal volumes of all gases at the same temperature and pressure have the same number of molecules",
+                "itemLabel": "Avogadro's law"
+              },
+              {
+                "alias": "Avogadro's hypothesis",
+                "formula": "<math class=\"mwe-math-element mwe-math-element-inline\" xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow data-mjx-texclass=\"ORD\"><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mrow data-mjx-texclass=\"ORD\"><mfrac><mrow data-mjx-texclass=\"ORD\"><mi>V</mi></mrow><mrow data-mjx-texclass=\"ORD\"><mi>n</mi></mrow></mfrac></mrow><mo stretchy=\"false\">=</mo><mi>k</mi></mstyle></mrow></math>",
+                "formulaProperty": "http://www.wikidata.org/prop/direct/P2534",
+                "item": "http://www.wikidata.org/entity/Q170431",
+                "itemDescription": "physical law that equal volumes of all gases at the same temperature and pressure have the same number of molecules",
+                "itemLabel": "Avogadro's law"
+              }
+            ],
+            "source_system": "wikidata",
+            "uses": [],
+            "wikidata_entity_id": "Q170431"
+          }
+        },
+        {
+          "behavioral_archetypes": [],
+          "candidate_id": "dc8519b6-0f87-501f-9af2-8f5fc5b5db34",
+          "candidate_status": "raw_imported",
+          "mechanism_tags": [],
+          "notes": "",
+          "parse_confidence": 0.0,
+          "priority_score": 0.0,
+          "raw_formula": "<math class=\"mwe-math-element mwe-math-element-inline\" xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow data-mjx-texclass=\"ORD\"><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mi>V</mi><mo stretchy=\"false\">&#x221D;</mo><mi>n</mi></mstyle></mrow></math>",
+          "raw_formula_format": "wikidata_math",
+          "snapshot_id": "d66a5026-a727-5223-954d-561c0b90baa8",
+          "source_candidate_id": "Q170431:P2534:4ebd0c0229768c9a",
+          "source_description": "physical law that equal volumes of all gases at the same temperature and pressure have the same number of molecules",
+          "source_entity_uri": "http://www.wikidata.org/entity/Q170431",
+          "source_label": "Avogadro's law",
+          "source_payload": {
+            "aliases": [
+              "Avogadro's hypothesis",
+              "Avogadro's principle"
+            ],
+            "formula_parse_hint": "mathml_plain_text_extracted",
+            "formula_plain_text": "V proportional_to n",
+            "formula_plain_text_format": "plain_text",
+            "formula_property_id": "P2534",
+            "source_rows": [
+              {
+                "alias": "Avogadro's principle",
+                "formula": "<math class=\"mwe-math-element mwe-math-element-inline\" xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow data-mjx-texclass=\"ORD\"><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mi>V</mi><mo stretchy=\"false\">&#x221D;</mo><mi>n</mi></mstyle></mrow></math>",
+                "formulaProperty": "http://www.wikidata.org/prop/direct/P2534",
+                "item": "http://www.wikidata.org/entity/Q170431",
+                "itemDescription": "physical law that equal volumes of all gases at the same temperature and pressure have the same number of molecules",
+                "itemLabel": "Avogadro's law"
+              },
+              {
+                "alias": "Avogadro's hypothesis",
+                "formula": "<math class=\"mwe-math-element mwe-math-element-inline\" xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow data-mjx-texclass=\"ORD\"><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mi>V</mi><mo stretchy=\"false\">&#x221D;</mo><mi>n</mi></mstyle></mrow></math>",
+                "formulaProperty": "http://www.wikidata.org/prop/direct/P2534",
+                "item": "http://www.wikidata.org/entity/Q170431",
+                "itemDescription": "physical law that equal volumes of all gases at the same temperature and pressure have the same number of molecules",
+                "itemLabel": "Avogadro's law"
+              }
+            ],
+            "source_system": "wikidata",
+            "uses": [],
+            "wikidata_entity_id": "Q170431"
+          }
+        },
+        {
+          "behavioral_archetypes": [],
+          "candidate_id": "437c154c-3c81-5e58-be24-17bd314ffbda",
+          "candidate_status": "raw_imported",
+          "mechanism_tags": [],
+          "notes": "",
+          "parse_confidence": 0.0,
+          "priority_score": 0.0,
+          "raw_formula": "<math class=\"mwe-math-element mwe-math-element-inline\" xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow data-mjx-texclass=\"ORD\"><mstyle displaystyle=\"true\" scriptlevel=\"0\"><msub><mi mathvariant=\"normal\">&#x03A6;</mi><mrow data-mjx-texclass=\"ORD\"><mi>E</mi></mrow></msub><mo stretchy=\"false\">=</mo><mrow data-mjx-texclass=\"ORD\"><mfrac><mrow data-mjx-texclass=\"ORD\"><mi>Q</mi></mrow><mrow data-mjx-texclass=\"ORD\"><msub><mi>&#x03B5;</mi><mrow data-mjx-texclass=\"ORD\"><mn>0</mn></mrow></msub></mrow></mfrac></mrow></mstyle></mrow></math>",
+          "raw_formula_format": "wikidata_math",
+          "snapshot_id": "d66a5026-a727-5223-954d-561c0b90baa8",
+          "source_candidate_id": "Q173356:P2534:86915405888ed5aa",
+          "source_description": "foundational law of electromagnetism",
+          "source_entity_uri": "http://www.wikidata.org/entity/Q173356",
+          "source_label": "Gauss's law",
+          "source_payload": {
+            "aliases": [
+              "Gauss law",
+              "Gauss' law"
+            ],
+            "formula_parse_hint": "mathml_plain_text_extracted",
+            "formula_plain_text": "Phi_E = ((Q)/(epsilon_0))",
+            "formula_plain_text_format": "plain_text",
+            "formula_property_id": "P2534",
+            "source_rows": [
+              {
+                "alias": "Gauss law",
+                "formula": "<math class=\"mwe-math-element mwe-math-element-inline\" xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow data-mjx-texclass=\"ORD\"><mstyle displaystyle=\"true\" scriptlevel=\"0\"><msub><mi mathvariant=\"normal\">&#x03A6;</mi><mrow data-mjx-texclass=\"ORD\"><mi>E</mi></mrow></msub><mo stretchy=\"false\">=</mo><mrow data-mjx-texclass=\"ORD\"><mfrac><mrow data-mjx-texclass=\"ORD\"><mi>Q</mi></mrow><mrow data-mjx-texclass=\"ORD\"><msub><mi>&#x03B5;</mi><mrow data-mjx-texclass=\"ORD\"><mn>0</mn></mrow></msub></mrow></mfrac></mrow></mstyle></mrow></math>",
+                "formulaProperty": "http://www.wikidata.org/prop/direct/P2534",
+                "item": "http://www.wikidata.org/entity/Q173356",
+                "itemDescription": "foundational law of electromagnetism",
+                "itemLabel": "Gauss's law"
+              },
+              {
+                "alias": "Gauss' law",
+                "formula": "<math class=\"mwe-math-element mwe-math-element-inline\" xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow data-mjx-texclass=\"ORD\"><mstyle displaystyle=\"true\" scriptlevel=\"0\"><msub><mi mathvariant=\"normal\">&#x03A6;</mi><mrow data-mjx-texclass=\"ORD\"><mi>E</mi></mrow></msub><mo stretchy=\"false\">=</mo><mrow data-mjx-texclass=\"ORD\"><mfrac><mrow data-mjx-texclass=\"ORD\"><mi>Q</mi></mrow><mrow data-mjx-texclass=\"ORD\"><msub><mi>&#x03B5;</mi><mrow data-mjx-texclass=\"ORD\"><mn>0</mn></mrow></msub></mrow></mfrac></mrow></mstyle></mrow></math>",
+                "formulaProperty": "http://www.wikidata.org/prop/direct/P2534",
+                "item": "http://www.wikidata.org/entity/Q173356",
+                "itemDescription": "foundational law of electromagnetism",
+                "itemLabel": "Gauss's law"
+              }
+            ],
+            "source_system": "wikidata",
+            "uses": [],
+            "wikidata_entity_id": "Q173356"
+          }
+        },
+        {
+          "behavioral_archetypes": [],
+          "candidate_id": "9ed7521b-b88c-5885-a202-278347dad317",
+          "candidate_status": "raw_imported",
+          "mechanism_tags": [],
+          "notes": "",
+          "parse_confidence": 0.0,
+          "priority_score": 0.0,
+          "raw_formula": "<math class=\"mwe-math-element mwe-math-element-inline\" xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow data-mjx-texclass=\"ORD\"><mstyle displaystyle=\"true\" scriptlevel=\"0\"><msub><mi>P</mi><mrow data-mjx-texclass=\"ORD\"><mn>1</mn></mrow></msub><msub><mi>V</mi><mrow data-mjx-texclass=\"ORD\"><mn>1</mn></mrow></msub><mo stretchy=\"false\">=</mo><msub><mi>P</mi><mrow data-mjx-texclass=\"ORD\"><mn>2</mn></mrow></msub><msub><mi>V</mi><mrow data-mjx-texclass=\"ORD\"><mn>2</mn></mrow></msub></mstyle></mrow></math>",
+          "raw_formula_format": "wikidata_math",
+          "snapshot_id": "d66a5026-a727-5223-954d-561c0b90baa8",
+          "source_candidate_id": "Q175974:P2534:3d7340912386ea8d",
+          "source_description": "experimental gas law",
+          "source_entity_uri": "http://www.wikidata.org/entity/Q175974",
+          "source_label": "Boyle's law",
+          "source_payload": {
+            "aliases": [
+              "Boyle-Mariotte law",
+              "Boyle\u2013Mariotte law",
+              "Mariotte's law"
+            ],
+            "formula_parse_hint": "mathml_plain_text_extracted",
+            "formula_plain_text": "P_1 V_1 = P_2 V_2",
+            "formula_plain_text_format": "plain_text",
+            "formula_property_id": "P2534",
+            "source_rows": [
+              {
+                "alias": "Mariotte's law",
+                "formula": "<math class=\"mwe-math-element mwe-math-element-inline\" xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow data-mjx-texclass=\"ORD\"><mstyle displaystyle=\"true\" scriptlevel=\"0\"><msub><mi>P</mi><mrow data-mjx-texclass=\"ORD\"><mn>1</mn></mrow></msub><msub><mi>V</mi><mrow data-mjx-texclass=\"ORD\"><mn>1</mn></mrow></msub><mo stretchy=\"false\">=</mo><msub><mi>P</mi><mrow data-mjx-texclass=\"ORD\"><mn>2</mn></mrow></msub><msub><mi>V</mi><mrow data-mjx-texclass=\"ORD\"><mn>2</mn></mrow></msub></mstyle></mrow></math>",
+                "formulaProperty": "http://www.wikidata.org/prop/direct/P2534",
+                "item": "http://www.wikidata.org/entity/Q175974",
+                "itemDescription": "experimental gas law",
+                "itemLabel": "Boyle's law"
+              },
+              {
+                "alias": "Boyle\u2013Mariotte law",
+                "formula": "<math class=\"mwe-math-element mwe-math-element-inline\" xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow data-mjx-texclass=\"ORD\"><mstyle displaystyle=\"true\" scriptlevel=\"0\"><msub><mi>P</mi><mrow data-mjx-texclass=\"ORD\"><mn>1</mn></mrow></msub><msub><mi>V</mi><mrow data-mjx-texclass=\"ORD\"><mn>1</mn></mrow></msub><mo stretchy=\"false\">=</mo><msub><mi>P</mi><mrow data-mjx-texclass=\"ORD\"><mn>2</mn></mrow></msub><msub><mi>V</mi><mrow data-mjx-texclass=\"ORD\"><mn>2</mn></mrow></msub></mstyle></mrow></math>",
+                "formulaProperty": "http://www.wikidata.org/prop/direct/P2534",
+                "item": "http://www.wikidata.org/entity/Q175974",
+                "itemDescription": "experimental gas law",
+                "itemLabel": "Boyle's law"
+              },
+              {
+                "alias": "Boyle-Mariotte law",
+                "formula": "<math class=\"mwe-math-element mwe-math-element-inline\" xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow data-mjx-texclass=\"ORD\"><mstyle displaystyle=\"true\" scriptlevel=\"0\"><msub><mi>P</mi><mrow data-mjx-texclass=\"ORD\"><mn>1</mn></mrow></msub><msub><mi>V</mi><mrow data-mjx-texclass=\"ORD\"><mn>1</mn></mrow></msub><mo stretchy=\"false\">=</mo><msub><mi>P</mi><mrow data-mjx-texclass=\"ORD\"><mn>2</mn></mrow></msub><msub><mi>V</mi><mrow data-mjx-texclass=\"ORD\"><mn>2</mn></mrow></msub></mstyle></mrow></math>",
+                "formulaProperty": "http://www.wikidata.org/prop/direct/P2534",
+                "item": "http://www.wikidata.org/entity/Q175974",
+                "itemDescription": "experimental gas law",
+                "itemLabel": "Boyle's law"
+              }
+            ],
+            "source_system": "wikidata",
+            "uses": [],
+            "wikidata_entity_id": "Q175974"
+          }
+        },
+        {
+          "behavioral_archetypes": [],
+          "candidate_id": "ca0d436d-013d-52e1-8a43-588e0e1cba1a",
+          "candidate_status": "raw_imported",
+          "mechanism_tags": [],
+          "notes": "",
+          "parse_confidence": 0.0,
+          "priority_score": 0.0,
+          "raw_formula": "<math class=\"mwe-math-element mwe-math-element-inline\" xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow data-mjx-texclass=\"ORD\"><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mi>P</mi><mi>V</mi><mo stretchy=\"false\">=</mo><mi>k</mi></mstyle></mrow></math>",
+          "raw_formula_format": "wikidata_math",
+          "snapshot_id": "d66a5026-a727-5223-954d-561c0b90baa8",
+          "source_candidate_id": "Q175974:P2534:a49146586fa9a037",
+          "source_description": "experimental gas law",
+          "source_entity_uri": "http://www.wikidata.org/entity/Q175974",
+          "source_label": "Boyle's law",
+          "source_payload": {
+            "aliases": [
+              "Boyle-Mariotte law",
+              "Boyle\u2013Mariotte law",
+              "Mariotte's law"
+            ],
+            "formula_parse_hint": "mathml_plain_text_extracted",
+            "formula_plain_text": "P V = k",
+            "formula_plain_text_format": "plain_text",
+            "formula_property_id": "P2534",
+            "source_rows": [
+              {
+                "alias": "Mariotte's law",
+                "formula": "<math class=\"mwe-math-element mwe-math-element-inline\" xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow data-mjx-texclass=\"ORD\"><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mi>P</mi><mi>V</mi><mo stretchy=\"false\">=</mo><mi>k</mi></mstyle></mrow></math>",
+                "formulaProperty": "http://www.wikidata.org/prop/direct/P2534",
+                "item": "http://www.wikidata.org/entity/Q175974",
+                "itemDescription": "experimental gas law",
+                "itemLabel": "Boyle's law"
+              },
+              {
+                "alias": "Boyle\u2013Mariotte law",
+                "formula": "<math class=\"mwe-math-element mwe-math-element-inline\" xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow data-mjx-texclass=\"ORD\"><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mi>P</mi><mi>V</mi><mo stretchy=\"false\">=</mo><mi>k</mi></mstyle></mrow></math>",
+                "formulaProperty": "http://www.wikidata.org/prop/direct/P2534",
+                "item": "http://www.wikidata.org/entity/Q175974",
+                "itemDescription": "experimental gas law",
+                "itemLabel": "Boyle's law"
+              },
+              {
+                "alias": "Boyle-Mariotte law",
+                "formula": "<math class=\"mwe-math-element mwe-math-element-inline\" xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow data-mjx-texclass=\"ORD\"><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mi>P</mi><mi>V</mi><mo stretchy=\"false\">=</mo><mi>k</mi></mstyle></mrow></math>",
+                "formulaProperty": "http://www.wikidata.org/prop/direct/P2534",
+                "item": "http://www.wikidata.org/entity/Q175974",
+                "itemDescription": "experimental gas law",
+                "itemLabel": "Boyle's law"
+              }
+            ],
+            "source_system": "wikidata",
+            "uses": [],
+            "wikidata_entity_id": "Q175974"
+          }
+        },
+        {
+          "behavioral_archetypes": [],
+          "candidate_id": "d2fdccf6-4ad6-5cb0-9c7d-1d2308c61fb9",
+          "candidate_status": "raw_imported",
+          "mechanism_tags": [],
+          "notes": "",
+          "parse_confidence": 0.0,
+          "priority_score": 0.0,
+          "raw_formula": "<math class=\"mwe-math-element mwe-math-element-inline\" xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow data-mjx-texclass=\"ORD\"><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mrow data-mjx-texclass=\"ORD\"><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mi>B</mi><mo stretchy=\"false\">(</mo><mi>&#x03BD;</mi><mo>,</mo><mi>T</mi><mo stretchy=\"false\">)</mo><mo stretchy=\"false\">=</mo><mrow data-mjx-texclass=\"ORD\"><mfrac><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mn>2</mn><mi>h</mi><msup><mi>&#x03BD;</mi><mrow data-mjx-texclass=\"ORD\"><mn>3</mn></mrow></msup></mrow></mrow><mrow data-mjx-texclass=\"ORD\"><msup><mi>c</mi><mrow data-mjx-texclass=\"ORD\"><mn>2</mn></mrow></msup></mrow></mfrac></mrow><mrow data-mjx-texclass=\"ORD\"><mfrac><mrow data-mjx-texclass=\"ORD\"><mn>1</mn></mrow><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><msup><mi>e</mi><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mfrac><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mi>h</mi><mi>&#x03BD;</mi></mrow></mrow><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><msub><mi>k</mi><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mi mathvariant=\"normal\">B</mi></mrow></mrow></msub><mi>T</mi></mrow></mrow></mfrac></mrow></mrow></msup><mo stretchy=\"false\">&#x2212;</mo><mn>1</mn></mrow></mrow></mfrac></mrow></mstyle></mrow></mstyle></mrow></math>",
+          "raw_formula_format": "wikidata_math",
+          "snapshot_id": "d66a5026-a727-5223-954d-561c0b90baa8",
+          "source_candidate_id": "Q212986:P2534:a7c25f4ad27bfe17",
+          "source_description": "physical law that describes the amount of spectral radiance at a certain wavelength radiated by a black body cavity in thermal equilibrium",
+          "source_entity_uri": "http://www.wikidata.org/entity/Q212986",
+          "source_label": "Planck's law",
+          "source_payload": {
+            "aliases": [
+              "Planck radiation law"
+            ],
+            "formula_parse_hint": "mathml_plain_text_extracted",
+            "formula_plain_text": "B(nu, T) = ((2 h nu^3)/(c^2)) ((1)/(e^(((h nu)/(k_B T))) - 1))",
+            "formula_plain_text_format": "plain_text",
+            "formula_property_id": "P2534",
+            "source_rows": [
+              {
+                "alias": "Planck radiation law",
+                "formula": "<math class=\"mwe-math-element mwe-math-element-inline\" xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow data-mjx-texclass=\"ORD\"><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mrow data-mjx-texclass=\"ORD\"><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mi>B</mi><mo stretchy=\"false\">(</mo><mi>&#x03BD;</mi><mo>,</mo><mi>T</mi><mo stretchy=\"false\">)</mo><mo stretchy=\"false\">=</mo><mrow data-mjx-texclass=\"ORD\"><mfrac><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mn>2</mn><mi>h</mi><msup><mi>&#x03BD;</mi><mrow data-mjx-texclass=\"ORD\"><mn>3</mn></mrow></msup></mrow></mrow><mrow data-mjx-texclass=\"ORD\"><msup><mi>c</mi><mrow data-mjx-texclass=\"ORD\"><mn>2</mn></mrow></msup></mrow></mfrac></mrow><mrow data-mjx-texclass=\"ORD\"><mfrac><mrow data-mjx-texclass=\"ORD\"><mn>1</mn></mrow><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><msup><mi>e</mi><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mfrac><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mi>h</mi><mi>&#x03BD;</mi></mrow></mrow><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><msub><mi>k</mi><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mi mathvariant=\"normal\">B</mi></mrow></mrow></msub><mi>T</mi></mrow></mrow></mfrac></mrow></mrow></msup><mo stretchy=\"false\">&#x2212;</mo><mn>1</mn></mrow></mrow></mfrac></mrow></mstyle></mrow></mstyle></mrow></math>",
+                "formulaProperty": "http://www.wikidata.org/prop/direct/P2534",
+                "item": "http://www.wikidata.org/entity/Q212986",
+                "itemDescription": "physical law that describes the amount of spectral radiance at a certain wavelength radiated by a black body cavity in thermal equilibrium",
+                "itemLabel": "Planck's law"
+              }
+            ],
+            "source_system": "wikidata",
+            "uses": [],
+            "wikidata_entity_id": "Q212986"
+          }
+        },
+        {
+          "behavioral_archetypes": [],
+          "candidate_id": "b9e92c08-ce29-5ff5-8d84-7d39b69b638f",
+          "candidate_status": "raw_imported",
+          "mechanism_tags": [],
+          "notes": "",
+          "parse_confidence": 0.0,
+          "priority_score": 0.0,
+          "raw_formula": "<math class=\"mwe-math-element mwe-math-element-inline\" xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow data-mjx-texclass=\"ORD\"><mstyle displaystyle=\"true\" scriptlevel=\"0\"><msub><mi>&#x03BB;</mi><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mtext>max</mtext></mrow></mrow></msub><mo stretchy=\"false\">=</mo><mrow data-mjx-texclass=\"ORD\"><mfrac><mrow data-mjx-texclass=\"ORD\"><mi>b</mi></mrow><mrow data-mjx-texclass=\"ORD\"><mi>T</mi></mrow></mfrac></mrow></mstyle></mrow></math>",
+          "raw_formula_format": "wikidata_math",
+          "snapshot_id": "d66a5026-a727-5223-954d-561c0b90baa8",
+          "source_candidate_id": "Q214336:P2534:075d77e12f264321",
+          "source_description": "relation between the wavelength of the black-body radiation curve peak and the temperature",
+          "source_entity_uri": "http://www.wikidata.org/entity/Q214336",
+          "source_label": "Wien's displacement law",
+          "source_payload": {
+            "aliases": [],
+            "formula_parse_hint": "mathml_plain_text_extracted",
+            "formula_plain_text": "lambda_max = ((b)/(T))",
+            "formula_plain_text_format": "plain_text",
+            "formula_property_id": "P2534",
+            "source_rows": [
+              {
+                "formula": "<math class=\"mwe-math-element mwe-math-element-inline\" xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow data-mjx-texclass=\"ORD\"><mstyle displaystyle=\"true\" scriptlevel=\"0\"><msub><mi>&#x03BB;</mi><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mtext>max</mtext></mrow></mrow></msub><mo stretchy=\"false\">=</mo><mrow data-mjx-texclass=\"ORD\"><mfrac><mrow data-mjx-texclass=\"ORD\"><mi>b</mi></mrow><mrow data-mjx-texclass=\"ORD\"><mi>T</mi></mrow></mfrac></mrow></mstyle></mrow></math>",
+                "formulaProperty": "http://www.wikidata.org/prop/direct/P2534",
+                "item": "http://www.wikidata.org/entity/Q214336",
+                "itemDescription": "relation between the wavelength of the black-body radiation curve peak and the temperature",
+                "itemLabel": "Wien's displacement law"
+              }
+            ],
+            "source_system": "wikidata",
+            "uses": [],
+            "wikidata_entity_id": "Q214336"
+          }
+        },
+        {
+          "behavioral_archetypes": [],
+          "candidate_id": "e551372e-0bf9-5e68-a08d-54ad584f2d3f",
+          "candidate_status": "raw_imported",
+          "mechanism_tags": [],
+          "notes": "",
+          "parse_confidence": 0.0,
+          "priority_score": 0.0,
+          "raw_formula": "<math class=\"mwe-math-element mwe-math-element-inline\" xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow data-mjx-texclass=\"ORD\"><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mi>p</mi><mo stretchy=\"false\">=</mo><mrow data-mjx-texclass=\"ORD\"><mfrac><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mi>R</mi><mi>T</mi></mrow></mrow><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mi>V</mi><mo stretchy=\"false\">&#x2212;</mo><mi>b</mi></mrow></mrow></mfrac></mrow><mi>exp</mi><mo>&#x2061;</mo><mrow data-mjx-texclass=\"INNER\"><mo data-mjx-texclass=\"OPEN\">(</mo><mo stretchy=\"false\">&#x2212;</mo><mrow data-mjx-texclass=\"ORD\"><mfrac><mrow data-mjx-texclass=\"ORD\"><mi>a</mi></mrow><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mi>R</mi><mi>T</mi><mi>V</mi></mrow></mrow></mfrac></mrow><mo data-mjx-texclass=\"CLOSE\">)</mo></mrow></mstyle></mrow></math>",
+          "raw_formula_format": "wikidata_math",
+          "snapshot_id": "d66a5026-a727-5223-954d-561c0b90baa8",
+          "source_candidate_id": "Q230907:P2534:6d5a6538015b9e75",
+          "source_description": "",
+          "source_entity_uri": "http://www.wikidata.org/entity/Q230907",
+          "source_label": "Q230907",
+          "source_payload": {
+            "aliases": [],
+            "formula_parse_hint": "mathml_plain_text_extracted",
+            "formula_plain_text": "p = ((R T)/(V - b)) exp \u2061 (- ((a)/(R T V)))",
+            "formula_plain_text_format": "plain_text",
+            "formula_property_id": "P2534",
+            "source_rows": [
+              {
+                "formula": "<math class=\"mwe-math-element mwe-math-element-inline\" xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow data-mjx-texclass=\"ORD\"><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mi>p</mi><mo stretchy=\"false\">=</mo><mrow data-mjx-texclass=\"ORD\"><mfrac><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mi>R</mi><mi>T</mi></mrow></mrow><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mi>V</mi><mo stretchy=\"false\">&#x2212;</mo><mi>b</mi></mrow></mrow></mfrac></mrow><mi>exp</mi><mo>&#x2061;</mo><mrow data-mjx-texclass=\"INNER\"><mo data-mjx-texclass=\"OPEN\">(</mo><mo stretchy=\"false\">&#x2212;</mo><mrow data-mjx-texclass=\"ORD\"><mfrac><mrow data-mjx-texclass=\"ORD\"><mi>a</mi></mrow><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mi>R</mi><mi>T</mi><mi>V</mi></mrow></mrow></mfrac></mrow><mo data-mjx-texclass=\"CLOSE\">)</mo></mrow></mstyle></mrow></math>",
+                "formulaProperty": "http://www.wikidata.org/prop/direct/P2534",
+                "item": "http://www.wikidata.org/entity/Q230907",
+                "itemLabel": "Q230907"
+              }
+            ],
+            "source_system": "wikidata",
+            "uses": [],
+            "wikidata_entity_id": "Q230907"
+          }
+        },
+        {
+          "behavioral_archetypes": [],
+          "candidate_id": "1386f1ad-f021-5cc2-b0fa-27b67d9e19b8",
+          "candidate_status": "raw_imported",
+          "mechanism_tags": [],
+          "notes": "",
+          "parse_confidence": 0.0,
+          "priority_score": 0.0,
+          "raw_formula": "<math class=\"mwe-math-element mwe-math-element-inline\" xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow data-mjx-texclass=\"ORD\"><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mi>p</mi><mo stretchy=\"false\">=</mo><mrow data-mjx-texclass=\"ORD\"><mfrac><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mi>R</mi><mo stretchy=\"false\">&#x22C5;</mo><mi>T</mi></mrow></mrow><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><msub><mi>V</mi><mrow data-mjx-texclass=\"ORD\"><mi>m</mi></mrow></msub><mo stretchy=\"false\">&#x2212;</mo><mi>b</mi></mrow></mrow></mfrac></mrow><mo stretchy=\"false\">&#x2212;</mo><mrow data-mjx-texclass=\"ORD\"><mfrac><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mi>a</mi><mo stretchy=\"false\">(</mo><mi>T</mi><mo stretchy=\"false\">)</mo></mrow></mrow><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><msubsup><mi>V</mi><mrow data-mjx-texclass=\"ORD\"><mi>m</mi></mrow><mrow data-mjx-texclass=\"ORD\"><mn>2</mn></mrow></msubsup><mo stretchy=\"false\">+</mo><mn>2</mn><mo stretchy=\"false\">&#x22C5;</mo><mi>b</mi><mo stretchy=\"false\">&#x22C5;</mo><msub><mi>V</mi><mrow data-mjx-texclass=\"ORD\"><mi>m</mi></mrow></msub><mo stretchy=\"false\">&#x2212;</mo><msup><mi>b</mi><mrow data-mjx-texclass=\"ORD\"><mn>2</mn></mrow></msup></mrow></mrow></mfrac></mrow></mstyle></mrow></math>",
+          "raw_formula_format": "wikidata_math",
+          "snapshot_id": "d66a5026-a727-5223-954d-561c0b90baa8",
+          "source_candidate_id": "Q230917:P2534:91cea858dae87036",
+          "source_description": "",
+          "source_entity_uri": "http://www.wikidata.org/entity/Q230917",
+          "source_label": "Q230917",
+          "source_payload": {
+            "aliases": [],
+            "formula_parse_hint": "mathml_plain_text_extracted",
+            "formula_plain_text": "p = ((R * T)/(V_m - b)) - ((a(T))/(V_m^2 + 2 * b * V_m - b^2))",
+            "formula_plain_text_format": "plain_text",
+            "formula_property_id": "P2534",
+            "source_rows": [
+              {
+                "formula": "<math class=\"mwe-math-element mwe-math-element-inline\" xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow data-mjx-texclass=\"ORD\"><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mi>p</mi><mo stretchy=\"false\">=</mo><mrow data-mjx-texclass=\"ORD\"><mfrac><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mi>R</mi><mo stretchy=\"false\">&#x22C5;</mo><mi>T</mi></mrow></mrow><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><msub><mi>V</mi><mrow data-mjx-texclass=\"ORD\"><mi>m</mi></mrow></msub><mo stretchy=\"false\">&#x2212;</mo><mi>b</mi></mrow></mrow></mfrac></mrow><mo stretchy=\"false\">&#x2212;</mo><mrow data-mjx-texclass=\"ORD\"><mfrac><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mi>a</mi><mo stretchy=\"false\">(</mo><mi>T</mi><mo stretchy=\"false\">)</mo></mrow></mrow><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><msubsup><mi>V</mi><mrow data-mjx-texclass=\"ORD\"><mi>m</mi></mrow><mrow data-mjx-texclass=\"ORD\"><mn>2</mn></mrow></msubsup><mo stretchy=\"false\">+</mo><mn>2</mn><mo stretchy=\"false\">&#x22C5;</mo><mi>b</mi><mo stretchy=\"false\">&#x22C5;</mo><msub><mi>V</mi><mrow data-mjx-texclass=\"ORD\"><mi>m</mi></mrow></msub><mo stretchy=\"false\">&#x2212;</mo><msup><mi>b</mi><mrow data-mjx-texclass=\"ORD\"><mn>2</mn></mrow></msup></mrow></mrow></mfrac></mrow></mstyle></mrow></math>",
+                "formulaProperty": "http://www.wikidata.org/prop/direct/P2534",
+                "item": "http://www.wikidata.org/entity/Q230917",
+                "itemLabel": "Q230917"
+              }
+            ],
+            "source_system": "wikidata",
+            "uses": [],
+            "wikidata_entity_id": "Q230917"
+          }
+        },
+        {
+          "behavioral_archetypes": [],
+          "candidate_id": "b2453992-98c7-5758-b551-8d0faf16bb13",
+          "candidate_status": "raw_imported",
+          "mechanism_tags": [],
+          "notes": "",
+          "parse_confidence": 0.0,
+          "priority_score": 0.0,
+          "raw_formula": "<math class=\"mwe-math-element mwe-math-element-inline\" xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow data-mjx-texclass=\"ORD\"><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mrow data-mjx-texclass=\"INNER\"><mo data-mjx-texclass=\"OPEN\">(</mo><mi>p</mi><mo stretchy=\"false\">+</mo><mrow data-mjx-texclass=\"ORD\"><mfrac><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><msup><mi>a</mi><mo>&#x2032;</mo></msup></mrow></mrow><mrow data-mjx-texclass=\"ORD\"><msup><mi>v</mi><mrow data-mjx-texclass=\"ORD\"><mn>2</mn></mrow></msup></mrow></mfrac></mrow><mo data-mjx-texclass=\"CLOSE\">)</mo></mrow><mrow data-mjx-texclass=\"INNER\"><mo data-mjx-texclass=\"OPEN\">(</mo><mi>v</mi><mo stretchy=\"false\">&#x2212;</mo><msup><mi>b</mi><mo>&#x2032;</mo></msup><mo data-mjx-texclass=\"CLOSE\">)</mo></mrow><mo stretchy=\"false\">=</mo><mi>k</mi><mi>T</mi></mstyle></mrow></math>",
+          "raw_formula_format": "wikidata_math",
+          "snapshot_id": "d66a5026-a727-5223-954d-561c0b90baa8",
+          "source_candidate_id": "Q254329:P2534:7c678921e605aa4a",
+          "source_description": "equation of state that generalizes the ideal gas law",
+          "source_entity_uri": "http://www.wikidata.org/entity/Q254329",
+          "source_label": "van der Waals equation",
+          "source_payload": {
+            "aliases": [
+              "Van der Waals equation of state"
+            ],
+            "formula_parse_hint": "mathml_plain_text_extracted",
+            "formula_plain_text": "(p + ((a^(\u2032))/(v^2))) (v - b^(\u2032)) = k T",
+            "formula_plain_text_format": "plain_text",
+            "formula_property_id": "P2534",
+            "source_rows": [
+              {
+                "alias": "Van der Waals equation of state",
+                "formula": "<math class=\"mwe-math-element mwe-math-element-inline\" xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow data-mjx-texclass=\"ORD\"><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mrow data-mjx-texclass=\"INNER\"><mo data-mjx-texclass=\"OPEN\">(</mo><mi>p</mi><mo stretchy=\"false\">+</mo><mrow data-mjx-texclass=\"ORD\"><mfrac><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><msup><mi>a</mi><mo>&#x2032;</mo></msup></mrow></mrow><mrow data-mjx-texclass=\"ORD\"><msup><mi>v</mi><mrow data-mjx-texclass=\"ORD\"><mn>2</mn></mrow></msup></mrow></mfrac></mrow><mo data-mjx-texclass=\"CLOSE\">)</mo></mrow><mrow data-mjx-texclass=\"INNER\"><mo data-mjx-texclass=\"OPEN\">(</mo><mi>v</mi><mo stretchy=\"false\">&#x2212;</mo><msup><mi>b</mi><mo>&#x2032;</mo></msup><mo data-mjx-texclass=\"CLOSE\">)</mo></mrow><mo stretchy=\"false\">=</mo><mi>k</mi><mi>T</mi></mstyle></mrow></math>",
+                "formulaProperty": "http://www.wikidata.org/prop/direct/P2534",
+                "item": "http://www.wikidata.org/entity/Q254329",
+                "itemDescription": "equation of state that generalizes the ideal gas law",
+                "itemLabel": "van der Waals equation"
+              }
+            ],
+            "source_system": "wikidata",
+            "uses": [],
+            "wikidata_entity_id": "Q254329"
+          }
+        },
+        {
+          "behavioral_archetypes": [],
+          "candidate_id": "5809a36b-3ebd-5e2a-b3d1-f6dd75ea3a50",
+          "candidate_status": "raw_imported",
+          "mechanism_tags": [],
+          "notes": "",
+          "parse_confidence": 0.0,
+          "priority_score": 0.0,
+          "raw_formula": "<math class=\"mwe-math-element mwe-math-element-inline\" xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow data-mjx-texclass=\"ORD\"><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mrow data-mjx-texclass=\"INNER\"><mo data-mjx-texclass=\"OPEN\">(</mo><mi>p</mi><mo stretchy=\"false\">+</mo><mrow data-mjx-texclass=\"ORD\"><mfrac><mrow data-mjx-texclass=\"ORD\"><mi>a</mi></mrow><mrow data-mjx-texclass=\"ORD\"><msup><msub><mi>V</mi><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mtext>m</mtext></mrow></mrow></msub><mrow data-mjx-texclass=\"ORD\"><mn>2</mn></mrow></msup></mrow></mfrac></mrow><mo data-mjx-texclass=\"CLOSE\">)</mo></mrow><mrow data-mjx-texclass=\"INNER\"><mo data-mjx-texclass=\"OPEN\">(</mo><msub><mi>V</mi><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mtext>m</mtext></mrow></mrow></msub><mo stretchy=\"false\">&#x2212;</mo><mi>b</mi><mo data-mjx-texclass=\"CLOSE\">)</mo></mrow><mo stretchy=\"false\">=</mo><mi>R</mi><mi>T</mi></mstyle></mrow></math>",
+          "raw_formula_format": "wikidata_math",
+          "snapshot_id": "d66a5026-a727-5223-954d-561c0b90baa8",
+          "source_candidate_id": "Q254329:P2534:c2e7e1a4f8834fb1",
+          "source_description": "equation of state that generalizes the ideal gas law",
+          "source_entity_uri": "http://www.wikidata.org/entity/Q254329",
+          "source_label": "van der Waals equation",
+          "source_payload": {
+            "aliases": [
+              "Van der Waals equation of state"
+            ],
+            "formula_parse_hint": "mathml_plain_text_extracted",
+            "formula_plain_text": "(p + ((a)/(V_m^2))) (V_m - b) = R T",
+            "formula_plain_text_format": "plain_text",
+            "formula_property_id": "P2534",
+            "source_rows": [
+              {
+                "alias": "Van der Waals equation of state",
+                "formula": "<math class=\"mwe-math-element mwe-math-element-inline\" xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow data-mjx-texclass=\"ORD\"><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mrow data-mjx-texclass=\"INNER\"><mo data-mjx-texclass=\"OPEN\">(</mo><mi>p</mi><mo stretchy=\"false\">+</mo><mrow data-mjx-texclass=\"ORD\"><mfrac><mrow data-mjx-texclass=\"ORD\"><mi>a</mi></mrow><mrow data-mjx-texclass=\"ORD\"><msup><msub><mi>V</mi><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mtext>m</mtext></mrow></mrow></msub><mrow data-mjx-texclass=\"ORD\"><mn>2</mn></mrow></msup></mrow></mfrac></mrow><mo data-mjx-texclass=\"CLOSE\">)</mo></mrow><mrow data-mjx-texclass=\"INNER\"><mo data-mjx-texclass=\"OPEN\">(</mo><msub><mi>V</mi><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mtext>m</mtext></mrow></mrow></msub><mo stretchy=\"false\">&#x2212;</mo><mi>b</mi><mo data-mjx-texclass=\"CLOSE\">)</mo></mrow><mo stretchy=\"false\">=</mo><mi>R</mi><mi>T</mi></mstyle></mrow></math>",
+                "formulaProperty": "http://www.wikidata.org/prop/direct/P2534",
+                "item": "http://www.wikidata.org/entity/Q254329",
+                "itemDescription": "equation of state that generalizes the ideal gas law",
+                "itemLabel": "van der Waals equation"
+              }
+            ],
+            "source_system": "wikidata",
+            "uses": [],
+            "wikidata_entity_id": "Q254329"
+          }
+        },
+        {
+          "behavioral_archetypes": [],
+          "candidate_id": "a95518c9-c060-5ada-af3b-c2fef6f52266",
+          "candidate_status": "raw_imported",
+          "mechanism_tags": [],
+          "notes": "",
+          "parse_confidence": 0.0,
+          "priority_score": 0.0,
+          "raw_formula": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" class=\"mwe-math-element mwe-math-element-inline\"><mrow data-mjx-texclass=\"ORD\"><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mrow data-mjx-texclass=\"INNER\"><mo data-mjx-texclass=\"OPEN\">\u27e8</mo><msub><mi>x</mi><mrow data-mjx-texclass=\"ORD\"><mi>m</mi></mrow></msub><mrow data-mjx-texclass=\"ORD\"><mfrac><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mi>\u2202</mi><mi>H</mi></mrow></mrow><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mi>\u2202</mi><msub><mi>x</mi><mrow data-mjx-texclass=\"ORD\"><mi>n</mi></mrow></msub></mrow></mrow></mfrac></mrow><mo data-mjx-texclass=\"CLOSE\">\u27e9</mo></mrow><mo stretchy=\"false\">=</mo><msub><mi>\u03b4</mi><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mi>m</mi><mi>n</mi></mrow></mrow></msub><msub><mi>k</mi><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mtext>B</mtext></mrow></mrow></msub><mi>T</mi></mstyle></mrow></math>",
+          "raw_formula_format": "wikidata_math",
+          "snapshot_id": "d66a5026-a727-5223-954d-561c0b90baa8",
+          "source_candidate_id": "Q255996:P2534:e2bd29eb2044b45d",
+          "source_description": "theorem",
+          "source_entity_uri": "http://www.wikidata.org/entity/Q255996",
+          "source_label": "equipartition theorem",
+          "source_payload": {
+            "aliases": [
+              "equipartition",
+              "equipartition of energy",
+              "law of equipartition of energy"
+            ],
+            "formula_parse_hint": "mathml_plain_text_extracted",
+            "formula_plain_text": "\u27e8 x_m ((\u2202 H)/(\u2202 x_n)) \u27e9 = delta_(m n) k_B T",
+            "formula_plain_text_format": "plain_text",
+            "formula_property_id": "P2534",
+            "source_rows": [
+              {
+                "alias": "law of equipartition of energy",
+                "formula": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" class=\"mwe-math-element mwe-math-element-inline\"><mrow data-mjx-texclass=\"ORD\"><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mrow data-mjx-texclass=\"INNER\"><mo data-mjx-texclass=\"OPEN\">\u27e8</mo><msub><mi>x</mi><mrow data-mjx-texclass=\"ORD\"><mi>m</mi></mrow></msub><mrow data-mjx-texclass=\"ORD\"><mfrac><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mi>\u2202</mi><mi>H</mi></mrow></mrow><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mi>\u2202</mi><msub><mi>x</mi><mrow data-mjx-texclass=\"ORD\"><mi>n</mi></mrow></msub></mrow></mrow></mfrac></mrow><mo data-mjx-texclass=\"CLOSE\">\u27e9</mo></mrow><mo stretchy=\"false\">=</mo><msub><mi>\u03b4</mi><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mi>m</mi><mi>n</mi></mrow></mrow></msub><msub><mi>k</mi><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mtext>B</mtext></mrow></mrow></msub><mi>T</mi></mstyle></mrow></math>",
+                "formulaProperty": "http://www.wikidata.org/prop/direct/P2534",
+                "item": "http://www.wikidata.org/entity/Q255996",
+                "itemDescription": "theorem",
+                "itemLabel": "equipartition theorem"
+              },
+              {
+                "alias": "law of equipartition of energy",
+                "formula": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" class=\"mwe-math-element mwe-math-element-inline\"><mrow data-mjx-texclass=\"ORD\"><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mrow data-mjx-texclass=\"INNER\"><mo data-mjx-texclass=\"OPEN\">\u27e8</mo><msub><mi>x</mi><mrow data-mjx-texclass=\"ORD\"><mi>m</mi></mrow></msub><mrow data-mjx-texclass=\"ORD\"><mfrac><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mi>\u2202</mi><mi>H</mi></mrow></mrow><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mi>\u2202</mi><msub><mi>x</mi><mrow data-mjx-texclass=\"ORD\"><mi>n</mi></mrow></msub></mrow></mrow></mfrac></mrow><mo data-mjx-texclass=\"CLOSE\">\u27e9</mo></mrow><mo stretchy=\"false\">=</mo><msub><mi>\u03b4</mi><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mi>m</mi><mi>n</mi></mrow></mrow></msub><msub><mi>k</mi><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mtext>B</mtext></mrow></mrow></msub><mi>T</mi></mstyle></mrow></math>",
+                "formulaProperty": "http://www.wikidata.org/prop/direct/P2534",
+                "item": "http://www.wikidata.org/entity/Q255996",
+                "itemDescription": "theorem",
+                "itemLabel": "equipartition theorem"
+              },
+              {
+                "alias": "equipartition of energy",
+                "formula": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" class=\"mwe-math-element mwe-math-element-inline\"><mrow data-mjx-texclass=\"ORD\"><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mrow data-mjx-texclass=\"INNER\"><mo data-mjx-texclass=\"OPEN\">\u27e8</mo><msub><mi>x</mi><mrow data-mjx-texclass=\"ORD\"><mi>m</mi></mrow></msub><mrow data-mjx-texclass=\"ORD\"><mfrac><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mi>\u2202</mi><mi>H</mi></mrow></mrow><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mi>\u2202</mi><msub><mi>x</mi><mrow data-mjx-texclass=\"ORD\"><mi>n</mi></mrow></msub></mrow></mrow></mfrac></mrow><mo data-mjx-texclass=\"CLOSE\">\u27e9</mo></mrow><mo stretchy=\"false\">=</mo><msub><mi>\u03b4</mi><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mi>m</mi><mi>n</mi></mrow></mrow></msub><msub><mi>k</mi><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mtext>B</mtext></mrow></mrow></msub><mi>T</mi></mstyle></mrow></math>",
+                "formulaProperty": "http://www.wikidata.org/prop/direct/P2534",
+                "item": "http://www.wikidata.org/entity/Q255996",
+                "itemDescription": "theorem",
+                "itemLabel": "equipartition theorem"
+              },
+              {
+                "alias": "equipartition of energy",
+                "formula": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" class=\"mwe-math-element mwe-math-element-inline\"><mrow data-mjx-texclass=\"ORD\"><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mrow data-mjx-texclass=\"INNER\"><mo data-mjx-texclass=\"OPEN\">\u27e8</mo><msub><mi>x</mi><mrow data-mjx-texclass=\"ORD\"><mi>m</mi></mrow></msub><mrow data-mjx-texclass=\"ORD\"><mfrac><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mi>\u2202</mi><mi>H</mi></mrow></mrow><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mi>\u2202</mi><msub><mi>x</mi><mrow data-mjx-texclass=\"ORD\"><mi>n</mi></mrow></msub></mrow></mrow></mfrac></mrow><mo data-mjx-texclass=\"CLOSE\">\u27e9</mo></mrow><mo stretchy=\"false\">=</mo><msub><mi>\u03b4</mi><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mi>m</mi><mi>n</mi></mrow></mrow></msub><msub><mi>k</mi><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mtext>B</mtext></mrow></mrow></msub><mi>T</mi></mstyle></mrow></math>",
+                "formulaProperty": "http://www.wikidata.org/prop/direct/P2534",
+                "item": "http://www.wikidata.org/entity/Q255996",
+                "itemDescription": "theorem",
+                "itemLabel": "equipartition theorem"
+              },
+              {
+                "alias": "equipartition",
+                "formula": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" class=\"mwe-math-element mwe-math-element-inline\"><mrow data-mjx-texclass=\"ORD\"><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mrow data-mjx-texclass=\"INNER\"><mo data-mjx-texclass=\"OPEN\">\u27e8</mo><msub><mi>x</mi><mrow data-mjx-texclass=\"ORD\"><mi>m</mi></mrow></msub><mrow data-mjx-texclass=\"ORD\"><mfrac><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mi>\u2202</mi><mi>H</mi></mrow></mrow><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mi>\u2202</mi><msub><mi>x</mi><mrow data-mjx-texclass=\"ORD\"><mi>n</mi></mrow></msub></mrow></mrow></mfrac></mrow><mo data-mjx-texclass=\"CLOSE\">\u27e9</mo></mrow><mo stretchy=\"false\">=</mo><msub><mi>\u03b4</mi><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mi>m</mi><mi>n</mi></mrow></mrow></msub><msub><mi>k</mi><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mtext>B</mtext></mrow></mrow></msub><mi>T</mi></mstyle></mrow></math>",
+                "formulaProperty": "http://www.wikidata.org/prop/direct/P2534",
+                "item": "http://www.wikidata.org/entity/Q255996",
+                "itemDescription": "theorem",
+                "itemLabel": "equipartition theorem"
+              },
+              {
+                "alias": "equipartition",
+                "formula": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" class=\"mwe-math-element mwe-math-element-inline\"><mrow data-mjx-texclass=\"ORD\"><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mrow data-mjx-texclass=\"INNER\"><mo data-mjx-texclass=\"OPEN\">\u27e8</mo><msub><mi>x</mi><mrow data-mjx-texclass=\"ORD\"><mi>m</mi></mrow></msub><mrow data-mjx-texclass=\"ORD\"><mfrac><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mi>\u2202</mi><mi>H</mi></mrow></mrow><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mi>\u2202</mi><msub><mi>x</mi><mrow data-mjx-texclass=\"ORD\"><mi>n</mi></mrow></msub></mrow></mrow></mfrac></mrow><mo data-mjx-texclass=\"CLOSE\">\u27e9</mo></mrow><mo stretchy=\"false\">=</mo><msub><mi>\u03b4</mi><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mi>m</mi><mi>n</mi></mrow></mrow></msub><msub><mi>k</mi><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mtext>B</mtext></mrow></mrow></msub><mi>T</mi></mstyle></mrow></math>",
+                "formulaProperty": "http://www.wikidata.org/prop/direct/P2534",
+                "item": "http://www.wikidata.org/entity/Q255996",
+                "itemDescription": "theorem",
+                "itemLabel": "equipartition theorem"
+              }
+            ],
+            "source_system": "wikidata",
+            "uses": [],
+            "wikidata_entity_id": "Q255996"
+          }
+        },
+        {
+          "behavioral_archetypes": [],
+          "candidate_id": "d2f3d592-be7d-5ff1-990f-edf9f70a3b24",
+          "candidate_status": "raw_imported",
+          "mechanism_tags": [],
+          "notes": "",
+          "parse_confidence": 0.0,
+          "priority_score": 0.0,
+          "raw_formula": "<math class=\"mwe-math-element mwe-math-element-inline\" xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow data-mjx-texclass=\"ORD\"><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mi>Q</mi><mo stretchy=\"false\">(</mo><msub><mi>t</mi><mrow data-mjx-texclass=\"ORD\"><mn>2</mn></mrow></msub><mo stretchy=\"false\">)</mo><mtext>&#160;</mtext><mo stretchy=\"false\">=</mo><mtext>&#160;</mtext><mi>Q</mi><mo stretchy=\"false\">(</mo><msub><mi>t</mi><mrow data-mjx-texclass=\"ORD\"><mn>1</mn></mrow></msub><mo stretchy=\"false\">)</mo><mo stretchy=\"false\">+</mo><msub><mi>Q</mi><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mi mathvariant=\"normal\">I</mi><mi mathvariant=\"normal\">N</mi></mrow></mrow></mrow></msub><mo stretchy=\"false\">&#x2212;</mo><msub><mi>Q</mi><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mi mathvariant=\"normal\">O</mi><mi mathvariant=\"normal\">U</mi><mi mathvariant=\"normal\">T</mi></mrow></mrow></mrow></msub></mstyle></mrow></math>",
+          "raw_formula_format": "wikidata_math",
+          "snapshot_id": "d66a5026-a727-5223-954d-561c0b90baa8",
+          "source_candidate_id": "Q304054:P2534:c39a82a0ca777007",
+          "source_description": "conservation law",
+          "source_entity_uri": "http://www.wikidata.org/entity/Q304054",
+          "source_label": "charge conservation",
+          "source_payload": {
+            "aliases": [
+              "conservation of charge"
+            ],
+            "formula_parse_hint": "mathml_plain_text_extracted",
+            "formula_plain_text": "Q(t_2) = Q(t_1) + Q_(I N) - Q_(O U T)",
+            "formula_plain_text_format": "plain_text",
+            "formula_property_id": "P2534",
+            "source_rows": [
+              {
+                "alias": "conservation of charge",
+                "formula": "<math class=\"mwe-math-element mwe-math-element-inline\" xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow data-mjx-texclass=\"ORD\"><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mi>Q</mi><mo stretchy=\"false\">(</mo><msub><mi>t</mi><mrow data-mjx-texclass=\"ORD\"><mn>2</mn></mrow></msub><mo stretchy=\"false\">)</mo><mtext>&#160;</mtext><mo stretchy=\"false\">=</mo><mtext>&#160;</mtext><mi>Q</mi><mo stretchy=\"false\">(</mo><msub><mi>t</mi><mrow data-mjx-texclass=\"ORD\"><mn>1</mn></mrow></msub><mo stretchy=\"false\">)</mo><mo stretchy=\"false\">+</mo><msub><mi>Q</mi><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mi mathvariant=\"normal\">I</mi><mi mathvariant=\"normal\">N</mi></mrow></mrow></mrow></msub><mo stretchy=\"false\">&#x2212;</mo><msub><mi>Q</mi><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mi mathvariant=\"normal\">O</mi><mi mathvariant=\"normal\">U</mi><mi mathvariant=\"normal\">T</mi></mrow></mrow></mrow></msub></mstyle></mrow></math>",
+                "formulaProperty": "http://www.wikidata.org/prop/direct/P2534",
+                "item": "http://www.wikidata.org/entity/Q304054",
+                "itemDescription": "conservation law",
+                "itemLabel": "charge conservation"
+              }
+            ],
+            "source_system": "wikidata",
+            "uses": [],
+            "wikidata_entity_id": "Q304054"
+          }
+        },
+        {
+          "behavioral_archetypes": [],
+          "candidate_id": "a54a5052-8989-5604-99d3-f6d2dc3dea31",
+          "candidate_status": "raw_imported",
+          "mechanism_tags": [],
+          "notes": "",
+          "parse_confidence": 0.0,
+          "priority_score": 0.0,
+          "raw_formula": "<math class=\"mwe-math-element mwe-math-element-inline\" xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow data-mjx-texclass=\"ORD\"><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mi>F</mi><mo stretchy=\"false\">=</mo><mi>&#x03BC;</mi><mi>N</mi></mstyle></mrow></math>",
+          "raw_formula_format": "wikidata_math",
+          "snapshot_id": "d66a5026-a727-5223-954d-561c0b90baa8",
+          "source_candidate_id": "Q473991:P2534:0bc7b6a75368d1c5",
+          "source_description": "physical law that friction is at most proportional to the normal force",
+          "source_entity_uri": "http://www.wikidata.org/entity/Q473991",
+          "source_label": "Coulomb friction",
+          "source_payload": {
+            "aliases": [
+              "Amontons\u2013Coulomb law",
+              "Amontons\u2019 law",
+              "Coulomb's law",
+              "Coulomb's law of friction"
+            ],
+            "formula_parse_hint": "mathml_plain_text_extracted",
+            "formula_plain_text": "F = mu N",
+            "formula_plain_text_format": "plain_text",
+            "formula_property_id": "P2534",
+            "source_rows": [
+              {
+                "alias": "Amontons\u2019 law",
+                "formula": "<math class=\"mwe-math-element mwe-math-element-inline\" xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow data-mjx-texclass=\"ORD\"><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mi>F</mi><mo stretchy=\"false\">=</mo><mi>&#x03BC;</mi><mi>N</mi></mstyle></mrow></math>",
+                "formulaProperty": "http://www.wikidata.org/prop/direct/P2534",
+                "item": "http://www.wikidata.org/entity/Q473991",
+                "itemDescription": "physical law that friction is at most proportional to the normal force",
+                "itemLabel": "Coulomb friction"
+              },
+              {
+                "alias": "Amontons\u2013Coulomb law",
+                "formula": "<math class=\"mwe-math-element mwe-math-element-inline\" xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow data-mjx-texclass=\"ORD\"><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mi>F</mi><mo stretchy=\"false\">=</mo><mi>&#x03BC;</mi><mi>N</mi></mstyle></mrow></math>",
+                "formulaProperty": "http://www.wikidata.org/prop/direct/P2534",
+                "item": "http://www.wikidata.org/entity/Q473991",
+                "itemDescription": "physical law that friction is at most proportional to the normal force",
+                "itemLabel": "Coulomb friction"
+              },
+              {
+                "alias": "Coulomb's law of friction",
+                "formula": "<math class=\"mwe-math-element mwe-math-element-inline\" xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow data-mjx-texclass=\"ORD\"><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mi>F</mi><mo stretchy=\"false\">=</mo><mi>&#x03BC;</mi><mi>N</mi></mstyle></mrow></math>",
+                "formulaProperty": "http://www.wikidata.org/prop/direct/P2534",
+                "item": "http://www.wikidata.org/entity/Q473991",
+                "itemDescription": "physical law that friction is at most proportional to the normal force",
+                "itemLabel": "Coulomb friction"
+              },
+              {
+                "alias": "Coulomb's law",
+                "formula": "<math class=\"mwe-math-element mwe-math-element-inline\" xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow data-mjx-texclass=\"ORD\"><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mi>F</mi><mo stretchy=\"false\">=</mo><mi>&#x03BC;</mi><mi>N</mi></mstyle></mrow></math>",
+                "formulaProperty": "http://www.wikidata.org/prop/direct/P2534",
+                "item": "http://www.wikidata.org/entity/Q473991",
+                "itemDescription": "physical law that friction is at most proportional to the normal force",
+                "itemLabel": "Coulomb friction"
+              }
+            ],
+            "source_system": "wikidata",
+            "uses": [],
+            "wikidata_entity_id": "Q473991"
+          }
+        },
+        {
+          "behavioral_archetypes": [],
+          "candidate_id": "49104045-7ace-55f9-8a22-5063a5896e4c",
+          "candidate_status": "raw_imported",
+          "mechanism_tags": [],
+          "notes": "",
+          "parse_confidence": 0.0,
+          "priority_score": 0.0,
+          "raw_formula": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" class=\"mwe-math-element mwe-math-element-inline\"><mrow data-mjx-texclass=\"ORD\"><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mi>F</mi><mo stretchy=\"false\">\u2264</mo><mi>\u03bc</mi><mi>N</mi></mstyle></mrow></math>",
+          "raw_formula_format": "wikidata_math",
+          "snapshot_id": "d66a5026-a727-5223-954d-561c0b90baa8",
+          "source_candidate_id": "Q473991:P2534:3b4a5bdcbbb86f80",
+          "source_description": "physical law that friction is at most proportional to the normal force",
+          "source_entity_uri": "http://www.wikidata.org/entity/Q473991",
+          "source_label": "Coulomb friction",
+          "source_payload": {
+            "aliases": [
+              "Amontons\u2013Coulomb law",
+              "Amontons\u2019 law",
+              "Coulomb's law",
+              "Coulomb's law of friction"
+            ],
+            "formula_parse_hint": "mathml_plain_text_extracted",
+            "formula_plain_text": "F <= mu N",
+            "formula_plain_text_format": "plain_text",
+            "formula_property_id": "P2534",
+            "source_rows": [
+              {
+                "alias": "Amontons\u2019 law",
+                "formula": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" class=\"mwe-math-element mwe-math-element-inline\"><mrow data-mjx-texclass=\"ORD\"><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mi>F</mi><mo stretchy=\"false\">\u2264</mo><mi>\u03bc</mi><mi>N</mi></mstyle></mrow></math>",
+                "formulaProperty": "http://www.wikidata.org/prop/direct/P2534",
+                "item": "http://www.wikidata.org/entity/Q473991",
+                "itemDescription": "physical law that friction is at most proportional to the normal force",
+                "itemLabel": "Coulomb friction"
+              },
+              {
+                "alias": "Amontons\u2013Coulomb law",
+                "formula": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" class=\"mwe-math-element mwe-math-element-inline\"><mrow data-mjx-texclass=\"ORD\"><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mi>F</mi><mo stretchy=\"false\">\u2264</mo><mi>\u03bc</mi><mi>N</mi></mstyle></mrow></math>",
+                "formulaProperty": "http://www.wikidata.org/prop/direct/P2534",
+                "item": "http://www.wikidata.org/entity/Q473991",
+                "itemDescription": "physical law that friction is at most proportional to the normal force",
+                "itemLabel": "Coulomb friction"
+              },
+              {
+                "alias": "Coulomb's law of friction",
+                "formula": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" class=\"mwe-math-element mwe-math-element-inline\"><mrow data-mjx-texclass=\"ORD\"><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mi>F</mi><mo stretchy=\"false\">\u2264</mo><mi>\u03bc</mi><mi>N</mi></mstyle></mrow></math>",
+                "formulaProperty": "http://www.wikidata.org/prop/direct/P2534",
+                "item": "http://www.wikidata.org/entity/Q473991",
+                "itemDescription": "physical law that friction is at most proportional to the normal force",
+                "itemLabel": "Coulomb friction"
+              },
+              {
+                "alias": "Coulomb's law",
+                "formula": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" class=\"mwe-math-element mwe-math-element-inline\"><mrow data-mjx-texclass=\"ORD\"><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mi>F</mi><mo stretchy=\"false\">\u2264</mo><mi>\u03bc</mi><mi>N</mi></mstyle></mrow></math>",
+                "formulaProperty": "http://www.wikidata.org/prop/direct/P2534",
+                "item": "http://www.wikidata.org/entity/Q473991",
+                "itemDescription": "physical law that friction is at most proportional to the normal force",
+                "itemLabel": "Coulomb friction"
+              }
+            ],
+            "source_system": "wikidata",
+            "uses": [],
+            "wikidata_entity_id": "Q473991"
+          }
+        },
+        {
+          "behavioral_archetypes": [],
+          "candidate_id": "8f43059b-b7e6-5556-8a22-4a77fd9ec87c",
+          "candidate_status": "raw_imported",
+          "mechanism_tags": [],
+          "notes": "",
+          "parse_confidence": 0.0,
+          "priority_score": 0.0,
+          "raw_formula": "<math class=\"mwe-math-element mwe-math-element-inline\" xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow data-mjx-texclass=\"ORD\"><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mi>E</mi><mo stretchy=\"false\">&#x2265;</mo><msub><mi>k</mi><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mi mathvariant=\"normal\">B</mi></mrow></mrow></msub><mi>T</mi><mi>ln</mi><mo>&#x2061;</mo><mn>2</mn></mstyle></mrow></math>",
+          "raw_formula_format": "wikidata_math",
+          "snapshot_id": "d66a5026-a727-5223-954d-561c0b90baa8",
+          "source_candidate_id": "Q657486:P2534:0cff6f793f16e64a",
+          "source_description": "physical principle that erasing one bit of information at temperature \ud835\udc47 requires energy \ud835\udc58\ud835\udc47ln(2)",
+          "source_entity_uri": "http://www.wikidata.org/entity/Q657486",
+          "source_label": "Landauer's principle",
+          "source_payload": {
+            "aliases": [
+              "Landauer bound",
+              "Landauer limit"
+            ],
+            "formula_parse_hint": "mathml_plain_text_extracted",
+            "formula_plain_text": "E >= k_B T ln \u2061 2",
+            "formula_plain_text_format": "plain_text",
+            "formula_property_id": "P2534",
+            "source_rows": [
+              {
+                "alias": "Landauer limit",
+                "formula": "<math class=\"mwe-math-element mwe-math-element-inline\" xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow data-mjx-texclass=\"ORD\"><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mi>E</mi><mo stretchy=\"false\">&#x2265;</mo><msub><mi>k</mi><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mi mathvariant=\"normal\">B</mi></mrow></mrow></msub><mi>T</mi><mi>ln</mi><mo>&#x2061;</mo><mn>2</mn></mstyle></mrow></math>",
+                "formulaProperty": "http://www.wikidata.org/prop/direct/P2534",
+                "item": "http://www.wikidata.org/entity/Q657486",
+                "itemDescription": "physical principle that erasing one bit of information at temperature \ud835\udc47 requires energy \ud835\udc58\ud835\udc47ln(2)",
+                "itemLabel": "Landauer's principle"
+              },
+              {
+                "alias": "Landauer bound",
+                "formula": "<math class=\"mwe-math-element mwe-math-element-inline\" xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow data-mjx-texclass=\"ORD\"><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mi>E</mi><mo stretchy=\"false\">&#x2265;</mo><msub><mi>k</mi><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mi mathvariant=\"normal\">B</mi></mrow></mrow></msub><mi>T</mi><mi>ln</mi><mo>&#x2061;</mo><mn>2</mn></mstyle></mrow></math>",
+                "formulaProperty": "http://www.wikidata.org/prop/direct/P2534",
+                "item": "http://www.wikidata.org/entity/Q657486",
+                "itemDescription": "physical principle that erasing one bit of information at temperature \ud835\udc47 requires energy \ud835\udc58\ud835\udc47ln(2)",
+                "itemLabel": "Landauer's principle"
+              }
+            ],
+            "source_system": "wikidata",
+            "uses": [],
+            "wikidata_entity_id": "Q657486"
+          }
+        },
+        {
+          "behavioral_archetypes": [],
+          "candidate_id": "30078ebc-2c7e-5250-8e4f-cccf25421011",
+          "candidate_status": "raw_imported",
+          "mechanism_tags": [],
+          "notes": "",
+          "parse_confidence": 0.0,
+          "priority_score": 0.0,
+          "raw_formula": "<math class=\"mwe-math-element mwe-math-element-inline\" xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow data-mjx-texclass=\"ORD\"><mstyle displaystyle=\"true\" scriptlevel=\"0\"><msub><mi>M</mi><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mi mathvariant=\"normal\">b</mi></mrow></mrow></msub><mo stretchy=\"false\">=</mo><mi>&#x03C3;</mi><msup><mi>T</mi><mrow data-mjx-texclass=\"ORD\"><mn>4</mn></mrow></msup></mstyle></mrow></math>",
+          "raw_formula_format": "wikidata_math",
+          "snapshot_id": "d66a5026-a727-5223-954d-561c0b90baa8",
+          "source_candidate_id": "Q704747:P2534:d84b3985a4f15d03",
+          "source_description": "physical law on the emissive power of black body",
+          "source_entity_uri": "http://www.wikidata.org/entity/Q704747",
+          "source_label": "Stefan-Boltzmann law",
+          "source_payload": {
+            "aliases": [
+              "Stefan's law",
+              "Stefan-Boltzmann's law"
+            ],
+            "formula_parse_hint": "mathml_plain_text_extracted",
+            "formula_plain_text": "M_b = sigma T^4",
+            "formula_plain_text_format": "plain_text",
+            "formula_property_id": "P2534",
+            "source_rows": [
+              {
+                "alias": "Stefan's law",
+                "formula": "<math class=\"mwe-math-element mwe-math-element-inline\" xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow data-mjx-texclass=\"ORD\"><mstyle displaystyle=\"true\" scriptlevel=\"0\"><msub><mi>M</mi><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mi mathvariant=\"normal\">b</mi></mrow></mrow></msub><mo stretchy=\"false\">=</mo><mi>&#x03C3;</mi><msup><mi>T</mi><mrow data-mjx-texclass=\"ORD\"><mn>4</mn></mrow></msup></mstyle></mrow></math>",
+                "formulaProperty": "http://www.wikidata.org/prop/direct/P2534",
+                "item": "http://www.wikidata.org/entity/Q704747",
+                "itemDescription": "physical law on the emissive power of black body",
+                "itemLabel": "Stefan-Boltzmann law"
+              },
+              {
+                "alias": "Stefan-Boltzmann's law",
+                "formula": "<math class=\"mwe-math-element mwe-math-element-inline\" xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow data-mjx-texclass=\"ORD\"><mstyle displaystyle=\"true\" scriptlevel=\"0\"><msub><mi>M</mi><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mi mathvariant=\"normal\">b</mi></mrow></mrow></msub><mo stretchy=\"false\">=</mo><mi>&#x03C3;</mi><msup><mi>T</mi><mrow data-mjx-texclass=\"ORD\"><mn>4</mn></mrow></msup></mstyle></mrow></math>",
+                "formulaProperty": "http://www.wikidata.org/prop/direct/P2534",
+                "item": "http://www.wikidata.org/entity/Q704747",
+                "itemDescription": "physical law on the emissive power of black body",
+                "itemLabel": "Stefan-Boltzmann law"
+              }
+            ],
+            "source_system": "wikidata",
+            "uses": [],
+            "wikidata_entity_id": "Q704747"
+          }
+        },
+        {
+          "behavioral_archetypes": [],
+          "candidate_id": "3a99adfe-8916-593b-80a9-3ec927e97254",
+          "candidate_status": "raw_imported",
+          "mechanism_tags": [],
+          "notes": "",
+          "parse_confidence": 0.0,
+          "priority_score": 0.0,
+          "raw_formula": "<math class=\"mwe-math-element mwe-math-element-inline\" xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow data-mjx-texclass=\"ORD\"><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mi>p</mi><mo stretchy=\"false\">=</mo><msub><mi>p</mi><mrow data-mjx-texclass=\"ORD\"><mn>0</mn></mrow></msub><mi>exp</mi><mo>&#x2061;</mo><mrow data-mjx-texclass=\"INNER\"><mo data-mjx-texclass=\"OPEN\">[</mo><mo stretchy=\"false\">&#x2212;</mo><mi>M</mi><mi>g</mi><mrow data-mjx-texclass=\"ORD\"><mfrac><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mi>h</mi><mo stretchy=\"false\">&#x2212;</mo><msub><mi>h</mi><mrow data-mjx-texclass=\"ORD\"><mn>0</mn></mrow></msub></mrow></mrow><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mi>R</mi><mi>T</mi></mrow></mrow></mfrac></mrow><mo data-mjx-texclass=\"CLOSE\">]</mo></mrow></mstyle></mrow></math>",
+          "raw_formula_format": "wikidata_math",
+          "snapshot_id": "d66a5026-a727-5223-954d-561c0b90baa8",
+          "source_candidate_id": "Q808592:P2534:0144a80c1e99ff3f",
+          "source_description": "formula used to model how air pressure varies with altitude",
+          "source_entity_uri": "http://www.wikidata.org/entity/Q808592",
+          "source_label": "barometric formula",
+          "source_payload": {
+            "aliases": [
+              "exponential atmosphere",
+              "isothermal atmosphere"
+            ],
+            "formula_parse_hint": "mathml_plain_text_extracted",
+            "formula_plain_text": "p = p_0 exp \u2061 [- M g ((h - h_0)/(R T))]",
+            "formula_plain_text_format": "plain_text",
+            "formula_property_id": "P2534",
+            "source_rows": [
+              {
+                "alias": "isothermal atmosphere",
+                "formula": "<math class=\"mwe-math-element mwe-math-element-inline\" xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow data-mjx-texclass=\"ORD\"><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mi>p</mi><mo stretchy=\"false\">=</mo><msub><mi>p</mi><mrow data-mjx-texclass=\"ORD\"><mn>0</mn></mrow></msub><mi>exp</mi><mo>&#x2061;</mo><mrow data-mjx-texclass=\"INNER\"><mo data-mjx-texclass=\"OPEN\">[</mo><mo stretchy=\"false\">&#x2212;</mo><mi>M</mi><mi>g</mi><mrow data-mjx-texclass=\"ORD\"><mfrac><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mi>h</mi><mo stretchy=\"false\">&#x2212;</mo><msub><mi>h</mi><mrow data-mjx-texclass=\"ORD\"><mn>0</mn></mrow></msub></mrow></mrow><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mi>R</mi><mi>T</mi></mrow></mrow></mfrac></mrow><mo data-mjx-texclass=\"CLOSE\">]</mo></mrow></mstyle></mrow></math>",
+                "formulaProperty": "http://www.wikidata.org/prop/direct/P2534",
+                "item": "http://www.wikidata.org/entity/Q808592",
+                "itemDescription": "formula used to model how air pressure varies with altitude",
+                "itemLabel": "barometric formula"
+              },
+              {
+                "alias": "exponential atmosphere",
+                "formula": "<math class=\"mwe-math-element mwe-math-element-inline\" xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow data-mjx-texclass=\"ORD\"><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mi>p</mi><mo stretchy=\"false\">=</mo><msub><mi>p</mi><mrow data-mjx-texclass=\"ORD\"><mn>0</mn></mrow></msub><mi>exp</mi><mo>&#x2061;</mo><mrow data-mjx-texclass=\"INNER\"><mo data-mjx-texclass=\"OPEN\">[</mo><mo stretchy=\"false\">&#x2212;</mo><mi>M</mi><mi>g</mi><mrow data-mjx-texclass=\"ORD\"><mfrac><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mi>h</mi><mo stretchy=\"false\">&#x2212;</mo><msub><mi>h</mi><mrow data-mjx-texclass=\"ORD\"><mn>0</mn></mrow></msub></mrow></mrow><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mi>R</mi><mi>T</mi></mrow></mrow></mfrac></mrow><mo data-mjx-texclass=\"CLOSE\">]</mo></mrow></mstyle></mrow></math>",
+                "formulaProperty": "http://www.wikidata.org/prop/direct/P2534",
+                "item": "http://www.wikidata.org/entity/Q808592",
+                "itemDescription": "formula used to model how air pressure varies with altitude",
+                "itemLabel": "barometric formula"
+              }
+            ],
+            "source_system": "wikidata",
+            "uses": [],
+            "wikidata_entity_id": "Q808592"
+          }
+        },
+        {
+          "behavioral_archetypes": [],
+          "candidate_id": "c05137e1-49e6-5db3-8f84-4fb351b880e8",
+          "candidate_status": "raw_imported",
+          "mechanism_tags": [],
+          "notes": "",
+          "parse_confidence": 0.0,
+          "priority_score": 0.0,
+          "raw_formula": "<math class=\"mwe-math-element mwe-math-element-inline\" xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow data-mjx-texclass=\"ORD\"><mstyle displaystyle=\"true\" scriptlevel=\"0\"><msub><mi>F</mi><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mi mathvariant=\"normal\">D</mi></mrow></mrow></msub><mo stretchy=\"false\">=</mo><mn>6</mn><mi>&#x03C0;</mi><mi>&#x03B7;</mi><mi>r</mi><mi>v</mi></mstyle></mrow></math>",
+          "raw_formula_format": "wikidata_math",
+          "snapshot_id": "d66a5026-a727-5223-954d-561c0b90baa8",
+          "source_candidate_id": "Q824561:P2534:1f3fe495c0f1539c",
+          "source_description": "expression for frictional force on small spherical object moving through a viscous fluid",
+          "source_entity_uri": "http://www.wikidata.org/entity/Q824561",
+          "source_label": "Stokes' law",
+          "source_payload": {
+            "aliases": [],
+            "formula_parse_hint": "mathml_plain_text_extracted",
+            "formula_plain_text": "F_D = 6 pi eta r v",
+            "formula_plain_text_format": "plain_text",
+            "formula_property_id": "P2534",
+            "source_rows": [
+              {
+                "formula": "<math class=\"mwe-math-element mwe-math-element-inline\" xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow data-mjx-texclass=\"ORD\"><mstyle displaystyle=\"true\" scriptlevel=\"0\"><msub><mi>F</mi><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mi mathvariant=\"normal\">D</mi></mrow></mrow></msub><mo stretchy=\"false\">=</mo><mn>6</mn><mi>&#x03C0;</mi><mi>&#x03B7;</mi><mi>r</mi><mi>v</mi></mstyle></mrow></math>",
+                "formulaProperty": "http://www.wikidata.org/prop/direct/P2534",
+                "item": "http://www.wikidata.org/entity/Q824561",
+                "itemDescription": "expression for frictional force on small spherical object moving through a viscous fluid",
+                "itemLabel": "Stokes' law"
+              }
+            ],
+            "source_system": "wikidata",
+            "uses": [],
+            "wikidata_entity_id": "Q824561"
+          }
+        },
+        {
+          "behavioral_archetypes": [],
+          "candidate_id": "e73c0db8-3fc6-5f56-bc7f-4d8a521ecc4e",
+          "candidate_status": "raw_imported",
+          "mechanism_tags": [],
+          "notes": "",
+          "parse_confidence": 0.0,
+          "priority_score": 0.0,
+          "raw_formula": "<math class=\"mwe-math-element mwe-math-element-inline\" xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow data-mjx-texclass=\"ORD\"><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mi>n</mi><mi>&#x03BB;</mi><mo stretchy=\"false\">=</mo><mn>2</mn><mi>d</mi><mi>sin</mi><mo>&#x2061;</mo><mi>&#x03B8;</mi></mstyle></mrow></math>",
+          "raw_formula_format": "wikidata_math",
+          "snapshot_id": "d66a5026-a727-5223-954d-561c0b90baa8",
+          "source_candidate_id": "Q847354:P2534:e93130566c3fcbf4",
+          "source_description": "gives the angles for coherent and incoherent scattering from a crystal lattice",
+          "source_entity_uri": "http://www.wikidata.org/entity/Q847354",
+          "source_label": "Bragg's law",
+          "source_payload": {
+            "aliases": [
+              "Bragg Diffraction",
+              "Bragg equation",
+              "Bragg reflection"
+            ],
+            "formula_parse_hint": "mathml_plain_text_extracted",
+            "formula_plain_text": "n lambda = 2 d sin \u2061 theta",
+            "formula_plain_text_format": "plain_text",
+            "formula_property_id": "P2534",
+            "source_rows": [
+              {
+                "alias": "Bragg reflection",
+                "formula": "<math class=\"mwe-math-element mwe-math-element-inline\" xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow data-mjx-texclass=\"ORD\"><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mi>n</mi><mi>&#x03BB;</mi><mo stretchy=\"false\">=</mo><mn>2</mn><mi>d</mi><mi>sin</mi><mo>&#x2061;</mo><mi>&#x03B8;</mi></mstyle></mrow></math>",
+                "formulaProperty": "http://www.wikidata.org/prop/direct/P2534",
+                "item": "http://www.wikidata.org/entity/Q847354",
+                "itemDescription": "gives the angles for coherent and incoherent scattering from a crystal lattice",
+                "itemLabel": "Bragg's law"
+              },
+              {
+                "alias": "Bragg equation",
+                "formula": "<math class=\"mwe-math-element mwe-math-element-inline\" xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow data-mjx-texclass=\"ORD\"><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mi>n</mi><mi>&#x03BB;</mi><mo stretchy=\"false\">=</mo><mn>2</mn><mi>d</mi><mi>sin</mi><mo>&#x2061;</mo><mi>&#x03B8;</mi></mstyle></mrow></math>",
+                "formulaProperty": "http://www.wikidata.org/prop/direct/P2534",
+                "item": "http://www.wikidata.org/entity/Q847354",
+                "itemDescription": "gives the angles for coherent and incoherent scattering from a crystal lattice",
+                "itemLabel": "Bragg's law"
+              },
+              {
+                "alias": "Bragg Diffraction",
+                "formula": "<math class=\"mwe-math-element mwe-math-element-inline\" xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow data-mjx-texclass=\"ORD\"><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mi>n</mi><mi>&#x03BB;</mi><mo stretchy=\"false\">=</mo><mn>2</mn><mi>d</mi><mi>sin</mi><mo>&#x2061;</mo><mi>&#x03B8;</mi></mstyle></mrow></math>",
+                "formulaProperty": "http://www.wikidata.org/prop/direct/P2534",
+                "item": "http://www.wikidata.org/entity/Q847354",
+                "itemDescription": "gives the angles for coherent and incoherent scattering from a crystal lattice",
+                "itemLabel": "Bragg's law"
+              }
+            ],
+            "source_system": "wikidata",
+            "uses": [],
+            "wikidata_entity_id": "Q847354"
+          }
+        },
+        {
+          "behavioral_archetypes": [],
+          "candidate_id": "6876ca15-9dc6-5c1e-8cf7-52967e57c175",
+          "candidate_status": "raw_imported",
+          "mechanism_tags": [],
+          "notes": "",
+          "parse_confidence": 0.0,
+          "priority_score": 0.0,
+          "raw_formula": "<math class=\"mwe-math-element mwe-math-element-inline\" xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow data-mjx-texclass=\"ORD\"><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mrow data-mjx-texclass=\"ORD\"><mfrac><mrow data-mjx-texclass=\"ORD\"><mn>1</mn></mrow><mrow data-mjx-texclass=\"ORD\"><msup><mi>c</mi><mrow data-mjx-texclass=\"ORD\"><mn>2</mn></mrow></msup></mrow></mfrac></mrow><mrow data-mjx-texclass=\"ORD\"><mfrac><mrow data-mjx-texclass=\"ORD\"><msup><mi>&#x2202;</mi><mrow data-mjx-texclass=\"ORD\"><mn>2</mn></mrow></msup></mrow><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mi>&#x2202;</mi><msup><mi>t</mi><mrow data-mjx-texclass=\"ORD\"><mn>2</mn></mrow></msup></mrow></mrow></mfrac></mrow><mi>&#x03C8;</mi><mo stretchy=\"false\">&#x2212;</mo><msup><mi mathvariant=\"normal\">&#x2207;</mi><mrow data-mjx-texclass=\"ORD\"><mn>2</mn></mrow></msup><mi>&#x03C8;</mi><mo stretchy=\"false\">+</mo><mrow data-mjx-texclass=\"ORD\"><mfrac><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><msup><mi>m</mi><mrow data-mjx-texclass=\"ORD\"><mn>2</mn></mrow></msup><msup><mi>c</mi><mrow data-mjx-texclass=\"ORD\"><mn>2</mn></mrow></msup></mrow></mrow><mrow data-mjx-texclass=\"ORD\"><msup><mi alternate=\"1\">&#x210F;</mi><mrow data-mjx-texclass=\"ORD\"><mn>2</mn></mrow></msup></mrow></mfrac></mrow><mi>&#x03C8;</mi><mo stretchy=\"false\">=</mo><mn>0</mn></mstyle></mrow></math>",
+          "raw_formula_format": "wikidata_math",
+          "snapshot_id": "d66a5026-a727-5223-954d-561c0b90baa8",
+          "source_candidate_id": "Q868967:P2534:c0ff4c1ba24796a9",
+          "source_description": "relativistic wave equation in quantum mechanics",
+          "source_entity_uri": "http://www.wikidata.org/entity/Q868967",
+          "source_label": "Klein\u2013Gordon equation",
+          "source_payload": {
+            "aliases": [
+              "Klein-Gordon Equation",
+              "Klein\u2013Fock\u2013Gordon equation",
+              "Klein\u2013Gordon\u2013Fock equation"
+            ],
+            "formula_parse_hint": "mathml_plain_text_extracted",
+            "formula_plain_text": "((1)/(c^2)) ((\u2202^2)/(\u2202 t^2)) psi - \u2207^2 psi + ((m^2 c^2)/(\u210f^2)) psi = 0",
+            "formula_plain_text_format": "plain_text",
+            "formula_property_id": "P2534",
+            "source_rows": [
+              {
+                "alias": "Klein\u2013Gordon\u2013Fock equation",
+                "formula": "<math class=\"mwe-math-element mwe-math-element-inline\" xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow data-mjx-texclass=\"ORD\"><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mrow data-mjx-texclass=\"ORD\"><mfrac><mrow data-mjx-texclass=\"ORD\"><mn>1</mn></mrow><mrow data-mjx-texclass=\"ORD\"><msup><mi>c</mi><mrow data-mjx-texclass=\"ORD\"><mn>2</mn></mrow></msup></mrow></mfrac></mrow><mrow data-mjx-texclass=\"ORD\"><mfrac><mrow data-mjx-texclass=\"ORD\"><msup><mi>&#x2202;</mi><mrow data-mjx-texclass=\"ORD\"><mn>2</mn></mrow></msup></mrow><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mi>&#x2202;</mi><msup><mi>t</mi><mrow data-mjx-texclass=\"ORD\"><mn>2</mn></mrow></msup></mrow></mrow></mfrac></mrow><mi>&#x03C8;</mi><mo stretchy=\"false\">&#x2212;</mo><msup><mi mathvariant=\"normal\">&#x2207;</mi><mrow data-mjx-texclass=\"ORD\"><mn>2</mn></mrow></msup><mi>&#x03C8;</mi><mo stretchy=\"false\">+</mo><mrow data-mjx-texclass=\"ORD\"><mfrac><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><msup><mi>m</mi><mrow data-mjx-texclass=\"ORD\"><mn>2</mn></mrow></msup><msup><mi>c</mi><mrow data-mjx-texclass=\"ORD\"><mn>2</mn></mrow></msup></mrow></mrow><mrow data-mjx-texclass=\"ORD\"><msup><mi alternate=\"1\">&#x210F;</mi><mrow data-mjx-texclass=\"ORD\"><mn>2</mn></mrow></msup></mrow></mfrac></mrow><mi>&#x03C8;</mi><mo stretchy=\"false\">=</mo><mn>0</mn></mstyle></mrow></math>",
+                "formulaProperty": "http://www.wikidata.org/prop/direct/P2534",
+                "item": "http://www.wikidata.org/entity/Q868967",
+                "itemDescription": "relativistic wave equation in quantum mechanics",
+                "itemLabel": "Klein\u2013Gordon equation"
+              },
+              {
+                "alias": "Klein\u2013Fock\u2013Gordon equation",
+                "formula": "<math class=\"mwe-math-element mwe-math-element-inline\" xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow data-mjx-texclass=\"ORD\"><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mrow data-mjx-texclass=\"ORD\"><mfrac><mrow data-mjx-texclass=\"ORD\"><mn>1</mn></mrow><mrow data-mjx-texclass=\"ORD\"><msup><mi>c</mi><mrow data-mjx-texclass=\"ORD\"><mn>2</mn></mrow></msup></mrow></mfrac></mrow><mrow data-mjx-texclass=\"ORD\"><mfrac><mrow data-mjx-texclass=\"ORD\"><msup><mi>&#x2202;</mi><mrow data-mjx-texclass=\"ORD\"><mn>2</mn></mrow></msup></mrow><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mi>&#x2202;</mi><msup><mi>t</mi><mrow data-mjx-texclass=\"ORD\"><mn>2</mn></mrow></msup></mrow></mrow></mfrac></mrow><mi>&#x03C8;</mi><mo stretchy=\"false\">&#x2212;</mo><msup><mi mathvariant=\"normal\">&#x2207;</mi><mrow data-mjx-texclass=\"ORD\"><mn>2</mn></mrow></msup><mi>&#x03C8;</mi><mo stretchy=\"false\">+</mo><mrow data-mjx-texclass=\"ORD\"><mfrac><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><msup><mi>m</mi><mrow data-mjx-texclass=\"ORD\"><mn>2</mn></mrow></msup><msup><mi>c</mi><mrow data-mjx-texclass=\"ORD\"><mn>2</mn></mrow></msup></mrow></mrow><mrow data-mjx-texclass=\"ORD\"><msup><mi alternate=\"1\">&#x210F;</mi><mrow data-mjx-texclass=\"ORD\"><mn>2</mn></mrow></msup></mrow></mfrac></mrow><mi>&#x03C8;</mi><mo stretchy=\"false\">=</mo><mn>0</mn></mstyle></mrow></math>",
+                "formulaProperty": "http://www.wikidata.org/prop/direct/P2534",
+                "item": "http://www.wikidata.org/entity/Q868967",
+                "itemDescription": "relativistic wave equation in quantum mechanics",
+                "itemLabel": "Klein\u2013Gordon equation"
+              },
+              {
+                "alias": "Klein-Gordon Equation",
+                "formula": "<math class=\"mwe-math-element mwe-math-element-inline\" xmlns=\"http://www.w3.org/1998/Math/MathML\"><mrow data-mjx-texclass=\"ORD\"><mstyle displaystyle=\"true\" scriptlevel=\"0\"><mrow data-mjx-texclass=\"ORD\"><mfrac><mrow data-mjx-texclass=\"ORD\"><mn>1</mn></mrow><mrow data-mjx-texclass=\"ORD\"><msup><mi>c</mi><mrow data-mjx-texclass=\"ORD\"><mn>2</mn></mrow></msup></mrow></mfrac></mrow><mrow data-mjx-texclass=\"ORD\"><mfrac><mrow data-mjx-texclass=\"ORD\"><msup><mi>&#x2202;</mi><mrow data-mjx-texclass=\"ORD\"><mn>2</mn></mrow></msup></mrow><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><mi>&#x2202;</mi><msup><mi>t</mi><mrow data-mjx-texclass=\"ORD\"><mn>2</mn></mrow></msup></mrow></mrow></mfrac></mrow><mi>&#x03C8;</mi><mo stretchy=\"false\">&#x2212;</mo><msup><mi mathvariant=\"normal\">&#x2207;</mi><mrow data-mjx-texclass=\"ORD\"><mn>2</mn></mrow></msup><mi>&#x03C8;</mi><mo stretchy=\"false\">+</mo><mrow data-mjx-texclass=\"ORD\"><mfrac><mrow data-mjx-texclass=\"ORD\"><mrow data-mjx-texclass=\"ORD\"><msup><mi>m</mi><mrow data-mjx-texclass=\"ORD\"><mn>2</mn></mrow></msup><msup><mi>c</mi><mrow data-mjx-texclass=\"ORD\"><mn>2</mn></mrow></msup></mrow></mrow><mrow data-mjx-texclass=\"ORD\"><msup><mi alternate=\"1\">&#x210F;</mi><mrow data-mjx-texclass=\"ORD\"><mn>2</mn></mrow></msup></mrow></mfrac></mrow><mi>&#x03C8;</mi><mo stretchy=\"false\">=</mo><mn>0</mn></mstyle></mrow></math>",
+                "formulaProperty": "http://www.wikidata.org/prop/direct/P2534",
+                "item": "http://www.wikidata.org/entity/Q868967",
+                "itemDescription": "relativistic wave equation in quantum mechanics",
+                "itemLabel": "Klein\u2013Gordon equation"
+              }
+            ],
+            "source_system": "wikidata",
+            "uses": [],
+            "wikidata_entity_id": "Q868967"
+          }
+        }
+      ],
+      "table": "physics_equation_candidates"
+    }
+  ]
+}
