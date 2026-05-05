@@ -6,9 +6,9 @@
     "requested": true
   },
   "equation_count": 127,
-  "generated_at": "2026-05-05T18:51:30.779824+00:00",
+  "generated_at": "2026-05-05T20:09:57.119870+00:00",
   "github_auth_source": "gh-auth-token",
-  "github_rate_limit_remaining": 4897,
+  "github_rate_limit_remaining": 4884,
   "github_request_count": 7,
   "graph_diagnostic_count": 0,
   "inference_edge_count": 138,
@@ -26,9 +26,9 @@
       "diagnostics_by_severity": {},
       "diagnostics_by_table": {},
       "operation_kind_counts": {
-        "derive": 12,
+        "derive": 11,
         "simplify": 1,
-        "substitute": 10
+        "substitute": 5
       },
       "relationship_kind_counts": {
         "derives_from": 23
@@ -37,9 +37,9 @@
       "source_system": "physics_derivation_graph",
       "summary_kind": "pdg_cdg_publication_rows_summary.v1",
       "table_row_counts": {
-        "artifact_cdg_bindings": 46,
+        "artifact_cdg_bindings": 40,
         "artifact_cdg_edges": 17,
-        "artifact_cdg_nodes": 23,
+        "artifact_cdg_nodes": 17,
         "artifact_relationships": 23,
         "artifact_versions": 1,
         "artifacts": 1
@@ -58,9 +58,9 @@
       "diagnostics_by_severity": {},
       "diagnostics_by_table": {},
       "operation_kind_counts": {
-        "derive": 14,
+        "derive": 13,
         "simplify": 6,
-        "substitute": 8
+        "substitute": 4
       },
       "relationship_kind_counts": {
         "derives_from": 28
@@ -69,9 +69,9 @@
       "source_system": "physics_derivation_graph",
       "summary_kind": "pdg_cdg_publication_rows_summary.v1",
       "table_row_counts": {
-        "artifact_cdg_bindings": 56,
+        "artifact_cdg_bindings": 51,
         "artifact_cdg_edges": 25,
-        "artifact_cdg_nodes": 28,
+        "artifact_cdg_nodes": 23,
         "artifact_relationships": 28,
         "artifact_versions": 1,
         "artifacts": 1
@@ -90,9 +90,9 @@
       "diagnostics_by_severity": {},
       "diagnostics_by_table": {},
       "operation_kind_counts": {
-        "derive": 7,
+        "derive": 6,
         "simplify": 3,
-        "substitute": 16
+        "substitute": 8
       },
       "relationship_kind_counts": {
         "derives_from": 26
@@ -101,9 +101,9 @@
       "source_system": "physics_derivation_graph",
       "summary_kind": "pdg_cdg_publication_rows_summary.v1",
       "table_row_counts": {
-        "artifact_cdg_bindings": 52,
-        "artifact_cdg_edges": 17,
-        "artifact_cdg_nodes": 26,
+        "artifact_cdg_bindings": 43,
+        "artifact_cdg_edges": 16,
+        "artifact_cdg_nodes": 17,
         "artifact_relationships": 26,
         "artifact_versions": 1,
         "artifacts": 1
@@ -122,9 +122,9 @@
       "diagnostics_by_severity": {},
       "diagnostics_by_table": {},
       "operation_kind_counts": {
-        "derive": 20,
+        "derive": 16,
         "simplify": 5,
-        "substitute": 7
+        "substitute": 2
       },
       "relationship_kind_counts": {
         "derives_from": 32
@@ -133,9 +133,9 @@
       "source_system": "physics_derivation_graph",
       "summary_kind": "pdg_cdg_publication_rows_summary.v1",
       "table_row_counts": {
-        "artifact_cdg_bindings": 64,
-        "artifact_cdg_edges": 23,
-        "artifact_cdg_nodes": 32,
+        "artifact_cdg_bindings": 55,
+        "artifact_cdg_edges": 22,
+        "artifact_cdg_nodes": 23,
         "artifact_relationships": 32,
         "artifact_versions": 1,
         "artifacts": 1
@@ -154,9 +154,9 @@
       "diagnostics_by_severity": {},
       "diagnostics_by_table": {},
       "operation_kind_counts": {
-        "derive": 19,
+        "derive": 11,
         "simplify": 4,
-        "substitute": 6
+        "substitute": 3
       },
       "relationship_kind_counts": {
         "derives_from": 29
@@ -165,9 +165,9 @@
       "source_system": "physics_derivation_graph",
       "summary_kind": "pdg_cdg_publication_rows_summary.v1",
       "table_row_counts": {
-        "artifact_cdg_bindings": 58,
-        "artifact_cdg_edges": 19,
-        "artifact_cdg_nodes": 29,
+        "artifact_cdg_bindings": 43,
+        "artifact_cdg_edges": 17,
+        "artifact_cdg_nodes": 18,
         "artifact_relationships": 29,
         "artifact_versions": 1,
         "artifacts": 1
@@ -272,12 +272,12 @@
     "551770",
     "713234"
   ],
-  "snapshot_id": "2726f975-d987-5288-8024-778ef3c59a2b",
+  "snapshot_id": "77ad2ceb-ad82-578a-a1f8-0ba0e795f4cf",
   "source_version": "pdg-remote-wave8-2026-05-05",
   "table_row_counts": {
-    "artifact_cdg_bindings": 276,
-    "artifact_cdg_edges": 101,
-    "artifact_cdg_nodes": 138,
+    "artifact_cdg_bindings": 232,
+    "artifact_cdg_edges": 97,
+    "artifact_cdg_nodes": 98,
     "artifact_relationships": 134,
     "artifact_symbolic_expressions": 127,
     "artifact_versions": 132,
@@ -285,5 +285,5 @@
     "physics_equation_candidates": 127,
     "physics_ingest_snapshots": 1
   },
-  "write_plan_total_row_count": 1168
+  "write_plan_total_row_count": 1080
 }

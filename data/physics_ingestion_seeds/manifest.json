@@ -58,14 +58,14 @@
         "129143",
         "000004"
       ],
-      "snapshot_id": "4bdbb3bd-f872-54dd-9c0b-b7ae18e55b09",
+      "snapshot_id": "b340d737-dc70-59cb-be09-fa7c1b90200d",
       "source_version": "pdg-remote-wave1-2026-05-05",
       "summary_path": "pdg_remote_wave1_20260505/summary.json",
-      "summary_sha256": "c047b412ce08a9efebee1453116c03fe980292e5bcdccbf53e555951ed7183e1",
+      "summary_sha256": "3f59c9d1a87e7b415f90c72c604fe8f09e9a343f0f974caa05b605ba76a1f328",
       "table_row_counts": {
-        "artifact_cdg_bindings": 166,
-        "artifact_cdg_edges": 51,
-        "artifact_cdg_nodes": 83,
+        "artifact_cdg_bindings": 139,
+        "artifact_cdg_edges": 50,
+        "artifact_cdg_nodes": 56,
         "artifact_relationships": 83,
         "artifact_symbolic_expressions": 80,
         "artifact_versions": 85,
@@ -73,9 +73,9 @@
         "physics_equation_candidates": 80,
         "physics_ingest_snapshots": 1
       },
-      "total_row_count": 714,
+      "total_row_count": 659,
       "write_plan_path": "pdg_remote_wave1_20260505/write_plan.json",
-      "write_plan_sha256": "b5b06d61589fa209d3572c808108175a6e85d716e3fcfe05f9fbe36ba390573a"
+      "write_plan_sha256": "efb69c2bacdf488b8873fd8ccb34a0eb85cb5677ce31aa2042b102ef7df5d779"
     },
     {
       "description": "Remote PDG promotion wave 2",
@@ -89,14 +89,14 @@
         "146432",
         "884319"
       ],
-      "snapshot_id": "5c5183a9-80c2-58e0-9c4e-9f7bdda7431d",
+      "snapshot_id": "863e21d2-e448-5107-b1d5-c93480e14847",
       "source_version": "pdg-remote-wave2-2026-05-05",
       "summary_path": "pdg_remote_wave2_20260505/summary.json",
-      "summary_sha256": "904fe37cfc89214e88713fdac16c500078a93a9c59b8d4d3aa1dbc7a4d009bf8",
+      "summary_sha256": "d5f10c4b7c77494ba0b87eb318ebffe0f9a27c2652a80dd646a057f5a1039d00",
       "table_row_counts": {
-        "artifact_cdg_bindings": 133,
+        "artifact_cdg_bindings": 116,
         "artifact_cdg_edges": 49,
-        "artifact_cdg_nodes": 67,
+        "artifact_cdg_nodes": 50,
         "artifact_relationships": 67,
         "artifact_symbolic_expressions": 64,
         "artifact_versions": 69,
@@ -104,9 +104,9 @@
         "physics_equation_candidates": 64,
         "physics_ingest_snapshots": 1
       },
-      "total_row_count": 583,
+      "total_row_count": 549,
       "write_plan_path": "pdg_remote_wave2_20260505/write_plan.json",
-      "write_plan_sha256": "c4755c134a73d1857b7a29f78ff63b6570bc248984229129ff7196ef48cb63f7"
+      "write_plan_sha256": "afdd16968f7fc729319bd310332abb6089e109521d5277ea36e7630265aaa281"
     },
     {
       "description": "Remote PDG promotion wave 3",
@@ -120,14 +120,14 @@
         "670255",
         "513999"
       ],
-      "snapshot_id": "9f7f3d0f-fcd8-5209-bb81-cd19097ba1f7",
+      "snapshot_id": "e94e06a8-16ff-5ae0-927e-b3bd791d384f",
       "source_version": "pdg-remote-wave3-2026-05-05",
       "summary_path": "pdg_remote_wave3_20260505/summary.json",
-      "summary_sha256": "4e8b20dbf8f775f570b3c9c97fe4cd7b8933e3f7d914cd98772f3f45afbe7bdd",
+      "summary_sha256": "26cc8012f0830521e73870f3d31d2f982c3217f9462d0215475441fea01d848c",
       "table_row_counts": {
-        "artifact_cdg_bindings": 106,
-        "artifact_cdg_edges": 39,
-        "artifact_cdg_nodes": 53,
+        "artifact_cdg_bindings": 90,
+        "artifact_cdg_edges": 36,
+        "artifact_cdg_nodes": 38,
         "artifact_relationships": 52,
         "artifact_symbolic_expressions": 57,
         "artifact_versions": 62,
@@ -135,9 +135,9 @@
         "physics_equation_candidates": 57,
         "physics_ingest_snapshots": 1
       },
-      "total_row_count": 489,
+      "total_row_count": 455,
       "write_plan_path": "pdg_remote_wave3_20260505/write_plan.json",
-      "write_plan_sha256": "a9b1830ad38042865a654acdd756855ea9f064ded40ddf65d2233aa8d7c4b3b9"
+      "write_plan_sha256": "9179c9386edf168f4fcf3dfbcf6ec7dec82a26751b11c329c7bf8b5fd3805222"
     },
     {
       "description": "Remote PDG promotion wave 4",
@@ -151,14 +151,14 @@
         "000012",
         "000013"
       ],
-      "snapshot_id": "aaaac912-cd48-5f46-af66-c2faffd955b0",
+      "snapshot_id": "db7fc137-6833-5675-a792-135e2d21b309",
       "source_version": "pdg-remote-wave4-2026-05-05",
       "summary_path": "pdg_remote_wave4_20260505/summary.json",
-      "summary_sha256": "2fbc49ab278640b49a54dc98e89e4b5b8b566bd3fc025ddf5eeb9f9dd1d6a75d",
+      "summary_sha256": "97ce594fc7f57be342e7e3956cf983ac5519a9c0782dc39975a01330a2d55412",
       "table_row_counts": {
-        "artifact_cdg_bindings": 104,
+        "artifact_cdg_bindings": 92,
         "artifact_cdg_edges": 35,
-        "artifact_cdg_nodes": 52,
+        "artifact_cdg_nodes": 41,
         "artifact_relationships": 51,
         "artifact_symbolic_expressions": 49,
         "artifact_versions": 54,
@@ -166,9 +166,9 @@
         "physics_equation_candidates": 49,
         "physics_ingest_snapshots": 1
       },
-      "total_row_count": 449,
+      "total_row_count": 426,
       "write_plan_path": "pdg_remote_wave4_20260505/write_plan.json",
-      "write_plan_sha256": "64ffff43f3d20b188a6d1cd26a84d842b3835db3108f875efd8f33bf208be0ef"
+      "write_plan_sha256": "2cfa91a52c4f42387cd6ba0890cbd84b25d27a595e28ff747ac7e65c94f7d03e"
     },
     {
       "description": "Remote PDG promotion wave 5",
@@ -182,14 +182,14 @@
         "375160",
         "681943"
       ],
-      "snapshot_id": "b5e04b26-83d2-5705-969d-6f56d059f5f5",
+      "snapshot_id": "e6e62196-baab-5b94-bd44-d66c693ac5cb",
       "source_version": "pdg-remote-wave5-2026-05-05",
       "summary_path": "pdg_remote_wave5_20260505/summary.json",
-      "summary_sha256": "bdb8a486f625ef35ece6dea9aa7ac71a97826940a574249b791478847f8b1efe",
+      "summary_sha256": "0825aa1dbf58b0eff93189186dbe23b3ae2a9fa5ea83c11ffb57ca24201be08f",
       "table_row_counts": {
-        "artifact_cdg_bindings": 70,
+        "artifact_cdg_bindings": 63,
         "artifact_cdg_edges": 23,
-        "artifact_cdg_nodes": 35,
+        "artifact_cdg_nodes": 28,
         "artifact_relationships": 35,
         "artifact_symbolic_expressions": 36,
         "artifact_versions": 41,
@@ -197,9 +197,9 @@
         "physics_equation_candidates": 36,
         "physics_ingest_snapshots": 1
       },
-      "total_row_count": 318,
+      "total_row_count": 304,
       "write_plan_path": "pdg_remote_wave5_20260505/write_plan.json",
-      "write_plan_sha256": "cb36e38605bcb671f1cdb70eff587bc600e7f431f00fedb95fa0c5ad7fa2aec7"
+      "write_plan_sha256": "58de13b8429948edd88d80a9beab0c57d0150ed552689d8da83f0fb77cce5caf"
     },
     {
       "description": "Remote PDG promotion wave 6",
@@ -213,14 +213,14 @@
         "387954",
         "527822"
       ],
-      "snapshot_id": "49605d96-f3af-5cef-a22f-b86cf8e3ba5b",
+      "snapshot_id": "304e90df-e062-5268-9de2-abb9ca4fb33d",
       "source_version": "pdg-remote-wave6-2026-05-05",
       "summary_path": "pdg_remote_wave6_20260505/summary.json",
-      "summary_sha256": "22455db552f8722389bf783dd488c8da2a7bc0482022a631d7d5564fba3d3a07",
+      "summary_sha256": "d0a099eaaad8de1ff0fcb8ef73517a5ebd453d5af84b56ee533c8a3a8c8096b2",
       "table_row_counts": {
-        "artifact_cdg_bindings": 86,
+        "artifact_cdg_bindings": 74,
         "artifact_cdg_edges": 26,
-        "artifact_cdg_nodes": 43,
+        "artifact_cdg_nodes": 31,
         "artifact_relationships": 43,
         "artifact_symbolic_expressions": 46,
         "artifact_versions": 51,
@@ -228,9 +228,9 @@
         "physics_equation_candidates": 46,
         "physics_ingest_snapshots": 1
       },
-      "total_row_count": 393,
+      "total_row_count": 369,
       "write_plan_path": "pdg_remote_wave6_20260505/write_plan.json",
-      "write_plan_sha256": "e26e37a9efcc6cd373d17b70ca158cf4a894c5986910bd1fe4f98ad149c4af8a"
+      "write_plan_sha256": "d07991c705be7cc1dbc72daee438034c8e83e4087e4ac295331417f8c8474f4d"
     },
     {
       "description": "Remote PDG promotion wave 7",
@@ -244,14 +244,14 @@
         "764666",
         "820976"
       ],
-      "snapshot_id": "272c9865-7ee0-58eb-996e-cc5591465adf",
+      "snapshot_id": "c3d8db35-3293-57f4-bbf8-0c5a68447bff",
       "source_version": "pdg-remote-wave7-2026-05-05",
       "summary_path": "pdg_remote_wave7_20260505/summary.json",
-      "summary_sha256": "cedf7db5e7bd64251bb91b467e71f0c3f6e513ead90bc09e3d609d08f3063d5e",
+      "summary_sha256": "4ac4d9bc6452f44857c3c8a86b323c3a19e2bbd39917a8ad3452f4d41e516e1b",
       "table_row_counts": {
-        "artifact_cdg_bindings": 168,
+        "artifact_cdg_bindings": 145,
         "artifact_cdg_edges": 56,
-        "artifact_cdg_nodes": 84,
+        "artifact_cdg_nodes": 61,
         "artifact_relationships": 84,
         "artifact_symbolic_expressions": 89,
         "artifact_versions": 94,
@@ -259,9 +259,9 @@
         "physics_equation_candidates": 89,
         "physics_ingest_snapshots": 1
       },
-      "total_row_count": 759,
+      "total_row_count": 713,
       "write_plan_path": "pdg_remote_wave7_20260505/write_plan.json",
-      "write_plan_sha256": "aaaae4c1d6ec21b840c0ac6d23197a95e0aca28248dc2efec3b81670347534b7"
+      "write_plan_sha256": "bf14eca737cbe462a6745271ed2a013a0aef56cb122e254ba7b2d3413b10c483"
     },
     {
       "description": "Remote PDG promotion wave 8",
@@ -275,14 +275,14 @@
         "551770",
         "713234"
       ],
-      "snapshot_id": "2726f975-d987-5288-8024-778ef3c59a2b",
+      "snapshot_id": "77ad2ceb-ad82-578a-a1f8-0ba0e795f4cf",
       "source_version": "pdg-remote-wave8-2026-05-05",
       "summary_path": "pdg_remote_wave8_20260505/summary.json",
-      "summary_sha256": "09426c5e676d18ff229209a03f59acafdda1de54bd55450adfbe4a539835ccbc",
+      "summary_sha256": "a27fbcb192902b19686d4d3c2c9bd6f630af3da54ddfa5ee5400957df7f051bb",
       "table_row_counts": {
-        "artifact_cdg_bindings": 276,
-        "artifact_cdg_edges": 101,
-        "artifact_cdg_nodes": 138,
+        "artifact_cdg_bindings": 232,
+        "artifact_cdg_edges": 97,
+        "artifact_cdg_nodes": 98,
         "artifact_relationships": 134,
         "artifact_symbolic_expressions": 127,
         "artifact_versions": 132,
@@ -290,9 +290,9 @@
         "physics_equation_candidates": 127,
         "physics_ingest_snapshots": 1
       },
-      "total_row_count": 1168,
+      "total_row_count": 1080,
       "write_plan_path": "pdg_remote_wave8_20260505/write_plan.json",
-      "write_plan_sha256": "a65e8ede9c2af8cc148c6dfa0e47fe62a47100f0d4aea61d929c2136a5c5dc99"
+      "write_plan_sha256": "b27b9e904d7ac57efcfa32c2f5523b7d549db7215101110cc1153e51522645b9"
     },
     {
       "description": "Remote PDG promotion wave 9",
@@ -304,24 +304,24 @@
         "187793",
         "539398"
       ],
-      "snapshot_id": "16d2df44-5e1e-51e5-9350-a400a252c544",
+      "snapshot_id": "a83f3a90-22ab-5566-a9f1-08f972e1c3d5",
       "source_version": "pdg-remote-wave9-2026-05-05",
       "summary_path": "pdg_remote_wave9_20260505/summary.json",
-      "summary_sha256": "e4797ae0e4a6fbd55257eed02479eb905c7769ec3807e46f737bb4b909d9296b",
+      "summary_sha256": "cd74b6b8f5b79f3cd495843c5eccd77a8bdd1973a9a63dcfb9cd9ef11f566d05",
       "table_row_counts": {
-        "artifact_cdg_bindings": 246,
+        "artifact_cdg_bindings": 212,
         "artifact_cdg_edges": 94,
-        "artifact_cdg_nodes": 123,
-        "artifact_relationships": 123,
-        "artifact_symbolic_expressions": 111,
-        "artifact_versions": 114,
-        "artifacts": 114,
-        "physics_equation_candidates": 111,
+        "artifact_cdg_nodes": 88,
+        "artifact_relationships": 124,
+        "artifact_symbolic_expressions": 112,
+        "artifact_versions": 115,
+        "artifacts": 115,
+        "physics_equation_candidates": 112,
         "physics_ingest_snapshots": 1
       },
-      "total_row_count": 1037,
+      "total_row_count": 973,
       "write_plan_path": "pdg_remote_wave9_20260505/write_plan.json",
-      "write_plan_sha256": "72f9ad9cae69eaa0ebeb23801ae1dbea5b3e015df113a35bc0ac1edfe36346ee"
+      "write_plan_sha256": "92266818751322a8d36fac85eb70237de8fd97128e20608088642ad09fd47615"
     },
     {
       "description": "Remote PDG promotion wave 10",
@@ -334,11 +334,11 @@
       "snapshot_id": "139ef4a0-b4dd-51dd-83fa-d41d86ff166f",
       "source_version": "pdg-remote-wave10-2026-05-05",
       "summary_path": "pdg_remote_wave10_20260505/summary.json",
-      "summary_sha256": "4c14f2294bdf2feaacf8480cd4559837a7e506c5ee9f1391d62ea2e5ceb20567",
+      "summary_sha256": "a257a76a5ca611b3815e49aa1d9fcd9e7793c1b8bfb5d6dbf8e21105759cf1cc",
       "table_row_counts": {
-        "artifact_cdg_bindings": 38,
+        "artifact_cdg_bindings": 32,
         "artifact_cdg_edges": 13,
-        "artifact_cdg_nodes": 19,
+        "artifact_cdg_nodes": 13,
         "artifact_relationships": 19,
         "artifact_symbolic_expressions": 18,
         "artifact_versions": 19,
@@ -346,12 +346,12 @@
         "physics_equation_candidates": 18,
         "physics_ingest_snapshots": 1
       },
-      "total_row_count": 164,
+      "total_row_count": 152,
       "write_plan_path": "pdg_remote_wave10_20260505/write_plan.json",
-      "write_plan_sha256": "a5ded45921063d64d1082b478914e08e73f107b7a7fd8b6ab0747fc985105624"
+      "write_plan_sha256": "738e3ec22e8cdbdc961751dbeee443c64f5954c52ac67395306de81db7063b27"
     }
   ],
   "source_repo": "sciona-atoms-physics physics ingestion scripts",
-  "total_row_count": 6122,
+  "total_row_count": 5728,
   "total_seed_count": 12
 }

@@ -6,9 +6,9 @@
     "requested": true
   },
   "equation_count": 18,
-  "generated_at": "2026-05-05T19:24:20.422557+00:00",
+  "generated_at": "2026-05-05T20:10:17.506477+00:00",
   "github_auth_source": "gh-auth-token",
-  "github_rate_limit_remaining": 4959,
+  "github_rate_limit_remaining": 4870,
   "github_request_count": 7,
   "graph_diagnostic_count": 0,
   "inference_edge_count": 19,
@@ -28,7 +28,7 @@
       "operation_kind_counts": {
         "derive": 4,
         "simplify": 4,
-        "substitute": 11
+        "substitute": 5
       },
       "relationship_kind_counts": {
         "derives_from": 19
@@ -37,9 +37,9 @@
       "source_system": "physics_derivation_graph",
       "summary_kind": "pdg_cdg_publication_rows_summary.v1",
       "table_row_counts": {
-        "artifact_cdg_bindings": 38,
+        "artifact_cdg_bindings": 32,
         "artifact_cdg_edges": 13,
-        "artifact_cdg_nodes": 19,
+        "artifact_cdg_nodes": 13,
         "artifact_relationships": 19,
         "artifact_versions": 1,
         "artifacts": 1
@@ -75,9 +75,9 @@
   "snapshot_id": "139ef4a0-b4dd-51dd-83fa-d41d86ff166f",
   "source_version": "pdg-remote-wave10-2026-05-05",
   "table_row_counts": {
-    "artifact_cdg_bindings": 38,
+    "artifact_cdg_bindings": 32,
     "artifact_cdg_edges": 13,
-    "artifact_cdg_nodes": 19,
+    "artifact_cdg_nodes": 13,
     "artifact_relationships": 19,
     "artifact_symbolic_expressions": 18,
     "artifact_versions": 19,
@@ -85,5 +85,5 @@
     "physics_equation_candidates": 18,
     "physics_ingest_snapshots": 1
   },
-  "write_plan_total_row_count": 164
+  "write_plan_total_row_count": 152
 }

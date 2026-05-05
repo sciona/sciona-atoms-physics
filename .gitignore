@@ -6,3 +6,4 @@ __pycache__/
 .DS_Store
 output/
 data/audit_manifest.json
+*.egg-info/

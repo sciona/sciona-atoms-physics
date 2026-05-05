@@ -2,9 +2,9 @@
   "audit_summary": {
     "batch_count": 9,
     "input_row_counts": {
-      "artifact_cdg_bindings": 70,
+      "artifact_cdg_bindings": 63,
       "artifact_cdg_edges": 23,
-      "artifact_cdg_nodes": 35,
+      "artifact_cdg_nodes": 28,
       "artifact_relationships": 35,
       "artifact_symbolic_expressions": 36,
       "artifact_versions": 41,
@@ -13,9 +13,9 @@
       "physics_ingest_snapshots": 1
     },
     "planned_row_counts": {
-      "artifact_cdg_bindings": 70,
+      "artifact_cdg_bindings": 63,
       "artifact_cdg_edges": 23,
-      "artifact_cdg_nodes": 35,
+      "artifact_cdg_nodes": 28,
       "artifact_relationships": 35,
       "artifact_symbolic_expressions": 36,
       "artifact_versions": 41,
@@ -34,7 +34,7 @@
       "artifact_cdg_edges",
       "artifact_cdg_bindings"
     ],
-    "total_row_count": 318
+    "total_row_count": 304
   },
   "batches": [
     {
@@ -78,6 +78,7 @@
                       "name_latex": "",
                       "pdg_derivation_id": "000014",
                       "pdg_expression_id": "2404934990",
+                      "pdg_node_label": "expression",
                       "reference_latex": "",
                       "source_version": "pdg-remote-wave5-2026-05-05",
                       "sympy_lhs": "Symbol('pdg0001464')",
@@ -102,6 +103,7 @@
                       "name_latex": "",
                       "pdg_derivation_id": "000014",
                       "pdg_expression_id": "2494533900",
+                      "pdg_node_label": "expression",
                       "reference_latex": "",
                       "source_version": "pdg-remote-wave5-2026-05-05",
                       "sympy_lhs": "Symbol('pdg0001464')",
@@ -126,6 +128,7 @@
                       "name_latex": "",
                       "pdg_derivation_id": "000014",
                       "pdg_expression_id": "3585845894",
+                      "pdg_node_label": "expression",
                       "reference_latex": "",
                       "source_version": "pdg-remote-wave5-2026-05-05",
                       "sympy_lhs": "Symbol('pdg0001464')",
@@ -150,6 +153,7 @@
                       "name_latex": "",
                       "pdg_derivation_id": "000014",
                       "pdg_expression_id": "4949359835",
+                      "pdg_node_label": "expression",
                       "reference_latex": "",
                       "source_version": "pdg-remote-wave5-2026-05-05",
                       "sympy_lhs": "Symbol('pdg0001464')",
@@ -174,6 +178,7 @@
                       "name_latex": "",
                       "pdg_derivation_id": "000014",
                       "pdg_expression_id": "8399484849",
+                      "pdg_node_label": "expression",
                       "reference_latex": "",
                       "source_version": "pdg-remote-wave5-2026-05-05",
                       "sympy_lhs": "Symbol('pdg0001464')",
@@ -315,6 +320,7 @@
                       "name_latex": "",
                       "pdg_derivation_id": "000016",
                       "pdg_expression_id": "2103023049",
+                      "pdg_node_label": "expression",
                       "reference_latex": "",
                       "source_version": "pdg-remote-wave5-2026-05-05",
                       "sympy_lhs": "sin(Symbol('pdg0001464'))",
@@ -339,6 +345,7 @@
                       "name_latex": "",
                       "pdg_derivation_id": "000016",
                       "pdg_expression_id": "2405307372",
+                      "pdg_node_label": "expression",
                       "reference_latex": "",
                       "source_version": "pdg-remote-wave5-2026-05-05",
                       "sympy_lhs": "sin(Mul(Integer(2), Symbol('pdg0001464')))",
@@ -363,6 +370,7 @@
                       "name_latex": "",
                       "pdg_derivation_id": "000016",
                       "pdg_expression_id": "3470587782",
+                      "pdg_node_label": "expression",
                       "reference_latex": "",
                       "source_version": "pdg-remote-wave5-2026-05-05",
                       "sympy_lhs": "Mul(sin(Symbol('pdg0001464')), cos(Symbol('pdg0001464')))",
@@ -387,6 +395,7 @@
                       "name_latex": "",
                       "pdg_derivation_id": "000016",
                       "pdg_expression_id": "4585932229",
+                      "pdg_node_label": "expression",
                       "reference_latex": "",
                       "source_version": "pdg-remote-wave5-2026-05-05",
                       "sympy_lhs": "cos(Symbol('pdg0001464'))",
@@ -411,6 +420,7 @@
                       "name_latex": "",
                       "pdg_derivation_id": "000016",
                       "pdg_expression_id": "8483686863",
+                      "pdg_node_label": "expression",
                       "reference_latex": "",
                       "source_version": "pdg-remote-wave5-2026-05-05",
                       "sympy_lhs": "sin(Mul(Integer(2), Symbol('pdg0001464')))",
@@ -435,6 +445,7 @@
                       "name_latex": "",
                       "pdg_derivation_id": "000016",
                       "pdg_expression_id": "8699789241",
+                      "pdg_node_label": "expression",
                       "reference_latex": "",
                       "source_version": "pdg-remote-wave5-2026-05-05",
                       "sympy_lhs": "Mul(Integer(2), sin(Symbol('pdg0001464')), cos(Symbol('pdg0001464')))",
@@ -459,6 +470,7 @@
                       "name_latex": "",
                       "pdg_derivation_id": "000016",
                       "pdg_expression_id": "9180861128",
+                      "pdg_node_label": "expression",
                       "reference_latex": "",
                       "source_version": "pdg-remote-wave5-2026-05-05",
                       "sympy_lhs": "Mul(Integer(2), sin(Symbol('pdg0001464')), cos(Symbol('pdg0001464')))",
@@ -483,6 +495,7 @@
                       "name_latex": "",
                       "pdg_derivation_id": "000016",
                       "pdg_expression_id": "9894826550",
+                      "pdg_node_label": "expression",
                       "reference_latex": "",
                       "source_version": "pdg-remote-wave5-2026-05-05",
                       "sympy_lhs": "Mul(Integer(2), sin(Symbol('pdg0001464')), cos(Symbol('pdg0001464')))",
@@ -729,6 +742,7 @@
                       "name_latex": "",
                       "pdg_derivation_id": "000017",
                       "pdg_expression_id": "2501591100",
+                      "pdg_node_label": "expression",
                       "reference_latex": "",
                       "source_version": "pdg-remote-wave5-2026-05-05",
                       "sympy_lhs": "Add(exp(Mul(Symbol('pdg0003141'), Symbol('pdg0004621'))), Integer(1))",
@@ -753,6 +767,7 @@
                       "name_latex": "",
                       "pdg_derivation_id": "000017",
                       "pdg_expression_id": "3331824625",
+                      "pdg_node_label": "expression",
                       "reference_latex": "",
                       "source_version": "pdg-remote-wave5-2026-05-05",
                       "sympy_lhs": "exp(Mul(Symbol('pdg0003141'), Symbol('pdg0004621')))",
@@ -777,6 +792,7 @@
                       "name_latex": "",
                       "pdg_derivation_id": "000017",
                       "pdg_expression_id": "4938429483",
+                      "pdg_node_label": "expression",
                       "reference_latex": "",
                       "source_version": "pdg-remote-wave5-2026-05-05",
                       "sympy_lhs": "exp(Mul(Symbol('pdg0001464'), Symbol('pdg0004621')))",
@@ -801,6 +817,7 @@
                       "name_latex": "",
                       "pdg_derivation_id": "000017",
                       "pdg_expression_id": "6885625907",
+                      "pdg_node_label": "expression",
                       "reference_latex": "",
                       "source_version": "pdg-remote-wave5-2026-05-05",
                       "sympy_lhs": "exp(Mul(Symbol('pdg0003141'), Symbol('pdg0004621')))",
@@ -825,6 +842,7 @@
                       "name_latex": "",
                       "pdg_derivation_id": "000017",
                       "pdg_expression_id": "8332931442",
+                      "pdg_node_label": "expression",
                       "reference_latex": "",
                       "source_version": "pdg-remote-wave5-2026-05-05",
                       "sympy_lhs": "exp(Mul(Symbol('pdg0003141'), Symbol('pdg0004621')))",
@@ -983,6 +1001,7 @@
                       "name_latex": "",
                       "pdg_derivation_id": "375160",
                       "pdg_expression_id": "1190768176",
+                      "pdg_node_label": "expression",
                       "reference_latex": "",
                       "source_version": "pdg-remote-wave5-2026-05-05",
                       "sympy_lhs": "Symbol('pdg0004645')",
@@ -1007,6 +1026,7 @@
                       "name_latex": "",
                       "pdg_derivation_id": "375160",
                       "pdg_expression_id": "3497828859",
+                      "pdg_node_label": "expression",
                       "reference_latex": "",
                       "source_version": "pdg-remote-wave5-2026-05-05",
                       "sympy_lhs": "Symbol('pdg0007586')",
@@ -1031,6 +1051,7 @@
                       "name_latex": "",
                       "pdg_derivation_id": "375160",
                       "pdg_expression_id": "3605073197",
+                      "pdg_node_label": "expression",
                       "reference_latex": "",
                       "source_version": "pdg-remote-wave5-2026-05-05",
                       "sympy_lhs": "Symbol('pdg0004645')",
@@ -1055,6 +1076,7 @@
                       "name_latex": "",
                       "pdg_derivation_id": "375160",
                       "pdg_expression_id": "8368984890",
+                      "pdg_node_label": "expression",
                       "reference_latex": "",
                       "source_version": "pdg-remote-wave5-2026-05-05",
                       "sympy_lhs": "Symbol('pdg0004645')",
@@ -1079,6 +1101,7 @@
                       "name_latex": "",
                       "pdg_derivation_id": "375160",
                       "pdg_expression_id": "8435841627",
+                      "pdg_node_label": "expression",
                       "reference_latex": "",
                       "source_version": "pdg-remote-wave5-2026-05-05",
                       "sympy_lhs": "Mul(Symbol('pdg0007586'), Symbol('pdg0008134'))",
@@ -1103,6 +1126,7 @@
                       "name_latex": "",
                       "pdg_derivation_id": "375160",
                       "pdg_expression_id": "9718685793",
+                      "pdg_node_label": "expression",
                       "reference_latex": "",
                       "source_version": "pdg-remote-wave5-2026-05-05",
                       "sympy_lhs": "Symbol('pdg0004645')",
@@ -1127,6 +1151,7 @@
                       "name_latex": "",
                       "pdg_derivation_id": "375160",
                       "pdg_expression_id": "9781951738",
+                      "pdg_node_label": "expression",
                       "reference_latex": "",
                       "source_version": "pdg-remote-wave5-2026-05-05",
                       "sympy_lhs": "Symbol('pdg0004645')",
@@ -1151,6 +1176,7 @@
                       "name_latex": "",
                       "pdg_derivation_id": "375160",
                       "pdg_expression_id": "9847143017",
+                      "pdg_node_label": "expression",
                       "reference_latex": "",
                       "source_version": "pdg-remote-wave5-2026-05-05",
                       "sympy_lhs": "Symbol('pdg0004645')",
@@ -1386,6 +1412,7 @@
                       "name_latex": "total resistance for two resistors in parallel",
                       "pdg_derivation_id": "681943",
                       "pdg_expression_id": "1457415749",
+                      "pdg_node_label": "expression",
                       "reference_latex": "",
                       "source_version": "pdg-remote-wave5-2026-05-05",
                       "sympy_lhs": "Pow(Symbol('pdg0001908'), Integer(-1))",
@@ -1410,6 +1437,7 @@
                       "name_latex": "",
                       "pdg_derivation_id": "681943",
                       "pdg_expression_id": "2051901211",
+                      "pdg_node_label": "expression",
                       "reference_latex": "",
                       "source_version": "pdg-remote-wave5-2026-05-05",
                       "sympy_lhs": "Mul(Symbol('pdg0006599'), Pow(Symbol('pdg0008697'), Integer(-1)))",
@@ -1434,6 +1462,7 @@
                       "name_latex": "",
                       "pdg_derivation_id": "681943",
                       "pdg_expression_id": "2271186630",
+                      "pdg_node_label": "expression",
                       "reference_latex": "",
                       "source_version": "pdg-remote-wave5-2026-05-05",
                       "sympy_lhs": "Symbol('pdg0006599')",
@@ -1458,6 +1487,7 @@
                       "name_latex": "",
                       "pdg_derivation_id": "681943",
                       "pdg_expression_id": "2809345867",
+                      "pdg_node_label": "expression",
                       "reference_latex": "",
                       "source_version": "pdg-remote-wave5-2026-05-05",
                       "sympy_lhs": "Mul(Pow(Symbol('pdg0001908'), Integer(-1)), Symbol('pdg0006599'))",
@@ -1482,6 +1512,7 @@
                       "name_latex": "Ohm's law",
                       "pdg_derivation_id": "681943",
                       "pdg_expression_id": "4087145886",
+                      "pdg_node_label": "expression",
                       "reference_latex": "",
                       "source_version": "pdg-remote-wave5-2026-05-05",
                       "sympy_lhs": "Symbol('pdg0006599')",
@@ -1506,6 +1537,7 @@
                       "name_latex": "",
                       "pdg_derivation_id": "681943",
                       "pdg_expression_id": "4128500715",
+                      "pdg_node_label": "expression",
                       "reference_latex": "",
                       "source_version": "pdg-remote-wave5-2026-05-05",
                       "sympy_lhs": "Symbol('pdg0006599')",
@@ -1530,6 +1562,7 @@
                       "name_latex": "",
                       "pdg_derivation_id": "681943",
                       "pdg_expression_id": "4866160902",
+                      "pdg_node_label": "expression",
                       "reference_latex": "",
                       "source_version": "pdg-remote-wave5-2026-05-05",
                       "sympy_lhs": "Mul(Pow(Symbol('pdg0001908'), Integer(-1)), Symbol('pdg0006599'))",
@@ -1554,6 +1587,7 @@
                       "name_latex": "",
                       "pdg_derivation_id": "681943",
                       "pdg_expression_id": "6753224061",
+                      "pdg_node_label": "expression",
                       "reference_latex": "",
                       "source_version": "pdg-remote-wave5-2026-05-05",
                       "sympy_lhs": "Symbol('pdg0009647')",
@@ -1578,6 +1612,7 @@
                       "name_latex": "",
                       "pdg_derivation_id": "681943",
                       "pdg_expression_id": "7002609475",
+                      "pdg_node_label": "expression",
                       "reference_latex": "",
                       "source_version": "pdg-remote-wave5-2026-05-05",
                       "sympy_lhs": "Mul(Pow(Symbol('pdg0003461'), Integer(-1)), Symbol('pdg0006599'))",
@@ -1602,6 +1637,7 @@
                       "name_latex": "",
                       "pdg_derivation_id": "681943",
                       "pdg_expression_id": "9243879541",
+                      "pdg_node_label": "expression",
                       "reference_latex": "",
                       "source_version": "pdg-remote-wave5-2026-05-05",
                       "sympy_lhs": "Symbol('pdg0006599')",
@@ -1982,6 +2018,7 @@
                   "name_latex": "",
                   "pdg_derivation_id": "000014",
                   "pdg_expression_id": "2404934990",
+                  "pdg_node_label": "expression",
                   "reference_latex": "",
                   "source_version": "pdg-remote-wave5-2026-05-05",
                   "sympy_lhs": "Symbol('pdg0001464')",
@@ -2006,6 +2043,7 @@
                   "name_latex": "",
                   "pdg_derivation_id": "000014",
                   "pdg_expression_id": "2494533900",
+                  "pdg_node_label": "expression",
                   "reference_latex": "",
                   "source_version": "pdg-remote-wave5-2026-05-05",
                   "sympy_lhs": "Symbol('pdg0001464')",
@@ -2030,6 +2068,7 @@
                   "name_latex": "",
                   "pdg_derivation_id": "000014",
                   "pdg_expression_id": "3585845894",
+                  "pdg_node_label": "expression",
                   "reference_latex": "",
                   "source_version": "pdg-remote-wave5-2026-05-05",
                   "sympy_lhs": "Symbol('pdg0001464')",
@@ -2054,6 +2093,7 @@
                   "name_latex": "",
                   "pdg_derivation_id": "000014",
                   "pdg_expression_id": "4949359835",
+                  "pdg_node_label": "expression",
                   "reference_latex": "",
                   "source_version": "pdg-remote-wave5-2026-05-05",
                   "sympy_lhs": "Symbol('pdg0001464')",
@@ -2078,6 +2118,7 @@
                   "name_latex": "",
                   "pdg_derivation_id": "000014",
                   "pdg_expression_id": "8399484849",
+                  "pdg_node_label": "expression",
                   "reference_latex": "",
                   "source_version": "pdg-remote-wave5-2026-05-05",
                   "sympy_lhs": "Symbol('pdg0001464')",
@@ -2102,6 +2143,7 @@
                   "name_latex": "",
                   "pdg_derivation_id": "000016",
                   "pdg_expression_id": "2103023049",
+                  "pdg_node_label": "expression",
                   "reference_latex": "",
                   "source_version": "pdg-remote-wave5-2026-05-05",
                   "sympy_lhs": "sin(Symbol('pdg0001464'))",
@@ -2126,6 +2168,7 @@
                   "name_latex": "",
                   "pdg_derivation_id": "000016",
                   "pdg_expression_id": "2405307372",
+                  "pdg_node_label": "expression",
                   "reference_latex": "",
                   "source_version": "pdg-remote-wave5-2026-05-05",
                   "sympy_lhs": "sin(Mul(Integer(2), Symbol('pdg0001464')))",
@@ -2150,6 +2193,7 @@
                   "name_latex": "",
                   "pdg_derivation_id": "000016",
                   "pdg_expression_id": "3470587782",
+                  "pdg_node_label": "expression",
                   "reference_latex": "",
                   "source_version": "pdg-remote-wave5-2026-05-05",
                   "sympy_lhs": "Mul(sin(Symbol('pdg0001464')), cos(Symbol('pdg0001464')))",
@@ -2174,6 +2218,7 @@
                   "name_latex": "",
                   "pdg_derivation_id": "000016",
                   "pdg_expression_id": "4585932229",
+                  "pdg_node_label": "expression",
                   "reference_latex": "",
                   "source_version": "pdg-remote-wave5-2026-05-05",
                   "sympy_lhs": "cos(Symbol('pdg0001464'))",
@@ -2198,6 +2243,7 @@
                   "name_latex": "",
                   "pdg_derivation_id": "000016",
                   "pdg_expression_id": "8483686863",
+                  "pdg_node_label": "expression",
                   "reference_latex": "",
                   "source_version": "pdg-remote-wave5-2026-05-05",
                   "sympy_lhs": "sin(Mul(Integer(2), Symbol('pdg0001464')))",
@@ -2222,6 +2268,7 @@
                   "name_latex": "",
                   "pdg_derivation_id": "000016",
                   "pdg_expression_id": "8699789241",
+                  "pdg_node_label": "expression",
                   "reference_latex": "",
                   "source_version": "pdg-remote-wave5-2026-05-05",
                   "sympy_lhs": "Mul(Integer(2), sin(Symbol('pdg0001464')), cos(Symbol('pdg0001464')))",
@@ -2246,6 +2293,7 @@
                   "name_latex": "",
                   "pdg_derivation_id": "000016",
                   "pdg_expression_id": "9180861128",
+                  "pdg_node_label": "expression",
                   "reference_latex": "",
                   "source_version": "pdg-remote-wave5-2026-05-05",
                   "sympy_lhs": "Mul(Integer(2), sin(Symbol('pdg0001464')), cos(Symbol('pdg0001464')))",
@@ -2270,6 +2318,7 @@
                   "name_latex": "",
                   "pdg_derivation_id": "000016",
                   "pdg_expression_id": "9894826550",
+                  "pdg_node_label": "expression",
                   "reference_latex": "",
                   "source_version": "pdg-remote-wave5-2026-05-05",
                   "sympy_lhs": "Mul(Integer(2), sin(Symbol('pdg0001464')), cos(Symbol('pdg0001464')))",
@@ -2294,6 +2343,7 @@
                   "name_latex": "",
                   "pdg_derivation_id": "000017",
                   "pdg_expression_id": "2501591100",
+                  "pdg_node_label": "expression",
                   "reference_latex": "",
                   "source_version": "pdg-remote-wave5-2026-05-05",
                   "sympy_lhs": "Add(exp(Mul(Symbol('pdg0003141'), Symbol('pdg0004621'))), Integer(1))",
@@ -2318,6 +2368,7 @@
                   "name_latex": "",
                   "pdg_derivation_id": "000017",
                   "pdg_expression_id": "3331824625",
+                  "pdg_node_label": "expression",
                   "reference_latex": "",
                   "source_version": "pdg-remote-wave5-2026-05-05",
                   "sympy_lhs": "exp(Mul(Symbol('pdg0003141'), Symbol('pdg0004621')))",
@@ -2342,6 +2393,7 @@
                   "name_latex": "",
                   "pdg_derivation_id": "000017",
                   "pdg_expression_id": "4938429483",
+                  "pdg_node_label": "expression",
                   "reference_latex": "",
                   "source_version": "pdg-remote-wave5-2026-05-05",
                   "sympy_lhs": "exp(Mul(Symbol('pdg0001464'), Symbol('pdg0004621')))",
@@ -2366,6 +2418,7 @@
                   "name_latex": "",
                   "pdg_derivation_id": "000017",
                   "pdg_expression_id": "6885625907",
+                  "pdg_node_label": "expression",
                   "reference_latex": "",
                   "source_version": "pdg-remote-wave5-2026-05-05",
                   "sympy_lhs": "exp(Mul(Symbol('pdg0003141'), Symbol('pdg0004621')))",
@@ -2390,6 +2443,7 @@
                   "name_latex": "",
                   "pdg_derivation_id": "000017",
                   "pdg_expression_id": "8332931442",
+                  "pdg_node_label": "expression",
                   "reference_latex": "",
                   "source_version": "pdg-remote-wave5-2026-05-05",
                   "sympy_lhs": "exp(Mul(Symbol('pdg0003141'), Symbol('pdg0004621')))",
@@ -2414,6 +2468,7 @@
                   "name_latex": "",
                   "pdg_derivation_id": "375160",
                   "pdg_expression_id": "1190768176",
+                  "pdg_node_label": "expression",
                   "reference_latex": "",
                   "source_version": "pdg-remote-wave5-2026-05-05",
                   "sympy_lhs": "Symbol('pdg0004645')",
@@ -2438,6 +2493,7 @@
                   "name_latex": "",
                   "pdg_derivation_id": "375160",
                   "pdg_expression_id": "3497828859",
+                  "pdg_node_label": "expression",
                   "reference_latex": "",
                   "source_version": "pdg-remote-wave5-2026-05-05",
                   "sympy_lhs": "Symbol('pdg0007586')",
@@ -2462,6 +2518,7 @@
                   "name_latex": "",
                   "pdg_derivation_id": "375160",
                   "pdg_expression_id": "3605073197",
+                  "pdg_node_label": "expression",
                   "reference_latex": "",
                   "source_version": "pdg-remote-wave5-2026-05-05",
                   "sympy_lhs": "Symbol('pdg0004645')",
@@ -2486,6 +2543,7 @@
                   "name_latex": "",
                   "pdg_derivation_id": "375160",
                   "pdg_expression_id": "8368984890",
+                  "pdg_node_label": "expression",
                   "reference_latex": "",
                   "source_version": "pdg-remote-wave5-2026-05-05",
                   "sympy_lhs": "Symbol('pdg0004645')",
@@ -2510,6 +2568,7 @@
                   "name_latex": "",
                   "pdg_derivation_id": "375160",
                   "pdg_expression_id": "8435841627",
+                  "pdg_node_label": "expression",
                   "reference_latex": "",
                   "source_version": "pdg-remote-wave5-2026-05-05",
                   "sympy_lhs": "Mul(Symbol('pdg0007586'), Symbol('pdg0008134'))",
@@ -2534,6 +2593,7 @@
                   "name_latex": "",
                   "pdg_derivation_id": "375160",
                   "pdg_expression_id": "9718685793",
+                  "pdg_node_label": "expression",
                   "reference_latex": "",
                   "source_version": "pdg-remote-wave5-2026-05-05",
                   "sympy_lhs": "Symbol('pdg0004645')",
@@ -2558,6 +2618,7 @@
                   "name_latex": "",
                   "pdg_derivation_id": "375160",
                   "pdg_expression_id": "9781951738",
+                  "pdg_node_label": "expression",
                   "reference_latex": "",
                   "source_version": "pdg-remote-wave5-2026-05-05",
                   "sympy_lhs": "Symbol('pdg0004645')",
@@ -2582,6 +2643,7 @@
                   "name_latex": "",
                   "pdg_derivation_id": "375160",
                   "pdg_expression_id": "9847143017",
+                  "pdg_node_label": "expression",
                   "reference_latex": "",
                   "source_version": "pdg-remote-wave5-2026-05-05",
                   "sympy_lhs": "Symbol('pdg0004645')",
@@ -2606,6 +2668,7 @@
                   "name_latex": "total resistance for two resistors in parallel",
                   "pdg_derivation_id": "681943",
                   "pdg_expression_id": "1457415749",
+                  "pdg_node_label": "expression",
                   "reference_latex": "",
                   "source_version": "pdg-remote-wave5-2026-05-05",
                   "sympy_lhs": "Pow(Symbol('pdg0001908'), Integer(-1))",
@@ -2630,6 +2693,7 @@
                   "name_latex": "",
                   "pdg_derivation_id": "681943",
                   "pdg_expression_id": "2051901211",
+                  "pdg_node_label": "expression",
                   "reference_latex": "",
                   "source_version": "pdg-remote-wave5-2026-05-05",
                   "sympy_lhs": "Mul(Symbol('pdg0006599'), Pow(Symbol('pdg0008697'), Integer(-1)))",
@@ -2654,6 +2718,7 @@
                   "name_latex": "",
                   "pdg_derivation_id": "681943",
                   "pdg_expression_id": "2271186630",
+                  "pdg_node_label": "expression",
                   "reference_latex": "",
                   "source_version": "pdg-remote-wave5-2026-05-05",
                   "sympy_lhs": "Symbol('pdg0006599')",
@@ -2678,6 +2743,7 @@
                   "name_latex": "",
                   "pdg_derivation_id": "681943",
                   "pdg_expression_id": "2809345867",
+                  "pdg_node_label": "expression",
                   "reference_latex": "",
                   "source_version": "pdg-remote-wave5-2026-05-05",
                   "sympy_lhs": "Mul(Pow(Symbol('pdg0001908'), Integer(-1)), Symbol('pdg0006599'))",
@@ -2702,6 +2768,7 @@
                   "name_latex": "Ohm's law",
                   "pdg_derivation_id": "681943",
                   "pdg_expression_id": "4087145886",
+                  "pdg_node_label": "expression",
                   "reference_latex": "",
                   "source_version": "pdg-remote-wave5-2026-05-05",
                   "sympy_lhs": "Symbol('pdg0006599')",
@@ -2726,6 +2793,7 @@
                   "name_latex": "",
                   "pdg_derivation_id": "681943",
                   "pdg_expression_id": "4128500715",
+                  "pdg_node_label": "expression",
                   "reference_latex": "",
                   "source_version": "pdg-remote-wave5-2026-05-05",
                   "sympy_lhs": "Symbol('pdg0006599')",
@@ -2750,6 +2818,7 @@
                   "name_latex": "",
                   "pdg_derivation_id": "681943",
                   "pdg_expression_id": "4866160902",
+                  "pdg_node_label": "expression",
                   "reference_latex": "",
                   "source_version": "pdg-remote-wave5-2026-05-05",
                   "sympy_lhs": "Mul(Pow(Symbol('pdg0001908'), Integer(-1)), Symbol('pdg0006599'))",
@@ -2774,6 +2843,7 @@
                   "name_latex": "",
                   "pdg_derivation_id": "681943",
                   "pdg_expression_id": "6753224061",
+                  "pdg_node_label": "expression",
                   "reference_latex": "",
                   "source_version": "pdg-remote-wave5-2026-05-05",
                   "sympy_lhs": "Symbol('pdg0009647')",
@@ -2798,6 +2868,7 @@
                   "name_latex": "",
                   "pdg_derivation_id": "681943",
                   "pdg_expression_id": "7002609475",
+                  "pdg_node_label": "expression",
                   "reference_latex": "",
                   "source_version": "pdg-remote-wave5-2026-05-05",
                   "sympy_lhs": "Mul(Pow(Symbol('pdg0003461'), Integer(-1)), Symbol('pdg0006599'))",
@@ -2822,6 +2893,7 @@
                   "name_latex": "",
                   "pdg_derivation_id": "681943",
                   "pdg_expression_id": "9243879541",
+                  "pdg_node_label": "expression",
                   "reference_latex": "",
                   "source_version": "pdg-remote-wave5-2026-05-05",
                   "sympy_lhs": "Symbol('pdg0006599')",
@@ -3744,10 +3816,10 @@
             "source_kind": "pdg_remote_cypher_wave",
             "source_version": "pdg-remote-wave5-2026-05-05"
           },
-          "payload_sha256": "8e391d3d357c0ba05d8661243eceff3cf18db4efbe374639775ce13bc6c8c801",
+          "payload_sha256": "2b9858f357a3bdc9b4fcf0347ba76bd230219967cc12955fe591dc49a164a57d",
           "provenance_summary": "Remote Physics Derivation Graph Cypher-derived promotion wave.",
-          "retrieved_at": "2026-05-05T18:30:34.687305+00:00",
-          "snapshot_id": "b5e04b26-83d2-5705-969d-6f56d059f5f5",
+          "retrieved_at": "2026-05-05T20:09:26.345071+00:00",
+          "snapshot_id": "e6e62196-baab-5b94-bd44-d66c693ac5cb",
           "source_system": "physics_derivation_graph",
           "source_uri": "https://github.com/allofphysicsgraph/ui_v8_website_flask_neo4j/tree/gh-pages",
           "source_version": "pdg-remote-wave5-2026-05-05"
@@ -3763,7 +3835,7 @@
       "rows": [
         {
           "behavioral_archetypes": [],
-          "candidate_id": "66259cea-db37-5a49-8a6b-8a66c23140b5",
+          "candidate_id": "018f0e5f-4657-5561-b9ac-2b36d0c1c608",
           "candidate_status": "raw_imported",
           "mechanism_tags": [],
           "notes": "Imported from Physics Derivation Graph; symbolic normalization pending.",
@@ -3771,7 +3843,7 @@
           "priority_score": 0.0,
           "raw_formula": "\\langle x^2\\rangle -2\\langle x \\rangle\\langle x \\rangle+\\langle x \\rangle^2 = \\langle x^2 \\rangle-\\langle x \\rangle^2",
           "raw_formula_format": "latex",
-          "snapshot_id": "b5e04b26-83d2-5705-969d-6f56d059f5f5",
+          "snapshot_id": "e6e62196-baab-5b94-bd44-d66c693ac5cb",
           "source_candidate_id": "2404934990",
           "source_description": "",
           "source_entity_uri": "pdg://remote/000014/expression/2404934990",
@@ -3793,6 +3865,7 @@
               "name_latex": "",
               "pdg_derivation_id": "000014",
               "pdg_expression_id": "2404934990",
+              "pdg_node_label": "expression",
               "reference_latex": "",
               "source_version": "pdg-remote-wave5-2026-05-05",
               "sympy_lhs": "Symbol('pdg0001464')",
@@ -3803,7 +3876,7 @@
         },
         {
           "behavioral_archetypes": [],
-          "candidate_id": "85a2c703-1bd2-57c1-92e4-121de62d507a",
+          "candidate_id": "71e2b827-a930-51d6-a732-9b2e0634a11e",
           "candidate_status": "raw_imported",
           "mechanism_tags": [],
           "notes": "Imported from Physics Derivation Graph; symbolic normalization pending.",
@@ -3811,7 +3884,7 @@
           "priority_score": 0.0,
           "raw_formula": "\\langle x^2\\rangle -\\langle x \\rangle^2 = \\langle x^2 \\rangle-\\langle x \\rangle^2",
           "raw_formula_format": "latex",
-          "snapshot_id": "b5e04b26-83d2-5705-969d-6f56d059f5f5",
+          "snapshot_id": "e6e62196-baab-5b94-bd44-d66c693ac5cb",
           "source_candidate_id": "2494533900",
           "source_description": "",
           "source_entity_uri": "pdg://remote/000014/expression/2494533900",
@@ -3833,6 +3906,7 @@
               "name_latex": "",
               "pdg_derivation_id": "000014",
               "pdg_expression_id": "2494533900",
+              "pdg_node_label": "expression",
               "reference_latex": "",
               "source_version": "pdg-remote-wave5-2026-05-05",
               "sympy_lhs": "Symbol('pdg0001464')",
@@ -3843,7 +3917,7 @@
         },
         {
           "behavioral_archetypes": [],
-          "candidate_id": "20164973-d092-5996-bf52-505f1a0a7db9",
+          "candidate_id": "c8020272-3e21-525c-8b45-0fd3e065110a",
           "candidate_status": "raw_imported",
           "mechanism_tags": [],
           "notes": "Imported from Physics Derivation Graph; symbolic normalization pending.",
@@ -3851,7 +3925,7 @@
           "priority_score": 0.0,
           "raw_formula": "\\langle \\left(x-\\langle x \\rangle\\right)^2 \\rangle = \\langle x^2 \\rangle-\\langle x \\rangle^2",
           "raw_formula_format": "latex",
-          "snapshot_id": "b5e04b26-83d2-5705-969d-6f56d059f5f5",
+          "snapshot_id": "e6e62196-baab-5b94-bd44-d66c693ac5cb",
           "source_candidate_id": "3585845894",
           "source_description": "",
           "source_entity_uri": "pdg://remote/000014/expression/3585845894",
@@ -3873,6 +3947,7 @@
               "name_latex": "",
               "pdg_derivation_id": "000014",
               "pdg_expression_id": "3585845894",
+              "pdg_node_label": "expression",
               "reference_latex": "",
               "source_version": "pdg-remote-wave5-2026-05-05",
               "sympy_lhs": "Symbol('pdg0001464')",
@@ -3883,7 +3958,7 @@
         },
         {
           "behavioral_archetypes": [],
-          "candidate_id": "c1ecf6cc-8233-5bdb-8bb9-0c94cfe5c002",
+          "candidate_id": "1d968f0a-9c0b-56ca-903f-e76fd73e04ae",
           "candidate_status": "raw_imported",
           "mechanism_tags": [],
           "notes": "Imported from Physics Derivation Graph; symbolic normalization pending.",
@@ -3891,7 +3966,7 @@
           "priority_score": 0.0,
           "raw_formula": "\\langle x^2\\rangle -2\\langle x^2 \\rangle+\\langle x \\rangle^2 = \\langle x^2 \\rangle-\\langle x \\rangle^2",
           "raw_formula_format": "latex",
-          "snapshot_id": "b5e04b26-83d2-5705-969d-6f56d059f5f5",
+          "snapshot_id": "e6e62196-baab-5b94-bd44-d66c693ac5cb",
           "source_candidate_id": "4949359835",
           "source_description": "",
           "source_entity_uri": "pdg://remote/000014/expression/4949359835",
@@ -3913,6 +3988,7 @@
               "name_latex": "",
               "pdg_derivation_id": "000014",
               "pdg_expression_id": "4949359835",
+              "pdg_node_label": "expression",
               "reference_latex": "",
               "source_version": "pdg-remote-wave5-2026-05-05",
               "sympy_lhs": "Symbol('pdg0001464')",
@@ -3923,7 +3999,7 @@
         },
         {
           "behavioral_archetypes": [],
-          "candidate_id": "101f9fcb-2b6d-54e3-821b-f9c60e63827c",
+          "candidate_id": "e7fd54b0-e9c4-54d8-9eb6-993ea71bf835",
           "candidate_status": "raw_imported",
           "mechanism_tags": [],
           "notes": "Imported from Physics Derivation Graph; symbolic normalization pending.",
@@ -3931,7 +4007,7 @@
           "priority_score": 0.0,
           "raw_formula": "\\langle x^2 - 2 x \\langle x \\rangle + \\langle x \\rangle^2 \\rangle = \\langle x^2 \\rangle-\\langle x \\rangle^2",
           "raw_formula_format": "latex",
-          "snapshot_id": "b5e04b26-83d2-5705-969d-6f56d059f5f5",
+          "snapshot_id": "e6e62196-baab-5b94-bd44-d66c693ac5cb",
           "source_candidate_id": "8399484849",
           "source_description": "",
           "source_entity_uri": "pdg://remote/000014/expression/8399484849",
@@ -3953,6 +4029,7 @@
               "name_latex": "",
               "pdg_derivation_id": "000014",
               "pdg_expression_id": "8399484849",
+              "pdg_node_label": "expression",
               "reference_latex": "",
               "source_version": "pdg-remote-wave5-2026-05-05",
               "sympy_lhs": "Symbol('pdg0001464')",
@@ -3963,7 +4040,7 @@
         },
         {
           "behavioral_archetypes": [],
-          "candidate_id": "41b338d5-d946-52b2-98d2-9333ceff25ce",
+          "candidate_id": "18e13d2f-bf95-5442-8a58-ca540c22d66a",
           "candidate_status": "raw_imported",
           "mechanism_tags": [],
           "notes": "Imported from Physics Derivation Graph; symbolic normalization pending.",
@@ -3971,7 +4048,7 @@
           "priority_score": 0.0,
           "raw_formula": "\\sin(x) = \\frac{1}{2i}\\left(\\exp(i x)-\\exp(-i x) \\right)",
           "raw_formula_format": "latex",
-          "snapshot_id": "b5e04b26-83d2-5705-969d-6f56d059f5f5",
+          "snapshot_id": "e6e62196-baab-5b94-bd44-d66c693ac5cb",
           "source_candidate_id": "2103023049",
           "source_description": "",
           "source_entity_uri": "pdg://remote/000016/expression/2103023049",
@@ -3993,6 +4070,7 @@
               "name_latex": "",
               "pdg_derivation_id": "000016",
               "pdg_expression_id": "2103023049",
+              "pdg_node_label": "expression",
               "reference_latex": "",
               "source_version": "pdg-remote-wave5-2026-05-05",
               "sympy_lhs": "sin(Symbol('pdg0001464'))",
@@ -4003,7 +4081,7 @@
         },
         {
           "behavioral_archetypes": [],
-          "candidate_id": "682ac299-f419-5ead-b8da-6642877ac3f2",
+          "candidate_id": "fbcdb67b-e0ae-5df3-898b-93195ddc8880",
           "candidate_status": "raw_imported",
           "mechanism_tags": [],
           "notes": "Imported from Physics Derivation Graph; symbolic normalization pending.",
@@ -4011,7 +4089,7 @@
           "priority_score": 0.0,
           "raw_formula": "\\sin(2 x) = 2 \\sin(x) \\cos(x)",
           "raw_formula_format": "latex",
-          "snapshot_id": "b5e04b26-83d2-5705-969d-6f56d059f5f5",
+          "snapshot_id": "e6e62196-baab-5b94-bd44-d66c693ac5cb",
           "source_candidate_id": "2405307372",
           "source_description": "",
           "source_entity_uri": "pdg://remote/000016/expression/2405307372",
@@ -4033,6 +4111,7 @@
               "name_latex": "",
               "pdg_derivation_id": "000016",
               "pdg_expression_id": "2405307372",
+              "pdg_node_label": "expression",
               "reference_latex": "",
               "source_version": "pdg-remote-wave5-2026-05-05",
               "sympy_lhs": "sin(Mul(Integer(2), Symbol('pdg0001464')))",
@@ -4043,7 +4122,7 @@
         },
         {
           "behavioral_archetypes": [],
-          "candidate_id": "ad793e45-7470-5682-a08d-c460e12ec57d",
+          "candidate_id": "327015b5-9ee8-5f41-abc2-6918e74af474",
           "candidate_status": "raw_imported",
           "mechanism_tags": [],
           "notes": "Imported from Physics Derivation Graph; symbolic normalization pending.",
@@ -4051,7 +4130,7 @@
           "priority_score": 0.0,
           "raw_formula": "\\sin(x) \\cos(x) = \\frac{1}{2i}\\left(\\exp(i x)-\\exp(-i x) \\right) \\frac{1}{2}\\left(\\exp(i x)+\\exp(-i x) \\right)",
           "raw_formula_format": "latex",
-          "snapshot_id": "b5e04b26-83d2-5705-969d-6f56d059f5f5",
+          "snapshot_id": "e6e62196-baab-5b94-bd44-d66c693ac5cb",
           "source_candidate_id": "3470587782",
           "source_description": "",
           "source_entity_uri": "pdg://remote/000016/expression/3470587782",
@@ -4073,6 +4152,7 @@
               "name_latex": "",
               "pdg_derivation_id": "000016",
               "pdg_expression_id": "3470587782",
+              "pdg_node_label": "expression",
               "reference_latex": "",
               "source_version": "pdg-remote-wave5-2026-05-05",
               "sympy_lhs": "Mul(sin(Symbol('pdg0001464')), cos(Symbol('pdg0001464')))",
@@ -4083,7 +4163,7 @@
         },
         {
           "behavioral_archetypes": [],
-          "candidate_id": "b8e083bd-426a-5231-b8f9-b6da54f008bc",
+          "candidate_id": "bf7dc468-089e-5e2f-b278-78d76f1bcf2c",
           "candidate_status": "raw_imported",
           "mechanism_tags": [],
           "notes": "Imported from Physics Derivation Graph; symbolic normalization pending.",
@@ -4091,7 +4171,7 @@
           "priority_score": 0.0,
           "raw_formula": "\\cos(x) = \\frac{1}{2}\\left(\\exp(i x)+\\exp(-i x) \\right)",
           "raw_formula_format": "latex",
-          "snapshot_id": "b5e04b26-83d2-5705-969d-6f56d059f5f5",
+          "snapshot_id": "e6e62196-baab-5b94-bd44-d66c693ac5cb",
           "source_candidate_id": "4585932229",
           "source_description": "",
           "source_entity_uri": "pdg://remote/000016/expression/4585932229",
@@ -4113,6 +4193,7 @@
               "name_latex": "",
               "pdg_derivation_id": "000016",
               "pdg_expression_id": "4585932229",
+              "pdg_node_label": "expression",
               "reference_latex": "",
               "source_version": "pdg-remote-wave5-2026-05-05",
               "sympy_lhs": "cos(Symbol('pdg0001464'))",
@@ -4123,7 +4204,7 @@
         },
         {
           "behavioral_archetypes": [],
-          "candidate_id": "8c4bd8be-fa67-59ee-b450-4b7cc68912ad",
+          "candidate_id": "7353d2e3-d331-536b-9517-ce14eed362b0",
           "candidate_status": "raw_imported",
           "mechanism_tags": [],
           "notes": "Imported from Physics Derivation Graph; symbolic normalization pending.",
@@ -4131,7 +4212,7 @@
           "priority_score": 0.0,
           "raw_formula": "\\sin(2 x) = \\frac{1}{2i}\\left(\\exp(i 2 x)-\\exp(-i 2 x) \\right)",
           "raw_formula_format": "latex",
-          "snapshot_id": "b5e04b26-83d2-5705-969d-6f56d059f5f5",
+          "snapshot_id": "e6e62196-baab-5b94-bd44-d66c693ac5cb",
           "source_candidate_id": "8483686863",
           "source_description": "",
           "source_entity_uri": "pdg://remote/000016/expression/8483686863",
@@ -4153,6 +4234,7 @@
               "name_latex": "",
               "pdg_derivation_id": "000016",
               "pdg_expression_id": "8483686863",
+              "pdg_node_label": "expression",
               "reference_latex": "",
               "source_version": "pdg-remote-wave5-2026-05-05",
               "sympy_lhs": "sin(Mul(Integer(2), Symbol('pdg0001464')))",
@@ -4163,7 +4245,7 @@
         },
         {
           "behavioral_archetypes": [],
-          "candidate_id": "77599a80-4296-51f6-8f91-4df49863a626",
+          "candidate_id": "1f75fb27-6d7d-5196-9378-ac97b326f84f",
           "candidate_status": "raw_imported",
           "mechanism_tags": [],
           "notes": "Imported from Physics Derivation Graph; symbolic normalization pending.",
@@ -4171,7 +4253,7 @@
           "priority_score": 0.0,
           "raw_formula": "2 \\sin(x) \\cos(x) = \\frac{1}{2 i} \\left( \\exp(i 2 x) - 1 + 1 - \\exp(-i 2 x) \\right)",
           "raw_formula_format": "latex",
-          "snapshot_id": "b5e04b26-83d2-5705-969d-6f56d059f5f5",
+          "snapshot_id": "e6e62196-baab-5b94-bd44-d66c693ac5cb",
           "source_candidate_id": "8699789241",
           "source_description": "",
           "source_entity_uri": "pdg://remote/000016/expression/8699789241",
@@ -4193,6 +4275,7 @@
               "name_latex": "",
               "pdg_derivation_id": "000016",
               "pdg_expression_id": "8699789241",
+              "pdg_node_label": "expression",
               "reference_latex": "",
               "source_version": "pdg-remote-wave5-2026-05-05",
               "sympy_lhs": "Mul(Integer(2), sin(Symbol('pdg0001464')), cos(Symbol('pdg0001464')))",
@@ -4203,7 +4286,7 @@
         },
         {
           "behavioral_archetypes": [],
-          "candidate_id": "1b237116-0abf-51a7-9ca0-0502fe4d09aa",
+          "candidate_id": "32072c04-1ae5-5ba7-bdcb-aac6aa94d3d9",
           "candidate_status": "raw_imported",
           "mechanism_tags": [],
           "notes": "Imported from Physics Derivation Graph; symbolic normalization pending.",
@@ -4211,7 +4294,7 @@
           "priority_score": 0.0,
           "raw_formula": "2 \\sin(x) \\cos(x) = \\frac{1}{2 i} \\left( \\exp(i 2 x) - \\exp(-i 2 x) \\right)",
           "raw_formula_format": "latex",
-          "snapshot_id": "b5e04b26-83d2-5705-969d-6f56d059f5f5",
+          "snapshot_id": "e6e62196-baab-5b94-bd44-d66c693ac5cb",
           "source_candidate_id": "9180861128",
           "source_description": "",
           "source_entity_uri": "pdg://remote/000016/expression/9180861128",
@@ -4233,6 +4316,7 @@
               "name_latex": "",
               "pdg_derivation_id": "000016",
               "pdg_expression_id": "9180861128",
+              "pdg_node_label": "expression",
               "reference_latex": "",
               "source_version": "pdg-remote-wave5-2026-05-05",
               "sympy_lhs": "Mul(Integer(2), sin(Symbol('pdg0001464')), cos(Symbol('pdg0001464')))",
@@ -4243,7 +4327,7 @@
         },
         {
           "behavioral_archetypes": [],
-          "candidate_id": "fdf72557-7736-5a70-9630-e3c777f00ed2",
+          "candidate_id": "c09264bc-08c6-5f0d-9a5d-9d60d5dafa23",
           "candidate_status": "raw_imported",
           "mechanism_tags": [],
           "notes": "Imported from Physics Derivation Graph; symbolic normalization pending.",
@@ -4251,7 +4335,7 @@
           "priority_score": 0.0,
           "raw_formula": "2 \\sin(x) \\cos(x) = \\frac{1}{2i}\\left(\\exp(i x)-\\exp(-i x) \\right) \\left(\\exp(i x)+\\exp(-i x) \\right)",
           "raw_formula_format": "latex",
-          "snapshot_id": "b5e04b26-83d2-5705-969d-6f56d059f5f5",
+          "snapshot_id": "e6e62196-baab-5b94-bd44-d66c693ac5cb",
           "source_candidate_id": "9894826550",
           "source_description": "",
           "source_entity_uri": "pdg://remote/000016/expression/9894826550",
@@ -4273,6 +4357,7 @@
               "name_latex": "",
               "pdg_derivation_id": "000016",
               "pdg_expression_id": "9894826550",
+              "pdg_node_label": "expression",
               "reference_latex": "",
               "source_version": "pdg-remote-wave5-2026-05-05",
               "sympy_lhs": "Mul(Integer(2), sin(Symbol('pdg0001464')), cos(Symbol('pdg0001464')))",
@@ -4283,7 +4368,7 @@
         },
         {
           "behavioral_archetypes": [],
-          "candidate_id": "c0fafcec-67af-5d8d-bd6a-7155fbbe08e8",
+          "candidate_id": "e7815f86-10fb-53bb-9f7d-a202ecbfc6bb",
           "candidate_status": "raw_imported",
           "mechanism_tags": [],
           "notes": "Imported from Physics Derivation Graph; symbolic normalization pending.",
@@ -4291,7 +4376,7 @@
           "priority_score": 0.0,
           "raw_formula": "\\exp(i \\pi) + 1 = 0",
           "raw_formula_format": "latex",
-          "snapshot_id": "b5e04b26-83d2-5705-969d-6f56d059f5f5",
+          "snapshot_id": "e6e62196-baab-5b94-bd44-d66c693ac5cb",
           "source_candidate_id": "2501591100",
           "source_description": "",
           "source_entity_uri": "pdg://remote/000017/expression/2501591100",
@@ -4313,6 +4398,7 @@
               "name_latex": "",
               "pdg_derivation_id": "000017",
               "pdg_expression_id": "2501591100",
+              "pdg_node_label": "expression",
               "reference_latex": "",
               "source_version": "pdg-remote-wave5-2026-05-05",
               "sympy_lhs": "Add(exp(Mul(Symbol('pdg0003141'), Symbol('pdg0004621'))), Integer(1))",
@@ -4323,7 +4409,7 @@
         },
         {
           "behavioral_archetypes": [],
-          "candidate_id": "47c6028f-fc62-5954-a60b-00f542f77683",
+          "candidate_id": "5bda998b-18fe-58c5-85c5-acbed6172cfe",
           "candidate_status": "raw_imported",
           "mechanism_tags": [],
           "notes": "Imported from Physics Derivation Graph; symbolic normalization pending.",
@@ -4331,7 +4417,7 @@
           "priority_score": 0.0,
           "raw_formula": "\\exp(i \\pi) = -1",
           "raw_formula_format": "latex",
-          "snapshot_id": "b5e04b26-83d2-5705-969d-6f56d059f5f5",
+          "snapshot_id": "e6e62196-baab-5b94-bd44-d66c693ac5cb",
           "source_candidate_id": "3331824625",
           "source_description": "",
           "source_entity_uri": "pdg://remote/000017/expression/3331824625",
@@ -4353,6 +4439,7 @@
               "name_latex": "",
               "pdg_derivation_id": "000017",
               "pdg_expression_id": "3331824625",
+              "pdg_node_label": "expression",
               "reference_latex": "",
               "source_version": "pdg-remote-wave5-2026-05-05",
               "sympy_lhs": "exp(Mul(Symbol('pdg0003141'), Symbol('pdg0004621')))",
@@ -4363,7 +4450,7 @@
         },
         {
           "behavioral_archetypes": [],
-          "candidate_id": "9cfe6e40-a42a-5fd3-8a87-da8c80ef40c5",
+          "candidate_id": "3d5c077a-b20e-5215-bd5b-f3907032f12c",
           "candidate_status": "raw_imported",
           "mechanism_tags": [],
           "notes": "Imported from Physics Derivation Graph; symbolic normalization pending.",
@@ -4371,7 +4458,7 @@
           "priority_score": 0.0,
           "raw_formula": "\\exp(i x) = \\cos(x)+i \\sin(x)",
           "raw_formula_format": "latex",
-          "snapshot_id": "b5e04b26-83d2-5705-969d-6f56d059f5f5",
+          "snapshot_id": "e6e62196-baab-5b94-bd44-d66c693ac5cb",
           "source_candidate_id": "4938429483",
           "source_description": "",
           "source_entity_uri": "pdg://remote/000017/expression/4938429483",
@@ -4393,6 +4480,7 @@
               "name_latex": "",
               "pdg_derivation_id": "000017",
               "pdg_expression_id": "4938429483",
+              "pdg_node_label": "expression",
               "reference_latex": "",
               "source_version": "pdg-remote-wave5-2026-05-05",
               "sympy_lhs": "exp(Mul(Symbol('pdg0001464'), Symbol('pdg0004621')))",
@@ -4403,7 +4491,7 @@
         },
         {
           "behavioral_archetypes": [],
-          "candidate_id": "0c0b59bc-8ba5-5f24-be95-1e12b971e16c",
+          "candidate_id": "784d01ef-1323-5d9b-bab0-42e1d084131a",
           "candidate_status": "raw_imported",
           "mechanism_tags": [],
           "notes": "Imported from Physics Derivation Graph; symbolic normalization pending.",
@@ -4411,7 +4499,7 @@
           "priority_score": 0.0,
           "raw_formula": "\\exp(i \\pi) = -1 + i 0",
           "raw_formula_format": "latex",
-          "snapshot_id": "b5e04b26-83d2-5705-969d-6f56d059f5f5",
+          "snapshot_id": "e6e62196-baab-5b94-bd44-d66c693ac5cb",
           "source_candidate_id": "6885625907",
           "source_description": "",
           "source_entity_uri": "pdg://remote/000017/expression/6885625907",
@@ -4433,6 +4521,7 @@
               "name_latex": "",
               "pdg_derivation_id": "000017",
               "pdg_expression_id": "6885625907",
+              "pdg_node_label": "expression",
               "reference_latex": "",
               "source_version": "pdg-remote-wave5-2026-05-05",
               "sympy_lhs": "exp(Mul(Symbol('pdg0003141'), Symbol('pdg0004621')))",
@@ -4443,7 +4532,7 @@
         },
         {
           "behavioral_archetypes": [],
-          "candidate_id": "000f0494-250d-52bd-a772-ab4f0f28f258",
+          "candidate_id": "f0201887-f2ef-57a8-b03d-34ec40496d74",
           "candidate_status": "raw_imported",
           "mechanism_tags": [],
           "notes": "Imported from Physics Derivation Graph; symbolic normalization pending.",
@@ -4451,7 +4540,7 @@
           "priority_score": 0.0,
           "raw_formula": "\\exp(i \\pi) = \\cos(\\pi)+i \\sin(\\pi)",
           "raw_formula_format": "latex",
-          "snapshot_id": "b5e04b26-83d2-5705-969d-6f56d059f5f5",
+          "snapshot_id": "e6e62196-baab-5b94-bd44-d66c693ac5cb",
           "source_candidate_id": "8332931442",
           "source_description": "",
           "source_entity_uri": "pdg://remote/000017/expression/8332931442",
@@ -4473,6 +4562,7 @@
               "name_latex": "",
               "pdg_derivation_id": "000017",
               "pdg_expression_id": "8332931442",
+              "pdg_node_label": "expression",
               "reference_latex": "",
               "source_version": "pdg-remote-wave5-2026-05-05",
               "sympy_lhs": "exp(Mul(Symbol('pdg0003141'), Symbol('pdg0004621')))",
@@ -4483,7 +4573,7 @@
         },
         {
           "behavioral_archetypes": [],
-          "candidate_id": "8a036e32-1308-5026-8d5f-d9cb69ec546e",
+          "candidate_id": "4d65ef3c-2f40-5d73-8fab-1be5fc15b95b",
           "candidate_status": "raw_imported",
           "mechanism_tags": [],
           "notes": "Imported from Physics Derivation Graph; symbolic normalization pending.",
@@ -4491,7 +4581,7 @@
           "priority_score": 0.0,
           "raw_formula": "\\kappa_T = \\frac{-nRT}{V} \\left( \\frac{ \\partial }{\\partial P}\\left(\\frac{1}{P}\\right) \\right)_T",
           "raw_formula_format": "latex",
-          "snapshot_id": "b5e04b26-83d2-5705-969d-6f56d059f5f5",
+          "snapshot_id": "e6e62196-baab-5b94-bd44-d66c693ac5cb",
           "source_candidate_id": "1190768176",
           "source_description": "",
           "source_entity_uri": "pdg://remote/375160/expression/1190768176",
@@ -4513,6 +4603,7 @@
               "name_latex": "",
               "pdg_derivation_id": "375160",
               "pdg_expression_id": "1190768176",
+              "pdg_node_label": "expression",
               "reference_latex": "",
               "source_version": "pdg-remote-wave5-2026-05-05",
               "sympy_lhs": "Symbol('pdg0004645')",
@@ -4523,7 +4614,7 @@
         },
         {
           "behavioral_archetypes": [],
-          "candidate_id": "c46828e9-e158-52bd-a156-079af69e017b",
+          "candidate_id": "0567edc6-a543-5bc3-a958-eebb6b5ae8da",
           "candidate_status": "raw_imported",
           "mechanism_tags": [],
           "notes": "Imported from Physics Derivation Graph; symbolic normalization pending.",
@@ -4531,7 +4622,7 @@
           "priority_score": 0.0,
           "raw_formula": "V = \\frac{n R T}{P}",
           "raw_formula_format": "latex",
-          "snapshot_id": "b5e04b26-83d2-5705-969d-6f56d059f5f5",
+          "snapshot_id": "e6e62196-baab-5b94-bd44-d66c693ac5cb",
           "source_candidate_id": "3497828859",
           "source_description": "",
           "source_entity_uri": "pdg://remote/375160/expression/3497828859",
@@ -4553,6 +4644,7 @@
               "name_latex": "",
               "pdg_derivation_id": "375160",
               "pdg_expression_id": "3497828859",
+              "pdg_node_label": "expression",
               "reference_latex": "",
               "source_version": "pdg-remote-wave5-2026-05-05",
               "sympy_lhs": "Symbol('pdg0007586')",
@@ -4563,7 +4655,7 @@
         },
         {
           "behavioral_archetypes": [],
-          "candidate_id": "c389dfb2-0580-5085-9ad5-295dc0a28a09",
+          "candidate_id": "2c6ea301-6e61-5555-97f8-0125632a772a",
           "candidate_status": "raw_imported",
           "mechanism_tags": [],
           "notes": "Imported from Physics Derivation Graph; symbolic normalization pending.",
@@ -4571,7 +4663,7 @@
           "priority_score": 0.0,
           "raw_formula": "\\kappa_T = \\frac{-nRT}{V} \\left( \\frac{-1}{P^2}\\right)",
           "raw_formula_format": "latex",
-          "snapshot_id": "b5e04b26-83d2-5705-969d-6f56d059f5f5",
+          "snapshot_id": "e6e62196-baab-5b94-bd44-d66c693ac5cb",
           "source_candidate_id": "3605073197",
           "source_description": "",
           "source_entity_uri": "pdg://remote/375160/expression/3605073197",
@@ -4593,6 +4685,7 @@
               "name_latex": "",
               "pdg_derivation_id": "375160",
               "pdg_expression_id": "3605073197",
+              "pdg_node_label": "expression",
               "reference_latex": "",
               "source_version": "pdg-remote-wave5-2026-05-05",
               "sympy_lhs": "Symbol('pdg0004645')",
@@ -4603,7 +4696,7 @@
         },
         {
           "behavioral_archetypes": [],
-          "candidate_id": "db905ec5-38e3-58c4-9081-843489a7aab7",
+          "candidate_id": "ce9f6190-a889-5a6c-924f-0bfc693fb39c",
           "candidate_status": "raw_imported",
           "mechanism_tags": [],
           "notes": "Imported from Physics Derivation Graph; symbolic normalization pending.",
@@ -4611,7 +4704,7 @@
           "priority_score": 0.0,
           "raw_formula": "\\kappa_T = \\frac{-1}{V} \\left( \\frac{ \\partial }{\\partial P}\\left(\\frac{nRT}{P}\\right) \\right)_T",
           "raw_formula_format": "latex",
-          "snapshot_id": "b5e04b26-83d2-5705-969d-6f56d059f5f5",
+          "snapshot_id": "e6e62196-baab-5b94-bd44-d66c693ac5cb",
           "source_candidate_id": "8368984890",
           "source_description": "",
           "source_entity_uri": "pdg://remote/375160/expression/8368984890",
@@ -4633,6 +4726,7 @@
               "name_latex": "",
               "pdg_derivation_id": "375160",
               "pdg_expression_id": "8368984890",
+              "pdg_node_label": "expression",
               "reference_latex": "",
               "source_version": "pdg-remote-wave5-2026-05-05",
               "sympy_lhs": "Symbol('pdg0004645')",
@@ -4643,7 +4737,7 @@
         },
         {
           "behavioral_archetypes": [],
-          "candidate_id": "01899a77-1264-5f10-802d-0216964b296b",
+          "candidate_id": "a1bac324-310e-5f6e-835a-e4f16a9110f1",
           "candidate_status": "raw_imported",
           "mechanism_tags": [],
           "notes": "Imported from Physics Derivation Graph; symbolic normalization pending.",
@@ -4651,7 +4745,7 @@
           "priority_score": 0.0,
           "raw_formula": "P V = n R T",
           "raw_formula_format": "latex",
-          "snapshot_id": "b5e04b26-83d2-5705-969d-6f56d059f5f5",
+          "snapshot_id": "e6e62196-baab-5b94-bd44-d66c693ac5cb",
           "source_candidate_id": "8435841627",
           "source_description": "https://en.wikipedia.org/wiki/Ideal_gas_law",
           "source_entity_uri": "pdg://remote/375160/expression/8435841627",
@@ -4673,6 +4767,7 @@
               "name_latex": "",
               "pdg_derivation_id": "375160",
               "pdg_expression_id": "8435841627",
+              "pdg_node_label": "expression",
               "reference_latex": "",
               "source_version": "pdg-remote-wave5-2026-05-05",
               "sympy_lhs": "Mul(Symbol('pdg0007586'), Symbol('pdg0008134'))",
@@ -4683,7 +4778,7 @@
         },
         {
           "behavioral_archetypes": [],
-          "candidate_id": "0167669d-f6c2-589a-80ca-525f31a629fc",
+          "candidate_id": "45d456fe-bf39-5bd7-9e44-0baa87b4a194",
           "candidate_status": "raw_imported",
           "mechanism_tags": [],
           "notes": "Imported from Physics Derivation Graph; symbolic normalization pending.",
@@ -4691,7 +4786,7 @@
           "priority_score": 0.0,
           "raw_formula": "\\kappa_T = \\frac{1}{P}",
           "raw_formula_format": "latex",
-          "snapshot_id": "b5e04b26-83d2-5705-969d-6f56d059f5f5",
+          "snapshot_id": "e6e62196-baab-5b94-bd44-d66c693ac5cb",
           "source_candidate_id": "9718685793",
           "source_description": "",
           "source_entity_uri": "pdg://remote/375160/expression/9718685793",
@@ -4713,6 +4808,7 @@
               "name_latex": "",
               "pdg_derivation_id": "375160",
               "pdg_expression_id": "9718685793",
+              "pdg_node_label": "expression",
               "reference_latex": "",
               "source_version": "pdg-remote-wave5-2026-05-05",
               "sympy_lhs": "Symbol('pdg0004645')",
@@ -4723,7 +4819,7 @@
         },
         {
           "behavioral_archetypes": [],
-          "candidate_id": "629ef529-8818-5964-b2a5-035b620d5fdd",
+          "candidate_id": "730b0df7-5ed1-518c-963e-e175a7b667cc",
           "candidate_status": "raw_imported",
           "mechanism_tags": [],
           "notes": "Imported from Physics Derivation Graph; symbolic normalization pending.",
@@ -4731,7 +4827,7 @@
           "priority_score": 0.0,
           "raw_formula": "\\kappa_T = \\frac{-1}{V} \\left( \\frac{ \\partial V}{\\partial P} \\right)_T",
           "raw_formula_format": "latex",
-          "snapshot_id": "b5e04b26-83d2-5705-969d-6f56d059f5f5",
+          "snapshot_id": "e6e62196-baab-5b94-bd44-d66c693ac5cb",
           "source_candidate_id": "9781951738",
           "source_description": "definition of isothermal compressibility",
           "source_entity_uri": "pdg://remote/375160/expression/9781951738",
@@ -4753,6 +4849,7 @@
               "name_latex": "",
               "pdg_derivation_id": "375160",
               "pdg_expression_id": "9781951738",
+              "pdg_node_label": "expression",
               "reference_latex": "",
               "source_version": "pdg-remote-wave5-2026-05-05",
               "sympy_lhs": "Symbol('pdg0004645')",
@@ -4763,7 +4860,7 @@
         },
         {
           "behavioral_archetypes": [],
-          "candidate_id": "b0fd5795-331c-5f34-b2d5-451c2f1029de",
+          "candidate_id": "4504626f-f784-5d49-8d12-9d64d9d97feb",
           "candidate_status": "raw_imported",
           "mechanism_tags": [],
           "notes": "Imported from Physics Derivation Graph; symbolic normalization pending.",
@@ -4771,7 +4868,7 @@
           "priority_score": 0.0,
           "raw_formula": "\\kappa_T = \\frac{-PV}{V} \\left( \\frac{-1}{P^2}\\right)",
           "raw_formula_format": "latex",
-          "snapshot_id": "b5e04b26-83d2-5705-969d-6f56d059f5f5",
+          "snapshot_id": "e6e62196-baab-5b94-bd44-d66c693ac5cb",
           "source_candidate_id": "9847143017",
           "source_description": "",
           "source_entity_uri": "pdg://remote/375160/expression/9847143017",
@@ -4793,6 +4890,7 @@
               "name_latex": "",
               "pdg_derivation_id": "375160",
               "pdg_expression_id": "9847143017",
+              "pdg_node_label": "expression",
               "reference_latex": "",
               "source_version": "pdg-remote-wave5-2026-05-05",
               "sympy_lhs": "Symbol('pdg0004645')",
@@ -4803,7 +4901,7 @@
         },
         {
           "behavioral_archetypes": [],
-          "candidate_id": "0f3b76c4-4122-5950-bb98-902b71b3a2a4",
+          "candidate_id": "51b17e81-5b47-5b94-be5c-22120d1c54bf",
           "candidate_status": "raw_imported",
           "mechanism_tags": [],
           "notes": "Imported from Physics Derivation Graph; symbolic normalization pending.",
@@ -4811,7 +4909,7 @@
           "priority_score": 0.0,
           "raw_formula": "\\frac{1}{R_{\\rm total}} = \\frac{1}{R_1} + \\frac{1}{R_2}",
           "raw_formula_format": "latex",
-          "snapshot_id": "b5e04b26-83d2-5705-969d-6f56d059f5f5",
+          "snapshot_id": "e6e62196-baab-5b94-bd44-d66c693ac5cb",
           "source_candidate_id": "1457415749",
           "source_description": "",
           "source_entity_uri": "pdg://remote/681943/expression/1457415749",
@@ -4833,6 +4931,7 @@
               "name_latex": "total resistance for two resistors in parallel",
               "pdg_derivation_id": "681943",
               "pdg_expression_id": "1457415749",
+              "pdg_node_label": "expression",
               "reference_latex": "",
               "source_version": "pdg-remote-wave5-2026-05-05",
               "sympy_lhs": "Pow(Symbol('pdg0001908'), Integer(-1))",
@@ -4843,7 +4942,7 @@
         },
         {
           "behavioral_archetypes": [],
-          "candidate_id": "88841f43-4912-5ee1-8f87-835053fb06a0",
+          "candidate_id": "7d4502b8-f204-5f8d-9bc5-883cdf036a87",
           "candidate_status": "raw_imported",
           "mechanism_tags": [],
           "notes": "Imported from Physics Derivation Graph; symbolic normalization pending.",
@@ -4851,7 +4950,7 @@
           "priority_score": 0.0,
           "raw_formula": "\\frac{V}{R_1} = I_1",
           "raw_formula_format": "latex",
-          "snapshot_id": "b5e04b26-83d2-5705-969d-6f56d059f5f5",
+          "snapshot_id": "e6e62196-baab-5b94-bd44-d66c693ac5cb",
           "source_candidate_id": "2051901211",
           "source_description": "",
           "source_entity_uri": "pdg://remote/681943/expression/2051901211",
@@ -4873,6 +4972,7 @@
               "name_latex": "",
               "pdg_derivation_id": "681943",
               "pdg_expression_id": "2051901211",
+              "pdg_node_label": "expression",
               "reference_latex": "",
               "source_version": "pdg-remote-wave5-2026-05-05",
               "sympy_lhs": "Mul(Symbol('pdg0006599'), Pow(Symbol('pdg0008697'), Integer(-1)))",
@@ -4883,7 +4983,7 @@
         },
         {
           "behavioral_archetypes": [],
-          "candidate_id": "84d837a9-cd9a-5357-99ca-205715d063bb",
+          "candidate_id": "1ffe4026-5c18-5ab0-a36d-9b18837db136",
           "candidate_status": "raw_imported",
           "mechanism_tags": [],
           "notes": "Imported from Physics Derivation Graph; symbolic normalization pending.",
@@ -4891,7 +4991,7 @@
           "priority_score": 0.0,
           "raw_formula": "V = I_{\\rm total} R_{\\rm total}",
           "raw_formula_format": "latex",
-          "snapshot_id": "b5e04b26-83d2-5705-969d-6f56d059f5f5",
+          "snapshot_id": "e6e62196-baab-5b94-bd44-d66c693ac5cb",
           "source_candidate_id": "2271186630",
           "source_description": "",
           "source_entity_uri": "pdg://remote/681943/expression/2271186630",
@@ -4913,6 +5013,7 @@
               "name_latex": "",
               "pdg_derivation_id": "681943",
               "pdg_expression_id": "2271186630",
+              "pdg_node_label": "expression",
               "reference_latex": "",
               "source_version": "pdg-remote-wave5-2026-05-05",
               "sympy_lhs": "Symbol('pdg0006599')",
@@ -4923,7 +5024,7 @@
         },
         {
           "behavioral_archetypes": [],
-          "candidate_id": "5480adf5-4992-5b90-941b-8420cdf7e907",
+          "candidate_id": "1453c674-f831-5e70-b6ae-a3c0bb4e1b27",
           "candidate_status": "raw_imported",
           "mechanism_tags": [],
           "notes": "Imported from Physics Derivation Graph; symbolic normalization pending.",
@@ -4931,7 +5032,7 @@
           "priority_score": 0.0,
           "raw_formula": "\\frac{V}{R_{\\rm total}} = I_{\\rm total}",
           "raw_formula_format": "latex",
-          "snapshot_id": "b5e04b26-83d2-5705-969d-6f56d059f5f5",
+          "snapshot_id": "e6e62196-baab-5b94-bd44-d66c693ac5cb",
           "source_candidate_id": "2809345867",
           "source_description": "",
           "source_entity_uri": "pdg://remote/681943/expression/2809345867",
@@ -4953,6 +5054,7 @@
               "name_latex": "",
               "pdg_derivation_id": "681943",
               "pdg_expression_id": "2809345867",
+              "pdg_node_label": "expression",
               "reference_latex": "",
               "source_version": "pdg-remote-wave5-2026-05-05",
               "sympy_lhs": "Mul(Pow(Symbol('pdg0001908'), Integer(-1)), Symbol('pdg0006599'))",
@@ -4963,7 +5065,7 @@
         },
         {
           "behavioral_archetypes": [],
-          "candidate_id": "0db40b42-5cc1-5121-b3a8-b264dddb29a3",
+          "candidate_id": "03a3f3c9-2518-5884-b21f-dd3e4796ce75",
           "candidate_status": "raw_imported",
           "mechanism_tags": [],
           "notes": "Imported from Physics Derivation Graph; symbolic normalization pending.",
@@ -4971,7 +5073,7 @@
           "priority_score": 0.0,
           "raw_formula": "V = I R",
           "raw_formula_format": "latex",
-          "snapshot_id": "b5e04b26-83d2-5705-969d-6f56d059f5f5",
+          "snapshot_id": "e6e62196-baab-5b94-bd44-d66c693ac5cb",
           "source_candidate_id": "4087145886",
           "source_description": "https://en.wikipedia.org/wiki/Ohm%27s_law",
           "source_entity_uri": "pdg://remote/681943/expression/4087145886",
@@ -4993,6 +5095,7 @@
               "name_latex": "Ohm's law",
               "pdg_derivation_id": "681943",
               "pdg_expression_id": "4087145886",
+              "pdg_node_label": "expression",
               "reference_latex": "",
               "source_version": "pdg-remote-wave5-2026-05-05",
               "sympy_lhs": "Symbol('pdg0006599')",
@@ -5003,7 +5106,7 @@
         },
         {
           "behavioral_archetypes": [],
-          "candidate_id": "1a398ee5-8a7e-5d7b-9df3-f64da9739508",
+          "candidate_id": "ac88674f-1766-54e5-8c97-98432da1eccb",
           "candidate_status": "raw_imported",
           "mechanism_tags": [],
           "notes": "Imported from Physics Derivation Graph; symbolic normalization pending.",
@@ -5011,7 +5114,7 @@
           "priority_score": 0.0,
           "raw_formula": "V = I_1 R_1",
           "raw_formula_format": "latex",
-          "snapshot_id": "b5e04b26-83d2-5705-969d-6f56d059f5f5",
+          "snapshot_id": "e6e62196-baab-5b94-bd44-d66c693ac5cb",
           "source_candidate_id": "4128500715",
           "source_description": "",
           "source_entity_uri": "pdg://remote/681943/expression/4128500715",
@@ -5033,6 +5136,7 @@
               "name_latex": "",
               "pdg_derivation_id": "681943",
               "pdg_expression_id": "4128500715",
+              "pdg_node_label": "expression",
               "reference_latex": "",
               "source_version": "pdg-remote-wave5-2026-05-05",
               "sympy_lhs": "Symbol('pdg0006599')",
@@ -5043,7 +5147,7 @@
         },
         {
           "behavioral_archetypes": [],
-          "candidate_id": "49a48f29-3469-5597-a5fa-19ba9639bc48",
+          "candidate_id": "be6cca4d-2b9e-5fca-8f7b-f8a36ef82939",
           "candidate_status": "raw_imported",
           "mechanism_tags": [],
           "notes": "Imported from Physics Derivation Graph; symbolic normalization pending.",
@@ -5051,7 +5155,7 @@
           "priority_score": 0.0,
           "raw_formula": "\\frac{V}{R_{\\rm total}} = \\frac{V}{R_1} + \\frac{V}{R_2}",
           "raw_formula_format": "latex",
-          "snapshot_id": "b5e04b26-83d2-5705-969d-6f56d059f5f5",
+          "snapshot_id": "e6e62196-baab-5b94-bd44-d66c693ac5cb",
           "source_candidate_id": "4866160902",
           "source_description": "",
           "source_entity_uri": "pdg://remote/681943/expression/4866160902",
@@ -5073,6 +5177,7 @@
               "name_latex": "",
               "pdg_derivation_id": "681943",
               "pdg_expression_id": "4866160902",
+              "pdg_node_label": "expression",
               "reference_latex": "",
               "source_version": "pdg-remote-wave5-2026-05-05",
               "sympy_lhs": "Mul(Pow(Symbol('pdg0001908'), Integer(-1)), Symbol('pdg0006599'))",
@@ -5083,7 +5188,7 @@
         },
         {
           "behavioral_archetypes": [],
-          "candidate_id": "7810c770-f73b-58f6-9a9b-decf957b23dd",
+          "candidate_id": "fc87bdf5-735a-511b-9b44-7673ce23f9ed",
           "candidate_status": "raw_imported",
           "mechanism_tags": [],
           "notes": "Imported from Physics Derivation Graph; symbolic normalization pending.",
@@ -5091,7 +5196,7 @@
           "priority_score": 0.0,
           "raw_formula": "I_{\\rm total} = I_1 + I_2",
           "raw_formula_format": "latex",
-          "snapshot_id": "b5e04b26-83d2-5705-969d-6f56d059f5f5",
+          "snapshot_id": "e6e62196-baab-5b94-bd44-d66c693ac5cb",
           "source_candidate_id": "6753224061",
           "source_description": "",
           "source_entity_uri": "pdg://remote/681943/expression/6753224061",
@@ -5113,6 +5218,7 @@
               "name_latex": "",
               "pdg_derivation_id": "681943",
               "pdg_expression_id": "6753224061",
+              "pdg_node_label": "expression",
               "reference_latex": "",
               "source_version": "pdg-remote-wave5-2026-05-05",
               "sympy_lhs": "Symbol('pdg0009647')",
@@ -5123,7 +5229,7 @@
         },
         {
           "behavioral_archetypes": [],
-          "candidate_id": "701e79a5-1506-5ebe-82aa-571fe75506fa",
+          "candidate_id": "4938f538-e18c-5826-88d2-e05a82e34523",
           "candidate_status": "raw_imported",
           "mechanism_tags": [],
           "notes": "Imported from Physics Derivation Graph; symbolic normalization pending.",
@@ -5131,7 +5237,7 @@
           "priority_score": 0.0,
           "raw_formula": "\\frac{V}{R_2} = I_2",
           "raw_formula_format": "latex",
-          "snapshot_id": "b5e04b26-83d2-5705-969d-6f56d059f5f5",
+          "snapshot_id": "e6e62196-baab-5b94-bd44-d66c693ac5cb",
           "source_candidate_id": "7002609475",
           "source_description": "",
           "source_entity_uri": "pdg://remote/681943/expression/7002609475",
@@ -5153,6 +5259,7 @@
               "name_latex": "",
               "pdg_derivation_id": "681943",
               "pdg_expression_id": "7002609475",
+              "pdg_node_label": "expression",
               "reference_latex": "",
               "source_version": "pdg-remote-wave5-2026-05-05",
               "sympy_lhs": "Mul(Pow(Symbol('pdg0003461'), Integer(-1)), Symbol('pdg0006599'))",
@@ -5163,7 +5270,7 @@
         },
         {
           "behavioral_archetypes": [],
-          "candidate_id": "6bf69fbc-122f-57b0-b345-3c4b1d62fdbf",
+          "candidate_id": "e13fc4b3-6bea-5a07-8bc1-8406b0f87af5",
           "candidate_status": "raw_imported",
           "mechanism_tags": [],
           "notes": "Imported from Physics Derivation Graph; symbolic normalization pending.",
@@ -5171,7 +5278,7 @@
           "priority_score": 0.0,
           "raw_formula": "V = I_2 R_2",
           "raw_formula_format": "latex",
-          "snapshot_id": "b5e04b26-83d2-5705-969d-6f56d059f5f5",
+          "snapshot_id": "e6e62196-baab-5b94-bd44-d66c693ac5cb",
           "source_candidate_id": "9243879541",
           "source_description": "",
           "source_entity_uri": "pdg://remote/681943/expression/9243879541",
@@ -5193,6 +5300,7 @@
               "name_latex": "",
               "pdg_derivation_id": "681943",
               "pdg_expression_id": "9243879541",
+              "pdg_node_label": "expression",
               "reference_latex": "",
               "source_version": "pdg-remote-wave5-2026-05-05",
               "sympy_lhs": "Symbol('pdg0006599')",
@@ -6003,10 +6111,10 @@
           "visibility_tier": "internal"
         },
         {
-          "artifact_id": "cc95dbf5-ffad-51ff-ac3b-7498ee49c6b1",
+          "artifact_id": "24f4ec47-96b0-5448-b55c-965086aa710d",
           "artifact_kind": "cdg",
           "description": "Remote PDG-derived CDG from Cypher source payload",
-          "fqdn": "physics.pdg.remote_wave.cdg.pdg_cdg_candidate_57e74dd669ff9641",
+          "fqdn": "physics.pdg.remote_wave.cdg.pdg_cdg_candidate_28b1956091f48453",
           "is_ffi": false,
           "is_publishable": false,
           "is_stochastic": false,
@@ -6016,7 +6124,7 @@
           "source_kind": "generated",
           "source_module_path": "pdg.remote_derivations",
           "source_package": "pdg",
-          "source_symbol": "pdg_remote_wave_cdg_pdg_cdg_candidate_57e74dd669ff9641",
+          "source_symbol": "pdg_remote_wave_cdg_pdg_cdg_candidate_28b1956091f48453",
           "status": "draft",
           "top_level_input_arity": 5,
           "top_level_output_arity": 1,
@@ -6025,20 +6133,20 @@
           "visibility_tier": "internal"
         },
         {
-          "artifact_id": "b68982ab-4a32-533d-96ec-1f19fbf5f4e0",
+          "artifact_id": "5c7d6e7b-1351-502b-a988-f9154ec616c5",
           "artifact_kind": "cdg",
           "description": "Remote PDG-derived CDG from Cypher source payload",
-          "fqdn": "physics.pdg.remote_wave.cdg.pdg_cdg_candidate_20431528dd465b27",
+          "fqdn": "physics.pdg.remote_wave.cdg.pdg_cdg_candidate_2fb9da4021fc9e4d",
           "is_ffi": false,
           "is_publishable": false,
           "is_stochastic": false,
-          "leaf_count": 8,
+          "leaf_count": 6,
           "namespace_path": "pdg/remote_wave/cdg",
           "namespace_root": "physics",
           "source_kind": "generated",
           "source_module_path": "pdg.remote_derivations",
           "source_package": "pdg",
-          "source_symbol": "pdg_remote_wave_cdg_pdg_cdg_candidate_20431528dd465b27",
+          "source_symbol": "pdg_remote_wave_cdg_pdg_cdg_candidate_2fb9da4021fc9e4d",
           "status": "draft",
           "top_level_input_arity": 8,
           "top_level_output_arity": 1,
@@ -6047,10 +6155,10 @@
           "visibility_tier": "internal"
         },
         {
-          "artifact_id": "46c494d4-96bc-575c-a143-c54b700832ef",
+          "artifact_id": "91eebb1d-83b9-5c66-ab3b-ea44c119a2b9",
           "artifact_kind": "cdg",
           "description": "Remote PDG-derived CDG from Cypher source payload",
-          "fqdn": "physics.pdg.remote_wave.cdg.pdg_cdg_candidate_4ff88413accf7440",
+          "fqdn": "physics.pdg.remote_wave.cdg.pdg_cdg_candidate_877b5665f4f517ca",
           "is_ffi": false,
           "is_publishable": false,
           "is_stochastic": false,
@@ -6060,7 +6168,7 @@
           "source_kind": "generated",
           "source_module_path": "pdg.remote_derivations",
           "source_package": "pdg",
-          "source_symbol": "pdg_remote_wave_cdg_pdg_cdg_candidate_4ff88413accf7440",
+          "source_symbol": "pdg_remote_wave_cdg_pdg_cdg_candidate_877b5665f4f517ca",
           "status": "draft",
           "top_level_input_arity": 5,
           "top_level_output_arity": 1,
@@ -6069,10 +6177,32 @@
           "visibility_tier": "internal"
         },
         {
-          "artifact_id": "d8662f35-be74-57b2-ba0c-c50b16460414",
+          "artifact_id": "43b57a99-3eef-5722-b657-9c249fd31fee",
           "artifact_kind": "cdg",
           "description": "Remote PDG-derived CDG from Cypher source payload",
-          "fqdn": "physics.pdg.remote_wave.cdg.pdg_cdg_candidate_59747329ea91015f",
+          "fqdn": "physics.pdg.remote_wave.cdg.pdg_cdg_candidate_e05d7a384d3a4fb3",
+          "is_ffi": false,
+          "is_publishable": false,
+          "is_stochastic": false,
+          "leaf_count": 6,
+          "namespace_path": "pdg/remote_wave/cdg",
+          "namespace_root": "physics",
+          "source_kind": "generated",
+          "source_module_path": "pdg.remote_derivations",
+          "source_package": "pdg",
+          "source_symbol": "pdg_remote_wave_cdg_pdg_cdg_candidate_e05d7a384d3a4fb3",
+          "status": "draft",
+          "top_level_input_arity": 8,
+          "top_level_output_arity": 1,
+          "topo_hash": "",
+          "verified_leaf_coverage": 0.0,
+          "visibility_tier": "internal"
+        },
+        {
+          "artifact_id": "121cbf9d-f0e5-5833-a02e-af773a519f2a",
+          "artifact_kind": "cdg",
+          "description": "Remote PDG-derived CDG from Cypher source payload",
+          "fqdn": "physics.pdg.remote_wave.cdg.pdg_cdg_candidate_cfeadfef27b5948b",
           "is_ffi": false,
           "is_publishable": false,
           "is_stochastic": false,
@@ -6082,29 +6212,7 @@
           "source_kind": "generated",
           "source_module_path": "pdg.remote_derivations",
           "source_package": "pdg",
-          "source_symbol": "pdg_remote_wave_cdg_pdg_cdg_candidate_59747329ea91015f",
-          "status": "draft",
-          "top_level_input_arity": 8,
-          "top_level_output_arity": 1,
-          "topo_hash": "",
-          "verified_leaf_coverage": 0.0,
-          "visibility_tier": "internal"
-        },
-        {
-          "artifact_id": "28ca02de-6579-5d68-8e28-719bc6fc6366",
-          "artifact_kind": "cdg",
-          "description": "Remote PDG-derived CDG from Cypher source payload",
-          "fqdn": "physics.pdg.remote_wave.cdg.pdg_cdg_candidate_28f92aef760631c4",
-          "is_ffi": false,
-          "is_publishable": false,
-          "is_stochastic": false,
-          "leaf_count": 11,
-          "namespace_path": "pdg/remote_wave/cdg",
-          "namespace_root": "physics",
-          "source_kind": "generated",
-          "source_module_path": "pdg.remote_derivations",
-          "source_package": "pdg",
-          "source_symbol": "pdg_remote_wave_cdg_pdg_cdg_candidate_28f92aef760631c4",
+          "source_symbol": "pdg_remote_wave_cdg_pdg_cdg_candidate_cfeadfef27b5948b",
           "status": "draft",
           "top_level_input_arity": 10,
           "top_level_output_arity": 1,
@@ -6446,49 +6554,49 @@
           "version_id": "e55650bd-a360-58be-9830-7bd5524f8cc5"
         },
         {
-          "artifact_id": "cc95dbf5-ffad-51ff-ac3b-7498ee49c6b1",
-          "content_hash": "135b17f1f0403a932f4a2bdf4a6680fb3d890fa4c2468a61d70bb3b6b57bca25",
-          "fingerprint": "135b17f1f0403a932f4a2bdf4a6680fb3d890fa4c2468a61d70bb3b6b57bca25",
+          "artifact_id": "24f4ec47-96b0-5448-b55c-965086aa710d",
+          "content_hash": "3dd3b23ab004f016bd071b06a518a274131a27d9d122ed7e73b839c3a9620872",
+          "fingerprint": "3dd3b23ab004f016bd071b06a518a274131a27d9d122ed7e73b839c3a9620872",
           "is_latest": true,
           "s3_key": "",
           "semver": "2026.5.5",
-          "version_id": "fc0573c5-1129-545e-8e59-0ef31b7ea631"
+          "version_id": "90bfde0a-dfb2-5514-98b4-9ed0944dbc41"
         },
         {
-          "artifact_id": "b68982ab-4a32-533d-96ec-1f19fbf5f4e0",
-          "content_hash": "c9e23f5bc623b03d5a577ea19d1e660c5e4488643c2e1510ea87a65054330fb9",
-          "fingerprint": "c9e23f5bc623b03d5a577ea19d1e660c5e4488643c2e1510ea87a65054330fb9",
+          "artifact_id": "5c7d6e7b-1351-502b-a988-f9154ec616c5",
+          "content_hash": "46bf59c366a899e8b3c9d52c60661130d08a917fd7f0659d25c33151d593b50f",
+          "fingerprint": "46bf59c366a899e8b3c9d52c60661130d08a917fd7f0659d25c33151d593b50f",
           "is_latest": true,
           "s3_key": "",
           "semver": "2026.5.5",
-          "version_id": "3cdd3f71-1751-5ab3-830f-8aaf1e4a1b73"
+          "version_id": "f999aa2b-2d62-57b0-8e7d-277dac1ae7a7"
         },
         {
-          "artifact_id": "46c494d4-96bc-575c-a143-c54b700832ef",
-          "content_hash": "f89de0f4ff1e30fa6bf2874c19d08c26653c27e51ec572511dcb4b2898350fad",
-          "fingerprint": "f89de0f4ff1e30fa6bf2874c19d08c26653c27e51ec572511dcb4b2898350fad",
+          "artifact_id": "91eebb1d-83b9-5c66-ab3b-ea44c119a2b9",
+          "content_hash": "634f10ed8d8c7cef29a4454248ef1d0b484ff344daf44ca19da414cef6942212",
+          "fingerprint": "634f10ed8d8c7cef29a4454248ef1d0b484ff344daf44ca19da414cef6942212",
           "is_latest": true,
           "s3_key": "",
           "semver": "2026.5.5",
-          "version_id": "10c8bd32-6dab-54d3-898a-abdf11037488"
+          "version_id": "377af314-2216-5043-808c-ca33523e2beb"
         },
         {
-          "artifact_id": "d8662f35-be74-57b2-ba0c-c50b16460414",
-          "content_hash": "e3638d97b221b097b70175e5c47b39a923827f125750285c2c96b679daa0e396",
-          "fingerprint": "e3638d97b221b097b70175e5c47b39a923827f125750285c2c96b679daa0e396",
+          "artifact_id": "43b57a99-3eef-5722-b657-9c249fd31fee",
+          "content_hash": "49a8a2bb648c4a12b7ddbb73dab65009c7b34c66a52e7b2665367256afe6f202",
+          "fingerprint": "49a8a2bb648c4a12b7ddbb73dab65009c7b34c66a52e7b2665367256afe6f202",
           "is_latest": true,
           "s3_key": "",
           "semver": "2026.5.5",
-          "version_id": "279b1a08-cef3-522a-be04-76323866c276"
+          "version_id": "67defffe-886c-5f47-9d9e-e66f7bba6525"
         },
         {
-          "artifact_id": "28ca02de-6579-5d68-8e28-719bc6fc6366",
-          "content_hash": "f04610b13f31547b8762435f74065780dcb18d4354e9b299fc3e5f7172d47758",
-          "fingerprint": "f04610b13f31547b8762435f74065780dcb18d4354e9b299fc3e5f7172d47758",
+          "artifact_id": "121cbf9d-f0e5-5833-a02e-af773a519f2a",
+          "content_hash": "ad359f977e5b93e8e30be731ecf615fedd5cd1a010bbac93b11710ab0a891df1",
+          "fingerprint": "ad359f977e5b93e8e30be731ecf615fedd5cd1a010bbac93b11710ab0a891df1",
           "is_latest": true,
           "s3_key": "",
           "semver": "2026.5.5",
-          "version_id": "02965d26-ac1b-5634-95bc-a209580952ec"
+          "version_id": "90400aa6-60ab-58d4-a7cd-295acde66d27"
         }
       ],
       "table": "artifact_versions"
@@ -6505,7 +6613,7 @@
             "assumptions": []
           },
           "behavioral_archetypes": [],
-          "candidate_id": "66259cea-db37-5a49-8a6b-8a66c23140b5",
+          "candidate_id": "018f0e5f-4657-5561-b9ac-2b36d0c1c608",
           "evidence_json": {
             "label": "\\langle x^2\\rangle -2\\langle x \\rangle\\langle x \\rangle+\\langle x \\rangle^2 = \\langle x^2 \\rangle-\\langle x \\rangle^2",
             "pdg_expression_id": "2404934990",
@@ -6533,7 +6641,7 @@
             "assumptions": []
           },
           "behavioral_archetypes": [],
-          "candidate_id": "85a2c703-1bd2-57c1-92e4-121de62d507a",
+          "candidate_id": "71e2b827-a930-51d6-a732-9b2e0634a11e",
           "evidence_json": {
             "label": "\\langle x^2\\rangle -\\langle x \\rangle^2 = \\langle x^2 \\rangle-\\langle x \\rangle^2",
             "pdg_expression_id": "2494533900",
@@ -6561,7 +6669,7 @@
             "assumptions": []
           },
           "behavioral_archetypes": [],
-          "candidate_id": "20164973-d092-5996-bf52-505f1a0a7db9",
+          "candidate_id": "c8020272-3e21-525c-8b45-0fd3e065110a",
           "evidence_json": {
             "label": "\\langle \\left(x-\\langle x \\rangle\\right)^2 \\rangle = \\langle x^2 \\rangle-\\langle x \\rangle^2",
             "pdg_expression_id": "3585845894",
@@ -6589,7 +6697,7 @@
             "assumptions": []
           },
           "behavioral_archetypes": [],
-          "candidate_id": "c1ecf6cc-8233-5bdb-8bb9-0c94cfe5c002",
+          "candidate_id": "1d968f0a-9c0b-56ca-903f-e76fd73e04ae",
           "evidence_json": {
             "label": "\\langle x^2\\rangle -2\\langle x^2 \\rangle+\\langle x \\rangle^2 = \\langle x^2 \\rangle-\\langle x \\rangle^2",
             "pdg_expression_id": "4949359835",
@@ -6617,7 +6725,7 @@
             "assumptions": []
           },
           "behavioral_archetypes": [],
-          "candidate_id": "101f9fcb-2b6d-54e3-821b-f9c60e63827c",
+          "candidate_id": "e7fd54b0-e9c4-54d8-9eb6-993ea71bf835",
           "evidence_json": {
             "label": "\\langle x^2 - 2 x \\langle x \\rangle + \\langle x \\rangle^2 \\rangle = \\langle x^2 \\rangle-\\langle x \\rangle^2",
             "pdg_expression_id": "8399484849",
@@ -6645,7 +6753,7 @@
             "assumptions": []
           },
           "behavioral_archetypes": [],
-          "candidate_id": "41b338d5-d946-52b2-98d2-9333ceff25ce",
+          "candidate_id": "18e13d2f-bf95-5442-8a58-ca540c22d66a",
           "evidence_json": {
             "label": "\\sin(x) = \\frac{1}{2i}\\left(\\exp(i x)-\\exp(-i x) \\right)",
             "pdg_expression_id": "2103023049",
@@ -6673,7 +6781,7 @@
             "assumptions": []
           },
           "behavioral_archetypes": [],
-          "candidate_id": "682ac299-f419-5ead-b8da-6642877ac3f2",
+          "candidate_id": "fbcdb67b-e0ae-5df3-898b-93195ddc8880",
           "evidence_json": {
             "label": "\\sin(2 x) = 2 \\sin(x) \\cos(x)",
             "pdg_expression_id": "2405307372",
@@ -6701,7 +6809,7 @@
             "assumptions": []
           },
           "behavioral_archetypes": [],
-          "candidate_id": "ad793e45-7470-5682-a08d-c460e12ec57d",
+          "candidate_id": "327015b5-9ee8-5f41-abc2-6918e74af474",
           "evidence_json": {
             "label": "\\sin(x) \\cos(x) = \\frac{1}{2i}\\left(\\exp(i x)-\\exp(-i x) \\right) \\frac{1}{2}\\left(\\exp(i x)+\\exp(-i x) \\right)",
             "pdg_expression_id": "3470587782",
@@ -6729,7 +6837,7 @@
             "assumptions": []
           },
           "behavioral_archetypes": [],
-          "candidate_id": "b8e083bd-426a-5231-b8f9-b6da54f008bc",
+          "candidate_id": "bf7dc468-089e-5e2f-b278-78d76f1bcf2c",
           "evidence_json": {
             "label": "\\cos(x) = \\frac{1}{2}\\left(\\exp(i x)+\\exp(-i x) \\right)",
             "pdg_expression_id": "4585932229",
@@ -6757,7 +6865,7 @@
             "assumptions": []
           },
           "behavioral_archetypes": [],
-          "candidate_id": "8c4bd8be-fa67-59ee-b450-4b7cc68912ad",
+          "candidate_id": "7353d2e3-d331-536b-9517-ce14eed362b0",
           "evidence_json": {
             "label": "\\sin(2 x) = \\frac{1}{2i}\\left(\\exp(i 2 x)-\\exp(-i 2 x) \\right)",
             "pdg_expression_id": "8483686863",
@@ -6785,7 +6893,7 @@
             "assumptions": []
           },
           "behavioral_archetypes": [],
-          "candidate_id": "77599a80-4296-51f6-8f91-4df49863a626",
+          "candidate_id": "1f75fb27-6d7d-5196-9378-ac97b326f84f",
           "evidence_json": {
             "label": "2 \\sin(x) \\cos(x) = \\frac{1}{2 i} \\left( \\exp(i 2 x) - 1 + 1 - \\exp(-i 2 x) \\right)",
             "pdg_expression_id": "8699789241",
@@ -6813,7 +6921,7 @@
             "assumptions": []
           },
           "behavioral_archetypes": [],
-          "candidate_id": "1b237116-0abf-51a7-9ca0-0502fe4d09aa",
+          "candidate_id": "32072c04-1ae5-5ba7-bdcb-aac6aa94d3d9",
           "evidence_json": {
             "label": "2 \\sin(x) \\cos(x) = \\frac{1}{2 i} \\left( \\exp(i 2 x) - \\exp(-i 2 x) \\right)",
             "pdg_expression_id": "9180861128",
@@ -6841,7 +6949,7 @@
             "assumptions": []
           },
           "behavioral_archetypes": [],
-          "candidate_id": "fdf72557-7736-5a70-9630-e3c777f00ed2",
+          "candidate_id": "c09264bc-08c6-5f0d-9a5d-9d60d5dafa23",
           "evidence_json": {
             "label": "2 \\sin(x) \\cos(x) = \\frac{1}{2i}\\left(\\exp(i x)-\\exp(-i x) \\right) \\left(\\exp(i x)+\\exp(-i x) \\right)",
             "pdg_expression_id": "9894826550",
@@ -6869,7 +6977,7 @@
             "assumptions": []
           },
           "behavioral_archetypes": [],
-          "candidate_id": "c0fafcec-67af-5d8d-bd6a-7155fbbe08e8",
+          "candidate_id": "e7815f86-10fb-53bb-9f7d-a202ecbfc6bb",
           "evidence_json": {
             "label": "\\exp(i \\pi) + 1 = 0",
             "pdg_expression_id": "2501591100",
@@ -6897,7 +7005,7 @@
             "assumptions": []
           },
           "behavioral_archetypes": [],
-          "candidate_id": "47c6028f-fc62-5954-a60b-00f542f77683",
+          "candidate_id": "5bda998b-18fe-58c5-85c5-acbed6172cfe",
           "evidence_json": {
             "label": "\\exp(i \\pi) = -1",
             "pdg_expression_id": "3331824625",
@@ -6925,7 +7033,7 @@
             "assumptions": []
           },
           "behavioral_archetypes": [],
-          "candidate_id": "9cfe6e40-a42a-5fd3-8a87-da8c80ef40c5",
+          "candidate_id": "3d5c077a-b20e-5215-bd5b-f3907032f12c",
           "evidence_json": {
             "label": "\\exp(i x) = \\cos(x)+i \\sin(x)",
             "pdg_expression_id": "4938429483",
@@ -6953,7 +7061,7 @@
             "assumptions": []
           },
           "behavioral_archetypes": [],
-          "candidate_id": "0c0b59bc-8ba5-5f24-be95-1e12b971e16c",
+          "candidate_id": "784d01ef-1323-5d9b-bab0-42e1d084131a",
           "evidence_json": {
             "label": "\\exp(i \\pi) = -1 + i 0",
             "pdg_expression_id": "6885625907",
@@ -6981,7 +7089,7 @@
             "assumptions": []
           },
           "behavioral_archetypes": [],
-          "candidate_id": "000f0494-250d-52bd-a772-ab4f0f28f258",
+          "candidate_id": "f0201887-f2ef-57a8-b03d-34ec40496d74",
           "evidence_json": {
             "label": "\\exp(i \\pi) = \\cos(\\pi)+i \\sin(\\pi)",
             "pdg_expression_id": "8332931442",
@@ -7009,7 +7117,7 @@
             "assumptions": []
           },
           "behavioral_archetypes": [],
-          "candidate_id": "8a036e32-1308-5026-8d5f-d9cb69ec546e",
+          "candidate_id": "4d65ef3c-2f40-5d73-8fab-1be5fc15b95b",
           "evidence_json": {
             "label": "\\kappa_T = \\frac{-nRT}{V} \\left( \\frac{ \\partial }{\\partial P}\\left(\\frac{1}{P}\\right) \\right)_T",
             "pdg_expression_id": "1190768176",
@@ -7037,7 +7145,7 @@
             "assumptions": []
           },
           "behavioral_archetypes": [],
-          "candidate_id": "c46828e9-e158-52bd-a156-079af69e017b",
+          "candidate_id": "0567edc6-a543-5bc3-a958-eebb6b5ae8da",
           "evidence_json": {
             "label": "V = \\frac{n R T}{P}",
             "pdg_expression_id": "3497828859",
@@ -7065,7 +7173,7 @@
             "assumptions": []
           },
           "behavioral_archetypes": [],
-          "candidate_id": "c389dfb2-0580-5085-9ad5-295dc0a28a09",
+          "candidate_id": "2c6ea301-6e61-5555-97f8-0125632a772a",
           "evidence_json": {
             "label": "\\kappa_T = \\frac{-nRT}{V} \\left( \\frac{-1}{P^2}\\right)",
             "pdg_expression_id": "3605073197",
@@ -7093,7 +7201,7 @@
             "assumptions": []
           },
           "behavioral_archetypes": [],
-          "candidate_id": "db905ec5-38e3-58c4-9081-843489a7aab7",
+          "candidate_id": "ce9f6190-a889-5a6c-924f-0bfc693fb39c",
           "evidence_json": {
             "label": "\\kappa_T = \\frac{-1}{V} \\left( \\frac{ \\partial }{\\partial P}\\left(\\frac{nRT}{P}\\right) \\right)_T",
             "pdg_expression_id": "8368984890",
@@ -7121,7 +7229,7 @@
             "assumptions": []
           },
           "behavioral_archetypes": [],
-          "candidate_id": "01899a77-1264-5f10-802d-0216964b296b",
+          "candidate_id": "a1bac324-310e-5f6e-835a-e4f16a9110f1",
           "evidence_json": {
             "label": "P V = n R T",
             "pdg_expression_id": "8435841627",
@@ -7149,7 +7257,7 @@
             "assumptions": []
           },
           "behavioral_archetypes": [],
-          "candidate_id": "0167669d-f6c2-589a-80ca-525f31a629fc",
+          "candidate_id": "45d456fe-bf39-5bd7-9e44-0baa87b4a194",
           "evidence_json": {
             "label": "\\kappa_T = \\frac{1}{P}",
             "pdg_expression_id": "9718685793",
@@ -7177,7 +7285,7 @@
             "assumptions": []
           },
           "behavioral_archetypes": [],
-          "candidate_id": "629ef529-8818-5964-b2a5-035b620d5fdd",
+          "candidate_id": "730b0df7-5ed1-518c-963e-e175a7b667cc",
           "evidence_json": {
             "label": "\\kappa_T = \\frac{-1}{V} \\left( \\frac{ \\partial V}{\\partial P} \\right)_T",
             "pdg_expression_id": "9781951738",
@@ -7205,7 +7313,7 @@
             "assumptions": []
           },
           "behavioral_archetypes": [],
-          "candidate_id": "b0fd5795-331c-5f34-b2d5-451c2f1029de",
+          "candidate_id": "4504626f-f784-5d49-8d12-9d64d9d97feb",
           "evidence_json": {
             "label": "\\kappa_T = \\frac{-PV}{V} \\left( \\frac{-1}{P^2}\\right)",
             "pdg_expression_id": "9847143017",
@@ -7233,7 +7341,7 @@
             "assumptions": []
           },
           "behavioral_archetypes": [],
-          "candidate_id": "0f3b76c4-4122-5950-bb98-902b71b3a2a4",
+          "candidate_id": "51b17e81-5b47-5b94-be5c-22120d1c54bf",
           "evidence_json": {
             "label": "total resistance for two resistors in parallel",
             "pdg_expression_id": "1457415749",
@@ -7261,7 +7369,7 @@
             "assumptions": []
           },
           "behavioral_archetypes": [],
-          "candidate_id": "88841f43-4912-5ee1-8f87-835053fb06a0",
+          "candidate_id": "7d4502b8-f204-5f8d-9bc5-883cdf036a87",
           "evidence_json": {
             "label": "\\frac{V}{R_1} = I_1",
             "pdg_expression_id": "2051901211",
@@ -7289,7 +7397,7 @@
             "assumptions": []
           },
           "behavioral_archetypes": [],
-          "candidate_id": "84d837a9-cd9a-5357-99ca-205715d063bb",
+          "candidate_id": "1ffe4026-5c18-5ab0-a36d-9b18837db136",
           "evidence_json": {
             "label": "V = I_{\\rm total} R_{\\rm total}",
             "pdg_expression_id": "2271186630",
@@ -7317,7 +7425,7 @@
             "assumptions": []
           },
           "behavioral_archetypes": [],
-          "candidate_id": "5480adf5-4992-5b90-941b-8420cdf7e907",
+          "candidate_id": "1453c674-f831-5e70-b6ae-a3c0bb4e1b27",
           "evidence_json": {
             "label": "\\frac{V}{R_{\\rm total}} = I_{\\rm total}",
             "pdg_expression_id": "2809345867",
@@ -7345,7 +7453,7 @@
             "assumptions": []
           },
           "behavioral_archetypes": [],
-          "candidate_id": "0db40b42-5cc1-5121-b3a8-b264dddb29a3",
+          "candidate_id": "03a3f3c9-2518-5884-b21f-dd3e4796ce75",
           "evidence_json": {
             "label": "Ohm's law",
             "pdg_expression_id": "4087145886",
@@ -7373,7 +7481,7 @@
             "assumptions": []
           },
           "behavioral_archetypes": [],
-          "candidate_id": "1a398ee5-8a7e-5d7b-9df3-f64da9739508",
+          "candidate_id": "ac88674f-1766-54e5-8c97-98432da1eccb",
           "evidence_json": {
             "label": "V = I_1 R_1",
             "pdg_expression_id": "4128500715",
@@ -7401,7 +7509,7 @@
             "assumptions": []
           },
           "behavioral_archetypes": [],
-          "candidate_id": "49a48f29-3469-5597-a5fa-19ba9639bc48",
+          "candidate_id": "be6cca4d-2b9e-5fca-8f7b-f8a36ef82939",
           "evidence_json": {
             "label": "\\frac{V}{R_{\\rm total}} = \\frac{V}{R_1} + \\frac{V}{R_2}",
             "pdg_expression_id": "4866160902",
@@ -7429,7 +7537,7 @@
             "assumptions": []
           },
           "behavioral_archetypes": [],
-          "candidate_id": "7810c770-f73b-58f6-9a9b-decf957b23dd",
+          "candidate_id": "fc87bdf5-735a-511b-9b44-7673ce23f9ed",
           "evidence_json": {
             "label": "I_{\\rm total} = I_1 + I_2",
             "pdg_expression_id": "6753224061",
@@ -7457,7 +7565,7 @@
             "assumptions": []
           },
           "behavioral_archetypes": [],
-          "candidate_id": "701e79a5-1506-5ebe-82aa-571fe75506fa",
+          "candidate_id": "4938f538-e18c-5826-88d2-e05a82e34523",
           "evidence_json": {
             "label": "\\frac{V}{R_2} = I_2",
             "pdg_expression_id": "7002609475",
@@ -7485,7 +7593,7 @@
             "assumptions": []
           },
           "behavioral_archetypes": [],
-          "candidate_id": "6bf69fbc-122f-57b0-b345-3c4b1d62fdbf",
+          "candidate_id": "e13fc4b3-6bea-5a07-8bc1-8406b0f87af5",
           "evidence_json": {
             "label": "V = I_2 R_2",
             "pdg_expression_id": "9243879541",
@@ -8946,7 +9054,7 @@
         "version_id",
         "node_id"
       ],
-      "row_count": 35,
+      "row_count": 28,
       "rows": [
         {
           "concept_type": "pdg_derivation_step",
@@ -8956,8 +9064,8 @@
           "node_id": "pdg_step_1",
           "parent_node_id": "",
           "status": "candidate",
-          "type_signature": "{\"assumptions\":[],\"dimensions\":{},\"inference_rule_id\":\"111457\",\"inputs\":[\"4dea352b-fb6d-52f2-a6f9-c519e51ae893\"],\"operation_kind\":\"simplify\",\"output\":\"e357d46a-0040-5ec0-b4be-8810943c195c\",\"relationship_kind\":\"derives_from\",\"source_pdg_inference_id\":\"pdg_remote:000014:2349059:3585845894:8399484849\",\"variable_bindings\":{\"derivation_id\":\"000014\",\"feeds\":[],\"operation_kind\":\"simplify\",\"step_id\":\"2349059\"}}",
-          "version_id": "fc0573c5-1129-545e-8e59-0ef31b7ea631"
+          "type_signature": "{\"assumptions\":[],\"dimensions\":{},\"inference_rule_id\":\"111457\",\"inputs\":[\"4dea352b-fb6d-52f2-a6f9-c519e51ae893\"],\"operation_kind\":\"simplify\",\"output\":\"e357d46a-0040-5ec0-b4be-8810943c195c\",\"outputs\":[\"e357d46a-0040-5ec0-b4be-8810943c195c\"],\"relationship_kind\":\"derives_from\",\"source_pdg_inference_id\":\"pdg_remote:000014:2349059:3585845894:8399484849\",\"source_pdg_inference_ids\":[\"pdg_remote:000014:2349059:3585845894:8399484849\"],\"source_pdg_step_id\":\"2349059\",\"variable_bindings\":{\"derivation_id\":\"000014\",\"feeds\":[],\"operation_kind\":\"simplify\",\"step_id\":\"2349059\"}}",
+          "version_id": "90bfde0a-dfb2-5514-98b4-9ed0944dbc41"
         },
         {
           "concept_type": "pdg_derivation_step",
@@ -8967,8 +9075,8 @@
           "node_id": "pdg_step_2",
           "parent_node_id": "",
           "status": "candidate",
-          "type_signature": "{\"assumptions\":[],\"dimensions\":{},\"inference_rule_id\":\"111457\",\"inputs\":[\"e357d46a-0040-5ec0-b4be-8810943c195c\"],\"operation_kind\":\"simplify\",\"output\":\"d76a93fe-023a-5dfc-aafe-1289fa53097d\",\"relationship_kind\":\"derives_from\",\"source_pdg_inference_id\":\"pdg_remote:000014:2390498:8399484849:2404934990\",\"variable_bindings\":{\"derivation_id\":\"000014\",\"feeds\":[],\"operation_kind\":\"simplify\",\"step_id\":\"2390498\"}}",
-          "version_id": "fc0573c5-1129-545e-8e59-0ef31b7ea631"
+          "type_signature": "{\"assumptions\":[],\"dimensions\":{},\"inference_rule_id\":\"111457\",\"inputs\":[\"e357d46a-0040-5ec0-b4be-8810943c195c\"],\"operation_kind\":\"simplify\",\"output\":\"d76a93fe-023a-5dfc-aafe-1289fa53097d\",\"outputs\":[\"d76a93fe-023a-5dfc-aafe-1289fa53097d\"],\"relationship_kind\":\"derives_from\",\"source_pdg_inference_id\":\"pdg_remote:000014:2390498:8399484849:2404934990\",\"source_pdg_inference_ids\":[\"pdg_remote:000014:2390498:8399484849:2404934990\"],\"source_pdg_step_id\":\"2390498\",\"variable_bindings\":{\"derivation_id\":\"000014\",\"feeds\":[],\"operation_kind\":\"simplify\",\"step_id\":\"2390498\"}}",
+          "version_id": "90bfde0a-dfb2-5514-98b4-9ed0944dbc41"
         },
         {
           "concept_type": "pdg_derivation_step",
@@ -8978,8 +9086,8 @@
           "node_id": "pdg_step_3",
           "parent_node_id": "",
           "status": "candidate",
-          "type_signature": "{\"assumptions\":[],\"dimensions\":{},\"inference_rule_id\":\"111457\",\"inputs\":[\"d76a93fe-023a-5dfc-aafe-1289fa53097d\"],\"operation_kind\":\"simplify\",\"output\":\"e1c52671-e816-5af2-a3bb-01553c575a26\",\"relationship_kind\":\"derives_from\",\"source_pdg_inference_id\":\"pdg_remote:000014:3848494:2404934990:4949359835\",\"variable_bindings\":{\"derivation_id\":\"000014\",\"feeds\":[],\"operation_kind\":\"simplify\",\"step_id\":\"3848494\"}}",
-          "version_id": "fc0573c5-1129-545e-8e59-0ef31b7ea631"
+          "type_signature": "{\"assumptions\":[],\"dimensions\":{},\"inference_rule_id\":\"111457\",\"inputs\":[\"d76a93fe-023a-5dfc-aafe-1289fa53097d\"],\"operation_kind\":\"simplify\",\"output\":\"e1c52671-e816-5af2-a3bb-01553c575a26\",\"outputs\":[\"e1c52671-e816-5af2-a3bb-01553c575a26\"],\"relationship_kind\":\"derives_from\",\"source_pdg_inference_id\":\"pdg_remote:000014:3848494:2404934990:4949359835\",\"source_pdg_inference_ids\":[\"pdg_remote:000014:3848494:2404934990:4949359835\"],\"source_pdg_step_id\":\"3848494\",\"variable_bindings\":{\"derivation_id\":\"000014\",\"feeds\":[],\"operation_kind\":\"simplify\",\"step_id\":\"3848494\"}}",
+          "version_id": "90bfde0a-dfb2-5514-98b4-9ed0944dbc41"
         },
         {
           "concept_type": "pdg_derivation_step",
@@ -8989,8 +9097,8 @@
           "node_id": "pdg_step_4",
           "parent_node_id": "",
           "status": "candidate",
-          "type_signature": "{\"assumptions\":[],\"dimensions\":{},\"inference_rule_id\":\"111457\",\"inputs\":[\"e1c52671-e816-5af2-a3bb-01553c575a26\"],\"operation_kind\":\"simplify\",\"output\":\"55f540d5-6ba5-528e-b506-a51021b053c3\",\"relationship_kind\":\"derives_from\",\"source_pdg_inference_id\":\"pdg_remote:000014:4948384:4949359835:2494533900\",\"variable_bindings\":{\"derivation_id\":\"000014\",\"feeds\":[],\"operation_kind\":\"simplify\",\"step_id\":\"4948384\"}}",
-          "version_id": "fc0573c5-1129-545e-8e59-0ef31b7ea631"
+          "type_signature": "{\"assumptions\":[],\"dimensions\":{},\"inference_rule_id\":\"111457\",\"inputs\":[\"e1c52671-e816-5af2-a3bb-01553c575a26\"],\"operation_kind\":\"simplify\",\"output\":\"55f540d5-6ba5-528e-b506-a51021b053c3\",\"outputs\":[\"55f540d5-6ba5-528e-b506-a51021b053c3\"],\"relationship_kind\":\"derives_from\",\"source_pdg_inference_id\":\"pdg_remote:000014:4948384:4949359835:2494533900\",\"source_pdg_inference_ids\":[\"pdg_remote:000014:4948384:4949359835:2494533900\"],\"source_pdg_step_id\":\"4948384\",\"variable_bindings\":{\"derivation_id\":\"000014\",\"feeds\":[],\"operation_kind\":\"simplify\",\"step_id\":\"4948384\"}}",
+          "version_id": "90bfde0a-dfb2-5514-98b4-9ed0944dbc41"
         },
         {
           "concept_type": "pdg_derivation_step",
@@ -9000,8 +9108,8 @@
           "node_id": "pdg_step_1",
           "parent_node_id": "",
           "status": "candidate",
-          "type_signature": "{\"assumptions\":[],\"dimensions\":{},\"inference_rule_id\":\"111886\",\"inputs\":[\"6f35f8c9-54f5-5286-aed1-8c640d135e30\"],\"operation_kind\":\"derive\",\"output\":\"b4f83b6e-2d6e-594a-a8f8-6ffd05c7971b\",\"relationship_kind\":\"derives_from\",\"source_pdg_inference_id\":\"pdg_remote:000016:6240603:2103023049:8483686863\",\"variable_bindings\":{\"derivation_id\":\"000016\",\"feeds\":[{\"feed_id\":\"4961662865\",\"latex\":\"x\",\"sympy\":\"Symbol('pdg0001464')\"},{\"feed_id\":\"9110536742\",\"latex\":\"2 x\",\"sympy\":\"Mul(Integer(2), Symbol('pdg0001464'))\"}],\"operation_kind\":\"unknown\",\"step_id\":\"6240603\"}}",
-          "version_id": "3cdd3f71-1751-5ab3-830f-8aaf1e4a1b73"
+          "type_signature": "{\"assumptions\":[],\"dimensions\":{},\"inference_rule_id\":\"111886\",\"inputs\":[\"6f35f8c9-54f5-5286-aed1-8c640d135e30\"],\"operation_kind\":\"derive\",\"output\":\"b4f83b6e-2d6e-594a-a8f8-6ffd05c7971b\",\"outputs\":[\"b4f83b6e-2d6e-594a-a8f8-6ffd05c7971b\"],\"relationship_kind\":\"derives_from\",\"source_pdg_inference_id\":\"pdg_remote:000016:6240603:2103023049:8483686863\",\"source_pdg_inference_ids\":[\"pdg_remote:000016:6240603:2103023049:8483686863\"],\"source_pdg_step_id\":\"6240603\",\"variable_bindings\":{\"derivation_id\":\"000016\",\"feeds\":[{\"feed_id\":\"4961662865\",\"latex\":\"x\",\"sympy\":\"Symbol('pdg0001464')\"},{\"feed_id\":\"9110536742\",\"latex\":\"2 x\",\"sympy\":\"Mul(Integer(2), Symbol('pdg0001464'))\"}],\"operation_kind\":\"unknown\",\"step_id\":\"6240603\"}}",
+          "version_id": "f999aa2b-2d62-57b0-8e7d-277dac1ae7a7"
         },
         {
           "concept_type": "pdg_derivation_step",
@@ -9011,74 +9119,52 @@
           "node_id": "pdg_step_2",
           "parent_node_id": "",
           "status": "candidate",
-          "type_signature": "{\"assumptions\":[],\"dimensions\":{},\"inference_rule_id\":\"111253\",\"inputs\":[\"6f35f8c9-54f5-5286-aed1-8c640d135e30\"],\"operation_kind\":\"derive\",\"output\":\"5a7af5cf-b74c-5bf4-ae19-df6d1cc1a069\",\"relationship_kind\":\"derives_from\",\"source_pdg_inference_id\":\"pdg_remote:000016:1541045:2103023049:3470587782\",\"variable_bindings\":{\"derivation_id\":\"000016\",\"feeds\":[],\"operation_kind\":\"multiply\",\"step_id\":\"1541045\"}}",
-          "version_id": "3cdd3f71-1751-5ab3-830f-8aaf1e4a1b73"
-        },
-        {
-          "concept_type": "pdg_derivation_step",
-          "description": "PDG derives_from step from edge pdg_remote:000016:1541045:4585932229:3470587782",
-          "matched_primitive": "derive",
-          "name": "multiply expr 1 by expr 2",
-          "node_id": "pdg_step_3",
-          "parent_node_id": "",
-          "status": "candidate",
-          "type_signature": "{\"assumptions\":[],\"dimensions\":{},\"inference_rule_id\":\"111253\",\"inputs\":[\"2cfc4e95-a597-5882-93b7-259169880cd0\"],\"operation_kind\":\"derive\",\"output\":\"5a7af5cf-b74c-5bf4-ae19-df6d1cc1a069\",\"relationship_kind\":\"derives_from\",\"source_pdg_inference_id\":\"pdg_remote:000016:1541045:4585932229:3470587782\",\"variable_bindings\":{\"derivation_id\":\"000016\",\"feeds\":[],\"operation_kind\":\"multiply\",\"step_id\":\"1541045\"}}",
-          "version_id": "3cdd3f71-1751-5ab3-830f-8aaf1e4a1b73"
+          "type_signature": "{\"assumptions\":[],\"dimensions\":{},\"inference_rule_id\":\"111253\",\"inputs\":[\"6f35f8c9-54f5-5286-aed1-8c640d135e30\",\"2cfc4e95-a597-5882-93b7-259169880cd0\"],\"operation_kind\":\"derive\",\"output\":\"5a7af5cf-b74c-5bf4-ae19-df6d1cc1a069\",\"outputs\":[\"5a7af5cf-b74c-5bf4-ae19-df6d1cc1a069\"],\"relationship_kind\":\"derives_from\",\"source_pdg_inference_id\":\"pdg_remote:000016:1541045:2103023049:3470587782\",\"source_pdg_inference_ids\":[\"pdg_remote:000016:1541045:2103023049:3470587782\",\"pdg_remote:000016:1541045:4585932229:3470587782\"],\"source_pdg_step_id\":\"1541045\",\"variable_bindings\":{\"derivation_id\":\"000016\",\"feeds\":[],\"operation_kind\":\"multiply\",\"step_id\":\"1541045\"}}",
+          "version_id": "f999aa2b-2d62-57b0-8e7d-277dac1ae7a7"
         },
         {
           "concept_type": "pdg_derivation_step",
           "description": "PDG derives_from step from edge pdg_remote:000016:8636739:3470587782:9894826550",
           "matched_primitive": "derive",
           "name": "multiply both sides by",
-          "node_id": "pdg_step_4",
+          "node_id": "pdg_step_3",
           "parent_node_id": "",
           "status": "candidate",
-          "type_signature": "{\"assumptions\":[],\"dimensions\":{},\"inference_rule_id\":\"111182\",\"inputs\":[\"5a7af5cf-b74c-5bf4-ae19-df6d1cc1a069\"],\"operation_kind\":\"derive\",\"output\":\"d3909f3a-0c68-58fc-a716-2845deff6c07\",\"relationship_kind\":\"derives_from\",\"source_pdg_inference_id\":\"pdg_remote:000016:8636739:3470587782:9894826550\",\"variable_bindings\":{\"derivation_id\":\"000016\",\"feeds\":[{\"feed_id\":\"8642992037\",\"latex\":\"2\",\"sympy\":\"Integer(2)\"}],\"operation_kind\":\"multiply\",\"step_id\":\"8636739\"}}",
-          "version_id": "3cdd3f71-1751-5ab3-830f-8aaf1e4a1b73"
+          "type_signature": "{\"assumptions\":[],\"dimensions\":{},\"inference_rule_id\":\"111182\",\"inputs\":[\"5a7af5cf-b74c-5bf4-ae19-df6d1cc1a069\"],\"operation_kind\":\"derive\",\"output\":\"d3909f3a-0c68-58fc-a716-2845deff6c07\",\"outputs\":[\"d3909f3a-0c68-58fc-a716-2845deff6c07\"],\"relationship_kind\":\"derives_from\",\"source_pdg_inference_id\":\"pdg_remote:000016:8636739:3470587782:9894826550\",\"source_pdg_inference_ids\":[\"pdg_remote:000016:8636739:3470587782:9894826550\"],\"source_pdg_step_id\":\"8636739\",\"variable_bindings\":{\"derivation_id\":\"000016\",\"feeds\":[{\"feed_id\":\"8642992037\",\"latex\":\"2\",\"sympy\":\"Integer(2)\"}],\"operation_kind\":\"multiply\",\"step_id\":\"8636739\"}}",
+          "version_id": "f999aa2b-2d62-57b0-8e7d-277dac1ae7a7"
         },
         {
           "concept_type": "pdg_derivation_step",
           "description": "PDG derives_from step from edge pdg_remote:000016:9916897:9894826550:8699789241",
           "matched_primitive": "simplify",
           "name": "simplify",
-          "node_id": "pdg_step_5",
+          "node_id": "pdg_step_4",
           "parent_node_id": "",
           "status": "candidate",
-          "type_signature": "{\"assumptions\":[],\"dimensions\":{},\"inference_rule_id\":\"111457\",\"inputs\":[\"d3909f3a-0c68-58fc-a716-2845deff6c07\"],\"operation_kind\":\"simplify\",\"output\":\"00113c9d-31d5-5096-b23b-b6e347193007\",\"relationship_kind\":\"derives_from\",\"source_pdg_inference_id\":\"pdg_remote:000016:9916897:9894826550:8699789241\",\"variable_bindings\":{\"derivation_id\":\"000016\",\"feeds\":[],\"operation_kind\":\"simplify\",\"step_id\":\"9916897\"}}",
-          "version_id": "3cdd3f71-1751-5ab3-830f-8aaf1e4a1b73"
+          "type_signature": "{\"assumptions\":[],\"dimensions\":{},\"inference_rule_id\":\"111457\",\"inputs\":[\"d3909f3a-0c68-58fc-a716-2845deff6c07\"],\"operation_kind\":\"simplify\",\"output\":\"00113c9d-31d5-5096-b23b-b6e347193007\",\"outputs\":[\"00113c9d-31d5-5096-b23b-b6e347193007\"],\"relationship_kind\":\"derives_from\",\"source_pdg_inference_id\":\"pdg_remote:000016:9916897:9894826550:8699789241\",\"source_pdg_inference_ids\":[\"pdg_remote:000016:9916897:9894826550:8699789241\"],\"source_pdg_step_id\":\"9916897\",\"variable_bindings\":{\"derivation_id\":\"000016\",\"feeds\":[],\"operation_kind\":\"simplify\",\"step_id\":\"9916897\"}}",
+          "version_id": "f999aa2b-2d62-57b0-8e7d-277dac1ae7a7"
         },
         {
           "concept_type": "pdg_derivation_step",
           "description": "PDG derives_from step from edge pdg_remote:000016:6790653:8699789241:9180861128",
           "matched_primitive": "simplify",
           "name": "simplify",
-          "node_id": "pdg_step_6",
+          "node_id": "pdg_step_5",
           "parent_node_id": "",
           "status": "candidate",
-          "type_signature": "{\"assumptions\":[],\"dimensions\":{},\"inference_rule_id\":\"111457\",\"inputs\":[\"00113c9d-31d5-5096-b23b-b6e347193007\"],\"operation_kind\":\"simplify\",\"output\":\"3e8c2d2a-155e-5961-97a6-8bc71061167b\",\"relationship_kind\":\"derives_from\",\"source_pdg_inference_id\":\"pdg_remote:000016:6790653:8699789241:9180861128\",\"variable_bindings\":{\"derivation_id\":\"000016\",\"feeds\":[],\"operation_kind\":\"simplify\",\"step_id\":\"6790653\"}}",
-          "version_id": "3cdd3f71-1751-5ab3-830f-8aaf1e4a1b73"
+          "type_signature": "{\"assumptions\":[],\"dimensions\":{},\"inference_rule_id\":\"111457\",\"inputs\":[\"00113c9d-31d5-5096-b23b-b6e347193007\"],\"operation_kind\":\"simplify\",\"output\":\"3e8c2d2a-155e-5961-97a6-8bc71061167b\",\"outputs\":[\"3e8c2d2a-155e-5961-97a6-8bc71061167b\"],\"relationship_kind\":\"derives_from\",\"source_pdg_inference_id\":\"pdg_remote:000016:6790653:8699789241:9180861128\",\"source_pdg_inference_ids\":[\"pdg_remote:000016:6790653:8699789241:9180861128\"],\"source_pdg_step_id\":\"6790653\",\"variable_bindings\":{\"derivation_id\":\"000016\",\"feeds\":[],\"operation_kind\":\"simplify\",\"step_id\":\"6790653\"}}",
+          "version_id": "f999aa2b-2d62-57b0-8e7d-277dac1ae7a7"
         },
         {
           "concept_type": "pdg_derivation_step",
           "description": "PDG derives_from step from edge pdg_remote:000016:2750343:9180861128:2405307372",
           "matched_primitive": "derive",
           "name": "RHS of expr 1 equals RHS of expr 2",
-          "node_id": "pdg_step_7",
+          "node_id": "pdg_step_6",
           "parent_node_id": "",
           "status": "candidate",
-          "type_signature": "{\"assumptions\":[],\"dimensions\":{},\"inference_rule_id\":\"111863\",\"inputs\":[\"3e8c2d2a-155e-5961-97a6-8bc71061167b\"],\"operation_kind\":\"derive\",\"output\":\"9bc0611e-f893-5e63-b142-52bc1ed7600b\",\"relationship_kind\":\"derives_from\",\"source_pdg_inference_id\":\"pdg_remote:000016:2750343:9180861128:2405307372\",\"variable_bindings\":{\"derivation_id\":\"000016\",\"feeds\":[],\"operation_kind\":\"unknown\",\"step_id\":\"2750343\"}}",
-          "version_id": "3cdd3f71-1751-5ab3-830f-8aaf1e4a1b73"
-        },
-        {
-          "concept_type": "pdg_derivation_step",
-          "description": "PDG derives_from step from edge pdg_remote:000016:2750343:8483686863:2405307372",
-          "matched_primitive": "derive",
-          "name": "RHS of expr 1 equals RHS of expr 2",
-          "node_id": "pdg_step_8",
-          "parent_node_id": "",
-          "status": "candidate",
-          "type_signature": "{\"assumptions\":[],\"dimensions\":{},\"inference_rule_id\":\"111863\",\"inputs\":[\"b4f83b6e-2d6e-594a-a8f8-6ffd05c7971b\"],\"operation_kind\":\"derive\",\"output\":\"9bc0611e-f893-5e63-b142-52bc1ed7600b\",\"relationship_kind\":\"derives_from\",\"source_pdg_inference_id\":\"pdg_remote:000016:2750343:8483686863:2405307372\",\"variable_bindings\":{\"derivation_id\":\"000016\",\"feeds\":[],\"operation_kind\":\"unknown\",\"step_id\":\"2750343\"}}",
-          "version_id": "3cdd3f71-1751-5ab3-830f-8aaf1e4a1b73"
+          "type_signature": "{\"assumptions\":[],\"dimensions\":{},\"inference_rule_id\":\"111863\",\"inputs\":[\"3e8c2d2a-155e-5961-97a6-8bc71061167b\",\"b4f83b6e-2d6e-594a-a8f8-6ffd05c7971b\"],\"operation_kind\":\"derive\",\"output\":\"9bc0611e-f893-5e63-b142-52bc1ed7600b\",\"outputs\":[\"9bc0611e-f893-5e63-b142-52bc1ed7600b\"],\"relationship_kind\":\"derives_from\",\"source_pdg_inference_id\":\"pdg_remote:000016:2750343:9180861128:2405307372\",\"source_pdg_inference_ids\":[\"pdg_remote:000016:2750343:9180861128:2405307372\",\"pdg_remote:000016:2750343:8483686863:2405307372\"],\"source_pdg_step_id\":\"2750343\",\"variable_bindings\":{\"derivation_id\":\"000016\",\"feeds\":[],\"operation_kind\":\"unknown\",\"step_id\":\"2750343\"}}",
+          "version_id": "f999aa2b-2d62-57b0-8e7d-277dac1ae7a7"
         },
         {
           "concept_type": "pdg_derivation_step",
@@ -9088,8 +9174,8 @@
           "node_id": "pdg_step_1",
           "parent_node_id": "",
           "status": "candidate",
-          "type_signature": "{\"assumptions\":[],\"dimensions\":{},\"inference_rule_id\":\"111886\",\"inputs\":[\"7d3a45ef-38b4-53fc-a32b-ec763e2856a6\"],\"operation_kind\":\"derive\",\"output\":\"a2143134-2cbc-57bc-8132-2275b0d7ac12\",\"relationship_kind\":\"derives_from\",\"source_pdg_inference_id\":\"pdg_remote:000017:5103914:4938429483:8332931442\",\"variable_bindings\":{\"derivation_id\":\"000017\",\"feeds\":[{\"feed_id\":\"3268645065\",\"latex\":\"x\",\"sympy\":\"Symbol('pdg0001464')\"},{\"feed_id\":\"9350663581\",\"latex\":\"\\\\pi\",\"sympy\":\"Symbol('pdg0003141')\"}],\"operation_kind\":\"unknown\",\"step_id\":\"5103914\"}}",
-          "version_id": "10c8bd32-6dab-54d3-898a-abdf11037488"
+          "type_signature": "{\"assumptions\":[],\"dimensions\":{},\"inference_rule_id\":\"111886\",\"inputs\":[\"7d3a45ef-38b4-53fc-a32b-ec763e2856a6\"],\"operation_kind\":\"derive\",\"output\":\"a2143134-2cbc-57bc-8132-2275b0d7ac12\",\"outputs\":[\"a2143134-2cbc-57bc-8132-2275b0d7ac12\"],\"relationship_kind\":\"derives_from\",\"source_pdg_inference_id\":\"pdg_remote:000017:5103914:4938429483:8332931442\",\"source_pdg_inference_ids\":[\"pdg_remote:000017:5103914:4938429483:8332931442\"],\"source_pdg_step_id\":\"5103914\",\"variable_bindings\":{\"derivation_id\":\"000017\",\"feeds\":[{\"feed_id\":\"3268645065\",\"latex\":\"x\",\"sympy\":\"Symbol('pdg0001464')\"},{\"feed_id\":\"9350663581\",\"latex\":\"\\\\pi\",\"sympy\":\"Symbol('pdg0003141')\"}],\"operation_kind\":\"unknown\",\"step_id\":\"5103914\"}}",
+          "version_id": "377af314-2216-5043-808c-ca33523e2beb"
         },
         {
           "concept_type": "pdg_derivation_step",
@@ -9099,8 +9185,8 @@
           "node_id": "pdg_step_2",
           "parent_node_id": "",
           "status": "candidate",
-          "type_signature": "{\"assumptions\":[],\"dimensions\":{},\"inference_rule_id\":\"111457\",\"inputs\":[\"a2143134-2cbc-57bc-8132-2275b0d7ac12\"],\"operation_kind\":\"simplify\",\"output\":\"f71495ef-431a-5482-aca2-ed252dfd31eb\",\"relationship_kind\":\"derives_from\",\"source_pdg_inference_id\":\"pdg_remote:000017:1530591:8332931442:6885625907\",\"variable_bindings\":{\"derivation_id\":\"000017\",\"feeds\":[],\"operation_kind\":\"simplify\",\"step_id\":\"1530591\"}}",
-          "version_id": "10c8bd32-6dab-54d3-898a-abdf11037488"
+          "type_signature": "{\"assumptions\":[],\"dimensions\":{},\"inference_rule_id\":\"111457\",\"inputs\":[\"a2143134-2cbc-57bc-8132-2275b0d7ac12\"],\"operation_kind\":\"simplify\",\"output\":\"f71495ef-431a-5482-aca2-ed252dfd31eb\",\"outputs\":[\"f71495ef-431a-5482-aca2-ed252dfd31eb\"],\"relationship_kind\":\"derives_from\",\"source_pdg_inference_id\":\"pdg_remote:000017:1530591:8332931442:6885625907\",\"source_pdg_inference_ids\":[\"pdg_remote:000017:1530591:8332931442:6885625907\"],\"source_pdg_step_id\":\"1530591\",\"variable_bindings\":{\"derivation_id\":\"000017\",\"feeds\":[],\"operation_kind\":\"simplify\",\"step_id\":\"1530591\"}}",
+          "version_id": "377af314-2216-5043-808c-ca33523e2beb"
         },
         {
           "concept_type": "pdg_derivation_step",
@@ -9110,8 +9196,8 @@
           "node_id": "pdg_step_3",
           "parent_node_id": "",
           "status": "candidate",
-          "type_signature": "{\"assumptions\":[],\"dimensions\":{},\"inference_rule_id\":\"111457\",\"inputs\":[\"f71495ef-431a-5482-aca2-ed252dfd31eb\"],\"operation_kind\":\"simplify\",\"output\":\"741da972-d19c-52e3-b443-19fb2f787505\",\"relationship_kind\":\"derives_from\",\"source_pdg_inference_id\":\"pdg_remote:000017:8755752:6885625907:3331824625\",\"variable_bindings\":{\"derivation_id\":\"000017\",\"feeds\":[],\"operation_kind\":\"simplify\",\"step_id\":\"8755752\"}}",
-          "version_id": "10c8bd32-6dab-54d3-898a-abdf11037488"
+          "type_signature": "{\"assumptions\":[],\"dimensions\":{},\"inference_rule_id\":\"111457\",\"inputs\":[\"f71495ef-431a-5482-aca2-ed252dfd31eb\"],\"operation_kind\":\"simplify\",\"output\":\"741da972-d19c-52e3-b443-19fb2f787505\",\"outputs\":[\"741da972-d19c-52e3-b443-19fb2f787505\"],\"relationship_kind\":\"derives_from\",\"source_pdg_inference_id\":\"pdg_remote:000017:8755752:6885625907:3331824625\",\"source_pdg_inference_ids\":[\"pdg_remote:000017:8755752:6885625907:3331824625\"],\"source_pdg_step_id\":\"8755752\",\"variable_bindings\":{\"derivation_id\":\"000017\",\"feeds\":[],\"operation_kind\":\"simplify\",\"step_id\":\"8755752\"}}",
+          "version_id": "377af314-2216-5043-808c-ca33523e2beb"
         },
         {
           "concept_type": "pdg_derivation_step",
@@ -9121,8 +9207,8 @@
           "node_id": "pdg_step_4",
           "parent_node_id": "",
           "status": "candidate",
-          "type_signature": "{\"assumptions\":[],\"dimensions\":{},\"inference_rule_id\":\"111530\",\"inputs\":[\"741da972-d19c-52e3-b443-19fb2f787505\"],\"operation_kind\":\"derive\",\"output\":\"b892f2bb-8719-5471-be7c-17a7d519cf55\",\"relationship_kind\":\"derives_from\",\"source_pdg_inference_id\":\"pdg_remote:000017:8465659:3331824625:2501591100\",\"variable_bindings\":{\"derivation_id\":\"000017\",\"feeds\":[{\"feed_id\":\"4901237716\",\"latex\":\"1\",\"sympy\":\"Integer(1)\"}],\"operation_kind\":\"add\",\"step_id\":\"8465659\"}}",
-          "version_id": "10c8bd32-6dab-54d3-898a-abdf11037488"
+          "type_signature": "{\"assumptions\":[],\"dimensions\":{},\"inference_rule_id\":\"111530\",\"inputs\":[\"741da972-d19c-52e3-b443-19fb2f787505\"],\"operation_kind\":\"derive\",\"output\":\"b892f2bb-8719-5471-be7c-17a7d519cf55\",\"outputs\":[\"b892f2bb-8719-5471-be7c-17a7d519cf55\"],\"relationship_kind\":\"derives_from\",\"source_pdg_inference_id\":\"pdg_remote:000017:8465659:3331824625:2501591100\",\"source_pdg_inference_ids\":[\"pdg_remote:000017:8465659:3331824625:2501591100\"],\"source_pdg_step_id\":\"8465659\",\"variable_bindings\":{\"derivation_id\":\"000017\",\"feeds\":[{\"feed_id\":\"4901237716\",\"latex\":\"1\",\"sympy\":\"Integer(1)\"}],\"operation_kind\":\"add\",\"step_id\":\"8465659\"}}",
+          "version_id": "377af314-2216-5043-808c-ca33523e2beb"
         },
         {
           "concept_type": "pdg_derivation_step",
@@ -9132,8 +9218,8 @@
           "node_id": "pdg_step_1",
           "parent_node_id": "",
           "status": "candidate",
-          "type_signature": "{\"assumptions\":[],\"dimensions\":{},\"inference_rule_id\":\"111975\",\"inputs\":[\"d963b1a1-d450-59e0-b1ab-42ecd177073c\"],\"operation_kind\":\"derive\",\"output\":\"98da55ca-de66-5bd8-ba64-15be57e16e93\",\"relationship_kind\":\"derives_from\",\"source_pdg_inference_id\":\"pdg_remote:375160:3862516:8435841627:3497828859\",\"variable_bindings\":{\"derivation_id\":\"375160\",\"feeds\":[{\"feed_id\":\"6296166842\",\"latex\":\"P\",\"sympy\":\"Symbol('pdg0008134')\"}],\"operation_kind\":\"divide\",\"step_id\":\"3862516\"}}",
-          "version_id": "279b1a08-cef3-522a-be04-76323866c276"
+          "type_signature": "{\"assumptions\":[],\"dimensions\":{},\"inference_rule_id\":\"111975\",\"inputs\":[\"d963b1a1-d450-59e0-b1ab-42ecd177073c\"],\"operation_kind\":\"derive\",\"output\":\"98da55ca-de66-5bd8-ba64-15be57e16e93\",\"outputs\":[\"98da55ca-de66-5bd8-ba64-15be57e16e93\"],\"relationship_kind\":\"derives_from\",\"source_pdg_inference_id\":\"pdg_remote:375160:3862516:8435841627:3497828859\",\"source_pdg_inference_ids\":[\"pdg_remote:375160:3862516:8435841627:3497828859\"],\"source_pdg_step_id\":\"3862516\",\"variable_bindings\":{\"derivation_id\":\"375160\",\"feeds\":[{\"feed_id\":\"6296166842\",\"latex\":\"P\",\"sympy\":\"Symbol('pdg0008134')\"}],\"operation_kind\":\"divide\",\"step_id\":\"3862516\"}}",
+          "version_id": "67defffe-886c-5f47-9d9e-e66f7bba6525"
         },
         {
           "concept_type": "pdg_derivation_step",
@@ -9143,74 +9229,52 @@
           "node_id": "pdg_step_2",
           "parent_node_id": "",
           "status": "candidate",
-          "type_signature": "{\"assumptions\":[],\"dimensions\":{},\"inference_rule_id\":\"111556\",\"inputs\":[\"98da55ca-de66-5bd8-ba64-15be57e16e93\"],\"operation_kind\":\"substitute\",\"output\":\"c1fe3cda-ff6d-5f47-859b-26ccd8c94584\",\"relationship_kind\":\"derives_from\",\"source_pdg_inference_id\":\"pdg_remote:375160:9225696:3497828859:8368984890\",\"variable_bindings\":{\"derivation_id\":\"375160\",\"feeds\":[],\"operation_kind\":\"substitute\",\"step_id\":\"9225696\"}}",
-          "version_id": "279b1a08-cef3-522a-be04-76323866c276"
-        },
-        {
-          "concept_type": "pdg_derivation_step",
-          "description": "PDG derives_from step from edge pdg_remote:375160:9225696:9781951738:8368984890",
-          "matched_primitive": "substitute",
-          "name": "substitute LHS of expr 1 into expr 2",
-          "node_id": "pdg_step_3",
-          "parent_node_id": "",
-          "status": "candidate",
-          "type_signature": "{\"assumptions\":[],\"dimensions\":{},\"inference_rule_id\":\"111556\",\"inputs\":[\"27a0944b-6641-500c-86c7-b1c27ebc849a\"],\"operation_kind\":\"substitute\",\"output\":\"c1fe3cda-ff6d-5f47-859b-26ccd8c94584\",\"relationship_kind\":\"derives_from\",\"source_pdg_inference_id\":\"pdg_remote:375160:9225696:9781951738:8368984890\",\"variable_bindings\":{\"derivation_id\":\"375160\",\"feeds\":[],\"operation_kind\":\"substitute\",\"step_id\":\"9225696\"}}",
-          "version_id": "279b1a08-cef3-522a-be04-76323866c276"
+          "type_signature": "{\"assumptions\":[],\"dimensions\":{},\"inference_rule_id\":\"111556\",\"inputs\":[\"98da55ca-de66-5bd8-ba64-15be57e16e93\",\"27a0944b-6641-500c-86c7-b1c27ebc849a\"],\"operation_kind\":\"substitute\",\"output\":\"c1fe3cda-ff6d-5f47-859b-26ccd8c94584\",\"outputs\":[\"c1fe3cda-ff6d-5f47-859b-26ccd8c94584\"],\"relationship_kind\":\"derives_from\",\"source_pdg_inference_id\":\"pdg_remote:375160:9225696:3497828859:8368984890\",\"source_pdg_inference_ids\":[\"pdg_remote:375160:9225696:3497828859:8368984890\",\"pdg_remote:375160:9225696:9781951738:8368984890\"],\"source_pdg_step_id\":\"9225696\",\"variable_bindings\":{\"derivation_id\":\"375160\",\"feeds\":[],\"operation_kind\":\"substitute\",\"step_id\":\"9225696\"}}",
+          "version_id": "67defffe-886c-5f47-9d9e-e66f7bba6525"
         },
         {
           "concept_type": "pdg_derivation_step",
           "description": "PDG derives_from step from edge pdg_remote:375160:6914144:8368984890:1190768176",
           "matched_primitive": "simplify",
           "name": "simplify",
-          "node_id": "pdg_step_4",
+          "node_id": "pdg_step_3",
           "parent_node_id": "",
           "status": "candidate",
-          "type_signature": "{\"assumptions\":[],\"dimensions\":{},\"inference_rule_id\":\"111457\",\"inputs\":[\"c1fe3cda-ff6d-5f47-859b-26ccd8c94584\"],\"operation_kind\":\"simplify\",\"output\":\"99745dcb-d8b5-56b0-a035-06d83e7cb5e6\",\"relationship_kind\":\"derives_from\",\"source_pdg_inference_id\":\"pdg_remote:375160:6914144:8368984890:1190768176\",\"variable_bindings\":{\"derivation_id\":\"375160\",\"feeds\":[],\"operation_kind\":\"simplify\",\"step_id\":\"6914144\"}}",
-          "version_id": "279b1a08-cef3-522a-be04-76323866c276"
+          "type_signature": "{\"assumptions\":[],\"dimensions\":{},\"inference_rule_id\":\"111457\",\"inputs\":[\"c1fe3cda-ff6d-5f47-859b-26ccd8c94584\"],\"operation_kind\":\"simplify\",\"output\":\"99745dcb-d8b5-56b0-a035-06d83e7cb5e6\",\"outputs\":[\"99745dcb-d8b5-56b0-a035-06d83e7cb5e6\"],\"relationship_kind\":\"derives_from\",\"source_pdg_inference_id\":\"pdg_remote:375160:6914144:8368984890:1190768176\",\"source_pdg_inference_ids\":[\"pdg_remote:375160:6914144:8368984890:1190768176\"],\"source_pdg_step_id\":\"6914144\",\"variable_bindings\":{\"derivation_id\":\"375160\",\"feeds\":[],\"operation_kind\":\"simplify\",\"step_id\":\"6914144\"}}",
+          "version_id": "67defffe-886c-5f47-9d9e-e66f7bba6525"
         },
         {
           "concept_type": "pdg_derivation_step",
           "description": "PDG derives_from step from edge pdg_remote:375160:1873674:1190768176:3605073197",
           "matched_primitive": "simplify",
           "name": "simplify",
-          "node_id": "pdg_step_5",
+          "node_id": "pdg_step_4",
           "parent_node_id": "",
           "status": "candidate",
-          "type_signature": "{\"assumptions\":[],\"dimensions\":{},\"inference_rule_id\":\"111457\",\"inputs\":[\"99745dcb-d8b5-56b0-a035-06d83e7cb5e6\"],\"operation_kind\":\"simplify\",\"output\":\"f2a45811-5c4c-5c56-b1f6-82b42d4ad2dd\",\"relationship_kind\":\"derives_from\",\"source_pdg_inference_id\":\"pdg_remote:375160:1873674:1190768176:3605073197\",\"variable_bindings\":{\"derivation_id\":\"375160\",\"feeds\":[],\"operation_kind\":\"simplify\",\"step_id\":\"1873674\"}}",
-          "version_id": "279b1a08-cef3-522a-be04-76323866c276"
+          "type_signature": "{\"assumptions\":[],\"dimensions\":{},\"inference_rule_id\":\"111457\",\"inputs\":[\"99745dcb-d8b5-56b0-a035-06d83e7cb5e6\"],\"operation_kind\":\"simplify\",\"output\":\"f2a45811-5c4c-5c56-b1f6-82b42d4ad2dd\",\"outputs\":[\"f2a45811-5c4c-5c56-b1f6-82b42d4ad2dd\"],\"relationship_kind\":\"derives_from\",\"source_pdg_inference_id\":\"pdg_remote:375160:1873674:1190768176:3605073197\",\"source_pdg_inference_ids\":[\"pdg_remote:375160:1873674:1190768176:3605073197\"],\"source_pdg_step_id\":\"1873674\",\"variable_bindings\":{\"derivation_id\":\"375160\",\"feeds\":[],\"operation_kind\":\"simplify\",\"step_id\":\"1873674\"}}",
+          "version_id": "67defffe-886c-5f47-9d9e-e66f7bba6525"
         },
         {
           "concept_type": "pdg_derivation_step",
           "description": "PDG derives_from step from edge pdg_remote:375160:5391858:8435841627:9847143017",
           "matched_primitive": "substitute",
           "name": "substitute LHS of expr 1 into expr 2",
-          "node_id": "pdg_step_6",
+          "node_id": "pdg_step_5",
           "parent_node_id": "",
           "status": "candidate",
-          "type_signature": "{\"assumptions\":[],\"dimensions\":{},\"inference_rule_id\":\"111556\",\"inputs\":[\"d963b1a1-d450-59e0-b1ab-42ecd177073c\"],\"operation_kind\":\"substitute\",\"output\":\"9920b24d-7483-5f2f-9f35-6d2b956ef8f2\",\"relationship_kind\":\"derives_from\",\"source_pdg_inference_id\":\"pdg_remote:375160:5391858:8435841627:9847143017\",\"variable_bindings\":{\"derivation_id\":\"375160\",\"feeds\":[],\"operation_kind\":\"substitute\",\"step_id\":\"5391858\"}}",
-          "version_id": "279b1a08-cef3-522a-be04-76323866c276"
-        },
-        {
-          "concept_type": "pdg_derivation_step",
-          "description": "PDG derives_from step from edge pdg_remote:375160:5391858:3605073197:9847143017",
-          "matched_primitive": "substitute",
-          "name": "substitute LHS of expr 1 into expr 2",
-          "node_id": "pdg_step_7",
-          "parent_node_id": "",
-          "status": "candidate",
-          "type_signature": "{\"assumptions\":[],\"dimensions\":{},\"inference_rule_id\":\"111556\",\"inputs\":[\"f2a45811-5c4c-5c56-b1f6-82b42d4ad2dd\"],\"operation_kind\":\"substitute\",\"output\":\"9920b24d-7483-5f2f-9f35-6d2b956ef8f2\",\"relationship_kind\":\"derives_from\",\"source_pdg_inference_id\":\"pdg_remote:375160:5391858:3605073197:9847143017\",\"variable_bindings\":{\"derivation_id\":\"375160\",\"feeds\":[],\"operation_kind\":\"substitute\",\"step_id\":\"5391858\"}}",
-          "version_id": "279b1a08-cef3-522a-be04-76323866c276"
+          "type_signature": "{\"assumptions\":[],\"dimensions\":{},\"inference_rule_id\":\"111556\",\"inputs\":[\"d963b1a1-d450-59e0-b1ab-42ecd177073c\",\"f2a45811-5c4c-5c56-b1f6-82b42d4ad2dd\"],\"operation_kind\":\"substitute\",\"output\":\"9920b24d-7483-5f2f-9f35-6d2b956ef8f2\",\"outputs\":[\"9920b24d-7483-5f2f-9f35-6d2b956ef8f2\"],\"relationship_kind\":\"derives_from\",\"source_pdg_inference_id\":\"pdg_remote:375160:5391858:8435841627:9847143017\",\"source_pdg_inference_ids\":[\"pdg_remote:375160:5391858:8435841627:9847143017\",\"pdg_remote:375160:5391858:3605073197:9847143017\"],\"source_pdg_step_id\":\"5391858\",\"variable_bindings\":{\"derivation_id\":\"375160\",\"feeds\":[],\"operation_kind\":\"substitute\",\"step_id\":\"5391858\"}}",
+          "version_id": "67defffe-886c-5f47-9d9e-e66f7bba6525"
         },
         {
           "concept_type": "pdg_derivation_step",
           "description": "PDG derives_from step from edge pdg_remote:375160:8648371:9847143017:9718685793",
           "matched_primitive": "simplify",
           "name": "simplify",
-          "node_id": "pdg_step_8",
+          "node_id": "pdg_step_6",
           "parent_node_id": "",
           "status": "candidate",
-          "type_signature": "{\"assumptions\":[],\"dimensions\":{},\"inference_rule_id\":\"111457\",\"inputs\":[\"9920b24d-7483-5f2f-9f35-6d2b956ef8f2\"],\"operation_kind\":\"simplify\",\"output\":\"5ba0fae4-9c8c-5a66-b385-ccc7ecc1757f\",\"relationship_kind\":\"derives_from\",\"source_pdg_inference_id\":\"pdg_remote:375160:8648371:9847143017:9718685793\",\"variable_bindings\":{\"derivation_id\":\"375160\",\"feeds\":[],\"operation_kind\":\"simplify\",\"step_id\":\"8648371\"}}",
-          "version_id": "279b1a08-cef3-522a-be04-76323866c276"
+          "type_signature": "{\"assumptions\":[],\"dimensions\":{},\"inference_rule_id\":\"111457\",\"inputs\":[\"9920b24d-7483-5f2f-9f35-6d2b956ef8f2\"],\"operation_kind\":\"simplify\",\"output\":\"5ba0fae4-9c8c-5a66-b385-ccc7ecc1757f\",\"outputs\":[\"5ba0fae4-9c8c-5a66-b385-ccc7ecc1757f\"],\"relationship_kind\":\"derives_from\",\"source_pdg_inference_id\":\"pdg_remote:375160:8648371:9847143017:9718685793\",\"source_pdg_inference_ids\":[\"pdg_remote:375160:8648371:9847143017:9718685793\"],\"source_pdg_step_id\":\"8648371\",\"variable_bindings\":{\"derivation_id\":\"375160\",\"feeds\":[],\"operation_kind\":\"simplify\",\"step_id\":\"8648371\"}}",
+          "version_id": "67defffe-886c-5f47-9d9e-e66f7bba6525"
         },
         {
           "concept_type": "pdg_derivation_step",
@@ -9220,8 +9284,8 @@
           "node_id": "pdg_step_1",
           "parent_node_id": "",
           "status": "candidate",
-          "type_signature": "{\"assumptions\":[],\"dimensions\":{},\"inference_rule_id\":\"111984\",\"inputs\":[\"26358f08-1836-5352-8ceb-ae0c7efe90fb\"],\"operation_kind\":\"derive\",\"output\":\"a3a4bf7c-eb4e-533f-9397-c077ff830f0f\",\"relationship_kind\":\"derives_from\",\"source_pdg_inference_id\":\"pdg_remote:681943:1391174:4087145886:4128500715\",\"variable_bindings\":{\"derivation_id\":\"681943\",\"feeds\":[{\"feed_id\":\"2867848403\",\"latex\":\"I\",\"sympy\":\"Symbol('pdg0004501')\"},{\"feed_id\":\"1323602089\",\"latex\":\"I_1\",\"sympy\":\"Symbol('pdg0003978')\"},{\"feed_id\":\"7191277455\",\"latex\":\"R\",\"sympy\":\"Symbol('pdg0006458')\"},{\"feed_id\":\"5258419993\",\"latex\":\"R_1\",\"sympy\":\"Symbol('pdg0008697')\"}],\"operation_kind\":\"unknown\",\"step_id\":\"1391174\"}}",
-          "version_id": "02965d26-ac1b-5634-95bc-a209580952ec"
+          "type_signature": "{\"assumptions\":[],\"dimensions\":{},\"inference_rule_id\":\"111984\",\"inputs\":[\"26358f08-1836-5352-8ceb-ae0c7efe90fb\"],\"operation_kind\":\"derive\",\"output\":\"a3a4bf7c-eb4e-533f-9397-c077ff830f0f\",\"outputs\":[\"a3a4bf7c-eb4e-533f-9397-c077ff830f0f\"],\"relationship_kind\":\"derives_from\",\"source_pdg_inference_id\":\"pdg_remote:681943:1391174:4087145886:4128500715\",\"source_pdg_inference_ids\":[\"pdg_remote:681943:1391174:4087145886:4128500715\"],\"source_pdg_step_id\":\"1391174\",\"variable_bindings\":{\"derivation_id\":\"681943\",\"feeds\":[{\"feed_id\":\"2867848403\",\"latex\":\"I\",\"sympy\":\"Symbol('pdg0004501')\"},{\"feed_id\":\"1323602089\",\"latex\":\"I_1\",\"sympy\":\"Symbol('pdg0003978')\"},{\"feed_id\":\"7191277455\",\"latex\":\"R\",\"sympy\":\"Symbol('pdg0006458')\"},{\"feed_id\":\"5258419993\",\"latex\":\"R_1\",\"sympy\":\"Symbol('pdg0008697')\"}],\"operation_kind\":\"unknown\",\"step_id\":\"1391174\"}}",
+          "version_id": "90400aa6-60ab-58d4-a7cd-295acde66d27"
         },
         {
           "concept_type": "pdg_derivation_step",
@@ -9231,8 +9295,8 @@
           "node_id": "pdg_step_2",
           "parent_node_id": "",
           "status": "candidate",
-          "type_signature": "{\"assumptions\":[],\"dimensions\":{},\"inference_rule_id\":\"111984\",\"inputs\":[\"26358f08-1836-5352-8ceb-ae0c7efe90fb\"],\"operation_kind\":\"derive\",\"output\":\"b6b9785a-1500-507a-9a9e-5e86ee3684ed\",\"relationship_kind\":\"derives_from\",\"source_pdg_inference_id\":\"pdg_remote:681943:8121398:4087145886:9243879541\",\"variable_bindings\":{\"derivation_id\":\"681943\",\"feeds\":[{\"feed_id\":\"5585739998\",\"latex\":\"I\",\"sympy\":\"Symbol('pdg0004501')\"},{\"feed_id\":\"5463275819\",\"latex\":\"I_2\",\"sympy\":\"Symbol('pdg0004856')\"},{\"feed_id\":\"1377431959\",\"latex\":\"R\",\"sympy\":\"Symbol('pdg0006458')\"},{\"feed_id\":\"9746066299\",\"latex\":\"R_2\",\"sympy\":\"Symbol('pdg0003461')\"}],\"operation_kind\":\"unknown\",\"step_id\":\"8121398\"}}",
-          "version_id": "02965d26-ac1b-5634-95bc-a209580952ec"
+          "type_signature": "{\"assumptions\":[],\"dimensions\":{},\"inference_rule_id\":\"111984\",\"inputs\":[\"26358f08-1836-5352-8ceb-ae0c7efe90fb\"],\"operation_kind\":\"derive\",\"output\":\"b6b9785a-1500-507a-9a9e-5e86ee3684ed\",\"outputs\":[\"b6b9785a-1500-507a-9a9e-5e86ee3684ed\"],\"relationship_kind\":\"derives_from\",\"source_pdg_inference_id\":\"pdg_remote:681943:8121398:4087145886:9243879541\",\"source_pdg_inference_ids\":[\"pdg_remote:681943:8121398:4087145886:9243879541\"],\"source_pdg_step_id\":\"8121398\",\"variable_bindings\":{\"derivation_id\":\"681943\",\"feeds\":[{\"feed_id\":\"5585739998\",\"latex\":\"I\",\"sympy\":\"Symbol('pdg0004501')\"},{\"feed_id\":\"5463275819\",\"latex\":\"I_2\",\"sympy\":\"Symbol('pdg0004856')\"},{\"feed_id\":\"1377431959\",\"latex\":\"R\",\"sympy\":\"Symbol('pdg0006458')\"},{\"feed_id\":\"9746066299\",\"latex\":\"R_2\",\"sympy\":\"Symbol('pdg0003461')\"}],\"operation_kind\":\"unknown\",\"step_id\":\"8121398\"}}",
+          "version_id": "90400aa6-60ab-58d4-a7cd-295acde66d27"
         },
         {
           "concept_type": "pdg_derivation_step",
@@ -9242,8 +9306,8 @@
           "node_id": "pdg_step_3",
           "parent_node_id": "",
           "status": "candidate",
-          "type_signature": "{\"assumptions\":[],\"dimensions\":{},\"inference_rule_id\":\"111975\",\"inputs\":[\"b6b9785a-1500-507a-9a9e-5e86ee3684ed\"],\"operation_kind\":\"derive\",\"output\":\"2a713368-1393-5ec4-97b1-7c596860f264\",\"relationship_kind\":\"derives_from\",\"source_pdg_inference_id\":\"pdg_remote:681943:8616052:9243879541:7002609475\",\"variable_bindings\":{\"derivation_id\":\"681943\",\"feeds\":[{\"feed_id\":\"3031116098\",\"latex\":\"R_2\",\"sympy\":\"Symbol('pdg0003461')\"}],\"operation_kind\":\"divide\",\"step_id\":\"8616052\"}}",
-          "version_id": "02965d26-ac1b-5634-95bc-a209580952ec"
+          "type_signature": "{\"assumptions\":[],\"dimensions\":{},\"inference_rule_id\":\"111975\",\"inputs\":[\"b6b9785a-1500-507a-9a9e-5e86ee3684ed\"],\"operation_kind\":\"derive\",\"output\":\"2a713368-1393-5ec4-97b1-7c596860f264\",\"outputs\":[\"2a713368-1393-5ec4-97b1-7c596860f264\"],\"relationship_kind\":\"derives_from\",\"source_pdg_inference_id\":\"pdg_remote:681943:8616052:9243879541:7002609475\",\"source_pdg_inference_ids\":[\"pdg_remote:681943:8616052:9243879541:7002609475\"],\"source_pdg_step_id\":\"8616052\",\"variable_bindings\":{\"derivation_id\":\"681943\",\"feeds\":[{\"feed_id\":\"3031116098\",\"latex\":\"R_2\",\"sympy\":\"Symbol('pdg0003461')\"}],\"operation_kind\":\"divide\",\"step_id\":\"8616052\"}}",
+          "version_id": "90400aa6-60ab-58d4-a7cd-295acde66d27"
         },
         {
           "concept_type": "pdg_derivation_step",
@@ -9253,8 +9317,8 @@
           "node_id": "pdg_step_4",
           "parent_node_id": "",
           "status": "candidate",
-          "type_signature": "{\"assumptions\":[],\"dimensions\":{},\"inference_rule_id\":\"111975\",\"inputs\":[\"a3a4bf7c-eb4e-533f-9397-c077ff830f0f\"],\"operation_kind\":\"derive\",\"output\":\"72c78189-0161-5959-8288-35633a9a84e6\",\"relationship_kind\":\"derives_from\",\"source_pdg_inference_id\":\"pdg_remote:681943:6114977:4128500715:2051901211\",\"variable_bindings\":{\"derivation_id\":\"681943\",\"feeds\":[{\"feed_id\":\"5181421075\",\"latex\":\"R_1\",\"sympy\":\"Symbol('pdg0008697')\"}],\"operation_kind\":\"divide\",\"step_id\":\"6114977\"}}",
-          "version_id": "02965d26-ac1b-5634-95bc-a209580952ec"
+          "type_signature": "{\"assumptions\":[],\"dimensions\":{},\"inference_rule_id\":\"111975\",\"inputs\":[\"a3a4bf7c-eb4e-533f-9397-c077ff830f0f\"],\"operation_kind\":\"derive\",\"output\":\"72c78189-0161-5959-8288-35633a9a84e6\",\"outputs\":[\"72c78189-0161-5959-8288-35633a9a84e6\"],\"relationship_kind\":\"derives_from\",\"source_pdg_inference_id\":\"pdg_remote:681943:6114977:4128500715:2051901211\",\"source_pdg_inference_ids\":[\"pdg_remote:681943:6114977:4128500715:2051901211\"],\"source_pdg_step_id\":\"6114977\",\"variable_bindings\":{\"derivation_id\":\"681943\",\"feeds\":[{\"feed_id\":\"5181421075\",\"latex\":\"R_1\",\"sympy\":\"Symbol('pdg0008697')\"}],\"operation_kind\":\"divide\",\"step_id\":\"6114977\"}}",
+          "version_id": "90400aa6-60ab-58d4-a7cd-295acde66d27"
         },
         {
           "concept_type": "pdg_derivation_step",
@@ -9264,8 +9328,8 @@
           "node_id": "pdg_step_5",
           "parent_node_id": "",
           "status": "candidate",
-          "type_signature": "{\"assumptions\":[],\"dimensions\":{},\"inference_rule_id\":\"111984\",\"inputs\":[\"26358f08-1836-5352-8ceb-ae0c7efe90fb\"],\"operation_kind\":\"derive\",\"output\":\"f6a78554-b066-5993-a12f-96a31c5debd1\",\"relationship_kind\":\"derives_from\",\"source_pdg_inference_id\":\"pdg_remote:681943:7576732:4087145886:2271186630\",\"variable_bindings\":{\"derivation_id\":\"681943\",\"feeds\":[{\"feed_id\":\"9053099840\",\"latex\":\"I\",\"sympy\":\"Symbol('pdg0004501')\"},{\"feed_id\":\"7798615279\",\"latex\":\"I_{\\\\rm total}\",\"sympy\":\"Symbol('pdg0009647')\"},{\"feed_id\":\"1100332145\",\"latex\":\"R\",\"sympy\":\"Symbol('pdg0006458')\"},{\"feed_id\":\"7410124465\",\"latex\":\"R_{\\\\rm total}\",\"sympy\":\"Symbol('pdg0001908')\"}],\"operation_kind\":\"unknown\",\"step_id\":\"7576732\"}}",
-          "version_id": "02965d26-ac1b-5634-95bc-a209580952ec"
+          "type_signature": "{\"assumptions\":[],\"dimensions\":{},\"inference_rule_id\":\"111984\",\"inputs\":[\"26358f08-1836-5352-8ceb-ae0c7efe90fb\"],\"operation_kind\":\"derive\",\"output\":\"f6a78554-b066-5993-a12f-96a31c5debd1\",\"outputs\":[\"f6a78554-b066-5993-a12f-96a31c5debd1\"],\"relationship_kind\":\"derives_from\",\"source_pdg_inference_id\":\"pdg_remote:681943:7576732:4087145886:2271186630\",\"source_pdg_inference_ids\":[\"pdg_remote:681943:7576732:4087145886:2271186630\"],\"source_pdg_step_id\":\"7576732\",\"variable_bindings\":{\"derivation_id\":\"681943\",\"feeds\":[{\"feed_id\":\"9053099840\",\"latex\":\"I\",\"sympy\":\"Symbol('pdg0004501')\"},{\"feed_id\":\"7798615279\",\"latex\":\"I_{\\\\rm total}\",\"sympy\":\"Symbol('pdg0009647')\"},{\"feed_id\":\"1100332145\",\"latex\":\"R\",\"sympy\":\"Symbol('pdg0006458')\"},{\"feed_id\":\"7410124465\",\"latex\":\"R_{\\\\rm total}\",\"sympy\":\"Symbol('pdg0001908')\"}],\"operation_kind\":\"unknown\",\"step_id\":\"7576732\"}}",
+          "version_id": "90400aa6-60ab-58d4-a7cd-295acde66d27"
         },
         {
           "concept_type": "pdg_derivation_step",
@@ -9275,8 +9339,8 @@
           "node_id": "pdg_step_6",
           "parent_node_id": "",
           "status": "candidate",
-          "type_signature": "{\"assumptions\":[],\"dimensions\":{},\"inference_rule_id\":\"111975\",\"inputs\":[\"f6a78554-b066-5993-a12f-96a31c5debd1\"],\"operation_kind\":\"derive\",\"output\":\"9576e8cb-873d-59e9-a2ce-1bb4a86dda52\",\"relationship_kind\":\"derives_from\",\"source_pdg_inference_id\":\"pdg_remote:681943:4777295:2271186630:2809345867\",\"variable_bindings\":{\"derivation_id\":\"681943\",\"feeds\":[{\"feed_id\":\"6546594355\",\"latex\":\"R_{\\\\rm total}\",\"sympy\":\"Symbol('pdg0001908')\"}],\"operation_kind\":\"divide\",\"step_id\":\"4777295\"}}",
-          "version_id": "02965d26-ac1b-5634-95bc-a209580952ec"
+          "type_signature": "{\"assumptions\":[],\"dimensions\":{},\"inference_rule_id\":\"111975\",\"inputs\":[\"f6a78554-b066-5993-a12f-96a31c5debd1\"],\"operation_kind\":\"derive\",\"output\":\"9576e8cb-873d-59e9-a2ce-1bb4a86dda52\",\"outputs\":[\"9576e8cb-873d-59e9-a2ce-1bb4a86dda52\"],\"relationship_kind\":\"derives_from\",\"source_pdg_inference_id\":\"pdg_remote:681943:4777295:2271186630:2809345867\",\"source_pdg_inference_ids\":[\"pdg_remote:681943:4777295:2271186630:2809345867\"],\"source_pdg_step_id\":\"4777295\",\"variable_bindings\":{\"derivation_id\":\"681943\",\"feeds\":[{\"feed_id\":\"6546594355\",\"latex\":\"R_{\\\\rm total}\",\"sympy\":\"Symbol('pdg0001908')\"}],\"operation_kind\":\"divide\",\"step_id\":\"4777295\"}}",
+          "version_id": "90400aa6-60ab-58d4-a7cd-295acde66d27"
         },
         {
           "concept_type": "pdg_derivation_step",
@@ -9286,52 +9350,19 @@
           "node_id": "pdg_step_7",
           "parent_node_id": "",
           "status": "candidate",
-          "type_signature": "{\"assumptions\":[],\"dimensions\":{},\"inference_rule_id\":\"111246\",\"inputs\":[\"9576e8cb-873d-59e9-a2ce-1bb4a86dda52\"],\"operation_kind\":\"substitute\",\"output\":\"802dec01-ac9c-5128-b213-5a2b8225c25d\",\"relationship_kind\":\"derives_from\",\"source_pdg_inference_id\":\"pdg_remote:681943:5878391:2809345867:4866160902\",\"variable_bindings\":{\"derivation_id\":\"681943\",\"feeds\":[],\"operation_kind\":\"substitute\",\"step_id\":\"5878391\"}}",
-          "version_id": "02965d26-ac1b-5634-95bc-a209580952ec"
-        },
-        {
-          "concept_type": "pdg_derivation_step",
-          "description": "PDG derives_from step from edge pdg_remote:681943:5878391:2051901211:4866160902",
-          "matched_primitive": "substitute",
-          "name": "substitute LHS of three expressions into expr",
-          "node_id": "pdg_step_8",
-          "parent_node_id": "",
-          "status": "candidate",
-          "type_signature": "{\"assumptions\":[],\"dimensions\":{},\"inference_rule_id\":\"111246\",\"inputs\":[\"72c78189-0161-5959-8288-35633a9a84e6\"],\"operation_kind\":\"substitute\",\"output\":\"802dec01-ac9c-5128-b213-5a2b8225c25d\",\"relationship_kind\":\"derives_from\",\"source_pdg_inference_id\":\"pdg_remote:681943:5878391:2051901211:4866160902\",\"variable_bindings\":{\"derivation_id\":\"681943\",\"feeds\":[],\"operation_kind\":\"substitute\",\"step_id\":\"5878391\"}}",
-          "version_id": "02965d26-ac1b-5634-95bc-a209580952ec"
-        },
-        {
-          "concept_type": "pdg_derivation_step",
-          "description": "PDG derives_from step from edge pdg_remote:681943:5878391:7002609475:4866160902",
-          "matched_primitive": "substitute",
-          "name": "substitute LHS of three expressions into expr",
-          "node_id": "pdg_step_9",
-          "parent_node_id": "",
-          "status": "candidate",
-          "type_signature": "{\"assumptions\":[],\"dimensions\":{},\"inference_rule_id\":\"111246\",\"inputs\":[\"2a713368-1393-5ec4-97b1-7c596860f264\"],\"operation_kind\":\"substitute\",\"output\":\"802dec01-ac9c-5128-b213-5a2b8225c25d\",\"relationship_kind\":\"derives_from\",\"source_pdg_inference_id\":\"pdg_remote:681943:5878391:7002609475:4866160902\",\"variable_bindings\":{\"derivation_id\":\"681943\",\"feeds\":[],\"operation_kind\":\"substitute\",\"step_id\":\"5878391\"}}",
-          "version_id": "02965d26-ac1b-5634-95bc-a209580952ec"
-        },
-        {
-          "concept_type": "pdg_derivation_step",
-          "description": "PDG derives_from step from edge pdg_remote:681943:5878391:6753224061:4866160902",
-          "matched_primitive": "substitute",
-          "name": "substitute LHS of three expressions into expr",
-          "node_id": "pdg_step_10",
-          "parent_node_id": "",
-          "status": "candidate",
-          "type_signature": "{\"assumptions\":[],\"dimensions\":{},\"inference_rule_id\":\"111246\",\"inputs\":[\"d1a81830-2d4f-5267-a67b-f82e54b1ecf8\"],\"operation_kind\":\"substitute\",\"output\":\"802dec01-ac9c-5128-b213-5a2b8225c25d\",\"relationship_kind\":\"derives_from\",\"source_pdg_inference_id\":\"pdg_remote:681943:5878391:6753224061:4866160902\",\"variable_bindings\":{\"derivation_id\":\"681943\",\"feeds\":[],\"operation_kind\":\"substitute\",\"step_id\":\"5878391\"}}",
-          "version_id": "02965d26-ac1b-5634-95bc-a209580952ec"
+          "type_signature": "{\"assumptions\":[],\"dimensions\":{},\"inference_rule_id\":\"111246\",\"inputs\":[\"9576e8cb-873d-59e9-a2ce-1bb4a86dda52\",\"72c78189-0161-5959-8288-35633a9a84e6\",\"2a713368-1393-5ec4-97b1-7c596860f264\",\"d1a81830-2d4f-5267-a67b-f82e54b1ecf8\"],\"operation_kind\":\"substitute\",\"output\":\"802dec01-ac9c-5128-b213-5a2b8225c25d\",\"outputs\":[\"802dec01-ac9c-5128-b213-5a2b8225c25d\"],\"relationship_kind\":\"derives_from\",\"source_pdg_inference_id\":\"pdg_remote:681943:5878391:2809345867:4866160902\",\"source_pdg_inference_ids\":[\"pdg_remote:681943:5878391:2809345867:4866160902\",\"pdg_remote:681943:5878391:2051901211:4866160902\",\"pdg_remote:681943:5878391:7002609475:4866160902\",\"pdg_remote:681943:5878391:6753224061:4866160902\"],\"source_pdg_step_id\":\"5878391\",\"variable_bindings\":{\"derivation_id\":\"681943\",\"feeds\":[],\"operation_kind\":\"substitute\",\"step_id\":\"5878391\"}}",
+          "version_id": "90400aa6-60ab-58d4-a7cd-295acde66d27"
         },
         {
           "concept_type": "pdg_derivation_step",
           "description": "PDG derives_from step from edge pdg_remote:681943:5478696:4866160902:1457415749",
           "matched_primitive": "derive",
           "name": "divide both sides by",
-          "node_id": "pdg_step_11",
+          "node_id": "pdg_step_8",
           "parent_node_id": "",
           "status": "candidate",
-          "type_signature": "{\"assumptions\":[],\"dimensions\":{},\"inference_rule_id\":\"111975\",\"inputs\":[\"802dec01-ac9c-5128-b213-5a2b8225c25d\"],\"operation_kind\":\"derive\",\"output\":\"647f0af3-1566-5440-a408-80aa21abcccb\",\"relationship_kind\":\"derives_from\",\"source_pdg_inference_id\":\"pdg_remote:681943:5478696:4866160902:1457415749\",\"variable_bindings\":{\"derivation_id\":\"681943\",\"feeds\":[{\"feed_id\":\"3433441359\",\"latex\":\"V\",\"sympy\":\"Symbol('pdg0006599')\"}],\"operation_kind\":\"divide\",\"step_id\":\"5478696\"}}",
-          "version_id": "02965d26-ac1b-5634-95bc-a209580952ec"
+          "type_signature": "{\"assumptions\":[],\"dimensions\":{},\"inference_rule_id\":\"111975\",\"inputs\":[\"802dec01-ac9c-5128-b213-5a2b8225c25d\"],\"operation_kind\":\"derive\",\"output\":\"647f0af3-1566-5440-a408-80aa21abcccb\",\"outputs\":[\"647f0af3-1566-5440-a408-80aa21abcccb\"],\"relationship_kind\":\"derives_from\",\"source_pdg_inference_id\":\"pdg_remote:681943:5478696:4866160902:1457415749\",\"source_pdg_inference_ids\":[\"pdg_remote:681943:5478696:4866160902:1457415749\"],\"source_pdg_step_id\":\"5478696\",\"variable_bindings\":{\"derivation_id\":\"681943\",\"feeds\":[{\"feed_id\":\"3433441359\",\"latex\":\"V\",\"sympy\":\"Symbol('pdg0006599')\"}],\"operation_kind\":\"divide\",\"step_id\":\"5478696\"}}",
+          "version_id": "90400aa6-60ab-58d4-a7cd-295acde66d27"
         }
       ],
       "table": "artifact_cdg_nodes"
@@ -9351,161 +9382,161 @@
           "output_name": "e357d46a-0040-5ec0-b4be-8810943c195c",
           "source_id": "pdg_step_1",
           "target_id": "pdg_step_2",
-          "version_id": "fc0573c5-1129-545e-8e59-0ef31b7ea631"
+          "version_id": "90bfde0a-dfb2-5514-98b4-9ed0944dbc41"
         },
         {
           "input_name": "input",
           "output_name": "d76a93fe-023a-5dfc-aafe-1289fa53097d",
           "source_id": "pdg_step_2",
           "target_id": "pdg_step_3",
-          "version_id": "fc0573c5-1129-545e-8e59-0ef31b7ea631"
+          "version_id": "90bfde0a-dfb2-5514-98b4-9ed0944dbc41"
         },
         {
           "input_name": "input",
           "output_name": "e1c52671-e816-5af2-a3bb-01553c575a26",
           "source_id": "pdg_step_3",
           "target_id": "pdg_step_4",
-          "version_id": "fc0573c5-1129-545e-8e59-0ef31b7ea631"
+          "version_id": "90bfde0a-dfb2-5514-98b4-9ed0944dbc41"
         },
         {
           "input_name": "input",
           "output_name": "5a7af5cf-b74c-5bf4-ae19-df6d1cc1a069",
-          "source_id": "pdg_step_3",
-          "target_id": "pdg_step_4",
-          "version_id": "3cdd3f71-1751-5ab3-830f-8aaf1e4a1b73"
+          "source_id": "pdg_step_2",
+          "target_id": "pdg_step_3",
+          "version_id": "f999aa2b-2d62-57b0-8e7d-277dac1ae7a7"
         },
         {
           "input_name": "input",
           "output_name": "d3909f3a-0c68-58fc-a716-2845deff6c07",
-          "source_id": "pdg_step_4",
-          "target_id": "pdg_step_5",
-          "version_id": "3cdd3f71-1751-5ab3-830f-8aaf1e4a1b73"
+          "source_id": "pdg_step_3",
+          "target_id": "pdg_step_4",
+          "version_id": "f999aa2b-2d62-57b0-8e7d-277dac1ae7a7"
         },
         {
           "input_name": "input",
           "output_name": "00113c9d-31d5-5096-b23b-b6e347193007",
-          "source_id": "pdg_step_5",
-          "target_id": "pdg_step_6",
-          "version_id": "3cdd3f71-1751-5ab3-830f-8aaf1e4a1b73"
+          "source_id": "pdg_step_4",
+          "target_id": "pdg_step_5",
+          "version_id": "f999aa2b-2d62-57b0-8e7d-277dac1ae7a7"
         },
         {
           "input_name": "input",
           "output_name": "3e8c2d2a-155e-5961-97a6-8bc71061167b",
-          "source_id": "pdg_step_6",
-          "target_id": "pdg_step_7",
-          "version_id": "3cdd3f71-1751-5ab3-830f-8aaf1e4a1b73"
+          "source_id": "pdg_step_5",
+          "target_id": "pdg_step_6",
+          "version_id": "f999aa2b-2d62-57b0-8e7d-277dac1ae7a7"
         },
         {
           "input_name": "input",
           "output_name": "b4f83b6e-2d6e-594a-a8f8-6ffd05c7971b",
           "source_id": "pdg_step_1",
-          "target_id": "pdg_step_8",
-          "version_id": "3cdd3f71-1751-5ab3-830f-8aaf1e4a1b73"
+          "target_id": "pdg_step_6",
+          "version_id": "f999aa2b-2d62-57b0-8e7d-277dac1ae7a7"
         },
         {
           "input_name": "input",
           "output_name": "a2143134-2cbc-57bc-8132-2275b0d7ac12",
           "source_id": "pdg_step_1",
           "target_id": "pdg_step_2",
-          "version_id": "10c8bd32-6dab-54d3-898a-abdf11037488"
+          "version_id": "377af314-2216-5043-808c-ca33523e2beb"
         },
         {
           "input_name": "input",
           "output_name": "f71495ef-431a-5482-aca2-ed252dfd31eb",
           "source_id": "pdg_step_2",
           "target_id": "pdg_step_3",
-          "version_id": "10c8bd32-6dab-54d3-898a-abdf11037488"
+          "version_id": "377af314-2216-5043-808c-ca33523e2beb"
         },
         {
           "input_name": "input",
           "output_name": "741da972-d19c-52e3-b443-19fb2f787505",
           "source_id": "pdg_step_3",
           "target_id": "pdg_step_4",
-          "version_id": "10c8bd32-6dab-54d3-898a-abdf11037488"
+          "version_id": "377af314-2216-5043-808c-ca33523e2beb"
         },
         {
           "input_name": "input",
           "output_name": "98da55ca-de66-5bd8-ba64-15be57e16e93",
           "source_id": "pdg_step_1",
           "target_id": "pdg_step_2",
-          "version_id": "279b1a08-cef3-522a-be04-76323866c276"
+          "version_id": "67defffe-886c-5f47-9d9e-e66f7bba6525"
         },
         {
           "input_name": "input",
           "output_name": "c1fe3cda-ff6d-5f47-859b-26ccd8c94584",
-          "source_id": "pdg_step_3",
-          "target_id": "pdg_step_4",
-          "version_id": "279b1a08-cef3-522a-be04-76323866c276"
+          "source_id": "pdg_step_2",
+          "target_id": "pdg_step_3",
+          "version_id": "67defffe-886c-5f47-9d9e-e66f7bba6525"
         },
         {
           "input_name": "input",
           "output_name": "99745dcb-d8b5-56b0-a035-06d83e7cb5e6",
-          "source_id": "pdg_step_4",
-          "target_id": "pdg_step_5",
-          "version_id": "279b1a08-cef3-522a-be04-76323866c276"
+          "source_id": "pdg_step_3",
+          "target_id": "pdg_step_4",
+          "version_id": "67defffe-886c-5f47-9d9e-e66f7bba6525"
         },
         {
           "input_name": "input",
           "output_name": "f2a45811-5c4c-5c56-b1f6-82b42d4ad2dd",
-          "source_id": "pdg_step_5",
-          "target_id": "pdg_step_7",
-          "version_id": "279b1a08-cef3-522a-be04-76323866c276"
+          "source_id": "pdg_step_4",
+          "target_id": "pdg_step_5",
+          "version_id": "67defffe-886c-5f47-9d9e-e66f7bba6525"
         },
         {
           "input_name": "input",
           "output_name": "9920b24d-7483-5f2f-9f35-6d2b956ef8f2",
-          "source_id": "pdg_step_7",
-          "target_id": "pdg_step_8",
-          "version_id": "279b1a08-cef3-522a-be04-76323866c276"
+          "source_id": "pdg_step_5",
+          "target_id": "pdg_step_6",
+          "version_id": "67defffe-886c-5f47-9d9e-e66f7bba6525"
         },
         {
           "input_name": "input",
           "output_name": "b6b9785a-1500-507a-9a9e-5e86ee3684ed",
           "source_id": "pdg_step_2",
           "target_id": "pdg_step_3",
-          "version_id": "02965d26-ac1b-5634-95bc-a209580952ec"
+          "version_id": "90400aa6-60ab-58d4-a7cd-295acde66d27"
         },
         {
           "input_name": "input",
           "output_name": "a3a4bf7c-eb4e-533f-9397-c077ff830f0f",
           "source_id": "pdg_step_1",
           "target_id": "pdg_step_4",
-          "version_id": "02965d26-ac1b-5634-95bc-a209580952ec"
+          "version_id": "90400aa6-60ab-58d4-a7cd-295acde66d27"
         },
         {
           "input_name": "input",
           "output_name": "f6a78554-b066-5993-a12f-96a31c5debd1",
           "source_id": "pdg_step_5",
           "target_id": "pdg_step_6",
-          "version_id": "02965d26-ac1b-5634-95bc-a209580952ec"
+          "version_id": "90400aa6-60ab-58d4-a7cd-295acde66d27"
         },
         {
           "input_name": "input",
           "output_name": "9576e8cb-873d-59e9-a2ce-1bb4a86dda52",
           "source_id": "pdg_step_6",
           "target_id": "pdg_step_7",
-          "version_id": "02965d26-ac1b-5634-95bc-a209580952ec"
+          "version_id": "90400aa6-60ab-58d4-a7cd-295acde66d27"
         },
         {
           "input_name": "input",
           "output_name": "72c78189-0161-5959-8288-35633a9a84e6",
           "source_id": "pdg_step_4",
-          "target_id": "pdg_step_8",
-          "version_id": "02965d26-ac1b-5634-95bc-a209580952ec"
+          "target_id": "pdg_step_7",
+          "version_id": "90400aa6-60ab-58d4-a7cd-295acde66d27"
         },
         {
           "input_name": "input",
           "output_name": "2a713368-1393-5ec4-97b1-7c596860f264",
           "source_id": "pdg_step_3",
-          "target_id": "pdg_step_9",
-          "version_id": "02965d26-ac1b-5634-95bc-a209580952ec"
+          "target_id": "pdg_step_7",
+          "version_id": "90400aa6-60ab-58d4-a7cd-295acde66d27"
         },
         {
           "input_name": "input",
           "output_name": "802dec01-ac9c-5128-b213-5a2b8225c25d",
-          "source_id": "pdg_step_10",
-          "target_id": "pdg_step_11",
-          "version_id": "02965d26-ac1b-5634-95bc-a209580952ec"
+          "source_id": "pdg_step_7",
+          "target_id": "pdg_step_8",
+          "version_id": "90400aa6-60ab-58d4-a7cd-295acde66d27"
         }
       ],
       "table": "artifact_cdg_edges"
@@ -9516,7 +9547,7 @@
         "node_id",
         "bound_artifact_fqdn"
       ],
-      "row_count": 70,
+      "row_count": 63,
       "rows": [
         {
           "binding_confidence": 0.7,
@@ -9524,7 +9555,7 @@
           "bound_artifact_fqdn": "physics.pdg.remote_wave.equation.3585845894",
           "bound_version_content_hash": "f07289a1e7aa2a41e40a96e43799cf599aa175efa6a77c0b3692fc5935a8038d",
           "node_id": "pdg_step_1",
-          "version_id": "fc0573c5-1129-545e-8e59-0ef31b7ea631"
+          "version_id": "90bfde0a-dfb2-5514-98b4-9ed0944dbc41"
         },
         {
           "binding_confidence": 0.7,
@@ -9532,7 +9563,7 @@
           "bound_artifact_fqdn": "physics.pdg.remote_wave.equation.8399484849",
           "bound_version_content_hash": "52a4e17988996067c02a182139ce128720c36bf6921b6a0cc1d96376125d227e",
           "node_id": "pdg_step_1",
-          "version_id": "fc0573c5-1129-545e-8e59-0ef31b7ea631"
+          "version_id": "90bfde0a-dfb2-5514-98b4-9ed0944dbc41"
         },
         {
           "binding_confidence": 0.7,
@@ -9540,7 +9571,7 @@
           "bound_artifact_fqdn": "physics.pdg.remote_wave.equation.8399484849",
           "bound_version_content_hash": "52a4e17988996067c02a182139ce128720c36bf6921b6a0cc1d96376125d227e",
           "node_id": "pdg_step_2",
-          "version_id": "fc0573c5-1129-545e-8e59-0ef31b7ea631"
+          "version_id": "90bfde0a-dfb2-5514-98b4-9ed0944dbc41"
         },
         {
           "binding_confidence": 0.7,
@@ -9548,7 +9579,7 @@
           "bound_artifact_fqdn": "physics.pdg.remote_wave.equation.2404934990",
           "bound_version_content_hash": "bd6d0c4775c3b1bc956a08de3863c8a98bb3faa7fb4656900d049a5f91bf731d",
           "node_id": "pdg_step_2",
-          "version_id": "fc0573c5-1129-545e-8e59-0ef31b7ea631"
+          "version_id": "90bfde0a-dfb2-5514-98b4-9ed0944dbc41"
         },
         {
           "binding_confidence": 0.7,
@@ -9556,7 +9587,7 @@
           "bound_artifact_fqdn": "physics.pdg.remote_wave.equation.2404934990",
           "bound_version_content_hash": "bd6d0c4775c3b1bc956a08de3863c8a98bb3faa7fb4656900d049a5f91bf731d",
           "node_id": "pdg_step_3",
-          "version_id": "fc0573c5-1129-545e-8e59-0ef31b7ea631"
+          "version_id": "90bfde0a-dfb2-5514-98b4-9ed0944dbc41"
         },
         {
           "binding_confidence": 0.7,
@@ -9564,7 +9595,7 @@
           "bound_artifact_fqdn": "physics.pdg.remote_wave.equation.4949359835",
           "bound_version_content_hash": "db0bc4746b9ed3d9e2e7880ccbb787b8a9781143d0d844b11a8caf30aaab96cb",
           "node_id": "pdg_step_3",
-          "version_id": "fc0573c5-1129-545e-8e59-0ef31b7ea631"
+          "version_id": "90bfde0a-dfb2-5514-98b4-9ed0944dbc41"
         },
         {
           "binding_confidence": 0.7,
@@ -9572,7 +9603,7 @@
           "bound_artifact_fqdn": "physics.pdg.remote_wave.equation.4949359835",
           "bound_version_content_hash": "db0bc4746b9ed3d9e2e7880ccbb787b8a9781143d0d844b11a8caf30aaab96cb",
           "node_id": "pdg_step_4",
-          "version_id": "fc0573c5-1129-545e-8e59-0ef31b7ea631"
+          "version_id": "90bfde0a-dfb2-5514-98b4-9ed0944dbc41"
         },
         {
           "binding_confidence": 0.7,
@@ -9580,7 +9611,7 @@
           "bound_artifact_fqdn": "physics.pdg.remote_wave.equation.2494533900",
           "bound_version_content_hash": "d61183ec7dc312a8978f8124f3983ff9aa5d9da6ae35887b1e82a904a9fa21bb",
           "node_id": "pdg_step_4",
-          "version_id": "fc0573c5-1129-545e-8e59-0ef31b7ea631"
+          "version_id": "90bfde0a-dfb2-5514-98b4-9ed0944dbc41"
         },
         {
           "binding_confidence": 0.7,
@@ -9588,7 +9619,7 @@
           "bound_artifact_fqdn": "physics.pdg.remote_wave.equation.2103023049",
           "bound_version_content_hash": "d728d9ebe6f39259d1ddade1464b3449b1bae4a83265e706f3c864653b5d9da5",
           "node_id": "pdg_step_1",
-          "version_id": "3cdd3f71-1751-5ab3-830f-8aaf1e4a1b73"
+          "version_id": "f999aa2b-2d62-57b0-8e7d-277dac1ae7a7"
         },
         {
           "binding_confidence": 0.7,
@@ -9596,7 +9627,7 @@
           "bound_artifact_fqdn": "physics.pdg.remote_wave.equation.8483686863",
           "bound_version_content_hash": "eb3772dd01fde0bb9b4c30bd58862358bc7bde9feb324f8ec60180405af0daa3",
           "node_id": "pdg_step_1",
-          "version_id": "3cdd3f71-1751-5ab3-830f-8aaf1e4a1b73"
+          "version_id": "f999aa2b-2d62-57b0-8e7d-277dac1ae7a7"
         },
         {
           "binding_confidence": 0.7,
@@ -9604,23 +9635,23 @@
           "bound_artifact_fqdn": "physics.pdg.remote_wave.equation.2103023049",
           "bound_version_content_hash": "d728d9ebe6f39259d1ddade1464b3449b1bae4a83265e706f3c864653b5d9da5",
           "node_id": "pdg_step_2",
-          "version_id": "3cdd3f71-1751-5ab3-830f-8aaf1e4a1b73"
-        },
-        {
-          "binding_confidence": 0.7,
-          "binding_source": "pdg_remote_wave",
-          "bound_artifact_fqdn": "physics.pdg.remote_wave.equation.3470587782",
-          "bound_version_content_hash": "7ac84a708030affec1cf6d7af8f27e9bd00c421641c4fbc50ff3eaed4b0fa1de",
-          "node_id": "pdg_step_2",
-          "version_id": "3cdd3f71-1751-5ab3-830f-8aaf1e4a1b73"
+          "version_id": "f999aa2b-2d62-57b0-8e7d-277dac1ae7a7"
         },
         {
           "binding_confidence": 0.7,
           "binding_source": "pdg_remote_wave",
           "bound_artifact_fqdn": "physics.pdg.remote_wave.equation.4585932229",
           "bound_version_content_hash": "19f1ee3aa273a841e5dfc221d34c2a5e92010f19679bc2e0b21a6889b0ef41fd",
-          "node_id": "pdg_step_3",
-          "version_id": "3cdd3f71-1751-5ab3-830f-8aaf1e4a1b73"
+          "node_id": "pdg_step_2",
+          "version_id": "f999aa2b-2d62-57b0-8e7d-277dac1ae7a7"
+        },
+        {
+          "binding_confidence": 0.7,
+          "binding_source": "pdg_remote_wave",
+          "bound_artifact_fqdn": "physics.pdg.remote_wave.equation.3470587782",
+          "bound_version_content_hash": "7ac84a708030affec1cf6d7af8f27e9bd00c421641c4fbc50ff3eaed4b0fa1de",
+          "node_id": "pdg_step_2",
+          "version_id": "f999aa2b-2d62-57b0-8e7d-277dac1ae7a7"
         },
         {
           "binding_confidence": 0.7,
@@ -9628,15 +9659,15 @@
           "bound_artifact_fqdn": "physics.pdg.remote_wave.equation.3470587782",
           "bound_version_content_hash": "7ac84a708030affec1cf6d7af8f27e9bd00c421641c4fbc50ff3eaed4b0fa1de",
           "node_id": "pdg_step_3",
-          "version_id": "3cdd3f71-1751-5ab3-830f-8aaf1e4a1b73"
+          "version_id": "f999aa2b-2d62-57b0-8e7d-277dac1ae7a7"
         },
         {
           "binding_confidence": 0.7,
           "binding_source": "pdg_remote_wave",
-          "bound_artifact_fqdn": "physics.pdg.remote_wave.equation.3470587782",
-          "bound_version_content_hash": "7ac84a708030affec1cf6d7af8f27e9bd00c421641c4fbc50ff3eaed4b0fa1de",
-          "node_id": "pdg_step_4",
-          "version_id": "3cdd3f71-1751-5ab3-830f-8aaf1e4a1b73"
+          "bound_artifact_fqdn": "physics.pdg.remote_wave.equation.9894826550",
+          "bound_version_content_hash": "919614ca252355cf83a25c77ae1aa26bf5187e51668c780950837d6f4104d20d",
+          "node_id": "pdg_step_3",
+          "version_id": "f999aa2b-2d62-57b0-8e7d-277dac1ae7a7"
         },
         {
           "binding_confidence": 0.7,
@@ -9644,15 +9675,15 @@
           "bound_artifact_fqdn": "physics.pdg.remote_wave.equation.9894826550",
           "bound_version_content_hash": "919614ca252355cf83a25c77ae1aa26bf5187e51668c780950837d6f4104d20d",
           "node_id": "pdg_step_4",
-          "version_id": "3cdd3f71-1751-5ab3-830f-8aaf1e4a1b73"
+          "version_id": "f999aa2b-2d62-57b0-8e7d-277dac1ae7a7"
         },
         {
           "binding_confidence": 0.7,
           "binding_source": "pdg_remote_wave",
-          "bound_artifact_fqdn": "physics.pdg.remote_wave.equation.9894826550",
-          "bound_version_content_hash": "919614ca252355cf83a25c77ae1aa26bf5187e51668c780950837d6f4104d20d",
-          "node_id": "pdg_step_5",
-          "version_id": "3cdd3f71-1751-5ab3-830f-8aaf1e4a1b73"
+          "bound_artifact_fqdn": "physics.pdg.remote_wave.equation.8699789241",
+          "bound_version_content_hash": "ac270d83a050cd9ecbe302d1da2b29c029f5969e974d3ab87af08c656693720d",
+          "node_id": "pdg_step_4",
+          "version_id": "f999aa2b-2d62-57b0-8e7d-277dac1ae7a7"
         },
         {
           "binding_confidence": 0.7,
@@ -9660,15 +9691,15 @@
           "bound_artifact_fqdn": "physics.pdg.remote_wave.equation.8699789241",
           "bound_version_content_hash": "ac270d83a050cd9ecbe302d1da2b29c029f5969e974d3ab87af08c656693720d",
           "node_id": "pdg_step_5",
-          "version_id": "3cdd3f71-1751-5ab3-830f-8aaf1e4a1b73"
+          "version_id": "f999aa2b-2d62-57b0-8e7d-277dac1ae7a7"
         },
         {
           "binding_confidence": 0.7,
           "binding_source": "pdg_remote_wave",
-          "bound_artifact_fqdn": "physics.pdg.remote_wave.equation.8699789241",
-          "bound_version_content_hash": "ac270d83a050cd9ecbe302d1da2b29c029f5969e974d3ab87af08c656693720d",
-          "node_id": "pdg_step_6",
-          "version_id": "3cdd3f71-1751-5ab3-830f-8aaf1e4a1b73"
+          "bound_artifact_fqdn": "physics.pdg.remote_wave.equation.9180861128",
+          "bound_version_content_hash": "811f89a2944964567f8deb46bb0661d8942807397c9d8e45cac48b65832ff59c",
+          "node_id": "pdg_step_5",
+          "version_id": "f999aa2b-2d62-57b0-8e7d-277dac1ae7a7"
         },
         {
           "binding_confidence": 0.7,
@@ -9676,39 +9707,23 @@
           "bound_artifact_fqdn": "physics.pdg.remote_wave.equation.9180861128",
           "bound_version_content_hash": "811f89a2944964567f8deb46bb0661d8942807397c9d8e45cac48b65832ff59c",
           "node_id": "pdg_step_6",
-          "version_id": "3cdd3f71-1751-5ab3-830f-8aaf1e4a1b73"
-        },
-        {
-          "binding_confidence": 0.7,
-          "binding_source": "pdg_remote_wave",
-          "bound_artifact_fqdn": "physics.pdg.remote_wave.equation.9180861128",
-          "bound_version_content_hash": "811f89a2944964567f8deb46bb0661d8942807397c9d8e45cac48b65832ff59c",
-          "node_id": "pdg_step_7",
-          "version_id": "3cdd3f71-1751-5ab3-830f-8aaf1e4a1b73"
-        },
-        {
-          "binding_confidence": 0.7,
-          "binding_source": "pdg_remote_wave",
-          "bound_artifact_fqdn": "physics.pdg.remote_wave.equation.2405307372",
-          "bound_version_content_hash": "b101439610e02626fa871848faae8feccaeb9a71e5d01da6330373d99c5c8f35",
-          "node_id": "pdg_step_7",
-          "version_id": "3cdd3f71-1751-5ab3-830f-8aaf1e4a1b73"
+          "version_id": "f999aa2b-2d62-57b0-8e7d-277dac1ae7a7"
         },
         {
           "binding_confidence": 0.7,
           "binding_source": "pdg_remote_wave",
           "bound_artifact_fqdn": "physics.pdg.remote_wave.equation.8483686863",
           "bound_version_content_hash": "eb3772dd01fde0bb9b4c30bd58862358bc7bde9feb324f8ec60180405af0daa3",
-          "node_id": "pdg_step_8",
-          "version_id": "3cdd3f71-1751-5ab3-830f-8aaf1e4a1b73"
+          "node_id": "pdg_step_6",
+          "version_id": "f999aa2b-2d62-57b0-8e7d-277dac1ae7a7"
         },
         {
           "binding_confidence": 0.7,
           "binding_source": "pdg_remote_wave",
           "bound_artifact_fqdn": "physics.pdg.remote_wave.equation.2405307372",
           "bound_version_content_hash": "b101439610e02626fa871848faae8feccaeb9a71e5d01da6330373d99c5c8f35",
-          "node_id": "pdg_step_8",
-          "version_id": "3cdd3f71-1751-5ab3-830f-8aaf1e4a1b73"
+          "node_id": "pdg_step_6",
+          "version_id": "f999aa2b-2d62-57b0-8e7d-277dac1ae7a7"
         },
         {
           "binding_confidence": 0.7,
@@ -9716,7 +9731,7 @@
           "bound_artifact_fqdn": "physics.pdg.remote_wave.equation.4938429483",
           "bound_version_content_hash": "0b6ee8c54343338cff05232f8089985a4091115dc2fe0dee60dc28a96a136fc6",
           "node_id": "pdg_step_1",
-          "version_id": "10c8bd32-6dab-54d3-898a-abdf11037488"
+          "version_id": "377af314-2216-5043-808c-ca33523e2beb"
         },
         {
           "binding_confidence": 0.7,
@@ -9724,7 +9739,7 @@
           "bound_artifact_fqdn": "physics.pdg.remote_wave.equation.8332931442",
           "bound_version_content_hash": "997d83037d401d17d612f84818c8c9c5f12a28ab2322ce67f47599c26ff72925",
           "node_id": "pdg_step_1",
-          "version_id": "10c8bd32-6dab-54d3-898a-abdf11037488"
+          "version_id": "377af314-2216-5043-808c-ca33523e2beb"
         },
         {
           "binding_confidence": 0.7,
@@ -9732,7 +9747,7 @@
           "bound_artifact_fqdn": "physics.pdg.remote_wave.equation.8332931442",
           "bound_version_content_hash": "997d83037d401d17d612f84818c8c9c5f12a28ab2322ce67f47599c26ff72925",
           "node_id": "pdg_step_2",
-          "version_id": "10c8bd32-6dab-54d3-898a-abdf11037488"
+          "version_id": "377af314-2216-5043-808c-ca33523e2beb"
         },
         {
           "binding_confidence": 0.7,
@@ -9740,7 +9755,7 @@
           "bound_artifact_fqdn": "physics.pdg.remote_wave.equation.6885625907",
           "bound_version_content_hash": "05f16ab8ce890fc269faafbf63e52a42be2cb44856c5cfc3b33be1d4cb1656cd",
           "node_id": "pdg_step_2",
-          "version_id": "10c8bd32-6dab-54d3-898a-abdf11037488"
+          "version_id": "377af314-2216-5043-808c-ca33523e2beb"
         },
         {
           "binding_confidence": 0.7,
@@ -9748,7 +9763,7 @@
           "bound_artifact_fqdn": "physics.pdg.remote_wave.equation.6885625907",
           "bound_version_content_hash": "05f16ab8ce890fc269faafbf63e52a42be2cb44856c5cfc3b33be1d4cb1656cd",
           "node_id": "pdg_step_3",
-          "version_id": "10c8bd32-6dab-54d3-898a-abdf11037488"
+          "version_id": "377af314-2216-5043-808c-ca33523e2beb"
         },
         {
           "binding_confidence": 0.7,
@@ -9756,7 +9771,7 @@
           "bound_artifact_fqdn": "physics.pdg.remote_wave.equation.3331824625",
           "bound_version_content_hash": "e58c5b7539d5dc0a39743c10bcc643adcf56f1be539227ebd66e570cc94750aa",
           "node_id": "pdg_step_3",
-          "version_id": "10c8bd32-6dab-54d3-898a-abdf11037488"
+          "version_id": "377af314-2216-5043-808c-ca33523e2beb"
         },
         {
           "binding_confidence": 0.7,
@@ -9764,7 +9779,7 @@
           "bound_artifact_fqdn": "physics.pdg.remote_wave.equation.3331824625",
           "bound_version_content_hash": "e58c5b7539d5dc0a39743c10bcc643adcf56f1be539227ebd66e570cc94750aa",
           "node_id": "pdg_step_4",
-          "version_id": "10c8bd32-6dab-54d3-898a-abdf11037488"
+          "version_id": "377af314-2216-5043-808c-ca33523e2beb"
         },
         {
           "binding_confidence": 0.7,
@@ -9772,7 +9787,7 @@
           "bound_artifact_fqdn": "physics.pdg.remote_wave.equation.2501591100",
           "bound_version_content_hash": "3abac872d822388c893550818c9cf0d3c845ad83bd39236e47359fce945bfa73",
           "node_id": "pdg_step_4",
-          "version_id": "10c8bd32-6dab-54d3-898a-abdf11037488"
+          "version_id": "377af314-2216-5043-808c-ca33523e2beb"
         },
         {
           "binding_confidence": 0.7,
@@ -9780,7 +9795,7 @@
           "bound_artifact_fqdn": "physics.pdg.remote_wave.equation.8435841627",
           "bound_version_content_hash": "33ab801e5ac5467bb9add841174b333a601414c53f60f80d637107c001c0c0de",
           "node_id": "pdg_step_1",
-          "version_id": "279b1a08-cef3-522a-be04-76323866c276"
+          "version_id": "67defffe-886c-5f47-9d9e-e66f7bba6525"
         },
         {
           "binding_confidence": 0.7,
@@ -9788,7 +9803,7 @@
           "bound_artifact_fqdn": "physics.pdg.remote_wave.equation.3497828859",
           "bound_version_content_hash": "34c9fc80b1e7be623ac3de53714022c43e97ec9e668eeba88b36cd8a4eba4c96",
           "node_id": "pdg_step_1",
-          "version_id": "279b1a08-cef3-522a-be04-76323866c276"
+          "version_id": "67defffe-886c-5f47-9d9e-e66f7bba6525"
         },
         {
           "binding_confidence": 0.7,
@@ -9796,23 +9811,23 @@
           "bound_artifact_fqdn": "physics.pdg.remote_wave.equation.3497828859",
           "bound_version_content_hash": "34c9fc80b1e7be623ac3de53714022c43e97ec9e668eeba88b36cd8a4eba4c96",
           "node_id": "pdg_step_2",
-          "version_id": "279b1a08-cef3-522a-be04-76323866c276"
-        },
-        {
-          "binding_confidence": 0.7,
-          "binding_source": "pdg_remote_wave",
-          "bound_artifact_fqdn": "physics.pdg.remote_wave.equation.8368984890",
-          "bound_version_content_hash": "f16f3732864f511ffc9f50ed952a89e77b812fbb64691267e3f5e5ab9e96b197",
-          "node_id": "pdg_step_2",
-          "version_id": "279b1a08-cef3-522a-be04-76323866c276"
+          "version_id": "67defffe-886c-5f47-9d9e-e66f7bba6525"
         },
         {
           "binding_confidence": 0.7,
           "binding_source": "pdg_remote_wave",
           "bound_artifact_fqdn": "physics.pdg.remote_wave.equation.9781951738",
           "bound_version_content_hash": "b3a44cd44aba630e3e3acdaff0f0ab7c321e8587613b3f6822b14e1ed1f3af25",
-          "node_id": "pdg_step_3",
-          "version_id": "279b1a08-cef3-522a-be04-76323866c276"
+          "node_id": "pdg_step_2",
+          "version_id": "67defffe-886c-5f47-9d9e-e66f7bba6525"
+        },
+        {
+          "binding_confidence": 0.7,
+          "binding_source": "pdg_remote_wave",
+          "bound_artifact_fqdn": "physics.pdg.remote_wave.equation.8368984890",
+          "bound_version_content_hash": "f16f3732864f511ffc9f50ed952a89e77b812fbb64691267e3f5e5ab9e96b197",
+          "node_id": "pdg_step_2",
+          "version_id": "67defffe-886c-5f47-9d9e-e66f7bba6525"
         },
         {
           "binding_confidence": 0.7,
@@ -9820,15 +9835,15 @@
           "bound_artifact_fqdn": "physics.pdg.remote_wave.equation.8368984890",
           "bound_version_content_hash": "f16f3732864f511ffc9f50ed952a89e77b812fbb64691267e3f5e5ab9e96b197",
           "node_id": "pdg_step_3",
-          "version_id": "279b1a08-cef3-522a-be04-76323866c276"
+          "version_id": "67defffe-886c-5f47-9d9e-e66f7bba6525"
         },
         {
           "binding_confidence": 0.7,
           "binding_source": "pdg_remote_wave",
-          "bound_artifact_fqdn": "physics.pdg.remote_wave.equation.8368984890",
-          "bound_version_content_hash": "f16f3732864f511ffc9f50ed952a89e77b812fbb64691267e3f5e5ab9e96b197",
-          "node_id": "pdg_step_4",
-          "version_id": "279b1a08-cef3-522a-be04-76323866c276"
+          "bound_artifact_fqdn": "physics.pdg.remote_wave.equation.1190768176",
+          "bound_version_content_hash": "b196b00895bf6c8a9ffba045a775875bdaaa9d0e80962d0e9cdd04cb9ff9be31",
+          "node_id": "pdg_step_3",
+          "version_id": "67defffe-886c-5f47-9d9e-e66f7bba6525"
         },
         {
           "binding_confidence": 0.7,
@@ -9836,71 +9851,55 @@
           "bound_artifact_fqdn": "physics.pdg.remote_wave.equation.1190768176",
           "bound_version_content_hash": "b196b00895bf6c8a9ffba045a775875bdaaa9d0e80962d0e9cdd04cb9ff9be31",
           "node_id": "pdg_step_4",
-          "version_id": "279b1a08-cef3-522a-be04-76323866c276"
-        },
-        {
-          "binding_confidence": 0.7,
-          "binding_source": "pdg_remote_wave",
-          "bound_artifact_fqdn": "physics.pdg.remote_wave.equation.1190768176",
-          "bound_version_content_hash": "b196b00895bf6c8a9ffba045a775875bdaaa9d0e80962d0e9cdd04cb9ff9be31",
-          "node_id": "pdg_step_5",
-          "version_id": "279b1a08-cef3-522a-be04-76323866c276"
+          "version_id": "67defffe-886c-5f47-9d9e-e66f7bba6525"
         },
         {
           "binding_confidence": 0.7,
           "binding_source": "pdg_remote_wave",
           "bound_artifact_fqdn": "physics.pdg.remote_wave.equation.3605073197",
           "bound_version_content_hash": "b0ebe66ddfd51ab6b004aa081eb4955bb7d2b0b54ac2d1f793fab59d0c9ce965",
-          "node_id": "pdg_step_5",
-          "version_id": "279b1a08-cef3-522a-be04-76323866c276"
+          "node_id": "pdg_step_4",
+          "version_id": "67defffe-886c-5f47-9d9e-e66f7bba6525"
         },
         {
           "binding_confidence": 0.7,
           "binding_source": "pdg_remote_wave",
           "bound_artifact_fqdn": "physics.pdg.remote_wave.equation.8435841627",
           "bound_version_content_hash": "33ab801e5ac5467bb9add841174b333a601414c53f60f80d637107c001c0c0de",
-          "node_id": "pdg_step_6",
-          "version_id": "279b1a08-cef3-522a-be04-76323866c276"
-        },
-        {
-          "binding_confidence": 0.7,
-          "binding_source": "pdg_remote_wave",
-          "bound_artifact_fqdn": "physics.pdg.remote_wave.equation.9847143017",
-          "bound_version_content_hash": "ff5468ef8f22bccea8b70206ee5bbec7efff00146c602ededf97d43f2e8be881",
-          "node_id": "pdg_step_6",
-          "version_id": "279b1a08-cef3-522a-be04-76323866c276"
+          "node_id": "pdg_step_5",
+          "version_id": "67defffe-886c-5f47-9d9e-e66f7bba6525"
         },
         {
           "binding_confidence": 0.7,
           "binding_source": "pdg_remote_wave",
           "bound_artifact_fqdn": "physics.pdg.remote_wave.equation.3605073197",
           "bound_version_content_hash": "b0ebe66ddfd51ab6b004aa081eb4955bb7d2b0b54ac2d1f793fab59d0c9ce965",
-          "node_id": "pdg_step_7",
-          "version_id": "279b1a08-cef3-522a-be04-76323866c276"
+          "node_id": "pdg_step_5",
+          "version_id": "67defffe-886c-5f47-9d9e-e66f7bba6525"
         },
         {
           "binding_confidence": 0.7,
           "binding_source": "pdg_remote_wave",
           "bound_artifact_fqdn": "physics.pdg.remote_wave.equation.9847143017",
           "bound_version_content_hash": "ff5468ef8f22bccea8b70206ee5bbec7efff00146c602ededf97d43f2e8be881",
-          "node_id": "pdg_step_7",
-          "version_id": "279b1a08-cef3-522a-be04-76323866c276"
+          "node_id": "pdg_step_5",
+          "version_id": "67defffe-886c-5f47-9d9e-e66f7bba6525"
         },
         {
           "binding_confidence": 0.7,
           "binding_source": "pdg_remote_wave",
           "bound_artifact_fqdn": "physics.pdg.remote_wave.equation.9847143017",
           "bound_version_content_hash": "ff5468ef8f22bccea8b70206ee5bbec7efff00146c602ededf97d43f2e8be881",
-          "node_id": "pdg_step_8",
-          "version_id": "279b1a08-cef3-522a-be04-76323866c276"
+          "node_id": "pdg_step_6",
+          "version_id": "67defffe-886c-5f47-9d9e-e66f7bba6525"
         },
         {
           "binding_confidence": 0.7,
           "binding_source": "pdg_remote_wave",
           "bound_artifact_fqdn": "physics.pdg.remote_wave.equation.9718685793",
           "bound_version_content_hash": "249458046ac364476909077ac0f0ae6f5ff6a066f828706c09ee906ef3143830",
-          "node_id": "pdg_step_8",
-          "version_id": "279b1a08-cef3-522a-be04-76323866c276"
+          "node_id": "pdg_step_6",
+          "version_id": "67defffe-886c-5f47-9d9e-e66f7bba6525"
         },
         {
           "binding_confidence": 0.7,
@@ -9908,7 +9907,7 @@
           "bound_artifact_fqdn": "physics.pdg.remote_wave.equation.4087145886",
           "bound_version_content_hash": "c6ff59777b1e6e70b406705472ab11fde6dd0f24e728e3bf59071c03dbe623b4",
           "node_id": "pdg_step_1",
-          "version_id": "02965d26-ac1b-5634-95bc-a209580952ec"
+          "version_id": "90400aa6-60ab-58d4-a7cd-295acde66d27"
         },
         {
           "binding_confidence": 0.7,
@@ -9916,7 +9915,7 @@
           "bound_artifact_fqdn": "physics.pdg.remote_wave.equation.4128500715",
           "bound_version_content_hash": "e977f6d8ea8e9b50adf4a22919cd5d0bd84ff8198e94633eb2f37745b17edf49",
           "node_id": "pdg_step_1",
-          "version_id": "02965d26-ac1b-5634-95bc-a209580952ec"
+          "version_id": "90400aa6-60ab-58d4-a7cd-295acde66d27"
         },
         {
           "binding_confidence": 0.7,
@@ -9924,7 +9923,7 @@
           "bound_artifact_fqdn": "physics.pdg.remote_wave.equation.4087145886",
           "bound_version_content_hash": "c6ff59777b1e6e70b406705472ab11fde6dd0f24e728e3bf59071c03dbe623b4",
           "node_id": "pdg_step_2",
-          "version_id": "02965d26-ac1b-5634-95bc-a209580952ec"
+          "version_id": "90400aa6-60ab-58d4-a7cd-295acde66d27"
         },
         {
           "binding_confidence": 0.7,
@@ -9932,7 +9931,7 @@
           "bound_artifact_fqdn": "physics.pdg.remote_wave.equation.9243879541",
           "bound_version_content_hash": "5817c4d949aa4a057c169f2a5cfc69a8f1b60eef01fe216b4fd94fb4345bdfd6",
           "node_id": "pdg_step_2",
-          "version_id": "02965d26-ac1b-5634-95bc-a209580952ec"
+          "version_id": "90400aa6-60ab-58d4-a7cd-295acde66d27"
         },
         {
           "binding_confidence": 0.7,
@@ -9940,7 +9939,7 @@
           "bound_artifact_fqdn": "physics.pdg.remote_wave.equation.9243879541",
           "bound_version_content_hash": "5817c4d949aa4a057c169f2a5cfc69a8f1b60eef01fe216b4fd94fb4345bdfd6",
           "node_id": "pdg_step_3",
-          "version_id": "02965d26-ac1b-5634-95bc-a209580952ec"
+          "version_id": "90400aa6-60ab-58d4-a7cd-295acde66d27"
         },
         {
           "binding_confidence": 0.7,
@@ -9948,7 +9947,7 @@
           "bound_artifact_fqdn": "physics.pdg.remote_wave.equation.7002609475",
           "bound_version_content_hash": "94f0ae6bbbd41bd1c6cfb38930caf1e29ced7c6f8dfe3232013cb9cbfe4f311e",
           "node_id": "pdg_step_3",
-          "version_id": "02965d26-ac1b-5634-95bc-a209580952ec"
+          "version_id": "90400aa6-60ab-58d4-a7cd-295acde66d27"
         },
         {
           "binding_confidence": 0.7,
@@ -9956,7 +9955,7 @@
           "bound_artifact_fqdn": "physics.pdg.remote_wave.equation.4128500715",
           "bound_version_content_hash": "e977f6d8ea8e9b50adf4a22919cd5d0bd84ff8198e94633eb2f37745b17edf49",
           "node_id": "pdg_step_4",
-          "version_id": "02965d26-ac1b-5634-95bc-a209580952ec"
+          "version_id": "90400aa6-60ab-58d4-a7cd-295acde66d27"
         },
         {
           "binding_confidence": 0.7,
@@ -9964,7 +9963,7 @@
           "bound_artifact_fqdn": "physics.pdg.remote_wave.equation.2051901211",
           "bound_version_content_hash": "6eeaea6cef7d108660c3c0440a40212e4b077a81a1150f95bb91c813b8b86c0a",
           "node_id": "pdg_step_4",
-          "version_id": "02965d26-ac1b-5634-95bc-a209580952ec"
+          "version_id": "90400aa6-60ab-58d4-a7cd-295acde66d27"
         },
         {
           "binding_confidence": 0.7,
@@ -9972,7 +9971,7 @@
           "bound_artifact_fqdn": "physics.pdg.remote_wave.equation.4087145886",
           "bound_version_content_hash": "c6ff59777b1e6e70b406705472ab11fde6dd0f24e728e3bf59071c03dbe623b4",
           "node_id": "pdg_step_5",
-          "version_id": "02965d26-ac1b-5634-95bc-a209580952ec"
+          "version_id": "90400aa6-60ab-58d4-a7cd-295acde66d27"
         },
         {
           "binding_confidence": 0.7,
@@ -9980,7 +9979,7 @@
           "bound_artifact_fqdn": "physics.pdg.remote_wave.equation.2271186630",
           "bound_version_content_hash": "6ed89cc623f43b16c1fe235edb54e9e1aaa9ea47bb084d9b23c3b5f0d957960c",
           "node_id": "pdg_step_5",
-          "version_id": "02965d26-ac1b-5634-95bc-a209580952ec"
+          "version_id": "90400aa6-60ab-58d4-a7cd-295acde66d27"
         },
         {
           "binding_confidence": 0.7,
@@ -9988,7 +9987,7 @@
           "bound_artifact_fqdn": "physics.pdg.remote_wave.equation.2271186630",
           "bound_version_content_hash": "6ed89cc623f43b16c1fe235edb54e9e1aaa9ea47bb084d9b23c3b5f0d957960c",
           "node_id": "pdg_step_6",
-          "version_id": "02965d26-ac1b-5634-95bc-a209580952ec"
+          "version_id": "90400aa6-60ab-58d4-a7cd-295acde66d27"
         },
         {
           "binding_confidence": 0.7,
@@ -9996,7 +9995,7 @@
           "bound_artifact_fqdn": "physics.pdg.remote_wave.equation.2809345867",
           "bound_version_content_hash": "6d80a75d422d4bd3a0a931c2c76d3f41dd3009b920c0f2b1f089e3e00014a0de",
           "node_id": "pdg_step_6",
-          "version_id": "02965d26-ac1b-5634-95bc-a209580952ec"
+          "version_id": "90400aa6-60ab-58d4-a7cd-295acde66d27"
         },
         {
           "binding_confidence": 0.7,
@@ -10004,79 +10003,55 @@
           "bound_artifact_fqdn": "physics.pdg.remote_wave.equation.2809345867",
           "bound_version_content_hash": "6d80a75d422d4bd3a0a931c2c76d3f41dd3009b920c0f2b1f089e3e00014a0de",
           "node_id": "pdg_step_7",
-          "version_id": "02965d26-ac1b-5634-95bc-a209580952ec"
-        },
-        {
-          "binding_confidence": 0.7,
-          "binding_source": "pdg_remote_wave",
-          "bound_artifact_fqdn": "physics.pdg.remote_wave.equation.4866160902",
-          "bound_version_content_hash": "d370cec1c74888267c6aef689c45d08075bf32240f337bf25e8fa9429ac89a08",
-          "node_id": "pdg_step_7",
-          "version_id": "02965d26-ac1b-5634-95bc-a209580952ec"
+          "version_id": "90400aa6-60ab-58d4-a7cd-295acde66d27"
         },
         {
           "binding_confidence": 0.7,
           "binding_source": "pdg_remote_wave",
           "bound_artifact_fqdn": "physics.pdg.remote_wave.equation.2051901211",
           "bound_version_content_hash": "6eeaea6cef7d108660c3c0440a40212e4b077a81a1150f95bb91c813b8b86c0a",
-          "node_id": "pdg_step_8",
-          "version_id": "02965d26-ac1b-5634-95bc-a209580952ec"
-        },
-        {
-          "binding_confidence": 0.7,
-          "binding_source": "pdg_remote_wave",
-          "bound_artifact_fqdn": "physics.pdg.remote_wave.equation.4866160902",
-          "bound_version_content_hash": "d370cec1c74888267c6aef689c45d08075bf32240f337bf25e8fa9429ac89a08",
-          "node_id": "pdg_step_8",
-          "version_id": "02965d26-ac1b-5634-95bc-a209580952ec"
+          "node_id": "pdg_step_7",
+          "version_id": "90400aa6-60ab-58d4-a7cd-295acde66d27"
         },
         {
           "binding_confidence": 0.7,
           "binding_source": "pdg_remote_wave",
           "bound_artifact_fqdn": "physics.pdg.remote_wave.equation.7002609475",
           "bound_version_content_hash": "94f0ae6bbbd41bd1c6cfb38930caf1e29ced7c6f8dfe3232013cb9cbfe4f311e",
-          "node_id": "pdg_step_9",
-          "version_id": "02965d26-ac1b-5634-95bc-a209580952ec"
-        },
-        {
-          "binding_confidence": 0.7,
-          "binding_source": "pdg_remote_wave",
-          "bound_artifact_fqdn": "physics.pdg.remote_wave.equation.4866160902",
-          "bound_version_content_hash": "d370cec1c74888267c6aef689c45d08075bf32240f337bf25e8fa9429ac89a08",
-          "node_id": "pdg_step_9",
-          "version_id": "02965d26-ac1b-5634-95bc-a209580952ec"
+          "node_id": "pdg_step_7",
+          "version_id": "90400aa6-60ab-58d4-a7cd-295acde66d27"
         },
         {
           "binding_confidence": 0.7,
           "binding_source": "pdg_remote_wave",
           "bound_artifact_fqdn": "physics.pdg.remote_wave.equation.6753224061",
           "bound_version_content_hash": "c754caa725aa5a49ee5a934ef7309e99a5284dcfa5bc552c4c6d5d6138fab80f",
-          "node_id": "pdg_step_10",
-          "version_id": "02965d26-ac1b-5634-95bc-a209580952ec"
+          "node_id": "pdg_step_7",
+          "version_id": "90400aa6-60ab-58d4-a7cd-295acde66d27"
         },
         {
           "binding_confidence": 0.7,
           "binding_source": "pdg_remote_wave",
           "bound_artifact_fqdn": "physics.pdg.remote_wave.equation.4866160902",
           "bound_version_content_hash": "d370cec1c74888267c6aef689c45d08075bf32240f337bf25e8fa9429ac89a08",
-          "node_id": "pdg_step_10",
-          "version_id": "02965d26-ac1b-5634-95bc-a209580952ec"
+          "node_id": "pdg_step_7",
+          "version_id": "90400aa6-60ab-58d4-a7cd-295acde66d27"
         },
         {
           "binding_confidence": 0.7,
           "binding_source": "pdg_remote_wave",
           "bound_artifact_fqdn": "physics.pdg.remote_wave.equation.4866160902",
           "bound_version_content_hash": "d370cec1c74888267c6aef689c45d08075bf32240f337bf25e8fa9429ac89a08",
-          "node_id": "pdg_step_11",
-          "version_id": "02965d26-ac1b-5634-95bc-a209580952ec"
+          "node_id": "pdg_step_8",
+          "version_id": "90400aa6-60ab-58d4-a7cd-295acde66d27"
         },
         {
           "binding_confidence": 0.7,
           "binding_source": "pdg_remote_wave",
           "bound_artifact_fqdn": "physics.pdg.remote_wave.equation.1457415749",
           "bound_version_content_hash": "b376589c31cf0365c430e950b6a9b729c23313611c866c432041a42a4d44ea4e",
-          "node_id": "pdg_step_11",
-          "version_id": "02965d26-ac1b-5634-95bc-a209580952ec"
+          "node_id": "pdg_step_8",
+          "version_id": "90400aa6-60ab-58d4-a7cd-295acde66d27"
         }
       ],
       "table": "artifact_cdg_bindings"

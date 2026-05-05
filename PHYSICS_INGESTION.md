@@ -57,22 +57,22 @@ data/physics_ingestion_seeds/
 
 The seed manifest pins replay order, row counts, source versions, and SHA-256
 digests for each `write_plan.json` and `summary.json` artifact. The current
-seed set contains 6,122 rows:
+seed set contains 5,728 rows:
 
 | Seed | Source version | Rows |
 | --- | --- | ---: |
 | `wikidata_physics_20260505` | `wikidata-physics-candidates-2026-05-05-limit-50` | 24 |
 | `pdg_fixture_wave1_20260505` | `pdg-first-wave-2026-05-05` | 24 |
-| `pdg_remote_wave1_20260505` | `pdg-remote-wave1-2026-05-05` | 714 |
-| `pdg_remote_wave2_20260505` | `pdg-remote-wave2-2026-05-05` | 583 |
-| `pdg_remote_wave3_20260505` | `pdg-remote-wave3-2026-05-05` | 489 |
-| `pdg_remote_wave4_20260505` | `pdg-remote-wave4-2026-05-05` | 449 |
-| `pdg_remote_wave5_20260505` | `pdg-remote-wave5-2026-05-05` | 318 |
-| `pdg_remote_wave6_20260505` | `pdg-remote-wave6-2026-05-05` | 393 |
-| `pdg_remote_wave7_20260505` | `pdg-remote-wave7-2026-05-05` | 759 |
-| `pdg_remote_wave8_20260505` | `pdg-remote-wave8-2026-05-05` | 1,168 |
-| `pdg_remote_wave9_20260505` | `pdg-remote-wave9-2026-05-05` | 1,037 |
-| `pdg_remote_wave10_20260505` | `pdg-remote-wave10-2026-05-05` | 164 |
+| `pdg_remote_wave1_20260505` | `pdg-remote-wave1-2026-05-05` | 659 |
+| `pdg_remote_wave2_20260505` | `pdg-remote-wave2-2026-05-05` | 549 |
+| `pdg_remote_wave3_20260505` | `pdg-remote-wave3-2026-05-05` | 455 |
+| `pdg_remote_wave4_20260505` | `pdg-remote-wave4-2026-05-05` | 426 |
+| `pdg_remote_wave5_20260505` | `pdg-remote-wave5-2026-05-05` | 304 |
+| `pdg_remote_wave6_20260505` | `pdg-remote-wave6-2026-05-05` | 369 |
+| `pdg_remote_wave7_20260505` | `pdg-remote-wave7-2026-05-05` | 713 |
+| `pdg_remote_wave8_20260505` | `pdg-remote-wave8-2026-05-05` | 1,080 |
+| `pdg_remote_wave9_20260505` | `pdg-remote-wave9-2026-05-05` | 973 |
+| `pdg_remote_wave10_20260505` | `pdg-remote-wave10-2026-05-05` | 152 |
 
 Replay all committed seeds from `sciona-atoms-physics`:
 
@@ -321,6 +321,12 @@ equation candidate with `pdg_node_label: feed` provenance so relationship/CDG
 endpoints remain complete. Expression rows remain `needs_human`/`unknown` until
 symbolic normalization and dimensional validation are explicitly completed.
 
+The committed remote PDG seeds use normalized CDG projections: raw
+`artifact_relationships` remain one row per premise-to-conclusion PDG edge, but
+CDG operation nodes are grouped by source `pdg_step_id` when present. This keeps
+multi-input derivation steps as one CDG operation node with all premise and
+output expression bindings attached.
+
 ## PDG Remote Waves Ingested
 
 The remote PDG inventory was built from
@@ -335,16 +341,16 @@ rows, PDG relationship rows, and CDG rows across ten applied waves.
 
 | Wave | Derivations | Symbolic rows | Relationships | CDG nodes | CDG edges | CDG bindings |
 | --- | --- | ---: | ---: | ---: | ---: | ---: |
-| `pdg_remote_wave1_20260505` | `000008`, `000009`, `000018`, `129143`, `000004` | 80 | 83 | 83 | 51 | 166 |
-| `pdg_remote_wave2_20260505` | `000001`, `000006`, `142831`, `146432`, `884319` | 64 | 67 | 67 | 49 | 133 |
-| `pdg_remote_wave3_20260505` | `000005`, `000011`, `000015`, `670255`, `513999` | 57 | 52 | 53 | 39 | 106 |
-| `pdg_remote_wave4_20260505` | `000002`, `000003`, `000007`, `000012`, `000013` | 49 | 51 | 52 | 35 | 104 |
-| `pdg_remote_wave5_20260505` | `000014`, `000016`, `000017`, `375160`, `681943` | 36 | 35 | 35 | 23 | 70 |
-| `pdg_remote_wave6_20260505` | `909006`, `918264`, `920011`, `387954`, `527822` | 46 | 43 | 43 | 26 | 86 |
-| `pdg_remote_wave7_20260505` | `282755`, `522862`, `608598`, `764666`, `820976` | 89 | 84 | 84 | 56 | 168 |
-| `pdg_remote_wave8_20260505` | `201726`, `332170`, `374317`, `551770`, `713234` | 127 | 134 | 138 | 101 | 276 |
-| `pdg_remote_wave9_20260505` | `000010`, `187793`, `539398` | 111 | 123 | 123 | 94 | 246 |
-| `pdg_remote_wave10_20260505` | `207210` | 18 | 19 | 19 | 13 | 38 |
+| `pdg_remote_wave1_20260505` | `000008`, `000009`, `000018`, `129143`, `000004` | 80 | 83 | 56 | 50 | 139 |
+| `pdg_remote_wave2_20260505` | `000001`, `000006`, `142831`, `146432`, `884319` | 64 | 67 | 50 | 49 | 116 |
+| `pdg_remote_wave3_20260505` | `000005`, `000011`, `000015`, `670255`, `513999` | 57 | 52 | 38 | 36 | 90 |
+| `pdg_remote_wave4_20260505` | `000002`, `000003`, `000007`, `000012`, `000013` | 49 | 51 | 41 | 35 | 92 |
+| `pdg_remote_wave5_20260505` | `000014`, `000016`, `000017`, `375160`, `681943` | 36 | 35 | 28 | 23 | 63 |
+| `pdg_remote_wave6_20260505` | `909006`, `918264`, `920011`, `387954`, `527822` | 46 | 43 | 31 | 26 | 74 |
+| `pdg_remote_wave7_20260505` | `282755`, `522862`, `608598`, `764666`, `820976` | 89 | 84 | 61 | 56 | 145 |
+| `pdg_remote_wave8_20260505` | `201726`, `332170`, `374317`, `551770`, `713234` | 127 | 134 | 98 | 97 | 232 |
+| `pdg_remote_wave9_20260505` | `000010`, `187793`, `539398` | 112 | 124 | 88 | 94 | 212 |
+| `pdg_remote_wave10_20260505` | `207210` | 18 | 19 | 13 | 13 | 32 |
 
 `207210` (`Newton's Law of Gravitation`) was originally deferred because eight
 edges referenced node IDs that `steps.cypher` treated as `expression` endpoints
@@ -358,14 +364,9 @@ The latest wave, `pdg_remote_wave10_20260505`, promoted:
 
 The wave 10 dry run and apply both completed with zero graph diagnostics and
 zero skipped PDG edges. The apply used authenticated GitHub requests via
-`gh-auth-token`; the last observed remaining quota was 4,959 requests.
+`gh-auth-token`; the last observed remaining quota was 4,870 requests.
 
 ## TODO
 
-- Normalize PDG-derived CDGs by grouping relationship rows that share the same
-  `pdg_step_id`. The current scaffold creates one CDG node per
-  premise-to-conclusion relationship, so a single PDG derivation step with
-  multiple inputs can become multiple CDG nodes. Preserve those raw
-  `artifact_relationships` for provenance, but add a compressed CDG projection
-  where one derivation step becomes one multi-input operation node with all
-  premise expression bindings attached.
+- Add a TeX-rendered equation view to the physics ingestion dashboard once the
+  review UI is ready to benefit from richer formula rendering.
