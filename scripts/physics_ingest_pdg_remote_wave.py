@@ -468,14 +468,14 @@ def build_selected_derivation_payloads(
             }
         )
         equations = [
-            _expression_node_to_equation(
+            _endpoint_node_to_equation(
                 graph,
                 expression_id,
                 derivation_id=derivation_id,
                 source_version=source_version,
             )
             for expression_id in expression_ids
-            if expression_id in graph.nodes_by_label.get("expression", {})
+            if _endpoint_node_exists(graph, expression_id)
         ]
         edges = []
         for step in steps:
@@ -592,26 +592,38 @@ def _step_records(graph: PDGRemoteGraph) -> dict[str, tuple[StepRecord, ...]]:
     }
 
 
-def _expression_node_to_equation(
+def _endpoint_node_exists(graph: PDGRemoteGraph, node_id: str) -> bool:
+    return (
+        node_id in graph.nodes_by_label.get("expression", {})
+        or node_id in graph.nodes_by_label.get("feed", {})
+    )
+
+
+def _endpoint_node_to_equation(
     graph: PDGRemoteGraph,
-    expression_id: str,
+    node_id: str,
     *,
     derivation_id: str,
     source_version: str,
 ) -> dict[str, Any]:
-    node = graph.nodes_by_label["expression"][expression_id]
+    label = "expression"
+    node = graph.nodes_by_label.get("expression", {}).get(node_id)
+    if node is None:
+        label = "feed"
+        node = graph.nodes_by_label["feed"][node_id]
     props = dict(node.properties)
     formula = _expression_latex(props) or str(props.get("sympy") or "")
     return {
-        "id": expression_id,
-        "label": str(props.get("name_latex") or formula or expression_id),
+        "id": node_id,
+        "label": str(props.get("name_latex") or formula or node_id),
         "description": str(props.get("description_latex") or ""),
         "latex": formula,
         "formula_format": "latex" if formula else "sympy",
-        "source_uri": f"pdg://remote/{derivation_id}/expression/{expression_id}",
+        "source_uri": f"pdg://remote/{derivation_id}/{label}/{node_id}",
         "raw_payload": {
             **props,
-            "pdg_expression_id": expression_id,
+            "pdg_node_label": label,
+            "pdg_expression_id": node_id,
             "pdg_derivation_id": derivation_id,
             "source_version": source_version,
         },

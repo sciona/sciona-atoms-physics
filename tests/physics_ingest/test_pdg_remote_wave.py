@@ -72,3 +72,65 @@ def test_remote_wave_converts_cypher_derivation_to_pdg_payload() -> None:
     assert payload["inference_edges"][0]["bindings"]["feeds"] == [
         {"feed_id": "feed-a", "latex": "T", "sympy": ""}
     ]
+
+
+def test_remote_wave_promotes_feed_nodes_used_as_expression_endpoints() -> None:
+    graph = parse_remote_pdg_cypher(
+        {
+            "conversion_of_data_formats/deriv.cypher": (
+                'UNWIND [{id:"207210", properties:{name_latex:"Newton gravitation"}}] AS row\n'
+                "CREATE (n:derivation{id: row.id}) SET n += row.properties;\n"
+            ),
+            "conversion_of_data_formats/infrules.cypher": (
+                'UNWIND [{id:"111886", properties:{name_latex:"change variable X to Y"}}] AS row\n'
+                "CREATE (n:inference_rule{id: row.id}) SET n += row.properties;\n"
+            ),
+            "conversion_of_data_formats/expr_and_feed.cypher": (
+                'UNWIND [{id:"expr-a", properties:{latex_lhs:"F", latex_relation:"=", latex_rhs:"m a"}}] AS row\n'
+                "CREATE (n:expression{id: row.id}) SET n += row.properties;\n"
+                'UNWIND [{id:"feed-endpoint", properties:{latex:"F \\\\propto m"}}] AS row\n'
+                "CREATE (n:feed{id: row.id}) SET n += row.properties;\n"
+            ),
+            "conversion_of_data_formats/steps.cypher": (
+                'UNWIND [{id:"step-a", properties:{}}] AS row\n'
+                "CREATE (n:step{id: row.id}) SET n += row.properties;\n"
+                'UNWIND [{start: {id:"207210"}, end: {id:"step-a"}, properties:{sequence_index:1}}] AS row\n'
+                "MATCH (start:derivation{id: row.start.id})\n"
+                "MATCH (end:step{id: row.end.id})\n"
+                "CREATE (start)-[r:HAS_STEP]->(end) SET r += row.properties;\n"
+                'UNWIND [{start: {id:"step-a"}, end: {id:"111886"}, properties:{}}] AS row\n'
+                "MATCH (start:step{id: row.start.id})\n"
+                "MATCH (end:inference_rule{id: row.end.id})\n"
+                "CREATE (start)-[r:HAS_INFERENCE_RULE]->(end) SET r += row.properties;\n"
+                'UNWIND [{start: {id:"step-a"}, end: {id:"expr-a"}, properties:{sequence_index:"0"}}] AS row\n'
+                "MATCH (start:step{id: row.start.id})\n"
+                "MATCH (end:expression{id: row.end.id})\n"
+                "CREATE (start)-[r:HAS_INPUT]->(end) SET r += row.properties;\n"
+                'UNWIND [{start: {id:"step-a"}, end: {id:"feed-endpoint"}, properties:{sequence_index:"0"}}] AS row\n'
+                "MATCH (start:step{id: row.start.id})\n"
+                "MATCH (end:expression{id: row.end.id})\n"
+                "CREATE (start)-[r:HAS_OUTPUT]->(end) SET r += row.properties;\n"
+            ),
+        }
+    )
+
+    payloads = build_selected_derivation_payloads(
+        graph,
+        ["207210"],
+        repo="allofphysicsgraph/ui_v8_website_flask_neo4j",
+        ref="gh-pages",
+        source_version="test-version",
+        license_expression="CC-BY-4.0",
+        license_evidence_url="https://derivationmap.net/developer_documentation",
+    )
+
+    payload = payloads[0]
+    equations_by_id = {row["id"]: row for row in payload["equations"]}
+
+    assert sorted(equations_by_id) == ["expr-a", "feed-endpoint"]
+    assert equations_by_id["feed-endpoint"]["latex"] == "F \\propto m"
+    assert equations_by_id["feed-endpoint"]["source_uri"].endswith(
+        "/feed/feed-endpoint"
+    )
+    assert payload["inference_edges"][0]["source"] == "expr-a"
+    assert payload["inference_edges"][0]["target"] == "feed-endpoint"
