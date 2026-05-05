@@ -231,9 +231,40 @@
       "total_row_count": 393,
       "write_plan_path": "pdg_remote_wave6_20260505/write_plan.json",
       "write_plan_sha256": "e26e37a9efcc6cd373d17b70ca158cf4a894c5986910bd1fe4f98ad149c4af8a"
+    },
+    {
+      "description": "Remote PDG promotion wave 7",
+      "kind": "pdg_remote",
+      "order": 9,
+      "seed_id": "pdg_remote_wave7_20260505",
+      "selected_derivation_ids": [
+        "282755",
+        "522862",
+        "608598",
+        "764666",
+        "820976"
+      ],
+      "snapshot_id": "272c9865-7ee0-58eb-996e-cc5591465adf",
+      "source_version": "pdg-remote-wave7-2026-05-05",
+      "summary_path": "pdg_remote_wave7_20260505/summary.json",
+      "summary_sha256": "cedf7db5e7bd64251bb91b467e71f0c3f6e513ead90bc09e3d609d08f3063d5e",
+      "table_row_counts": {
+        "artifact_cdg_bindings": 168,
+        "artifact_cdg_edges": 56,
+        "artifact_cdg_nodes": 84,
+        "artifact_relationships": 84,
+        "artifact_symbolic_expressions": 89,
+        "artifact_versions": 94,
+        "artifacts": 94,
+        "physics_equation_candidates": 89,
+        "physics_ingest_snapshots": 1
+      },
+      "total_row_count": 759,
+      "write_plan_path": "pdg_remote_wave7_20260505/write_plan.json",
+      "write_plan_sha256": "aaaae4c1d6ec21b840c0ac6d23197a95e0aca28248dc2efec3b81670347534b7"
     }
   ],
   "source_repo": "sciona-atoms-physics physics ingestion scripts",
-  "total_row_count": 2994,
-  "total_seed_count": 8
+  "total_row_count": 3753,
+  "total_seed_count": 9
 }
