@@ -4,9 +4,9 @@ This file captures the current operational path for ingesting external physics
 equation sources into the symbolic ingestion tables.
 
 The canonical copy of this runbook now lives in `sciona-atoms-physics` because
-that repo owns the curated physics seed artifacts. Source-generation scripts
-currently still live in `../sciona-matcher`; the committed reseed path lives in
-this repo.
+that repo owns the curated physics seed artifacts, the reseed script, and the
+source ingestion/write-plan generation entrypoints used for future physics
+waves.
 
 ## Local Supabase
 
@@ -28,6 +28,24 @@ export SUPABASE_SERVICE_ROLE_KEY=<local-service-role-key>
 
 If another local Supabase stack is already bound to the ports, stop it before
 starting `../sciona-infra`.
+
+## Script Runtime
+
+The ingestion scripts live in this repo under `scripts/`. They use the
+`sciona.physics_ingest` package supplied by `sciona-matcher`. In a packaged
+environment, install the `sciona` dependency normally. In the local monorepo
+layout, the scripts automatically add `../sciona-matcher` to `sys.path` when
+that sibling checkout exists.
+
+The moved source-generation entrypoints are:
+
+- `scripts/physics_ingest_wikidata_candidates.py`
+- `scripts/physics_ingest_pdg_first_wave.py`
+- `scripts/physics_inventory_pdg_remote.py`
+- `scripts/physics_ingest_pdg_remote_wave.py`
+
+`scripts/reseed_physics_supabase.py` replays already-curated seeds and does not
+fetch remote source data.
 
 ## Curated Seed Reseed
 
@@ -74,6 +92,9 @@ python scripts/reseed_physics_supabase.py --only pdg_remote_wave4_20260505
 The reseed script verifies artifact checksums before writing and replays each
 write-plan batch through PostgREST upserts using the conflict keys embedded in
 the write plan. It is idempotent for the committed seed rows.
+
+Script-generated scratch artifacts should be written under `output/`, which is
+ignored in this repo.
 
 ## Wikidata Equation Query
 
@@ -128,7 +149,6 @@ bindings.
 Build and optionally apply the write plan with:
 
 ```bash
-cd ../sciona-matcher
 python scripts/physics_ingest_wikidata_candidates.py \
   --candidate-dir output/physics_wikidata_physics_candidate_list_20260505T001957Z \
   --out-dir output/physics_wikidata_physics_ingestion_local_apply_20260505T001957Z \
@@ -183,14 +203,13 @@ Run the first local wave through source candidates, symbolic expression rows,
 PDG relationship rows, and CDG rows with:
 
 ```bash
-cd ../sciona-matcher
 python scripts/physics_ingest_pdg_first_wave.py --apply
 ```
 
 By default the runner uses:
 
 ```text
-tests/physics_ingest/fixtures/pdg_payloads/solve_substitute_chain.pdg.json
+data/physics_ingestion_fixtures/pdg_payloads/solve_substitute_chain.pdg.json
 ```
 
 The write includes:
@@ -231,7 +250,6 @@ They record only the credential source in output summaries, not the token value.
 Use `--no-gh-auth-token` to force anonymous calls when env vars are unset.
 
 ```bash
-cd ../sciona-matcher
 python scripts/physics_inventory_pdg_remote.py \
   --repo allofphysicsgraph/ui_v8_website_flask_neo4j \
   --ref gh-pages \
@@ -273,7 +291,6 @@ through source candidates, symbolic expression rows, relationship rows, and
 one CDG artifact per derivation.
 
 ```bash
-cd ../sciona-matcher
 python scripts/physics_ingest_pdg_remote_wave.py \
   --repo allofphysicsgraph/ui_v8_website_flask_neo4j \
   --ref gh-pages \
