@@ -354,3 +354,13 @@ The latest wave, `pdg_remote_wave8_20260505`, promoted:
 The wave 8 dry run and apply both completed with zero graph diagnostics and
 zero skipped PDG edges. The apply used authenticated GitHub requests via
 `gh-auth-token`; the last observed remaining quota was 4,897 requests.
+
+## TODO
+
+- Normalize PDG-derived CDGs by grouping relationship rows that share the same
+  `pdg_step_id`. The current scaffold creates one CDG node per
+  premise-to-conclusion relationship, so a single PDG derivation step with
+  multiple inputs can become multiple CDG nodes. Preserve those raw
+  `artifact_relationships` for provenance, but add a compressed CDG projection
+  where one derivation step becomes one multi-input operation node with all
+  premise expression bindings attached.
