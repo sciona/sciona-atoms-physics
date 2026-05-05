@@ -30,6 +30,7 @@ def test_seed_manifest_replays_in_declared_order_and_checksums() -> None:
         "pdg_remote_wave5_20260505",
         "pdg_remote_wave6_20260505",
         "pdg_remote_wave7_20260505",
+        "pdg_remote_wave8_20260505",
     ]
     assert manifest["total_row_count"] == sum(seed["total_row_count"] for seed in seeds)
     for seed in seeds:
