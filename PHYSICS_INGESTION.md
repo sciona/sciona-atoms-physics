@@ -57,7 +57,7 @@ data/physics_ingestion_seeds/
 
 The seed manifest pins replay order, row counts, source versions, and SHA-256
 digests for each `write_plan.json` and `summary.json` artifact. The current
-seed set contains 4,921 rows:
+seed set contains 5,958 rows:
 
 | Seed | Source version | Rows |
 | --- | --- | ---: |
@@ -71,6 +71,7 @@ seed set contains 4,921 rows:
 | `pdg_remote_wave6_20260505` | `pdg-remote-wave6-2026-05-05` | 393 |
 | `pdg_remote_wave7_20260505` | `pdg-remote-wave7-2026-05-05` | 759 |
 | `pdg_remote_wave8_20260505` | `pdg-remote-wave8-2026-05-05` | 1,168 |
+| `pdg_remote_wave9_20260505` | `pdg-remote-wave9-2026-05-05` | 1,037 |
 
 Replay all committed seeds from `sciona-atoms-physics`:
 
@@ -90,7 +91,7 @@ python scripts/reseed_physics_supabase.py --dry-run
 Replay a single seed:
 
 ```bash
-python scripts/reseed_physics_supabase.py --only pdg_remote_wave8_20260505
+python scripts/reseed_physics_supabase.py --only pdg_remote_wave9_20260505
 ```
 
 The reseed script verifies artifact checksums before writing and replays each
@@ -325,8 +326,8 @@ documentation, and the promotion scripts record `CC-BY-4.0` on source snapshots
 and payloads.
 
 The remote inventory detected 44 derivations with parseable graph structure.
-So far, 40 remote derivations have been promoted through symbolic expression
-rows, PDG relationship rows, and CDG rows across eight applied waves.
+So far, 43 remote derivations have been promoted through symbolic expression
+rows, PDG relationship rows, and CDG rows across nine applied waves.
 
 | Wave | Derivations | Symbolic rows | Relationships | CDG nodes | CDG edges | CDG bindings |
 | --- | --- | ---: | ---: | ---: | ---: | ---: |
@@ -338,22 +339,23 @@ rows, PDG relationship rows, and CDG rows across eight applied waves.
 | `pdg_remote_wave6_20260505` | `909006`, `918264`, `920011`, `387954`, `527822` | 46 | 43 | 43 | 26 | 86 |
 | `pdg_remote_wave7_20260505` | `282755`, `522862`, `608598`, `764666`, `820976` | 89 | 84 | 84 | 56 | 168 |
 | `pdg_remote_wave8_20260505` | `201726`, `332170`, `374317`, `551770`, `713234` | 127 | 134 | 138 | 101 | 276 |
+| `pdg_remote_wave9_20260505` | `000010`, `187793`, `539398` | 111 | 123 | 123 | 94 | 246 |
 
 Wave 3 originally tested `207210` (`Newton's Law of Gravitation`) but deferred
 it because the current parser saw missing expression endpoints on eight edges.
 It should be revisited after the remote Cypher endpoint handling is broadened.
 
-The latest wave, `pdg_remote_wave8_20260505`, promoted:
+The latest wave, `pdg_remote_wave9_20260505`, promoted:
 
-- `201726`: angle of maximum distance for projectile motion
-- `332170`: equations of motion in 1D with constant acceleration, SUVAT
-- `374317`: velocity at distance `r` of object dropped from infinity
-- `551770`: Lorentz transformation
-- `713234`: hyperbolic trigonometric identities
+- `000010`: particle in a 1D box
+- `187793`: equations of motion in 2D using calculus
+- `539398`: double intensity when phase is coherent
 
-The wave 8 dry run and apply both completed with zero graph diagnostics and
-zero skipped PDG edges. The apply used authenticated GitHub requests via
-`gh-auth-token`; the last observed remaining quota was 4,897 requests.
+The wave 9 dry run and apply both completed with zero graph diagnostics. One
+relationship edge in `539398` was skipped because the remote graph referenced a
+missing expression binding; the remaining 123 relationships and CDG rows were
+materialized. The apply used authenticated GitHub requests via `gh-auth-token`;
+the last observed remaining quota was 4,865 requests.
 
 ## TODO
 
