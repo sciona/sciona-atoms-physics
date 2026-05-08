@@ -1,7 +1,7 @@
 {
   "schema_version": "1.1",
   "atoms": {
-    "sciona.atoms.particle_tracking.helix_geometry.circle_from_three_points@sciona/atoms/particle_tracking/helix_geometry/atoms.py:42": {
+    "sciona.atoms.particle_tracking.helix_geometry.circle_from_three_points@sciona/atoms/particle_tracking/helix_geometry/atoms.py:71": {
       "references": [
         {
           "ref_id": "steiner2018trackml",
@@ -26,7 +26,7 @@
       ],
       "auto_attribution_runs": []
     },
-    "sciona.atoms.particle_tracking.helix_geometry.helix_pitch_from_two_points@sciona/atoms/particle_tracking/helix_geometry/atoms.py:108": {
+    "sciona.atoms.particle_tracking.helix_geometry.helix_pitch_from_two_points@sciona/atoms/particle_tracking/helix_geometry/atoms.py:144": {
       "references": [
         {
           "ref_id": "steiner2018trackml",
@@ -41,7 +41,7 @@
       ],
       "auto_attribution_runs": []
     },
-    "sciona.atoms.particle_tracking.helix_geometry.helix_pitch_least_squares@sciona/atoms/particle_tracking/helix_geometry/atoms.py:153": {
+    "sciona.atoms.particle_tracking.helix_geometry.helix_pitch_least_squares@sciona/atoms/particle_tracking/helix_geometry/atoms.py:196": {
       "references": [
         {
           "ref_id": "steiner2018trackml",
@@ -56,7 +56,7 @@
       ],
       "auto_attribution_runs": []
     },
-    "sciona.atoms.particle_tracking.helix_geometry.helix_direction_from_two_points@sciona/atoms/particle_tracking/helix_geometry/atoms.py:232": {
+    "sciona.atoms.particle_tracking.helix_geometry.helix_direction_from_two_points@sciona/atoms/particle_tracking/helix_geometry/atoms.py:281": {
       "references": [
         {
           "ref_id": "steiner2018trackml",
@@ -71,7 +71,7 @@
       ],
       "auto_attribution_runs": []
     },
-    "sciona.atoms.particle_tracking.helix_geometry.helix_nearest_point_distance@sciona/atoms/particle_tracking/helix_geometry/atoms.py:270": {
+    "sciona.atoms.particle_tracking.helix_geometry.helix_nearest_point_distance@sciona/atoms/particle_tracking/helix_geometry/atoms.py:326": {
       "references": [
         {
           "ref_id": "steiner2018trackml",

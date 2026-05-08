@@ -1,7 +1,7 @@
 {
   "schema_version": "1.1",
   "atoms": {
-    "sciona.atoms.physics.pulsar_folding.dm_can_brute_force@sciona/atoms/physics/pulsar_folding/atoms.py:19": {
+    "sciona.atoms.physics.pulsar_folding.dm_can_brute_force@sciona/atoms/physics/pulsar_folding/atoms.py:39": {
       "references": [
         {
           "ref_id": "lorimer2005pulsar",
@@ -26,7 +26,7 @@
       ],
       "auto_attribution_runs": []
     },
-    "sciona.atoms.physics.pulsar_folding.spline_bandpass_correction@sciona/atoms/physics/pulsar_folding/atoms.py:49": {
+    "sciona.atoms.physics.pulsar_folding.spline_bandpass_correction@sciona/atoms/physics/pulsar_folding/atoms.py:76": {
       "references": [
         {
           "ref_id": "lorimer2005pulsar",
