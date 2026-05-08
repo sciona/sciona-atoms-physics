@@ -60,9 +60,6 @@ from .expressions import (
 )
 from .witnesses import witness_cal2jd, witness_calhms2jd, witness_fd2hms, witness_fd2hmsf, witness_find_day, witness_find_dayinyear, witness_find_month, witness_find_year, witness_hms2fd, witness_isleapyear, witness_jd2cal, witness_jd2calhms, witness_lastj2000dayofyear, witness_tai2utc, witness_utc2tai
 
-from juliacall import Main as jl
-
-
 # Witness functions should be imported from the generated witnesses module
 
 @symbolic_atom(
@@ -587,66 +584,79 @@ def tai_to_utc(tai1: float, tai2: float) -> float:
         return (u1, u2)
     return (u2, u1)
 
-
 """Auto-generated FFI bindings for julia implementations."""
 
-
 def _isleapyear_ffi(year: int) -> bool:
+    from juliacall import Main as jl
     """Wrapper that calls the Julia version of is_leap_year. Passes arguments through and returns the result."""
     return jl.eval("is_leap_year(year)")
 
 def _find_dayinyear_ffi(month: int, day: int, isleap: bool) -> int:
+    from juliacall import Main as jl
     """Wrapper that calls the Julia version of find dayinyear. Passes arguments through and returns the result."""
     return jl.eval("find_dayinyear(month, day, isleap)")
 
 def _find_year_ffi(d: float) -> int:
+    from juliacall import Main as jl
     """Wrapper that calls the Julia version of find year. Passes arguments through and returns the result."""
     return jl.eval("find_year(d)")
 
 def _find_month_ffi(dayinyear: int, isleap: bool) -> int:
+    from juliacall import Main as jl
     """Wrapper that calls the Julia version of find month. Passes arguments through and returns the result."""
     return jl.eval("find_month(dayinyear, isleap)")
 
 def _find_day_ffi(dayinyear: int, month: int, isleap: bool) -> int:
+    from juliacall import Main as jl
     """Wrapper that calls the Julia version of find day. Passes arguments through and returns the result."""
     return jl.eval("find_day(dayinyear, month, isleap)")
 
 def _lastj2000dayofyear_ffi(year: int) -> int:
+    from juliacall import Main as jl
     """Wrapper that calls the Julia version of lastj2000 dayofyear. Passes arguments through and returns the result."""
     return jl.eval("last_j2000_day_of_year(year)")
 
 def _hms2fd_ffi(h: int, m: int, s: float) -> float:
+    from juliacall import Main as jl
     """Wrapper that calls the Julia version of hms2 fd. Passes arguments through and returns the result."""
     return jl.eval("hms_to_fd(h, m, s)")
 
 def _fd2hms_ffi(fd: float) -> tuple[int, int, float]:
+    from juliacall import Main as jl
     """Wrapper that calls the Julia version of fd2 hms. Passes arguments through and returns the result."""
     return jl.eval("fd2hms(fd)")
 
 def _fd2hmsf_ffi(fd: float) -> tuple[int, int, int, float]:
+    from juliacall import Main as jl
     """Wrapper that calls the Julia version of fd2 hmsf. Passes arguments through and returns the result."""
     return jl.eval("fd_to_hmsf(fd)")
 
 def _cal2jd_ffi(Y: int, M: int, D: int) -> float:
+    from juliacall import Main as jl
     """Wrapper that calls the Julia version of cal2 jd. Passes arguments through and returns the result."""
     return jl.eval("cal2jd(Y, M, D)")
 
 def _calhms2jd_ffi(Y: int, M: int, D: int, h: int, m: int, sec: float) -> float:
+    from juliacall import Main as jl
     """Wrapper that calls the Julia version of calhms2 jd. Passes arguments through and returns the result."""
     return jl.eval("cal_hms_to_jd(Y, M, D, h, m, sec)")
 
 def _jd2cal_ffi(dj1: float, dj2: float) -> tuple[int, int, int, float]:
+    from juliacall import Main as jl
     """Wrapper that calls the Julia version of jd2 cal. Passes arguments through and returns the result."""
     return jl.eval("jd2cal(dj1, dj2)")
 
 def _jd2calhms_ffi(dj1: float, dj2: float) -> tuple[int, int, int, int, int, float]:
+    from juliacall import Main as jl
     """Wrapper that calls the Julia version of jd2 calhms. Passes arguments through and returns the result."""
     return jl.eval("jd_to_cal_hms(dj1, dj2)")
 
 def _utc2tai_ffi(utc1: float, utc2: float) -> float:
+    from juliacall import Main as jl
     """Wrapper that calls the Julia version of utc2 tai. Passes arguments through and returns the result."""
     return jl.eval("utc_to_tai(utc1, utc2)")
 
 def _tai2utc_ffi(tai1: float, tai2: float) -> float:
+    from juliacall import Main as jl
     """Wrapper that calls the Julia version of tai2 utc. Passes arguments through and returns the result."""
     return jl.eval("tai_to_utc(tai1, tai2)")

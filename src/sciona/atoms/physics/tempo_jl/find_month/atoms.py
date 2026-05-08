@@ -2,7 +2,6 @@
 
 from __future__ import annotations
 
-
 import icontract
 from sciona.ghost.decorators import symbolic_atom
 from sciona.ghost.registry import register_atom
@@ -30,8 +29,6 @@ from .expressions import (
     TIME_OF_DAY_VALIDITY_BOUNDS,
 )
 from .witnesses import witness_date, witness_datetime, witness_show, witness_time
-from juliacall import Main as jl
-
 
 # Witness functions should be imported from the generated witnesses module
 
@@ -64,7 +61,6 @@ SYMBOLIC_REVIEW_BLOCKERS = {
         "physical equation or dimensional relationship."
     ),
 }
-
 
 @symbolic_atom(
     witness_date,
@@ -421,46 +417,54 @@ def datetime(seconds: float) -> tuple[int, int, int, int, int, float]:
 
 datetime_from_seconds = datetime
 
-
 """Auto-generated FFI bindings for julia implementations."""
 
-
 def _date_ffi(offset):
+    from juliacall import Main as jl
     """Wrapper that calls the Julia version of date. Passes arguments through and returns the result."""
     return jl.eval("date(offset)")
 
 def _date_ffi(year, dayinyear):
+    from juliacall import Main as jl
     """Wrapper that calls the Julia version of date. Passes arguments through and returns the result."""
     return jl.eval("date(year, dayinyear)")
 
 def _show_ffi(io, d):
+    from juliacall import Main as jl
     """Wrapper that calls the Julia version of show. Passes arguments through and returns the result."""
     return jl.eval("show(io, d)")
 
 def _time_ffi(hour, minute, second):
+    from juliacall import Main as jl
     """Wrapper that calls the Julia version of time. Passes arguments through and returns the result."""
     return jl.eval("time(hour, minute, second)")
 
 def _time_ffi(secondinday, fraction):
+    from juliacall import Main as jl
     """Wrapper that calls the Julia version of time. Passes arguments through and returns the result."""
     return jl.eval("time(secondinday, fraction)")
 
 def _time_ffi(secondinday):
+    from juliacall import Main as jl
     """Wrapper that calls the Julia version of time. Passes arguments through and returns the result."""
     return jl.eval("time(secondinday)")
 
 def _show_ffi(io, t):
+    from juliacall import Main as jl
     """Wrapper that calls the Julia version of show. Passes arguments through and returns the result."""
     return jl.eval("show(io, t)")
 
 def _datetime_ffi(year, month, day, hour, min, sec):
+    from juliacall import Main as jl
     """Wrapper that calls the Julia version of datetime. Passes arguments through and returns the result."""
     return jl.eval("datetime(year, month, day, hour, min, sec)")
 
 def _datetime_ffi(s):
+    from juliacall import Main as jl
     """Wrapper that calls the Julia version of datetime. Passes arguments through and returns the result."""
     return jl.eval("datetime(s)")
 
 def _datetime_ffi(seconds):
+    from juliacall import Main as jl
     """Wrapper that calls the Julia version of datetime. Passes arguments through and returns the result."""
     return jl.eval("datetime(seconds)")

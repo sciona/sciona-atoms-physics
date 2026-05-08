@@ -23,11 +23,8 @@ from .witnesses import (
     witness_tai_to_utc_inversion,
     witness_utc_to_tai_leap_second_kernel,
 )
-from juliacall import Main as jl  # type: ignore[import-untyped]
-
 
 # Witness functions should be imported from the generated witnesses module
-
 
 @symbolic_atom(
     witness_utc_to_tai_leap_second_kernel,
@@ -71,7 +68,6 @@ Returns:
     else:
         delta_at = _LEAP_SECONDS[idx]
     return (utc1, utc2 + delta_at / 86400.0)
-
 
 @symbolic_atom(
     witness_tai_to_utc_inversion,
@@ -126,15 +122,14 @@ Returns:
     candidate_utc = u1 + u2
     return (u1, u2, candidate_utc)
 
-
 """Auto-generated FFI bindings for julia implementations."""
 
-
 def _utc_to_tai_leap_second_kernel_ffi(utc1: float, utc2: float) -> object:
+    from juliacall import Main as jl  # type: ignore[import-untyped]
     """Wrapper that calls the Julia version of utc to tai leap second kernel. Passes arguments through and returns the result."""
     return jl.eval("utc_to_tai_leap_second_kernel(utc1, utc2)")
 
-
 def _tai_to_utc_inversion_ffi(tai1: float, tai2: float, tai_estimate: float) -> object:
+    from juliacall import Main as jl  # type: ignore[import-untyped]
     """Wrapper that calls the Julia version of tai to utc inversion. Passes arguments through and returns the result."""
     return jl.eval("tai_to_utc_inversion(tai1, tai2, tai_estimate)")

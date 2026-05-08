@@ -21,9 +21,6 @@ from .witnesses import (
     witness_compute_spherical_coordinate_rates,
     witness_calculate_vector_angle,
 )
-from skyfield.functions import angle_between
-from skyfield.functions import _to_spherical_and_rates
-
 
 @symbolic_atom(
     witness_compute_spherical_coordinate_rates,
@@ -40,6 +37,7 @@ def compute_spherical_coordinate_rates(
     r: np.ndarray,
     v: np.ndarray,
 ) -> tuple[float, float, float, float, float, float]:
+    from skyfield.functions import _to_spherical_and_rates
     """Computes spherical coordinates and their instantaneous rates.
 
     Args:
@@ -63,6 +61,7 @@ def compute_spherical_coordinate_rates(
 @icontract.require(lambda v: v is not None, "v cannot be None")
 @icontract.ensure(lambda result: result is not None, "calculate_vector_angle output must not be None")
 def calculate_vector_angle(u: np.ndarray, v: np.ndarray) -> float:
+    from skyfield.functions import angle_between
     """Computes the angle between two vectors.
 
     Args:
