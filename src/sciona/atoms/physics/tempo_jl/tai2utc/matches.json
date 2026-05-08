@@ -1,7 +1,7 @@
 [
   {
     "pdg_node": {
-      "predicate_id": "isleapyear",
+      "predicate_id": "is_leap_year",
       "statement": "(year: Any) -> Any",
       "informal_desc": "",
       "prover": "python",
@@ -10,7 +10,7 @@
     "verified_match": {
       "candidate": {
         "declaration": {
-          "name": "isleapyear",
+          "name": "is_leap_year",
           "type_signature": "(year: Any) -> Any",
           "docstring": "",
           "conceptual_summary": "",
@@ -30,7 +30,7 @@
     "all_candidates": [
       {
         "declaration": {
-          "name": "isleapyear",
+          "name": "is_leap_year",
           "type_signature": "(year: Any) -> Any",
           "docstring": "",
           "conceptual_summary": "",
@@ -46,7 +46,7 @@
       {
         "candidate": {
           "declaration": {
-            "name": "isleapyear",
+            "name": "is_leap_year",
             "type_signature": "(year: Any) -> Any",
             "docstring": "",
             "conceptual_summary": "",
@@ -331,7 +331,7 @@
   },
   {
     "pdg_node": {
-      "predicate_id": "lastj2000dayofyear",
+      "predicate_id": "last_j2000_day_of_year",
       "statement": "(year: Any) -> Any",
       "informal_desc": "",
       "prover": "python",
@@ -340,7 +340,7 @@
     "verified_match": {
       "candidate": {
         "declaration": {
-          "name": "lastj2000dayofyear",
+          "name": "last_j2000_day_of_year",
           "type_signature": "(year: Any) -> Any",
           "docstring": "",
           "conceptual_summary": "",
@@ -360,7 +360,7 @@
     "all_candidates": [
       {
         "declaration": {
-          "name": "lastj2000dayofyear",
+          "name": "last_j2000_day_of_year",
           "type_signature": "(year: Any) -> Any",
           "docstring": "",
           "conceptual_summary": "",
@@ -376,7 +376,7 @@
       {
         "candidate": {
           "declaration": {
-            "name": "lastj2000dayofyear",
+            "name": "last_j2000_day_of_year",
             "type_signature": "(year: Any) -> Any",
             "docstring": "",
             "conceptual_summary": "",
@@ -397,7 +397,7 @@
   },
   {
     "pdg_node": {
-      "predicate_id": "hms2fd",
+      "predicate_id": "hms_to_fd",
       "statement": "(h: Any, m: Any, s: Any) -> Any",
       "informal_desc": "",
       "prover": "python",
@@ -406,7 +406,7 @@
     "verified_match": {
       "candidate": {
         "declaration": {
-          "name": "hms2fd",
+          "name": "hms_to_fd",
           "type_signature": "(h: Any, m: Any, s: Any) -> Any",
           "docstring": "",
           "conceptual_summary": "",
@@ -426,7 +426,7 @@
     "all_candidates": [
       {
         "declaration": {
-          "name": "hms2fd",
+          "name": "hms_to_fd",
           "type_signature": "(h: Any, m: Any, s: Any) -> Any",
           "docstring": "",
           "conceptual_summary": "",
@@ -442,7 +442,7 @@
       {
         "candidate": {
           "declaration": {
-            "name": "hms2fd",
+            "name": "hms_to_fd",
             "type_signature": "(h: Any, m: Any, s: Any) -> Any",
             "docstring": "",
             "conceptual_summary": "",
@@ -529,7 +529,7 @@
   },
   {
     "pdg_node": {
-      "predicate_id": "fd2hmsf",
+      "predicate_id": "fd_to_hmsf",
       "statement": "(fd: Any) -> Any",
       "informal_desc": "",
       "prover": "python",
@@ -538,7 +538,7 @@
     "verified_match": {
       "candidate": {
         "declaration": {
-          "name": "fd2hmsf",
+          "name": "fd_to_hmsf",
           "type_signature": "(fd: Any) -> Any",
           "docstring": "",
           "conceptual_summary": "",
@@ -558,7 +558,7 @@
     "all_candidates": [
       {
         "declaration": {
-          "name": "fd2hmsf",
+          "name": "fd_to_hmsf",
           "type_signature": "(fd: Any) -> Any",
           "docstring": "",
           "conceptual_summary": "",
@@ -574,7 +574,7 @@
       {
         "candidate": {
           "declaration": {
-            "name": "fd2hmsf",
+            "name": "fd_to_hmsf",
             "type_signature": "(fd: Any) -> Any",
             "docstring": "",
             "conceptual_summary": "",
@@ -661,7 +661,7 @@
   },
   {
     "pdg_node": {
-      "predicate_id": "calhms2jd",
+      "predicate_id": "cal_hms_to_jd",
       "statement": "(Y: Any, M: Any, D: Any, h: Any, m: Any, sec: Any) -> Any",
       "informal_desc": "",
       "prover": "python",
@@ -670,7 +670,7 @@
     "verified_match": {
       "candidate": {
         "declaration": {
-          "name": "calhms2jd",
+          "name": "cal_hms_to_jd",
           "type_signature": "(Y: Any, M: Any, D: Any, h: Any, m: Any, sec: Any) -> Any",
           "docstring": "",
           "conceptual_summary": "",
@@ -690,7 +690,7 @@
     "all_candidates": [
       {
         "declaration": {
-          "name": "calhms2jd",
+          "name": "cal_hms_to_jd",
           "type_signature": "(Y: Any, M: Any, D: Any, h: Any, m: Any, sec: Any) -> Any",
           "docstring": "",
           "conceptual_summary": "",
@@ -706,7 +706,7 @@
       {
         "candidate": {
           "declaration": {
-            "name": "calhms2jd",
+            "name": "cal_hms_to_jd",
             "type_signature": "(Y: Any, M: Any, D: Any, h: Any, m: Any, sec: Any) -> Any",
             "docstring": "",
             "conceptual_summary": "",
@@ -793,7 +793,7 @@
   },
   {
     "pdg_node": {
-      "predicate_id": "jd2calhms",
+      "predicate_id": "jd_to_cal_hms",
       "statement": "(dj1: Any, dj2: Any) -> Any",
       "informal_desc": "",
       "prover": "python",
@@ -802,7 +802,7 @@
     "verified_match": {
       "candidate": {
         "declaration": {
-          "name": "jd2calhms",
+          "name": "jd_to_cal_hms",
           "type_signature": "(dj1: Any, dj2: Any) -> Any",
           "docstring": "",
           "conceptual_summary": "",
@@ -822,7 +822,7 @@
     "all_candidates": [
       {
         "declaration": {
-          "name": "jd2calhms",
+          "name": "jd_to_cal_hms",
           "type_signature": "(dj1: Any, dj2: Any) -> Any",
           "docstring": "",
           "conceptual_summary": "",
@@ -838,7 +838,7 @@
       {
         "candidate": {
           "declaration": {
-            "name": "jd2calhms",
+            "name": "jd_to_cal_hms",
             "type_signature": "(dj1: Any, dj2: Any) -> Any",
             "docstring": "",
             "conceptual_summary": "",
@@ -859,7 +859,7 @@
   },
   {
     "pdg_node": {
-      "predicate_id": "utc2tai",
+      "predicate_id": "utc_to_tai",
       "statement": "(utc1: Any, utc2: Any) -> Any",
       "informal_desc": "",
       "prover": "python",
@@ -868,7 +868,7 @@
     "verified_match": {
       "candidate": {
         "declaration": {
-          "name": "utc2tai",
+          "name": "utc_to_tai",
           "type_signature": "(utc1: Any, utc2: Any) -> Any",
           "docstring": "",
           "conceptual_summary": "",
@@ -888,7 +888,7 @@
     "all_candidates": [
       {
         "declaration": {
-          "name": "utc2tai",
+          "name": "utc_to_tai",
           "type_signature": "(utc1: Any, utc2: Any) -> Any",
           "docstring": "",
           "conceptual_summary": "",
@@ -904,7 +904,7 @@
       {
         "candidate": {
           "declaration": {
-            "name": "utc2tai",
+            "name": "utc_to_tai",
             "type_signature": "(utc1: Any, utc2: Any) -> Any",
             "docstring": "",
             "conceptual_summary": "",
@@ -925,7 +925,7 @@
   },
   {
     "pdg_node": {
-      "predicate_id": "tai2utc",
+      "predicate_id": "tai_to_utc",
       "statement": "(tai1: Any, tai2: Any) -> Any",
       "informal_desc": "",
       "prover": "python",
@@ -934,7 +934,7 @@
     "verified_match": {
       "candidate": {
         "declaration": {
-          "name": "tai2utc",
+          "name": "tai_to_utc",
           "type_signature": "(tai1: Any, tai2: Any) -> Any",
           "docstring": "",
           "conceptual_summary": "",
@@ -954,7 +954,7 @@
     "all_candidates": [
       {
         "declaration": {
-          "name": "tai2utc",
+          "name": "tai_to_utc",
           "type_signature": "(tai1: Any, tai2: Any) -> Any",
           "docstring": "",
           "conceptual_summary": "",
@@ -970,7 +970,7 @@
       {
         "candidate": {
           "declaration": {
-            "name": "tai2utc",
+            "name": "tai_to_utc",
             "type_signature": "(tai1: Any, tai2: Any) -> Any",
             "docstring": "",
             "conceptual_summary": "",

@@ -10,21 +10,21 @@
       "outputs": [],
       "status": "decomposed",
       "children": [
-        "isleapyear",
+        "is_leap_year",
         "find_dayinyear",
         "find_year",
         "find_month",
         "find_day",
-        "lastj2000dayofyear",
-        "hms2fd",
+        "last_j2000_day_of_year",
+        "hms_to_fd",
         "fd2hms",
-        "fd2hmsf",
+        "fd_to_hmsf",
         "cal2jd",
-        "calhms2jd",
+        "cal_hms_to_jd",
         "jd2cal",
-        "jd2calhms",
-        "utc2tai",
-        "tai2utc"
+        "jd_to_cal_hms",
+        "utc_to_tai",
+        "tai_to_utc"
       ],
       "depth": 0,
       "type_signature": "",
@@ -38,9 +38,9 @@
       "decomposition_rationale": ""
     },
     {
-      "node_id": "isleapyear",
+      "node_id": "is_leap_year",
       "parent_id": "find_year_root",
-      "name": "Isleapyear",
+      "name": "is_leap_year",
       "description": "Determine whether a given year is a leap year",
       "concept_type": "arithmetic",
       "inputs": [
@@ -73,7 +73,7 @@
     {
       "node_id": "find_dayinyear",
       "parent_id": "find_year_root",
-      "name": "Find Dayinyear",
+      "name": "find_dayinyear",
       "description": "Find the day number within a year given month, day, and leap-year flag",
       "concept_type": "arithmetic",
       "inputs": [
@@ -116,7 +116,7 @@
     {
       "node_id": "find_year",
       "parent_id": "find_year_root",
-      "name": "Find Year",
+      "name": "find_year",
       "description": "Find the calendar year corresponding to a day offset",
       "concept_type": "searching",
       "inputs": [
@@ -149,7 +149,7 @@
     {
       "node_id": "find_month",
       "parent_id": "find_year_root",
-      "name": "Find Month",
+      "name": "find_month",
       "description": "Find the calendar month from a day-in-year value and leap-year flag",
       "concept_type": "arithmetic",
       "inputs": [
@@ -187,7 +187,7 @@
     {
       "node_id": "find_day",
       "parent_id": "find_year_root",
-      "name": "Find Day",
+      "name": "find_day",
       "description": "Find the calendar day from a day-in-year value, month, and leap-year flag",
       "concept_type": "arithmetic",
       "inputs": [
@@ -228,9 +228,9 @@
       "decomposition_rationale": ""
     },
     {
-      "node_id": "lastj2000dayofyear",
+      "node_id": "last_j2000_day_of_year",
       "parent_id": "find_year_root",
-      "name": "Lastj2000Dayofyear",
+      "name": "last_j2000_day_of_year",
       "description": "Return the last J2000 day number of a given year",
       "concept_type": "arithmetic",
       "inputs": [
@@ -261,9 +261,9 @@
       "decomposition_rationale": ""
     },
     {
-      "node_id": "hms2fd",
+      "node_id": "hms_to_fd",
       "parent_id": "find_year_root",
-      "name": "Hms2Fd",
+      "name": "hms_to_fd",
       "description": "Convert hours, minutes, and seconds to a fractional day",
       "concept_type": "arithmetic",
       "inputs": [
@@ -337,9 +337,9 @@
       "decomposition_rationale": ""
     },
     {
-      "node_id": "fd2hmsf",
+      "node_id": "fd_to_hmsf",
       "parent_id": "find_year_root",
-      "name": "Fd2Hmsf",
+      "name": "fd_to_hmsf",
       "description": "Convert a fractional day to hours, minutes, seconds, and sub-second fraction",
       "concept_type": "arithmetic",
       "inputs": [
@@ -413,9 +413,9 @@
       "decomposition_rationale": ""
     },
     {
-      "node_id": "calhms2jd",
+      "node_id": "cal_hms_to_jd",
       "parent_id": "find_year_root",
-      "name": "Calhms2Jd",
+      "name": "cal_hms_to_jd",
       "description": "Convert a calendar date and time (year, month, day, h, m, s) to a Julian date",
       "concept_type": "arithmetic",
       "inputs": [
@@ -509,9 +509,9 @@
       "decomposition_rationale": ""
     },
     {
-      "node_id": "jd2calhms",
+      "node_id": "jd_to_cal_hms",
       "parent_id": "find_year_root",
-      "name": "Jd2Calhms",
+      "name": "jd_to_cal_hms",
       "description": "Convert a Julian date to a calendar date and time (year, month, day, h, m, s)",
       "concept_type": "arithmetic",
       "inputs": [
@@ -547,9 +547,9 @@
       "decomposition_rationale": ""
     },
     {
-      "node_id": "utc2tai",
+      "node_id": "utc_to_tai",
       "parent_id": "find_year_root",
-      "name": "Utc2Tai",
+      "name": "utc_to_tai",
       "description": "Convert UTC Julian date to International Atomic Time (TAI)",
       "concept_type": "arithmetic",
       "inputs": [
@@ -585,9 +585,9 @@
       "decomposition_rationale": ""
     },
     {
-      "node_id": "tai2utc",
+      "node_id": "tai_to_utc",
       "parent_id": "find_year_root",
-      "name": "Tai2Utc",
+      "name": "tai_to_utc",
       "description": "Convert International Atomic Time (TAI) Julian date to UTC",
       "concept_type": "arithmetic",
       "inputs": [

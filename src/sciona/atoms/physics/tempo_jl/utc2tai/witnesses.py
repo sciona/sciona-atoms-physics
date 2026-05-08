@@ -4,7 +4,7 @@ from sciona.ghost.abstract import AbstractArray, AbstractDistribution, AbstractS
 
 
 def witness_isleapyear(year: AbstractArray) -> AbstractArray:
-    """Shape-and-type check for isleapyear. Returns output metadata without running the real computation."""
+    """Shape-and-type check for is_leap_year. Returns output metadata without running the real computation."""
     result = AbstractArray(
         shape=year.shape,
         dtype="float64",

@@ -75,7 +75,7 @@ from juliacall import Main as jl
 )
 @icontract.require(lambda year: year is not None, "year cannot be None")
 @icontract.ensure(lambda result: result is not None, "Isleapyear output must not be None")
-def isleapyear(year: int) -> bool:
+def is_leap_year(year: int) -> bool:
     """Isleapyear.
 
     Args:
@@ -140,7 +140,7 @@ def find_year(d: float) -> int:
     """
     j2d = int(d)
     year = (400 * j2d + 292194288) // 146097
-    if j2d <= lastj2000dayofyear(year - 1):
+    if j2d <= last_j2000_day_of_year(year - 1):
         year -= 1
     return year
 
@@ -216,7 +216,7 @@ def find_day(dayinyear: int, month: int, isleap: bool) -> int:
 )
 @icontract.require(lambda year: year is not None, "year cannot be None")
 @icontract.ensure(lambda result: result is not None, "Lastj2000Dayofyear output must not be None")
-def lastj2000dayofyear(year: int) -> int:
+def last_j2000_day_of_year(year: int) -> int:
     """Lastj2000dayofyear.
 
     Args:
@@ -245,7 +245,7 @@ def lastj2000dayofyear(year: int) -> int:
 @icontract.require(lambda m: m is not None, "m cannot be None")
 @icontract.require(lambda s: s is not None, "s cannot be None")
 @icontract.ensure(lambda result: result is not None, "Hms2Fd output must not be None")
-def hms2fd(h: int, m: int, s: float) -> float:
+def hms_to_fd(h: int, m: int, s: float) -> float:
     """Hms2fd.
 
     Args:
@@ -307,7 +307,7 @@ def fd2hms(fd: float) -> tuple[int, int, float]:
 )
 @icontract.require(lambda fd: fd is not None, "fd cannot be None")
 @icontract.ensure(lambda result: result is not None, "Fd2Hmsf output must not be None")
-def fd2hmsf(fd: float) -> tuple[int, int, int, float]:
+def fd_to_hmsf(fd: float) -> tuple[int, int, int, float]:
     """Fd2hmsf.
 
     Args:
@@ -349,7 +349,7 @@ def cal2jd(Y: int, M: int, D: int) -> float:
         float: Description.
     """
     DJ2000 = 2451545.0
-    ly = isleapyear(Y)
+    ly = is_leap_year(Y)
     y = Y - 1
     d1 = 365 * y + y // 4 - y // 100 + y // 400 - 730120
     d2 = find_dayinyear(M, D, ly)
@@ -374,7 +374,7 @@ def cal2jd(Y: int, M: int, D: int) -> float:
 )
 @icontract.require(lambda Y, M, D: 1 <= M <= 12 and 1 <= D <= 31, "M must be 1-12, D must be 1-31")
 @icontract.ensure(lambda result: result is not None, "Calhms2Jd output must not be None")
-def calhms2jd(Y: int, M: int, D: int, h: int, m: int, sec: float) -> float:
+def cal_hms_to_jd(Y: int, M: int, D: int, h: int, m: int, sec: float) -> float:
     """Calhms2jd.
 
     Args:
@@ -389,7 +389,7 @@ def calhms2jd(Y: int, M: int, D: int, h: int, m: int, sec: float) -> float:
         float: Description.
     """
     jd1, jd2 = cal2jd(Y, M, D)
-    fd = hms2fd(h, m, sec)
+    fd = hms_to_fd(h, m, sec)
     return (jd1, jd2 + fd - 0.5)
 
 @symbolic_atom(
@@ -484,7 +484,7 @@ def jd2cal(dj1: float, dj2: float) -> tuple[int, int, int, float]:
 @icontract.require(lambda dj1: dj1 is not None, "dj1 cannot be None")
 @icontract.require(lambda dj2: dj2 is not None, "dj2 cannot be None")
 @icontract.ensure(lambda result: result is not None, "Jd2Calhms output must not be None")
-def jd2calhms(dj1: float, dj2: float) -> tuple[int, int, int, int, int, float]:
+def jd_to_cal_hms(dj1: float, dj2: float) -> tuple[int, int, int, int, int, float]:
     """Jd2calhms.
 
     Args:
@@ -510,7 +510,7 @@ def jd2calhms(dj1: float, dj2: float) -> tuple[int, int, int, int, int, float]:
 @icontract.require(lambda utc1: utc1 is not None, "utc1 cannot be None")
 @icontract.require(lambda utc2: utc2 is not None, "utc2 cannot be None")
 @icontract.ensure(lambda result: result is not None, "Utc2Tai output must not be None")
-def utc2tai(utc1: float, utc2: float) -> float:
+def utc_to_tai(utc1: float, utc2: float) -> float:
     """Utc2tai.
 
     Args:
@@ -562,7 +562,7 @@ def utc2tai(utc1: float, utc2: float) -> float:
 @icontract.require(lambda tai1: tai1 is not None, "tai1 cannot be None")
 @icontract.require(lambda tai2: tai2 is not None, "tai2 cannot be None")
 @icontract.ensure(lambda result: result is not None, "Tai2Utc output must not be None")
-def tai2utc(tai1: float, tai2: float) -> float:
+def tai_to_utc(tai1: float, tai2: float) -> float:
     """Tai2utc.
 
     Args:
@@ -580,7 +580,7 @@ def tai2utc(tai1: float, tai2: float) -> float:
     u1 = a1
     u2 = a2
     for _ in range(2):
-        g1, g2 = utc2tai(u1, u2)
+        g1, g2 = utc_to_tai(u1, u2)
         u2 += a1 - g1
         u2 += a2 - g2
     if big1:
@@ -592,8 +592,8 @@ def tai2utc(tai1: float, tai2: float) -> float:
 
 
 def _isleapyear_ffi(year: int) -> bool:
-    """Wrapper that calls the Julia version of isleapyear. Passes arguments through and returns the result."""
-    return jl.eval("isleapyear(year)")
+    """Wrapper that calls the Julia version of is_leap_year. Passes arguments through and returns the result."""
+    return jl.eval("is_leap_year(year)")
 
 def _find_dayinyear_ffi(month: int, day: int, isleap: bool) -> int:
     """Wrapper that calls the Julia version of find dayinyear. Passes arguments through and returns the result."""
@@ -613,11 +613,11 @@ def _find_day_ffi(dayinyear: int, month: int, isleap: bool) -> int:
 
 def _lastj2000dayofyear_ffi(year: int) -> int:
     """Wrapper that calls the Julia version of lastj2000 dayofyear. Passes arguments through and returns the result."""
-    return jl.eval("lastj2000dayofyear(year)")
+    return jl.eval("last_j2000_day_of_year(year)")
 
 def _hms2fd_ffi(h: int, m: int, s: float) -> float:
     """Wrapper that calls the Julia version of hms2 fd. Passes arguments through and returns the result."""
-    return jl.eval("hms2fd(h, m, s)")
+    return jl.eval("hms_to_fd(h, m, s)")
 
 def _fd2hms_ffi(fd: float) -> tuple[int, int, float]:
     """Wrapper that calls the Julia version of fd2 hms. Passes arguments through and returns the result."""
@@ -625,7 +625,7 @@ def _fd2hms_ffi(fd: float) -> tuple[int, int, float]:
 
 def _fd2hmsf_ffi(fd: float) -> tuple[int, int, int, float]:
     """Wrapper that calls the Julia version of fd2 hmsf. Passes arguments through and returns the result."""
-    return jl.eval("fd2hmsf(fd)")
+    return jl.eval("fd_to_hmsf(fd)")
 
 def _cal2jd_ffi(Y: int, M: int, D: int) -> float:
     """Wrapper that calls the Julia version of cal2 jd. Passes arguments through and returns the result."""
@@ -633,7 +633,7 @@ def _cal2jd_ffi(Y: int, M: int, D: int) -> float:
 
 def _calhms2jd_ffi(Y: int, M: int, D: int, h: int, m: int, sec: float) -> float:
     """Wrapper that calls the Julia version of calhms2 jd. Passes arguments through and returns the result."""
-    return jl.eval("calhms2jd(Y, M, D, h, m, sec)")
+    return jl.eval("cal_hms_to_jd(Y, M, D, h, m, sec)")
 
 def _jd2cal_ffi(dj1: float, dj2: float) -> tuple[int, int, int, float]:
     """Wrapper that calls the Julia version of jd2 cal. Passes arguments through and returns the result."""
@@ -641,12 +641,12 @@ def _jd2cal_ffi(dj1: float, dj2: float) -> tuple[int, int, int, float]:
 
 def _jd2calhms_ffi(dj1: float, dj2: float) -> tuple[int, int, int, int, int, float]:
     """Wrapper that calls the Julia version of jd2 calhms. Passes arguments through and returns the result."""
-    return jl.eval("jd2calhms(dj1, dj2)")
+    return jl.eval("jd_to_cal_hms(dj1, dj2)")
 
 def _utc2tai_ffi(utc1: float, utc2: float) -> float:
     """Wrapper that calls the Julia version of utc2 tai. Passes arguments through and returns the result."""
-    return jl.eval("utc2tai(utc1, utc2)")
+    return jl.eval("utc_to_tai(utc1, utc2)")
 
 def _tai2utc_ffi(tai1: float, tai2: float) -> float:
     """Wrapper that calls the Julia version of tai2 utc. Passes arguments through and returns the result."""
-    return jl.eval("tai2utc(tai1, tai2)")
+    return jl.eval("tai_to_utc(tai1, tai2)")

@@ -15,7 +15,7 @@
       "depth": 0,
       "type_signature": "",
       "matched_primitive": null,
-      "primitive_binding_confidence": 0.0,
+      "primitive_binding_confidence": 0,
       "primitive_binding_source": "",
       "is_optional": false,
       "is_opaque": false,
@@ -28,7 +28,7 @@
     {
       "node_id": "find_fof_clusters",
       "parent_id": "jfof_root",
-      "name": "FindFOFClusters",
+      "name": "find_fof_clusters",
       "description": "Compute friends-of-friends cluster labels for a periodic point cloud.",
       "concept_type": "graph_optimization",
       "inputs": [
@@ -89,7 +89,7 @@
       "depth": 1,
       "type_signature": "(x: ndarray, b: float, L: float, mode: str = 'precompute', max_neighbors: int | None = None, batch_size: int | None = None) -> ndarray",
       "matched_primitive": null,
-      "primitive_binding_confidence": 0.0,
+      "primitive_binding_confidence": 0,
       "primitive_binding_source": "",
       "is_optional": false,
       "is_opaque": false,
