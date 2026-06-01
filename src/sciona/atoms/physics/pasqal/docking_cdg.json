@@ -61,7 +61,11 @@
       "parallelizable": false,
       "conceptual_summary": "Sub-graph Embedder",
       "critic_notes": "",
-      "decomposition_rationale": ""
+      "decomposition_rationale": "",
+      "time_complexity": "O(V log V + S)",
+      "space_complexity": "O(S)",
+      "complexity_reasoning": "Sorting the graph nodes takes O(V log V) time, and extracting the first S nodes to build the list of mappings takes O(S) time and space.",
+      "complexity_confidence": 95
     },
     {
       "node_id": "graph_transformer",
@@ -104,7 +108,11 @@
       "parallelizable": false,
       "conceptual_summary": "Graph Transformer",
       "critic_notes": "",
-      "decomposition_rationale": ""
+      "decomposition_rationale": "",
+      "time_complexity": "O(E + M)",
+      "space_complexity": "O(M + E_T)",
+      "complexity_reasoning": "Mapping edges of the current graph onto the lattice takes linear time in the number of edges E and mapping size M, storing the resulting transformed subgraph.",
+      "complexity_confidence": 95
     },
     {
       "node_id": "quantum_mwis_solver",
@@ -147,7 +155,11 @@
       "parallelizable": false,
       "conceptual_summary": "Quantum MWIS Solver",
       "critic_notes": "",
-      "decomposition_rationale": ""
+      "decomposition_rationale": "",
+      "time_complexity": "O(2^V + V^2)",
+      "space_complexity": "O(2^V)",
+      "complexity_reasoning": "Classical state-vector simulation of a neutral-atom quantum system scales exponentially with the number of qubits/vertices V.",
+      "complexity_confidence": 98
     }
   ],
   "edges": [

@@ -70,7 +70,11 @@
       "parallelizable": false,
       "conceptual_summary": "map_cartesian_rates_to_spherical_rates. Projects a rate of change (velocity) vector from a 3D Cartesian coordinate system to a spherical coordinate system. Given a point's position and its instantaneous velocity in (x, y, z), this function calculates the corresponding instantaneous rates of change for the point's radial distance, azimuthal angle, and polar angle.. Applications: In robotics, to calculate the necessary joint velocities of a spherical manipulator to track a target with a known Cartesian velocity., In geophysics, to determine the rate of change in latitude, longitude, and altitude of a weather balloon or drifting sensor from its velocity vector relative to the Earth's center., In computer graphics, to update the orientation and distance of an orbital camera that is programmatically following a moving object., In biomechanics, to analyze the angular velocity of a limb joint (e.g., shoulder or hip) based on the 3D velocity of the hand or foot.",
       "critic_notes": "",
-      "decomposition_rationale": ""
+      "decomposition_rationale": "",
+      "time_complexity": "O(n)",
+      "space_complexity": "O(n)",
+      "complexity_reasoning": "Vectorized spherical coordinate and rate computation performs basic vector algebra, scaling linearly with the input vector size n.",
+      "complexity_confidence": 100
     },
     {
       "node_id": "calculate_vector_angle",
@@ -116,7 +120,11 @@
       "parallelizable": false,
       "conceptual_summary": "angular_separation. Quantifies the rotational difference between two ordered, n-dimensional numerical sequences. The operation projects two vectors onto a shared 2D plane and measures the angle between them, effectively reducing their relational information to a single scalar representing their relative orientation.. Applications: In natural language processing, measuring the semantic similarity between two documents represented as high-dimensional word embeddings, where a smaller angle implies a closer conceptual relationship., In bioinformatics, calculating the dihedral angles between planes formed by bonded atoms in a protein backbone to determine its secondary structure., In computer vision and robotics, determining the orientation difference between a camera's view vector and a target object's normal vector to guide navigation or manipulation., In financial analysis, assessing the correlation drift between two time-series of asset returns by treating them as vectors in a high-dimensional space.",
       "critic_notes": "",
-      "decomposition_rationale": ""
+      "decomposition_rationale": "",
+      "time_complexity": "O(n)",
+      "space_complexity": "O(n)",
+      "complexity_reasoning": "Computing the angle between vectors is vectorized over coordinate arrays, scaling linearly with the vector size n.",
+      "complexity_confidence": 100
     }
   ],
   "edges": [],

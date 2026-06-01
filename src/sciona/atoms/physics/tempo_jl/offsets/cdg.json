@@ -32,10 +32,18 @@
       "description": "Low-order sinusoidal TT to TDB offset approximation.",
       "concept_type": "time_conversion",
       "inputs": [
-        {"name": "seconds", "type_desc": "float", "constraints": "elapsed seconds from J2000"}
+        {
+          "name": "seconds",
+          "type_desc": "float",
+          "constraints": "elapsed seconds from J2000"
+        }
       ],
       "outputs": [
-        {"name": "offset", "type_desc": "float", "constraints": "TT to TDB offset in seconds"}
+        {
+          "name": "offset",
+          "type_desc": "float",
+          "constraints": "TT to TDB offset in seconds"
+        }
       ],
       "status": "atomic",
       "children": [],
@@ -48,7 +56,11 @@
       "parallelizable": false,
       "conceptual_summary": "Compute a low-order astronomical time-scale offset.",
       "critic_notes": "",
-      "decomposition_rationale": ""
+      "decomposition_rationale": "",
+      "time_complexity": "O(1)",
+      "space_complexity": "O(1)",
+      "complexity_reasoning": "Computing the low-order TT-to-TDB offset involves a constant number of scalar arithmetic and trigonometric operations.",
+      "complexity_confidence": 100
     },
     {
       "node_id": "offset_tt2tdbh",
@@ -57,10 +69,18 @@
       "description": "Higher-order TT to TDB offset approximation.",
       "concept_type": "time_conversion",
       "inputs": [
-        {"name": "seconds", "type_desc": "float", "constraints": "elapsed seconds from J2000"}
+        {
+          "name": "seconds",
+          "type_desc": "float",
+          "constraints": "elapsed seconds from J2000"
+        }
       ],
       "outputs": [
-        {"name": "offset", "type_desc": "float", "constraints": "high-accuracy TT to TDB offset in seconds"}
+        {
+          "name": "offset",
+          "type_desc": "float",
+          "constraints": "high-accuracy TT to TDB offset in seconds"
+        }
       ],
       "status": "atomic",
       "children": [],
@@ -73,7 +93,11 @@
       "parallelizable": false,
       "conceptual_summary": "Compute a higher-accuracy astronomical time-scale offset.",
       "critic_notes": "",
-      "decomposition_rationale": ""
+      "decomposition_rationale": "",
+      "time_complexity": "O(1)",
+      "space_complexity": "O(1)",
+      "complexity_reasoning": "Computing the higher-order TT-to-TDB offset involves a constant number of scalar arithmetic and trigonometric operations.",
+      "complexity_confidence": 100
     },
     {
       "node_id": "tt2tdb_offset",
@@ -82,10 +106,18 @@
       "description": "Vectorized TT to TDB offset approximation for scalar or array inputs.",
       "concept_type": "time_conversion",
       "inputs": [
-        {"name": "seconds", "type_desc": "float | np.ndarray", "constraints": "scalar or array of elapsed seconds from J2000"}
+        {
+          "name": "seconds",
+          "type_desc": "float | np.ndarray",
+          "constraints": "scalar or array of elapsed seconds from J2000"
+        }
       ],
       "outputs": [
-        {"name": "offset", "type_desc": "float | np.ndarray", "constraints": "shape-preserving TT to TDB offset in seconds"}
+        {
+          "name": "offset",
+          "type_desc": "float | np.ndarray",
+          "constraints": "shape-preserving TT to TDB offset in seconds"
+        }
       ],
       "status": "atomic",
       "children": [],
@@ -98,7 +130,11 @@
       "parallelizable": false,
       "conceptual_summary": "Compute a shape-preserving TT to TDB offset over scalar or array inputs.",
       "critic_notes": "",
-      "decomposition_rationale": ""
+      "decomposition_rationale": "",
+      "time_complexity": "O(n)",
+      "space_complexity": "O(n)",
+      "complexity_reasoning": "Vectorized computation of TT-to-TDB offset scales linearly with the number of input time steps n.",
+      "complexity_confidence": 100
     }
   ],
   "edges": []

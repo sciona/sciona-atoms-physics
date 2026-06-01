@@ -63,7 +63,11 @@
       "parallelizable": false,
       "conceptual_summary": "",
       "critic_notes": "",
-      "decomposition_rationale": ""
+      "decomposition_rationale": "",
+      "time_complexity": "O(1)",
+      "space_complexity": "O(1)",
+      "complexity_reasoning": "Date construction is a simple calendar lookup or scalar arithmetic conversion running in constant time and space.",
+      "complexity_confidence": 100
     },
     {
       "node_id": "date",
@@ -101,7 +105,11 @@
       "parallelizable": false,
       "conceptual_summary": "",
       "critic_notes": "",
-      "decomposition_rationale": ""
+      "decomposition_rationale": "",
+      "time_complexity": "O(1)",
+      "space_complexity": "O(1)",
+      "complexity_reasoning": "Date construction is a simple calendar lookup or scalar arithmetic conversion running in constant time and space.",
+      "complexity_confidence": 100
     },
     {
       "node_id": "show",
@@ -139,7 +147,11 @@
       "parallelizable": false,
       "conceptual_summary": "",
       "critic_notes": "",
-      "decomposition_rationale": ""
+      "decomposition_rationale": "",
+      "time_complexity": "O(1)",
+      "space_complexity": "O(1)",
+      "complexity_reasoning": "Formatting a value to an output stream uses a constant-time identity string conversion.",
+      "complexity_confidence": 100
     },
     {
       "node_id": "time",
@@ -182,7 +194,11 @@
       "parallelizable": false,
       "conceptual_summary": "",
       "critic_notes": "",
-      "decomposition_rationale": ""
+      "decomposition_rationale": "",
+      "time_complexity": "O(1)",
+      "space_complexity": "O(1)",
+      "complexity_reasoning": "Constructing a time object from components or seconds is a scalar conversion running in constant time and space.",
+      "complexity_confidence": 100
     },
     {
       "node_id": "time",
@@ -220,7 +236,11 @@
       "parallelizable": false,
       "conceptual_summary": "",
       "critic_notes": "",
-      "decomposition_rationale": ""
+      "decomposition_rationale": "",
+      "time_complexity": "O(1)",
+      "space_complexity": "O(1)",
+      "complexity_reasoning": "Constructing a time object from components or seconds is a scalar conversion running in constant time and space.",
+      "complexity_confidence": 100
     },
     {
       "node_id": "time",
@@ -253,7 +273,11 @@
       "parallelizable": false,
       "conceptual_summary": "",
       "critic_notes": "",
-      "decomposition_rationale": ""
+      "decomposition_rationale": "",
+      "time_complexity": "O(1)",
+      "space_complexity": "O(1)",
+      "complexity_reasoning": "Constructing a time object from components or seconds is a scalar conversion running in constant time and space.",
+      "complexity_confidence": 100
     },
     {
       "node_id": "show",
@@ -291,7 +315,11 @@
       "parallelizable": false,
       "conceptual_summary": "",
       "critic_notes": "",
-      "decomposition_rationale": ""
+      "decomposition_rationale": "",
+      "time_complexity": "O(1)",
+      "space_complexity": "O(1)",
+      "complexity_reasoning": "Formatting a value to an output stream uses a constant-time identity string conversion.",
+      "complexity_confidence": 100
     },
     {
       "node_id": "datetime",
@@ -349,7 +377,11 @@
       "parallelizable": false,
       "conceptual_summary": "",
       "critic_notes": "",
-      "decomposition_rationale": ""
+      "decomposition_rationale": "",
+      "time_complexity": "O(1)",
+      "space_complexity": "O(1)",
+      "complexity_reasoning": "Constructing a datetime object from components, a string, or seconds is a scalar conversion running in constant time and space.",
+      "complexity_confidence": 100
     },
     {
       "node_id": "datetime",
@@ -382,7 +414,11 @@
       "parallelizable": false,
       "conceptual_summary": "",
       "critic_notes": "",
-      "decomposition_rationale": ""
+      "decomposition_rationale": "",
+      "time_complexity": "O(1)",
+      "space_complexity": "O(1)",
+      "complexity_reasoning": "Constructing a datetime object from components, a string, or seconds is a scalar conversion running in constant time and space.",
+      "complexity_confidence": 100
     },
     {
       "node_id": "datetime",
@@ -415,7 +451,11 @@
       "parallelizable": false,
       "conceptual_summary": "",
       "critic_notes": "",
-      "decomposition_rationale": ""
+      "decomposition_rationale": "",
+      "time_complexity": "O(1)",
+      "space_complexity": "O(1)",
+      "complexity_reasoning": "Constructing a datetime object from components, a string, or seconds is a scalar conversion running in constant time and space.",
+      "complexity_confidence": 100
     }
   ],
   "edges": [],

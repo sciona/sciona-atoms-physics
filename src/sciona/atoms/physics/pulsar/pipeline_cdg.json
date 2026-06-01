@@ -62,7 +62,11 @@
       "parallelizable": false,
       "conceptual_summary": "Delay From DM",
       "critic_notes": "",
-      "decomposition_rationale": ""
+      "decomposition_rationale": "",
+      "time_complexity": "O(1)",
+      "space_complexity": "O(1)",
+      "complexity_reasoning": "Propagational delay from DM is computed using basic arithmetic operations in constant time and space.",
+      "complexity_confidence": 100
     },
     {
       "node_id": "de_disperse",
@@ -115,7 +119,11 @@
       "parallelizable": false,
       "conceptual_summary": "Dedisperse",
       "critic_notes": "",
-      "decomposition_rationale": ""
+      "decomposition_rationale": "",
+      "time_complexity": "O(N)",
+      "space_complexity": "O(N)",
+      "complexity_reasoning": "Dedispersion copies the spectrogram and performs channel-wise shifting, scaling linearly with the total number of elements (time x frequency).",
+      "complexity_confidence": 100
     },
     {
       "node_id": "fold_signal",
@@ -153,7 +161,11 @@
       "parallelizable": false,
       "conceptual_summary": "Fold Signal",
       "critic_notes": "",
-      "decomposition_rationale": ""
+      "decomposition_rationale": "",
+      "time_complexity": "O(N)",
+      "space_complexity": "O(N)",
+      "complexity_reasoning": "Folding sums slices of the input spectrogram over periods, scaling linearly with the total number of data elements.",
+      "complexity_confidence": 100
     },
     {
       "node_id": "snr",
@@ -186,7 +198,11 @@
       "parallelizable": false,
       "conceptual_summary": "SNR",
       "critic_notes": "",
-      "decomposition_rationale": ""
+      "decomposition_rationale": "",
+      "time_complexity": "O(n)",
+      "space_complexity": "O(1)",
+      "complexity_reasoning": "Computing the SNR profile involves linear scans for peak detection and average noise calculation, scaling with profile length.",
+      "complexity_confidence": 100
     }
   ],
   "edges": [

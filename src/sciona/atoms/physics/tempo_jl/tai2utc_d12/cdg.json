@@ -77,7 +77,11 @@
       "parallelizable": false,
       "conceptual_summary": "",
       "critic_notes": "",
-      "decomposition_rationale": ""
+      "decomposition_rationale": "",
+      "time_complexity": "O(1)",
+      "space_complexity": "O(1)",
+      "complexity_reasoning": "Binary search over a static leap-second table of fixed length takes constant time and space.",
+      "complexity_confidence": 100
     },
     {
       "node_id": "tai_to_utc_inversion",
@@ -144,7 +148,11 @@
       "parallelizable": false,
       "conceptual_summary": "",
       "critic_notes": "",
-      "decomposition_rationale": ""
+      "decomposition_rationale": "",
+      "time_complexity": "O(1)",
+      "space_complexity": "O(1)",
+      "complexity_reasoning": "Iterative inversion of leap-second offset runs a fixed number of times in constant time and space.",
+      "complexity_confidence": 100
     }
   ],
   "edges": [],

@@ -89,7 +89,11 @@
       "parallelizable": false,
       "conceptual_summary": "Direct callable atom in the consolidated module.",
       "critic_notes": "Signature derived from the Python wrapper definition.",
-      "decomposition_rationale": "Leaf atom."
+      "decomposition_rationale": "Leaf atom.",
+      "time_complexity": "O(C * N)",
+      "space_complexity": "O(C + N)",
+      "complexity_reasoning": "Filtering Dispersion Measure (DM) candidates loops over C candidates, performing O(N)-time roll and mean operations on the input data of size N per candidate.",
+      "complexity_confidence": 100
     }
   ],
   "edges": []

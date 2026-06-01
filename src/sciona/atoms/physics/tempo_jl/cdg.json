@@ -63,7 +63,11 @@
       "parallelizable": false,
       "conceptual_summary": "",
       "critic_notes": "",
-      "decomposition_rationale": ""
+      "decomposition_rationale": "",
+      "time_complexity": "O(1)",
+      "space_complexity": "O(1)",
+      "complexity_reasoning": "Passing through the input directed graph data takes constant time and space as it simply returns the reference.",
+      "complexity_confidence": 100
     },
     {
       "node_id": "high_precision_duration",
@@ -102,7 +106,11 @@
       "parallelizable": false,
       "conceptual_summary": "",
       "critic_notes": "",
-      "decomposition_rationale": ""
+      "decomposition_rationale": "",
+      "time_complexity": "O(n)",
+      "space_complexity": "O(n)",
+      "complexity_reasoning": "Splitting continuous variables into integer and fractional parts via floor operations runs in linear time and space for n elements.",
+      "complexity_confidence": 100
     }
   ],
   "edges": [],

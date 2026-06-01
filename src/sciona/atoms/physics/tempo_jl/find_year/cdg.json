@@ -68,7 +68,11 @@
       "parallelizable": false,
       "conceptual_summary": "",
       "critic_notes": "",
-      "decomposition_rationale": ""
+      "decomposition_rationale": "",
+      "time_complexity": "O(1)",
+      "space_complexity": "O(1)",
+      "complexity_reasoning": "Checking whether a year is a leap year uses a constant number of scalar modulo operations.",
+      "complexity_confidence": 100
     },
     {
       "node_id": "find_dayinyear",
@@ -111,7 +115,11 @@
       "parallelizable": false,
       "conceptual_summary": "",
       "critic_notes": "",
-      "decomposition_rationale": ""
+      "decomposition_rationale": "",
+      "time_complexity": "O(1)",
+      "space_complexity": "O(1)",
+      "complexity_reasoning": "Calculating the day within a year uses a constant-size array lookup and addition in O(1) time and space.",
+      "complexity_confidence": 100
     },
     {
       "node_id": "find_year",
@@ -144,7 +152,11 @@
       "parallelizable": false,
       "conceptual_summary": "",
       "critic_notes": "",
-      "decomposition_rationale": ""
+      "decomposition_rationale": "",
+      "time_complexity": "O(1)",
+      "space_complexity": "O(1)",
+      "complexity_reasoning": "Finding the calendar year corresponding to a day offset uses closed-form division in constant time and space.",
+      "complexity_confidence": 100
     },
     {
       "node_id": "find_month",
@@ -182,7 +194,11 @@
       "parallelizable": false,
       "conceptual_summary": "",
       "critic_notes": "",
-      "decomposition_rationale": ""
+      "decomposition_rationale": "",
+      "time_complexity": "O(1)",
+      "space_complexity": "O(1)",
+      "complexity_reasoning": "Finding the month corresponding to a day within a year is computed using simple integer arithmetic in O(1) time and space.",
+      "complexity_confidence": 100
     },
     {
       "node_id": "find_day",
@@ -225,7 +241,11 @@
       "parallelizable": false,
       "conceptual_summary": "",
       "critic_notes": "",
-      "decomposition_rationale": ""
+      "decomposition_rationale": "",
+      "time_complexity": "O(1)",
+      "space_complexity": "O(1)",
+      "complexity_reasoning": "Finding the day within a month uses a constant-size array lookup and subtraction in O(1) time and space.",
+      "complexity_confidence": 100
     },
     {
       "node_id": "last_j2000_day_of_year",
@@ -258,7 +278,11 @@
       "parallelizable": false,
       "conceptual_summary": "",
       "critic_notes": "",
-      "decomposition_rationale": ""
+      "decomposition_rationale": "",
+      "time_complexity": "O(1)",
+      "space_complexity": "O(1)",
+      "complexity_reasoning": "Computing the last J2000 day of a year uses a closed-form scalar calculation in constant time and space.",
+      "complexity_confidence": 100
     },
     {
       "node_id": "hms_to_fd",
@@ -301,7 +325,11 @@
       "parallelizable": false,
       "conceptual_summary": "",
       "critic_notes": "",
-      "decomposition_rationale": ""
+      "decomposition_rationale": "",
+      "time_complexity": "O(1)",
+      "space_complexity": "O(1)",
+      "complexity_reasoning": "Converting hours, minutes, and seconds to a fractional day is a constant-time scalar arithmetic operation.",
+      "complexity_confidence": 100
     },
     {
       "node_id": "fd2hms",
@@ -334,7 +362,11 @@
       "parallelizable": false,
       "conceptual_summary": "",
       "critic_notes": "",
-      "decomposition_rationale": ""
+      "decomposition_rationale": "",
+      "time_complexity": "O(1)",
+      "space_complexity": "O(1)",
+      "complexity_reasoning": "Converting a fractional day to hours, minutes, and seconds is a constant-time scalar division and subtraction.",
+      "complexity_confidence": 100
     },
     {
       "node_id": "fd_to_hmsf",
@@ -367,7 +399,11 @@
       "parallelizable": false,
       "conceptual_summary": "",
       "critic_notes": "",
-      "decomposition_rationale": ""
+      "decomposition_rationale": "",
+      "time_complexity": "O(1)",
+      "space_complexity": "O(1)",
+      "complexity_reasoning": "Converting a fractional day to hours, minutes, seconds, and fraction is a constant-time scalar operation.",
+      "complexity_confidence": 100
     },
     {
       "node_id": "cal2jd",
@@ -410,7 +446,11 @@
       "parallelizable": false,
       "conceptual_summary": "",
       "critic_notes": "",
-      "decomposition_rationale": ""
+      "decomposition_rationale": "",
+      "time_complexity": "O(1)",
+      "space_complexity": "O(1)",
+      "complexity_reasoning": "Converting a calendar date to a Julian date involves a constant number of scalar arithmetic operations.",
+      "complexity_confidence": 100
     },
     {
       "node_id": "cal_hms_to_jd",
@@ -468,7 +508,11 @@
       "parallelizable": false,
       "conceptual_summary": "",
       "critic_notes": "",
-      "decomposition_rationale": ""
+      "decomposition_rationale": "",
+      "time_complexity": "O(1)",
+      "space_complexity": "O(1)",
+      "complexity_reasoning": "Converting a calendar date and time of day to a Julian date involves constant-time scalar arithmetic.",
+      "complexity_confidence": 100
     },
     {
       "node_id": "jd2cal",
@@ -506,7 +550,11 @@
       "parallelizable": false,
       "conceptual_summary": "",
       "critic_notes": "",
-      "decomposition_rationale": ""
+      "decomposition_rationale": "",
+      "time_complexity": "O(1)",
+      "space_complexity": "O(1)",
+      "complexity_reasoning": "Converting a Julian date to a calendar date uses closed-form scalar division in constant time and space.",
+      "complexity_confidence": 100
     },
     {
       "node_id": "jd_to_cal_hms",
@@ -544,7 +592,11 @@
       "parallelizable": false,
       "conceptual_summary": "",
       "critic_notes": "",
-      "decomposition_rationale": ""
+      "decomposition_rationale": "",
+      "time_complexity": "O(1)",
+      "space_complexity": "O(1)",
+      "complexity_reasoning": "Converting a Julian date to a calendar date and time of day is a constant-time scalar calculation.",
+      "complexity_confidence": 100
     },
     {
       "node_id": "utc_to_tai",
@@ -582,7 +634,11 @@
       "parallelizable": false,
       "conceptual_summary": "",
       "critic_notes": "",
-      "decomposition_rationale": ""
+      "decomposition_rationale": "",
+      "time_complexity": "O(1)",
+      "space_complexity": "O(1)",
+      "complexity_reasoning": "Converting UTC to TAI involves a constant-time leap-second table lookup and scalar addition.",
+      "complexity_confidence": 100
     },
     {
       "node_id": "tai_to_utc",
@@ -620,7 +676,11 @@
       "parallelizable": false,
       "conceptual_summary": "",
       "critic_notes": "",
-      "decomposition_rationale": ""
+      "decomposition_rationale": "",
+      "time_complexity": "O(1)",
+      "space_complexity": "O(1)",
+      "complexity_reasoning": "Converting TAI to UTC involves a constant-time leap-second table lookup and scalar subtraction.",
+      "complexity_confidence": 100
     }
   ],
   "edges": [],

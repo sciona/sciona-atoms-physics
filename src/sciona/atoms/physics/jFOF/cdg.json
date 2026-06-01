@@ -97,7 +97,11 @@
       "parallelizable": false,
       "conceptual_summary": "",
       "critic_notes": "",
-      "decomposition_rationale": ""
+      "decomposition_rationale": "",
+      "time_complexity": "O(n log n + k)",
+      "space_complexity": "O(n + k)",
+      "complexity_reasoning": "Building the KD-tree takes O(n log n) time, and query_pairs plus union-find takes O(k) time and space, where k is the number of neighboring pairs within distance b.",
+      "complexity_confidence": 95
     }
   ],
   "edges": [],

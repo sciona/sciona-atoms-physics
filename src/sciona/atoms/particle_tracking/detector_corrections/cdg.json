@@ -21,13 +21,32 @@
       "type_signature": "(coords: NDArray, cyl_mean_r2: float, z_scale: float) -> NDArray",
       "depth": 1,
       "inputs": [
-        {"name": "coords", "type_desc": "NDArray[np.float64]", "required": true},
-        {"name": "cyl_mean_r2", "type_desc": "float", "required": false},
-        {"name": "z_scale", "type_desc": "float", "required": false}
+        {
+          "name": "coords",
+          "type_desc": "NDArray[np.float64]",
+          "required": true
+        },
+        {
+          "name": "cyl_mean_r2",
+          "type_desc": "float",
+          "required": false
+        },
+        {
+          "name": "z_scale",
+          "type_desc": "float",
+          "required": false
+        }
       ],
       "outputs": [
-        {"name": "result", "type_desc": "NDArray[np.float64]"}
-      ]
+        {
+          "name": "result",
+          "type_desc": "NDArray[np.float64]"
+        }
+      ],
+      "time_complexity": "O(n)",
+      "space_complexity": "O(n)",
+      "complexity_reasoning": "Vectorized coordinate rescaling processes each of the n 3D hit coordinates in linear time and space.",
+      "complexity_confidence": 100
     },
     {
       "node_id": "perturbative_cap_correction",
@@ -38,16 +57,47 @@
       "type_signature": "(xi: NDArray, yi: NDArray, hel_pitch: NDArray, charge_sign: NDArray, dp0_radial: NDArray, dp1_azimuthal: NDArray) -> tuple[NDArray, NDArray]",
       "depth": 1,
       "inputs": [
-        {"name": "xi", "type_desc": "NDArray[np.float64]", "required": true},
-        {"name": "yi", "type_desc": "NDArray[np.float64]", "required": true},
-        {"name": "hel_pitch", "type_desc": "NDArray[np.float64]", "required": true},
-        {"name": "charge_sign", "type_desc": "NDArray[np.float64]", "required": true},
-        {"name": "dp0_radial", "type_desc": "NDArray[np.float64]", "required": true},
-        {"name": "dp1_azimuthal", "type_desc": "NDArray[np.float64]", "required": true}
+        {
+          "name": "xi",
+          "type_desc": "NDArray[np.float64]",
+          "required": true
+        },
+        {
+          "name": "yi",
+          "type_desc": "NDArray[np.float64]",
+          "required": true
+        },
+        {
+          "name": "hel_pitch",
+          "type_desc": "NDArray[np.float64]",
+          "required": true
+        },
+        {
+          "name": "charge_sign",
+          "type_desc": "NDArray[np.float64]",
+          "required": true
+        },
+        {
+          "name": "dp0_radial",
+          "type_desc": "NDArray[np.float64]",
+          "required": true
+        },
+        {
+          "name": "dp1_azimuthal",
+          "type_desc": "NDArray[np.float64]",
+          "required": true
+        }
       ],
       "outputs": [
-        {"name": "result", "type_desc": "tuple[NDArray[np.float64], NDArray[np.float64]]"}
-      ]
+        {
+          "name": "result",
+          "type_desc": "tuple[NDArray[np.float64], NDArray[np.float64]]"
+        }
+      ],
+      "time_complexity": "O(n)",
+      "space_complexity": "O(n)",
+      "complexity_reasoning": "Vectorized arithmetic operations for cap coordinate corrections scale linearly with the number of intersection points n.",
+      "complexity_confidence": 100
     },
     {
       "node_id": "perturbative_cylinder_correction",
@@ -58,18 +108,57 @@
       "type_signature": "(xi: NDArray, yi: NDArray, zi: NDArray, hel_r: NDArray, hel_pitch: NDArray, charge_sign: NDArray, dp0_z: NDArray, dp1_azimuthal: NDArray) -> tuple[NDArray, NDArray, NDArray]",
       "depth": 1,
       "inputs": [
-        {"name": "xi", "type_desc": "NDArray[np.float64]", "required": true},
-        {"name": "yi", "type_desc": "NDArray[np.float64]", "required": true},
-        {"name": "zi", "type_desc": "NDArray[np.float64]", "required": true},
-        {"name": "hel_r", "type_desc": "NDArray[np.float64]", "required": true},
-        {"name": "hel_pitch", "type_desc": "NDArray[np.float64]", "required": true},
-        {"name": "charge_sign", "type_desc": "NDArray[np.float64]", "required": true},
-        {"name": "dp0_z", "type_desc": "NDArray[np.float64]", "required": true},
-        {"name": "dp1_azimuthal", "type_desc": "NDArray[np.float64]", "required": true}
+        {
+          "name": "xi",
+          "type_desc": "NDArray[np.float64]",
+          "required": true
+        },
+        {
+          "name": "yi",
+          "type_desc": "NDArray[np.float64]",
+          "required": true
+        },
+        {
+          "name": "zi",
+          "type_desc": "NDArray[np.float64]",
+          "required": true
+        },
+        {
+          "name": "hel_r",
+          "type_desc": "NDArray[np.float64]",
+          "required": true
+        },
+        {
+          "name": "hel_pitch",
+          "type_desc": "NDArray[np.float64]",
+          "required": true
+        },
+        {
+          "name": "charge_sign",
+          "type_desc": "NDArray[np.float64]",
+          "required": true
+        },
+        {
+          "name": "dp0_z",
+          "type_desc": "NDArray[np.float64]",
+          "required": true
+        },
+        {
+          "name": "dp1_azimuthal",
+          "type_desc": "NDArray[np.float64]",
+          "required": true
+        }
       ],
       "outputs": [
-        {"name": "result", "type_desc": "tuple[NDArray[np.float64], NDArray[np.float64], NDArray[np.float64]]"}
-      ]
+        {
+          "name": "result",
+          "type_desc": "tuple[NDArray[np.float64], NDArray[np.float64], NDArray[np.float64]]"
+        }
+      ],
+      "time_complexity": "O(n)",
+      "space_complexity": "O(n)",
+      "complexity_reasoning": "Vectorized cylinder coordinate corrections scale linearly in both time and space with the number of intersection points n.",
+      "complexity_confidence": 100
     }
   ],
   "edges": [],

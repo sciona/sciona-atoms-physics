@@ -84,7 +84,11 @@
       "parallelizable": false,
       "conceptual_summary": "Direct callable atom in the consolidated module.",
       "critic_notes": "Signature derived from the Python wrapper definition.",
-      "decomposition_rationale": "Leaf atom."
+      "decomposition_rationale": "Leaf atom.",
+      "time_complexity": "O(n * c + min(n, max_iters) * K * c)",
+      "space_complexity": "O(n * c)",
+      "complexity_reasoning": "Computing softmax probabilities takes O(n * c) time and space, and cross-entropy summation over neighbors scales with logit dimensions c, neighbor count K, and max iterations.",
+      "complexity_confidence": 95
     }
   ],
   "edges": []

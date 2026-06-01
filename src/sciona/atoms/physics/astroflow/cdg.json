@@ -111,7 +111,11 @@
       "parallelizable": false,
       "conceptual_summary": "",
       "critic_notes": "",
-      "decomposition_rationale": ""
+      "decomposition_rationale": "",
+      "time_complexity": "O(dm_steps * down_ndata * nchans)",
+      "space_complexity": "O(dm_steps * down_ndata)",
+      "complexity_reasoning": "The triple-nested loop performs constant-time lookups and accumulations for each DM step, downsampled output time bin, and frequency channel.",
+      "complexity_confidence": 100
     }
   ],
   "edges": [],

@@ -61,7 +61,11 @@
       "parallelizable": false,
       "conceptual_summary": "",
       "critic_notes": "",
-      "decomposition_rationale": ""
+      "decomposition_rationale": "",
+      "time_complexity": "O(1)",
+      "space_complexity": "O(1)",
+      "complexity_reasoning": "Formatting a value to an output stream uses a constant-time identity string conversion.",
+      "complexity_confidence": 100
     },
     {
       "node_id": "_zero_offset",
@@ -94,7 +98,11 @@
       "parallelizable": false,
       "conceptual_summary": "",
       "critic_notes": "",
-      "decomposition_rationale": ""
+      "decomposition_rationale": "",
+      "time_complexity": "O(1)",
+      "space_complexity": "O(1)",
+      "complexity_reasoning": "Returning a zero offset is a constant-time scalar operation with no auxiliary memory allocation.",
+      "complexity_confidence": 100
     },
     {
       "node_id": "apply_offsets",
@@ -137,7 +145,11 @@
       "parallelizable": false,
       "conceptual_summary": "",
       "critic_notes": "",
-      "decomposition_rationale": ""
+      "decomposition_rationale": "",
+      "time_complexity": "O(1)",
+      "space_complexity": "O(1)",
+      "complexity_reasoning": "Applying offsets is a simple scalar subtraction and addition running in constant time and space.",
+      "complexity_confidence": 100
     }
   ],
   "edges": [],
