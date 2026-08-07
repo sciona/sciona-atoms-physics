@@ -29,7 +29,7 @@
   "rows": [
     {
       "atom_keys": [
-        "sciona.atoms.physics.astroflow.dedispersionkernel"
+        "sciona.atoms.physics.astroflow.dedispersion_kernel"
       ],
       "authoritative_sources": [
         {

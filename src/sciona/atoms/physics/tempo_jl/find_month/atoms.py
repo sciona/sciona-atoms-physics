@@ -76,7 +76,7 @@ SYMBOLIC_REVIEW_BLOCKERS = {
 )
 @icontract.require(lambda offset: offset is not None, "offset cannot be None")
 @icontract.ensure(lambda result: result is not None, "Date output must not be None")
-def date(offset: int) -> tuple[int, int, int]:
+def date_from_offset(offset: int) -> tuple[int, int, int]:
     """Date.
 
     Args:
@@ -109,8 +109,6 @@ def date(offset: int) -> tuple[int, int, int]:
     day = dayinyear - prev[month - 1]
     return (year, month, day)
 
-date_from_offset = date
-
 @symbolic_atom(
     witness_date,
     name="date_from_year_dayinyear",
@@ -127,7 +125,7 @@ date_from_offset = date
 @icontract.require(lambda year: year is not None, "year cannot be None")
 @icontract.require(lambda dayinyear: dayinyear is not None, "dayinyear cannot be None")
 @icontract.ensure(lambda result: result is not None, "Date output must not be None")
-def date(year: int, dayinyear: int) -> tuple[int, int, int]:
+def date_from_year_dayinyear(year: int, dayinyear: int) -> tuple[int, int, int]:
     """Date.
 
     Args:
@@ -146,13 +144,11 @@ def date(year: int, dayinyear: int) -> tuple[int, int, int]:
     day = dayinyear - prev[month - 1]
     return (year, month, day)
 
-date_from_year_dayinyear = date
-
 @register_atom(witness_show, name="show_date")
 @icontract.require(lambda io: io is not None, "io cannot be None")
 @icontract.require(lambda d: d is not None, "d cannot be None")
 @icontract.ensure(lambda result: result is not None, "Show output must not be None")
-def show(io: str, d: str) -> str:
+def show_date(io: str, d: str) -> str:
     """Show.
 
     Args:
@@ -164,14 +160,12 @@ def show(io: str, d: str) -> str:
     """
     return str(d)
 
-show_date = show
-
 @register_atom(witness_time, name="time_from_hms")
 @icontract.require(lambda hour: hour is not None, "hour cannot be None")
 @icontract.require(lambda minute: minute is not None, "minute cannot be None")
 @icontract.require(lambda second: second is not None, "second cannot be None")
 @icontract.ensure(lambda result: result is not None, "Time output must not be None")
-def time(hour: int, minute: int, second: float) -> tuple[int, int, float]:
+def time_from_hms(hour: int, minute: int, second: float) -> tuple[int, int, float]:
     """Time.
 
     Args:
@@ -183,8 +177,6 @@ def time(hour: int, minute: int, second: float) -> tuple[int, int, float]:
         tuple[int, int, float]: Description.
     """
     return (hour, minute, second)
-
-time_from_hms = time
 
 @symbolic_atom(
     witness_time,
@@ -208,7 +200,7 @@ time_from_hms = time
 @icontract.require(lambda secondinday: secondinday is not None, "secondinday cannot be None")
 @icontract.require(lambda fraction: fraction is not None, "fraction cannot be None")
 @icontract.ensure(lambda result: result is not None, "Time output must not be None")
-def time(secondinday: int, fraction: float) -> tuple[int, int, float]:
+def time_from_secondinday_fraction(secondinday: int, fraction: float) -> tuple[int, int, float]:
     """Time.
 
     Args:
@@ -224,8 +216,6 @@ def time(secondinday: int, fraction: float) -> tuple[int, int, float]:
     minute = sid // 60
     sid -= 60 * minute
     return (hour, minute, float(sid) + fraction)
-
-time_from_secondinday_fraction = time
 
 @symbolic_atom(
     witness_time,
@@ -247,7 +237,7 @@ time_from_secondinday_fraction = time
 )
 @icontract.require(lambda secondinday: secondinday is not None, "secondinday cannot be None")
 @icontract.ensure(lambda result: result is not None, "Time output must not be None")
-def time(secondinday: int) -> tuple[int, int, float]:
+def time_from_secondinday(secondinday: int) -> tuple[int, int, float]:
     """Time.
 
     Args:
@@ -264,13 +254,11 @@ def time(secondinday: int) -> tuple[int, int, float]:
     sec -= 60 * minute
     return (hour, minute, float(sec) + frac)
 
-time_from_secondinday = time
-
 @register_atom(witness_show, name="show_time")
 @icontract.require(lambda io: io is not None, "io cannot be None")
 @icontract.require(lambda t: t is not None, "t cannot be None")
 @icontract.ensure(lambda result: result is not None, "Show output must not be None")
-def show(io: str, t: str) -> str:
+def show_time(io: str, t: str) -> str:
     """Show.
 
     Args:
@@ -282,12 +270,10 @@ def show(io: str, t: str) -> str:
     """
     return str(t)
 
-show_time = show
-
 @register_atom(witness_datetime, name="datetime_from_components")
 @icontract.require(lambda year, month, day: 1 <= month <= 12 and 1 <= day <= 31, "month must be 1-12, day must be 1-31")
 @icontract.ensure(lambda result: result is not None, "Datetime output must not be None")
-def datetime(year: int, month: int, day: int, hour: int, min: int, sec: float) -> tuple[int, int, int, int, int, float]:
+def datetime_from_components(year: int, month: int, day: int, hour: int, min: int, sec: float) -> tuple[int, int, int, int, int, float]:
     """Datetime.
 
     Args:
@@ -303,12 +289,10 @@ def datetime(year: int, month: int, day: int, hour: int, min: int, sec: float) -
     """
     return (year, month, day, hour, min, sec)
 
-datetime_from_components = datetime
-
 @register_atom(witness_datetime, name="datetime_from_string")
 @icontract.require(lambda s: s is not None, "s cannot be None")
 @icontract.ensure(lambda result: result is not None, "Datetime output must not be None")
-def datetime(s: str) -> tuple[int, int, int, int, int, float]:
+def datetime_from_string(s: str) -> tuple[int, int, int, int, int, float]:
     """Datetime.
 
     Args:
@@ -326,8 +310,6 @@ def datetime(s: str) -> tuple[int, int, int, int, int, float]:
     tm = int(parts[4]) if len(parts) > 4 else 0
     ts = float(parts[5]) if len(parts) > 5 else 0.0
     return (dy, dm, dd, th, tm, ts)
-
-datetime_from_string = datetime
 
 @symbolic_atom(
     witness_datetime,
@@ -347,7 +329,7 @@ datetime_from_string = datetime
 )
 @icontract.require(lambda seconds: seconds is not None, "seconds cannot be None")
 @icontract.ensure(lambda result: result is not None, "Datetime output must not be None")
-def datetime(seconds: float) -> tuple[int, int, int, int, int, float]:
+def datetime_from_seconds(seconds: float) -> tuple[int, int, int, int, int, float]:
     """Datetime.
 
     Args:
@@ -414,8 +396,6 @@ def datetime(seconds: float) -> tuple[int, int, int, int, int, float]:
     mins = int(secinday // 60)
     secinday -= 60 * mins
     return (int(Y), int(M), int(D), hours, mins, secinday)
-
-datetime_from_seconds = datetime
 
 """Auto-generated FFI bindings for julia implementations."""
 

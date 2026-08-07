@@ -34,4 +34,12 @@ def test_tempo_jl_review_bundle_maps_to_registered_atoms() -> None:
         importlib.import_module(row["module"])
         for atom_key in row["atom_keys"]:
             leaf = atom_key.rsplit(".", 1)[-1]
-            assert leaf in registry, f"missing registry entry for {leaf} in {row['module']}"
+            matches = [
+                entry
+                for entry in registry.values()
+                if entry.get("module") == row["module"]
+                and getattr(entry.get("impl"), "__name__", None) == leaf
+            ]
+            assert len(matches) == 1, (
+                f"missing registered implementation for {atom_key} in {row['module']}"
+            )

@@ -138,20 +138,20 @@
     {
       "atom_keys": [
         "sciona.atoms.physics.tempo_jl.find_year.cal2jd",
-        "sciona.atoms.physics.tempo_jl.find_year.calhms2jd",
+        "sciona.atoms.physics.tempo_jl.find_year.cal_hms_to_jd",
         "sciona.atoms.physics.tempo_jl.find_year.fd2hms",
-        "sciona.atoms.physics.tempo_jl.find_year.fd2hmsf",
+        "sciona.atoms.physics.tempo_jl.find_year.fd_to_hmsf",
         "sciona.atoms.physics.tempo_jl.find_year.find_day",
         "sciona.atoms.physics.tempo_jl.find_year.find_dayinyear",
         "sciona.atoms.physics.tempo_jl.find_year.find_month",
         "sciona.atoms.physics.tempo_jl.find_year.find_year",
-        "sciona.atoms.physics.tempo_jl.find_year.hms2fd",
-        "sciona.atoms.physics.tempo_jl.find_year.isleapyear",
+        "sciona.atoms.physics.tempo_jl.find_year.hms_to_fd",
+        "sciona.atoms.physics.tempo_jl.find_year.is_leap_year",
         "sciona.atoms.physics.tempo_jl.find_year.jd2cal",
-        "sciona.atoms.physics.tempo_jl.find_year.jd2calhms",
-        "sciona.atoms.physics.tempo_jl.find_year.lastj2000dayofyear",
-        "sciona.atoms.physics.tempo_jl.find_year.tai2utc",
-        "sciona.atoms.physics.tempo_jl.find_year.utc2tai"
+        "sciona.atoms.physics.tempo_jl.find_year.jd_to_cal_hms",
+        "sciona.atoms.physics.tempo_jl.find_year.last_j2000_day_of_year",
+        "sciona.atoms.physics.tempo_jl.find_year.tai_to_utc",
+        "sciona.atoms.physics.tempo_jl.find_year.utc_to_tai"
       ],
       "authoritative_sources": [
         {
@@ -256,20 +256,20 @@
     {
       "atom_keys": [
         "sciona.atoms.physics.tempo_jl.tai2utc.cal2jd",
-        "sciona.atoms.physics.tempo_jl.tai2utc.calhms2jd",
+        "sciona.atoms.physics.tempo_jl.tai2utc.cal_hms_to_jd",
         "sciona.atoms.physics.tempo_jl.tai2utc.fd2hms",
-        "sciona.atoms.physics.tempo_jl.tai2utc.fd2hmsf",
+        "sciona.atoms.physics.tempo_jl.tai2utc.fd_to_hmsf",
         "sciona.atoms.physics.tempo_jl.tai2utc.find_day",
         "sciona.atoms.physics.tempo_jl.tai2utc.find_dayinyear",
         "sciona.atoms.physics.tempo_jl.tai2utc.find_month",
         "sciona.atoms.physics.tempo_jl.tai2utc.find_year",
-        "sciona.atoms.physics.tempo_jl.tai2utc.hms2fd",
-        "sciona.atoms.physics.tempo_jl.tai2utc.isleapyear",
+        "sciona.atoms.physics.tempo_jl.tai2utc.hms_to_fd",
+        "sciona.atoms.physics.tempo_jl.tai2utc.is_leap_year",
         "sciona.atoms.physics.tempo_jl.tai2utc.jd2cal",
-        "sciona.atoms.physics.tempo_jl.tai2utc.jd2calhms",
-        "sciona.atoms.physics.tempo_jl.tai2utc.lastj2000dayofyear",
-        "sciona.atoms.physics.tempo_jl.tai2utc.tai2utc",
-        "sciona.atoms.physics.tempo_jl.tai2utc.utc2tai"
+        "sciona.atoms.physics.tempo_jl.tai2utc.jd_to_cal_hms",
+        "sciona.atoms.physics.tempo_jl.tai2utc.last_j2000_day_of_year",
+        "sciona.atoms.physics.tempo_jl.tai2utc.tai_to_utc",
+        "sciona.atoms.physics.tempo_jl.tai2utc.utc_to_tai"
       ],
       "authoritative_sources": [
         {
@@ -333,20 +333,20 @@
     {
       "atom_keys": [
         "sciona.atoms.physics.tempo_jl.utc2tai.cal2jd",
-        "sciona.atoms.physics.tempo_jl.utc2tai.calhms2jd",
+        "sciona.atoms.physics.tempo_jl.utc2tai.cal_hms_to_jd",
         "sciona.atoms.physics.tempo_jl.utc2tai.fd2hms",
-        "sciona.atoms.physics.tempo_jl.utc2tai.fd2hmsf",
+        "sciona.atoms.physics.tempo_jl.utc2tai.fd_to_hmsf",
         "sciona.atoms.physics.tempo_jl.utc2tai.find_day",
         "sciona.atoms.physics.tempo_jl.utc2tai.find_dayinyear",
         "sciona.atoms.physics.tempo_jl.utc2tai.find_month",
         "sciona.atoms.physics.tempo_jl.utc2tai.find_year",
-        "sciona.atoms.physics.tempo_jl.utc2tai.hms2fd",
-        "sciona.atoms.physics.tempo_jl.utc2tai.isleapyear",
+        "sciona.atoms.physics.tempo_jl.utc2tai.hms_to_fd",
+        "sciona.atoms.physics.tempo_jl.utc2tai.is_leap_year",
         "sciona.atoms.physics.tempo_jl.utc2tai.jd2cal",
-        "sciona.atoms.physics.tempo_jl.utc2tai.jd2calhms",
-        "sciona.atoms.physics.tempo_jl.utc2tai.lastj2000dayofyear",
-        "sciona.atoms.physics.tempo_jl.utc2tai.tai2utc",
-        "sciona.atoms.physics.tempo_jl.utc2tai.utc2tai"
+        "sciona.atoms.physics.tempo_jl.utc2tai.jd_to_cal_hms",
+        "sciona.atoms.physics.tempo_jl.utc2tai.last_j2000_day_of_year",
+        "sciona.atoms.physics.tempo_jl.utc2tai.tai_to_utc",
+        "sciona.atoms.physics.tempo_jl.utc2tai.utc_to_tai"
       ],
       "authoritative_sources": [
         {
