@@ -1,0 +1,74 @@
+{
+  "solution_LICENSE.source": {
+    "source_path": "LICENSE",
+    "sha256": "00404581925abc4b8435bb7813eee07ac1df8b834326a33ee969d8315e9471fe",
+    "repository": "https://github.com/edwinst/trackml_solution",
+    "commit": "f1a6e63969167159ef72c4ba32897e5aef7c3888"
+  },
+  "solution_trackml_solution_logging.py.source": {
+    "source_path": "trackml_solution/logging.py",
+    "sha256": "9e634917fcf68ef2d0818622cd30bbb5c7f3d5ab461e70e9478117edf4c4d59e",
+    "repository": "https://github.com/edwinst/trackml_solution",
+    "commit": "f1a6e63969167159ef72c4ba32897e5aef7c3888"
+  },
+  "solution_trackml_solution_geometry.py.source": {
+    "source_path": "trackml_solution/geometry.py",
+    "sha256": "e20657812744e5b86d8211bece1f2afbc55d791077c5273a7bfd76fd8d90d338",
+    "repository": "https://github.com/edwinst/trackml_solution",
+    "commit": "f1a6e63969167159ef72c4ba32897e5aef7c3888"
+  },
+  "solution_trackml_solution_neighbors.py.source": {
+    "source_path": "trackml_solution/neighbors.py",
+    "sha256": "4be5f71928c2cc9b1203b84e77a6c84cb393c612492f56887baf8172d27038a6",
+    "repository": "https://github.com/edwinst/trackml_solution",
+    "commit": "f1a6e63969167159ef72c4ba32897e5aef7c3888"
+  },
+  "solution_trackml_solution_candidates.py.source": {
+    "source_path": "trackml_solution/candidates.py",
+    "sha256": "d74daba0b006d2c5f2a515820c0e096b2bf3206527ad69ef856a6610fa0d6a23",
+    "repository": "https://github.com/edwinst/trackml_solution",
+    "commit": "f1a6e63969167159ef72c4ba32897e5aef7c3888"
+  },
+  "solution_trackml_solution_corrections.py.source": {
+    "source_path": "trackml_solution/corrections.py",
+    "sha256": "2832433043f000b1230c6196369797ab98bcfa78e8d6dbc2041a82eb50619b08",
+    "repository": "https://github.com/edwinst/trackml_solution",
+    "commit": "f1a6e63969167159ef72c4ba32897e5aef7c3888"
+  },
+  "solution_trackml_solution_cells.py.source": {
+    "source_path": "trackml_solution/cells.py",
+    "sha256": "1526ee9e31817769e065f8e4ad6edc2f5b76d1b6659c5481d2c8d32ad5a58063",
+    "repository": "https://github.com/edwinst/trackml_solution",
+    "commit": "f1a6e63969167159ef72c4ba32897e5aef7c3888"
+  },
+  "solution_trackml_solution_data.py.source": {
+    "source_path": "trackml_solution/data.py",
+    "sha256": "83736d6b5495ebb36a74c1052be628010987e80072ab53348f295a9a6d37ad7c",
+    "repository": "https://github.com/edwinst/trackml_solution",
+    "commit": "f1a6e63969167159ef72c4ba32897e5aef7c3888"
+  },
+  "solution_trackml_solution_algorithm.py.source": {
+    "source_path": "trackml_solution/algorithm.py",
+    "sha256": "227b2250abda4601ed4ef113aebae9ad5292d2a2f67345d2b0f23694a90a469a",
+    "repository": "https://github.com/edwinst/trackml_solution",
+    "commit": "f1a6e63969167159ef72c4ba32897e5aef7c3888"
+  },
+  "library_LICENSE.source": {
+    "source_path": "LICENSE",
+    "sha256": "03a56802f793e909a12051a6360fdd6eec92d90a208806e30b94bf6c19fbe0b0",
+    "repository": "https://github.com/LAL/trackml-library",
+    "commit": "53a165e15a2c885f54c2bef1bd1ed53db6ed9648"
+  },
+  "library_trackml_score.py.source": {
+    "source_path": "trackml/score.py",
+    "sha256": "83ca2c30215ba02081dde8ef4b7b3c6dbc89f9c527f2ced63b990fc6e5988ab5",
+    "repository": "https://github.com/LAL/trackml-library",
+    "commit": "53a165e15a2c885f54c2bef1bd1ed53db6ed9648"
+  },
+  "library_trackml_dataset.py.source": {
+    "source_path": "trackml/dataset.py",
+    "sha256": "638dd5d0547c452a8cf8485a07594cf66b308b100f3819a54b56515bfb7bee2f",
+    "repository": "https://github.com/LAL/trackml-library",
+    "commit": "53a165e15a2c885f54c2bef1bd1ed53db6ed9648"
+  }
+}
