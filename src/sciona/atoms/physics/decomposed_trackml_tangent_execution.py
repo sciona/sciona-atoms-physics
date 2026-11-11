@@ -19,7 +19,7 @@ def track(prepared: object, circle_function: object, pitch_two_function: object,
           grid_evaluate_function: object, direction_function: object,
           construction_function: object, tangent_function: object) -> object:
     """Run configured tracking rounds with twenty-four explicit reusable numeric providers."""
-    from sciona.decomposed_trackml_tangent_lifecycle import execute
+    from sciona._runtime.physics.decomposed_trackml_tangent_lifecycle import execute
     return execute(**prepared, circle_function=circle_function,
                    pitch_two_function=pitch_two_function, pitch_three_function=pitch_three_function,
                    nearest_function=nearest_function, cylinder_function=cylinder_function,

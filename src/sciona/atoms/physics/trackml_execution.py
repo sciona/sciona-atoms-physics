@@ -9,7 +9,7 @@ def witness_trackml_decode(payload: dict) -> dict:
 @register_atom(witness_trackml_decode)
 def trackml_decode(payload: dict) -> object:
     """Decode explicit versioned runtime tables, settings and layer-function grids."""
-    from sciona.trackml_payload import decode_tracking_payload
+    from sciona._runtime.physics.trackml_payload import decode_tracking_payload
     return decode_tracking_payload(payload)
 
 
@@ -21,7 +21,7 @@ def witness_trackml_track(prepared: object) -> dict:
 @register_atom(witness_trackml_track)
 def trackml_track(prepared: object) -> object:
     """Run source seeding, fitting, following, pairing, ranking and commitment."""
-    from sciona.trackml_payload import run_decoded_tracking
+    from sciona._runtime.physics.trackml_payload import run_decoded_tracking
     return run_decoded_tracking(prepared)
 
 
@@ -33,5 +33,5 @@ def witness_trackml_encode(assignments: object) -> dict:
 @register_atom(witness_trackml_encode)
 def trackml_encode(assignments: object) -> dict:
     """Encode complete per-hit assignment output without file persistence."""
-    from sciona.trackml_payload import encode_tracking_result
+    from sciona._runtime.physics.trackml_payload import encode_tracking_result
     return encode_tracking_result(assignments)

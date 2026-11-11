@@ -14,7 +14,7 @@ def track(prepared: object, circle_function: object, pitch_two_function: object,
           cap_correction_function: object, cylinder_correction_function: object,
           search_fit_function: object, search_k_function: object, search_radius_function: object) -> object:
     """Run configured tracking rounds with thirteen explicit reusable numeric providers."""
-    from sciona.decomposed_trackml_neighbor_lifecycle import execute
+    from sciona._runtime.physics.decomposed_trackml_neighbor_lifecycle import execute
     return execute(**prepared, circle_function=circle_function,
                    pitch_two_function=pitch_two_function, pitch_three_function=pitch_three_function,
                    nearest_function=nearest_function, cylinder_function=cylinder_function,

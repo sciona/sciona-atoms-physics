@@ -5,7 +5,7 @@ import json
 from pathlib import Path
 import types
 
-from sciona.competition_dataframe_compat import compile_as_matrix_compat
+from sciona._runtime.physics.competition_dataframe_compat import compile_as_matrix_compat
 
 
 ORDER = ['library_trackml_score.py.source', 'library_trackml_dataset.py.source'] + [
